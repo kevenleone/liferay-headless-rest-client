@@ -86,6 +86,8 @@ async function main() {
             path.join(__dirname, "generated", `${resourceName}.json`),
             JSON.stringify(data)
         );
+
+        console.log(`Saved ${resourceName}.json`);
     }
 }
 

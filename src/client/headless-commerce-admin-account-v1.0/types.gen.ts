@@ -515,11 +515,11 @@ export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
-export type CUserAdditionalInfo = {
+export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
-export type OAuth2DxpAuthorization = {
+export type CUserAdditionalInfo = {
     [key: string]: unknown;
 };
 

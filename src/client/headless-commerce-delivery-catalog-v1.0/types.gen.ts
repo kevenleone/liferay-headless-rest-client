@@ -1299,7 +1299,7 @@ export type WishListWritable = {
     wishListItems?: Array<WishListItemWritable>;
 };
 
-export type UserAdditionalInfo = {
+export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
@@ -1307,7 +1307,7 @@ export type PublisherAssets = {
     [key: string]: unknown;
 };
 
-export type OAuth2DxpAuthorization = {
+export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 

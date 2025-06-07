@@ -1279,11 +1279,11 @@ export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
-export type PublisherAssets = {
+export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
-export type OAuth2DxpAuthorization = {
+export type PublisherAssets = {
     [key: string]: unknown;
 };
 
