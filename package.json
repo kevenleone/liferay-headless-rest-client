@@ -64,7 +64,7 @@
     "types": "./dist/client/index.d.ts",
     "scripts": {
         "format": "biome format .",
-        "build": "bun build ./src/client/**/*.ts --outdir ./dist/client --target node && tsc --emitDeclarationOnly --declaration --outDir ./dist/client ./src/client/index.ts"
+        "build": "bun build ./src/client/**/*.ts --outdir ./dist/client --target node --root ./src/client && tsc --emitDeclarationOnly --declaration --outDir ./dist/client ./src/client/index.ts"
     },
     "peerDependencies": {
         "typescript": "^5.0.0"
