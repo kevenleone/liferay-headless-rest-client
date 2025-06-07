@@ -1,0 +1,92 @@
+import path from "node:path";
+
+const resources = [
+    "analytics-cms-rest/v1.0",
+    "analytics-reports-rest/v1.0",
+    "analytics-reports-rest/v1.0",
+    "analytics-settings-rest/v1.0",
+    "batch-planner/v1.0",
+    "bulk/v1.0",
+    "captcha/v1.0",
+    "change-tracking-rest/v1.0",
+    "data-engine/v2.0",
+    "digital-signature-rest/v1.0",
+    "dispatch-rest/v1.0",
+    "functional-cookies-entries",
+    "headless-admin-address/v1.0",
+    "headless-admin-content/v1.0",
+    "headless-admin-list-type/v1.0",
+    "headless-admin-site/v1.0",
+    "headless-admin-taxonomy/v1.0",
+    "headless-admin-user/v1.0",
+    "headless-admin-workflow/v1.0",
+    "headless-asset-library/v1.0",
+    "headless-batch-engine/v1.0",
+    "headless-commerce-admin-account/v1.0",
+    "headless-commerce-admin-catalog/v1.0",
+    "headless-commerce-admin-catalog/v1.0",
+    "headless-commerce-admin-channel/v1.0",
+    "headless-commerce-admin-inventory/v1.0",
+    "headless-commerce-admin-order/v1.0",
+    "headless-commerce-admin-payment/v1.0",
+    "headless-commerce-admin-pricing/v1.0",
+    "headless-commerce-admin-pricing/v2.0",
+    "headless-commerce-admin-shipment/v1.0",
+    "headless-commerce-admin-site-setting/v1.0",
+    "headless-commerce-admin-site-setting/v1.0",
+    "headless-commerce-delivery-cart/v1.0",
+    "headless-commerce-delivery-catalog/v1.0",
+    "headless-commerce-delivery-order/v1.0",
+    "headless-commerce-machine-learning/v1.0",
+    "headless-commerce-punchout/v1.0",
+    "headless-delivery/v1.0",
+    "headless-delivery/v1.0",
+    "headless-form/v1.0",
+    "headless-object/v1.0",
+    "headless-portal-instances/v1.0",
+    "headless-site/v1.0",
+    "headless-user-notification/v1.0",
+    "language/v1.0",
+    "necessary-cookies-entries",
+    "notification/v1.0",
+    "object-admin/v1.0",
+    "performance-cookies-entries",
+    "personalization-cookies-entries",
+    "portal-workflow-metrics/v1.0",
+    "saml-admin/v1.0",
+    "scim/v1.0",
+    "search/v1.0",
+    "search-experiences-rest/v1.0",
+    "segments-asah/v1.0",
+    "test/v1.0",
+];
+
+const liferayHost = Bun.env.LIFERAY_HOST;
+const liferayUser = Bun.env.LIFERAY_USER;
+const liferayPassword = Bun.env.LIFERAY_PASSWORD;
+
+async function main() {
+    for (const resource of resources) {
+        const response = await fetch(
+            `${liferayHost}/o/${resource}/openapi.json`,
+            {
+                headers: {
+                    Authorization: `Basic ${btoa(
+                        `${liferayUser}:${liferayPassword}`
+                    )}`,
+                },
+            }
+        );
+
+        const data = await response.json();
+
+        const resourceName = resource.replace("/", "-");
+
+        await Bun.write(
+            path.join(__dirname, "generated", `${resourceName}.json`),
+            JSON.stringify(data)
+        );
+    }
+}
+
+main();
