@@ -166,7 +166,7 @@ export type DeleteNotificationQueueEntryData = {
         notificationQueueEntryId: string;
     };
     query?: never;
-    url: '/v1.0/notification-queue-entries/{notificationQueueEntryId}';
+    url: '/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}';
 };
 
 export type DeleteNotificationQueueEntryResponses = {
@@ -182,7 +182,7 @@ export type GetNotificationQueueEntryData = {
         notificationQueueEntryId: string;
     };
     query?: never;
-    url: '/v1.0/notification-queue-entries/{notificationQueueEntryId}';
+    url: '/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}';
 };
 
 export type GetNotificationQueueEntryResponses = {
@@ -202,7 +202,7 @@ export type DeleteNotificationQueueEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/notification-queue-entries/batch';
+    url: '/o/notification/v1.0/notification-queue-entries/batch';
 };
 
 export type DeleteNotificationQueueEntryBatchResponses = {
@@ -220,7 +220,7 @@ export type PostNotificationQueueEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/notification-queue-entries/batch';
+    url: '/o/notification/v1.0/notification-queue-entries/batch';
 };
 
 export type PostNotificationQueueEntryBatchResponses = {
@@ -239,8 +239,9 @@ export type GetNotificationQueueEntriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/notification-queue-entries';
+    url: '/o/notification/v1.0/notification-queue-entries';
 };
 
 export type GetNotificationQueueEntriesPageResponses = {
@@ -256,7 +257,7 @@ export type PostNotificationQueueEntryData = {
     body?: NotificationQueueEntryWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/notification-queue-entries';
+    url: '/o/notification/v1.0/notification-queue-entries';
 };
 
 export type PostNotificationQueueEntryResponses = {
@@ -279,7 +280,7 @@ export type PostNotificationQueueEntriesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/notification-queue-entries/export-batch';
+    url: '/o/notification/v1.0/notification-queue-entries/export-batch';
 };
 
 export type PostNotificationQueueEntriesPageExportBatchResponses = {
@@ -295,7 +296,7 @@ export type PutNotificationQueueEntryResendData = {
         notificationQueueEntryId: string;
     };
     query?: never;
-    url: '/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend';
+    url: '/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend';
 };
 
 export type PutNotificationQueueEntryResendResponses = {
@@ -311,7 +312,7 @@ export type DeleteNotificationTemplateData = {
         notificationTemplateId: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/{notificationTemplateId}';
+    url: '/o/notification/v1.0/notification-templates/{notificationTemplateId}';
 };
 
 export type DeleteNotificationTemplateResponses = {
@@ -327,7 +328,7 @@ export type GetNotificationTemplateData = {
         notificationTemplateId: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/{notificationTemplateId}';
+    url: '/o/notification/v1.0/notification-templates/{notificationTemplateId}';
 };
 
 export type GetNotificationTemplateResponses = {
@@ -345,7 +346,7 @@ export type PatchNotificationTemplateData = {
         notificationTemplateId: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/{notificationTemplateId}';
+    url: '/o/notification/v1.0/notification-templates/{notificationTemplateId}';
 };
 
 export type PatchNotificationTemplateResponses = {
@@ -363,7 +364,7 @@ export type PutNotificationTemplateData = {
         notificationTemplateId: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/{notificationTemplateId}';
+    url: '/o/notification/v1.0/notification-templates/{notificationTemplateId}';
 };
 
 export type PutNotificationTemplateResponses = {
@@ -383,7 +384,7 @@ export type DeleteNotificationTemplateBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/notification-templates/batch';
+    url: '/o/notification/v1.0/notification-templates/batch';
 };
 
 export type DeleteNotificationTemplateBatchResponses = {
@@ -401,7 +402,7 @@ export type PostNotificationTemplateBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/notification-templates/batch';
+    url: '/o/notification/v1.0/notification-templates/batch';
 };
 
 export type PostNotificationTemplateBatchResponses = {
@@ -419,7 +420,7 @@ export type PutNotificationTemplateBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/notification-templates/batch';
+    url: '/o/notification/v1.0/notification-templates/batch';
 };
 
 export type PutNotificationTemplateBatchResponses = {
@@ -435,7 +436,7 @@ export type GetNotificationTemplateByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetNotificationTemplateByExternalReferenceCodeResponses = {
@@ -453,7 +454,7 @@ export type PutNotificationTemplateByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutNotificationTemplateByExternalReferenceCodeResponses = {
@@ -475,8 +476,9 @@ export type GetNotificationTemplatesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/notification-templates';
+    url: '/o/notification/v1.0/notification-templates';
 };
 
 export type GetNotificationTemplatesPageResponses = {
@@ -492,7 +494,7 @@ export type PostNotificationTemplateData = {
     body?: NotificationTemplateWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/notification-templates';
+    url: '/o/notification/v1.0/notification-templates';
 };
 
 export type PostNotificationTemplateResponses = {
@@ -510,7 +512,7 @@ export type PostNotificationTemplateCopyData = {
         notificationTemplateId: string;
     };
     query?: never;
-    url: '/v1.0/notification-templates/{notificationTemplateId}/copy';
+    url: '/o/notification/v1.0/notification-templates/{notificationTemplateId}/copy';
 };
 
 export type PostNotificationTemplateCopyResponses = {
@@ -533,7 +535,7 @@ export type PostNotificationTemplatesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/notification-templates/export-batch';
+    url: '/o/notification/v1.0/notification-templates/export-batch';
 };
 
 export type PostNotificationTemplatesPageExportBatchResponses = {
@@ -543,22 +545,6 @@ export type PostNotificationTemplatesPageExportBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/notification/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

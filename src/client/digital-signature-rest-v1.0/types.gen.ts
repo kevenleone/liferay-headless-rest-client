@@ -144,7 +144,7 @@ export type GetSiteDsEnvelopeData = {
         dsEnvelopeId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/ds-envelopes/{dsEnvelopeId}';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/{dsEnvelopeId}';
 };
 
 export type GetSiteDsEnvelopeResponses = {
@@ -168,8 +168,9 @@ export type GetSiteDsEnvelopesPageData = {
         page?: string;
         pageSize?: string;
         status?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/ds-envelopes';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes';
 };
 
 export type GetSiteDsEnvelopesPageResponses = {
@@ -187,7 +188,7 @@ export type PostSiteDsEnvelopeData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/ds-envelopes';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes';
 };
 
 export type PostSiteDsEnvelopeResponses = {
@@ -209,7 +210,7 @@ export type PostSiteDsEnvelopeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sites/{siteId}/ds-envelopes/batch';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch';
 };
 
 export type PostSiteDsEnvelopeBatchResponses = {
@@ -233,7 +234,7 @@ export type PostSiteDsEnvelopesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/ds-envelopes/export-batch';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/export-batch';
 };
 
 export type PostSiteDsEnvelopesPageExportBatchResponses = {
@@ -250,7 +251,7 @@ export type PostSiteDsRecipientViewDefinitionData = {
         dsEnvelopeId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/ds-recipient-view-definition/{dsEnvelopeId}';
+    url: '/o/digital-signature-rest/v1.0/sites/{siteId}/ds-recipient-view-definition/{dsEnvelopeId}';
 };
 
 export type PostSiteDsRecipientViewDefinitionResponses = {
@@ -262,22 +263,6 @@ export type PostSiteDsRecipientViewDefinitionResponses = {
 
 export type PostSiteDsRecipientViewDefinitionResponse = PostSiteDsRecipientViewDefinitionResponses[keyof PostSiteDsRecipientViewDefinitionResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/digital-signature-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

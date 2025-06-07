@@ -640,7 +640,7 @@ export type DeleteAssetLibraryKeywordByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteAssetLibraryKeywordByExternalReferenceCodeResponses = {
@@ -660,7 +660,7 @@ export type GetAssetLibraryKeywordByExternalReferenceCodeData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetAssetLibraryKeywordByExternalReferenceCodeResponses = {
@@ -679,7 +679,7 @@ export type PutAssetLibraryKeywordByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutAssetLibraryKeywordByExternalReferenceCodeResponses = {
@@ -697,7 +697,7 @@ export type DeleteKeywordData = {
         keywordId: string;
     };
     query?: never;
-    url: '/v1.0/keywords/{keywordId}';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{keywordId}';
 };
 
 export type DeleteKeywordResponses = {
@@ -716,7 +716,7 @@ export type GetKeywordData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/keywords/{keywordId}';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{keywordId}';
 };
 
 export type GetKeywordResponses = {
@@ -734,7 +734,7 @@ export type PutKeywordData = {
         keywordId: string;
     };
     query?: never;
-    url: '/v1.0/keywords/{keywordId}';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{keywordId}';
 };
 
 export type PutKeywordResponses = {
@@ -754,7 +754,7 @@ export type DeleteKeywordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/keywords/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/batch';
 };
 
 export type DeleteKeywordBatchResponses = {
@@ -772,7 +772,7 @@ export type PostKeywordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/keywords/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/batch';
 };
 
 export type PostKeywordBatchResponses = {
@@ -790,7 +790,7 @@ export type PutKeywordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/keywords/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/batch';
 };
 
 export type PutKeywordBatchResponses = {
@@ -807,7 +807,7 @@ export type DeleteSiteKeywordByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteSiteKeywordByExternalReferenceCodeResponses = {
@@ -827,7 +827,7 @@ export type GetSiteKeywordByExternalReferenceCodeData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSiteKeywordByExternalReferenceCodeResponses = {
@@ -846,7 +846,7 @@ export type PutSiteKeywordByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSiteKeywordByExternalReferenceCodeResponses = {
@@ -867,8 +867,9 @@ export type GetAssetLibraryKeywordPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/permissions';
 };
 
 export type GetAssetLibraryKeywordPermissionsPageResponses = {
@@ -886,7 +887,7 @@ export type PutAssetLibraryKeywordPermissionsPageData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/permissions';
 };
 
 export type PutAssetLibraryKeywordPermissionsPageResponses = {
@@ -912,8 +913,9 @@ export type GetAssetLibraryKeywordsPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords';
 };
 
 export type GetAssetLibraryKeywordsPageResponses = {
@@ -931,7 +933,7 @@ export type PostAssetLibraryKeywordData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords';
 };
 
 export type PostAssetLibraryKeywordResponses = {
@@ -955,8 +957,9 @@ export type GetKeywordsPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords';
 };
 
 export type GetKeywordsPageResponses = {
@@ -972,7 +975,7 @@ export type PostKeywordData = {
     body?: KeywordWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords';
 };
 
 export type PostKeywordResponses = {
@@ -994,8 +997,9 @@ export type GetKeywordsRankedPageData = {
         restrictFields?: string;
         search?: string;
         siteId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/keywords/ranked';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/ranked';
 };
 
 export type GetKeywordsRankedPageResponses = {
@@ -1016,8 +1020,9 @@ export type GetSiteKeywordPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/keywords/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/permissions';
 };
 
 export type GetSiteKeywordPermissionsPageResponses = {
@@ -1035,7 +1040,7 @@ export type PutSiteKeywordPermissionsPageData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/keywords/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/permissions';
 };
 
 export type PutSiteKeywordPermissionsPageResponses = {
@@ -1061,8 +1066,9 @@ export type GetSiteKeywordsPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords';
 };
 
 export type GetSiteKeywordsPageResponses = {
@@ -1080,7 +1086,7 @@ export type PostSiteKeywordData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/keywords';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords';
 };
 
 export type PostSiteKeywordResponses = {
@@ -1102,7 +1108,7 @@ export type PostAssetLibraryKeywordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/batch';
 };
 
 export type PostAssetLibraryKeywordBatchResponses = {
@@ -1125,7 +1131,7 @@ export type PostAssetLibraryKeywordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/keywords/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/keywords/export-batch';
 };
 
 export type PostAssetLibraryKeywordsPageExportBatchResponses = {
@@ -1146,7 +1152,7 @@ export type PostKeywordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/keywords/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/export-batch';
 };
 
 export type PostKeywordsPageExportBatchResponses = {
@@ -1166,7 +1172,7 @@ export type PostSiteKeywordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sites/{siteId}/keywords/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/batch';
 };
 
 export type PostSiteKeywordBatchResponses = {
@@ -1189,7 +1195,7 @@ export type PostSiteKeywordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/keywords/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/keywords/export-batch';
 };
 
 export type PostSiteKeywordsPageExportBatchResponses = {
@@ -1207,7 +1213,7 @@ export type PutKeywordMergeData = {
     query?: {
         fromKeywordIds?: string;
     };
-    url: '/v1.0/keywords/{toKeywordId}/merge';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{toKeywordId}/merge';
 };
 
 export type PutKeywordMergeResponses = {
@@ -1223,7 +1229,7 @@ export type PutKeywordSubscribeData = {
         keywordId: string;
     };
     query?: never;
-    url: '/v1.0/keywords/{keywordId}/subscribe';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{keywordId}/subscribe';
 };
 
 export type PutKeywordSubscribeResponses = {
@@ -1239,26 +1245,10 @@ export type PutKeywordUnsubscribeData = {
         keywordId: string;
     };
     query?: never;
-    url: '/v1.0/keywords/{keywordId}/unsubscribe';
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{keywordId}/unsubscribe';
 };
 
 export type PutKeywordUnsubscribeResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -1271,7 +1261,7 @@ export type DeleteTaxonomyCategoryData = {
         taxonomyCategoryId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}';
 };
 
 export type DeleteTaxonomyCategoryResponses = {
@@ -1290,7 +1280,7 @@ export type GetTaxonomyCategoryData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}';
 };
 
 export type GetTaxonomyCategoryResponses = {
@@ -1308,7 +1298,7 @@ export type PatchTaxonomyCategoryData = {
         taxonomyCategoryId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}';
 };
 
 export type PatchTaxonomyCategoryResponses = {
@@ -1326,7 +1316,7 @@ export type PutTaxonomyCategoryData = {
         taxonomyCategoryId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}';
 };
 
 export type PutTaxonomyCategoryResponses = {
@@ -1346,7 +1336,7 @@ export type DeleteTaxonomyCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-categories/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/batch';
 };
 
 export type DeleteTaxonomyCategoryBatchResponses = {
@@ -1364,7 +1354,7 @@ export type PutTaxonomyCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-categories/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/batch';
 };
 
 export type PutTaxonomyCategoryBatchResponses = {
@@ -1381,7 +1371,7 @@ export type DeleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeData 
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses = {
@@ -1401,7 +1391,7 @@ export type GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses = {
@@ -1420,7 +1410,7 @@ export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses = {
@@ -1441,8 +1431,9 @@ export type GetTaxonomyCategoriesRankedPageData = {
         pageSize?: string;
         restrictFields?: string;
         siteId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-categories/ranked';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/ranked';
 };
 
 export type GetTaxonomyCategoriesRankedPageResponses = {
@@ -1463,8 +1454,9 @@ export type GetTaxonomyCategoryPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}/permissions';
 };
 
 export type GetTaxonomyCategoryPermissionsPageResponses = {
@@ -1482,7 +1474,7 @@ export type PutTaxonomyCategoryPermissionsPageData = {
         taxonomyCategoryId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-categories/{taxonomyCategoryId}/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{taxonomyCategoryId}/permissions';
 };
 
 export type PutTaxonomyCategoryPermissionsPageResponses = {
@@ -1508,8 +1500,9 @@ export type GetTaxonomyCategoryTaxonomyCategoriesPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-categories/{parentTaxonomyCategoryId}/taxonomy-categories';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{parentTaxonomyCategoryId}/taxonomy-categories';
 };
 
 export type GetTaxonomyCategoryTaxonomyCategoriesPageResponses = {
@@ -1527,7 +1520,7 @@ export type PostTaxonomyCategoryTaxonomyCategoryData = {
         parentTaxonomyCategoryId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-categories/{parentTaxonomyCategoryId}/taxonomy-categories';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-categories/{parentTaxonomyCategoryId}/taxonomy-categories';
 };
 
 export type PostTaxonomyCategoryTaxonomyCategoryResponses = {
@@ -1554,8 +1547,9 @@ export type GetTaxonomyVocabularyTaxonomyCategoriesPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories';
 };
 
 export type GetTaxonomyVocabularyTaxonomyCategoriesPageResponses = {
@@ -1573,7 +1567,7 @@ export type PostTaxonomyVocabularyTaxonomyCategoryData = {
         taxonomyVocabularyId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories';
 };
 
 export type PostTaxonomyVocabularyTaxonomyCategoryResponses = {
@@ -1598,7 +1592,7 @@ export type PostTaxonomyVocabularyTaxonomyCategoriesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/export-batch';
 };
 
 export type PostTaxonomyVocabularyTaxonomyCategoriesPageExportBatchResponses = {
@@ -1618,7 +1612,7 @@ export type PostTaxonomyVocabularyTaxonomyCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/taxonomy-categories/batch';
 };
 
 export type PostTaxonomyVocabularyTaxonomyCategoryBatchResponses = {
@@ -1635,7 +1629,7 @@ export type DeleteAssetLibraryTaxonomyVocabularyByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1655,7 +1649,7 @@ export type GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1674,7 +1668,7 @@ export type PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1693,7 +1687,7 @@ export type DeleteSiteTaxonomyVocabularyByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteSiteTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1713,7 +1707,7 @@ export type GetSiteTaxonomyVocabularyByExternalReferenceCodeData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSiteTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1732,7 +1726,7 @@ export type PutSiteTaxonomyVocabularyByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSiteTaxonomyVocabularyByExternalReferenceCodeResponses = {
@@ -1750,7 +1744,7 @@ export type DeleteTaxonomyVocabularyData = {
         taxonomyVocabularyId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
 };
 
 export type DeleteTaxonomyVocabularyResponses = {
@@ -1769,7 +1763,7 @@ export type GetTaxonomyVocabularyData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
 };
 
 export type GetTaxonomyVocabularyResponses = {
@@ -1787,7 +1781,7 @@ export type PatchTaxonomyVocabularyData = {
         taxonomyVocabularyId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
 };
 
 export type PatchTaxonomyVocabularyResponses = {
@@ -1805,7 +1799,7 @@ export type PutTaxonomyVocabularyData = {
         taxonomyVocabularyId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}';
 };
 
 export type PutTaxonomyVocabularyResponses = {
@@ -1825,7 +1819,7 @@ export type DeleteTaxonomyVocabularyBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/batch';
 };
 
 export type DeleteTaxonomyVocabularyBatchResponses = {
@@ -1843,7 +1837,7 @@ export type PostTaxonomyVocabularyBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/batch';
 };
 
 export type PostTaxonomyVocabularyBatchResponses = {
@@ -1861,7 +1855,7 @@ export type PutTaxonomyVocabularyBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/batch';
 };
 
 export type PutTaxonomyVocabularyBatchResponses = {
@@ -1885,8 +1879,9 @@ export type GetAssetLibraryTaxonomyVocabulariesPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies';
 };
 
 export type GetAssetLibraryTaxonomyVocabulariesPageResponses = {
@@ -1904,7 +1899,7 @@ export type PostAssetLibraryTaxonomyVocabularyData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies';
 };
 
 export type PostAssetLibraryTaxonomyVocabularyResponses = {
@@ -1925,8 +1920,9 @@ export type GetAssetLibraryTaxonomyVocabularyPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/permissions';
 };
 
 export type GetAssetLibraryTaxonomyVocabularyPermissionsPageResponses = {
@@ -1944,7 +1940,7 @@ export type PutAssetLibraryTaxonomyVocabularyPermissionsPageData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/permissions';
 };
 
 export type PutAssetLibraryTaxonomyVocabularyPermissionsPageResponses = {
@@ -1970,8 +1966,9 @@ export type GetSiteTaxonomyVocabulariesPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies';
 };
 
 export type GetSiteTaxonomyVocabulariesPageResponses = {
@@ -1989,7 +1986,7 @@ export type PostSiteTaxonomyVocabularyData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies';
 };
 
 export type PostSiteTaxonomyVocabularyResponses = {
@@ -2010,8 +2007,9 @@ export type GetSiteTaxonomyVocabularyPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/permissions';
 };
 
 export type GetSiteTaxonomyVocabularyPermissionsPageResponses = {
@@ -2029,7 +2027,7 @@ export type PutSiteTaxonomyVocabularyPermissionsPageData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/permissions';
 };
 
 export type PutSiteTaxonomyVocabularyPermissionsPageResponses = {
@@ -2053,8 +2051,9 @@ export type GetTaxonomyVocabulariesPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies';
 };
 
 export type GetTaxonomyVocabulariesPageResponses = {
@@ -2070,7 +2069,7 @@ export type PostTaxonomyVocabularyData = {
     body?: TaxonomyVocabularyWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies';
 };
 
 export type PostTaxonomyVocabularyResponses = {
@@ -2091,8 +2090,9 @@ export type GetTaxonomyVocabularyPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/permissions';
 };
 
 export type GetTaxonomyVocabularyPermissionsPageResponses = {
@@ -2110,7 +2110,7 @@ export type PutTaxonomyVocabularyPermissionsPageData = {
         taxonomyVocabularyId: string;
     };
     query?: never;
-    url: '/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/permissions';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/{taxonomyVocabularyId}/permissions';
 };
 
 export type PutTaxonomyVocabularyPermissionsPageResponses = {
@@ -2135,7 +2135,7 @@ export type PostAssetLibraryTaxonomyVocabulariesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/export-batch';
 };
 
 export type PostAssetLibraryTaxonomyVocabulariesPageExportBatchResponses = {
@@ -2155,7 +2155,7 @@ export type PostAssetLibraryTaxonomyVocabularyBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-vocabularies/batch';
 };
 
 export type PostAssetLibraryTaxonomyVocabularyBatchResponses = {
@@ -2178,7 +2178,7 @@ export type PostSiteTaxonomyVocabulariesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/export-batch';
 };
 
 export type PostSiteTaxonomyVocabulariesPageExportBatchResponses = {
@@ -2198,7 +2198,7 @@ export type PostSiteTaxonomyVocabularyBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/batch';
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-vocabularies/batch';
 };
 
 export type PostSiteTaxonomyVocabularyBatchResponses = {
@@ -2219,7 +2219,7 @@ export type PostTaxonomyVocabulariesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/taxonomy-vocabularies/export-batch';
+    url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies/export-batch';
 };
 
 export type PostTaxonomyVocabulariesPageExportBatchResponses = {
@@ -2230,5 +2230,5 @@ export type PostTaxonomyVocabulariesPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-admin-taxonomy/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

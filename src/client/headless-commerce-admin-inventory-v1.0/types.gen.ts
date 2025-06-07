@@ -460,7 +460,7 @@ export type GetWarehouseAccountGroupAccountGroupData = {
         warehouseAccountGroupId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-account-groups/{warehouseAccountGroupId}/account-group';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-account-groups/{warehouseAccountGroupId}/account-group';
 };
 
 export type GetWarehouseAccountGroupAccountGroupResponses = {
@@ -478,7 +478,7 @@ export type GetWarehouseAccountAccountData = {
         warehouseAccountId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-accounts/{warehouseAccountId}/account';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-accounts/{warehouseAccountId}/account';
 };
 
 export type GetWarehouseAccountAccountResponses = {
@@ -496,7 +496,7 @@ export type GetWarehouseChannelChannelData = {
         warehouseChannelId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-channels/{warehouseChannelId}/channel';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-channels/{warehouseChannelId}/channel';
 };
 
 export type GetWarehouseChannelChannelResponses = {
@@ -508,29 +508,13 @@ export type GetWarehouseChannelChannelResponses = {
 
 export type GetWarehouseChannelChannelResponse = GetWarehouseChannelChannelResponses[keyof GetWarehouseChannelChannelResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetWarehouseOrderTypeOrderTypeData = {
     body?: never;
     path: {
         warehouseOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-order-types/{warehouseOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-order-types/{warehouseOrderTypeId}/order-type';
 };
 
 export type GetWarehouseOrderTypeOrderTypeResponses = {
@@ -548,7 +532,7 @@ export type DeleteReplenishmentItemData = {
         replenishmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/{replenishmentItemId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/{replenishmentItemId}';
 };
 
 export type DeleteReplenishmentItemResponses = {
@@ -564,7 +548,7 @@ export type GetReplenishmentItemData = {
         replenishmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/{replenishmentItemId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/{replenishmentItemId}';
 };
 
 export type GetReplenishmentItemResponses = {
@@ -582,7 +566,7 @@ export type PatchReplenishmentItemData = {
         replenishmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/{replenishmentItemId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/{replenishmentItemId}';
 };
 
 export type PatchReplenishmentItemResponses = {
@@ -602,7 +586,7 @@ export type DeleteReplenishmentItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/replenishment-items/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/batch';
 };
 
 export type DeleteReplenishmentItemBatchResponses = {
@@ -618,7 +602,7 @@ export type DeleteReplenishmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteReplenishmentItemByExternalReferenceCodeResponses = {
@@ -634,7 +618,7 @@ export type GetReplenishmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetReplenishmentItemByExternalReferenceCodeResponses = {
@@ -652,7 +636,7 @@ export type PatchReplenishmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchReplenishmentItemByExternalReferenceCodeResponses = {
@@ -670,7 +654,7 @@ export type PutReplenishmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/replenishment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutReplenishmentItemByExternalReferenceCodeResponses = {
@@ -690,8 +674,9 @@ export type GetReplenishmentItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/skus/by-sku/{sku}/replenishment-items';
+    url: '/o/headless-commerce-admin-inventory/v1.0/skus/by-sku/{sku}/replenishment-items';
 };
 
 export type GetReplenishmentItemsPageResponses = {
@@ -711,8 +696,9 @@ export type GetWarehouseIdReplenishmentItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{warehouseId}/replenishment-items';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{warehouseId}/replenishment-items';
 };
 
 export type GetWarehouseIdReplenishmentItemsPageResponses = {
@@ -731,7 +717,7 @@ export type PostReplenishmentItemData = {
         sku: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{warehouseId}/skus/by-sku/{sku}/replenishment-items';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{warehouseId}/skus/by-sku/{sku}/replenishment-items';
 };
 
 export type PostReplenishmentItemResponses = {
@@ -754,7 +740,7 @@ export type PostReplenishmentItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/{warehouseId}/skus/by-sku/{sku}/replenishment-items/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{warehouseId}/skus/by-sku/{sku}/replenishment-items/batch';
 };
 
 export type PostReplenishmentItemBatchResponses = {
@@ -774,7 +760,7 @@ export type PostReplenishmentItemsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/skus/by-sku/{sku}/replenishment-items/export-batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/skus/by-sku/{sku}/replenishment-items/export-batch';
 };
 
 export type PostReplenishmentItemsPageExportBatchResponses = {
@@ -790,7 +776,7 @@ export type DeleteWarehouseAccountGroupData = {
         warehouseAccountGroupId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-account-groups/{warehouseAccountGroupId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-account-groups/{warehouseAccountGroupId}';
 };
 
 export type DeleteWarehouseAccountGroupResponses = {
@@ -808,7 +794,7 @@ export type DeleteWarehouseAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse-account-groups/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-account-groups/batch';
 };
 
 export type DeleteWarehouseAccountGroupBatchResponses = {
@@ -826,8 +812,9 @@ export type GetWarehouseByExternalReferenceCodeWarehouseAccountGroupsPageData = 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-account-groups';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-account-groups';
 };
 
 export type GetWarehouseByExternalReferenceCodeWarehouseAccountGroupsPageResponses = {
@@ -845,7 +832,7 @@ export type PostWarehouseByExternalReferenceCodeWarehouseAccountGroupData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-account-groups';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-account-groups';
 };
 
 export type PostWarehouseByExternalReferenceCodeWarehouseAccountGroupResponses = {
@@ -868,8 +855,9 @@ export type GetWarehouseIdWarehouseAccountGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{id}/warehouse-account-groups';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-account-groups';
 };
 
 export type GetWarehouseIdWarehouseAccountGroupsPageResponses = {
@@ -887,7 +875,7 @@ export type PostWarehouseIdWarehouseAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}/warehouse-account-groups';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-account-groups';
 };
 
 export type PostWarehouseIdWarehouseAccountGroupResponses = {
@@ -907,7 +895,7 @@ export type PostWarehouseIdWarehouseAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/warehouse-account-groups/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/warehouse-account-groups/batch';
 };
 
 export type PostWarehouseIdWarehouseAccountGroupBatchResponses = {
@@ -923,7 +911,7 @@ export type DeleteWarehouseAccountData = {
         warehouseAccountId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-accounts/{warehouseAccountId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-accounts/{warehouseAccountId}';
 };
 
 export type DeleteWarehouseAccountResponses = {
@@ -941,7 +929,7 @@ export type DeleteWarehouseAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse-accounts/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-accounts/batch';
 };
 
 export type DeleteWarehouseAccountBatchResponses = {
@@ -959,8 +947,9 @@ export type GetWarehouseByExternalReferenceCodeWarehouseAccountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-accounts';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-accounts';
 };
 
 export type GetWarehouseByExternalReferenceCodeWarehouseAccountsPageResponses = {
@@ -978,7 +967,7 @@ export type PostWarehouseByExternalReferenceCodeWarehouseAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-accounts';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-accounts';
 };
 
 export type PostWarehouseByExternalReferenceCodeWarehouseAccountResponses = {
@@ -1001,8 +990,9 @@ export type GetWarehouseIdWarehouseAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{id}/warehouse-accounts';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-accounts';
 };
 
 export type GetWarehouseIdWarehouseAccountsPageResponses = {
@@ -1020,7 +1010,7 @@ export type PostWarehouseIdWarehouseAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}/warehouse-accounts';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-accounts';
 };
 
 export type PostWarehouseIdWarehouseAccountResponses = {
@@ -1040,7 +1030,7 @@ export type PostWarehouseIdWarehouseAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/warehouse-accounts/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/warehouse-accounts/batch';
 };
 
 export type PostWarehouseIdWarehouseAccountBatchResponses = {
@@ -1056,7 +1046,7 @@ export type DeleteWarehouseChannelData = {
         warehouseChannelId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-channels/{warehouseChannelId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-channels/{warehouseChannelId}';
 };
 
 export type DeleteWarehouseChannelResponses = {
@@ -1074,7 +1064,7 @@ export type DeleteWarehouseChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse-channels/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-channels/batch';
 };
 
 export type DeleteWarehouseChannelBatchResponses = {
@@ -1092,8 +1082,9 @@ export type GetWarehouseByExternalReferenceCodeWarehouseChannelsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-channels';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-channels';
 };
 
 export type GetWarehouseByExternalReferenceCodeWarehouseChannelsPageResponses = {
@@ -1111,7 +1102,7 @@ export type PostWarehouseByExternalReferenceCodeWarehouseChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-channels';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-channels';
 };
 
 export type PostWarehouseByExternalReferenceCodeWarehouseChannelResponses = {
@@ -1134,8 +1125,9 @@ export type GetWarehouseIdWarehouseChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{id}/warehouse-channels';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-channels';
 };
 
 export type GetWarehouseIdWarehouseChannelsPageResponses = {
@@ -1153,7 +1145,7 @@ export type PostWarehouseIdWarehouseChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}/warehouse-channels';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-channels';
 };
 
 export type PostWarehouseIdWarehouseChannelResponses = {
@@ -1173,7 +1165,7 @@ export type PostWarehouseIdWarehouseChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/warehouse-channels/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/warehouse-channels/batch';
 };
 
 export type PostWarehouseIdWarehouseChannelBatchResponses = {
@@ -1189,7 +1181,7 @@ export type DeleteWarehouseItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/{id}';
 };
 
 export type DeleteWarehouseItemResponses = {
@@ -1205,7 +1197,7 @@ export type GetWarehouseItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/{id}';
 };
 
 export type GetWarehouseItemResponses = {
@@ -1223,7 +1215,7 @@ export type PatchWarehouseItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/{id}';
 };
 
 export type PatchWarehouseItemResponses = {
@@ -1241,7 +1233,7 @@ export type DeleteWarehouseItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouseItems/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/batch';
 };
 
 export type DeleteWarehouseItemBatchResponses = {
@@ -1257,7 +1249,7 @@ export type DeleteWarehouseItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteWarehouseItemByExternalReferenceCodeResponses = {
@@ -1273,7 +1265,7 @@ export type GetWarehouseItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetWarehouseItemByExternalReferenceCodeResponses = {
@@ -1291,7 +1283,7 @@ export type PatchWarehouseItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchWarehouseItemByExternalReferenceCodeResponses = {
@@ -1307,7 +1299,7 @@ export type PostWarehouseItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PostWarehouseItemByExternalReferenceCodeResponses = {
@@ -1325,7 +1317,7 @@ export type PutWarehouseItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutWarehouseItemByExternalReferenceCodeResponses = {
@@ -1345,8 +1337,9 @@ export type GetWarehouseByExternalReferenceCodeWarehouseItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouseItems';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouseItems';
 };
 
 export type GetWarehouseByExternalReferenceCodeWarehouseItemsPageResponses = {
@@ -1364,7 +1357,7 @@ export type PostWarehouseByExternalReferenceCodeWarehouseItemData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouseItems';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouseItems';
 };
 
 export type PostWarehouseByExternalReferenceCodeWarehouseItemResponses = {
@@ -1384,8 +1377,9 @@ export type GetWarehouseIdWarehouseItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{id}/warehouseItems';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouseItems';
 };
 
 export type GetWarehouseIdWarehouseItemsPageResponses = {
@@ -1403,7 +1397,7 @@ export type PostWarehouseIdWarehouseItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}/warehouseItems';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouseItems';
 };
 
 export type PostWarehouseIdWarehouseItemResponses = {
@@ -1423,8 +1417,9 @@ export type GetWarehouseItemsUpdatedPageData = {
         page?: string;
         pageSize?: string;
         start?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouseItems/updated';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouseItems/updated';
 };
 
 export type GetWarehouseItemsUpdatedPageResponses = {
@@ -1444,7 +1439,7 @@ export type PostWarehouseIdWarehouseItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/warehouseItems/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/warehouseItems/batch';
 };
 
 export type PostWarehouseIdWarehouseItemBatchResponses = {
@@ -1460,7 +1455,7 @@ export type DeleteWarehouseOrderTypeData = {
         warehouseOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/warehouse-order-types/{warehouseOrderTypeId}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-order-types/{warehouseOrderTypeId}';
 };
 
 export type DeleteWarehouseOrderTypeResponses = {
@@ -1478,7 +1473,7 @@ export type DeleteWarehouseOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse-order-types/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouse-order-types/batch';
 };
 
 export type DeleteWarehouseOrderTypeBatchResponses = {
@@ -1496,8 +1491,9 @@ export type GetWarehouseByExternalReferenceCodeWarehouseOrderTypesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-order-types';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-order-types';
 };
 
 export type GetWarehouseByExternalReferenceCodeWarehouseOrderTypesPageResponses = {
@@ -1515,7 +1511,7 @@ export type PostWarehouseByExternalReferenceCodeWarehouseOrderTypeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-order-types';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}/warehouse-order-types';
 };
 
 export type PostWarehouseByExternalReferenceCodeWarehouseOrderTypeResponses = {
@@ -1538,8 +1534,9 @@ export type GetWarehouseIdWarehouseOrderTypesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses/{id}/warehouse-order-types';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-order-types';
 };
 
 export type GetWarehouseIdWarehouseOrderTypesPageResponses = {
@@ -1557,7 +1554,7 @@ export type PostWarehouseIdWarehouseOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}/warehouse-order-types';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}/warehouse-order-types';
 };
 
 export type PostWarehouseIdWarehouseOrderTypeResponses = {
@@ -1577,7 +1574,7 @@ export type PostWarehouseIdWarehouseOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/warehouse-order-types/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/warehouse-order-types/batch';
 };
 
 export type PostWarehouseIdWarehouseOrderTypeBatchResponses = {
@@ -1593,7 +1590,7 @@ export type DeleteWarehouseByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteWarehouseByExternalReferenceCodeResponses = {
@@ -1609,7 +1606,7 @@ export type GetWarehouseByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetWarehouseByExternalReferenceCodeResponses = {
@@ -1627,7 +1624,7 @@ export type PatchWarehouseByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchWarehouseByExternalReferenceCodeResponses = {
@@ -1643,7 +1640,7 @@ export type PutWarehouseByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutWarehouseByExternalReferenceCodeResponses = {
@@ -1661,7 +1658,7 @@ export type DeleteWarehouseIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}';
 };
 
 export type DeleteWarehouseIdResponses = {
@@ -1677,7 +1674,7 @@ export type GetWarehouseIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}';
 };
 
 export type GetWarehouseIdResponses = {
@@ -1695,7 +1692,7 @@ export type PatchWarehouseIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouses/{id}';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/{id}';
 };
 
 export type PatchWarehouseIdResponses = {
@@ -1714,8 +1711,9 @@ export type GetWarehousesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/warehouses';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses';
 };
 
 export type GetWarehousesPageResponses = {
@@ -1731,7 +1729,7 @@ export type PostWarehouseData = {
     body?: WarehouseWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/warehouses';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses';
 };
 
 export type PostWarehouseResponses = {
@@ -1751,7 +1749,7 @@ export type PostWarehouseBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouses/batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/batch';
 };
 
 export type PostWarehouseBatchResponses = {
@@ -1772,7 +1770,7 @@ export type PostWarehousesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/warehouses/export-batch';
+    url: '/o/headless-commerce-admin-inventory/v1.0/warehouses/export-batch';
 };
 
 export type PostWarehousesPageExportBatchResponses = {
@@ -1783,5 +1781,5 @@ export type PostWarehousesPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-inventory/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

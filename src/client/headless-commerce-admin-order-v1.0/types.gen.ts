@@ -1275,15 +1275,15 @@ export type PageTermWritable = {
     page?: number;
 };
 
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
 export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
+    [key: string]: unknown;
+};
+
+export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
@@ -1293,7 +1293,7 @@ export type GetOrderByExternalReferenceCodeAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/account';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/account';
 };
 
 export type GetOrderByExternalReferenceCodeAccountResponses = {
@@ -1311,7 +1311,7 @@ export type GetOrderIdAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/account';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/account';
 };
 
 export type GetOrderIdAccountResponses = {
@@ -1329,7 +1329,7 @@ export type GetOrderRuleAccountAccountData = {
         orderRuleAccountId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-accounts/{orderRuleAccountId}/account';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-accounts/{orderRuleAccountId}/account';
 };
 
 export type GetOrderRuleAccountAccountResponses = {
@@ -1347,7 +1347,7 @@ export type GetOrderByExternalReferenceCodeBillingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/billingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/billingAddress';
 };
 
 export type GetOrderByExternalReferenceCodeBillingAddressResponses = {
@@ -1365,7 +1365,7 @@ export type PatchOrderByExternalReferenceCodeBillingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/billingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/billingAddress';
 };
 
 export type PatchOrderByExternalReferenceCodeBillingAddressResponses = {
@@ -1381,7 +1381,7 @@ export type GetOrderIdBillingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/billingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/billingAddress';
 };
 
 export type GetOrderIdBillingAddressResponses = {
@@ -1399,7 +1399,7 @@ export type PatchOrderIdBillingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/billingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/billingAddress';
 };
 
 export type PatchOrderIdBillingAddressResponses = {
@@ -1415,7 +1415,7 @@ export type GetOrderByExternalReferenceCodeChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/channel';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/channel';
 };
 
 export type GetOrderByExternalReferenceCodeChannelResponses = {
@@ -1433,7 +1433,7 @@ export type GetOrderIdChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/channel';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/channel';
 };
 
 export type GetOrderIdChannelResponses = {
@@ -1451,7 +1451,7 @@ export type GetOrderRuleChannelChannelData = {
         orderRuleChannelId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-channels/{orderRuleChannelId}/channel';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-channels/{orderRuleChannelId}/channel';
 };
 
 export type GetOrderRuleChannelChannelResponses = {
@@ -1469,7 +1469,7 @@ export type GetOrderTypeChannelChannelData = {
         orderTypeChannelId: string;
     };
     query?: never;
-    url: '/v1.0/order-type-channels/{orderTypeChannelId}/channel';
+    url: '/o/headless-commerce-admin-order/v1.0/order-type-channels/{orderTypeChannelId}/channel';
 };
 
 export type GetOrderTypeChannelChannelResponses = {
@@ -1481,29 +1481,13 @@ export type GetOrderTypeChannelChannelResponses = {
 
 export type GetOrderTypeChannelChannelResponse = GetOrderTypeChannelChannelResponses[keyof GetOrderTypeChannelChannelResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetOrderRuleAccountGroupAccountGroupData = {
     body?: never;
     path: {
         orderRuleAccountGroupId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-account-groups/{orderRuleAccountGroupId}/account-group';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-account-groups/{orderRuleAccountGroupId}/account-group';
 };
 
 export type GetOrderRuleAccountGroupAccountGroupResponses = {
@@ -1521,7 +1505,7 @@ export type DeleteOrderItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/{id}';
 };
 
 export type DeleteOrderItemResponses = {
@@ -1537,7 +1521,7 @@ export type GetOrderItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/{id}';
 };
 
 export type GetOrderItemResponses = {
@@ -1555,7 +1539,7 @@ export type PatchOrderItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/{id}';
 };
 
 export type PatchOrderItemResponses = {
@@ -1573,7 +1557,7 @@ export type PutOrderItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/{id}';
 };
 
 export type PutOrderItemResponses = {
@@ -1593,7 +1577,7 @@ export type DeleteOrderItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orderItems/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/batch';
 };
 
 export type DeleteOrderItemBatchResponses = {
@@ -1611,7 +1595,7 @@ export type PutOrderItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orderItems/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/batch';
 };
 
 export type PutOrderItemBatchResponses = {
@@ -1627,7 +1611,7 @@ export type DeleteOrderItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteOrderItemByExternalReferenceCodeResponses = {
@@ -1643,7 +1627,7 @@ export type GetOrderItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetOrderItemByExternalReferenceCodeResponses = {
@@ -1661,7 +1645,7 @@ export type PatchOrderItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchOrderItemByExternalReferenceCodeResponses = {
@@ -1679,7 +1663,7 @@ export type PutOrderItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutOrderItemByExternalReferenceCodeResponses = {
@@ -1699,8 +1683,9 @@ export type GetOrderByExternalReferenceCodeOrderItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderItems';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderItems';
 };
 
 export type GetOrderByExternalReferenceCodeOrderItemsPageResponses = {
@@ -1718,7 +1703,7 @@ export type PostOrderByExternalReferenceCodeOrderItemData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderItems';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderItems';
 };
 
 export type PostOrderByExternalReferenceCodeOrderItemResponses = {
@@ -1738,8 +1723,9 @@ export type GetOrderIdOrderItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orders/{id}/orderItems';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/orderItems';
 };
 
 export type GetOrderIdOrderItemsPageResponses = {
@@ -1757,7 +1743,7 @@ export type PostOrderIdOrderItemData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/orderItems';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/orderItems';
 };
 
 export type PostOrderIdOrderItemResponses = {
@@ -1778,8 +1764,9 @@ export type GetOrderItemsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orderItems';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems';
 };
 
 export type GetOrderItemsPageResponses = {
@@ -1799,7 +1786,7 @@ export type PostOrderIdOrderItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orders/orderItems/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/orderItems/batch';
 };
 
 export type PostOrderIdOrderItemBatchResponses = {
@@ -1820,7 +1807,7 @@ export type PostOrderItemsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/orderItems/export-batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/export-batch';
 };
 
 export type PostOrderItemsPageExportBatchResponses = {
@@ -1836,7 +1823,7 @@ export type DeleteOrderNoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/{id}';
 };
 
 export type DeleteOrderNoteResponses = {
@@ -1852,7 +1839,7 @@ export type GetOrderNoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/{id}';
 };
 
 export type GetOrderNoteResponses = {
@@ -1870,7 +1857,7 @@ export type PatchOrderNoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/{id}';
 };
 
 export type PatchOrderNoteResponses = {
@@ -1888,7 +1875,7 @@ export type DeleteOrderNoteBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orderNotes/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/batch';
 };
 
 export type DeleteOrderNoteBatchResponses = {
@@ -1904,7 +1891,7 @@ export type DeleteOrderNoteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteOrderNoteByExternalReferenceCodeResponses = {
@@ -1920,7 +1907,7 @@ export type GetOrderNoteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetOrderNoteByExternalReferenceCodeResponses = {
@@ -1938,7 +1925,7 @@ export type PatchOrderNoteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orderNotes/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchOrderNoteByExternalReferenceCodeResponses = {
@@ -1956,8 +1943,9 @@ export type GetOrderByExternalReferenceCodeOrderNotesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderNotes';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderNotes';
 };
 
 export type GetOrderByExternalReferenceCodeOrderNotesPageResponses = {
@@ -1975,7 +1963,7 @@ export type PostOrderByExternalReferenceCodeOrderNoteData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderNotes';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/orderNotes';
 };
 
 export type PostOrderByExternalReferenceCodeOrderNoteResponses = {
@@ -1995,8 +1983,9 @@ export type GetOrderIdOrderNotesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orders/{id}/orderNotes';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/orderNotes';
 };
 
 export type GetOrderIdOrderNotesPageResponses = {
@@ -2014,7 +2003,7 @@ export type PostOrderIdOrderNoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/orderNotes';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/orderNotes';
 };
 
 export type PostOrderIdOrderNoteResponses = {
@@ -2034,7 +2023,7 @@ export type PostOrderIdOrderNoteBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orders/orderNotes/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/orderNotes/batch';
 };
 
 export type PostOrderIdOrderNoteBatchResponses = {
@@ -2050,7 +2039,7 @@ export type DeleteOrderData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}';
 };
 
 export type DeleteOrderResponses = {
@@ -2066,7 +2055,7 @@ export type GetOrderData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}';
 };
 
 export type GetOrderResponses = {
@@ -2084,7 +2073,7 @@ export type PatchOrderData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}';
 };
 
 export type PatchOrderResponses = {
@@ -2104,7 +2093,7 @@ export type DeleteOrderBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orders/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/batch';
 };
 
 export type DeleteOrderBatchResponses = {
@@ -2122,7 +2111,7 @@ export type PostOrderBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/orders/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/batch';
 };
 
 export type PostOrderBatchResponses = {
@@ -2138,7 +2127,7 @@ export type DeleteOrderByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteOrderByExternalReferenceCodeResponses = {
@@ -2154,7 +2143,7 @@ export type GetOrderByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetOrderByExternalReferenceCodeResponses = {
@@ -2172,7 +2161,7 @@ export type PatchOrderByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchOrderByExternalReferenceCodeResponses = {
@@ -2190,7 +2179,7 @@ export type PutOrderByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutOrderByExternalReferenceCodeResponses = {
@@ -2211,8 +2200,9 @@ export type GetOrdersPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/orders';
+    url: '/o/headless-commerce-admin-order/v1.0/orders';
 };
 
 export type GetOrdersPageResponses = {
@@ -2228,7 +2218,7 @@ export type PostOrderData = {
     body?: OrderWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/orders';
+    url: '/o/headless-commerce-admin-order/v1.0/orders';
 };
 
 export type PostOrderResponses = {
@@ -2251,7 +2241,7 @@ export type PostOrdersPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/orders/export-batch';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/export-batch';
 };
 
 export type PostOrdersPageExportBatchResponses = {
@@ -2267,7 +2257,7 @@ export type DeleteOrderRuleAccountGroupData = {
         orderRuleAccountGroupId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-account-groups/{orderRuleAccountGroupId}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-account-groups/{orderRuleAccountGroupId}';
 };
 
 export type DeleteOrderRuleAccountGroupResponses = {
@@ -2285,7 +2275,7 @@ export type DeleteOrderRuleAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rule-account-groups/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-account-groups/batch';
 };
 
 export type DeleteOrderRuleAccountGroupBatchResponses = {
@@ -2303,8 +2293,9 @@ export type GetOrderRuleByExternalReferenceCodeOrderRuleAccountGroupsPageData = 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-account-groups';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-account-groups';
 };
 
 export type GetOrderRuleByExternalReferenceCodeOrderRuleAccountGroupsPageResponses = {
@@ -2322,7 +2313,7 @@ export type PostOrderRuleByExternalReferenceCodeOrderRuleAccountGroupData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-account-groups';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-account-groups';
 };
 
 export type PostOrderRuleByExternalReferenceCodeOrderRuleAccountGroupResponses = {
@@ -2345,8 +2336,9 @@ export type GetOrderRuleIdOrderRuleAccountGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/{id}/order-rule-account-groups';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-account-groups';
 };
 
 export type GetOrderRuleIdOrderRuleAccountGroupsPageResponses = {
@@ -2364,7 +2356,7 @@ export type PostOrderRuleIdOrderRuleAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}/order-rule-account-groups';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-account-groups';
 };
 
 export type PostOrderRuleIdOrderRuleAccountGroupResponses = {
@@ -2384,7 +2376,7 @@ export type PostOrderRuleIdOrderRuleAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/order-rule-account-groups/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/order-rule-account-groups/batch';
 };
 
 export type PostOrderRuleIdOrderRuleAccountGroupBatchResponses = {
@@ -2400,7 +2392,7 @@ export type DeleteOrderRuleAccountData = {
         orderRuleAccountId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-accounts/{orderRuleAccountId}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-accounts/{orderRuleAccountId}';
 };
 
 export type DeleteOrderRuleAccountResponses = {
@@ -2418,7 +2410,7 @@ export type DeleteOrderRuleAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rule-accounts/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-accounts/batch';
 };
 
 export type DeleteOrderRuleAccountBatchResponses = {
@@ -2436,8 +2428,9 @@ export type GetOrderRuleByExternalReferenceCodeOrderRuleAccountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-accounts';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-accounts';
 };
 
 export type GetOrderRuleByExternalReferenceCodeOrderRuleAccountsPageResponses = {
@@ -2455,7 +2448,7 @@ export type PostOrderRuleByExternalReferenceCodeOrderRuleAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-accounts';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-accounts';
 };
 
 export type PostOrderRuleByExternalReferenceCodeOrderRuleAccountResponses = {
@@ -2478,8 +2471,9 @@ export type GetOrderRuleIdOrderRuleAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/{id}/order-rule-accounts';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-accounts';
 };
 
 export type GetOrderRuleIdOrderRuleAccountsPageResponses = {
@@ -2497,7 +2491,7 @@ export type PostOrderRuleIdOrderRuleAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}/order-rule-accounts';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-accounts';
 };
 
 export type PostOrderRuleIdOrderRuleAccountResponses = {
@@ -2517,7 +2511,7 @@ export type PostOrderRuleIdOrderRuleAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/order-rule-accounts/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/order-rule-accounts/batch';
 };
 
 export type PostOrderRuleIdOrderRuleAccountBatchResponses = {
@@ -2533,7 +2527,7 @@ export type DeleteOrderRuleChannelData = {
         orderRuleChannelId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-channels/{orderRuleChannelId}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-channels/{orderRuleChannelId}';
 };
 
 export type DeleteOrderRuleChannelResponses = {
@@ -2551,7 +2545,7 @@ export type DeleteOrderRuleChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rule-channels/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-channels/batch';
 };
 
 export type DeleteOrderRuleChannelBatchResponses = {
@@ -2569,8 +2563,9 @@ export type GetOrderRuleByExternalReferenceCodeOrderRuleChannelsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-channels';
 };
 
 export type GetOrderRuleByExternalReferenceCodeOrderRuleChannelsPageResponses = {
@@ -2588,7 +2583,7 @@ export type PostOrderRuleByExternalReferenceCodeOrderRuleChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-channels';
 };
 
 export type PostOrderRuleByExternalReferenceCodeOrderRuleChannelResponses = {
@@ -2611,8 +2606,9 @@ export type GetOrderRuleIdOrderRuleChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/{id}/order-rule-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-channels';
 };
 
 export type GetOrderRuleIdOrderRuleChannelsPageResponses = {
@@ -2630,7 +2626,7 @@ export type PostOrderRuleIdOrderRuleChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}/order-rule-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-channels';
 };
 
 export type PostOrderRuleIdOrderRuleChannelResponses = {
@@ -2650,7 +2646,7 @@ export type PostOrderRuleIdOrderRuleChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/order-rule-channels/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/order-rule-channels/batch';
 };
 
 export type PostOrderRuleIdOrderRuleChannelBatchResponses = {
@@ -2666,7 +2662,7 @@ export type DeleteOrderRuleOrderTypeData = {
         orderRuleOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-order-types/{orderRuleOrderTypeId}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-order-types/{orderRuleOrderTypeId}';
 };
 
 export type DeleteOrderRuleOrderTypeResponses = {
@@ -2684,7 +2680,7 @@ export type DeleteOrderRuleOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rule-order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-order-types/batch';
 };
 
 export type DeleteOrderRuleOrderTypeBatchResponses = {
@@ -2702,8 +2698,9 @@ export type GetOrderRuleByExternalReferenceCodeOrderRuleOrderTypesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-order-types';
 };
 
 export type GetOrderRuleByExternalReferenceCodeOrderRuleOrderTypesPageResponses = {
@@ -2721,7 +2718,7 @@ export type PostOrderRuleByExternalReferenceCodeOrderRuleOrderTypeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}/order-rule-order-types';
 };
 
 export type PostOrderRuleByExternalReferenceCodeOrderRuleOrderTypeResponses = {
@@ -2742,8 +2739,9 @@ export type GetOrderRuleIdOrderRuleOrderTypesPageData = {
         page?: string;
         pageSize?: string;
         search?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules/{id}/order-rule-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-order-types';
 };
 
 export type GetOrderRuleIdOrderRuleOrderTypesPageResponses = {
@@ -2761,7 +2759,7 @@ export type PostOrderRuleIdOrderRuleOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}/order-rule-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}/order-rule-order-types';
 };
 
 export type PostOrderRuleIdOrderRuleOrderTypeResponses = {
@@ -2781,7 +2779,7 @@ export type PostOrderRuleIdOrderRuleOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/order-rule-order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/order-rule-order-types/batch';
 };
 
 export type PostOrderRuleIdOrderRuleOrderTypeBatchResponses = {
@@ -2797,7 +2795,7 @@ export type DeleteOrderRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}';
 };
 
 export type DeleteOrderRuleResponses = {
@@ -2813,7 +2811,7 @@ export type GetOrderRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}';
 };
 
 export type GetOrderRuleResponses = {
@@ -2831,7 +2829,7 @@ export type PatchOrderRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/{id}';
 };
 
 export type PatchOrderRuleResponses = {
@@ -2851,7 +2849,7 @@ export type DeleteOrderRuleBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/batch';
 };
 
 export type DeleteOrderRuleBatchResponses = {
@@ -2869,7 +2867,7 @@ export type PostOrderRuleBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-rules/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/batch';
 };
 
 export type PostOrderRuleBatchResponses = {
@@ -2885,7 +2883,7 @@ export type DeleteOrderRuleByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteOrderRuleByExternalReferenceCodeResponses = {
@@ -2901,7 +2899,7 @@ export type GetOrderRuleByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetOrderRuleByExternalReferenceCodeResponses = {
@@ -2919,7 +2917,7 @@ export type PatchOrderRuleByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchOrderRuleByExternalReferenceCodeResponses = {
@@ -2937,7 +2935,7 @@ export type PutOrderRuleByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutOrderRuleByExternalReferenceCodeResponses = {
@@ -2958,8 +2956,9 @@ export type GetOrderRulesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-rules';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules';
 };
 
 export type GetOrderRulesPageResponses = {
@@ -2975,7 +2974,7 @@ export type PostOrderRuleData = {
     body?: OrderRuleWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/order-rules';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules';
 };
 
 export type PostOrderRuleResponses = {
@@ -2998,7 +2997,7 @@ export type PostOrderRulesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/order-rules/export-batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rules/export-batch';
 };
 
 export type PostOrderRulesPageExportBatchResponses = {
@@ -3014,7 +3013,7 @@ export type DeleteOrderTypeChannelData = {
         orderTypeChannelId: string;
     };
     query?: never;
-    url: '/v1.0/order-type-channels/{orderTypeChannelId}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-type-channels/{orderTypeChannelId}';
 };
 
 export type DeleteOrderTypeChannelResponses = {
@@ -3032,7 +3031,7 @@ export type DeleteOrderTypeChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-type-channels/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-type-channels/batch';
 };
 
 export type DeleteOrderTypeChannelBatchResponses = {
@@ -3050,8 +3049,9 @@ export type GetOrderTypeByExternalReferenceCodeOrderTypeChannelsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}/order-type-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}/order-type-channels';
 };
 
 export type GetOrderTypeByExternalReferenceCodeOrderTypeChannelsPageResponses = {
@@ -3069,7 +3069,7 @@ export type PostOrderTypeByExternalReferenceCodeOrderTypeChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}/order-type-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}/order-type-channels';
 };
 
 export type PostOrderTypeByExternalReferenceCodeOrderTypeChannelResponses = {
@@ -3091,8 +3091,9 @@ export type GetOrderTypeIdOrderTypeChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-types/{id}/order-type-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/{id}/order-type-channels';
 };
 
 export type GetOrderTypeIdOrderTypeChannelsPageResponses = {
@@ -3110,7 +3111,7 @@ export type PostOrderTypeIdOrderTypeChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-types/{id}/order-type-channels';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/{id}/order-type-channels';
 };
 
 export type PostOrderTypeIdOrderTypeChannelResponses = {
@@ -3130,7 +3131,7 @@ export type PostOrderTypeIdOrderTypeChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-types/order-type-channels/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/order-type-channels/batch';
 };
 
 export type PostOrderTypeIdOrderTypeChannelBatchResponses = {
@@ -3146,7 +3147,7 @@ export type DeleteOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-types/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/{id}';
 };
 
 export type DeleteOrderTypeResponses = {
@@ -3162,7 +3163,7 @@ export type GetOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-types/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/{id}';
 };
 
 export type GetOrderTypeResponses = {
@@ -3180,7 +3181,7 @@ export type PatchOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/order-types/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/{id}';
 };
 
 export type PatchOrderTypeResponses = {
@@ -3200,7 +3201,7 @@ export type DeleteOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/batch';
 };
 
 export type DeleteOrderTypeBatchResponses = {
@@ -3218,7 +3219,7 @@ export type PostOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/batch';
 };
 
 export type PostOrderTypeBatchResponses = {
@@ -3234,7 +3235,7 @@ export type DeleteOrderTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteOrderTypeByExternalReferenceCodeResponses = {
@@ -3250,7 +3251,7 @@ export type GetOrderTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetOrderTypeByExternalReferenceCodeResponses = {
@@ -3268,7 +3269,7 @@ export type PatchOrderTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchOrderTypeByExternalReferenceCodeResponses = {
@@ -3286,7 +3287,7 @@ export type PutOrderTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutOrderTypeByExternalReferenceCodeResponses = {
@@ -3304,7 +3305,7 @@ export type GetOrderRuleOrderTypeOrderTypeData = {
         orderRuleOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/order-rule-order-types/{orderRuleOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-order/v1.0/order-rule-order-types/{orderRuleOrderTypeId}/order-type';
 };
 
 export type GetOrderRuleOrderTypeOrderTypeResponses = {
@@ -3325,8 +3326,9 @@ export type GetOrderTypesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types';
 };
 
 export type GetOrderTypesPageResponses = {
@@ -3342,7 +3344,7 @@ export type PostOrderTypeData = {
     body?: OrderTypeWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types';
 };
 
 export type PostOrderTypeResponses = {
@@ -3360,7 +3362,7 @@ export type GetTermOrderTypeOrderTypeData = {
         termOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/term-order-types/{termOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-order/v1.0/term-order-types/{termOrderTypeId}/order-type';
 };
 
 export type GetTermOrderTypeOrderTypeResponses = {
@@ -3383,7 +3385,7 @@ export type PostOrderTypesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/order-types/export-batch';
+    url: '/o/headless-commerce-admin-order/v1.0/order-types/export-batch';
 };
 
 export type PostOrderTypesPageExportBatchResponses = {
@@ -3399,7 +3401,7 @@ export type GetOrderByExternalReferenceCodeShippingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/shippingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/shippingAddress';
 };
 
 export type GetOrderByExternalReferenceCodeShippingAddressResponses = {
@@ -3417,7 +3419,7 @@ export type PatchOrderByExternalReferenceCodeShippingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/shippingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/by-externalReferenceCode/{externalReferenceCode}/shippingAddress';
 };
 
 export type PatchOrderByExternalReferenceCodeShippingAddressResponses = {
@@ -3433,7 +3435,7 @@ export type GetOrderIdShippingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/shippingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/shippingAddress';
 };
 
 export type GetOrderIdShippingAddressResponses = {
@@ -3451,7 +3453,7 @@ export type PatchOrderIdShippingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orders/{id}/shippingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orders/{id}/shippingAddress';
 };
 
 export type PatchOrderIdShippingAddressResponses = {
@@ -3467,7 +3469,7 @@ export type GetOrderItemShippingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/orderItems/{id}/shippingAddress';
+    url: '/o/headless-commerce-admin-order/v1.0/orderItems/{id}/shippingAddress';
 };
 
 export type GetOrderItemShippingAddressResponses = {
@@ -3485,7 +3487,7 @@ export type DeleteTermOrderTypeData = {
         termOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/term-order-types/{termOrderTypeId}';
+    url: '/o/headless-commerce-admin-order/v1.0/term-order-types/{termOrderTypeId}';
 };
 
 export type DeleteTermOrderTypeResponses = {
@@ -3503,7 +3505,7 @@ export type DeleteTermOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/term-order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/term-order-types/batch';
 };
 
 export type DeleteTermOrderTypeBatchResponses = {
@@ -3521,8 +3523,9 @@ export type GetTermByExternalReferenceCodeTermOrderTypesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}/term-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}/term-order-types';
 };
 
 export type GetTermByExternalReferenceCodeTermOrderTypesPageResponses = {
@@ -3540,7 +3543,7 @@ export type PostTermByExternalReferenceCodeTermOrderTypeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}/term-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}/term-order-types';
 };
 
 export type PostTermByExternalReferenceCodeTermOrderTypeResponses = {
@@ -3561,8 +3564,9 @@ export type GetTermIdTermOrderTypesPageData = {
         page?: string;
         pageSize?: string;
         search?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/terms/{id}/term-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/{id}/term-order-types';
 };
 
 export type GetTermIdTermOrderTypesPageResponses = {
@@ -3580,7 +3584,7 @@ export type PostTermIdTermOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/terms/{id}/term-order-types';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/{id}/term-order-types';
 };
 
 export type PostTermIdTermOrderTypeResponses = {
@@ -3600,7 +3604,7 @@ export type PostTermIdTermOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/terms/term-order-types/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/term-order-types/batch';
 };
 
 export type PostTermIdTermOrderTypeBatchResponses = {
@@ -3616,7 +3620,7 @@ export type DeleteTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/terms/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/{id}';
 };
 
 export type DeleteTermResponses = {
@@ -3632,7 +3636,7 @@ export type GetTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/terms/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/{id}';
 };
 
 export type GetTermResponses = {
@@ -3650,7 +3654,7 @@ export type PatchTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/terms/{id}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/{id}';
 };
 
 export type PatchTermResponses = {
@@ -3670,7 +3674,7 @@ export type DeleteTermBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/terms/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/batch';
 };
 
 export type DeleteTermBatchResponses = {
@@ -3688,7 +3692,7 @@ export type PostTermBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/terms/batch';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/batch';
 };
 
 export type PostTermBatchResponses = {
@@ -3704,7 +3708,7 @@ export type DeleteTermByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteTermByExternalReferenceCodeResponses = {
@@ -3720,7 +3724,7 @@ export type GetTermByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetTermByExternalReferenceCodeResponses = {
@@ -3738,7 +3742,7 @@ export type PatchTermByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchTermByExternalReferenceCodeResponses = {
@@ -3756,7 +3760,7 @@ export type PutTermByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutTermByExternalReferenceCodeResponses = {
@@ -3777,8 +3781,9 @@ export type GetTermsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/terms';
+    url: '/o/headless-commerce-admin-order/v1.0/terms';
 };
 
 export type GetTermsPageResponses = {
@@ -3794,7 +3799,7 @@ export type PostTermData = {
     body?: TermWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/terms';
+    url: '/o/headless-commerce-admin-order/v1.0/terms';
 };
 
 export type PostTermResponses = {
@@ -3817,7 +3822,7 @@ export type PostTermsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/terms/export-batch';
+    url: '/o/headless-commerce-admin-order/v1.0/terms/export-batch';
 };
 
 export type PostTermsPageExportBatchResponses = {
@@ -3828,5 +3833,5 @@ export type PostTermsPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-order/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

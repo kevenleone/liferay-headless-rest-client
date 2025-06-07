@@ -356,8 +356,9 @@ export type GetEmbeddingEmbeddingModelsPageData = {
         pageSize?: string;
         provider?: string;
         search?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/embeddings/embedding-models';
+    url: '/o/search/v1.0/embeddings/embedding-models';
 };
 
 export type GetEmbeddingEmbeddingModelsPageResponses = {
@@ -373,7 +374,7 @@ export type PostEmbeddingValidateProviderConfigurationData = {
     body?: EmbeddingProviderConfigurationWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/embeddings/validate-provider-configuration';
+    url: '/o/search/v1.0/embeddings/validate-provider-configuration';
 };
 
 export type PostEmbeddingValidateProviderConfigurationResponses = {
@@ -384,22 +385,6 @@ export type PostEmbeddingValidateProviderConfigurationResponses = {
 };
 
 export type PostEmbeddingValidateProviderConfigurationResponse = PostEmbeddingValidateProviderConfigurationResponses[keyof PostEmbeddingValidateProviderConfigurationResponses];
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
 
 export type GetSearchPageData = {
     body?: never;
@@ -418,7 +403,7 @@ export type GetSearchPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/search';
+    url: '/o/search/v1.0/search';
 };
 
 export type GetSearchPageResponses = {
@@ -445,7 +430,7 @@ export type PostSearchPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/search';
+    url: '/o/search/v1.0/search';
 };
 
 export type PostSearchPageResponses = {
@@ -472,7 +457,7 @@ export type PostSuggestionsPageData = {
         scope?: string;
         search?: string;
     };
-    url: '/v1.0/suggestions';
+    url: '/o/search/v1.0/suggestions';
 };
 
 export type PostSuggestionsPageResponses = {
@@ -485,5 +470,5 @@ export type PostSuggestionsPageResponses = {
 export type PostSuggestionsPageResponse = PostSuggestionsPageResponses[keyof PostSuggestionsPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/search/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -17,7 +17,7 @@ export type GetCaptchaChallengeData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/captcha/challenge';
+    url: '/o/captcha/v1.0/captcha/challenge';
 };
 
 export type GetCaptchaChallengeResponses = {
@@ -33,7 +33,7 @@ export type PostCaptchaResponseData = {
     body?: CaptchaWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/captcha/response';
+    url: '/o/captcha/v1.0/captcha/response';
 };
 
 export type PostCaptchaResponseResponses = {
@@ -43,22 +43,6 @@ export type PostCaptchaResponseResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/captcha/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

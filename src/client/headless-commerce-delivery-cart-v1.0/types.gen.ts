@@ -721,7 +721,7 @@ export type GetCartBillingAddresData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/billing-address';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/billing-address';
 };
 
 export type GetCartBillingAddresResponses = {
@@ -739,7 +739,7 @@ export type GetCartByExternalReferenceCodeBillingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/billing-address';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/billing-address';
 };
 
 export type GetCartByExternalReferenceCodeBillingAddressResponses = {
@@ -757,7 +757,7 @@ export type GetCartByExternalReferenceCodeShippingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
 };
 
 export type GetCartByExternalReferenceCodeShippingAddressResponses = {
@@ -775,7 +775,7 @@ export type GetCartShippingAddresData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/shipping-address';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/shipping-address';
 };
 
 export type GetCartShippingAddresResponses = {
@@ -794,7 +794,7 @@ export type DeleteCartAttachmentData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/attachments/{attachmentId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/attachments/{attachmentId}';
 };
 
 export type DeleteCartAttachmentResponses = {
@@ -811,7 +811,7 @@ export type DeleteCartByExternalReferenceCodeAttachmentByExternalReferenceCodeAt
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}';
 };
 
 export type DeleteCartByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCodeResponses = {
@@ -829,8 +829,9 @@ export type GetCartAttachmentsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/{cartId}/attachments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/attachments';
 };
 
 export type GetCartAttachmentsPageResponses = {
@@ -850,8 +851,9 @@ export type GetCartByExternalReferenceCodeAttachmentsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments';
 };
 
 export type GetCartByExternalReferenceCodeAttachmentsPageResponses = {
@@ -869,7 +871,7 @@ export type PostCartAttachmentByBase64Data = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/attachments/by-base64';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/attachments/by-base64';
 };
 
 export type PostCartAttachmentByBase64Responses = {
@@ -891,7 +893,7 @@ export type PostCartAttachmentsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/carts/{cartId}/attachments/export-batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/attachments/export-batch';
 };
 
 export type PostCartAttachmentsPageExportBatchResponses = {
@@ -907,7 +909,7 @@ export type PostCartByExternalReferenceCodeAttachmentByBase64Data = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64';
 };
 
 export type PostCartByExternalReferenceCodeAttachmentByBase64Responses = {
@@ -925,7 +927,7 @@ export type DeleteCartCommentData = {
         cartCommentId: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/{cartCommentId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/{cartCommentId}';
 };
 
 export type DeleteCartCommentResponses = {
@@ -941,7 +943,7 @@ export type GetCartCommentData = {
         cartCommentId: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/{cartCommentId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/{cartCommentId}';
 };
 
 export type GetCartCommentResponses = {
@@ -959,7 +961,7 @@ export type PatchCartCommentData = {
         cartCommentId: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/{cartCommentId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/{cartCommentId}';
 };
 
 export type PatchCartCommentResponses = {
@@ -977,7 +979,7 @@ export type PutCartCommentData = {
         cartCommentId: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/{cartCommentId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/{cartCommentId}';
 };
 
 export type PutCartCommentResponses = {
@@ -997,7 +999,7 @@ export type DeleteCartCommentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/cart-comments/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/batch';
 };
 
 export type DeleteCartCommentBatchResponses = {
@@ -1015,7 +1017,7 @@ export type PutCartCommentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/cart-comments/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/batch';
 };
 
 export type PutCartCommentBatchResponses = {
@@ -1031,7 +1033,7 @@ export type DeleteCartCommentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteCartCommentByExternalReferenceCodeResponses = {
@@ -1047,7 +1049,7 @@ export type GetCartCommentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetCartCommentByExternalReferenceCodeResponses = {
@@ -1065,7 +1067,7 @@ export type PatchCartCommentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchCartCommentByExternalReferenceCodeResponses = {
@@ -1083,7 +1085,7 @@ export type PutCartCommentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-comments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutCartCommentByExternalReferenceCodeResponses = {
@@ -1103,8 +1105,9 @@ export type GetCartByExternalReferenceCodeCommentsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/comments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/comments';
 };
 
 export type GetCartByExternalReferenceCodeCommentsPageResponses = {
@@ -1122,7 +1125,7 @@ export type PostCartByExternalReferenceCodeCommentData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/comments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/comments';
 };
 
 export type PostCartByExternalReferenceCodeCommentResponses = {
@@ -1142,8 +1145,9 @@ export type GetCartCommentsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/{cartId}/comments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/comments';
 };
 
 export type GetCartCommentsPageResponses = {
@@ -1161,7 +1165,7 @@ export type PostCartCommentData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/comments';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/comments';
 };
 
 export type PostCartCommentResponses = {
@@ -1179,7 +1183,7 @@ export type DeleteCartItemData = {
         cartItemId: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/{cartItemId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/{cartItemId}';
 };
 
 export type DeleteCartItemResponses = {
@@ -1195,7 +1199,7 @@ export type GetCartItemData = {
         cartItemId: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/{cartItemId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/{cartItemId}';
 };
 
 export type GetCartItemResponses = {
@@ -1213,7 +1217,7 @@ export type PatchCartItemData = {
         cartItemId: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/{cartItemId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/{cartItemId}';
 };
 
 export type PatchCartItemResponses = {
@@ -1231,7 +1235,7 @@ export type PutCartItemData = {
         cartItemId: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/{cartItemId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/{cartItemId}';
 };
 
 export type PutCartItemResponses = {
@@ -1251,7 +1255,7 @@ export type DeleteCartItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/cart-items/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/batch';
 };
 
 export type DeleteCartItemBatchResponses = {
@@ -1269,7 +1273,7 @@ export type PutCartItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/cart-items/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/batch';
 };
 
 export type PutCartItemBatchResponses = {
@@ -1285,7 +1289,7 @@ export type DeleteCartItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteCartItemByExternalReferenceCodeResponses = {
@@ -1301,7 +1305,7 @@ export type GetCartItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetCartItemByExternalReferenceCodeResponses = {
@@ -1319,7 +1323,7 @@ export type PatchCartItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchCartItemByExternalReferenceCodeResponses = {
@@ -1337,7 +1341,7 @@ export type PutCartItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/cart-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutCartItemByExternalReferenceCodeResponses = {
@@ -1359,8 +1363,9 @@ export type GetCartByExternalReferenceCodeItemsPageData = {
         pageSize?: string;
         search?: string;
         skuId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/items';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/items';
 };
 
 export type GetCartByExternalReferenceCodeItemsPageResponses = {
@@ -1378,7 +1383,7 @@ export type PostCartByExternalReferenceCodeItemData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/items';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/items';
 };
 
 export type PostCartByExternalReferenceCodeItemResponses = {
@@ -1400,8 +1405,9 @@ export type GetCartItemsPageData = {
         pageSize?: string;
         search?: string;
         skuId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/carts/{cartId}/items';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/items';
 };
 
 export type GetCartItemsPageResponses = {
@@ -1419,7 +1425,7 @@ export type PostCartItemData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/items';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/items';
 };
 
 export type PostCartItemResponses = {
@@ -1437,7 +1443,7 @@ export type DeleteCartData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}';
 };
 
 export type DeleteCartResponses = {
@@ -1453,7 +1459,7 @@ export type GetCartData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}';
 };
 
 export type GetCartResponses = {
@@ -1471,7 +1477,7 @@ export type PatchCartData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}';
 };
 
 export type PatchCartResponses = {
@@ -1489,7 +1495,7 @@ export type PutCartData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}';
 };
 
 export type PutCartResponses = {
@@ -1509,7 +1515,7 @@ export type DeleteCartBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/carts/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/batch';
 };
 
 export type DeleteCartBatchResponses = {
@@ -1527,7 +1533,7 @@ export type PutCartBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/carts/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/batch';
 };
 
 export type PutCartBatchResponses = {
@@ -1543,7 +1549,7 @@ export type DeleteCartByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteCartByExternalReferenceCodeResponses = {
@@ -1559,7 +1565,7 @@ export type GetCartByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetCartByExternalReferenceCodeResponses = {
@@ -1577,7 +1583,7 @@ export type PatchCartByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchCartByExternalReferenceCodeResponses = {
@@ -1595,7 +1601,7 @@ export type PutCartByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutCartByExternalReferenceCodeResponses = {
@@ -1615,7 +1621,7 @@ export type GetCartByExternalReferenceCodePaymentUrlData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-url';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-url';
 };
 
 export type GetCartByExternalReferenceCodePaymentUrlResponses = {
@@ -1635,7 +1641,7 @@ export type GetCartPaymentUrlData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/carts/{cartId}/payment-url';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/payment-url';
 };
 
 export type GetCartPaymentUrlResponses = {
@@ -1659,8 +1665,9 @@ export type GetChannelAccountCartsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/account/{accountId}/carts';
+    url: '/o/headless-commerce-delivery-cart/v1.0/channels/{channelId}/account/{accountId}/carts';
 };
 
 export type GetChannelAccountCartsPageResponses = {
@@ -1684,8 +1691,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeAccount
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/account/by-externalReferenceCode/{accountExternalReferenceCode}/carts';
+    url: '/o/headless-commerce-delivery-cart/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/account/by-externalReferenceCode/{accountExternalReferenceCode}/carts';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodeCartsPageResponses = {
@@ -1708,8 +1716,9 @@ export type GetChannelCartsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/carts';
+    url: '/o/headless-commerce-delivery-cart/v1.0/channels/{channelId}/carts';
 };
 
 export type GetChannelCartsPageResponses = {
@@ -1727,7 +1736,7 @@ export type PostChannelCartData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}/carts';
+    url: '/o/headless-commerce-delivery-cart/v1.0/channels/{channelId}/carts';
 };
 
 export type PostChannelCartResponses = {
@@ -1745,7 +1754,7 @@ export type PostCartByExternalReferenceCodeCheckoutData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/checkout';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/checkout';
 };
 
 export type PostCartByExternalReferenceCodeCheckoutResponses = {
@@ -1763,7 +1772,7 @@ export type PostCartByExternalReferenceCodeCouponCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/coupon-code';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/coupon-code';
 };
 
 export type PostCartByExternalReferenceCodeCouponCodeResponses = {
@@ -1781,7 +1790,7 @@ export type PostCartCheckoutData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/checkout';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/checkout';
 };
 
 export type PostCartCheckoutResponses = {
@@ -1799,7 +1808,7 @@ export type PostCartCouponCodeData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/coupon-code';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/coupon-code';
 };
 
 export type PostCartCouponCodeResponses = {
@@ -1817,7 +1826,7 @@ export type PostChannelCartByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/carts';
+    url: '/o/headless-commerce-delivery-cart/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/carts';
 };
 
 export type PostChannelCartByExternalReferenceCodeResponses = {
@@ -1834,8 +1843,10 @@ export type GetCartCartTransitionsPageData = {
     path: {
         cartId: string;
     };
-    query?: never;
-    url: '/v1.0/carts/{cartId}/cart-transitions';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/cart-transitions';
 };
 
 export type GetCartCartTransitionsPageResponses = {
@@ -1853,7 +1864,7 @@ export type PostCartCartTransitionData = {
         cartId: string;
     };
     query?: never;
-    url: '/v1.0/carts/{cartId}/cart-transitions';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/cart-transitions';
 };
 
 export type PostCartCartTransitionResponses = {
@@ -1875,7 +1886,7 @@ export type PostCartCartTransitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/carts/{cartId}/cart-transitions/batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/cart-transitions/batch';
 };
 
 export type PostCartCartTransitionBatchResponses = {
@@ -1895,26 +1906,10 @@ export type PostCartCartTransitionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/carts/{cartId}/cart-transitions/export-batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/cart-transitions/export-batch';
 };
 
 export type PostCartCartTransitionsPageExportBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -1926,8 +1921,10 @@ export type GetCartByExternalReferenceCodePaymentMethodsPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-methods';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-methods';
 };
 
 export type GetCartByExternalReferenceCodePaymentMethodsPageResponses = {
@@ -1944,8 +1941,10 @@ export type GetCartPaymentMethodsPageData = {
     path: {
         cartId: string;
     };
-    query?: never;
-    url: '/v1.0/carts/{cartId}/payment-methods';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/payment-methods';
 };
 
 export type GetCartPaymentMethodsPageResponses = {
@@ -1967,7 +1966,7 @@ export type PostCartPaymentMethodsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/carts/{cartId}/payment-methods/export-batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/payment-methods/export-batch';
 };
 
 export type PostCartPaymentMethodsPageExportBatchResponses = {
@@ -1982,8 +1981,10 @@ export type GetCartByExternalReferenceCodeShippingMethodsPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/shipping-methods';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/shipping-methods';
 };
 
 export type GetCartByExternalReferenceCodeShippingMethodsPageResponses = {
@@ -2000,8 +2001,10 @@ export type GetCartShippingMethodsPageData = {
     path: {
         cartId: string;
     };
-    query?: never;
-    url: '/v1.0/carts/{cartId}/shipping-methods';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/shipping-methods';
 };
 
 export type GetCartShippingMethodsPageResponses = {
@@ -2023,7 +2026,7 @@ export type PostCartShippingMethodsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/carts/{cartId}/shipping-methods/export-batch';
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/shipping-methods/export-batch';
 };
 
 export type PostCartShippingMethodsPageExportBatchResponses = {
@@ -2038,8 +2041,10 @@ export type GetCartByExternalReferenceCodeDeliveryTermsPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/delivery-terms';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/delivery-terms';
 };
 
 export type GetCartByExternalReferenceCodeDeliveryTermsPageResponses = {
@@ -2056,8 +2061,10 @@ export type GetCartByExternalReferenceCodePaymentTermsPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-terms';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/by-externalReferenceCode/{externalReferenceCode}/payment-terms';
 };
 
 export type GetCartByExternalReferenceCodePaymentTermsPageResponses = {
@@ -2074,8 +2081,10 @@ export type GetCartDeliveryTermsPageData = {
     path: {
         cartId: string;
     };
-    query?: never;
-    url: '/v1.0/carts/{cartId}/delivery-terms';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/delivery-terms';
 };
 
 export type GetCartDeliveryTermsPageResponses = {
@@ -2092,8 +2101,10 @@ export type GetCartPaymentTermsPageData = {
     path: {
         cartId: string;
     };
-    query?: never;
-    url: '/v1.0/carts/{cartId}/payment-terms';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-delivery-cart/v1.0/carts/{cartId}/payment-terms';
 };
 
 export type GetCartPaymentTermsPageResponses = {
@@ -2106,5 +2117,5 @@ export type GetCartPaymentTermsPageResponses = {
 export type GetCartPaymentTermsPageResponse = GetCartPaymentTermsPageResponses[keyof GetCartPaymentTermsPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-delivery-cart/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -515,15 +515,15 @@ export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
-export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
 export type CUserAdditionalInfo = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
+    [key: string]: unknown;
+};
+
+export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
@@ -533,7 +533,7 @@ export type DeleteAccountAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/{id}';
 };
 
 export type DeleteAccountAddressResponses = {
@@ -549,7 +549,7 @@ export type GetAccountAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/{id}';
 };
 
 export type GetAccountAddressResponses = {
@@ -567,7 +567,7 @@ export type PatchAccountAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/{id}';
 };
 
 export type PatchAccountAddressResponses = {
@@ -585,7 +585,7 @@ export type PutAccountAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/{id}';
 };
 
 export type PutAccountAddressResponses = {
@@ -605,7 +605,7 @@ export type DeleteAccountAddressBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accountAddresses/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/batch';
 };
 
 export type DeleteAccountAddressBatchResponses = {
@@ -623,7 +623,7 @@ export type PutAccountAddressBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accountAddresses/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/batch';
 };
 
 export type PutAccountAddressBatchResponses = {
@@ -639,7 +639,7 @@ export type DeleteAccountAddressByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteAccountAddressByExternalReferenceCodeResponses = {
@@ -655,7 +655,7 @@ export type GetAccountAddressByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetAccountAddressByExternalReferenceCodeResponses = {
@@ -673,7 +673,7 @@ export type PatchAccountAddressByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountAddresses/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchAccountAddressByExternalReferenceCodeResponses = {
@@ -691,8 +691,9 @@ export type GetAccountByExternalReferenceCodeAccountAddressesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountAddresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountAddresses';
 };
 
 export type GetAccountByExternalReferenceCodeAccountAddressesPageResponses = {
@@ -710,7 +711,7 @@ export type PostAccountByExternalReferenceCodeAccountAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountAddresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountAddresses';
 };
 
 export type PostAccountByExternalReferenceCodeAccountAddressResponses = {
@@ -730,8 +731,9 @@ export type GetAccountIdAccountAddressesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/accountAddresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountAddresses';
 };
 
 export type GetAccountIdAccountAddressesPageResponses = {
@@ -749,7 +751,7 @@ export type PostAccountIdAccountAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountAddresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountAddresses';
 };
 
 export type PostAccountIdAccountAddressResponses = {
@@ -769,7 +771,7 @@ export type PostAccountIdAccountAddressBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/accountAddresses/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/accountAddresses/batch';
 };
 
 export type PostAccountIdAccountAddressBatchResponses = {
@@ -785,7 +787,7 @@ export type DeleteAccountChannelBillingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-billing-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-billing-addresses/{id}';
 };
 
 export type DeleteAccountChannelBillingAddressIdResponses = {
@@ -801,7 +803,7 @@ export type GetAccountChannelBillingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-billing-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-billing-addresses/{id}';
 };
 
 export type GetAccountChannelBillingAddressIdResponses = {
@@ -819,7 +821,7 @@ export type PatchAccountChannelBillingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-billing-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-billing-addresses/{id}';
 };
 
 export type PatchAccountChannelBillingAddressIdResponses = {
@@ -837,7 +839,7 @@ export type DeleteAccountChannelCurrencyIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-currencies/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-currencies/{id}';
 };
 
 export type DeleteAccountChannelCurrencyIdResponses = {
@@ -853,7 +855,7 @@ export type GetAccountChannelCurrencyIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-currencies/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-currencies/{id}';
 };
 
 export type GetAccountChannelCurrencyIdResponses = {
@@ -871,7 +873,7 @@ export type PatchAccountChannelCurrencyIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-currencies/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-currencies/{id}';
 };
 
 export type PatchAccountChannelCurrencyIdResponses = {
@@ -889,7 +891,7 @@ export type DeleteAccountChannelDeliveryTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-delivery-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-delivery-terms/{id}';
 };
 
 export type DeleteAccountChannelDeliveryTermIdResponses = {
@@ -905,7 +907,7 @@ export type GetAccountChannelDeliveryTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-delivery-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-delivery-terms/{id}';
 };
 
 export type GetAccountChannelDeliveryTermIdResponses = {
@@ -923,7 +925,7 @@ export type PatchAccountChannelDeliveryTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-delivery-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-delivery-terms/{id}';
 };
 
 export type PatchAccountChannelDeliveryTermIdResponses = {
@@ -941,7 +943,7 @@ export type DeleteAccountChannelDiscountIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-discounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-discounts/{id}';
 };
 
 export type DeleteAccountChannelDiscountIdResponses = {
@@ -957,7 +959,7 @@ export type GetAccountChannelDiscountIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-discounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-discounts/{id}';
 };
 
 export type GetAccountChannelDiscountIdResponses = {
@@ -975,7 +977,7 @@ export type PatchAccountChannelDiscountIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-discounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-discounts/{id}';
 };
 
 export type PatchAccountChannelDiscountIdResponses = {
@@ -993,7 +995,7 @@ export type DeleteAccountChannelPaymentMethodIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-methods/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-methods/{id}';
 };
 
 export type DeleteAccountChannelPaymentMethodIdResponses = {
@@ -1009,7 +1011,7 @@ export type GetAccountChannelPaymentMethodIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-methods/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-methods/{id}';
 };
 
 export type GetAccountChannelPaymentMethodIdResponses = {
@@ -1027,7 +1029,7 @@ export type PatchAccountChannelPaymentMethodIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-methods/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-methods/{id}';
 };
 
 export type PatchAccountChannelPaymentMethodIdResponses = {
@@ -1045,7 +1047,7 @@ export type DeleteAccountChannelPaymentTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-terms/{id}';
 };
 
 export type DeleteAccountChannelPaymentTermIdResponses = {
@@ -1061,7 +1063,7 @@ export type GetAccountChannelPaymentTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-terms/{id}';
 };
 
 export type GetAccountChannelPaymentTermIdResponses = {
@@ -1079,7 +1081,7 @@ export type PatchAccountChannelPaymentTermIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-payment-terms/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-payment-terms/{id}';
 };
 
 export type PatchAccountChannelPaymentTermIdResponses = {
@@ -1097,7 +1099,7 @@ export type DeleteAccountChannelPriceListIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-price-list/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-price-list/{id}';
 };
 
 export type DeleteAccountChannelPriceListIdResponses = {
@@ -1113,7 +1115,7 @@ export type GetAccountChannelPriceListIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-price-list/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-price-list/{id}';
 };
 
 export type GetAccountChannelPriceListIdResponses = {
@@ -1131,7 +1133,7 @@ export type PatchAccountChannelPriceListIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-price-list/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-price-list/{id}';
 };
 
 export type PatchAccountChannelPriceListIdResponses = {
@@ -1149,7 +1151,7 @@ export type DeleteAccountChannelShippingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-addresses/{id}';
 };
 
 export type DeleteAccountChannelShippingAddressIdResponses = {
@@ -1165,7 +1167,7 @@ export type GetAccountChannelShippingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-addresses/{id}';
 };
 
 export type GetAccountChannelShippingAddressIdResponses = {
@@ -1183,7 +1185,7 @@ export type PatchAccountChannelShippingAddressIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-addresses/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-addresses/{id}';
 };
 
 export type PatchAccountChannelShippingAddressIdResponses = {
@@ -1201,7 +1203,7 @@ export type DeleteAccountChannelUserIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-users/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-users/{id}';
 };
 
 export type DeleteAccountChannelUserIdResponses = {
@@ -1217,7 +1219,7 @@ export type GetAccountChannelUserIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-users/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-users/{id}';
 };
 
 export type GetAccountChannelUserIdResponses = {
@@ -1235,7 +1237,7 @@ export type PatchAccountChannelUserIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-users/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-users/{id}';
 };
 
 export type PatchAccountChannelUserIdResponses = {
@@ -1255,8 +1257,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelBillingAddressesPageD
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-billing-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-billing-addresses';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelBillingAddressesPageResponses = {
@@ -1274,7 +1277,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelBillingAddressData =
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-billing-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-billing-addresses';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelBillingAddressResponses = {
@@ -1294,8 +1297,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelCurrenciesPageData = 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-currencies';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-currencies';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelCurrenciesPageResponses = {
@@ -1313,7 +1317,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelCurrencyData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-currencies';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-currencies';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelCurrencyResponses = {
@@ -1333,8 +1337,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelDeliveryTermsPageData
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-delivery-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-delivery-terms';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelDeliveryTermsPageResponses = {
@@ -1352,7 +1357,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelDeliveryTermData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-delivery-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-delivery-terms';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelDeliveryTermResponses = {
@@ -1372,8 +1377,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelDiscountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-discounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-discounts';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelDiscountsPageResponses = {
@@ -1391,7 +1397,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelDiscountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-discounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-discounts';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelDiscountResponses = {
@@ -1411,8 +1417,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelPaymentMethodsPageDat
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-methods';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-methods';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelPaymentMethodsPageResponses = {
@@ -1430,7 +1437,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelPaymentMethodData = 
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-methods';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-methods';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelPaymentMethodResponses = {
@@ -1450,8 +1457,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelPaymentTermsPageData 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-terms';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelPaymentTermsPageResponses = {
@@ -1469,7 +1477,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelPaymentTermData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-payment-terms';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelPaymentTermResponses = {
@@ -1489,8 +1497,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelPriceListsPageData = 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-price-lists';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-price-lists';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelPriceListsPageResponses = {
@@ -1508,7 +1517,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelPriceListData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-price-lists';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-price-lists';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelPriceListResponses = {
@@ -1528,8 +1537,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelShippingAddressesPage
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-addresses';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelShippingAddressesPageResponses = {
@@ -1547,7 +1557,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelShippingAddressData 
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-addresses';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelShippingAddressResponses = {
@@ -1567,8 +1577,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelUsersPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-users';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-users';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelUsersPageResponses = {
@@ -1586,7 +1597,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelUserData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-users';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-users';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelUserResponses = {
@@ -1606,8 +1617,9 @@ export type GetAccountIdAccountChannelBillingAddressesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-billing-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-billing-addresses';
 };
 
 export type GetAccountIdAccountChannelBillingAddressesPageResponses = {
@@ -1625,7 +1637,7 @@ export type PostAccountIdAccountChannelBillingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-billing-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-billing-addresses';
 };
 
 export type PostAccountIdAccountChannelBillingAddressResponses = {
@@ -1645,8 +1657,9 @@ export type GetAccountIdAccountChannelCurrenciesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-currencies';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-currencies';
 };
 
 export type GetAccountIdAccountChannelCurrenciesPageResponses = {
@@ -1664,7 +1677,7 @@ export type PostAccountIdAccountChannelCurrencyData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-currencies';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-currencies';
 };
 
 export type PostAccountIdAccountChannelCurrencyResponses = {
@@ -1684,8 +1697,9 @@ export type GetAccountIdAccountChannelDeliveryTermsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-delivery-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-delivery-terms';
 };
 
 export type GetAccountIdAccountChannelDeliveryTermsPageResponses = {
@@ -1703,7 +1717,7 @@ export type PostAccountIdAccountChannelDeliveryTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-delivery-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-delivery-terms';
 };
 
 export type PostAccountIdAccountChannelDeliveryTermResponses = {
@@ -1723,8 +1737,9 @@ export type GetAccountIdAccountChannelDiscountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-discounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-discounts';
 };
 
 export type GetAccountIdAccountChannelDiscountsPageResponses = {
@@ -1742,7 +1757,7 @@ export type PostAccountIdAccountChannelDiscountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-discounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-discounts';
 };
 
 export type PostAccountIdAccountChannelDiscountResponses = {
@@ -1762,8 +1777,9 @@ export type GetAccountIdAccountChannelPaymentMethodsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-payment-methods';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-payment-methods';
 };
 
 export type GetAccountIdAccountChannelPaymentMethodsPageResponses = {
@@ -1781,7 +1797,7 @@ export type PostAccountIdAccountChannelPaymentMethodData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-payment-methods';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-payment-methods';
 };
 
 export type PostAccountIdAccountChannelPaymentMethodResponses = {
@@ -1801,8 +1817,9 @@ export type GetAccountIdAccountChannelPaymentTermsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-payment-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-payment-terms';
 };
 
 export type GetAccountIdAccountChannelPaymentTermsPageResponses = {
@@ -1820,7 +1837,7 @@ export type PostAccountIdAccountChannelPaymentTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-payment-terms';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-payment-terms';
 };
 
 export type PostAccountIdAccountChannelPaymentTermResponses = {
@@ -1840,8 +1857,9 @@ export type GetAccountIdAccountChannelPriceListsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-price-lists';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-price-lists';
 };
 
 export type GetAccountIdAccountChannelPriceListsPageResponses = {
@@ -1859,7 +1877,7 @@ export type PostAccountIdAccountChannelPriceListData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-price-lists';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-price-lists';
 };
 
 export type PostAccountIdAccountChannelPriceListResponses = {
@@ -1879,8 +1897,9 @@ export type GetAccountIdAccountChannelShippingAddressesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-shipping-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-shipping-addresses';
 };
 
 export type GetAccountIdAccountChannelShippingAddressesPageResponses = {
@@ -1898,7 +1917,7 @@ export type PostAccountIdAccountChannelShippingAddressData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-shipping-addresses';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-shipping-addresses';
 };
 
 export type PostAccountIdAccountChannelShippingAddressResponses = {
@@ -1918,8 +1937,9 @@ export type GetAccountIdAccountChannelUsersPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-users';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-users';
 };
 
 export type GetAccountIdAccountChannelUsersPageResponses = {
@@ -1937,7 +1957,7 @@ export type PostAccountIdAccountChannelUserData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-users';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-users';
 };
 
 export type PostAccountIdAccountChannelUserResponses = {
@@ -1955,7 +1975,7 @@ export type DeleteAccountChannelShippingOptionData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-options/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-options/{id}';
 };
 
 export type DeleteAccountChannelShippingOptionResponses = {
@@ -1971,7 +1991,7 @@ export type GetAccountChannelShippingOptionData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-options/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-options/{id}';
 };
 
 export type GetAccountChannelShippingOptionResponses = {
@@ -1989,7 +2009,7 @@ export type PatchAccountChannelShippingOptionData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/account-channel-shipping-options/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-options/{id}';
 };
 
 export type PatchAccountChannelShippingOptionResponses = {
@@ -2009,7 +2029,7 @@ export type DeleteAccountChannelShippingOptionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/account-channel-shipping-options/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/account-channel-shipping-options/batch';
 };
 
 export type DeleteAccountChannelShippingOptionBatchResponses = {
@@ -2027,8 +2047,9 @@ export type GetAccountByExternalReferenceCodeAccountChannelShippingOptionPageDat
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-option';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-option';
 };
 
 export type GetAccountByExternalReferenceCodeAccountChannelShippingOptionPageResponses = {
@@ -2046,7 +2067,7 @@ export type PostAccountByExternalReferenceCodeAccountChannelShippingOptionData =
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-option';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/account-channel-shipping-option';
 };
 
 export type PostAccountByExternalReferenceCodeAccountChannelShippingOptionResponses = {
@@ -2066,8 +2087,9 @@ export type GetAccountIdAccountChannelShippingOptionPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/account-channel-shipping-option';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-shipping-option';
 };
 
 export type GetAccountIdAccountChannelShippingOptionPageResponses = {
@@ -2085,7 +2107,7 @@ export type PostAccountIdAccountChannelShippingOptionData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/account-channel-shipping-option';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/account-channel-shipping-option';
 };
 
 export type PostAccountIdAccountChannelShippingOptionResponses = {
@@ -2105,7 +2127,7 @@ export type PostAccountIdAccountChannelShippingOptionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/account-channel-shipping-option/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/account-channel-shipping-option/batch';
 };
 
 export type PostAccountIdAccountChannelShippingOptionBatchResponses = {
@@ -2122,7 +2144,7 @@ export type DeleteAccountByExternalReferenceCodeAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
 };
 
 export type DeleteAccountByExternalReferenceCodeAccountMemberResponses = {
@@ -2139,7 +2161,7 @@ export type GetAccountByExternalReferenceCodeAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
 };
 
 export type GetAccountByExternalReferenceCodeAccountMemberResponses = {
@@ -2158,7 +2180,7 @@ export type PatchAccountByExternalReferenceCodeAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/{userId}';
 };
 
 export type PatchAccountByExternalReferenceCodeAccountMemberResponses = {
@@ -2175,7 +2197,7 @@ export type DeleteAccountIdAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountMembers/{userId}';
 };
 
 export type DeleteAccountIdAccountMemberResponses = {
@@ -2192,7 +2214,7 @@ export type GetAccountIdAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountMembers/{userId}';
 };
 
 export type GetAccountIdAccountMemberResponses = {
@@ -2211,7 +2233,7 @@ export type PatchAccountIdAccountMemberData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountMembers/{userId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountMembers/{userId}';
 };
 
 export type PatchAccountIdAccountMemberResponses = {
@@ -2229,8 +2251,9 @@ export type GetAccountByExternalReferenceCodeAccountMembersPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers';
 };
 
 export type GetAccountByExternalReferenceCodeAccountMembersPageResponses = {
@@ -2248,7 +2271,7 @@ export type PostAccountByExternalReferenceCodeAccountMemberData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers';
 };
 
 export type PostAccountByExternalReferenceCodeAccountMemberResponses = {
@@ -2268,8 +2291,9 @@ export type GetAccountIdAccountMembersPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/accountMembers';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountMembers';
 };
 
 export type GetAccountIdAccountMembersPageResponses = {
@@ -2287,7 +2311,7 @@ export type PostAccountIdAccountMemberData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountMembers';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountMembers';
 };
 
 export type PostAccountIdAccountMemberResponses = {
@@ -2307,7 +2331,7 @@ export type PostAccountIdAccountMemberBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/accountMembers/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/accountMembers/batch';
 };
 
 export type PostAccountIdAccountMemberBatchResponses = {
@@ -2324,7 +2348,7 @@ export type DeleteAccountByExternalReferenceCodeAccountOrganizationData = {
         organizationId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations/{organizationId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations/{organizationId}';
 };
 
 export type DeleteAccountByExternalReferenceCodeAccountOrganizationResponses = {
@@ -2341,7 +2365,7 @@ export type GetAccountByExternalReferenceCodeAccountOrganizationData = {
         organizationId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations/{organizationId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations/{organizationId}';
 };
 
 export type GetAccountByExternalReferenceCodeAccountOrganizationResponses = {
@@ -2360,7 +2384,7 @@ export type DeleteAccountIdAccountOrganizationData = {
         organizationId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountOrganizations/{organizationId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountOrganizations/{organizationId}';
 };
 
 export type DeleteAccountIdAccountOrganizationResponses = {
@@ -2377,7 +2401,7 @@ export type GetAccountIdAccountOrganizationData = {
         organizationId: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountOrganizations/{organizationId}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountOrganizations/{organizationId}';
 };
 
 export type GetAccountIdAccountOrganizationResponses = {
@@ -2397,8 +2421,9 @@ export type GetAccountByExternalReferenceCodeAccountOrganizationsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations';
 };
 
 export type GetAccountByExternalReferenceCodeAccountOrganizationsPageResponses = {
@@ -2416,7 +2441,7 @@ export type PostAccountByExternalReferenceCodeAccountOrganizationData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountOrganizations';
 };
 
 export type PostAccountByExternalReferenceCodeAccountOrganizationResponses = {
@@ -2436,8 +2461,9 @@ export type GetAccountIdAccountOrganizationsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/accountOrganizations';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountOrganizations';
 };
 
 export type GetAccountIdAccountOrganizationsPageResponses = {
@@ -2455,7 +2481,7 @@ export type PostAccountIdAccountOrganizationData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/accountOrganizations';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountOrganizations';
 };
 
 export type PostAccountIdAccountOrganizationResponses = {
@@ -2475,7 +2501,7 @@ export type PostAccountIdAccountOrganizationBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/accountOrganizations/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/accountOrganizations/batch';
 };
 
 export type PostAccountIdAccountOrganizationBatchResponses = {
@@ -2491,7 +2517,7 @@ export type DeleteAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}';
 };
 
 export type DeleteAccountResponses = {
@@ -2507,7 +2533,7 @@ export type GetAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}';
 };
 
 export type GetAccountResponses = {
@@ -2525,7 +2551,7 @@ export type PatchAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}';
 };
 
 export type PatchAccountResponses = {
@@ -2543,7 +2569,7 @@ export type DeleteAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/batch';
 };
 
 export type DeleteAccountBatchResponses = {
@@ -2561,7 +2587,7 @@ export type PostAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/accounts/batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/batch';
 };
 
 export type PostAccountBatchResponses = {
@@ -2577,7 +2603,7 @@ export type DeleteAccountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteAccountByExternalReferenceCodeResponses = {
@@ -2593,7 +2619,7 @@ export type GetAccountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetAccountByExternalReferenceCodeResponses = {
@@ -2611,7 +2637,7 @@ export type PatchAccountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchAccountByExternalReferenceCodeResponses = {
@@ -2628,7 +2654,7 @@ export type DeleteAccountGroupByExternalReferenceCodeAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}/accounts/{accountExternalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}/accounts/{accountExternalReferenceCode}';
 };
 
 export type DeleteAccountGroupByExternalReferenceCodeAccountResponses = {
@@ -2647,8 +2673,9 @@ export type GetAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts';
 };
 
 export type GetAccountsPageResponses = {
@@ -2664,7 +2691,7 @@ export type PostAccountData = {
     body?: AccountWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/accounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts';
 };
 
 export type PostAccountResponses = {
@@ -2682,7 +2709,7 @@ export type PostAccountByExternalReferenceCodeLogoData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/logo';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/logo';
 };
 
 export type PostAccountByExternalReferenceCodeLogoResponses = {
@@ -2698,7 +2725,7 @@ export type PostAccountGroupByExternalReferenceCodeAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}/accounts';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}/accounts';
 };
 
 export type PostAccountGroupByExternalReferenceCodeAccountResponses = {
@@ -2714,7 +2741,7 @@ export type PostAccountLogoData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accounts/{id}/logo';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/logo';
 };
 
 export type PostAccountLogoResponses = {
@@ -2735,7 +2762,7 @@ export type PostAccountsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/accounts/export-batch';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/export-batch';
 };
 
 export type PostAccountsPageExportBatchResponses = {
@@ -2751,7 +2778,7 @@ export type DeleteAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/{id}';
 };
 
 export type DeleteAccountGroupResponses = {
@@ -2767,7 +2794,7 @@ export type GetAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/{id}';
 };
 
 export type GetAccountGroupResponses = {
@@ -2785,7 +2812,7 @@ export type PatchAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/{id}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/{id}';
 };
 
 export type PatchAccountGroupResponses = {
@@ -2801,7 +2828,7 @@ export type DeleteAccountGroupByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteAccountGroupByExternalReferenceCodeResponses = {
@@ -2817,7 +2844,7 @@ export type GetAccountGroupByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetAccountGroupByExternalReferenceCodeResponses = {
@@ -2835,7 +2862,7 @@ export type PatchAccountGroupByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchAccountGroupByExternalReferenceCodeResponses = {
@@ -2853,8 +2880,9 @@ export type GetAccountByExternalReferenceCodeAccountGroupsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountGroups';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountGroups';
 };
 
 export type GetAccountByExternalReferenceCodeAccountGroupsPageResponses = {
@@ -2875,8 +2903,9 @@ export type GetAccountGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accountGroups';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups';
 };
 
 export type GetAccountGroupsPageResponses = {
@@ -2892,7 +2921,7 @@ export type PostAccountGroupData = {
     body?: AdminAccountGroupWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/accountGroups';
+    url: '/o/headless-commerce-admin-account/v1.0/accountGroups';
 };
 
 export type PostAccountGroupResponses = {
@@ -2912,8 +2941,9 @@ export type GetAccountIdAccountGroupsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accounts/{id}/accountGroups';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/{id}/accountGroups';
 };
 
 export type GetAccountIdAccountGroupsPageResponses = {
@@ -2925,29 +2955,13 @@ export type GetAccountIdAccountGroupsPageResponses = {
 
 export type GetAccountIdAccountGroupsPageResponse = GetAccountIdAccountGroupsPageResponses[keyof GetAccountIdAccountGroupsPageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type PostAccountByExternalReferenceCodeAccountMemberCreateUserData = {
     body?: UserWritable;
     path: {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/createUser';
+    url: '/o/headless-commerce-admin-account/v1.0/accounts/by-externalReferenceCode/{externalReferenceCode}/accountMembers/createUser';
 };
 
 export type PostAccountByExternalReferenceCodeAccountMemberCreateUserResponses = {
@@ -2960,5 +2974,5 @@ export type PostAccountByExternalReferenceCodeAccountMemberCreateUserResponses =
 export type PostAccountByExternalReferenceCodeAccountMemberCreateUserResponse = PostAccountByExternalReferenceCodeAccountMemberCreateUserResponses[keyof PostAccountByExternalReferenceCodeAccountMemberCreateUserResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-account/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

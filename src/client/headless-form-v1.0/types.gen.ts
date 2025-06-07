@@ -562,7 +562,7 @@ export type DeleteFormDocumentData = {
         formDocumentId: string;
     };
     query?: never;
-    url: '/v1.0/form-documents/{formDocumentId}';
+    url: '/o/headless-form/v1.0/form-documents/{formDocumentId}';
 };
 
 export type DeleteFormDocumentResponses = {
@@ -578,7 +578,7 @@ export type GetFormDocumentData = {
         formDocumentId: string;
     };
     query?: never;
-    url: '/v1.0/form-documents/{formDocumentId}';
+    url: '/o/headless-form/v1.0/form-documents/{formDocumentId}';
 };
 
 export type GetFormDocumentResponses = {
@@ -598,7 +598,7 @@ export type DeleteFormDocumentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/form-documents/batch';
+    url: '/o/headless-form/v1.0/form-documents/batch';
 };
 
 export type DeleteFormDocumentBatchResponses = {
@@ -614,7 +614,7 @@ export type GetFormFormRecordByLatestDraftData = {
         formId: string;
     };
     query?: never;
-    url: '/v1.0/forms/{formId}/form-records/by-latest-draft';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-records/by-latest-draft';
 };
 
 export type GetFormFormRecordByLatestDraftResponses = {
@@ -634,8 +634,9 @@ export type GetFormFormRecordsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/forms/{formId}/form-records';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-records';
 };
 
 export type GetFormFormRecordsPageResponses = {
@@ -653,7 +654,7 @@ export type PostFormFormRecordData = {
         formId: string;
     };
     query?: never;
-    url: '/v1.0/forms/{formId}/form-records';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-records';
 };
 
 export type PostFormFormRecordResponses = {
@@ -671,7 +672,7 @@ export type GetFormRecordData = {
         formRecordId: string;
     };
     query?: never;
-    url: '/v1.0/form-records/{formRecordId}';
+    url: '/o/headless-form/v1.0/form-records/{formRecordId}';
 };
 
 export type GetFormRecordResponses = {
@@ -689,7 +690,7 @@ export type PutFormRecordData = {
         formRecordId: string;
     };
     query?: never;
-    url: '/v1.0/form-records/{formRecordId}';
+    url: '/o/headless-form/v1.0/form-records/{formRecordId}';
 };
 
 export type PutFormRecordResponses = {
@@ -711,7 +712,7 @@ export type PostFormFormRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/forms/{formId}/form-records/batch';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-records/batch';
 };
 
 export type PostFormFormRecordBatchResponses = {
@@ -731,7 +732,7 @@ export type PostFormFormRecordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/forms/{formId}/form-records/export-batch';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-records/export-batch';
 };
 
 export type PostFormFormRecordsPageExportBatchResponses = {
@@ -749,7 +750,7 @@ export type PutFormRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/form-records/batch';
+    url: '/o/headless-form/v1.0/form-records/batch';
 };
 
 export type PutFormRecordBatchResponses = {
@@ -765,7 +766,7 @@ export type GetFormData = {
         formId: string;
     };
     query?: never;
-    url: '/v1.0/forms/{formId}';
+    url: '/o/headless-form/v1.0/forms/{formId}';
 };
 
 export type GetFormResponses = {
@@ -785,8 +786,9 @@ export type GetSiteFormsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/forms';
+    url: '/o/headless-form/v1.0/sites/{siteId}/forms';
 };
 
 export type GetSiteFormsPageResponses = {
@@ -804,7 +806,7 @@ export type PostFormEvaluateContextData = {
         formId: string;
     };
     query?: never;
-    url: '/v1.0/forms/{formId}/evaluate-context';
+    url: '/o/headless-form/v1.0/forms/{formId}/evaluate-context';
 };
 
 export type PostFormEvaluateContextResponses = {
@@ -822,7 +824,7 @@ export type PostFormFormDocumentData = {
         formId: string;
     };
     query?: never;
-    url: '/v1.0/forms/{formId}/form-document';
+    url: '/o/headless-form/v1.0/forms/{formId}/form-document';
 };
 
 export type PostFormFormDocumentResponses = {
@@ -844,7 +846,7 @@ export type PostSiteFormsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/forms/export-batch';
+    url: '/o/headless-form/v1.0/sites/{siteId}/forms/export-batch';
 };
 
 export type PostSiteFormsPageExportBatchResponses = {
@@ -860,7 +862,7 @@ export type GetFormStructureData = {
         formStructureId: string;
     };
     query?: never;
-    url: '/v1.0/form-structures/{formStructureId}';
+    url: '/o/headless-form/v1.0/form-structures/{formStructureId}';
 };
 
 export type GetFormStructureResponses = {
@@ -880,8 +882,9 @@ export type GetSiteFormStructuresPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteId}/form-structures';
+    url: '/o/headless-form/v1.0/sites/{siteId}/form-structures';
 };
 
 export type GetSiteFormStructuresPageResponses = {
@@ -903,7 +906,7 @@ export type PostSiteFormStructuresPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/form-structures/export-batch';
+    url: '/o/headless-form/v1.0/sites/{siteId}/form-structures/export-batch';
 };
 
 export type PostSiteFormStructuresPageExportBatchResponses = {
@@ -913,22 +916,6 @@ export type PostSiteFormStructuresPageExportBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-form/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

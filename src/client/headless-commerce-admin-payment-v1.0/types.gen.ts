@@ -116,29 +116,13 @@ export type PagePaymentWritable = {
     page?: number;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeletePaymentData = {
     body?: never;
     path: {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payments/{id}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/{id}';
 };
 
 export type DeletePaymentResponses = {
@@ -154,7 +138,7 @@ export type GetPaymentData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payments/{id}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/{id}';
 };
 
 export type GetPaymentResponses = {
@@ -172,7 +156,7 @@ export type PatchPaymentData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payments/{id}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/{id}';
 };
 
 export type PatchPaymentResponses = {
@@ -192,7 +176,7 @@ export type DeletePaymentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/payments/batch';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/batch';
 };
 
 export type DeletePaymentBatchResponses = {
@@ -210,7 +194,7 @@ export type PostPaymentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/payments/batch';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/batch';
 };
 
 export type PostPaymentBatchResponses = {
@@ -226,7 +210,7 @@ export type DeletePaymentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeletePaymentByExternalReferenceCodeResponses = {
@@ -242,7 +226,7 @@ export type GetPaymentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetPaymentByExternalReferenceCodeResponses = {
@@ -260,7 +244,7 @@ export type PatchPaymentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchPaymentByExternalReferenceCodeResponses = {
@@ -278,7 +262,7 @@ export type PutPaymentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutPaymentByExternalReferenceCodeResponses = {
@@ -299,8 +283,9 @@ export type GetPaymentsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/payments';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments';
 };
 
 export type GetPaymentsPageResponses = {
@@ -316,7 +301,7 @@ export type PostPaymentData = {
     body?: PaymentWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/payments';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments';
 };
 
 export type PostPaymentResponses = {
@@ -334,7 +319,7 @@ export type PostPaymentByExternalReferenceCodeRefundData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}/refund';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/by-externalReferenceCode/{externalReferenceCode}/refund';
 };
 
 export type PostPaymentByExternalReferenceCodeRefundResponses = {
@@ -352,7 +337,7 @@ export type PostPaymentRefundData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payments/{id}/refund';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/{id}/refund';
 };
 
 export type PostPaymentRefundResponses = {
@@ -375,7 +360,7 @@ export type PostPaymentsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/payments/export-batch';
+    url: '/o/headless-commerce-admin-payment/v1.0/payments/export-batch';
 };
 
 export type PostPaymentsPageExportBatchResponses = {
@@ -386,5 +371,5 @@ export type PostPaymentsPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-payment/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -23,7 +23,7 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
  */
 export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -33,7 +33,7 @@ export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollabo
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -43,7 +43,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options
     });
 };
@@ -67,7 +67,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOn
  */
 export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -78,21 +78,21 @@ export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowO
 
 export const deleteByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export const patchByExternalReferenceCode = <ThrowOnError extends boolean = fals
 
 export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -114,21 +114,21 @@ export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>
 
 export const deleteByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const getByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const deletePersonalizationCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePersonalizationCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePersonalizationCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/personalization-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export const deletePersonalizationCookieEntryBatch = <ThrowOnError extends boole
 
 export const postPersonalizationCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPersonalizationCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPersonalizationCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/personalization-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ export const postPersonalizationCookieEntryBatch = <ThrowOnError extends boolean
 
 export const putPersonalizationCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PutPersonalizationCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutPersonalizationCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/personalization-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -161,21 +161,21 @@ export const putPersonalizationCookieEntryBatch = <ThrowOnError extends boolean 
 
 export const getByExternalReferenceCodeVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/versions',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions',
         ...options
     });
 };
 
 export const getPersonalizationCookieEntriesPage = <ThrowOnError extends boolean = false>(options?: Options<GetPersonalizationCookieEntriesPageData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetPersonalizationCookieEntriesPageResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/personalization-cookies-entries/',
         ...options
     });
 };
 
 export const postPersonalizationCookieEntry = <ThrowOnError extends boolean = false>(options?: Options<PostPersonalizationCookieEntryData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPersonalizationCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/personalization-cookies-entries/',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -186,28 +186,28 @@ export const postPersonalizationCookieEntry = <ThrowOnError extends boolean = fa
 
 export const postByExternalReferenceCodeByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postByExternalReferenceCodeByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const postPersonalizationCookieEntriesPageExportBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPersonalizationCookieEntriesPageExportBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPersonalizationCookieEntriesPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/export-batch',
+        url: '/o/personalization-cookies-entries/export-batch',
         ...options
     });
 };
 
 export const postValidate = <ThrowOnError extends boolean = false>(options?: Options<PostValidateData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostValidateResponses, unknown, ThrowOnError>({
-        url: '/validate',
+        url: '/o/personalization-cookies-entries/validate',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -218,14 +218,14 @@ export const postValidate = <ThrowOnError extends boolean = false>(options?: Opt
 
 export const putByExternalReferenceCodeByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
+        url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
         ...options
     });
 };
 
 export const getOpenApi = <ThrowOnError extends boolean = false>(options: Options<GetOpenApiData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetOpenApiResponses, unknown, ThrowOnError>({
-        url: '/openapi.{type}',
+        url: '/o/personalization-cookies-entries/openapi.{type}',
         ...options
     });
 };
@@ -235,7 +235,7 @@ export const getOpenApi = <ThrowOnError extends boolean = false>(options: Option
  */
 export const deletePersonalizationCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeletePersonalizationCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -245,7 +245,7 @@ export const deletePersonalizationCookieEntryCollaboratorByTypeCollaborator = <T
  */
 export const getPersonalizationCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -255,7 +255,7 @@ export const getPersonalizationCookieEntryCollaboratorByTypeCollaborator = <Thro
  */
 export const putPersonalizationCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -269,7 +269,7 @@ export const putPersonalizationCookieEntryCollaboratorByTypeCollaborator = <Thro
  */
 export const getPersonalizationCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators',
         ...options
     });
 };
@@ -279,7 +279,7 @@ export const getPersonalizationCookieEntryCollaboratorsPage = <ThrowOnError exte
  */
 export const postPersonalizationCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostPersonalizationCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPersonalizationCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -290,28 +290,28 @@ export const postPersonalizationCookieEntryCollaboratorsPage = <ThrowOnError ext
 
 export const postPersonalizationCookieEntryCollaboratorsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostPersonalizationCookieEntryCollaboratorsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPersonalizationCookieEntryCollaboratorsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/collaborators/export-batch',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/export-batch',
         ...options
     });
 };
 
 export const deletePersonalizationCookieEntry = <ThrowOnError extends boolean = false>(options: Options<DeletePersonalizationCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePersonalizationCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}',
         ...options
     });
 };
 
 export const getPersonalizationCookieEntry = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}',
         ...options
     });
 };
 
 export const patchPersonalizationCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PatchPersonalizationCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPersonalizationCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -322,7 +322,7 @@ export const patchPersonalizationCookieEntry = <ThrowOnError extends boolean = f
 
 export const putPersonalizationCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PutPersonalizationCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPersonalizationCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -333,35 +333,35 @@ export const putPersonalizationCookieEntry = <ThrowOnError extends boolean = fal
 
 export const deletePersonalizationCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<DeletePersonalizationCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePersonalizationCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/by-version/{version}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getPersonalizationCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/by-version/{version}',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getPersonalizationCookieEntriesVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntriesVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntriesVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/versions',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/versions',
         ...options
     });
 };
 
 export const getPersonalizationCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<GetPersonalizationCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPersonalizationCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/permissions',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/permissions',
         ...options
     });
 };
 
 export const putPersonalizationCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<PutPersonalizationCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPersonalizationCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/permissions',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/permissions',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -372,21 +372,21 @@ export const putPersonalizationCookieEntryPermissionsPage = <ThrowOnError extend
 
 export const postPersonalizationCookieEntryByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostPersonalizationCookieEntryByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPersonalizationCookieEntryByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/by-version/{version}/copy',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postPersonalizationCookieEntryByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostPersonalizationCookieEntryByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPersonalizationCookieEntryByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/by-version/{version}/expire',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const putPersonalizationCookieEntryByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutPersonalizationCookieEntryByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPersonalizationCookieEntryByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/{personalizationCookieEntryId}/by-version/{version}/restore',
+        url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}/restore',
         ...options
     });
 };

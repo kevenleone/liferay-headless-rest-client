@@ -498,7 +498,7 @@ export type DeleteV2GroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Groups/{id}';
+    url: '/o/scim/v1.0/v2/Groups/{id}';
 };
 
 export type DeleteV2GroupResponses = {
@@ -516,7 +516,7 @@ export type GetV2GroupByIdData = {
     query?: {
         excludedAttributes?: string;
     };
-    url: '/v1.0/v2/Groups/{id}';
+    url: '/o/scim/v1.0/v2/Groups/{id}';
 };
 
 export type GetV2GroupByIdResponses = {
@@ -536,7 +536,7 @@ export type PatchV2GroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Groups/{id}';
+    url: '/o/scim/v1.0/v2/Groups/{id}';
 };
 
 export type PatchV2GroupResponses = {
@@ -552,7 +552,7 @@ export type PutV2GroupData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Groups/{id}';
+    url: '/o/scim/v1.0/v2/Groups/{id}';
 };
 
 export type PutV2GroupResponses = {
@@ -571,7 +571,7 @@ export type GetV2GroupsData = {
         filter?: string;
         startIndex?: string;
     };
-    url: '/v1.0/v2/Groups';
+    url: '/o/scim/v1.0/v2/Groups';
 };
 
 export type GetV2GroupsResponses = {
@@ -589,7 +589,7 @@ export type PostV2GroupData = {
     body?: GroupWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/Groups';
+    url: '/o/scim/v1.0/v2/Groups';
 };
 
 export type PostV2GroupResponses = {
@@ -603,26 +603,10 @@ export type PostV2GroupSearchData = {
     body?: QueryAttributesWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/Groups/.search';
+    url: '/o/scim/v1.0/v2/Groups/.search';
 };
 
 export type PostV2GroupSearchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -635,7 +619,7 @@ export type GetV2ResourceTypeByIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/ResourceTypes/{id}';
+    url: '/o/scim/v1.0/v2/ResourceTypes/{id}';
 };
 
 export type GetV2ResourceTypeByIdResponses = {
@@ -653,7 +637,7 @@ export type GetV2ResourceTypesData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/ResourceTypes';
+    url: '/o/scim/v1.0/v2/ResourceTypes';
 };
 
 export type GetV2ResourceTypesResponses = {
@@ -673,7 +657,7 @@ export type GetV2SchemaByIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Schemas/{id}';
+    url: '/o/scim/v1.0/v2/Schemas/{id}';
 };
 
 export type GetV2SchemaByIdResponses = {
@@ -691,7 +675,7 @@ export type GetV2SchemasData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/Schemas';
+    url: '/o/scim/v1.0/v2/Schemas';
 };
 
 export type GetV2SchemasResponses = {
@@ -709,7 +693,7 @@ export type GetV2ServiceProviderConfigData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/ServiceProviderConfig';
+    url: '/o/scim/v1.0/v2/ServiceProviderConfig';
 };
 
 export type GetV2ServiceProviderConfigResponses = {
@@ -729,7 +713,7 @@ export type DeleteV2UserData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Users/{id}';
+    url: '/o/scim/v1.0/v2/Users/{id}';
 };
 
 export type DeleteV2UserResponses = {
@@ -745,7 +729,7 @@ export type GetV2UserByIdData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Users/{id}';
+    url: '/o/scim/v1.0/v2/Users/{id}';
 };
 
 export type GetV2UserByIdResponses = {
@@ -765,7 +749,7 @@ export type PatchV2UserData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Users/{id}';
+    url: '/o/scim/v1.0/v2/Users/{id}';
 };
 
 export type PatchV2UserResponses = {
@@ -781,7 +765,7 @@ export type PutV2UserData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/v2/Users/{id}';
+    url: '/o/scim/v1.0/v2/Users/{id}';
 };
 
 export type PutV2UserResponses = {
@@ -799,7 +783,7 @@ export type GetV2UsersData = {
         filter?: string;
         startIndex?: string;
     };
-    url: '/v1.0/v2/Users';
+    url: '/o/scim/v1.0/v2/Users';
 };
 
 export type GetV2UsersResponses = {
@@ -817,7 +801,7 @@ export type PostV2UserData = {
     body?: UserWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/Users';
+    url: '/o/scim/v1.0/v2/Users';
 };
 
 export type PostV2UserResponses = {
@@ -831,7 +815,7 @@ export type PostV2UserSearchData = {
     body?: QueryAttributesWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/v2/Users/.search';
+    url: '/o/scim/v1.0/v2/Users/.search';
 };
 
 export type PostV2UserSearchResponses = {
@@ -842,5 +826,5 @@ export type PostV2UserSearchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/scim/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

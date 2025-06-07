@@ -283,29 +283,13 @@ export type PageShipmentWritable = {
     page?: number;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeleteShipmentItemData = {
     body?: never;
     path: {
         shipmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/{shipmentItemId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/{shipmentItemId}';
 };
 
 export type DeleteShipmentItemResponses = {
@@ -321,7 +305,7 @@ export type GetShipmentItemData = {
         shipmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/{shipmentItemId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/{shipmentItemId}';
 };
 
 export type GetShipmentItemResponses = {
@@ -339,7 +323,7 @@ export type PatchShipmentItemData = {
         shipmentItemId: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/{shipmentItemId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/{shipmentItemId}';
 };
 
 export type PatchShipmentItemResponses = {
@@ -359,7 +343,7 @@ export type DeleteShipmentItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/shipment-items/batch';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/batch';
 };
 
 export type DeleteShipmentItemBatchResponses = {
@@ -375,7 +359,7 @@ export type DeleteShipmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteShipmentItemByExternalReferenceCodeResponses = {
@@ -391,7 +375,7 @@ export type GetShipmentByExternalReferenceCodeItemData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetShipmentByExternalReferenceCodeItemResponses = {
@@ -409,7 +393,7 @@ export type PatchShipmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipment-items/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchShipmentItemByExternalReferenceCodeResponses = {
@@ -429,8 +413,9 @@ export type GetShipmentByExternalReferenceCodeItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
 };
 
 export type GetShipmentByExternalReferenceCodeItemsPageResponses = {
@@ -448,7 +433,7 @@ export type PostShipmentItemByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
 };
 
 export type PostShipmentItemByExternalReferenceCodeResponses = {
@@ -466,7 +451,7 @@ export type PutShipmentByExternalReferenceCodeItemData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/items';
 };
 
 export type PutShipmentByExternalReferenceCodeItemResponses = {
@@ -486,8 +471,9 @@ export type GetShipmentItemsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/shipments/{shipmentId}/items';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/items';
 };
 
 export type GetShipmentItemsPageResponses = {
@@ -505,7 +491,7 @@ export type PostShipmentItemData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/items';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/items';
 };
 
 export type PostShipmentItemResponses = {
@@ -523,7 +509,7 @@ export type DeleteShipmentData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}';
 };
 
 export type DeleteShipmentResponses = {
@@ -539,7 +525,7 @@ export type GetShipmentData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}';
 };
 
 export type GetShipmentResponses = {
@@ -557,7 +543,7 @@ export type PatchShipmentData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}';
 };
 
 export type PatchShipmentResponses = {
@@ -577,7 +563,7 @@ export type DeleteShipmentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/shipments/batch';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/batch';
 };
 
 export type DeleteShipmentBatchResponses = {
@@ -595,7 +581,7 @@ export type PostShipmentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/shipments/batch';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/batch';
 };
 
 export type PostShipmentBatchResponses = {
@@ -611,7 +597,7 @@ export type DeleteShipmentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteShipmentByExternalReferenceCodeResponses = {
@@ -627,7 +613,7 @@ export type GetShipmentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetShipmentByExternalReferenceCodeResponses = {
@@ -645,7 +631,7 @@ export type PatchShipmentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchShipmentByExternalReferenceCodeResponses = {
@@ -663,7 +649,7 @@ export type PutShipmentByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutShipmentByExternalReferenceCodeResponses = {
@@ -684,8 +670,9 @@ export type GetShipmentsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/shipments';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments';
 };
 
 export type GetShipmentsPageResponses = {
@@ -701,7 +688,7 @@ export type PostShipmentData = {
     body?: ShipmentWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/shipments';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments';
 };
 
 export type PostShipmentResponses = {
@@ -719,7 +706,7 @@ export type PostShipmentByExternalReferenceCodeStatusDeliveredData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-delivered';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-delivered';
 };
 
 export type PostShipmentByExternalReferenceCodeStatusDeliveredResponses = {
@@ -737,7 +724,7 @@ export type PostShipmentByExternalReferenceCodeStatusFinishProcessingData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-finish-processing';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-finish-processing';
 };
 
 export type PostShipmentByExternalReferenceCodeStatusFinishProcessingResponses = {
@@ -755,7 +742,7 @@ export type PostShipmentByExternalReferenceCodeStatusShippedData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-shipped';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/status-shipped';
 };
 
 export type PostShipmentByExternalReferenceCodeStatusShippedResponses = {
@@ -773,7 +760,7 @@ export type PostShipmentStatusDeliveredData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/status-delivered';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/status-delivered';
 };
 
 export type PostShipmentStatusDeliveredResponses = {
@@ -791,7 +778,7 @@ export type PostShipmentStatusFinishProcessingData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/status-finish-processing';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/status-finish-processing';
 };
 
 export type PostShipmentStatusFinishProcessingResponses = {
@@ -809,7 +796,7 @@ export type PostShipmentStatusShippedData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/status-shipped';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/status-shipped';
 };
 
 export type PostShipmentStatusShippedResponses = {
@@ -832,7 +819,7 @@ export type PostShipmentsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/shipments/export-batch';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/export-batch';
 };
 
 export type PostShipmentsPageExportBatchResponses = {
@@ -848,7 +835,7 @@ export type GetShipmentByExternalReferenceCodeShippingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
 };
 
 export type GetShipmentByExternalReferenceCodeShippingAddressResponses = {
@@ -866,7 +853,7 @@ export type PatchShipmentByExternalReferenceCodeShippingAddressData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/by-externalReferenceCode/{externalReferenceCode}/shipping-address';
 };
 
 export type PatchShipmentByExternalReferenceCodeShippingAddressResponses = {
@@ -884,7 +871,7 @@ export type GetShipmentShippingAddressData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/shipping-address';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/shipping-address';
 };
 
 export type GetShipmentShippingAddressResponses = {
@@ -902,7 +889,7 @@ export type PatchShipmentShippingAddressData = {
         shipmentId: string;
     };
     query?: never;
-    url: '/v1.0/shipments/{shipmentId}/shipping-address';
+    url: '/o/headless-commerce-admin-shipment/v1.0/shipments/{shipmentId}/shipping-address';
 };
 
 export type PatchShipmentShippingAddressResponses = {
@@ -915,5 +902,5 @@ export type PatchShipmentShippingAddressResponses = {
 export type PatchShipmentShippingAddressResponse = PatchShipmentShippingAddressResponses[keyof PatchShipmentShippingAddressResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-shipment/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

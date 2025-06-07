@@ -627,8 +627,9 @@ export type GetDataDefinitionDataDefinitionFieldLinksPageData = {
     };
     query?: {
         fieldName?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links';
 };
 
 export type GetDataDefinitionDataDefinitionFieldLinksPageResponses = {
@@ -651,7 +652,7 @@ export type PostDataDefinitionDataDefinitionFieldLinksPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links/export-batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links/export-batch';
 };
 
 export type PostDataDefinitionDataDefinitionFieldLinksPageExportBatchResponses = {
@@ -667,7 +668,7 @@ export type DeleteDataDefinitionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}';
 };
 
 export type DeleteDataDefinitionResponses = {
@@ -683,7 +684,7 @@ export type GetDataDefinitionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}';
 };
 
 export type GetDataDefinitionResponses = {
@@ -701,7 +702,7 @@ export type PatchDataDefinitionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}';
 };
 
 export type PatchDataDefinitionResponses = {
@@ -719,7 +720,7 @@ export type PutDataDefinitionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}';
 };
 
 export type PutDataDefinitionResponses = {
@@ -739,7 +740,7 @@ export type DeleteDataDefinitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/batch';
+    url: '/o/data-engine/v2.0/data-definitions/batch';
 };
 
 export type DeleteDataDefinitionBatchResponses = {
@@ -757,7 +758,7 @@ export type PutDataDefinitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/batch';
+    url: '/o/data-engine/v2.0/data-definitions/batch';
 };
 
 export type PutDataDefinitionBatchResponses = {
@@ -775,7 +776,7 @@ export type DeleteSiteDataDefinitionByContentTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses = {
@@ -793,7 +794,7 @@ export type GetSiteDataDefinitionByContentTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses = {
@@ -813,7 +814,7 @@ export type PutSiteDataDefinitionByContentTypeByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses = {
@@ -835,8 +836,9 @@ export type GetDataDefinitionByContentTypeContentTypePageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/by-content-type/{contentType}';
+    url: '/o/data-engine/v2.0/data-definitions/by-content-type/{contentType}';
 };
 
 export type GetDataDefinitionByContentTypeContentTypePageResponses = {
@@ -854,7 +856,7 @@ export type PostDataDefinitionByContentTypeData = {
         contentType: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/by-content-type/{contentType}';
+    url: '/o/data-engine/v2.0/data-definitions/by-content-type/{contentType}';
 };
 
 export type PostDataDefinitionByContentTypeResponses = {
@@ -870,7 +872,7 @@ export type GetDataDefinitionDataDefinitionFieldFieldTypesData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v2.0/data-definitions/data-definition-fields/field-types';
+    url: '/o/data-engine/v2.0/data-definitions/data-definition-fields/field-types';
 };
 
 export type GetDataDefinitionDataDefinitionFieldFieldTypesResponses = {
@@ -889,8 +891,9 @@ export type GetDataDefinitionPermissionsPageData = {
     };
     query?: {
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/permissions';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/permissions';
 };
 
 export type GetDataDefinitionPermissionsPageResponses = {
@@ -908,7 +911,7 @@ export type PutDataDefinitionPermissionsPageData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/permissions';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/permissions';
 };
 
 export type PutDataDefinitionPermissionsPageResponses = {
@@ -928,7 +931,7 @@ export type GetSiteDataDefinitionByContentTypeByDataDefinitionKeyData = {
         dataDefinitionKey: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-data-definition-key/{dataDefinitionKey}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-data-definition-key/{dataDefinitionKey}';
 };
 
 export type GetSiteDataDefinitionByContentTypeByDataDefinitionKeyResponses = {
@@ -951,8 +954,9 @@ export type GetSiteDataDefinitionByContentTypeContentTypePageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}';
 };
 
 export type GetSiteDataDefinitionByContentTypeContentTypePageResponses = {
@@ -971,7 +975,7 @@ export type PostSiteDataDefinitionByContentTypeData = {
         contentType: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}';
 };
 
 export type PostSiteDataDefinitionByContentTypeResponses = {
@@ -989,7 +993,7 @@ export type PostDataDefinitionCopyData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/copy';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/copy';
 };
 
 export type PostDataDefinitionCopyResponses = {
@@ -1007,7 +1011,7 @@ export type DeleteDataDefinitionDataLayoutData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
 };
 
 export type DeleteDataDefinitionDataLayoutResponses = {
@@ -1027,8 +1031,9 @@ export type GetDataDefinitionDataLayoutsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
 };
 
 export type GetDataDefinitionDataLayoutsPageResponses = {
@@ -1046,7 +1051,7 @@ export type PostDataDefinitionDataLayoutData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts';
 };
 
 export type PostDataDefinitionDataLayoutResponses = {
@@ -1064,7 +1069,7 @@ export type DeleteDataLayoutData = {
         dataLayoutId: string;
     };
     query?: never;
-    url: '/v2.0/data-layouts/{dataLayoutId}';
+    url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}';
 };
 
 export type DeleteDataLayoutResponses = {
@@ -1080,7 +1085,7 @@ export type GetDataLayoutData = {
         dataLayoutId: string;
     };
     query?: never;
-    url: '/v2.0/data-layouts/{dataLayoutId}';
+    url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}';
 };
 
 export type GetDataLayoutResponses = {
@@ -1098,7 +1103,7 @@ export type PutDataLayoutData = {
         dataLayoutId: string;
     };
     query?: never;
-    url: '/v2.0/data-layouts/{dataLayoutId}';
+    url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}';
 };
 
 export type PutDataLayoutResponses = {
@@ -1118,7 +1123,7 @@ export type DeleteDataLayoutBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-layouts/batch';
+    url: '/o/data-engine/v2.0/data-layouts/batch';
 };
 
 export type DeleteDataLayoutBatchResponses = {
@@ -1136,7 +1141,7 @@ export type PutDataLayoutBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-layouts/batch';
+    url: '/o/data-engine/v2.0/data-layouts/batch';
 };
 
 export type PutDataLayoutBatchResponses = {
@@ -1154,7 +1159,7 @@ export type GetSiteDataLayoutByContentTypeByDataLayoutKeyData = {
         dataLayoutKey: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-layouts/by-content-type/{contentType}/by-data-layout-key/{dataLayoutKey}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-layouts/by-content-type/{contentType}/by-data-layout-key/{dataLayoutKey}';
 };
 
 export type GetSiteDataLayoutByContentTypeByDataLayoutKeyResponses = {
@@ -1176,7 +1181,7 @@ export type PostDataDefinitionDataLayoutBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts/batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts/batch';
 };
 
 export type PostDataDefinitionDataLayoutBatchResponses = {
@@ -1198,7 +1203,7 @@ export type PostDataDefinitionDataLayoutsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts/export-batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts/export-batch';
 };
 
 export type PostDataDefinitionDataLayoutsPageExportBatchResponses = {
@@ -1214,7 +1219,7 @@ export type PostDataLayoutContextData = {
         dataLayoutId: string;
     };
     query?: never;
-    url: '/v2.0/data-layouts/{dataLayoutId}/context';
+    url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}/context';
 };
 
 export type PostDataLayoutContextResponses = {
@@ -1230,7 +1235,7 @@ export type DeleteDataDefinitionDataListViewData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
 };
 
 export type DeleteDataDefinitionDataListViewResponses = {
@@ -1250,8 +1255,9 @@ export type GetDataDefinitionDataListViewsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
 };
 
 export type GetDataDefinitionDataListViewsPageResponses = {
@@ -1269,7 +1275,7 @@ export type PostDataDefinitionDataListViewData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views';
 };
 
 export type PostDataDefinitionDataListViewResponses = {
@@ -1287,7 +1293,7 @@ export type DeleteDataListViewData = {
         dataListViewId: string;
     };
     query?: never;
-    url: '/v2.0/data-list-views/{dataListViewId}';
+    url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}';
 };
 
 export type DeleteDataListViewResponses = {
@@ -1303,7 +1309,7 @@ export type GetDataListViewData = {
         dataListViewId: string;
     };
     query?: never;
-    url: '/v2.0/data-list-views/{dataListViewId}';
+    url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}';
 };
 
 export type GetDataListViewResponses = {
@@ -1321,7 +1327,7 @@ export type PutDataListViewData = {
         dataListViewId: string;
     };
     query?: never;
-    url: '/v2.0/data-list-views/{dataListViewId}';
+    url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}';
 };
 
 export type PutDataListViewResponses = {
@@ -1341,7 +1347,7 @@ export type DeleteDataListViewBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-list-views/batch';
+    url: '/o/data-engine/v2.0/data-list-views/batch';
 };
 
 export type DeleteDataListViewBatchResponses = {
@@ -1359,7 +1365,7 @@ export type PutDataListViewBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-list-views/batch';
+    url: '/o/data-engine/v2.0/data-list-views/batch';
 };
 
 export type PutDataListViewBatchResponses = {
@@ -1379,7 +1385,7 @@ export type PostDataDefinitionDataListViewBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views/batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views/batch';
 };
 
 export type PostDataDefinitionDataListViewBatchResponses = {
@@ -1401,7 +1407,7 @@ export type PostDataDefinitionDataListViewsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views/export-batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views/export-batch';
 };
 
 export type PostDataDefinitionDataListViewsPageExportBatchResponses = {
@@ -1417,7 +1423,7 @@ export type DeleteDataRecordCollectionData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}';
 };
 
 export type DeleteDataRecordCollectionResponses = {
@@ -1433,7 +1439,7 @@ export type GetDataRecordCollectionData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}';
 };
 
 export type GetDataRecordCollectionResponses = {
@@ -1451,7 +1457,7 @@ export type PutDataRecordCollectionData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}';
 };
 
 export type PutDataRecordCollectionResponses = {
@@ -1471,7 +1477,7 @@ export type DeleteDataRecordCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-record-collections/batch';
+    url: '/o/data-engine/v2.0/data-record-collections/batch';
 };
 
 export type DeleteDataRecordCollectionBatchResponses = {
@@ -1489,7 +1495,7 @@ export type PutDataRecordCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-record-collections/batch';
+    url: '/o/data-engine/v2.0/data-record-collections/batch';
 };
 
 export type PutDataRecordCollectionBatchResponses = {
@@ -1505,7 +1511,7 @@ export type GetDataDefinitionDataRecordCollectionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collection';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collection';
 };
 
 export type GetDataDefinitionDataRecordCollectionResponses = {
@@ -1526,8 +1532,9 @@ export type GetDataDefinitionDataRecordCollectionsPageData = {
         keywords?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections';
 };
 
 export type GetDataDefinitionDataRecordCollectionsPageResponses = {
@@ -1545,7 +1552,7 @@ export type PostDataDefinitionDataRecordCollectionData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections';
 };
 
 export type PostDataDefinitionDataRecordCollectionResponses = {
@@ -1563,7 +1570,7 @@ export type GetDataRecordCollectionPermissionByCurrentUserData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions/by-current-user';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions/by-current-user';
 };
 
 export type GetDataRecordCollectionPermissionByCurrentUserResponses = {
@@ -1582,8 +1589,9 @@ export type GetDataRecordCollectionPermissionsPageData = {
     };
     query?: {
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions';
 };
 
 export type GetDataRecordCollectionPermissionsPageResponses = {
@@ -1601,7 +1609,7 @@ export type PutDataRecordCollectionPermissionsPageData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions';
 };
 
 export type PutDataRecordCollectionPermissionsPageResponses = {
@@ -1620,7 +1628,7 @@ export type GetSiteDataRecordCollectionByDataRecordCollectionKeyData = {
         dataRecordCollectionKey: string;
     };
     query?: never;
-    url: '/v2.0/sites/{siteId}/data-record-collections/by-data-record-collection-key/{dataRecordCollectionKey}';
+    url: '/o/data-engine/v2.0/sites/{siteId}/data-record-collections/by-data-record-collection-key/{dataRecordCollectionKey}';
 };
 
 export type GetSiteDataRecordCollectionByDataRecordCollectionKeyResponses = {
@@ -1642,7 +1650,7 @@ export type PostDataDefinitionDataRecordCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/batch';
 };
 
 export type PostDataDefinitionDataRecordCollectionBatchResponses = {
@@ -1663,7 +1671,7 @@ export type PostDataDefinitionDataRecordCollectionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/export-batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/export-batch';
 };
 
 export type PostDataDefinitionDataRecordCollectionsPageExportBatchResponses = {
@@ -1679,7 +1687,7 @@ export type DeleteDataRecordData = {
         dataRecordId: string;
     };
     query?: never;
-    url: '/v2.0/data-records/{dataRecordId}';
+    url: '/o/data-engine/v2.0/data-records/{dataRecordId}';
 };
 
 export type DeleteDataRecordResponses = {
@@ -1695,7 +1703,7 @@ export type GetDataRecordData = {
         dataRecordId: string;
     };
     query?: never;
-    url: '/v2.0/data-records/{dataRecordId}';
+    url: '/o/data-engine/v2.0/data-records/{dataRecordId}';
 };
 
 export type GetDataRecordResponses = {
@@ -1713,7 +1721,7 @@ export type PatchDataRecordData = {
         dataRecordId: string;
     };
     query?: never;
-    url: '/v2.0/data-records/{dataRecordId}';
+    url: '/o/data-engine/v2.0/data-records/{dataRecordId}';
 };
 
 export type PatchDataRecordResponses = {
@@ -1731,7 +1739,7 @@ export type PutDataRecordData = {
         dataRecordId: string;
     };
     query?: never;
-    url: '/v2.0/data-records/{dataRecordId}';
+    url: '/o/data-engine/v2.0/data-records/{dataRecordId}';
 };
 
 export type PutDataRecordResponses = {
@@ -1751,7 +1759,7 @@ export type DeleteDataRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-records/batch';
+    url: '/o/data-engine/v2.0/data-records/batch';
 };
 
 export type DeleteDataRecordBatchResponses = {
@@ -1769,7 +1777,7 @@ export type PutDataRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-records/batch';
+    url: '/o/data-engine/v2.0/data-records/batch';
 };
 
 export type PutDataRecordBatchResponses = {
@@ -1790,8 +1798,9 @@ export type GetDataDefinitionDataRecordsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-records';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records';
 };
 
 export type GetDataDefinitionDataRecordsPageResponses = {
@@ -1809,7 +1818,7 @@ export type PostDataDefinitionDataRecordData = {
         dataDefinitionId: string;
     };
     query?: never;
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-records';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records';
 };
 
 export type PostDataDefinitionDataRecordResponses = {
@@ -1830,7 +1839,7 @@ export type GetDataRecordCollectionDataRecordExportData = {
         page?: string;
         pageSize?: string;
     };
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export';
 };
 
 export type GetDataRecordCollectionDataRecordExportResponses = {
@@ -1853,8 +1862,9 @@ export type GetDataRecordCollectionDataRecordsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records';
 };
 
 export type GetDataRecordCollectionDataRecordsPageResponses = {
@@ -1872,7 +1882,7 @@ export type PostDataRecordCollectionDataRecordData = {
         dataRecordCollectionId: string;
     };
     query?: never;
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records';
 };
 
 export type PostDataRecordCollectionDataRecordResponses = {
@@ -1894,7 +1904,7 @@ export type PostDataDefinitionDataRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-records/batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records/batch';
 };
 
 export type PostDataDefinitionDataRecordBatchResponses = {
@@ -1917,7 +1927,7 @@ export type PostDataDefinitionDataRecordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-definitions/{dataDefinitionId}/data-records/export-batch';
+    url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records/export-batch';
 };
 
 export type PostDataDefinitionDataRecordsPageExportBatchResponses = {
@@ -1937,7 +1947,7 @@ export type PostDataRecordCollectionDataRecordBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/batch';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/batch';
 };
 
 export type PostDataRecordCollectionDataRecordBatchResponses = {
@@ -1960,7 +1970,7 @@ export type PostDataRecordCollectionDataRecordsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export-batch';
+    url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export-batch';
 };
 
 export type PostDataRecordCollectionDataRecordsPageExportBatchResponses = {
@@ -1976,7 +1986,7 @@ export type GetOpenApiData = {
         type: string;
     };
     query?: never;
-    url: '/v2.0/openapi.{type}';
+    url: '/o/data-engine/v2.0/openapi.{type}';
 };
 
 export type GetOpenApiResponses = {
@@ -1987,5 +1997,5 @@ export type GetOpenApiResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/data-engine/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

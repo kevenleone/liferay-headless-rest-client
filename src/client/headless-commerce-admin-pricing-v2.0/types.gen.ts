@@ -1499,7 +1499,7 @@ export type GetDiscountAccountAccountData = {
         discountAccountId: string;
     };
     query?: never;
-    url: '/v2.0/discount-accounts/{discountAccountId}/account';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/{discountAccountId}/account';
 };
 
 export type GetDiscountAccountAccountResponses = {
@@ -1517,7 +1517,7 @@ export type GetPriceListAccountAccountData = {
         priceListAccountId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-accounts/{priceListAccountId}/account';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/{priceListAccountId}/account';
 };
 
 export type GetPriceListAccountAccountResponses = {
@@ -1535,7 +1535,7 @@ export type GetDiscountCategoryCategoryData = {
         discountCategoryId: string;
     };
     query?: never;
-    url: '/v2.0/discount-categories/{discountCategoryId}/category';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/{discountCategoryId}/category';
 };
 
 export type GetDiscountCategoryCategoryResponses = {
@@ -1553,7 +1553,7 @@ export type GetPriceModifierCategoryCategoryData = {
         priceModifierCategoryId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-categories/{priceModifierCategoryId}/category';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/{priceModifierCategoryId}/category';
 };
 
 export type GetPriceModifierCategoryCategoryResponses = {
@@ -1571,7 +1571,7 @@ export type GetDiscountChannelChannelData = {
         discountChannelId: string;
     };
     query?: never;
-    url: '/v2.0/discount-channels/{discountChannelId}/channel';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/{discountChannelId}/channel';
 };
 
 export type GetDiscountChannelChannelResponses = {
@@ -1589,7 +1589,7 @@ export type GetPriceListChannelChannelData = {
         priceListChannelId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-channels/{priceListChannelId}/channel';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/{priceListChannelId}/channel';
 };
 
 export type GetPriceListChannelChannelResponses = {
@@ -1607,7 +1607,7 @@ export type DeleteDiscountAccountGroupData = {
         discountAccountGroupId: string;
     };
     query?: never;
-    url: '/v2.0/discount-account-groups/{discountAccountGroupId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/{discountAccountGroupId}';
 };
 
 export type DeleteDiscountAccountGroupResponses = {
@@ -1625,7 +1625,7 @@ export type DeleteDiscountAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-account-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/batch';
 };
 
 export type DeleteDiscountAccountGroupBatchResponses = {
@@ -1643,8 +1643,9 @@ export type GetDiscountByExternalReferenceCodeDiscountAccountGroupsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountAccountGroupsPageResponses = {
@@ -1662,7 +1663,7 @@ export type PostDiscountByExternalReferenceCodeDiscountAccountGroupData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountAccountGroupResponses = {
@@ -1685,8 +1686,9 @@ export type GetDiscountIdDiscountAccountGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-account-groups';
 };
 
 export type GetDiscountIdDiscountAccountGroupsPageResponses = {
@@ -1704,7 +1706,7 @@ export type PostDiscountIdDiscountAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-account-groups';
 };
 
 export type PostDiscountIdDiscountAccountGroupResponses = {
@@ -1724,7 +1726,7 @@ export type PostDiscountIdDiscountAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-account-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-account-groups/batch';
 };
 
 export type PostDiscountIdDiscountAccountGroupBatchResponses = {
@@ -1740,7 +1742,7 @@ export type DeleteDiscountAccountData = {
         discountAccountId: string;
     };
     query?: never;
-    url: '/v2.0/discount-accounts/{discountAccountId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/{discountAccountId}';
 };
 
 export type DeleteDiscountAccountResponses = {
@@ -1758,7 +1760,7 @@ export type DeleteDiscountAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-accounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/batch';
 };
 
 export type DeleteDiscountAccountBatchResponses = {
@@ -1776,8 +1778,9 @@ export type GetDiscountByExternalReferenceCodeDiscountAccountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountAccountsPageResponses = {
@@ -1795,7 +1798,7 @@ export type PostDiscountByExternalReferenceCodeDiscountAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountAccountResponses = {
@@ -1818,8 +1821,9 @@ export type GetDiscountIdDiscountAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-accounts';
 };
 
 export type GetDiscountIdDiscountAccountsPageResponses = {
@@ -1837,7 +1841,7 @@ export type PostDiscountIdDiscountAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-accounts';
 };
 
 export type PostDiscountIdDiscountAccountResponses = {
@@ -1857,7 +1861,7 @@ export type PostDiscountIdDiscountAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-accounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-accounts/batch';
 };
 
 export type PostDiscountIdDiscountAccountBatchResponses = {
@@ -1873,7 +1877,7 @@ export type DeleteDiscountCategoryData = {
         discountCategoryId: string;
     };
     query?: never;
-    url: '/v2.0/discount-categories/{discountCategoryId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/{discountCategoryId}';
 };
 
 export type DeleteDiscountCategoryResponses = {
@@ -1891,7 +1895,7 @@ export type DeleteDiscountCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-categories/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/batch';
 };
 
 export type DeleteDiscountCategoryBatchResponses = {
@@ -1909,8 +1913,9 @@ export type GetDiscountByExternalReferenceCodeDiscountCategoriesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountCategoriesPageResponses = {
@@ -1928,7 +1933,7 @@ export type PostDiscountByExternalReferenceCodeDiscountCategoryData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountCategoryResponses = {
@@ -1951,8 +1956,9 @@ export type GetDiscountIdDiscountCategoriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-categories';
 };
 
 export type GetDiscountIdDiscountCategoriesPageResponses = {
@@ -1970,7 +1976,7 @@ export type PostDiscountIdDiscountCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-categories';
 };
 
 export type PostDiscountIdDiscountCategoryResponses = {
@@ -1990,7 +1996,7 @@ export type PostDiscountIdDiscountCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-categories/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-categories/batch';
 };
 
 export type PostDiscountIdDiscountCategoryBatchResponses = {
@@ -2006,7 +2012,7 @@ export type DeleteDiscountChannelData = {
         discountChannelId: string;
     };
     query?: never;
-    url: '/v2.0/discount-channels/{discountChannelId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/{discountChannelId}';
 };
 
 export type DeleteDiscountChannelResponses = {
@@ -2024,7 +2030,7 @@ export type DeleteDiscountChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-channels/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/batch';
 };
 
 export type DeleteDiscountChannelBatchResponses = {
@@ -2042,8 +2048,9 @@ export type GetDiscountByExternalReferenceCodeDiscountChannelsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountChannelsPageResponses = {
@@ -2061,7 +2068,7 @@ export type PostDiscountByExternalReferenceCodeDiscountChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountChannelResponses = {
@@ -2084,8 +2091,9 @@ export type GetDiscountIdDiscountChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-channels';
 };
 
 export type GetDiscountIdDiscountChannelsPageResponses = {
@@ -2103,7 +2111,7 @@ export type PostDiscountIdDiscountChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-channels';
 };
 
 export type PostDiscountIdDiscountChannelResponses = {
@@ -2123,7 +2131,7 @@ export type PostDiscountIdDiscountChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-channels/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-channels/batch';
 };
 
 export type PostDiscountIdDiscountChannelBatchResponses = {
@@ -2139,7 +2147,7 @@ export type DeleteDiscountOrderTypeData = {
         discountOrderTypeId: string;
     };
     query?: never;
-    url: '/v2.0/discount-order-types/{discountOrderTypeId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/{discountOrderTypeId}';
 };
 
 export type DeleteDiscountOrderTypeResponses = {
@@ -2157,7 +2165,7 @@ export type DeleteDiscountOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-order-types/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/batch';
 };
 
 export type DeleteDiscountOrderTypeBatchResponses = {
@@ -2175,8 +2183,9 @@ export type GetDiscountByExternalReferenceCodeDiscountOrderTypesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountOrderTypesPageResponses = {
@@ -2194,7 +2203,7 @@ export type PostDiscountByExternalReferenceCodeDiscountOrderTypeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountOrderTypeResponses = {
@@ -2217,8 +2226,9 @@ export type GetDiscountIdDiscountOrderTypesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-order-types';
 };
 
 export type GetDiscountIdDiscountOrderTypesPageResponses = {
@@ -2236,7 +2246,7 @@ export type PostDiscountIdDiscountOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-order-types';
 };
 
 export type PostDiscountIdDiscountOrderTypeResponses = {
@@ -2256,7 +2266,7 @@ export type PostDiscountIdDiscountOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-order-types/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-order-types/batch';
 };
 
 export type PostDiscountIdDiscountOrderTypeBatchResponses = {
@@ -2272,7 +2282,7 @@ export type DeleteDiscountProductGroupData = {
         discountProductGroupId: string;
     };
     query?: never;
-    url: '/v2.0/discount-product-groups/{discountProductGroupId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/{discountProductGroupId}';
 };
 
 export type DeleteDiscountProductGroupResponses = {
@@ -2290,7 +2300,7 @@ export type DeleteDiscountProductGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-product-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/batch';
 };
 
 export type DeleteDiscountProductGroupBatchResponses = {
@@ -2308,8 +2318,9 @@ export type GetDiscountByExternalReferenceCodeDiscountProductGroupsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountProductGroupsPageResponses = {
@@ -2327,7 +2338,7 @@ export type PostDiscountByExternalReferenceCodeDiscountProductGroupData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountProductGroupResponses = {
@@ -2350,8 +2361,9 @@ export type GetDiscountIdDiscountProductGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-product-groups';
 };
 
 export type GetDiscountIdDiscountProductGroupsPageResponses = {
@@ -2369,7 +2381,7 @@ export type PostDiscountIdDiscountProductGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-product-groups';
 };
 
 export type PostDiscountIdDiscountProductGroupResponses = {
@@ -2389,7 +2401,7 @@ export type PostDiscountIdDiscountProductGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-product-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-product-groups/batch';
 };
 
 export type PostDiscountIdDiscountProductGroupBatchResponses = {
@@ -2405,7 +2417,7 @@ export type DeleteDiscountProductData = {
         discountProductId: string;
     };
     query?: never;
-    url: '/v2.0/discount-products/{discountProductId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/{discountProductId}';
 };
 
 export type DeleteDiscountProductResponses = {
@@ -2423,7 +2435,7 @@ export type DeleteDiscountProductBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-products/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/batch';
 };
 
 export type DeleteDiscountProductBatchResponses = {
@@ -2441,8 +2453,9 @@ export type GetDiscountByExternalReferenceCodeDiscountProductsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountProductsPageResponses = {
@@ -2460,7 +2473,7 @@ export type PostDiscountByExternalReferenceCodeDiscountProductData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountProductResponses = {
@@ -2483,8 +2496,9 @@ export type GetDiscountIdDiscountProductsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-products';
 };
 
 export type GetDiscountIdDiscountProductsPageResponses = {
@@ -2502,7 +2516,7 @@ export type PostDiscountIdDiscountProductData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-products';
 };
 
 export type PostDiscountIdDiscountProductResponses = {
@@ -2522,7 +2536,7 @@ export type PostDiscountIdDiscountProductBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-products/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-products/batch';
 };
 
 export type PostDiscountIdDiscountProductBatchResponses = {
@@ -2538,7 +2552,7 @@ export type DeleteDiscountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}';
 };
 
 export type DeleteDiscountResponses = {
@@ -2554,7 +2568,7 @@ export type GetDiscountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}';
 };
 
 export type GetDiscountResponses = {
@@ -2572,7 +2586,7 @@ export type PatchDiscountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}';
 };
 
 export type PatchDiscountResponses = {
@@ -2592,7 +2606,7 @@ export type DeleteDiscountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/batch';
 };
 
 export type DeleteDiscountBatchResponses = {
@@ -2610,7 +2624,7 @@ export type PostDiscountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/batch';
 };
 
 export type PostDiscountBatchResponses = {
@@ -2626,7 +2640,7 @@ export type DeleteDiscountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteDiscountByExternalReferenceCodeResponses = {
@@ -2642,7 +2656,7 @@ export type GetDiscountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetDiscountByExternalReferenceCodeResponses = {
@@ -2660,7 +2674,7 @@ export type PatchDiscountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchDiscountByExternalReferenceCodeResponses = {
@@ -2678,7 +2692,7 @@ export type PutDiscountByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutDiscountByExternalReferenceCodeResponses = {
@@ -2699,8 +2713,9 @@ export type GetDiscountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts';
 };
 
 export type GetDiscountsPageResponses = {
@@ -2716,7 +2731,7 @@ export type PostDiscountData = {
     body?: DiscountWritable;
     path?: never;
     query?: never;
-    url: '/v2.0/discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts';
 };
 
 export type PostDiscountResponses = {
@@ -2739,7 +2754,7 @@ export type PostDiscountsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/discounts/export-batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/export-batch';
 };
 
 export type PostDiscountsPageExportBatchResponses = {
@@ -2755,7 +2770,7 @@ export type DeleteDiscountRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discount-rules/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}';
 };
 
 export type DeleteDiscountRuleResponses = {
@@ -2771,7 +2786,7 @@ export type GetDiscountRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discount-rules/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}';
 };
 
 export type GetDiscountRuleResponses = {
@@ -2789,7 +2804,7 @@ export type PatchDiscountRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discount-rules/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}';
 };
 
 export type PatchDiscountRuleResponses = {
@@ -2809,7 +2824,7 @@ export type DeleteDiscountRuleBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-rules/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/batch';
 };
 
 export type DeleteDiscountRuleBatchResponses = {
@@ -2827,8 +2842,9 @@ export type GetDiscountByExternalReferenceCodeDiscountRulesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountRulesPageResponses = {
@@ -2846,7 +2862,7 @@ export type PostDiscountByExternalReferenceCodeDiscountRuleData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountRuleResponses = {
@@ -2869,8 +2885,9 @@ export type GetDiscountIdDiscountRulesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-rules';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-rules';
 };
 
 export type GetDiscountIdDiscountRulesPageResponses = {
@@ -2888,7 +2905,7 @@ export type PostDiscountIdDiscountRuleData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-rules';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-rules';
 };
 
 export type PostDiscountIdDiscountRuleResponses = {
@@ -2908,7 +2925,7 @@ export type PostDiscountIdDiscountRuleBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-rules/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-rules/batch';
 };
 
 export type PostDiscountIdDiscountRuleBatchResponses = {
@@ -2924,7 +2941,7 @@ export type DeleteDiscountSkuData = {
         discountSkuId: string;
     };
     query?: never;
-    url: '/v2.0/discount-skus/{discountSkuId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/{discountSkuId}';
 };
 
 export type DeleteDiscountSkuResponses = {
@@ -2942,7 +2959,7 @@ export type DeleteDiscountSkuBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discount-skus/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/batch';
 };
 
 export type DeleteDiscountSkuBatchResponses = {
@@ -2960,8 +2977,9 @@ export type GetDiscountByExternalReferenceCodeDiscountSkusPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus';
 };
 
 export type GetDiscountByExternalReferenceCodeDiscountSkusPageResponses = {
@@ -2979,7 +2997,7 @@ export type PostDiscountByExternalReferenceCodeDiscountSkuData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus';
 };
 
 export type PostDiscountByExternalReferenceCodeDiscountSkuResponses = {
@@ -3002,8 +3020,9 @@ export type GetDiscountIdDiscountSkusPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/discounts/{id}/discount-skus';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-skus';
 };
 
 export type GetDiscountIdDiscountSkusPageResponses = {
@@ -3021,7 +3040,7 @@ export type PostDiscountIdDiscountSkuData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/discounts/{id}/discount-skus';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-skus';
 };
 
 export type PostDiscountIdDiscountSkuResponses = {
@@ -3041,7 +3060,7 @@ export type PostDiscountIdDiscountSkuBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/discounts/discount-skus/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-skus/batch';
 };
 
 export type PostDiscountIdDiscountSkuBatchResponses = {
@@ -3057,7 +3076,7 @@ export type GetOpenApiData = {
         type: string;
     };
     query?: never;
-    url: '/v2.0/openapi.{type}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/openapi.{type}';
 };
 
 export type GetOpenApiResponses = {
@@ -3073,7 +3092,7 @@ export type GetDiscountOrderTypeOrderTypeData = {
         discountOrderTypeId: string;
     };
     query?: never;
-    url: '/v2.0/discount-order-types/{discountOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/{discountOrderTypeId}/order-type';
 };
 
 export type GetDiscountOrderTypeOrderTypeResponses = {
@@ -3091,7 +3110,7 @@ export type GetPriceListOrderTypeOrderTypeData = {
         priceListOrderTypeId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-order-types/{priceListOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/{priceListOrderTypeId}/order-type';
 };
 
 export type GetPriceListOrderTypeOrderTypeResponses = {
@@ -3109,7 +3128,7 @@ export type DeletePriceEntryData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}';
 };
 
 export type DeletePriceEntryResponses = {
@@ -3125,7 +3144,7 @@ export type GetPriceEntryData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}';
 };
 
 export type GetPriceEntryResponses = {
@@ -3143,7 +3162,7 @@ export type PatchPriceEntryData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}';
 };
 
 export type PatchPriceEntryResponses = {
@@ -3163,7 +3182,7 @@ export type DeletePriceEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-entries/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/batch';
 };
 
 export type DeletePriceEntryBatchResponses = {
@@ -3179,7 +3198,7 @@ export type DeletePriceEntryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeletePriceEntryByExternalReferenceCodeResponses = {
@@ -3195,7 +3214,7 @@ export type GetPriceEntryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetPriceEntryByExternalReferenceCodeResponses = {
@@ -3213,7 +3232,7 @@ export type PatchPriceEntryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchPriceEntryByExternalReferenceCodeResponses = {
@@ -3236,8 +3255,9 @@ export type GetPriceListByExternalReferenceCodePriceEntriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries';
 };
 
 export type GetPriceListByExternalReferenceCodePriceEntriesPageResponses = {
@@ -3255,7 +3275,7 @@ export type PostPriceListByExternalReferenceCodePriceEntryData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries';
 };
 
 export type PostPriceListByExternalReferenceCodePriceEntryResponses = {
@@ -3278,8 +3298,9 @@ export type GetPriceListIdPriceEntriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-entries';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-entries';
 };
 
 export type GetPriceListIdPriceEntriesPageResponses = {
@@ -3297,7 +3318,7 @@ export type PostPriceListIdPriceEntryData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-entries';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-entries';
 };
 
 export type PostPriceListIdPriceEntryResponses = {
@@ -3317,7 +3338,7 @@ export type PostPriceListIdPriceEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-entries/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-entries/batch';
 };
 
 export type PostPriceListIdPriceEntryBatchResponses = {
@@ -3333,7 +3354,7 @@ export type DeletePriceListAccountGroupData = {
         priceListAccountGroupId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-account-groups/{priceListAccountGroupId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/{priceListAccountGroupId}';
 };
 
 export type DeletePriceListAccountGroupResponses = {
@@ -3351,7 +3372,7 @@ export type DeletePriceListAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-list-account-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/batch';
 };
 
 export type DeletePriceListAccountGroupBatchResponses = {
@@ -3369,8 +3390,9 @@ export type GetPriceListByExternalReferenceCodePriceListAccountGroupsPageData = 
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups';
 };
 
 export type GetPriceListByExternalReferenceCodePriceListAccountGroupsPageResponses = {
@@ -3388,7 +3410,7 @@ export type PostPriceListByExternalReferenceCodePriceListAccountGroupData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups';
 };
 
 export type PostPriceListByExternalReferenceCodePriceListAccountGroupResponses = {
@@ -3411,8 +3433,9 @@ export type GetPriceListIdPriceListAccountGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-list-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-account-groups';
 };
 
 export type GetPriceListIdPriceListAccountGroupsPageResponses = {
@@ -3430,7 +3453,7 @@ export type PostPriceListIdPriceListAccountGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-list-account-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-account-groups';
 };
 
 export type PostPriceListIdPriceListAccountGroupResponses = {
@@ -3450,7 +3473,7 @@ export type PostPriceListIdPriceListAccountGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-list-account-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-account-groups/batch';
 };
 
 export type PostPriceListIdPriceListAccountGroupBatchResponses = {
@@ -3466,7 +3489,7 @@ export type DeletePriceListAccountData = {
         priceListAccountId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-accounts/{priceListAccountId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/{priceListAccountId}';
 };
 
 export type DeletePriceListAccountResponses = {
@@ -3484,7 +3507,7 @@ export type DeletePriceListAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-list-accounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/batch';
 };
 
 export type DeletePriceListAccountBatchResponses = {
@@ -3502,8 +3525,9 @@ export type GetPriceListByExternalReferenceCodePriceListAccountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts';
 };
 
 export type GetPriceListByExternalReferenceCodePriceListAccountsPageResponses = {
@@ -3521,7 +3545,7 @@ export type PostPriceListByExternalReferenceCodePriceListAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts';
 };
 
 export type PostPriceListByExternalReferenceCodePriceListAccountResponses = {
@@ -3544,8 +3568,9 @@ export type GetPriceListIdPriceListAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-list-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-accounts';
 };
 
 export type GetPriceListIdPriceListAccountsPageResponses = {
@@ -3563,7 +3588,7 @@ export type PostPriceListIdPriceListAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-list-accounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-accounts';
 };
 
 export type PostPriceListIdPriceListAccountResponses = {
@@ -3583,7 +3608,7 @@ export type PostPriceListIdPriceListAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-list-accounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-accounts/batch';
 };
 
 export type PostPriceListIdPriceListAccountBatchResponses = {
@@ -3599,7 +3624,7 @@ export type DeletePriceListChannelData = {
         priceListChannelId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-channels/{priceListChannelId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/{priceListChannelId}';
 };
 
 export type DeletePriceListChannelResponses = {
@@ -3617,7 +3642,7 @@ export type DeletePriceListChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-list-channels/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/batch';
 };
 
 export type DeletePriceListChannelBatchResponses = {
@@ -3635,8 +3660,9 @@ export type GetPriceListByExternalReferenceCodePriceListChannelsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels';
 };
 
 export type GetPriceListByExternalReferenceCodePriceListChannelsPageResponses = {
@@ -3654,7 +3680,7 @@ export type PostPriceListByExternalReferenceCodePriceListChannelData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels';
 };
 
 export type PostPriceListByExternalReferenceCodePriceListChannelResponses = {
@@ -3677,8 +3703,9 @@ export type GetPriceListIdPriceListChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-list-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-channels';
 };
 
 export type GetPriceListIdPriceListChannelsPageResponses = {
@@ -3696,7 +3723,7 @@ export type PostPriceListIdPriceListChannelData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-list-channels';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-channels';
 };
 
 export type PostPriceListIdPriceListChannelResponses = {
@@ -3716,7 +3743,7 @@ export type PostPriceListIdPriceListChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-list-channels/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-channels/batch';
 };
 
 export type PostPriceListIdPriceListChannelBatchResponses = {
@@ -3732,7 +3759,7 @@ export type DeletePriceListDiscountData = {
         priceListDiscountId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-discounts/{priceListDiscountId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-discounts/{priceListDiscountId}';
 };
 
 export type DeletePriceListDiscountResponses = {
@@ -3750,7 +3777,7 @@ export type DeletePriceListDiscountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-list-discounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-discounts/batch';
 };
 
 export type DeletePriceListDiscountBatchResponses = {
@@ -3768,8 +3795,9 @@ export type GetPriceListByExternalReferenceCodePriceListDiscountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts';
 };
 
 export type GetPriceListByExternalReferenceCodePriceListDiscountsPageResponses = {
@@ -3787,7 +3815,7 @@ export type PostPriceListByExternalReferenceCodePriceListDiscountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts';
 };
 
 export type PostPriceListByExternalReferenceCodePriceListDiscountResponses = {
@@ -3807,8 +3835,9 @@ export type GetPriceListIdPriceListDiscountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-list-discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-discounts';
 };
 
 export type GetPriceListIdPriceListDiscountsPageResponses = {
@@ -3826,7 +3855,7 @@ export type PostPriceListIdPriceListDiscountData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-list-discounts';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-discounts';
 };
 
 export type PostPriceListIdPriceListDiscountResponses = {
@@ -3846,7 +3875,7 @@ export type PostPriceListIdPriceListDiscountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-list-discounts/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-discounts/batch';
 };
 
 export type PostPriceListIdPriceListDiscountBatchResponses = {
@@ -3862,7 +3891,7 @@ export type DeletePriceListOrderTypeData = {
         priceListOrderTypeId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-order-types/{priceListOrderTypeId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/{priceListOrderTypeId}';
 };
 
 export type DeletePriceListOrderTypeResponses = {
@@ -3880,7 +3909,7 @@ export type DeletePriceListOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-list-order-types/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/batch';
 };
 
 export type DeletePriceListOrderTypeBatchResponses = {
@@ -3898,8 +3927,9 @@ export type GetPriceListByExternalReferenceCodePriceListOrderTypesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types';
 };
 
 export type GetPriceListByExternalReferenceCodePriceListOrderTypesPageResponses = {
@@ -3917,7 +3947,7 @@ export type PostPriceListByExternalReferenceCodePriceListOrderTypeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types';
 };
 
 export type PostPriceListByExternalReferenceCodePriceListOrderTypeResponses = {
@@ -3938,8 +3968,9 @@ export type GetPriceListIdPriceListOrderTypesPageData = {
         page?: string;
         pageSize?: string;
         search?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-list-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-order-types';
 };
 
 export type GetPriceListIdPriceListOrderTypesPageResponses = {
@@ -3957,7 +3988,7 @@ export type PostPriceListIdPriceListOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-list-order-types';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-order-types';
 };
 
 export type PostPriceListIdPriceListOrderTypeResponses = {
@@ -3977,7 +4008,7 @@ export type PostPriceListIdPriceListOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-list-order-types/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-order-types/batch';
 };
 
 export type PostPriceListIdPriceListOrderTypeBatchResponses = {
@@ -3993,7 +4024,7 @@ export type DeletePriceListData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}';
 };
 
 export type DeletePriceListResponses = {
@@ -4009,7 +4040,7 @@ export type GetPriceListData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}';
 };
 
 export type GetPriceListResponses = {
@@ -4027,7 +4058,7 @@ export type PatchPriceListData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}';
 };
 
 export type PatchPriceListResponses = {
@@ -4047,7 +4078,7 @@ export type DeletePriceListBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/batch';
 };
 
 export type DeletePriceListBatchResponses = {
@@ -4065,7 +4096,7 @@ export type PostPriceListBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/batch';
 };
 
 export type PostPriceListBatchResponses = {
@@ -4081,7 +4112,7 @@ export type DeletePriceListByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeletePriceListByExternalReferenceCodeResponses = {
@@ -4097,7 +4128,7 @@ export type GetPriceListByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetPriceListByExternalReferenceCodeResponses = {
@@ -4115,7 +4146,7 @@ export type PatchPriceListByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchPriceListByExternalReferenceCodeResponses = {
@@ -4133,7 +4164,7 @@ export type PutPriceListByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutPriceListByExternalReferenceCodeResponses = {
@@ -4154,8 +4185,9 @@ export type GetPriceListsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists';
 };
 
 export type GetPriceListsPageResponses = {
@@ -4171,7 +4203,7 @@ export type PostPriceListData = {
     body?: PriceListWritable;
     path?: never;
     query?: never;
-    url: '/v2.0/price-lists';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists';
 };
 
 export type PostPriceListResponses = {
@@ -4194,7 +4226,7 @@ export type PostPriceListsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v2.0/price-lists/export-batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/export-batch';
 };
 
 export type PostPriceListsPageExportBatchResponses = {
@@ -4210,7 +4242,7 @@ export type DeletePriceModifierCategoryData = {
         priceModifierCategoryId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-categories/{priceModifierCategoryId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/{priceModifierCategoryId}';
 };
 
 export type DeletePriceModifierCategoryResponses = {
@@ -4228,7 +4260,7 @@ export type DeletePriceModifierCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifier-categories/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/batch';
 };
 
 export type DeletePriceModifierCategoryBatchResponses = {
@@ -4246,8 +4278,9 @@ export type GetPriceModifierByExternalReferenceCodePriceModifierCategoriesPageDa
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories';
 };
 
 export type GetPriceModifierByExternalReferenceCodePriceModifierCategoriesPageResponses = {
@@ -4265,7 +4298,7 @@ export type PostPriceModifierByExternalReferenceCodePriceModifierCategoryData = 
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories';
 };
 
 export type PostPriceModifierByExternalReferenceCodePriceModifierCategoryResponses = {
@@ -4288,8 +4321,9 @@ export type GetPriceModifierIdPriceModifierCategoriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/{id}/price-modifier-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-categories';
 };
 
 export type GetPriceModifierIdPriceModifierCategoriesPageResponses = {
@@ -4307,7 +4341,7 @@ export type PostPriceModifierIdPriceModifierCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}/price-modifier-categories';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-categories';
 };
 
 export type PostPriceModifierIdPriceModifierCategoryResponses = {
@@ -4327,7 +4361,7 @@ export type PostPriceModifierIdPriceModifierCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifiers/price-modifier-categories/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-categories/batch';
 };
 
 export type PostPriceModifierIdPriceModifierCategoryBatchResponses = {
@@ -4343,7 +4377,7 @@ export type DeletePriceModifierProductGroupData = {
         priceModifierProductGroupId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}';
 };
 
 export type DeletePriceModifierProductGroupResponses = {
@@ -4361,7 +4395,7 @@ export type DeletePriceModifierProductGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifier-product-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/batch';
 };
 
 export type DeletePriceModifierProductGroupBatchResponses = {
@@ -4379,8 +4413,9 @@ export type GetPriceModifierByExternalReferenceCodePriceModifierProductGroupsPag
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups';
 };
 
 export type GetPriceModifierByExternalReferenceCodePriceModifierProductGroupsPageResponses = {
@@ -4398,7 +4433,7 @@ export type PostPriceModifierByExternalReferenceCodePriceModifierProductGroupDat
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups';
 };
 
 export type PostPriceModifierByExternalReferenceCodePriceModifierProductGroupResponses = {
@@ -4421,8 +4456,9 @@ export type GetPriceModifierIdPriceModifierProductGroupsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/{id}/price-modifier-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-product-groups';
 };
 
 export type GetPriceModifierIdPriceModifierProductGroupsPageResponses = {
@@ -4440,7 +4476,7 @@ export type PostPriceModifierIdPriceModifierProductGroupData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}/price-modifier-product-groups';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-product-groups';
 };
 
 export type PostPriceModifierIdPriceModifierProductGroupResponses = {
@@ -4460,7 +4496,7 @@ export type PostPriceModifierIdPriceModifierProductGroupBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifiers/price-modifier-product-groups/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-product-groups/batch';
 };
 
 export type PostPriceModifierIdPriceModifierProductGroupBatchResponses = {
@@ -4476,7 +4512,7 @@ export type DeletePriceModifierProductData = {
         priceModifierProductId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-products/{priceModifierProductId}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/{priceModifierProductId}';
 };
 
 export type DeletePriceModifierProductResponses = {
@@ -4494,7 +4530,7 @@ export type DeletePriceModifierProductBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifier-products/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/batch';
 };
 
 export type DeletePriceModifierProductBatchResponses = {
@@ -4512,8 +4548,9 @@ export type GetPriceModifierByExternalReferenceCodePriceModifierProductsPageData
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products';
 };
 
 export type GetPriceModifierByExternalReferenceCodePriceModifierProductsPageResponses = {
@@ -4531,7 +4568,7 @@ export type PostPriceModifierByExternalReferenceCodePriceModifierProductData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products';
 };
 
 export type PostPriceModifierByExternalReferenceCodePriceModifierProductResponses = {
@@ -4554,8 +4591,9 @@ export type GetPriceModifierIdPriceModifierProductsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-modifiers/{id}/price-modifier-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-products';
 };
 
 export type GetPriceModifierIdPriceModifierProductsPageResponses = {
@@ -4573,7 +4611,7 @@ export type PostPriceModifierIdPriceModifierProductData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}/price-modifier-products';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-products';
 };
 
 export type PostPriceModifierIdPriceModifierProductResponses = {
@@ -4593,7 +4631,7 @@ export type PostPriceModifierIdPriceModifierProductBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifiers/price-modifier-products/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-products/batch';
 };
 
 export type PostPriceModifierIdPriceModifierProductBatchResponses = {
@@ -4609,7 +4647,7 @@ export type DeletePriceModifierData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}';
 };
 
 export type DeletePriceModifierResponses = {
@@ -4625,7 +4663,7 @@ export type GetPriceModifierData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}';
 };
 
 export type GetPriceModifierResponses = {
@@ -4643,7 +4681,7 @@ export type PatchPriceModifierData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}';
 };
 
 export type PatchPriceModifierResponses = {
@@ -4661,7 +4699,7 @@ export type DeletePriceModifierBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-modifiers/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/batch';
 };
 
 export type DeletePriceModifierBatchResponses = {
@@ -4677,7 +4715,7 @@ export type DeletePriceModifierByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeletePriceModifierByExternalReferenceCodeResponses = {
@@ -4693,7 +4731,7 @@ export type GetPriceModifierByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetPriceModifierByExternalReferenceCodeResponses = {
@@ -4711,7 +4749,7 @@ export type PatchPriceModifierByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchPriceModifierByExternalReferenceCodeResponses = {
@@ -4729,8 +4767,9 @@ export type GetPriceListByExternalReferenceCodePriceModifiersPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers';
 };
 
 export type GetPriceListByExternalReferenceCodePriceModifiersPageResponses = {
@@ -4748,7 +4787,7 @@ export type PostPriceListByExternalReferenceCodePriceModifierData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers';
 };
 
 export type PostPriceListByExternalReferenceCodePriceModifierResponses = {
@@ -4771,8 +4810,9 @@ export type GetPriceListIdPriceModifiersPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-lists/{id}/price-modifiers';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-modifiers';
 };
 
 export type GetPriceListIdPriceModifiersPageResponses = {
@@ -4790,7 +4830,7 @@ export type PostPriceListIdPriceModifierData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/price-lists/{id}/price-modifiers';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-modifiers';
 };
 
 export type PostPriceListIdPriceModifierResponses = {
@@ -4810,7 +4850,7 @@ export type PostPriceListIdPriceModifierBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-lists/price-modifiers/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-modifiers/batch';
 };
 
 export type PostPriceListIdPriceModifierBatchResponses = {
@@ -4826,7 +4866,7 @@ export type GetDiscountAccountGroupAccountGroupData = {
         discountAccountGroupId: string;
     };
     query?: never;
-    url: '/v2.0/discount-account-groups/{discountAccountGroupId}/account-group';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/{discountAccountGroupId}/account-group';
 };
 
 export type GetDiscountAccountGroupAccountGroupResponses = {
@@ -4844,7 +4884,7 @@ export type GetPriceListAccountGroupAccountGroupData = {
         priceListAccountGroupId: string;
     };
     query?: never;
-    url: '/v2.0/price-list-account-groups/{priceListAccountGroupId}/account-group';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/{priceListAccountGroupId}/account-group';
 };
 
 export type GetPriceListAccountGroupAccountGroupResponses = {
@@ -4862,7 +4902,7 @@ export type GetDiscountProductGroupProductGroupData = {
         discountProductGroupId: string;
     };
     query?: never;
-    url: '/v2.0/discount-product-groups/{discountProductGroupId}/product-group';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/{discountProductGroupId}/product-group';
 };
 
 export type GetDiscountProductGroupProductGroupResponses = {
@@ -4880,7 +4920,7 @@ export type GetPriceModifierProductGroupProductGroupData = {
         priceModifierProductGroupId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}/product-group';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}/product-group';
 };
 
 export type GetPriceModifierProductGroupProductGroupResponses = {
@@ -4898,7 +4938,7 @@ export type GetDiscountProductProductData = {
         discountProductId: string;
     };
     query?: never;
-    url: '/v2.0/discount-products/{discountProductId}/product';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/{discountProductId}/product';
 };
 
 export type GetDiscountProductProductResponses = {
@@ -4916,7 +4956,7 @@ export type GetPriceEntryIdProductData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}/product';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/product';
 };
 
 export type GetPriceEntryIdProductResponses = {
@@ -4934,7 +4974,7 @@ export type GetPriceModifierProductProductData = {
         priceModifierProductId: string;
     };
     query?: never;
-    url: '/v2.0/price-modifier-products/{priceModifierProductId}/product';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/{priceModifierProductId}/product';
 };
 
 export type GetPriceModifierProductProductResponses = {
@@ -4952,7 +4992,7 @@ export type GetDiscountSkuSkuData = {
         discountSkuId: string;
     };
     query?: never;
-    url: '/v2.0/discount-skus/{discountSkuId}/sku';
+    url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/{discountSkuId}/sku';
 };
 
 export type GetDiscountSkuSkuResponses = {
@@ -4970,7 +5010,7 @@ export type GetPriceEntryIdSkuData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}/sku';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/sku';
 };
 
 export type GetPriceEntryIdSkuResponses = {
@@ -4988,7 +5028,7 @@ export type DeleteTierPriceData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}';
 };
 
 export type DeleteTierPriceResponses = {
@@ -5004,7 +5044,7 @@ export type GetTierPriceData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}';
 };
 
 export type GetTierPriceResponses = {
@@ -5022,7 +5062,7 @@ export type PatchTierPriceData = {
         id: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/{id}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}';
 };
 
 export type PatchTierPriceResponses = {
@@ -5040,7 +5080,7 @@ export type DeleteTierPriceBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/tier-prices/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/batch';
 };
 
 export type DeleteTierPriceBatchResponses = {
@@ -5056,7 +5096,7 @@ export type DeleteTierPriceByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteTierPriceByExternalReferenceCodeResponses = {
@@ -5072,7 +5112,7 @@ export type GetTierPriceByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetTierPriceByExternalReferenceCodeResponses = {
@@ -5090,7 +5130,7 @@ export type PatchTierPriceByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchTierPriceByExternalReferenceCodeResponses = {
@@ -5108,8 +5148,9 @@ export type GetPriceEntryByExternalReferenceCodeTierPricesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices';
 };
 
 export type GetPriceEntryByExternalReferenceCodeTierPricesPageResponses = {
@@ -5127,7 +5168,7 @@ export type PostPriceEntryByExternalReferenceCodeTierPriceData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices';
 };
 
 export type PostPriceEntryByExternalReferenceCodeTierPriceResponses = {
@@ -5147,8 +5188,9 @@ export type GetPriceEntryIdTierPricesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v2.0/price-entries/{priceEntryId}/tier-prices';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices';
 };
 
 export type GetPriceEntryIdTierPricesPageResponses = {
@@ -5166,7 +5208,7 @@ export type PostPriceEntryIdTierPriceData = {
         priceEntryId: string;
     };
     query?: never;
-    url: '/v2.0/price-entries/{priceEntryId}/tier-prices';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices';
 };
 
 export type PostPriceEntryIdTierPriceResponses = {
@@ -5188,7 +5230,7 @@ export type PostPriceEntryIdTierPriceBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v2.0/price-entries/{priceEntryId}/tier-prices/batch';
+    url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices/batch';
 };
 
 export type PostPriceEntryIdTierPriceBatchResponses = {
@@ -5199,5 +5241,5 @@ export type PostPriceEntryIdTierPriceBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-pricing/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

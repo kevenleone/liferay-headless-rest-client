@@ -20,56 +20,56 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
 
 export const getDiscountAccountAccount = <ThrowOnError extends boolean = false>(options: Options<GetDiscountAccountAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountAccountAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-accounts/{discountAccountId}/account',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/{discountAccountId}/account',
         ...options
     });
 };
 
 export const getPriceListAccountAccount = <ThrowOnError extends boolean = false>(options: Options<GetPriceListAccountAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListAccountAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-accounts/{priceListAccountId}/account',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/{priceListAccountId}/account',
         ...options
     });
 };
 
 export const getDiscountCategoryCategory = <ThrowOnError extends boolean = false>(options: Options<GetDiscountCategoryCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountCategoryCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-categories/{discountCategoryId}/category',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/{discountCategoryId}/category',
         ...options
     });
 };
 
 export const getPriceModifierCategoryCategory = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierCategoryCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierCategoryCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-categories/{priceModifierCategoryId}/category',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/{priceModifierCategoryId}/category',
         ...options
     });
 };
 
 export const getDiscountChannelChannel = <ThrowOnError extends boolean = false>(options: Options<GetDiscountChannelChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountChannelChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-channels/{discountChannelId}/channel',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/{discountChannelId}/channel',
         ...options
     });
 };
 
 export const getPriceListChannelChannel = <ThrowOnError extends boolean = false>(options: Options<GetPriceListChannelChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListChannelChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-channels/{priceListChannelId}/channel',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/{priceListChannelId}/channel',
         ...options
     });
 };
 
 export const deleteDiscountAccountGroup = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-account-groups/{discountAccountGroupId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/{discountAccountGroupId}',
         ...options
     });
 };
 
 export const deleteDiscountAccountGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountAccountGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountAccountGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-account-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -80,14 +80,14 @@ export const deleteDiscountAccountGroupBatch = <ThrowOnError extends boolean = f
 
 export const getDiscountByExternalReferenceCodeDiscountAccountGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountAccountGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountAccountGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountAccountGroup = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-account-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -98,14 +98,14 @@ export const postDiscountByExternalReferenceCodeDiscountAccountGroup = <ThrowOnE
 
 export const getDiscountIdDiscountAccountGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountAccountGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountAccountGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-account-groups',
         ...options
     });
 };
 
 export const postDiscountIdDiscountAccountGroup = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-account-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ export const postDiscountIdDiscountAccountGroup = <ThrowOnError extends boolean 
 
 export const postDiscountIdDiscountAccountGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountAccountGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountAccountGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-account-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-account-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -127,14 +127,14 @@ export const postDiscountIdDiscountAccountGroupBatch = <ThrowOnError extends boo
 
 export const deleteDiscountAccount = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-accounts/{discountAccountId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/{discountAccountId}',
         ...options
     });
 };
 
 export const deleteDiscountAccountBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountAccountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountAccountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-accounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-accounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -145,14 +145,14 @@ export const deleteDiscountAccountBatch = <ThrowOnError extends boolean = false>
 
 export const getDiscountByExternalReferenceCodeDiscountAccountsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountAccountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountAccountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountAccount = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-accounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -163,14 +163,14 @@ export const postDiscountByExternalReferenceCodeDiscountAccount = <ThrowOnError 
 
 export const getDiscountIdDiscountAccountsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountAccountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountAccountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-accounts',
         ...options
     });
 };
 
 export const postDiscountIdDiscountAccount = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-accounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ export const postDiscountIdDiscountAccount = <ThrowOnError extends boolean = fal
 
 export const postDiscountIdDiscountAccountBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountAccountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountAccountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-accounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-accounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -192,14 +192,14 @@ export const postDiscountIdDiscountAccountBatch = <ThrowOnError extends boolean 
 
 export const deleteDiscountCategory = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-categories/{discountCategoryId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/{discountCategoryId}',
         ...options
     });
 };
 
 export const deleteDiscountCategoryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountCategoryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountCategoryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-categories/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-categories/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -210,14 +210,14 @@ export const deleteDiscountCategoryBatch = <ThrowOnError extends boolean = false
 
 export const getDiscountByExternalReferenceCodeDiscountCategoriesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountCategoriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountCategoriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountCategory = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-categories',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -228,14 +228,14 @@ export const postDiscountByExternalReferenceCodeDiscountCategory = <ThrowOnError
 
 export const getDiscountIdDiscountCategoriesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountCategoriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountCategoriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-categories',
         ...options
     });
 };
 
 export const postDiscountIdDiscountCategory = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-categories',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -246,7 +246,7 @@ export const postDiscountIdDiscountCategory = <ThrowOnError extends boolean = fa
 
 export const postDiscountIdDiscountCategoryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountCategoryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountCategoryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-categories/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-categories/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -257,14 +257,14 @@ export const postDiscountIdDiscountCategoryBatch = <ThrowOnError extends boolean
 
 export const deleteDiscountChannel = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-channels/{discountChannelId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/{discountChannelId}',
         ...options
     });
 };
 
 export const deleteDiscountChannelBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountChannelBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountChannelBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-channels/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-channels/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -275,14 +275,14 @@ export const deleteDiscountChannelBatch = <ThrowOnError extends boolean = false>
 
 export const getDiscountByExternalReferenceCodeDiscountChannelsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountChannelsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountChannelsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountChannel = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-channels',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -293,14 +293,14 @@ export const postDiscountByExternalReferenceCodeDiscountChannel = <ThrowOnError 
 
 export const getDiscountIdDiscountChannelsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountChannelsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountChannelsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-channels',
         ...options
     });
 };
 
 export const postDiscountIdDiscountChannel = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-channels',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -311,7 +311,7 @@ export const postDiscountIdDiscountChannel = <ThrowOnError extends boolean = fal
 
 export const postDiscountIdDiscountChannelBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountChannelBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountChannelBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-channels/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-channels/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -322,14 +322,14 @@ export const postDiscountIdDiscountChannelBatch = <ThrowOnError extends boolean 
 
 export const deleteDiscountOrderType = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-order-types/{discountOrderTypeId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/{discountOrderTypeId}',
         ...options
     });
 };
 
 export const deleteDiscountOrderTypeBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountOrderTypeBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountOrderTypeBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-order-types/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -340,14 +340,14 @@ export const deleteDiscountOrderTypeBatch = <ThrowOnError extends boolean = fals
 
 export const getDiscountByExternalReferenceCodeDiscountOrderTypesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountOrderTypesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountOrderTypesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountOrderType = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-order-types',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -358,14 +358,14 @@ export const postDiscountByExternalReferenceCodeDiscountOrderType = <ThrowOnErro
 
 export const getDiscountIdDiscountOrderTypesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountOrderTypesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountOrderTypesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-order-types',
         ...options
     });
 };
 
 export const postDiscountIdDiscountOrderType = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-order-types',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -376,7 +376,7 @@ export const postDiscountIdDiscountOrderType = <ThrowOnError extends boolean = f
 
 export const postDiscountIdDiscountOrderTypeBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountOrderTypeBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountOrderTypeBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-order-types/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-order-types/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -387,14 +387,14 @@ export const postDiscountIdDiscountOrderTypeBatch = <ThrowOnError extends boolea
 
 export const deleteDiscountProductGroup = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-product-groups/{discountProductGroupId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/{discountProductGroupId}',
         ...options
     });
 };
 
 export const deleteDiscountProductGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountProductGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountProductGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-product-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -405,14 +405,14 @@ export const deleteDiscountProductGroupBatch = <ThrowOnError extends boolean = f
 
 export const getDiscountByExternalReferenceCodeDiscountProductGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountProductGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountProductGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountProductGroup = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-product-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -423,14 +423,14 @@ export const postDiscountByExternalReferenceCodeDiscountProductGroup = <ThrowOnE
 
 export const getDiscountIdDiscountProductGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountProductGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountProductGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-product-groups',
         ...options
     });
 };
 
 export const postDiscountIdDiscountProductGroup = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-product-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -441,7 +441,7 @@ export const postDiscountIdDiscountProductGroup = <ThrowOnError extends boolean 
 
 export const postDiscountIdDiscountProductGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountProductGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountProductGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-product-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-product-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -452,14 +452,14 @@ export const postDiscountIdDiscountProductGroupBatch = <ThrowOnError extends boo
 
 export const deleteDiscountProduct = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-products/{discountProductId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/{discountProductId}',
         ...options
     });
 };
 
 export const deleteDiscountProductBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountProductBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountProductBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-products/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -470,14 +470,14 @@ export const deleteDiscountProductBatch = <ThrowOnError extends boolean = false>
 
 export const getDiscountByExternalReferenceCodeDiscountProductsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountProductsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountProductsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountProduct = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-products',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -488,14 +488,14 @@ export const postDiscountByExternalReferenceCodeDiscountProduct = <ThrowOnError 
 
 export const getDiscountIdDiscountProductsPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountProductsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountProductsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-products',
         ...options
     });
 };
 
 export const postDiscountIdDiscountProduct = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-products',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -506,7 +506,7 @@ export const postDiscountIdDiscountProduct = <ThrowOnError extends boolean = fal
 
 export const postDiscountIdDiscountProductBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountProductBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountProductBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-products/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-products/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -517,21 +517,21 @@ export const postDiscountIdDiscountProductBatch = <ThrowOnError extends boolean 
 
 export const deleteDiscount = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}',
         ...options
     });
 };
 
 export const getDiscount = <ThrowOnError extends boolean = false>(options: Options<GetDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}',
         ...options
     });
 };
 
 export const patchDiscount = <ThrowOnError extends boolean = false>(options: Options<PatchDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -542,7 +542,7 @@ export const patchDiscount = <ThrowOnError extends boolean = false>(options: Opt
 
 export const deleteDiscountBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -553,7 +553,7 @@ export const deleteDiscountBatch = <ThrowOnError extends boolean = false>(option
 
 export const postDiscountBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -564,21 +564,21 @@ export const postDiscountBatch = <ThrowOnError extends boolean = false>(options?
 
 export const deleteDiscountByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getDiscountByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchDiscountByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchDiscountByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchDiscountByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -589,7 +589,7 @@ export const patchDiscountByExternalReferenceCode = <ThrowOnError extends boolea
 
 export const putDiscountByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutDiscountByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDiscountByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -600,14 +600,14 @@ export const putDiscountByExternalReferenceCode = <ThrowOnError extends boolean 
 
 export const getDiscountsPage = <ThrowOnError extends boolean = false>(options?: Options<GetDiscountsPageData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetDiscountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts',
         ...options
     });
 };
 
 export const postDiscount = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -618,28 +618,28 @@ export const postDiscount = <ThrowOnError extends boolean = false>(options?: Opt
 
 export const postDiscountsPageExportBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountsPageExportBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/export-batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/export-batch',
         ...options
     });
 };
 
 export const deleteDiscountRule = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountRuleData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountRuleResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-rules/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}',
         ...options
     });
 };
 
 export const getDiscountRule = <ThrowOnError extends boolean = false>(options: Options<GetDiscountRuleData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountRuleResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-rules/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}',
         ...options
     });
 };
 
 export const patchDiscountRule = <ThrowOnError extends boolean = false>(options: Options<PatchDiscountRuleData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchDiscountRuleResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-rules/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/{id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -650,7 +650,7 @@ export const patchDiscountRule = <ThrowOnError extends boolean = false>(options:
 
 export const deleteDiscountRuleBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountRuleBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountRuleBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-rules/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-rules/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -661,14 +661,14 @@ export const deleteDiscountRuleBatch = <ThrowOnError extends boolean = false>(op
 
 export const getDiscountByExternalReferenceCodeDiscountRulesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountRulesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountRulesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountRule = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountRuleData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountRuleResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-rules',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -679,14 +679,14 @@ export const postDiscountByExternalReferenceCodeDiscountRule = <ThrowOnError ext
 
 export const getDiscountIdDiscountRulesPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountRulesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountRulesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-rules',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-rules',
         ...options
     });
 };
 
 export const postDiscountIdDiscountRule = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountRuleData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountRuleResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-rules',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-rules',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -697,7 +697,7 @@ export const postDiscountIdDiscountRule = <ThrowOnError extends boolean = false>
 
 export const postDiscountIdDiscountRuleBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountRuleBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountRuleBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-rules/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-rules/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -708,14 +708,14 @@ export const postDiscountIdDiscountRuleBatch = <ThrowOnError extends boolean = f
 
 export const deleteDiscountSku = <ThrowOnError extends boolean = false>(options: Options<DeleteDiscountSkuData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDiscountSkuResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-skus/{discountSkuId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/{discountSkuId}',
         ...options
     });
 };
 
 export const deleteDiscountSkuBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDiscountSkuBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDiscountSkuBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-skus/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -726,14 +726,14 @@ export const deleteDiscountSkuBatch = <ThrowOnError extends boolean = false>(opt
 
 export const getDiscountByExternalReferenceCodeDiscountSkusPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountByExternalReferenceCodeDiscountSkusPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountByExternalReferenceCodeDiscountSkusPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus',
         ...options
     });
 };
 
 export const postDiscountByExternalReferenceCodeDiscountSku = <ThrowOnError extends boolean = false>(options: Options<PostDiscountByExternalReferenceCodeDiscountSkuData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountByExternalReferenceCodeDiscountSkuResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/by-externalReferenceCode/{externalReferenceCode}/discount-skus',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -744,14 +744,14 @@ export const postDiscountByExternalReferenceCodeDiscountSku = <ThrowOnError exte
 
 export const getDiscountIdDiscountSkusPage = <ThrowOnError extends boolean = false>(options: Options<GetDiscountIdDiscountSkusPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountIdDiscountSkusPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-skus',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-skus',
         ...options
     });
 };
 
 export const postDiscountIdDiscountSku = <ThrowOnError extends boolean = false>(options: Options<PostDiscountIdDiscountSkuData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDiscountIdDiscountSkuResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/{id}/discount-skus',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/{id}/discount-skus',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -762,7 +762,7 @@ export const postDiscountIdDiscountSku = <ThrowOnError extends boolean = false>(
 
 export const postDiscountIdDiscountSkuBatch = <ThrowOnError extends boolean = false>(options?: Options<PostDiscountIdDiscountSkuBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostDiscountIdDiscountSkuBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discounts/discount-skus/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discounts/discount-skus/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -773,42 +773,42 @@ export const postDiscountIdDiscountSkuBatch = <ThrowOnError extends boolean = fa
 
 export const getOpenApi = <ThrowOnError extends boolean = false>(options: Options<GetOpenApiData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetOpenApiResponses, unknown, ThrowOnError>({
-        url: '/v2.0/openapi.{type}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/openapi.{type}',
         ...options
     });
 };
 
 export const getDiscountOrderTypeOrderType = <ThrowOnError extends boolean = false>(options: Options<GetDiscountOrderTypeOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountOrderTypeOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-order-types/{discountOrderTypeId}/order-type',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-order-types/{discountOrderTypeId}/order-type',
         ...options
     });
 };
 
 export const getPriceListOrderTypeOrderType = <ThrowOnError extends boolean = false>(options: Options<GetPriceListOrderTypeOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListOrderTypeOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-order-types/{priceListOrderTypeId}/order-type',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/{priceListOrderTypeId}/order-type',
         ...options
     });
 };
 
 export const deletePriceEntry = <ThrowOnError extends boolean = false>(options: Options<DeletePriceEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceEntryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}',
         ...options
     });
 };
 
 export const getPriceEntry = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}',
         ...options
     });
 };
 
 export const patchPriceEntry = <ThrowOnError extends boolean = false>(options: Options<PatchPriceEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceEntryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -819,7 +819,7 @@ export const patchPriceEntry = <ThrowOnError extends boolean = false>(options: O
 
 export const deletePriceEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -830,21 +830,21 @@ export const deletePriceEntryBatch = <ThrowOnError extends boolean = false>(opti
 
 export const deletePriceEntryByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeletePriceEntryByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceEntryByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getPriceEntryByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchPriceEntryByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchPriceEntryByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceEntryByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -855,14 +855,14 @@ export const patchPriceEntryByExternalReferenceCode = <ThrowOnError extends bool
 
 export const getPriceListByExternalReferenceCodePriceEntriesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceEntriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceEntriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceEntry = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceEntryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-entries',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -873,14 +873,14 @@ export const postPriceListByExternalReferenceCodePriceEntry = <ThrowOnError exte
 
 export const getPriceListIdPriceEntriesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceEntriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceEntriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-entries',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-entries',
         ...options
     });
 };
 
 export const postPriceListIdPriceEntry = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceEntryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-entries',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-entries',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -891,7 +891,7 @@ export const postPriceListIdPriceEntry = <ThrowOnError extends boolean = false>(
 
 export const postPriceListIdPriceEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-entries/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -902,14 +902,14 @@ export const postPriceListIdPriceEntryBatch = <ThrowOnError extends boolean = fa
 
 export const deletePriceListAccountGroup = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-account-groups/{priceListAccountGroupId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/{priceListAccountGroupId}',
         ...options
     });
 };
 
 export const deletePriceListAccountGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListAccountGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListAccountGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-account-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -920,14 +920,14 @@ export const deletePriceListAccountGroupBatch = <ThrowOnError extends boolean = 
 
 export const getPriceListByExternalReferenceCodePriceListAccountGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceListAccountGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceListAccountGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceListAccountGroup = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceListAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceListAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-account-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -938,14 +938,14 @@ export const postPriceListByExternalReferenceCodePriceListAccountGroup = <ThrowO
 
 export const getPriceListIdPriceListAccountGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceListAccountGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceListAccountGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-account-groups',
         ...options
     });
 };
 
 export const postPriceListIdPriceListAccountGroup = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceListAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceListAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-account-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-account-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -956,7 +956,7 @@ export const postPriceListIdPriceListAccountGroup = <ThrowOnError extends boolea
 
 export const postPriceListIdPriceListAccountGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceListAccountGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceListAccountGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-list-account-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-account-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -967,14 +967,14 @@ export const postPriceListIdPriceListAccountGroupBatch = <ThrowOnError extends b
 
 export const deletePriceListAccount = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-accounts/{priceListAccountId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/{priceListAccountId}',
         ...options
     });
 };
 
 export const deletePriceListAccountBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListAccountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListAccountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-accounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-accounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -985,14 +985,14 @@ export const deletePriceListAccountBatch = <ThrowOnError extends boolean = false
 
 export const getPriceListByExternalReferenceCodePriceListAccountsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceListAccountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceListAccountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceListAccount = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceListAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceListAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-accounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1003,14 +1003,14 @@ export const postPriceListByExternalReferenceCodePriceListAccount = <ThrowOnErro
 
 export const getPriceListIdPriceListAccountsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceListAccountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceListAccountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-accounts',
         ...options
     });
 };
 
 export const postPriceListIdPriceListAccount = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceListAccountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceListAccountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-accounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-accounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1021,7 +1021,7 @@ export const postPriceListIdPriceListAccount = <ThrowOnError extends boolean = f
 
 export const postPriceListIdPriceListAccountBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceListAccountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceListAccountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-list-accounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-accounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1032,14 +1032,14 @@ export const postPriceListIdPriceListAccountBatch = <ThrowOnError extends boolea
 
 export const deletePriceListChannel = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-channels/{priceListChannelId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/{priceListChannelId}',
         ...options
     });
 };
 
 export const deletePriceListChannelBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListChannelBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListChannelBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-channels/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-channels/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1050,14 +1050,14 @@ export const deletePriceListChannelBatch = <ThrowOnError extends boolean = false
 
 export const getPriceListByExternalReferenceCodePriceListChannelsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceListChannelsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceListChannelsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceListChannel = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceListChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceListChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-channels',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1068,14 +1068,14 @@ export const postPriceListByExternalReferenceCodePriceListChannel = <ThrowOnErro
 
 export const getPriceListIdPriceListChannelsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceListChannelsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceListChannelsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-channels',
         ...options
     });
 };
 
 export const postPriceListIdPriceListChannel = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceListChannelData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceListChannelResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-channels',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-channels',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1086,7 +1086,7 @@ export const postPriceListIdPriceListChannel = <ThrowOnError extends boolean = f
 
 export const postPriceListIdPriceListChannelBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceListChannelBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceListChannelBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-list-channels/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-channels/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1097,14 +1097,14 @@ export const postPriceListIdPriceListChannelBatch = <ThrowOnError extends boolea
 
 export const deletePriceListDiscount = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-discounts/{priceListDiscountId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-discounts/{priceListDiscountId}',
         ...options
     });
 };
 
 export const deletePriceListDiscountBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListDiscountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListDiscountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-discounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-discounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1115,14 +1115,14 @@ export const deletePriceListDiscountBatch = <ThrowOnError extends boolean = fals
 
 export const getPriceListByExternalReferenceCodePriceListDiscountsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceListDiscountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceListDiscountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceListDiscount = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceListDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceListDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-discounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1133,14 +1133,14 @@ export const postPriceListByExternalReferenceCodePriceListDiscount = <ThrowOnErr
 
 export const getPriceListIdPriceListDiscountsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceListDiscountsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceListDiscountsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-discounts',
         ...options
     });
 };
 
 export const postPriceListIdPriceListDiscount = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceListDiscountData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceListDiscountResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-discounts',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-discounts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1151,7 +1151,7 @@ export const postPriceListIdPriceListDiscount = <ThrowOnError extends boolean = 
 
 export const postPriceListIdPriceListDiscountBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceListDiscountBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceListDiscountBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-list-discounts/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-discounts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1162,14 +1162,14 @@ export const postPriceListIdPriceListDiscountBatch = <ThrowOnError extends boole
 
 export const deletePriceListOrderType = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-order-types/{priceListOrderTypeId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/{priceListOrderTypeId}',
         ...options
     });
 };
 
 export const deletePriceListOrderTypeBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListOrderTypeBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListOrderTypeBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-order-types/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-order-types/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1180,14 +1180,14 @@ export const deletePriceListOrderTypeBatch = <ThrowOnError extends boolean = fal
 
 export const getPriceListByExternalReferenceCodePriceListOrderTypesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceListOrderTypesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceListOrderTypesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceListOrderType = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceListOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceListOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-list-order-types',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1198,14 +1198,14 @@ export const postPriceListByExternalReferenceCodePriceListOrderType = <ThrowOnEr
 
 export const getPriceListIdPriceListOrderTypesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceListOrderTypesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceListOrderTypesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-order-types',
         ...options
     });
 };
 
 export const postPriceListIdPriceListOrderType = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceListOrderTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceListOrderTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-list-order-types',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-list-order-types',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1216,7 +1216,7 @@ export const postPriceListIdPriceListOrderType = <ThrowOnError extends boolean =
 
 export const postPriceListIdPriceListOrderTypeBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceListOrderTypeBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceListOrderTypeBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-list-order-types/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-list-order-types/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1227,21 +1227,21 @@ export const postPriceListIdPriceListOrderTypeBatch = <ThrowOnError extends bool
 
 export const deletePriceList = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}',
         ...options
     });
 };
 
 export const getPriceList = <ThrowOnError extends boolean = false>(options: Options<GetPriceListData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}',
         ...options
     });
 };
 
 export const patchPriceList = <ThrowOnError extends boolean = false>(options: Options<PatchPriceListData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceListResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1252,7 +1252,7 @@ export const patchPriceList = <ThrowOnError extends boolean = false>(options: Op
 
 export const deletePriceListBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceListBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceListBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1263,7 +1263,7 @@ export const deletePriceListBatch = <ThrowOnError extends boolean = false>(optio
 
 export const postPriceListBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1274,21 +1274,21 @@ export const postPriceListBatch = <ThrowOnError extends boolean = false>(options
 
 export const deletePriceListByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeletePriceListByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceListByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getPriceListByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchPriceListByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchPriceListByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceListByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1299,7 +1299,7 @@ export const patchPriceListByExternalReferenceCode = <ThrowOnError extends boole
 
 export const putPriceListByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutPriceListByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPriceListByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1310,14 +1310,14 @@ export const putPriceListByExternalReferenceCode = <ThrowOnError extends boolean
 
 export const getPriceListsPage = <ThrowOnError extends boolean = false>(options?: Options<GetPriceListsPageData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetPriceListsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists',
         ...options
     });
 };
 
 export const postPriceList = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1328,21 +1328,21 @@ export const postPriceList = <ThrowOnError extends boolean = false>(options?: Op
 
 export const postPriceListsPageExportBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListsPageExportBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/export-batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/export-batch',
         ...options
     });
 };
 
 export const deletePriceModifierCategory = <ThrowOnError extends boolean = false>(options: Options<DeletePriceModifierCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceModifierCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-categories/{priceModifierCategoryId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/{priceModifierCategoryId}',
         ...options
     });
 };
 
 export const deletePriceModifierCategoryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceModifierCategoryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceModifierCategoryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-categories/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-categories/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1353,14 +1353,14 @@ export const deletePriceModifierCategoryBatch = <ThrowOnError extends boolean = 
 
 export const getPriceModifierByExternalReferenceCodePriceModifierCategoriesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierByExternalReferenceCodePriceModifierCategoriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierByExternalReferenceCodePriceModifierCategoriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories',
         ...options
     });
 };
 
 export const postPriceModifierByExternalReferenceCodePriceModifierCategory = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierByExternalReferenceCodePriceModifierCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierByExternalReferenceCodePriceModifierCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-categories',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1371,14 +1371,14 @@ export const postPriceModifierByExternalReferenceCodePriceModifierCategory = <Th
 
 export const getPriceModifierIdPriceModifierCategoriesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierIdPriceModifierCategoriesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierIdPriceModifierCategoriesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-categories',
         ...options
     });
 };
 
 export const postPriceModifierIdPriceModifierCategory = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierIdPriceModifierCategoryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierCategoryResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-categories',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-categories',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1389,7 +1389,7 @@ export const postPriceModifierIdPriceModifierCategory = <ThrowOnError extends bo
 
 export const postPriceModifierIdPriceModifierCategoryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceModifierIdPriceModifierCategoryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierCategoryBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/price-modifier-categories/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-categories/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1400,14 +1400,14 @@ export const postPriceModifierIdPriceModifierCategoryBatch = <ThrowOnError exten
 
 export const deletePriceModifierProductGroup = <ThrowOnError extends boolean = false>(options: Options<DeletePriceModifierProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceModifierProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}',
         ...options
     });
 };
 
 export const deletePriceModifierProductGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceModifierProductGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceModifierProductGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-product-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1418,14 +1418,14 @@ export const deletePriceModifierProductGroupBatch = <ThrowOnError extends boolea
 
 export const getPriceModifierByExternalReferenceCodePriceModifierProductGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierByExternalReferenceCodePriceModifierProductGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierByExternalReferenceCodePriceModifierProductGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups',
         ...options
     });
 };
 
 export const postPriceModifierByExternalReferenceCodePriceModifierProductGroup = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierByExternalReferenceCodePriceModifierProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierByExternalReferenceCodePriceModifierProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-product-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1436,14 +1436,14 @@ export const postPriceModifierByExternalReferenceCodePriceModifierProductGroup =
 
 export const getPriceModifierIdPriceModifierProductGroupsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierIdPriceModifierProductGroupsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierIdPriceModifierProductGroupsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-product-groups',
         ...options
     });
 };
 
 export const postPriceModifierIdPriceModifierProductGroup = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierIdPriceModifierProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-product-groups',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-product-groups',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1454,7 +1454,7 @@ export const postPriceModifierIdPriceModifierProductGroup = <ThrowOnError extend
 
 export const postPriceModifierIdPriceModifierProductGroupBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceModifierIdPriceModifierProductGroupBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierProductGroupBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/price-modifier-product-groups/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-product-groups/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1465,14 +1465,14 @@ export const postPriceModifierIdPriceModifierProductGroupBatch = <ThrowOnError e
 
 export const deletePriceModifierProduct = <ThrowOnError extends boolean = false>(options: Options<DeletePriceModifierProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceModifierProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-products/{priceModifierProductId}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/{priceModifierProductId}',
         ...options
     });
 };
 
 export const deletePriceModifierProductBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceModifierProductBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceModifierProductBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-products/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1483,14 +1483,14 @@ export const deletePriceModifierProductBatch = <ThrowOnError extends boolean = f
 
 export const getPriceModifierByExternalReferenceCodePriceModifierProductsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierByExternalReferenceCodePriceModifierProductsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierByExternalReferenceCodePriceModifierProductsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products',
         ...options
     });
 };
 
 export const postPriceModifierByExternalReferenceCodePriceModifierProduct = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierByExternalReferenceCodePriceModifierProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierByExternalReferenceCodePriceModifierProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}/price-modifier-products',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1501,14 +1501,14 @@ export const postPriceModifierByExternalReferenceCodePriceModifierProduct = <Thr
 
 export const getPriceModifierIdPriceModifierProductsPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierIdPriceModifierProductsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierIdPriceModifierProductsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-products',
         ...options
     });
 };
 
 export const postPriceModifierIdPriceModifierProduct = <ThrowOnError extends boolean = false>(options: Options<PostPriceModifierIdPriceModifierProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}/price-modifier-products',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}/price-modifier-products',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1519,7 +1519,7 @@ export const postPriceModifierIdPriceModifierProduct = <ThrowOnError extends boo
 
 export const postPriceModifierIdPriceModifierProductBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceModifierIdPriceModifierProductBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceModifierIdPriceModifierProductBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/price-modifier-products/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/price-modifier-products/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1530,21 +1530,21 @@ export const postPriceModifierIdPriceModifierProductBatch = <ThrowOnError extend
 
 export const deletePriceModifier = <ThrowOnError extends boolean = false>(options: Options<DeletePriceModifierData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceModifierResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}',
         ...options
     });
 };
 
 export const getPriceModifier = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}',
         ...options
     });
 };
 
 export const patchPriceModifier = <ThrowOnError extends boolean = false>(options: Options<PatchPriceModifierData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceModifierResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/{id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1555,7 +1555,7 @@ export const patchPriceModifier = <ThrowOnError extends boolean = false>(options
 
 export const deletePriceModifierBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePriceModifierBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePriceModifierBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1566,21 +1566,21 @@ export const deletePriceModifierBatch = <ThrowOnError extends boolean = false>(o
 
 export const deletePriceModifierByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeletePriceModifierByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePriceModifierByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getPriceModifierByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchPriceModifierByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchPriceModifierByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPriceModifierByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifiers/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1591,14 +1591,14 @@ export const patchPriceModifierByExternalReferenceCode = <ThrowOnError extends b
 
 export const getPriceListByExternalReferenceCodePriceModifiersPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListByExternalReferenceCodePriceModifiersPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListByExternalReferenceCodePriceModifiersPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers',
         ...options
     });
 };
 
 export const postPriceListByExternalReferenceCodePriceModifier = <ThrowOnError extends boolean = false>(options: Options<PostPriceListByExternalReferenceCodePriceModifierData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListByExternalReferenceCodePriceModifierResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/by-externalReferenceCode/{externalReferenceCode}/price-modifiers',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1609,14 +1609,14 @@ export const postPriceListByExternalReferenceCodePriceModifier = <ThrowOnError e
 
 export const getPriceListIdPriceModifiersPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceListIdPriceModifiersPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListIdPriceModifiersPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-modifiers',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-modifiers',
         ...options
     });
 };
 
 export const postPriceListIdPriceModifier = <ThrowOnError extends boolean = false>(options: Options<PostPriceListIdPriceModifierData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceListIdPriceModifierResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/{id}/price-modifiers',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/{id}/price-modifiers',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1627,7 +1627,7 @@ export const postPriceListIdPriceModifier = <ThrowOnError extends boolean = fals
 
 export const postPriceListIdPriceModifierBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPriceListIdPriceModifierBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPriceListIdPriceModifierBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-lists/price-modifiers/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-lists/price-modifiers/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1638,84 +1638,84 @@ export const postPriceListIdPriceModifierBatch = <ThrowOnError extends boolean =
 
 export const getDiscountAccountGroupAccountGroup = <ThrowOnError extends boolean = false>(options: Options<GetDiscountAccountGroupAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountAccountGroupAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-account-groups/{discountAccountGroupId}/account-group',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-account-groups/{discountAccountGroupId}/account-group',
         ...options
     });
 };
 
 export const getPriceListAccountGroupAccountGroup = <ThrowOnError extends boolean = false>(options: Options<GetPriceListAccountGroupAccountGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceListAccountGroupAccountGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-list-account-groups/{priceListAccountGroupId}/account-group',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-list-account-groups/{priceListAccountGroupId}/account-group',
         ...options
     });
 };
 
 export const getDiscountProductGroupProductGroup = <ThrowOnError extends boolean = false>(options: Options<GetDiscountProductGroupProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountProductGroupProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-product-groups/{discountProductGroupId}/product-group',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-product-groups/{discountProductGroupId}/product-group',
         ...options
     });
 };
 
 export const getPriceModifierProductGroupProductGroup = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierProductGroupProductGroupData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierProductGroupProductGroupResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}/product-group',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-product-groups/{priceModifierProductGroupId}/product-group',
         ...options
     });
 };
 
 export const getDiscountProductProduct = <ThrowOnError extends boolean = false>(options: Options<GetDiscountProductProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountProductProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-products/{discountProductId}/product',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-products/{discountProductId}/product',
         ...options
     });
 };
 
 export const getPriceEntryIdProduct = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryIdProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryIdProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}/product',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/product',
         ...options
     });
 };
 
 export const getPriceModifierProductProduct = <ThrowOnError extends boolean = false>(options: Options<GetPriceModifierProductProductData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceModifierProductProductResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-modifier-products/{priceModifierProductId}/product',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-modifier-products/{priceModifierProductId}/product',
         ...options
     });
 };
 
 export const getDiscountSkuSku = <ThrowOnError extends boolean = false>(options: Options<GetDiscountSkuSkuData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDiscountSkuSkuResponses, unknown, ThrowOnError>({
-        url: '/v2.0/discount-skus/{discountSkuId}/sku',
+        url: '/o/headless-commerce-admin-pricing/v2.0/discount-skus/{discountSkuId}/sku',
         ...options
     });
 };
 
 export const getPriceEntryIdSku = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryIdSkuData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryIdSkuResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}/sku',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/sku',
         ...options
     });
 };
 
 export const deleteTierPrice = <ThrowOnError extends boolean = false>(options: Options<DeleteTierPriceData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteTierPriceResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}',
         ...options
     });
 };
 
 export const getTierPrice = <ThrowOnError extends boolean = false>(options: Options<GetTierPriceData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetTierPriceResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}',
         ...options
     });
 };
 
 export const patchTierPrice = <ThrowOnError extends boolean = false>(options: Options<PatchTierPriceData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchTierPriceResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/{id}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/{id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1726,7 +1726,7 @@ export const patchTierPrice = <ThrowOnError extends boolean = false>(options: Op
 
 export const deleteTierPriceBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteTierPriceBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteTierPriceBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1737,21 +1737,21 @@ export const deleteTierPriceBatch = <ThrowOnError extends boolean = false>(optio
 
 export const deleteTierPriceByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteTierPriceByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteTierPriceByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getTierPriceByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetTierPriceByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetTierPriceByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchTierPriceByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchTierPriceByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchTierPriceByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
+        url: '/o/headless-commerce-admin-pricing/v2.0/tier-prices/by-externalReferenceCode/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1762,14 +1762,14 @@ export const patchTierPriceByExternalReferenceCode = <ThrowOnError extends boole
 
 export const getPriceEntryByExternalReferenceCodeTierPricesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryByExternalReferenceCodeTierPricesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryByExternalReferenceCodeTierPricesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices',
         ...options
     });
 };
 
 export const postPriceEntryByExternalReferenceCodeTierPrice = <ThrowOnError extends boolean = false>(options: Options<PostPriceEntryByExternalReferenceCodeTierPriceData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceEntryByExternalReferenceCodeTierPriceResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/by-externalReferenceCode/{externalReferenceCode}/tier-prices',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1780,14 +1780,14 @@ export const postPriceEntryByExternalReferenceCodeTierPrice = <ThrowOnError exte
 
 export const getPriceEntryIdTierPricesPage = <ThrowOnError extends boolean = false>(options: Options<GetPriceEntryIdTierPricesPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPriceEntryIdTierPricesPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}/tier-prices',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices',
         ...options
     });
 };
 
 export const postPriceEntryIdTierPrice = <ThrowOnError extends boolean = false>(options: Options<PostPriceEntryIdTierPriceData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceEntryIdTierPriceResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}/tier-prices',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1798,7 +1798,7 @@ export const postPriceEntryIdTierPrice = <ThrowOnError extends boolean = false>(
 
 export const postPriceEntryIdTierPriceBatch = <ThrowOnError extends boolean = false>(options: Options<PostPriceEntryIdTierPriceBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPriceEntryIdTierPriceBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/price-entries/{priceEntryId}/tier-prices/batch',
+        url: '/o/headless-commerce-admin-pricing/v2.0/price-entries/{priceEntryId}/tier-prices/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',

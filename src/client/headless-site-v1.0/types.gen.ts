@@ -61,29 +61,13 @@ export type PutSiteByExternalReferenceCodeRequestBody = {
     file?: Blob | File;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeleteSiteData = {
     body?: never;
     path: {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}';
+    url: '/o/headless-site/v1.0/sites/{siteId}';
 };
 
 export type DeleteSiteResponses = {
@@ -99,7 +83,7 @@ export type DeleteSiteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteSiteByExternalReferenceCodeResponses = {
@@ -115,7 +99,7 @@ export type GetSiteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSiteByExternalReferenceCodeResponses = {
@@ -133,7 +117,7 @@ export type PutSiteByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSiteByExternalReferenceCodeResponses = {
@@ -151,7 +135,7 @@ export type GetSiteByExternalReferenceCodeSiteInitializerData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer';
+    url: '/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer';
 };
 
 export type GetSiteByExternalReferenceCodeSiteInitializerResponses = {
@@ -167,7 +151,7 @@ export type PostSite1Data = {
     body?: SiteWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/sites';
+    url: '/o/headless-site/v1.0/sites';
 };
 
 export type PostSite1Responses = {
@@ -180,5 +164,5 @@ export type PostSite1Responses = {
 export type PostSite1Response = PostSite1Responses[keyof PostSite1Responses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-site/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

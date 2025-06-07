@@ -682,15 +682,15 @@ export type TaxCategoryWritable = {
     };
 };
 
-export type PublisherAssets = {
-    [key: string]: unknown;
-};
-
 export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
 export type UserAdditionalInfo = {
+    [key: string]: unknown;
+};
+
+export type PublisherAssets = {
     [key: string]: unknown;
 };
 
@@ -700,7 +700,7 @@ export type DeleteAccountAddressChannelData = {
         accountAddressChannelId: string;
     };
     query?: never;
-    url: '/v1.0/account-address-channels/{accountAddressChannelId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-address-channels/{accountAddressChannelId}';
 };
 
 export type DeleteAccountAddressChannelResponses = {
@@ -718,7 +718,7 @@ export type DeleteAccountAddressChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/account-address-channels/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-address-channels/batch';
 };
 
 export type DeleteAccountAddressChannelBatchResponses = {
@@ -736,8 +736,9 @@ export type GetAccountAddressByExternalReferenceCodeAccountAddressChannelsPageDa
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/account-addresses/by-externalReferenceCode/{externalReferenceCode}/account-address-channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-addresses/by-externalReferenceCode/{externalReferenceCode}/account-address-channels';
 };
 
 export type GetAccountAddressByExternalReferenceCodeAccountAddressChannelsPageResponses = {
@@ -755,7 +756,7 @@ export type PostAccountAddressByExternalReferenceCodeAccountAddressChannelData =
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/account-addresses/by-externalReferenceCode/{externalReferenceCode}/account-address-channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-addresses/by-externalReferenceCode/{externalReferenceCode}/account-address-channels';
 };
 
 export type PostAccountAddressByExternalReferenceCodeAccountAddressChannelResponses = {
@@ -778,8 +779,9 @@ export type GetAccountAddressIdAccountAddressChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/account-addresses/{addressId}/account-address-channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-addresses/{addressId}/account-address-channels';
 };
 
 export type GetAccountAddressIdAccountAddressChannelsPageResponses = {
@@ -797,7 +799,7 @@ export type PostAccountAddressIdAccountAddressChannelData = {
         addressId: string;
     };
     query?: never;
-    url: '/v1.0/account-addresses/{addressId}/account-address-channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-addresses/{addressId}/account-address-channels';
 };
 
 export type PostAccountAddressIdAccountAddressChannelResponses = {
@@ -815,7 +817,7 @@ export type GetChannelAccountAccountData = {
         channelAccountId: string;
     };
     query?: never;
-    url: '/v1.0/channel-accounts/{channelAccountId}/account';
+    url: '/o/headless-commerce-admin-channel/v1.0/channel-accounts/{channelAccountId}/account';
 };
 
 export type GetChannelAccountAccountResponses = {
@@ -833,7 +835,7 @@ export type DeleteCategoryDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/category-display-pages/{id}';
+    url: '/o/headless-commerce-admin-channel/v1.0/category-display-pages/{id}';
 };
 
 export type DeleteCategoryDisplayPageResponses = {
@@ -848,8 +850,10 @@ export type GetCategoryDisplayPageData = {
     path: {
         id: string;
     };
-    query?: never;
-    url: '/v1.0/category-display-pages/{id}';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/category-display-pages/{id}';
 };
 
 export type GetCategoryDisplayPageResponses = {
@@ -867,7 +871,7 @@ export type PatchCategoryDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/category-display-pages/{id}';
+    url: '/o/headless-commerce-admin-channel/v1.0/category-display-pages/{id}';
 };
 
 export type PatchCategoryDisplayPageResponses = {
@@ -887,7 +891,7 @@ export type DeleteCategoryDisplayPageBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/category-display-pages/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/category-display-pages/batch';
 };
 
 export type DeleteCategoryDisplayPageBatchResponses = {
@@ -908,8 +912,9 @@ export type GetChannelByExternalReferenceCodeCategoryDisplayPagesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/category-display-pages';
 };
 
 export type GetChannelByExternalReferenceCodeCategoryDisplayPagesPageResponses = {
@@ -927,7 +932,7 @@ export type PostChannelByExternalReferenceCodeCategoryDisplayPageData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/category-display-pages';
 };
 
 export type PostChannelByExternalReferenceCodeCategoryDisplayPageResponses = {
@@ -950,8 +955,9 @@ export type GetChannelIdCategoryDisplayPagesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{id}/category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/category-display-pages';
 };
 
 export type GetChannelIdCategoryDisplayPagesPageResponses = {
@@ -969,7 +975,7 @@ export type PostChannelIdCategoryDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/category-display-pages';
 };
 
 export type PostChannelIdCategoryDisplayPageResponses = {
@@ -987,7 +993,7 @@ export type DeleteChannelAccountData = {
         channelAccountId: string;
     };
     query?: never;
-    url: '/v1.0/channel-accounts/{channelAccountId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channel-accounts/{channelAccountId}';
 };
 
 export type DeleteChannelAccountResponses = {
@@ -1005,7 +1011,7 @@ export type DeleteChannelAccountBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/channel-accounts/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channel-accounts/batch';
 };
 
 export type DeleteChannelAccountBatchResponses = {
@@ -1023,8 +1029,9 @@ export type GetChannelByExternalReferenceCodeChannelAccountsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/channel-accounts';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/channel-accounts';
 };
 
 export type GetChannelByExternalReferenceCodeChannelAccountsPageResponses = {
@@ -1042,7 +1049,7 @@ export type PostChannelByExternalReferenceCodeChannelAccountData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/channel-accounts';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/channel-accounts';
 };
 
 export type PostChannelByExternalReferenceCodeChannelAccountResponses = {
@@ -1065,8 +1072,9 @@ export type GetChannelIdChannelAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{id}/channel-accounts';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/channel-accounts';
 };
 
 export type GetChannelIdChannelAccountsPageResponses = {
@@ -1084,7 +1092,7 @@ export type PostChannelIdChannelAccountData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/channel-accounts';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/channel-accounts';
 };
 
 export type PostChannelIdChannelAccountResponses = {
@@ -1102,7 +1110,7 @@ export type DeleteChannelData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}';
 };
 
 export type DeleteChannelResponses = {
@@ -1118,7 +1126,7 @@ export type GetChannelData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}';
 };
 
 export type GetChannelResponses = {
@@ -1136,7 +1144,7 @@ export type PatchChannelData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}';
 };
 
 export type PatchChannelResponses = {
@@ -1154,7 +1162,7 @@ export type PutChannelData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}';
 };
 
 export type PutChannelResponses = {
@@ -1174,7 +1182,7 @@ export type DeleteChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/channels/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/batch';
 };
 
 export type DeleteChannelBatchResponses = {
@@ -1192,7 +1200,7 @@ export type PostChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/channels/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/batch';
 };
 
 export type PostChannelBatchResponses = {
@@ -1210,7 +1218,7 @@ export type PutChannelBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/channels/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/batch';
 };
 
 export type PutChannelBatchResponses = {
@@ -1226,7 +1234,7 @@ export type DeleteChannelByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteChannelByExternalReferenceCodeResponses = {
@@ -1242,7 +1250,7 @@ export type GetChannelByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetChannelByExternalReferenceCodeResponses = {
@@ -1260,7 +1268,7 @@ export type PatchChannelByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchChannelByExternalReferenceCodeResponses = {
@@ -1278,7 +1286,7 @@ export type PutChannelByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutChannelByExternalReferenceCodeResponses = {
@@ -1296,7 +1304,7 @@ export type GetAccountAddressChannelChannelData = {
         accountAddressChannelId: string;
     };
     query?: never;
-    url: '/v1.0/account-address-channels/{accountAddressChannelId}/channel';
+    url: '/o/headless-commerce-admin-channel/v1.0/account-address-channels/{accountAddressChannelId}/channel';
 };
 
 export type GetAccountAddressChannelChannelResponses = {
@@ -1317,8 +1325,9 @@ export type GetChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels';
 };
 
 export type GetChannelsPageResponses = {
@@ -1334,7 +1343,7 @@ export type PostChannelData = {
     body?: ChannelWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/channels';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels';
 };
 
 export type PostChannelResponses = {
@@ -1357,7 +1366,7 @@ export type PostChannelsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/channels/export-batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/export-batch';
 };
 
 export type PostChannelsPageExportBatchResponses = {
@@ -1373,7 +1382,7 @@ export type DeleteChannelByExternalReferenceCodeDefaultCategoryDisplayPageData =
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
 };
 
 export type DeleteChannelByExternalReferenceCodeDefaultCategoryDisplayPageResponses = {
@@ -1388,8 +1397,10 @@ export type GetChannelByExternalReferenceCodeDefaultCategoryDisplayPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
 };
 
 export type GetChannelByExternalReferenceCodeDefaultCategoryDisplayPageResponses = {
@@ -1407,7 +1418,7 @@ export type PostChannelByExternalReferenceCodeDefaultCategoryDisplayPageData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-category-display-pages';
 };
 
 export type PostChannelByExternalReferenceCodeDefaultCategoryDisplayPageResponses = {
@@ -1425,7 +1436,7 @@ export type DeleteChannelIdDefaultCategoryDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/default-category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-category-display-pages';
 };
 
 export type DeleteChannelIdDefaultCategoryDisplayPageResponses = {
@@ -1440,8 +1451,10 @@ export type GetChannelIdDefaultCategoryDisplayPageData = {
     path: {
         id: string;
     };
-    query?: never;
-    url: '/v1.0/channels/{id}/default-category-display-pages';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-category-display-pages';
 };
 
 export type GetChannelIdDefaultCategoryDisplayPageResponses = {
@@ -1459,7 +1472,7 @@ export type PostChannelIdDefaultCategoryDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/default-category-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-category-display-pages';
 };
 
 export type PostChannelIdDefaultCategoryDisplayPageResponses = {
@@ -1477,7 +1490,7 @@ export type DeleteChannelByExternalReferenceCodeDefaultProductDisplayPageData = 
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
 };
 
 export type DeleteChannelByExternalReferenceCodeDefaultProductDisplayPageResponses = {
@@ -1492,8 +1505,10 @@ export type GetChannelByExternalReferenceCodeDefaultProductDisplayPageData = {
     path: {
         externalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
 };
 
 export type GetChannelByExternalReferenceCodeDefaultProductDisplayPageResponses = {
@@ -1511,7 +1526,7 @@ export type PostChannelByExternalReferenceCodeDefaultProductDisplayPageData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/default-product-display-page';
 };
 
 export type PostChannelByExternalReferenceCodeDefaultProductDisplayPageResponses = {
@@ -1529,7 +1544,7 @@ export type DeleteChannelIdDefaultProductDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/default-product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-product-display-pages';
 };
 
 export type DeleteChannelIdDefaultProductDisplayPageResponses = {
@@ -1544,8 +1559,10 @@ export type GetChannelIdDefaultProductDisplayPageData = {
     path: {
         id: string;
     };
-    query?: never;
-    url: '/v1.0/channels/{id}/default-product-display-pages';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-product-display-pages';
 };
 
 export type GetChannelIdDefaultProductDisplayPageResponses = {
@@ -1563,7 +1580,7 @@ export type PostChannelIdDefaultProductDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/default-product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/default-product-display-pages';
 };
 
 export type PostChannelIdDefaultProductDisplayPageResponses = {
@@ -1575,29 +1592,13 @@ export type PostChannelIdDefaultProductDisplayPageResponses = {
 
 export type PostChannelIdDefaultProductDisplayPageResponse = PostChannelIdDefaultProductDisplayPageResponses[keyof PostChannelIdDefaultProductDisplayPageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetPaymentMethodGroupRelOrderTypeOrderTypeData = {
     body?: never;
     path: {
         paymentMethodGroupRelOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rel-order-types/{paymentMethodGroupRelOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-order-types/{paymentMethodGroupRelOrderTypeId}/order-type';
 };
 
 export type GetPaymentMethodGroupRelOrderTypeOrderTypeResponses = {
@@ -1615,7 +1616,7 @@ export type GetShippingFixedOptionOrderTypeOrderTypeData = {
         shippingFixedOptionOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-option-order-types/{shippingFixedOptionOrderTypeId}/order-type';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-order-types/{shippingFixedOptionOrderTypeId}/order-type';
 };
 
 export type GetShippingFixedOptionOrderTypeOrderTypeResponses = {
@@ -1633,7 +1634,7 @@ export type DeletePaymentMethodGroupRelOrderTypeData = {
         paymentMethodGroupRelOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rel-order-types/{paymentMethodGroupRelOrderTypeId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-order-types/{paymentMethodGroupRelOrderTypeId}';
 };
 
 export type DeletePaymentMethodGroupRelOrderTypeResponses = {
@@ -1651,7 +1652,7 @@ export type DeletePaymentMethodGroupRelOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/payment-method-group-rel-order-types/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-order-types/batch';
 };
 
 export type DeletePaymentMethodGroupRelOrderTypeBatchResponses = {
@@ -1672,8 +1673,9 @@ export type GetPaymentMethodGroupRelIdPaymentMethodGroupRelOrderTypesPageData = 
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-order-types';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-order-types';
 };
 
 export type GetPaymentMethodGroupRelIdPaymentMethodGroupRelOrderTypesPageResponses = {
@@ -1691,7 +1693,7 @@ export type PostPaymentMethodGroupRelIdPaymentMethodGroupRelOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-order-types';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-order-types';
 };
 
 export type PostPaymentMethodGroupRelIdPaymentMethodGroupRelOrderTypeResponses = {
@@ -1709,7 +1711,7 @@ export type DeletePaymentMethodGroupRelTermData = {
         paymentMethodGroupRelTermId: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rel-terms/{paymentMethodGroupRelTermId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-terms/{paymentMethodGroupRelTermId}';
 };
 
 export type DeletePaymentMethodGroupRelTermResponses = {
@@ -1727,7 +1729,7 @@ export type DeletePaymentMethodGroupRelTermBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/payment-method-group-rel-terms/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-terms/batch';
 };
 
 export type DeletePaymentMethodGroupRelTermBatchResponses = {
@@ -1748,8 +1750,9 @@ export type GetPaymentMethodGroupRelIdPaymentMethodGroupRelTermsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-terms';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-terms';
 };
 
 export type GetPaymentMethodGroupRelIdPaymentMethodGroupRelTermsPageResponses = {
@@ -1767,7 +1770,7 @@ export type PostPaymentMethodGroupRelIdPaymentMethodGroupRelTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-terms';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rels/{id}/payment-method-group-rel-terms';
 };
 
 export type PostPaymentMethodGroupRelIdPaymentMethodGroupRelTermResponses = {
@@ -1785,7 +1788,7 @@ export type DeleteProductDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/product-display-pages/{id}';
+    url: '/o/headless-commerce-admin-channel/v1.0/product-display-pages/{id}';
 };
 
 export type DeleteProductDisplayPageResponses = {
@@ -1800,8 +1803,10 @@ export type GetProductDisplayPageData = {
     path: {
         id: string;
     };
-    query?: never;
-    url: '/v1.0/product-display-pages/{id}';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-commerce-admin-channel/v1.0/product-display-pages/{id}';
 };
 
 export type GetProductDisplayPageResponses = {
@@ -1819,7 +1824,7 @@ export type PatchProductDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/product-display-pages/{id}';
+    url: '/o/headless-commerce-admin-channel/v1.0/product-display-pages/{id}';
 };
 
 export type PatchProductDisplayPageResponses = {
@@ -1839,7 +1844,7 @@ export type DeleteProductDisplayPageBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/product-display-pages/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/product-display-pages/batch';
 };
 
 export type DeleteProductDisplayPageBatchResponses = {
@@ -1860,8 +1865,9 @@ export type GetChannelByExternalReferenceCodeProductDisplayPagesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/product-display-pages';
 };
 
 export type GetChannelByExternalReferenceCodeProductDisplayPagesPageResponses = {
@@ -1879,7 +1885,7 @@ export type PostChannelByExternalReferenceCodeProductDisplayPageData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/product-display-pages';
 };
 
 export type PostChannelByExternalReferenceCodeProductDisplayPageResponses = {
@@ -1902,8 +1908,9 @@ export type GetChannelIdProductDisplayPagesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{id}/product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/product-display-pages';
 };
 
 export type GetChannelIdProductDisplayPagesPageResponses = {
@@ -1921,7 +1928,7 @@ export type PostChannelIdProductDisplayPageData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/channels/{id}/product-display-pages';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{id}/product-display-pages';
 };
 
 export type PostChannelIdProductDisplayPageResponses = {
@@ -1939,7 +1946,7 @@ export type DeleteShippingFixedOptionOrderTypeData = {
         shippingFixedOptionOrderTypeId: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-option-order-types/{shippingFixedOptionOrderTypeId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-order-types/{shippingFixedOptionOrderTypeId}';
 };
 
 export type DeleteShippingFixedOptionOrderTypeResponses = {
@@ -1957,7 +1964,7 @@ export type DeleteShippingFixedOptionOrderTypeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/shipping-fixed-option-order-types/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-order-types/batch';
 };
 
 export type DeleteShippingFixedOptionOrderTypeBatchResponses = {
@@ -1978,8 +1985,9 @@ export type GetShippingFixedOptionIdShippingFixedOptionOrderTypesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-order-types';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-order-types';
 };
 
 export type GetShippingFixedOptionIdShippingFixedOptionOrderTypesPageResponses = {
@@ -1997,7 +2005,7 @@ export type PostShippingFixedOptionIdShippingFixedOptionOrderTypeData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-order-types';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-order-types';
 };
 
 export type PostShippingFixedOptionIdShippingFixedOptionOrderTypeResponses = {
@@ -2015,7 +2023,7 @@ export type DeleteShippingFixedOptionTermData = {
         shippingFixedOptionTermId: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-option-terms/{shippingFixedOptionTermId}';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-terms/{shippingFixedOptionTermId}';
 };
 
 export type DeleteShippingFixedOptionTermResponses = {
@@ -2033,7 +2041,7 @@ export type DeleteShippingFixedOptionTermBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/shipping-fixed-option-terms/batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-terms/batch';
 };
 
 export type DeleteShippingFixedOptionTermBatchResponses = {
@@ -2054,8 +2062,9 @@ export type GetShippingFixedOptionIdShippingFixedOptionTermsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-terms';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-terms';
 };
 
 export type GetShippingFixedOptionIdShippingFixedOptionTermsPageResponses = {
@@ -2073,7 +2082,7 @@ export type PostShippingFixedOptionIdShippingFixedOptionTermData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-terms';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-options/{id}/shipping-fixed-option-terms';
 };
 
 export type PostShippingFixedOptionIdShippingFixedOptionTermResponses = {
@@ -2093,8 +2102,9 @@ export type GetChannelShippingMethodsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/shipping-methods';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}/shipping-methods';
 };
 
 export type GetChannelShippingMethodsPageResponses = {
@@ -2116,7 +2126,7 @@ export type PostChannelShippingMethodsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/channels/{channelId}/shipping-methods/export-batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/channels/{channelId}/shipping-methods/export-batch';
 };
 
 export type PostChannelShippingMethodsPageExportBatchResponses = {
@@ -2133,8 +2143,9 @@ export type GetTaxCategoriesPageData = {
         page?: string;
         pageSize?: string;
         search?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/tax-categories';
+    url: '/o/headless-commerce-admin-channel/v1.0/tax-categories';
 };
 
 export type GetTaxCategoriesPageResponses = {
@@ -2152,7 +2163,7 @@ export type GetTaxCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/tax-categories/{id}';
+    url: '/o/headless-commerce-admin-channel/v1.0/tax-categories/{id}';
 };
 
 export type GetTaxCategoryResponses = {
@@ -2173,7 +2184,7 @@ export type PostTaxCategoriesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/tax-categories/export-batch';
+    url: '/o/headless-commerce-admin-channel/v1.0/tax-categories/export-batch';
 };
 
 export type PostTaxCategoriesPageExportBatchResponses = {
@@ -2189,7 +2200,7 @@ export type GetPaymentMethodGroupRelTermTermData = {
         paymentMethodGroupRelTermId: string;
     };
     query?: never;
-    url: '/v1.0/payment-method-group-rel-terms/{paymentMethodGroupRelTermId}/term';
+    url: '/o/headless-commerce-admin-channel/v1.0/payment-method-group-rel-terms/{paymentMethodGroupRelTermId}/term';
 };
 
 export type GetPaymentMethodGroupRelTermTermResponses = {
@@ -2207,7 +2218,7 @@ export type GetShippingFixedOptionTermTermData = {
         shippingFixedOptionTermId: string;
     };
     query?: never;
-    url: '/v1.0/shipping-fixed-option-terms/{shippingFixedOptionTermId}/term';
+    url: '/o/headless-commerce-admin-channel/v1.0/shipping-fixed-option-terms/{shippingFixedOptionTermId}/term';
 };
 
 export type GetShippingFixedOptionTermTermResponses = {
@@ -2220,5 +2231,5 @@ export type GetShippingFixedOptionTermTermResponses = {
 export type GetShippingFixedOptionTermTermResponse = GetShippingFixedOptionTermTermResponses[keyof GetShippingFixedOptionTermTermResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-channel/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

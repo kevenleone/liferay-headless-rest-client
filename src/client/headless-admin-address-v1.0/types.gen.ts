@@ -134,7 +134,7 @@ export type DeleteCountryData = {
         countryId: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}';
 };
 
 export type DeleteCountryResponses = {
@@ -150,7 +150,7 @@ export type GetCountryData = {
         countryId: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}';
 };
 
 export type GetCountryResponses = {
@@ -168,7 +168,7 @@ export type PatchCountryData = {
         countryId: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}';
 };
 
 export type PatchCountryResponses = {
@@ -186,7 +186,7 @@ export type PutCountryData = {
         countryId: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}';
 };
 
 export type PutCountryResponses = {
@@ -206,7 +206,7 @@ export type DeleteCountryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/countries/batch';
+    url: '/o/headless-admin-address/v1.0/countries/batch';
 };
 
 export type DeleteCountryBatchResponses = {
@@ -224,7 +224,7 @@ export type PostCountryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/countries/batch';
+    url: '/o/headless-admin-address/v1.0/countries/batch';
 };
 
 export type PostCountryBatchResponses = {
@@ -242,7 +242,7 @@ export type PutCountryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/countries/batch';
+    url: '/o/headless-admin-address/v1.0/countries/batch';
 };
 
 export type PutCountryBatchResponses = {
@@ -261,8 +261,9 @@ export type GetCountriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/countries';
+    url: '/o/headless-admin-address/v1.0/countries';
 };
 
 export type GetCountriesPageResponses = {
@@ -278,7 +279,7 @@ export type PostCountryData = {
     body?: CountryWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/countries';
+    url: '/o/headless-admin-address/v1.0/countries';
 };
 
 export type PostCountryResponses = {
@@ -296,7 +297,7 @@ export type GetCountryByA2Data = {
         a2: string;
     };
     query?: never;
-    url: '/v1.0/countries/by-a2/{a2}';
+    url: '/o/headless-admin-address/v1.0/countries/by-a2/{a2}';
 };
 
 export type GetCountryByA2Responses = {
@@ -314,7 +315,7 @@ export type GetCountryByA3Data = {
         a3: string;
     };
     query?: never;
-    url: '/v1.0/countries/by-a3/{a3}';
+    url: '/o/headless-admin-address/v1.0/countries/by-a3/{a3}';
 };
 
 export type GetCountryByA3Responses = {
@@ -332,7 +333,7 @@ export type GetCountryByNameData = {
         name: string;
     };
     query?: never;
-    url: '/v1.0/countries/by-name/{name}';
+    url: '/o/headless-admin-address/v1.0/countries/by-name/{name}';
 };
 
 export type GetCountryByNameResponses = {
@@ -350,7 +351,7 @@ export type GetCountryByNumberData = {
         number: string;
     };
     query?: never;
-    url: '/v1.0/countries/by-number/{number}';
+    url: '/o/headless-admin-address/v1.0/countries/by-number/{number}';
 };
 
 export type GetCountryByNumberResponses = {
@@ -373,26 +374,10 @@ export type PostCountriesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/countries/export-batch';
+    url: '/o/headless-admin-address/v1.0/countries/export-batch';
 };
 
 export type PostCountriesPageExportBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -405,7 +390,7 @@ export type DeleteRegionData = {
         regionId: string;
     };
     query?: never;
-    url: '/v1.0/regions/{regionId}';
+    url: '/o/headless-admin-address/v1.0/regions/{regionId}';
 };
 
 export type DeleteRegionResponses = {
@@ -421,7 +406,7 @@ export type GetRegionData = {
         regionId: string;
     };
     query?: never;
-    url: '/v1.0/regions/{regionId}';
+    url: '/o/headless-admin-address/v1.0/regions/{regionId}';
 };
 
 export type GetRegionResponses = {
@@ -439,7 +424,7 @@ export type PatchRegionData = {
         regionId: string;
     };
     query?: never;
-    url: '/v1.0/regions/{regionId}';
+    url: '/o/headless-admin-address/v1.0/regions/{regionId}';
 };
 
 export type PatchRegionResponses = {
@@ -457,7 +442,7 @@ export type PutRegionData = {
         regionId: string;
     };
     query?: never;
-    url: '/v1.0/regions/{regionId}';
+    url: '/o/headless-admin-address/v1.0/regions/{regionId}';
 };
 
 export type PutRegionResponses = {
@@ -477,7 +462,7 @@ export type DeleteRegionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/regions/batch';
+    url: '/o/headless-admin-address/v1.0/regions/batch';
 };
 
 export type DeleteRegionBatchResponses = {
@@ -495,7 +480,7 @@ export type PutRegionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/regions/batch';
+    url: '/o/headless-admin-address/v1.0/regions/batch';
 };
 
 export type PutRegionBatchResponses = {
@@ -512,7 +497,7 @@ export type GetCountryRegionByRegionCodeData = {
         regionCode: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}/regions/by-region-code/{regionCode}';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}/regions/by-region-code/{regionCode}';
 };
 
 export type GetCountryRegionByRegionCodeResponses = {
@@ -535,8 +520,9 @@ export type GetCountryRegionsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/countries/{countryId}/regions';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}/regions';
 };
 
 export type GetCountryRegionsPageResponses = {
@@ -554,7 +540,7 @@ export type PostCountryRegionData = {
         countryId: string;
     };
     query?: never;
-    url: '/v1.0/countries/{countryId}/regions';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}/regions';
 };
 
 export type PostCountryRegionResponses = {
@@ -575,8 +561,9 @@ export type GetRegionsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/regions';
+    url: '/o/headless-admin-address/v1.0/regions';
 };
 
 export type GetRegionsPageResponses = {
@@ -598,7 +585,7 @@ export type PostCountryRegionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/countries/{countryId}/regions/batch';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}/regions/batch';
 };
 
 export type PostCountryRegionBatchResponses = {
@@ -621,7 +608,7 @@ export type PostCountryRegionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/countries/{countryId}/regions/export-batch';
+    url: '/o/headless-admin-address/v1.0/countries/{countryId}/regions/export-batch';
 };
 
 export type PostCountryRegionsPageExportBatchResponses = {
@@ -642,7 +629,7 @@ export type PostRegionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/regions/export-batch';
+    url: '/o/headless-admin-address/v1.0/regions/export-batch';
 };
 
 export type PostRegionsPageExportBatchResponses = {
@@ -653,5 +640,5 @@ export type PostRegionsPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-admin-address/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

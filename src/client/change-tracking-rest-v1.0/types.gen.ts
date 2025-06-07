@@ -282,7 +282,7 @@ export type DeleteCtCollectionData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}';
 };
 
 export type DeleteCtCollectionResponses = {
@@ -298,7 +298,7 @@ export type GetCtCollectionData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}';
 };
 
 export type GetCtCollectionResponses = {
@@ -316,7 +316,7 @@ export type PatchCtCollectionData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}';
 };
 
 export type PatchCtCollectionResponses = {
@@ -334,7 +334,7 @@ export type PutCtCollectionData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}';
 };
 
 export type PutCtCollectionResponses = {
@@ -354,7 +354,7 @@ export type DeleteCtCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-collections/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/batch';
 };
 
 export type DeleteCtCollectionBatchResponses = {
@@ -372,7 +372,7 @@ export type PostCtCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-collections/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/batch';
 };
 
 export type PostCtCollectionBatchResponses = {
@@ -390,7 +390,7 @@ export type PutCtCollectionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-collections/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/batch';
 };
 
 export type PutCtCollectionBatchResponses = {
@@ -406,7 +406,7 @@ export type DeleteCtCollectionByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteCtCollectionByExternalReferenceCodeResponses = {
@@ -422,7 +422,7 @@ export type GetCtCollectionByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetCtCollectionByExternalReferenceCodeResponses = {
@@ -440,7 +440,7 @@ export type PatchCtCollectionByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PatchCtCollectionByExternalReferenceCodeResponses = {
@@ -458,7 +458,7 @@ export type GetCtCollectionByExternalReferenceCodeShareLinkData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link';
 };
 
 export type GetCtCollectionByExternalReferenceCodeShareLinkResponses = {
@@ -476,7 +476,7 @@ export type GetCtCollectionShareLinkData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/b{ctCollectionId}/share-link';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link';
 };
 
 export type GetCtCollectionShareLinkResponses = {
@@ -497,8 +497,9 @@ export type GetCtCollectionsPageData = {
         search?: string;
         sort?: string;
         status?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/ct-collections';
+    url: '/o/change-tracking-rest/v1.0/ct-collections';
 };
 
 export type GetCtCollectionsPageResponses = {
@@ -514,7 +515,7 @@ export type PostCtCollectionData = {
     body?: CtCollectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/ct-collections';
+    url: '/o/change-tracking-rest/v1.0/ct-collections';
 };
 
 export type PostCtCollectionResponses = {
@@ -532,7 +533,7 @@ export type PostCtCollectionByExternalReferenceCodePublishData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish';
 };
 
 export type PostCtCollectionByExternalReferenceCodePublishResponses = {
@@ -550,7 +551,7 @@ export type PostCtCollectionByExternalReferenceCodeSchedulePublishData = {
     query?: {
         publishDate?: string;
     };
-    url: '/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish';
 };
 
 export type PostCtCollectionByExternalReferenceCodeSchedulePublishResponses = {
@@ -566,7 +567,7 @@ export type PostCtCollectionCheckoutData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}/checkout';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout';
 };
 
 export type PostCtCollectionCheckoutResponses = {
@@ -582,7 +583,7 @@ export type PostCtCollectionPublishData = {
         ctCollectionId: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}/publish';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish';
 };
 
 export type PostCtCollectionPublishResponses = {
@@ -600,7 +601,7 @@ export type PostCtCollectionSchedulePublishData = {
     query?: {
         publishDate?: string;
     };
-    url: '/v1.0/ct-collections/{ctCollectionId}/schedule-publish';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish';
 };
 
 export type PostCtCollectionSchedulePublishResponses = {
@@ -621,7 +622,7 @@ export type PostCtCollectionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/ct-collections/export-batch';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/export-batch';
 };
 
 export type PostCtCollectionsPageExportBatchResponses = {
@@ -643,8 +644,9 @@ export type GetCtEntriesHistoryPageData = {
         search?: string;
         siteId?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/ct-entries/history';
+    url: '/o/change-tracking-rest/v1.0/ct-entries/history';
 };
 
 export type GetCtEntriesHistoryPageResponses = {
@@ -662,7 +664,7 @@ export type GetCtEntryData = {
         ctEntryId: string;
     };
     query?: never;
-    url: '/v1.0/ct-entries/{ctEntryId}';
+    url: '/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}';
 };
 
 export type GetCtEntryResponses = {
@@ -686,8 +688,9 @@ export type GetCtCollectionCtEntriesPageData = {
         search?: string;
         showHideable?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/ct-collections/{ctCollectionId}/ct-entries';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries';
 };
 
 export type GetCtCollectionCtEntriesPageResponses = {
@@ -707,7 +710,7 @@ export type GetCtCollectionCtEntryByModelClassNameByModelClassPkModelClassPkData
         modelClassPK: string;
     };
     query?: never;
-    url: '/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}';
+    url: '/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}';
 };
 
 export type GetCtCollectionCtEntryByModelClassNameByModelClassPkModelClassPkResponses = {
@@ -725,7 +728,7 @@ export type DeleteCtProcessData = {
         ctProcessId: string;
     };
     query?: never;
-    url: '/v1.0/ct-processes/{ctProcessId}';
+    url: '/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}';
 };
 
 export type DeleteCtProcessResponses = {
@@ -741,7 +744,7 @@ export type GetCtProcessData = {
         ctProcessId: string;
     };
     query?: never;
-    url: '/v1.0/ct-processes/{ctProcessId}';
+    url: '/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}';
 };
 
 export type GetCtProcessResponses = {
@@ -761,7 +764,7 @@ export type DeleteCtProcessBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-processes/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-processes/batch';
 };
 
 export type DeleteCtProcessBatchResponses = {
@@ -781,8 +784,9 @@ export type GetCtProcessesPageData = {
         search?: string;
         sort?: string;
         status?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/ct-processes';
+    url: '/o/change-tracking-rest/v1.0/ct-processes';
 };
 
 export type GetCtProcessesPageResponses = {
@@ -803,7 +807,7 @@ export type PostCtProcessRevertData = {
         description?: string;
         name?: string;
     };
-    url: '/v1.0/ct-processes/{ctProcessId}/revert';
+    url: '/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert';
 };
 
 export type PostCtProcessRevertResponses = {
@@ -825,7 +829,7 @@ export type PostCtProcessesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/ct-processes/export-batch';
+    url: '/o/change-tracking-rest/v1.0/ct-processes/export-batch';
 };
 
 export type PostCtProcessesPageExportBatchResponses = {
@@ -841,7 +845,7 @@ export type DeleteCtRemoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/ct-remotes/{id}';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/{id}';
 };
 
 export type DeleteCtRemoteResponses = {
@@ -857,7 +861,7 @@ export type GetCtRemoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/ct-remotes/{id}';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/{id}';
 };
 
 export type GetCtRemoteResponses = {
@@ -875,7 +879,7 @@ export type PatchCtRemoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/ct-remotes/{id}';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/{id}';
 };
 
 export type PatchCtRemoteResponses = {
@@ -893,7 +897,7 @@ export type PutCtRemoteData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/ct-remotes/{id}';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/{id}';
 };
 
 export type PutCtRemoteResponses = {
@@ -913,7 +917,7 @@ export type DeleteCtRemoteBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-remotes/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/batch';
 };
 
 export type DeleteCtRemoteBatchResponses = {
@@ -931,7 +935,7 @@ export type PostCtRemoteBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-remotes/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/batch';
 };
 
 export type PostCtRemoteBatchResponses = {
@@ -949,7 +953,7 @@ export type PutCtRemoteBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/ct-remotes/batch';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/batch';
 };
 
 export type PutCtRemoteBatchResponses = {
@@ -967,8 +971,9 @@ export type GetCtRemotesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/ct-remotes';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes';
 };
 
 export type GetCtRemotesPageResponses = {
@@ -984,7 +989,7 @@ export type PostCtRemoteData = {
     body?: CtRemoteWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/ct-remotes';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes';
 };
 
 export type PostCtRemoteResponses = {
@@ -1006,7 +1011,7 @@ export type PostCtRemotesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/ct-remotes/export-batch';
+    url: '/o/change-tracking-rest/v1.0/ct-remotes/export-batch';
 };
 
 export type PostCtRemotesPageExportBatchResponses = {
@@ -1016,22 +1021,6 @@ export type PostCtRemotesPageExportBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/change-tracking-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

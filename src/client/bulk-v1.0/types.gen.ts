@@ -175,7 +175,7 @@ export type PatchKeywordBatchData = {
     body?: KeywordBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/keywords/batch';
+    url: '/o/bulk/v1.0/keywords/batch';
 };
 
 export type PatchKeywordBatchResponses = {
@@ -189,7 +189,7 @@ export type PutKeywordBatchData = {
     body?: KeywordBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/keywords/batch';
+    url: '/o/bulk/v1.0/keywords/batch';
 };
 
 export type PutKeywordBatchResponses = {
@@ -203,7 +203,7 @@ export type PostKeywordsCommonPageData = {
     body?: DocumentBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/keywords/common';
+    url: '/o/bulk/v1.0/keywords/common';
 };
 
 export type PostKeywordsCommonPageResponses = {
@@ -215,27 +215,11 @@ export type PostKeywordsCommonPageResponses = {
 
 export type PostKeywordsCommonPageResponse = PostKeywordsCommonPageResponses[keyof PostKeywordsCommonPageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type PostBulkSelectionData = {
     body?: DocumentBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/bulk-selection';
+    url: '/o/bulk/v1.0/bulk-selection';
 };
 
 export type PostBulkSelectionResponses = {
@@ -251,7 +235,7 @@ export type GetStatusData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/status';
+    url: '/o/bulk/v1.0/status';
 };
 
 export type GetStatusResponses = {
@@ -267,7 +251,7 @@ export type PatchTaxonomyCategoryBatchData = {
     body?: TaxonomyCategoryBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/taxonomy-categories/batch';
+    url: '/o/bulk/v1.0/taxonomy-categories/batch';
 };
 
 export type PatchTaxonomyCategoryBatchResponses = {
@@ -281,7 +265,7 @@ export type PutTaxonomyCategoryBatchData = {
     body?: TaxonomyCategoryBulkSelectionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/taxonomy-categories/batch';
+    url: '/o/bulk/v1.0/taxonomy-categories/batch';
 };
 
 export type PutTaxonomyCategoryBatchResponses = {
@@ -297,7 +281,7 @@ export type PostSiteTaxonomyVocabulariesCommonPageData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/taxonomy-vocabularies/common';
+    url: '/o/bulk/v1.0/sites/{siteId}/taxonomy-vocabularies/common';
 };
 
 export type PostSiteTaxonomyVocabulariesCommonPageResponses = {
@@ -310,5 +294,5 @@ export type PostSiteTaxonomyVocabulariesCommonPageResponses = {
 export type PostSiteTaxonomyVocabulariesCommonPageResponse = PostSiteTaxonomyVocabulariesCommonPageResponses[keyof PostSiteTaxonomyVocabulariesCommonPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/bulk/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

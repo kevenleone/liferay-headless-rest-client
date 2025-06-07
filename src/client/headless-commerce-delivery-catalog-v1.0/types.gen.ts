@@ -1322,8 +1322,9 @@ export type GetChannelAccountsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/accounts';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts';
 };
 
 export type GetChannelAccountsPageResponses = {
@@ -1341,7 +1342,7 @@ export type PostChannelAccountData = {
         channelId: string;
     };
     query?: never;
-    url: '/v1.0/channels/{channelId}/accounts';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts';
 };
 
 export type PostChannelAccountResponses = {
@@ -1363,8 +1364,9 @@ export type GetChannelProductAttachmentsPageData = {
         accountId?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/attachments';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/attachments';
 };
 
 export type GetChannelProductAttachmentsPageResponses = {
@@ -1386,8 +1388,9 @@ export type GetChannelProductImagesPageData = {
         accountId?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/images';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/images';
 };
 
 export type GetChannelProductImagesPageResponses = {
@@ -1408,8 +1411,9 @@ export type GetChannelProductCategoriesPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/categories';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/categories';
 };
 
 export type GetChannelProductCategoriesPageResponses = {
@@ -1430,8 +1434,9 @@ export type GetChannelsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels';
 };
 
 export type GetChannelsPageResponses = {
@@ -1454,7 +1459,7 @@ export type PostChannelsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/channels/export-batch';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/export-batch';
 };
 
 export type PostChannelsPageExportBatchResponses = {
@@ -1475,8 +1480,9 @@ export type GetChannelByExternalReferenceCodeCurrenciesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/currencies';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/currencies';
 };
 
 export type GetChannelByExternalReferenceCodeCurrenciesPageResponses = {
@@ -1499,8 +1505,9 @@ export type GetChannelCurrenciesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/currencies';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/currencies';
 };
 
 export type GetChannelCurrenciesPageResponses = {
@@ -1522,8 +1529,9 @@ export type GetChannelProductLinkedProductsPageData = {
         accountId?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/linked-products';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/linked-products';
 };
 
 export type GetChannelProductLinkedProductsPageResponses = {
@@ -1548,8 +1556,9 @@ export type GetChannelProductMappedProductsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/mapped-products';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/mapped-products';
 };
 
 export type GetChannelProductMappedProductsPageResponses = {
@@ -1560,22 +1569,6 @@ export type GetChannelProductMappedProductsPageResponses = {
 };
 
 export type GetChannelProductMappedProductsPageResponse = GetChannelProductMappedProductsPageResponses[keyof GetChannelProductMappedProductsPageResponses];
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPageData = {
     body?: never;
@@ -1589,8 +1582,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/pins';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/pins';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPageResponses = {
@@ -1614,8 +1608,9 @@ export type GetChannelProductPinsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/pins';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/pins';
 };
 
 export type GetChannelProductPinsPageResponses = {
@@ -1636,8 +1631,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionsPageResponses = {
@@ -1658,8 +1654,9 @@ export type GetChannelProductProductOptionsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/product-options';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options';
 };
 
 export type GetChannelProductProductOptionsPageResponses = {
@@ -1685,8 +1682,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
         pageSize?: string;
         productOptionValueId?: string;
         skuId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPageResponses = {
@@ -1713,7 +1711,7 @@ export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProduc
         productOptionValueId?: string;
         skuId?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values';
 };
 
 export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPageResponses = {
@@ -1739,8 +1737,9 @@ export type GetChannelProductProductOptionProductOptionValuesPageData = {
         pageSize?: string;
         productOptionValueId?: string;
         skuId?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values';
 };
 
 export type GetChannelProductProductOptionProductOptionValuesPageResponses = {
@@ -1767,7 +1766,7 @@ export type PostChannelProductProductOptionProductOptionValuesPageData = {
         productOptionValueId?: string;
         skuId?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values';
 };
 
 export type PostChannelProductProductOptionProductOptionValuesPageResponses = {
@@ -1788,7 +1787,7 @@ export type GetChannelProductData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}';
 };
 
 export type GetChannelProductResponses = {
@@ -1809,7 +1808,7 @@ export type GetChannelProductByFriendlyUrlPathData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/by-friendly-url-path/{friendlyUrlPath}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/by-friendly-url-path/{friendlyUrlPath}';
 };
 
 export type GetChannelProductByFriendlyUrlPathResponses = {
@@ -1833,8 +1832,9 @@ export type GetChannelProductsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products';
 };
 
 export type GetChannelProductsPageResponses = {
@@ -1855,8 +1855,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-specifications';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-specifications';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductSpecificationsPageResponses = {
@@ -1877,8 +1878,9 @@ export type GetChannelProductProductSpecificationsPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/product-specifications';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-specifications';
 };
 
 export type GetChannelProductProductSpecificationsPageResponses = {
@@ -1900,8 +1902,9 @@ export type GetChannelProductRelatedProductsPageData = {
         page?: string;
         pageSize?: string;
         type?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/related-products';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/related-products';
 };
 
 export type GetChannelProductRelatedProductsPageResponses = {
@@ -1924,7 +1927,7 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
         accountId?: string;
         currencyCode?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-externalReferenceCode/{skuExternalReferenceCode}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-externalReferenceCode/{skuExternalReferenceCode}';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuByExternalReferenceCodeSkuExternalReferenceCodeResponses = {
@@ -1947,8 +1950,9 @@ export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProduct
         currencyCode?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus';
 };
 
 export type GetChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkusPageResponses = {
@@ -1970,7 +1974,7 @@ export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProduc
         accountId?: string;
         quantity?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus';
 };
 
 export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuResponses = {
@@ -1993,7 +1997,7 @@ export type GetChannelProductSkuData = {
         accountId?: string;
         currencyCode?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/skus/{skuId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/{skuId}';
 };
 
 export type GetChannelProductSkuResponses = {
@@ -2016,8 +2020,9 @@ export type GetChannelProductSkusPageData = {
         currencyCode?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/skus';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus';
 };
 
 export type GetChannelProductSkusPageResponses = {
@@ -2039,7 +2044,7 @@ export type PostChannelProductSkuData = {
         accountId?: string;
         quantity?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/skus';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus';
 };
 
 export type PostChannelProductSkuResponses = {
@@ -2063,7 +2068,7 @@ export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProduc
         quantity?: string;
         skuUnitOfMeasureKey?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-sku-option';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-sku-option';
 };
 
 export type PostChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuBySkuOptionResponses = {
@@ -2087,7 +2092,7 @@ export type PostChannelProductSkuBySkuOptionData = {
         quantity?: string;
         skuUnitOfMeasureKey?: string;
     };
-    url: '/v1.0/channels/{channelId}/products/{productId}/skus/by-sku-option';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/by-sku-option';
 };
 
 export type PostChannelProductSkuBySkuOptionResponses = {
@@ -2105,7 +2110,7 @@ export type DeleteWishListItemData = {
         wishListItemId: string;
     };
     query?: never;
-    url: '/v1.0/wishlist-items/{wishListItemId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}';
 };
 
 export type DeleteWishListItemResponses = {
@@ -2124,7 +2129,7 @@ export type GetWishListItemData = {
         accountId?: string;
         currencyCode?: string;
     };
-    url: '/v1.0/wishlist-items/{wishListItemId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}';
 };
 
 export type GetWishListItemResponses = {
@@ -2144,7 +2149,7 @@ export type DeleteWishListItemBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/wishlist-items/batch';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/batch';
 };
 
 export type DeleteWishListItemBatchResponses = {
@@ -2164,8 +2169,9 @@ export type GetWishlistWishListWishListItemsPageData = {
         currencyCode?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/wishlists/{wishListId}/wishlist-items';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items';
 };
 
 export type GetWishlistWishListWishListItemsPageResponses = {
@@ -2185,7 +2191,7 @@ export type PostWishlistWishListWishListItemData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/wishlists/{wishListId}/wishlist-items';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items';
 };
 
 export type PostWishlistWishListWishListItemResponses = {
@@ -2203,7 +2209,7 @@ export type DeleteWishListData = {
         wishListId: string;
     };
     query?: never;
-    url: '/v1.0/wishlists/{wishListId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}';
 };
 
 export type DeleteWishListResponses = {
@@ -2219,7 +2225,7 @@ export type GetWishListData = {
         wishListId: string;
     };
     query?: never;
-    url: '/v1.0/wishlists/{wishListId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}';
 };
 
 export type GetWishListResponses = {
@@ -2239,7 +2245,7 @@ export type PatchWishListData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/wishlists/{wishListId}';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}';
 };
 
 export type PatchWishListResponses = {
@@ -2259,7 +2265,7 @@ export type DeleteWishListBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/wishlists/batch';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/wishlists/batch';
 };
 
 export type DeleteWishListBatchResponses = {
@@ -2279,8 +2285,9 @@ export type GetChannelByExternalReferenceCodeWishListsPageData = {
         currencyCode?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists';
 };
 
 export type GetChannelByExternalReferenceCodeWishListsPageResponses = {
@@ -2300,7 +2307,7 @@ export type PostChannelByExternalReferenceCodeWishListData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists';
 };
 
 export type PostChannelByExternalReferenceCodeWishListResponses = {
@@ -2322,8 +2329,9 @@ export type GetChannelWishListsPageData = {
         currencyCode?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels/{channelId}/wishlists';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists';
 };
 
 export type GetChannelWishListsPageResponses = {
@@ -2343,7 +2351,7 @@ export type PostChannelWishListData = {
     query?: {
         accountId?: string;
     };
-    url: '/v1.0/channels/{channelId}/wishlists';
+    url: '/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists';
 };
 
 export type PostChannelWishListResponses = {
@@ -2356,5 +2364,5 @@ export type PostChannelWishListResponses = {
 export type PostChannelWishListResponse = PostChannelWishListResponses[keyof PostChannelWishListResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-delivery-catalog/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

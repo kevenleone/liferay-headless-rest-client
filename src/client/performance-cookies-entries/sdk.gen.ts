@@ -23,7 +23,7 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
  */
 export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -33,7 +33,7 @@ export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollabo
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -43,7 +43,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options
     });
 };
@@ -67,7 +67,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOn
  */
 export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -78,21 +78,21 @@ export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowO
 
 export const deleteByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export const patchByExternalReferenceCode = <ThrowOnError extends boolean = fals
 
 export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -114,21 +114,21 @@ export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>
 
 export const deleteByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const getByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const deletePerformanceCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeletePerformanceCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeletePerformanceCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/performance-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export const deletePerformanceCookieEntryBatch = <ThrowOnError extends boolean =
 
 export const postPerformanceCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPerformanceCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPerformanceCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/performance-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ export const postPerformanceCookieEntryBatch = <ThrowOnError extends boolean = f
 
 export const putPerformanceCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PutPerformanceCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutPerformanceCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/performance-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -161,21 +161,21 @@ export const putPerformanceCookieEntryBatch = <ThrowOnError extends boolean = fa
 
 export const getByExternalReferenceCodeVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/versions',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions',
         ...options
     });
 };
 
 export const getPerformanceCookieEntriesPage = <ThrowOnError extends boolean = false>(options?: Options<GetPerformanceCookieEntriesPageData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetPerformanceCookieEntriesPageResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/performance-cookies-entries/',
         ...options
     });
 };
 
 export const postPerformanceCookieEntry = <ThrowOnError extends boolean = false>(options?: Options<PostPerformanceCookieEntryData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPerformanceCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/performance-cookies-entries/',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -186,28 +186,28 @@ export const postPerformanceCookieEntry = <ThrowOnError extends boolean = false>
 
 export const postByExternalReferenceCodeByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postByExternalReferenceCodeByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const postPerformanceCookieEntriesPageExportBatch = <ThrowOnError extends boolean = false>(options?: Options<PostPerformanceCookieEntriesPageExportBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostPerformanceCookieEntriesPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/export-batch',
+        url: '/o/performance-cookies-entries/export-batch',
         ...options
     });
 };
 
 export const postValidate = <ThrowOnError extends boolean = false>(options?: Options<PostValidateData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostValidateResponses, unknown, ThrowOnError>({
-        url: '/validate',
+        url: '/o/performance-cookies-entries/validate',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -218,14 +218,14 @@ export const postValidate = <ThrowOnError extends boolean = false>(options?: Opt
 
 export const putByExternalReferenceCodeByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
+        url: '/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
         ...options
     });
 };
 
 export const getOpenApi = <ThrowOnError extends boolean = false>(options: Options<GetOpenApiData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetOpenApiResponses, unknown, ThrowOnError>({
-        url: '/openapi.{type}',
+        url: '/o/performance-cookies-entries/openapi.{type}',
         ...options
     });
 };
@@ -235,7 +235,7 @@ export const getOpenApi = <ThrowOnError extends boolean = false>(options: Option
  */
 export const deletePerformanceCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeletePerformanceCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePerformanceCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -245,7 +245,7 @@ export const deletePerformanceCookieEntryCollaboratorByTypeCollaborator = <Throw
  */
 export const getPerformanceCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -255,7 +255,7 @@ export const getPerformanceCookieEntryCollaboratorByTypeCollaborator = <ThrowOnE
  */
 export const putPerformanceCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutPerformanceCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPerformanceCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -269,7 +269,7 @@ export const putPerformanceCookieEntryCollaboratorByTypeCollaborator = <ThrowOnE
  */
 export const getPerformanceCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators',
         ...options
     });
 };
@@ -279,7 +279,7 @@ export const getPerformanceCookieEntryCollaboratorsPage = <ThrowOnError extends 
  */
 export const postPerformanceCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostPerformanceCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPerformanceCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -290,28 +290,28 @@ export const postPerformanceCookieEntryCollaboratorsPage = <ThrowOnError extends
 
 export const postPerformanceCookieEntryCollaboratorsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostPerformanceCookieEntryCollaboratorsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPerformanceCookieEntryCollaboratorsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/collaborators/export-batch',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/export-batch',
         ...options
     });
 };
 
 export const deletePerformanceCookieEntry = <ThrowOnError extends boolean = false>(options: Options<DeletePerformanceCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePerformanceCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}',
         ...options
     });
 };
 
 export const getPerformanceCookieEntry = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}',
         ...options
     });
 };
 
 export const patchPerformanceCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PatchPerformanceCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchPerformanceCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -322,7 +322,7 @@ export const patchPerformanceCookieEntry = <ThrowOnError extends boolean = false
 
 export const putPerformanceCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PutPerformanceCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPerformanceCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -333,35 +333,35 @@ export const putPerformanceCookieEntry = <ThrowOnError extends boolean = false>(
 
 export const deletePerformanceCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<DeletePerformanceCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeletePerformanceCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/by-version/{version}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getPerformanceCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/by-version/{version}',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getPerformanceCookieEntriesVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntriesVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntriesVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/versions',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/versions',
         ...options
     });
 };
 
 export const getPerformanceCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<GetPerformanceCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetPerformanceCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/permissions',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/permissions',
         ...options
     });
 };
 
 export const putPerformanceCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<PutPerformanceCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPerformanceCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/permissions',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/permissions',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -372,21 +372,21 @@ export const putPerformanceCookieEntryPermissionsPage = <ThrowOnError extends bo
 
 export const postPerformanceCookieEntryByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostPerformanceCookieEntryByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPerformanceCookieEntryByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/by-version/{version}/copy',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postPerformanceCookieEntryByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostPerformanceCookieEntryByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostPerformanceCookieEntryByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/by-version/{version}/expire',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const putPerformanceCookieEntryByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutPerformanceCookieEntryByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutPerformanceCookieEntryByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/{performanceCookieEntryId}/by-version/{version}/restore',
+        url: '/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}/restore',
         ...options
     });
 };

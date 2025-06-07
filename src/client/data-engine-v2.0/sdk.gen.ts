@@ -20,35 +20,35 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
 
 export const getDataDefinitionDataDefinitionFieldLinksPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataDefinitionFieldLinksPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataDefinitionFieldLinksPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links',
         ...options
     });
 };
 
 export const postDataDefinitionDataDefinitionFieldLinksPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataDefinitionFieldLinksPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataDefinitionFieldLinksPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links/export-batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-definition-field-links/export-batch',
         ...options
     });
 };
 
 export const deleteDataDefinition = <ThrowOnError extends boolean = false>(options: Options<DeleteDataDefinitionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataDefinitionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}',
         ...options
     });
 };
 
 export const getDataDefinition = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}',
         ...options
     });
 };
 
 export const patchDataDefinition = <ThrowOnError extends boolean = false>(options: Options<PatchDataDefinitionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchDataDefinitionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export const patchDataDefinition = <ThrowOnError extends boolean = false>(option
 
 export const putDataDefinition = <ThrowOnError extends boolean = false>(options: Options<PutDataDefinitionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataDefinitionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export const putDataDefinition = <ThrowOnError extends boolean = false>(options:
 
 export const deleteDataDefinitionBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDataDefinitionBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDataDefinitionBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/batch',
+        url: '/o/data-engine/v2.0/data-definitions/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export const deleteDataDefinitionBatch = <ThrowOnError extends boolean = false>(
 
 export const putDataDefinitionBatch = <ThrowOnError extends boolean = false>(options?: Options<PutDataDefinitionBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutDataDefinitionBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/batch',
+        url: '/o/data-engine/v2.0/data-definitions/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -92,21 +92,21 @@ export const putDataDefinitionBatch = <ThrowOnError extends boolean = false>(opt
 
 export const deleteSiteDataDefinitionByContentTypeByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteSiteDataDefinitionByContentTypeByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getSiteDataDefinitionByContentTypeByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetSiteDataDefinitionByContentTypeByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const putSiteDataDefinitionByContentTypeByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutSiteDataDefinitionByContentTypeByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutSiteDataDefinitionByContentTypeByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -117,14 +117,14 @@ export const putSiteDataDefinitionByContentTypeByExternalReferenceCode = <ThrowO
 
 export const getDataDefinitionByContentTypeContentTypePage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionByContentTypeContentTypePageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionByContentTypeContentTypePageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/by-content-type/{contentType}',
+        url: '/o/data-engine/v2.0/data-definitions/by-content-type/{contentType}',
         ...options
     });
 };
 
 export const postDataDefinitionByContentType = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionByContentTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionByContentTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/by-content-type/{contentType}',
+        url: '/o/data-engine/v2.0/data-definitions/by-content-type/{contentType}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -135,21 +135,21 @@ export const postDataDefinitionByContentType = <ThrowOnError extends boolean = f
 
 export const getDataDefinitionDataDefinitionFieldFieldTypes = <ThrowOnError extends boolean = false>(options?: Options<GetDataDefinitionDataDefinitionFieldFieldTypesData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetDataDefinitionDataDefinitionFieldFieldTypesResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/data-definition-fields/field-types',
+        url: '/o/data-engine/v2.0/data-definitions/data-definition-fields/field-types',
         ...options
     });
 };
 
 export const getDataDefinitionPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/permissions',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/permissions',
         ...options
     });
 };
 
 export const putDataDefinitionPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<PutDataDefinitionPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataDefinitionPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/permissions',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/permissions',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -160,21 +160,21 @@ export const putDataDefinitionPermissionsPage = <ThrowOnError extends boolean = 
 
 export const getSiteDataDefinitionByContentTypeByDataDefinitionKey = <ThrowOnError extends boolean = false>(options: Options<GetSiteDataDefinitionByContentTypeByDataDefinitionKeyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSiteDataDefinitionByContentTypeByDataDefinitionKeyResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-data-definition-key/{dataDefinitionKey}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}/by-data-definition-key/{dataDefinitionKey}',
         ...options
     });
 };
 
 export const getSiteDataDefinitionByContentTypeContentTypePage = <ThrowOnError extends boolean = false>(options: Options<GetSiteDataDefinitionByContentTypeContentTypePageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSiteDataDefinitionByContentTypeContentTypePageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}',
         ...options
     });
 };
 
 export const postSiteDataDefinitionByContentType = <ThrowOnError extends boolean = false>(options: Options<PostSiteDataDefinitionByContentTypeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostSiteDataDefinitionByContentTypeResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -185,28 +185,28 @@ export const postSiteDataDefinitionByContentType = <ThrowOnError extends boolean
 
 export const postDataDefinitionCopy = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionCopyResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/copy',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/copy',
         ...options
     });
 };
 
 export const deleteDataDefinitionDataLayout = <ThrowOnError extends boolean = false>(options: Options<DeleteDataDefinitionDataLayoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataDefinitionDataLayoutResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
         ...options
     });
 };
 
 export const getDataDefinitionDataLayoutsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataLayoutsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataLayoutsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
         ...options
     });
 };
 
 export const postDataDefinitionDataLayout = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataLayoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataLayoutResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -217,21 +217,21 @@ export const postDataDefinitionDataLayout = <ThrowOnError extends boolean = fals
 
 export const deleteDataLayout = <ThrowOnError extends boolean = false>(options: Options<DeleteDataLayoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataLayoutResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/{dataLayoutId}',
+        url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}',
         ...options
     });
 };
 
 export const getDataLayout = <ThrowOnError extends boolean = false>(options: Options<GetDataLayoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataLayoutResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/{dataLayoutId}',
+        url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}',
         ...options
     });
 };
 
 export const putDataLayout = <ThrowOnError extends boolean = false>(options: Options<PutDataLayoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataLayoutResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/{dataLayoutId}',
+        url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -242,7 +242,7 @@ export const putDataLayout = <ThrowOnError extends boolean = false>(options: Opt
 
 export const deleteDataLayoutBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDataLayoutBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDataLayoutBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/batch',
+        url: '/o/data-engine/v2.0/data-layouts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -253,7 +253,7 @@ export const deleteDataLayoutBatch = <ThrowOnError extends boolean = false>(opti
 
 export const putDataLayoutBatch = <ThrowOnError extends boolean = false>(options?: Options<PutDataLayoutBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutDataLayoutBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/batch',
+        url: '/o/data-engine/v2.0/data-layouts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -264,14 +264,14 @@ export const putDataLayoutBatch = <ThrowOnError extends boolean = false>(options
 
 export const getSiteDataLayoutByContentTypeByDataLayoutKey = <ThrowOnError extends boolean = false>(options: Options<GetSiteDataLayoutByContentTypeByDataLayoutKeyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSiteDataLayoutByContentTypeByDataLayoutKeyResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-layouts/by-content-type/{contentType}/by-data-layout-key/{dataLayoutKey}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-layouts/by-content-type/{contentType}/by-data-layout-key/{dataLayoutKey}',
         ...options
     });
 };
 
 export const postDataDefinitionDataLayoutBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataLayoutBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataLayoutBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts/batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -282,14 +282,14 @@ export const postDataDefinitionDataLayoutBatch = <ThrowOnError extends boolean =
 
 export const postDataDefinitionDataLayoutsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataLayoutsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataLayoutsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-layouts/export-batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-layouts/export-batch',
         ...options
     });
 };
 
 export const postDataLayoutContext = <ThrowOnError extends boolean = false>(options: Options<PostDataLayoutContextData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataLayoutContextResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-layouts/{dataLayoutId}/context',
+        url: '/o/data-engine/v2.0/data-layouts/{dataLayoutId}/context',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -300,21 +300,21 @@ export const postDataLayoutContext = <ThrowOnError extends boolean = false>(opti
 
 export const deleteDataDefinitionDataListView = <ThrowOnError extends boolean = false>(options: Options<DeleteDataDefinitionDataListViewData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataDefinitionDataListViewResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
         ...options
     });
 };
 
 export const getDataDefinitionDataListViewsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataListViewsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataListViewsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
         ...options
     });
 };
 
 export const postDataDefinitionDataListView = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataListViewData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataListViewResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -325,21 +325,21 @@ export const postDataDefinitionDataListView = <ThrowOnError extends boolean = fa
 
 export const deleteDataListView = <ThrowOnError extends boolean = false>(options: Options<DeleteDataListViewData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataListViewResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-list-views/{dataListViewId}',
+        url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}',
         ...options
     });
 };
 
 export const getDataListView = <ThrowOnError extends boolean = false>(options: Options<GetDataListViewData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataListViewResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-list-views/{dataListViewId}',
+        url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}',
         ...options
     });
 };
 
 export const putDataListView = <ThrowOnError extends boolean = false>(options: Options<PutDataListViewData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataListViewResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-list-views/{dataListViewId}',
+        url: '/o/data-engine/v2.0/data-list-views/{dataListViewId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -350,7 +350,7 @@ export const putDataListView = <ThrowOnError extends boolean = false>(options: O
 
 export const deleteDataListViewBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDataListViewBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDataListViewBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-list-views/batch',
+        url: '/o/data-engine/v2.0/data-list-views/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -361,7 +361,7 @@ export const deleteDataListViewBatch = <ThrowOnError extends boolean = false>(op
 
 export const putDataListViewBatch = <ThrowOnError extends boolean = false>(options?: Options<PutDataListViewBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutDataListViewBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-list-views/batch',
+        url: '/o/data-engine/v2.0/data-list-views/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -372,7 +372,7 @@ export const putDataListViewBatch = <ThrowOnError extends boolean = false>(optio
 
 export const postDataDefinitionDataListViewBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataListViewBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataListViewBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views/batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -383,28 +383,28 @@ export const postDataDefinitionDataListViewBatch = <ThrowOnError extends boolean
 
 export const postDataDefinitionDataListViewsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataListViewsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataListViewsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-list-views/export-batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-list-views/export-batch',
         ...options
     });
 };
 
 export const deleteDataRecordCollection = <ThrowOnError extends boolean = false>(options: Options<DeleteDataRecordCollectionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataRecordCollectionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}',
         ...options
     });
 };
 
 export const getDataRecordCollection = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordCollectionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordCollectionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}',
         ...options
     });
 };
 
 export const putDataRecordCollection = <ThrowOnError extends boolean = false>(options: Options<PutDataRecordCollectionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataRecordCollectionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -415,7 +415,7 @@ export const putDataRecordCollection = <ThrowOnError extends boolean = false>(op
 
 export const deleteDataRecordCollectionBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDataRecordCollectionBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDataRecordCollectionBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/batch',
+        url: '/o/data-engine/v2.0/data-record-collections/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -426,7 +426,7 @@ export const deleteDataRecordCollectionBatch = <ThrowOnError extends boolean = f
 
 export const putDataRecordCollectionBatch = <ThrowOnError extends boolean = false>(options?: Options<PutDataRecordCollectionBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutDataRecordCollectionBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/batch',
+        url: '/o/data-engine/v2.0/data-record-collections/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -437,21 +437,21 @@ export const putDataRecordCollectionBatch = <ThrowOnError extends boolean = fals
 
 export const getDataDefinitionDataRecordCollection = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataRecordCollectionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataRecordCollectionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collection',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collection',
         ...options
     });
 };
 
 export const getDataDefinitionDataRecordCollectionsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataRecordCollectionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataRecordCollectionsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections',
         ...options
     });
 };
 
 export const postDataDefinitionDataRecordCollection = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordCollectionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordCollectionResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -462,21 +462,21 @@ export const postDataDefinitionDataRecordCollection = <ThrowOnError extends bool
 
 export const getDataRecordCollectionPermissionByCurrentUser = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordCollectionPermissionByCurrentUserData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordCollectionPermissionByCurrentUserResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions/by-current-user',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions/by-current-user',
         ...options
     });
 };
 
 export const getDataRecordCollectionPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordCollectionPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordCollectionPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions',
         ...options
     });
 };
 
 export const putDataRecordCollectionPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<PutDataRecordCollectionPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataRecordCollectionPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/permissions',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/permissions',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -487,14 +487,14 @@ export const putDataRecordCollectionPermissionsPage = <ThrowOnError extends bool
 
 export const getSiteDataRecordCollectionByDataRecordCollectionKey = <ThrowOnError extends boolean = false>(options: Options<GetSiteDataRecordCollectionByDataRecordCollectionKeyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSiteDataRecordCollectionByDataRecordCollectionKeyResponses, unknown, ThrowOnError>({
-        url: '/v2.0/sites/{siteId}/data-record-collections/by-data-record-collection-key/{dataRecordCollectionKey}',
+        url: '/o/data-engine/v2.0/sites/{siteId}/data-record-collections/by-data-record-collection-key/{dataRecordCollectionKey}',
         ...options
     });
 };
 
 export const postDataDefinitionDataRecordCollectionBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordCollectionBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordCollectionBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -505,28 +505,28 @@ export const postDataDefinitionDataRecordCollectionBatch = <ThrowOnError extends
 
 export const postDataDefinitionDataRecordCollectionsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordCollectionsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordCollectionsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/export-batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-record-collections/export-batch',
         ...options
     });
 };
 
 export const deleteDataRecord = <ThrowOnError extends boolean = false>(options: Options<DeleteDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/{dataRecordId}',
+        url: '/o/data-engine/v2.0/data-records/{dataRecordId}',
         ...options
     });
 };
 
 export const getDataRecord = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/{dataRecordId}',
+        url: '/o/data-engine/v2.0/data-records/{dataRecordId}',
         ...options
     });
 };
 
 export const patchDataRecord = <ThrowOnError extends boolean = false>(options: Options<PatchDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/{dataRecordId}',
+        url: '/o/data-engine/v2.0/data-records/{dataRecordId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -537,7 +537,7 @@ export const patchDataRecord = <ThrowOnError extends boolean = false>(options: O
 
 export const putDataRecord = <ThrowOnError extends boolean = false>(options: Options<PutDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/{dataRecordId}',
+        url: '/o/data-engine/v2.0/data-records/{dataRecordId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -548,7 +548,7 @@ export const putDataRecord = <ThrowOnError extends boolean = false>(options: Opt
 
 export const deleteDataRecordBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteDataRecordBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteDataRecordBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/batch',
+        url: '/o/data-engine/v2.0/data-records/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -559,7 +559,7 @@ export const deleteDataRecordBatch = <ThrowOnError extends boolean = false>(opti
 
 export const putDataRecordBatch = <ThrowOnError extends boolean = false>(options?: Options<PutDataRecordBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutDataRecordBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-records/batch',
+        url: '/o/data-engine/v2.0/data-records/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -570,14 +570,14 @@ export const putDataRecordBatch = <ThrowOnError extends boolean = false>(options
 
 export const getDataDefinitionDataRecordsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataDefinitionDataRecordsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataDefinitionDataRecordsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-records',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records',
         ...options
     });
 };
 
 export const postDataDefinitionDataRecord = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-records',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -588,21 +588,21 @@ export const postDataDefinitionDataRecord = <ThrowOnError extends boolean = fals
 
 export const getDataRecordCollectionDataRecordExport = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordCollectionDataRecordExportData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordCollectionDataRecordExportResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export',
         ...options
     });
 };
 
 export const getDataRecordCollectionDataRecordsPage = <ThrowOnError extends boolean = false>(options: Options<GetDataRecordCollectionDataRecordsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetDataRecordCollectionDataRecordsPageResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records',
         ...options
     });
 };
 
 export const postDataRecordCollectionDataRecord = <ThrowOnError extends boolean = false>(options: Options<PostDataRecordCollectionDataRecordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataRecordCollectionDataRecordResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -613,7 +613,7 @@ export const postDataRecordCollectionDataRecord = <ThrowOnError extends boolean 
 
 export const postDataDefinitionDataRecordBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-records/batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -624,14 +624,14 @@ export const postDataDefinitionDataRecordBatch = <ThrowOnError extends boolean =
 
 export const postDataDefinitionDataRecordsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataDefinitionDataRecordsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataDefinitionDataRecordsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-definitions/{dataDefinitionId}/data-records/export-batch',
+        url: '/o/data-engine/v2.0/data-definitions/{dataDefinitionId}/data-records/export-batch',
         ...options
     });
 };
 
 export const postDataRecordCollectionDataRecordBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataRecordCollectionDataRecordBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataRecordCollectionDataRecordBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/batch',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -642,14 +642,14 @@ export const postDataRecordCollectionDataRecordBatch = <ThrowOnError extends boo
 
 export const postDataRecordCollectionDataRecordsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostDataRecordCollectionDataRecordsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostDataRecordCollectionDataRecordsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export-batch',
+        url: '/o/data-engine/v2.0/data-record-collections/{dataRecordCollectionId}/data-records/export-batch',
         ...options
     });
 };
 
 export const getOpenApi = <ThrowOnError extends boolean = false>(options: Options<GetOpenApiData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetOpenApiResponses, unknown, ThrowOnError>({
-        url: '/v2.0/openapi.{type}',
+        url: '/o/data-engine/v2.0/openapi.{type}',
         ...options
     });
 };

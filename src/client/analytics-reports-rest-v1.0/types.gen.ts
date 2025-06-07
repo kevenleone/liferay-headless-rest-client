@@ -141,7 +141,7 @@ export type GetGroupAssetMetricAssetTypeAppearsOnHistogramData = {
         identityType?: string;
         rangeKey?: string;
     };
-    url: '/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram';
+    url: '/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram';
 };
 
 export type GetGroupAssetMetricAssetTypeAppearsOnHistogramResponses = {
@@ -164,7 +164,7 @@ export type GetGroupAssetMetricAssetTypeDeviceData = {
         identityType?: string;
         rangeKey?: string;
     };
-    url: '/v1.0/{groupId}/asset-metrics/{assetType}/devices';
+    url: '/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices';
 };
 
 export type GetGroupAssetMetricAssetTypeDeviceResponses = {
@@ -187,7 +187,7 @@ export type GetGroupAssetMetricAssetTypeHistogramData = {
         identityType?: string;
         rangeKey?: string;
     };
-    url: '/v1.0/{groupId}/asset-metrics/{assetType}/histogram';
+    url: '/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram';
 };
 
 export type GetGroupAssetMetricAssetTypeHistogramResponses = {
@@ -211,7 +211,7 @@ export type GetGroupAssetMetricData = {
         rangeKey?: string;
         selectedMetrics?: string;
     };
-    url: '/v1.0/{groupId}/asset-metrics/{assetType}';
+    url: '/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}';
 };
 
 export type GetGroupAssetMetricResponses = {
@@ -223,22 +223,6 @@ export type GetGroupAssetMetricResponses = {
 
 export type GetGroupAssetMetricResponse = GetGroupAssetMetricResponses[keyof GetGroupAssetMetricResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/analytics-reports-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

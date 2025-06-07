@@ -134,7 +134,7 @@ export type DeleteListTypeDefinitionData = {
         listTypeDefinitionId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}';
 };
 
 export type DeleteListTypeDefinitionResponses = {
@@ -150,7 +150,7 @@ export type GetListTypeDefinitionData = {
         listTypeDefinitionId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}';
 };
 
 export type GetListTypeDefinitionResponses = {
@@ -168,7 +168,7 @@ export type PatchListTypeDefinitionData = {
         listTypeDefinitionId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}';
 };
 
 export type PatchListTypeDefinitionResponses = {
@@ -186,7 +186,7 @@ export type PutListTypeDefinitionData = {
         listTypeDefinitionId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}';
 };
 
 export type PutListTypeDefinitionResponses = {
@@ -206,7 +206,7 @@ export type DeleteListTypeDefinitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-definitions/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/batch';
 };
 
 export type DeleteListTypeDefinitionBatchResponses = {
@@ -224,7 +224,7 @@ export type PostListTypeDefinitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-definitions/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/batch';
 };
 
 export type PostListTypeDefinitionBatchResponses = {
@@ -242,7 +242,7 @@ export type PutListTypeDefinitionBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-definitions/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/batch';
 };
 
 export type PutListTypeDefinitionBatchResponses = {
@@ -258,7 +258,7 @@ export type GetListTypeDefinitionByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetListTypeDefinitionByExternalReferenceCodeResponses = {
@@ -276,7 +276,7 @@ export type PutListTypeDefinitionByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutListTypeDefinitionByExternalReferenceCodeResponses = {
@@ -298,8 +298,9 @@ export type GetListTypeDefinitionsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/list-type-definitions';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions';
 };
 
 export type GetListTypeDefinitionsPageResponses = {
@@ -315,7 +316,7 @@ export type PostListTypeDefinitionData = {
     body?: ListTypeDefinitionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/list-type-definitions';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions';
 };
 
 export type PostListTypeDefinitionResponses = {
@@ -338,7 +339,7 @@ export type PostListTypeDefinitionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/list-type-definitions/export-batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/export-batch';
 };
 
 export type PostListTypeDefinitionsPageExportBatchResponses = {
@@ -354,7 +355,7 @@ export type DeleteListTypeEntryData = {
         listTypeEntryId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-entries/{listTypeEntryId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-entries/{listTypeEntryId}';
 };
 
 export type DeleteListTypeEntryResponses = {
@@ -370,7 +371,7 @@ export type GetListTypeEntryData = {
         listTypeEntryId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-entries/{listTypeEntryId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-entries/{listTypeEntryId}';
 };
 
 export type GetListTypeEntryResponses = {
@@ -388,7 +389,7 @@ export type PutListTypeEntryData = {
         listTypeEntryId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-entries/{listTypeEntryId}';
+    url: '/o/headless-admin-list-type/v1.0/list-type-entries/{listTypeEntryId}';
 };
 
 export type PutListTypeEntryResponses = {
@@ -408,7 +409,7 @@ export type DeleteListTypeEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-entries/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-entries/batch';
 };
 
 export type DeleteListTypeEntryBatchResponses = {
@@ -426,7 +427,7 @@ export type PutListTypeEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-entries/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-entries/batch';
 };
 
 export type PutListTypeEntryBatchResponses = {
@@ -448,8 +449,9 @@ export type GetListTypeDefinitionByExternalReferenceCodeListTypeEntriesPageData 
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}/list-type-entries';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}/list-type-entries';
 };
 
 export type GetListTypeDefinitionByExternalReferenceCodeListTypeEntriesPageResponses = {
@@ -467,7 +469,7 @@ export type PostListTypeDefinitionByExternalReferenceCodeListTypeEntryData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}/list-type-entries';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/by-external-reference-code/{externalReferenceCode}/list-type-entries';
 };
 
 export type PostListTypeDefinitionByExternalReferenceCodeListTypeEntryResponses = {
@@ -491,8 +493,9 @@ export type GetListTypeDefinitionListTypeEntriesPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries';
 };
 
 export type GetListTypeDefinitionListTypeEntriesPageResponses = {
@@ -510,7 +513,7 @@ export type PostListTypeDefinitionListTypeEntryData = {
         listTypeDefinitionId: string;
     };
     query?: never;
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries';
 };
 
 export type PostListTypeDefinitionListTypeEntryResponses = {
@@ -535,7 +538,7 @@ export type PostListTypeDefinitionListTypeEntriesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries/export-batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries/export-batch';
 };
 
 export type PostListTypeDefinitionListTypeEntriesPageExportBatchResponses = {
@@ -555,7 +558,7 @@ export type PostListTypeDefinitionListTypeEntryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries/batch';
+    url: '/o/headless-admin-list-type/v1.0/list-type-definitions/{listTypeDefinitionId}/list-type-entries/batch';
 };
 
 export type PostListTypeDefinitionListTypeEntryBatchResponses = {
@@ -565,22 +568,6 @@ export type PostListTypeDefinitionListTypeEntryBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-admin-list-type/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

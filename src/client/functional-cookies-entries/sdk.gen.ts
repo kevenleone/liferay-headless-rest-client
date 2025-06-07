@@ -23,7 +23,7 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
  */
 export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -33,7 +33,7 @@ export const deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollabo
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -43,7 +43,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborat
  */
 export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/functional-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options
     });
 };
@@ -67,7 +67,7 @@ export const getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOn
  */
 export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
+        url: '/o/functional-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -78,21 +78,21 @@ export const postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage = <ThrowO
 
 export const deleteByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const getByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options
     });
 };
 
 export const patchByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PatchByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export const patchByExternalReferenceCode = <ThrowOnError extends boolean = fals
 
 export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -114,21 +114,21 @@ export const putByExternalReferenceCode = <ThrowOnError extends boolean = false>
 
 export const deleteByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<DeleteByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const getByExternalReferenceCodeByVersion = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeByVersionResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}',
         ...options
     });
 };
 
 export const deleteFunctionalCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<DeleteFunctionalCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).delete<DeleteFunctionalCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/functional-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export const deleteFunctionalCookieEntryBatch = <ThrowOnError extends boolean = 
 
 export const postFunctionalCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PostFunctionalCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostFunctionalCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/functional-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ export const postFunctionalCookieEntryBatch = <ThrowOnError extends boolean = fa
 
 export const putFunctionalCookieEntryBatch = <ThrowOnError extends boolean = false>(options?: Options<PutFunctionalCookieEntryBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).put<PutFunctionalCookieEntryBatchResponses, unknown, ThrowOnError>({
-        url: '/batch',
+        url: '/o/functional-cookies-entries/batch',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -161,21 +161,21 @@ export const putFunctionalCookieEntryBatch = <ThrowOnError extends boolean = fal
 
 export const getByExternalReferenceCodeVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetByExternalReferenceCodeVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetByExternalReferenceCodeVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/versions',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions',
         ...options
     });
 };
 
 export const getFunctionalCookieEntriesPage = <ThrowOnError extends boolean = false>(options?: Options<GetFunctionalCookieEntriesPageData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetFunctionalCookieEntriesPageResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/functional-cookies-entries/',
         ...options
     });
 };
 
 export const postFunctionalCookieEntry = <ThrowOnError extends boolean = false>(options?: Options<PostFunctionalCookieEntryData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostFunctionalCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/',
+        url: '/o/functional-cookies-entries/',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -186,28 +186,28 @@ export const postFunctionalCookieEntry = <ThrowOnError extends boolean = false>(
 
 export const postByExternalReferenceCodeByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postByExternalReferenceCodeByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostByExternalReferenceCodeByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostByExternalReferenceCodeByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const postFunctionalCookieEntriesPageExportBatch = <ThrowOnError extends boolean = false>(options?: Options<PostFunctionalCookieEntriesPageExportBatchData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostFunctionalCookieEntriesPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/export-batch',
+        url: '/o/functional-cookies-entries/export-batch',
         ...options
     });
 };
 
 export const postValidate = <ThrowOnError extends boolean = false>(options?: Options<PostValidateData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PostValidateResponses, unknown, ThrowOnError>({
-        url: '/validate',
+        url: '/o/functional-cookies-entries/validate',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -218,14 +218,14 @@ export const postValidate = <ThrowOnError extends boolean = false>(options?: Opt
 
 export const putByExternalReferenceCodeByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutByExternalReferenceCodeByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutByExternalReferenceCodeByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
+        url: '/o/functional-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore',
         ...options
     });
 };
 
 export const getOpenApi = <ThrowOnError extends boolean = false>(options: Options<GetOpenApiData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetOpenApiResponses, unknown, ThrowOnError>({
-        url: '/openapi.{type}',
+        url: '/o/functional-cookies-entries/openapi.{type}',
         ...options
     });
 };
@@ -235,7 +235,7 @@ export const getOpenApi = <ThrowOnError extends boolean = false>(options: Option
  */
 export const deleteFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<DeleteFunctionalCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteFunctionalCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -245,7 +245,7 @@ export const deleteFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowO
  */
 export const getFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options
     });
 };
@@ -255,7 +255,7 @@ export const getFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowOnEr
  */
 export const putFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowOnError extends boolean = false>(options: Options<PutFunctionalCookieEntryCollaboratorByTypeCollaboratorData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutFunctionalCookieEntryCollaboratorByTypeCollaboratorResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -269,7 +269,7 @@ export const putFunctionalCookieEntryCollaboratorByTypeCollaborator = <ThrowOnEr
  */
 export const getFunctionalCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators',
         ...options
     });
 };
@@ -279,7 +279,7 @@ export const getFunctionalCookieEntryCollaboratorsPage = <ThrowOnError extends b
  */
 export const postFunctionalCookieEntryCollaboratorsPage = <ThrowOnError extends boolean = false>(options: Options<PostFunctionalCookieEntryCollaboratorsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostFunctionalCookieEntryCollaboratorsPageResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -290,28 +290,28 @@ export const postFunctionalCookieEntryCollaboratorsPage = <ThrowOnError extends 
 
 export const postFunctionalCookieEntryCollaboratorsPageExportBatch = <ThrowOnError extends boolean = false>(options: Options<PostFunctionalCookieEntryCollaboratorsPageExportBatchData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostFunctionalCookieEntryCollaboratorsPageExportBatchResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/collaborators/export-batch',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/collaborators/export-batch',
         ...options
     });
 };
 
 export const deleteFunctionalCookieEntry = <ThrowOnError extends boolean = false>(options: Options<DeleteFunctionalCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteFunctionalCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}',
         ...options
     });
 };
 
 export const getFunctionalCookieEntry = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}',
         ...options
     });
 };
 
 export const patchFunctionalCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PatchFunctionalCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).patch<PatchFunctionalCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -322,7 +322,7 @@ export const patchFunctionalCookieEntry = <ThrowOnError extends boolean = false>
 
 export const putFunctionalCookieEntry = <ThrowOnError extends boolean = false>(options: Options<PutFunctionalCookieEntryData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutFunctionalCookieEntryResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -333,35 +333,35 @@ export const putFunctionalCookieEntry = <ThrowOnError extends boolean = false>(o
 
 export const deleteFunctionalCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<DeleteFunctionalCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<DeleteFunctionalCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/by-version/{version}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getFunctionalCookieEntryByVersion = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntryByVersionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntryByVersionResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/by-version/{version}',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/by-version/{version}',
         ...options
     });
 };
 
 export const getFunctionalCookieEntriesVersionsPage = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntriesVersionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntriesVersionsPageResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/versions',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/versions',
         ...options
     });
 };
 
 export const getFunctionalCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<GetFunctionalCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetFunctionalCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/permissions',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/permissions',
         ...options
     });
 };
 
 export const putFunctionalCookieEntryPermissionsPage = <ThrowOnError extends boolean = false>(options: Options<PutFunctionalCookieEntryPermissionsPageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutFunctionalCookieEntryPermissionsPageResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/permissions',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/permissions',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -372,21 +372,21 @@ export const putFunctionalCookieEntryPermissionsPage = <ThrowOnError extends boo
 
 export const postFunctionalCookieEntryByVersionCopy = <ThrowOnError extends boolean = false>(options: Options<PostFunctionalCookieEntryByVersionCopyData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostFunctionalCookieEntryByVersionCopyResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/by-version/{version}/copy',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/by-version/{version}/copy',
         ...options
     });
 };
 
 export const postFunctionalCookieEntryByVersionExpire = <ThrowOnError extends boolean = false>(options: Options<PostFunctionalCookieEntryByVersionExpireData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<PostFunctionalCookieEntryByVersionExpireResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/by-version/{version}/expire',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/by-version/{version}/expire',
         ...options
     });
 };
 
 export const putFunctionalCookieEntryByVersionRestore = <ThrowOnError extends boolean = false>(options: Options<PutFunctionalCookieEntryByVersionRestoreData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).put<PutFunctionalCookieEntryByVersionRestoreResponses, unknown, ThrowOnError>({
-        url: '/{functionalCookieEntryId}/by-version/{version}/restore',
+        url: '/o/functional-cookies-entries/{functionalCookieEntryId}/by-version/{version}/restore',
         ...options
     });
 };

@@ -381,7 +381,7 @@ export type DeleteAssetLibraryData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}';
 };
 
 export type DeleteAssetLibraryResponses = {
@@ -401,7 +401,7 @@ export type GetAssetLibraryData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}';
 };
 
 export type GetAssetLibraryResponses = {
@@ -419,7 +419,7 @@ export type PatchAssetLibraryData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}';
 };
 
 export type PatchAssetLibraryResponses = {
@@ -437,7 +437,7 @@ export type DeleteAssetLibraryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type DeleteAssetLibraryByExternalReferenceCodeResponses = {
@@ -457,7 +457,7 @@ export type GetAssetLibraryByExternalReferenceCodeData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeResponses = {
@@ -475,7 +475,7 @@ export type PatchAssetLibraryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PatchAssetLibraryByExternalReferenceCodeResponses = {
@@ -493,7 +493,7 @@ export type PutAssetLibraryByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutAssetLibraryByExternalReferenceCodeResponses = {
@@ -511,7 +511,7 @@ export type DeleteAssetLibraryByExternalReferenceCodePinData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
 };
 
 export type DeleteAssetLibraryByExternalReferenceCodePinResponses = {
@@ -527,7 +527,7 @@ export type PutAssetLibraryByExternalReferenceCodePinData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
 };
 
 export type PutAssetLibraryByExternalReferenceCodePinResponses = {
@@ -545,7 +545,7 @@ export type DeleteAssetLibraryPinData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/pins';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
 };
 
 export type DeleteAssetLibraryPinResponses = {
@@ -561,7 +561,7 @@ export type PutAssetLibraryPinData = {
         assetLibraryId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/pins';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
 };
 
 export type PutAssetLibraryPinResponses = {
@@ -585,7 +585,7 @@ export type GetAssetLibrariesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/asset-libraries';
+    url: '/o/headless-asset-library/v1.0/asset-libraries';
 };
 
 export type GetAssetLibrariesPageResponses = {
@@ -601,7 +601,7 @@ export type PostAssetLibraryData = {
     body?: AssetLibraryWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/asset-libraries';
+    url: '/o/headless-asset-library/v1.0/asset-libraries';
 };
 
 export type PostAssetLibraryResponses = {
@@ -619,8 +619,9 @@ export type GetAssetLibrariesPinnedByMePageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/asset-libraries/pinned-by-me';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/pinned-by-me';
 };
 
 export type GetAssetLibrariesPinnedByMePageResponses = {
@@ -632,22 +633,6 @@ export type GetAssetLibrariesPinnedByMePageResponses = {
 
 export type GetAssetLibrariesPinnedByMePageResponse = GetAssetLibrariesPinnedByMePageResponses[keyof GetAssetLibrariesPinnedByMePageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeData = {
     body?: never;
     path: {
@@ -655,7 +640,7 @@ export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferen
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
 };
 
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponses = {
@@ -672,7 +657,7 @@ export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponses = {
@@ -691,7 +676,7 @@ export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}';
 };
 
 export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponses = {
@@ -710,7 +695,7 @@ export type DeleteAssetLibrarySiteData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
 };
 
 export type DeleteAssetLibrarySiteResponses = {
@@ -727,7 +712,7 @@ export type GetAssetLibrarySiteData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
 };
 
 export type GetAssetLibrarySiteResponses = {
@@ -746,7 +731,7 @@ export type PutAssetLibrarySiteData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/sites/{siteId}';
 };
 
 export type PutAssetLibrarySiteResponses = {
@@ -768,7 +753,7 @@ export type GetAssetLibraryByExternalReferenceCodeSitesPageData = {
         page?: string;
         pageSize?: string;
     };
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/sites';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/sites';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeSitesPageResponses = {
@@ -790,7 +775,7 @@ export type GetAssetLibrarySitesPageData = {
         page?: string;
         pageSize?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/sites';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/sites';
 };
 
 export type GetAssetLibrarySitesPageResponses = {
@@ -809,7 +794,7 @@ export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferen
         userExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
 };
 
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCodeResponses = {
@@ -826,7 +811,7 @@ export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         userExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCodeResponses = {
@@ -845,7 +830,7 @@ export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         userExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-accounts/by-external-reference-code/{userExternalReferenceCode}';
 };
 
 export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCodeResponses = {
@@ -864,7 +849,7 @@ export type DeleteAssetLibraryUserAccountData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
 };
 
 export type DeleteAssetLibraryUserAccountResponses = {
@@ -881,7 +866,7 @@ export type GetAssetLibraryUserAccountData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
 };
 
 export type GetAssetLibraryUserAccountResponses = {
@@ -900,7 +885,7 @@ export type PutAssetLibraryUserAccountData = {
         userId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-accounts/{userId}';
 };
 
 export type PutAssetLibraryUserAccountResponses = {
@@ -925,7 +910,7 @@ export type GetAssetLibraryByExternalReferenceCodeUserAccountsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/user-accounts';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/user-accounts';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeUserAccountsPageResponses = {
@@ -950,7 +935,7 @@ export type GetAssetLibraryUserAccountsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-accounts';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-accounts';
 };
 
 export type GetAssetLibraryUserAccountsPageResponses = {
@@ -969,7 +954,7 @@ export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferen
         userGroupExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
 };
 
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCodeResponses = {
@@ -986,7 +971,7 @@ export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         userGroupExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCodeResponses = {
@@ -1005,7 +990,7 @@ export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
         userGroupExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/user-groups/by-external-reference-code/{userGroupExternalReferenceCode}';
 };
 
 export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCodeResponses = {
@@ -1024,7 +1009,7 @@ export type DeleteAssetLibraryUserGroupData = {
         userGroupId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
 };
 
 export type DeleteAssetLibraryUserGroupResponses = {
@@ -1041,7 +1026,7 @@ export type GetAssetLibraryUserGroupData = {
         userGroupId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
 };
 
 export type GetAssetLibraryUserGroupResponses = {
@@ -1060,7 +1045,7 @@ export type PutAssetLibraryUserGroupData = {
         userGroupId: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-groups/{userGroupId}';
 };
 
 export type PutAssetLibraryUserGroupResponses = {
@@ -1085,7 +1070,7 @@ export type GetAssetLibraryByExternalReferenceCodeUserGroupsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/user-groups';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/user-groups';
 };
 
 export type GetAssetLibraryByExternalReferenceCodeUserGroupsPageResponses = {
@@ -1110,7 +1095,7 @@ export type GetAssetLibraryUserGroupsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryId}/user-groups';
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/user-groups';
 };
 
 export type GetAssetLibraryUserGroupsPageResponses = {
@@ -1123,5 +1108,5 @@ export type GetAssetLibraryUserGroupsPageResponses = {
 export type GetAssetLibraryUserGroupsPageResponse = GetAssetLibraryUserGroupsPageResponses[keyof GetAssetLibraryUserGroupsPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-asset-library/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

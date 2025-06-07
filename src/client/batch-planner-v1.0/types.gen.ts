@@ -242,8 +242,9 @@ export type GetPlanInternalClassNameKeyFieldsPageData = {
     };
     query?: {
         export?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/plans/{internalClassNameKey}/fields';
+    url: '/o/batch-planner/v1.0/plans/{internalClassNameKey}/fields';
 };
 
 export type GetPlanInternalClassNameKeyFieldsPageResponses = {
@@ -255,29 +256,13 @@ export type GetPlanInternalClassNameKeyFieldsPageResponses = {
 
 export type GetPlanInternalClassNameKeyFieldsPageResponse = GetPlanInternalClassNameKeyFieldsPageResponses[keyof GetPlanInternalClassNameKeyFieldsPageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeletePlanData = {
     body?: never;
     path: {
         planId: string;
     };
     query?: never;
-    url: '/v1.0/plans/{planId}';
+    url: '/o/batch-planner/v1.0/plans/{planId}';
 };
 
 export type DeletePlanResponses = {
@@ -293,7 +278,7 @@ export type GetPlanData = {
         planId: string;
     };
     query?: never;
-    url: '/v1.0/plans/{planId}';
+    url: '/o/batch-planner/v1.0/plans/{planId}';
 };
 
 export type GetPlanResponses = {
@@ -311,7 +296,7 @@ export type PatchPlanData = {
         planId: string;
     };
     query?: never;
-    url: '/v1.0/plans/{planId}';
+    url: '/o/batch-planner/v1.0/plans/{planId}';
 };
 
 export type PatchPlanResponses = {
@@ -329,7 +314,7 @@ export type GetPlanTemplateData = {
         internalClassNameKey: string;
     };
     query?: never;
-    url: '/v1.0/plans/{internalClassNameKey}/template';
+    url: '/o/batch-planner/v1.0/plans/{internalClassNameKey}/template';
 };
 
 export type GetPlanTemplateResponses = {
@@ -347,8 +332,9 @@ export type GetPlansPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/plans';
+    url: '/o/batch-planner/v1.0/plans';
 };
 
 export type GetPlansPageResponses = {
@@ -364,7 +350,7 @@ export type PostPlanData = {
     body?: PlanWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/plans';
+    url: '/o/batch-planner/v1.0/plans';
 };
 
 export type PostPlanResponses = {
@@ -383,8 +369,9 @@ export type GetPlanInternalClassNameKeySiteScopesPageData = {
     };
     query?: {
         export?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/plans/{internalClassNameKey}/site-scopes';
+    url: '/o/batch-planner/v1.0/plans/{internalClassNameKey}/site-scopes';
 };
 
 export type GetPlanInternalClassNameKeySiteScopesPageResponses = {
@@ -401,8 +388,10 @@ export type GetPlanInternalClassNameKeyStrategiesPageData = {
     path: {
         internalClassNameKey: string;
     };
-    query?: never;
-    url: '/v1.0/plans/{internalClassNameKey}/strategies';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/batch-planner/v1.0/plans/{internalClassNameKey}/strategies';
 };
 
 export type GetPlanInternalClassNameKeyStrategiesPageResponses = {
@@ -415,5 +404,5 @@ export type GetPlanInternalClassNameKeyStrategiesPageResponses = {
 export type GetPlanInternalClassNameKeyStrategiesPageResponse = GetPlanInternalClassNameKeyStrategiesPageResponses[keyof GetPlanInternalClassNameKeyStrategiesPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/batch-planner/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

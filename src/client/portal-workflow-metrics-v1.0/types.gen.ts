@@ -899,7 +899,7 @@ export type PostProcessAssigneeMetricsPageData = {
         pageSize?: string;
         sort?: string;
     };
-    url: '/v1.0/processes/{processId}/assignees/metrics';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees/metrics';
 };
 
 export type PostProcessAssigneeMetricsPageResponses = {
@@ -917,7 +917,7 @@ export type PostProcessAssigneesPageData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/assignees';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees';
 };
 
 export type PostProcessAssigneesPageResponses = {
@@ -932,8 +932,10 @@ export type PostProcessAssigneesPageResponse = PostProcessAssigneesPageResponses
 export type GetCalendarsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/calendars';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/calendars';
 };
 
 export type GetCalendarsPageResponses = {
@@ -953,7 +955,7 @@ export type PostCalendarsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/calendars/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/calendars/export-batch';
 };
 
 export type PostCalendarsPageExportBatchResponses = {
@@ -973,7 +975,7 @@ export type GetProcessHistogramMetricData = {
         dateStart?: string;
         unit?: string;
     };
-    url: '/v1.0/processes/{processId}/histograms/metrics';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/histograms/metrics';
 };
 
 export type GetProcessHistogramMetricResponses = {
@@ -988,8 +990,10 @@ export type GetProcessHistogramMetricResponse = GetProcessHistogramMetricRespons
 export type GetIndexesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/indexes';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/indexes';
 };
 
 export type GetIndexesPageResponses = {
@@ -1005,7 +1009,7 @@ export type PatchIndexRefreshData = {
     body?: IndexWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/indexes/refresh';
+    url: '/o/portal-workflow-metrics/v1.0/indexes/refresh';
 };
 
 export type PatchIndexRefreshResponses = {
@@ -1019,7 +1023,7 @@ export type PatchIndexReindexData = {
     body?: IndexWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/indexes/reindex';
+    url: '/o/portal-workflow-metrics/v1.0/indexes/reindex';
 };
 
 export type PatchIndexReindexResponses = {
@@ -1037,7 +1041,7 @@ export type PostIndexesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/indexes/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/indexes/export-batch';
 };
 
 export type PostIndexesPageExportBatchResponses = {
@@ -1054,7 +1058,7 @@ export type DeleteProcessInstanceData = {
         instanceId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/instances/{instanceId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}';
 };
 
 export type DeleteProcessInstanceResponses = {
@@ -1071,7 +1075,7 @@ export type GetProcessInstanceData = {
         instanceId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/instances/{instanceId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}';
 };
 
 export type GetProcessInstanceResponses = {
@@ -1090,7 +1094,7 @@ export type PatchProcessInstanceData = {
         instanceId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/instances/{instanceId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}';
 };
 
 export type PatchProcessInstanceResponses = {
@@ -1116,8 +1120,9 @@ export type GetProcessInstancesPageData = {
         sort?: string;
         statuses?: string;
         taskNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/processes/{processId}/instances';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances';
 };
 
 export type GetProcessInstancesPageResponses = {
@@ -1135,7 +1140,7 @@ export type PostProcessInstanceData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/instances';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances';
 };
 
 export type PostProcessInstanceResponses = {
@@ -1154,7 +1159,7 @@ export type PatchProcessInstanceCompleteData = {
         instanceId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/instances/{instanceId}/complete';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}/complete';
 };
 
 export type PatchProcessInstanceCompleteResponses = {
@@ -1174,7 +1179,7 @@ export type PostProcessInstanceBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/{processId}/instances/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/batch';
 };
 
 export type PostProcessInstanceBatchResponses = {
@@ -1202,7 +1207,7 @@ export type PostProcessInstancesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/instances/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/export-batch';
 };
 
 export type PostProcessInstancesPageExportBatchResponses = {
@@ -1226,8 +1231,9 @@ export type GetProcessNodeMetricsPageData = {
         pageSize?: string;
         processVersion?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/processes/{processId}/nodes/metrics';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/metrics';
 };
 
 export type GetProcessNodeMetricsPageResponses = {
@@ -1246,7 +1252,7 @@ export type DeleteProcessNodeData = {
         nodeId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/nodes/{nodeId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/{nodeId}';
 };
 
 export type DeleteProcessNodeResponses = {
@@ -1261,8 +1267,10 @@ export type GetProcessNodesPageData = {
     path: {
         processId: string;
     };
-    query?: never;
-    url: '/v1.0/processes/{processId}/nodes';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes';
 };
 
 export type GetProcessNodesPageResponses = {
@@ -1280,7 +1288,7 @@ export type PostProcessNodeData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/nodes';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes';
 };
 
 export type PostProcessNodeResponses = {
@@ -1302,7 +1310,7 @@ export type PostProcessNodeBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/{processId}/nodes/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/batch';
 };
 
 export type PostProcessNodeBatchResponses = {
@@ -1322,26 +1330,10 @@ export type PostProcessNodesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/nodes/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/export-batch';
 };
 
 export type PostProcessNodesPageExportBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -1358,7 +1350,7 @@ export type GetProcessMetricData = {
         dateEnd?: string;
         dateStart?: string;
     };
-    url: '/v1.0/processes/{processId}/metrics';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/metrics';
 };
 
 export type GetProcessMetricResponses = {
@@ -1378,8 +1370,9 @@ export type GetProcessMetricsPageData = {
         pageSize?: string;
         sort?: string;
         title?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/processes/metrics';
+    url: '/o/portal-workflow-metrics/v1.0/processes/metrics';
 };
 
 export type GetProcessMetricsPageResponses = {
@@ -1401,7 +1394,7 @@ export type PostProcessMetricsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/metrics/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/metrics/export-batch';
 };
 
 export type PostProcessMetricsPageExportBatchResponses = {
@@ -1417,7 +1410,7 @@ export type DeleteProcessData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}';
 };
 
 export type DeleteProcessResponses = {
@@ -1433,7 +1426,7 @@ export type GetProcessData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}';
 };
 
 export type GetProcessResponses = {
@@ -1451,7 +1444,7 @@ export type PutProcessData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}';
 };
 
 export type PutProcessResponses = {
@@ -1469,7 +1462,7 @@ export type DeleteProcessBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/batch';
 };
 
 export type DeleteProcessBatchResponses = {
@@ -1487,7 +1480,7 @@ export type PostProcessBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/batch';
 };
 
 export type PostProcessBatchResponses = {
@@ -1505,7 +1498,7 @@ export type PutProcessBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/batch';
 };
 
 export type PutProcessBatchResponses = {
@@ -1521,7 +1514,7 @@ export type GetProcessTitleData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/title';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/title';
 };
 
 export type GetProcessTitleResponses = {
@@ -1537,7 +1530,7 @@ export type PostProcessData = {
     body?: ProcessWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/processes';
+    url: '/o/portal-workflow-metrics/v1.0/processes';
 };
 
 export type PostProcessResponses = {
@@ -1554,8 +1547,10 @@ export type GetProcessProcessVersionsPageData = {
     path: {
         processId: string;
     };
-    query?: never;
-    url: '/v1.0/processes/{processId}/process-versions';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions';
 };
 
 export type GetProcessProcessVersionsPageResponses = {
@@ -1577,7 +1572,7 @@ export type PostProcessProcessVersionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/process-versions/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions/export-batch';
 };
 
 export type PostProcessProcessVersionsPageExportBatchResponses = {
@@ -1590,8 +1585,10 @@ export type PostProcessProcessVersionsPageExportBatchResponses = {
 export type GetReindexStatusesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/reindex/statuses';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/reindex/statuses';
 };
 
 export type GetReindexStatusesPageResponses = {
@@ -1611,7 +1608,7 @@ export type PostReindexStatusesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/reindex/statuses/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/reindex/statuses/export-batch';
 };
 
 export type PostReindexStatusesPageExportBatchResponses = {
@@ -1628,8 +1625,9 @@ export type GetProcessRolesPageData = {
     };
     query?: {
         completed?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/processes/{processId}/roles';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/roles';
 };
 
 export type GetProcessRolesPageResponses = {
@@ -1652,7 +1650,7 @@ export type PostProcessRolesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/roles/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/roles/export-batch';
 };
 
 export type PostProcessRolesPageExportBatchResponses = {
@@ -1668,7 +1666,7 @@ export type DeleteSlaData = {
         slaId: string;
     };
     query?: never;
-    url: '/v1.0/slas/{slaId}';
+    url: '/o/portal-workflow-metrics/v1.0/slas/{slaId}';
 };
 
 export type DeleteSlaResponses = {
@@ -1684,7 +1682,7 @@ export type GetSlaData = {
         slaId: string;
     };
     query?: never;
-    url: '/v1.0/slas/{slaId}';
+    url: '/o/portal-workflow-metrics/v1.0/slas/{slaId}';
 };
 
 export type GetSlaResponses = {
@@ -1702,7 +1700,7 @@ export type PutSlaData = {
         slaId: string;
     };
     query?: never;
-    url: '/v1.0/slas/{slaId}';
+    url: '/o/portal-workflow-metrics/v1.0/slas/{slaId}';
 };
 
 export type PutSlaResponses = {
@@ -1722,7 +1720,7 @@ export type DeleteSlaBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/slas/batch';
+    url: '/o/portal-workflow-metrics/v1.0/slas/batch';
 };
 
 export type DeleteSlaBatchResponses = {
@@ -1740,7 +1738,7 @@ export type PutSlaBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/slas/batch';
+    url: '/o/portal-workflow-metrics/v1.0/slas/batch';
 };
 
 export type PutSlaBatchResponses = {
@@ -1759,8 +1757,9 @@ export type GetProcessSlasPageData = {
         page?: string;
         pageSize?: string;
         status?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/processes/{processId}/slas';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/slas';
 };
 
 export type GetProcessSlasPageResponses = {
@@ -1778,7 +1777,7 @@ export type PostProcessSlaData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/slas';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/slas';
 };
 
 export type PostProcessSlaResponses = {
@@ -1800,7 +1799,7 @@ export type PostProcessSlaBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/{processId}/slas/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/batch';
 };
 
 export type PostProcessSlaBatchResponses = {
@@ -1821,7 +1820,7 @@ export type PostProcessSlasPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/slas/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/export-batch';
 };
 
 export type PostProcessSlasPageExportBatchResponses = {
@@ -1837,7 +1836,7 @@ export type GetProcessLastSlaResultData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/last-sla-result';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/last-sla-result';
 };
 
 export type GetProcessLastSlaResultResponses = {
@@ -1856,7 +1855,7 @@ export type DeleteProcessTaskData = {
         taskId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/tasks/{taskId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}';
 };
 
 export type DeleteProcessTaskResponses = {
@@ -1873,7 +1872,7 @@ export type GetProcessTaskData = {
         taskId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/tasks/{taskId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}';
 };
 
 export type GetProcessTaskResponses = {
@@ -1892,7 +1891,7 @@ export type PatchProcessTaskData = {
         taskId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/tasks/{taskId}';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}';
 };
 
 export type PatchProcessTaskResponses = {
@@ -1907,8 +1906,10 @@ export type GetProcessTasksPageData = {
     path: {
         processId: string;
     };
-    query?: never;
-    url: '/v1.0/processes/{processId}/tasks';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks';
 };
 
 export type GetProcessTasksPageResponses = {
@@ -1926,7 +1927,7 @@ export type PostProcessTaskData = {
         processId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/tasks';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks';
 };
 
 export type PostProcessTaskResponses = {
@@ -1945,7 +1946,7 @@ export type PatchProcessTaskCompleteData = {
         taskId: string;
     };
     query?: never;
-    url: '/v1.0/processes/{processId}/tasks/{taskId}/complete';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}/complete';
 };
 
 export type PatchProcessTaskCompleteResponses = {
@@ -1965,7 +1966,7 @@ export type PostProcessTaskBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/processes/{processId}/tasks/batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/batch';
 };
 
 export type PostProcessTaskBatchResponses = {
@@ -1985,7 +1986,7 @@ export type PostProcessTasksPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/processes/{processId}/tasks/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/export-batch';
 };
 
 export type PostProcessTasksPageExportBatchResponses = {
@@ -2002,7 +2003,7 @@ export type PostTasksPageData = {
         page?: string;
         pageSize?: string;
     };
-    url: '/v1.0/tasks';
+    url: '/o/portal-workflow-metrics/v1.0/tasks';
 };
 
 export type PostTasksPageResponses = {
@@ -2017,8 +2018,10 @@ export type PostTasksPageResponse = PostTasksPageResponses[keyof PostTasksPageRe
 export type GetTimeRangesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/time-ranges';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/portal-workflow-metrics/v1.0/time-ranges';
 };
 
 export type GetTimeRangesPageResponses = {
@@ -2038,7 +2041,7 @@ export type PostTimeRangesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/time-ranges/export-batch';
+    url: '/o/portal-workflow-metrics/v1.0/time-ranges/export-batch';
 };
 
 export type PostTimeRangesPageExportBatchResponses = {
@@ -2049,5 +2052,5 @@ export type PostTimeRangesPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/portal-workflow-metrics/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

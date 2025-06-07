@@ -400,7 +400,7 @@ export type PostConfigurationWizardModeData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/configuration/wizard-mode';
+    url: '/o/analytics-settings-rest/v1.0/configuration/wizard-mode';
 };
 
 export type PostConfigurationWizardModeResponses = {
@@ -418,8 +418,9 @@ export type GetChannelsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/channels';
+    url: '/o/analytics-settings-rest/v1.0/channels';
 };
 
 export type GetChannelsPageResponses = {
@@ -435,7 +436,7 @@ export type PatchChannelData = {
     body?: ChannelWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/channels';
+    url: '/o/analytics-settings-rest/v1.0/channels';
 };
 
 export type PatchChannelResponses = {
@@ -451,7 +452,7 @@ export type PostChannelData = {
     body?: ChannelWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/channels';
+    url: '/o/analytics-settings-rest/v1.0/channels';
 };
 
 export type PostChannelResponses = {
@@ -471,8 +472,9 @@ export type GetCommerceChannelsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/commerce-channels';
+    url: '/o/analytics-settings-rest/v1.0/commerce-channels';
 };
 
 export type GetCommerceChannelsPageResponses = {
@@ -492,8 +494,9 @@ export type GetContactAccountGroupsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/contacts/account-groups';
+    url: '/o/analytics-settings-rest/v1.0/contacts/account-groups';
 };
 
 export type GetContactAccountGroupsPageResponses = {
@@ -509,7 +512,7 @@ export type GetContactConfigurationData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/contacts/configuration';
+    url: '/o/analytics-settings-rest/v1.0/contacts/configuration';
 };
 
 export type GetContactConfigurationResponses = {
@@ -525,7 +528,7 @@ export type PutContactConfigurationData = {
     body?: ContactConfigurationWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/contacts/configuration';
+    url: '/o/analytics-settings-rest/v1.0/contacts/configuration';
 };
 
 export type PutContactConfigurationResponses = {
@@ -543,8 +546,9 @@ export type GetContactOrganizationsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/contacts/organizations';
+    url: '/o/analytics-settings-rest/v1.0/contacts/organizations';
 };
 
 export type GetContactOrganizationsPageResponses = {
@@ -564,8 +568,9 @@ export type GetContactUserGroupsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/contacts/user-groups';
+    url: '/o/analytics-settings-rest/v1.0/contacts/user-groups';
 };
 
 export type GetContactUserGroupsPageResponses = {
@@ -581,7 +586,7 @@ export type DeleteDataSourceData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/data-sources';
+    url: '/o/analytics-settings-rest/v1.0/data-sources';
 };
 
 export type DeleteDataSourceResponses = {
@@ -595,7 +600,7 @@ export type PostDataSourceData = {
     body?: DataSourceTokenWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/data-sources';
+    url: '/o/analytics-settings-rest/v1.0/data-sources';
 };
 
 export type PostDataSourceResponses = {
@@ -615,8 +620,9 @@ export type GetFieldsAccountsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/fields/accounts';
+    url: '/o/analytics-settings-rest/v1.0/fields/accounts';
 };
 
 export type GetFieldsAccountsPageResponses = {
@@ -632,7 +638,7 @@ export type PatchFieldAccountData = {
     body?: Array<FieldWritable>;
     path?: never;
     query?: never;
-    url: '/v1.0/fields/accounts';
+    url: '/o/analytics-settings-rest/v1.0/fields/accounts';
 };
 
 export type PatchFieldAccountResponses = {
@@ -650,8 +656,9 @@ export type GetFieldsOrdersPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/fields/orders';
+    url: '/o/analytics-settings-rest/v1.0/fields/orders';
 };
 
 export type GetFieldsOrdersPageResponses = {
@@ -667,7 +674,7 @@ export type PatchFieldOrderData = {
     body?: Array<FieldWritable>;
     path?: never;
     query?: never;
-    url: '/v1.0/fields/orders';
+    url: '/o/analytics-settings-rest/v1.0/fields/orders';
 };
 
 export type PatchFieldOrderResponses = {
@@ -685,8 +692,9 @@ export type GetFieldsPeoplePageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/fields/people';
+    url: '/o/analytics-settings-rest/v1.0/fields/people';
 };
 
 export type GetFieldsPeoplePageResponses = {
@@ -702,7 +710,7 @@ export type PatchFieldPeopleData = {
     body?: Array<FieldWritable>;
     path?: never;
     query?: never;
-    url: '/v1.0/fields/people';
+    url: '/o/analytics-settings-rest/v1.0/fields/people';
 };
 
 export type PatchFieldPeopleResponses = {
@@ -720,8 +728,9 @@ export type GetFieldsProductsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/fields/products';
+    url: '/o/analytics-settings-rest/v1.0/fields/products';
 };
 
 export type GetFieldsProductsPageResponses = {
@@ -737,7 +746,7 @@ export type PatchFieldProductData = {
     body?: Array<FieldWritable>;
     path?: never;
     query?: never;
-    url: '/v1.0/fields/products';
+    url: '/o/analytics-settings-rest/v1.0/fields/products';
 };
 
 export type PatchFieldProductResponses = {
@@ -751,7 +760,7 @@ export type GetFieldData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/fields';
+    url: '/o/analytics-settings-rest/v1.0/fields';
 };
 
 export type GetFieldResponses = {
@@ -763,27 +772,11 @@ export type GetFieldResponses = {
 
 export type GetFieldResponse = GetFieldResponses[keyof GetFieldResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetRecommendationConfigurationData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/recommendation/configuration';
+    url: '/o/analytics-settings-rest/v1.0/recommendation/configuration';
 };
 
 export type GetRecommendationConfigurationResponses = {
@@ -799,7 +792,7 @@ export type PutRecommendationConfigurationData = {
     body?: RecommendationConfigurationWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/recommendation/configuration';
+    url: '/o/analytics-settings-rest/v1.0/recommendation/configuration';
 };
 
 export type PutRecommendationConfigurationResponses = {
@@ -817,8 +810,9 @@ export type GetSitesPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites';
+    url: '/o/analytics-settings-rest/v1.0/sites';
 };
 
 export type GetSitesPageResponses = {
@@ -831,5 +825,5 @@ export type GetSitesPageResponses = {
 export type GetSitesPageResponse = GetSitesPageResponses[keyof GetSitesPageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/analytics-settings-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

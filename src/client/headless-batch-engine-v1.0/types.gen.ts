@@ -256,7 +256,7 @@ export type GetExportTaskData = {
         exportTaskId: string;
     };
     query?: never;
-    url: '/v1.0/export-task/{exportTaskId}';
+    url: '/o/headless-batch-engine/v1.0/export-task/{exportTaskId}';
 };
 
 export type GetExportTaskResponses = {
@@ -274,7 +274,7 @@ export type GetExportTaskByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/export-task/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetExportTaskByExternalReferenceCodeResponses = {
@@ -292,7 +292,7 @@ export type GetExportTaskByExternalReferenceCodeContentData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content';
+    url: '/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content';
 };
 
 export type GetExportTaskByExternalReferenceCodeContentResponses = {
@@ -310,7 +310,7 @@ export type GetExportTaskContentData = {
         exportTaskId: string;
     };
     query?: never;
-    url: '/v1.0/export-task/{exportTaskId}/content';
+    url: '/o/headless-batch-engine/v1.0/export-task/{exportTaskId}/content';
 };
 
 export type GetExportTaskContentResponses = {
@@ -335,7 +335,7 @@ export type PostExportTaskData = {
         fieldNames?: string;
         taskItemDelegateName?: string;
     };
-    url: '/v1.0/export-task/{className}/{contentType}';
+    url: '/o/headless-batch-engine/v1.0/export-task/{className}/{contentType}';
 };
 
 export type PostExportTaskResponses = {
@@ -358,7 +358,7 @@ export type DeleteImportTask1Data = {
         importStrategy?: string;
         taskItemDelegateName?: string;
     };
-    url: '/v1.0/import-task/{className}';
+    url: '/o/headless-batch-engine/v1.0/import-task/{className}';
 };
 
 export type DeleteImportTask1Responses = {
@@ -385,7 +385,7 @@ export type PostImportTask1Data = {
         importStrategy?: string;
         taskItemDelegateName?: string;
     };
-    url: '/v1.0/import-task/{className}';
+    url: '/o/headless-batch-engine/v1.0/import-task/{className}';
 };
 
 export type PostImportTask1Responses = {
@@ -409,7 +409,7 @@ export type PutImportTask1Data = {
         taskItemDelegateName?: string;
         updateStrategy?: string;
     };
-    url: '/v1.0/import-task/{className}';
+    url: '/o/headless-batch-engine/v1.0/import-task/{className}';
 };
 
 export type PutImportTask1Responses = {
@@ -427,7 +427,7 @@ export type GetImportTaskData = {
         importTaskId: string;
     };
     query?: never;
-    url: '/v1.0/import-task/{importTaskId}';
+    url: '/o/headless-batch-engine/v1.0/import-task/{importTaskId}';
 };
 
 export type GetImportTaskResponses = {
@@ -445,7 +445,7 @@ export type GetImportTaskByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/import-task/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetImportTaskByExternalReferenceCodeResponses = {
@@ -463,7 +463,7 @@ export type GetImportTaskByExternalReferenceCodeContentData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/content';
+    url: '/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/content';
 };
 
 export type GetImportTaskByExternalReferenceCodeContentResponses = {
@@ -481,7 +481,7 @@ export type GetImportTaskByExternalReferenceCodeFailedItemReportData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report';
+    url: '/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report';
 };
 
 export type GetImportTaskByExternalReferenceCodeFailedItemReportResponses = {
@@ -499,7 +499,7 @@ export type GetImportTaskContentData = {
         importTaskId: string;
     };
     query?: never;
-    url: '/v1.0/import-task/{importTaskId}/content';
+    url: '/o/headless-batch-engine/v1.0/import-task/{importTaskId}/content';
 };
 
 export type GetImportTaskContentResponses = {
@@ -517,7 +517,7 @@ export type GetImportTaskFailedItemReportData = {
         importTaskId: string;
     };
     query?: never;
-    url: '/v1.0/import-task/{importTaskId}/failed-items/report';
+    url: '/o/headless-batch-engine/v1.0/import-task/{importTaskId}/failed-items/report';
 };
 
 export type GetImportTaskFailedItemReportResponses = {
@@ -529,22 +529,6 @@ export type GetImportTaskFailedItemReportResponses = {
 
 export type GetImportTaskFailedItemReportResponse = GetImportTaskFailedItemReportResponses[keyof GetImportTaskFailedItemReportResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-batch-engine/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

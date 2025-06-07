@@ -106,29 +106,13 @@ export type PagePortalInstanceWritable = {
     page?: number;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeletePortalInstanceData = {
     body?: never;
     path: {
         portalInstanceId: string;
     };
     query?: never;
-    url: '/v1.0/portal-instances/{portalInstanceId}';
+    url: '/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}';
 };
 
 export type DeletePortalInstanceResponses = {
@@ -144,7 +128,7 @@ export type GetPortalInstanceData = {
         portalInstanceId: string;
     };
     query?: never;
-    url: '/v1.0/portal-instances/{portalInstanceId}';
+    url: '/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}';
 };
 
 export type GetPortalInstanceResponses = {
@@ -162,7 +146,7 @@ export type PatchPortalInstanceData = {
         portalInstanceId: string;
     };
     query?: never;
-    url: '/v1.0/portal-instances/{portalInstanceId}';
+    url: '/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}';
 };
 
 export type PatchPortalInstanceResponses = {
@@ -179,8 +163,9 @@ export type GetPortalInstancesPageData = {
     path?: never;
     query?: {
         skipDefault?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/portal-instances';
+    url: '/o/headless-portal-instances/v1.0/portal-instances';
 };
 
 export type GetPortalInstancesPageResponses = {
@@ -196,7 +181,7 @@ export type PostPortalInstanceData = {
     body?: PortalInstanceWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/portal-instances';
+    url: '/o/headless-portal-instances/v1.0/portal-instances';
 };
 
 export type PostPortalInstanceResponses = {
@@ -214,7 +199,7 @@ export type PutPortalInstanceActivateData = {
         portalInstanceId: string;
     };
     query?: never;
-    url: '/v1.0/portal-instances/{portalInstanceId}/activate';
+    url: '/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/activate';
 };
 
 export type PutPortalInstanceActivateResponses = {
@@ -230,7 +215,7 @@ export type PutPortalInstanceDeactivateData = {
         portalInstanceId: string;
     };
     query?: never;
-    url: '/v1.0/portal-instances/{portalInstanceId}/deactivate';
+    url: '/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/deactivate';
 };
 
 export type PutPortalInstanceDeactivateResponses = {
@@ -241,5 +226,5 @@ export type PutPortalInstanceDeactivateResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-portal-instances/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

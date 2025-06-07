@@ -57,7 +57,7 @@ export type DeleteExperimentData = {
         experimentId: string;
     };
     query?: never;
-    url: '/v1.0/experiments/{experimentId}';
+    url: '/o/segments-asah/v1.0/experiments/{experimentId}';
 };
 
 export type DeleteExperimentResponses = {
@@ -73,7 +73,7 @@ export type GetExperimentData = {
         experimentId: string;
     };
     query?: never;
-    url: '/v1.0/experiments/{experimentId}';
+    url: '/o/segments-asah/v1.0/experiments/{experimentId}';
 };
 
 export type GetExperimentResponses = {
@@ -93,7 +93,7 @@ export type DeleteExperimentBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/experiments/batch';
+    url: '/o/segments-asah/v1.0/experiments/batch';
 };
 
 export type DeleteExperimentBatchResponses = {
@@ -109,7 +109,7 @@ export type PostExperimentRunData = {
         experimentId: string;
     };
     query?: never;
-    url: '/v1.0/experiments/{experimentId}/run';
+    url: '/o/segments-asah/v1.0/experiments/{experimentId}/run';
 };
 
 export type PostExperimentRunResponses = {
@@ -121,29 +121,13 @@ export type PostExperimentRunResponses = {
 
 export type PostExperimentRunResponse = PostExperimentRunResponses[keyof PostExperimentRunResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type PostExperimentStatusData = {
     body?: StatusWritable;
     path: {
         experimentId: string;
     };
     query?: never;
-    url: '/v1.0/experiments/{experimentId}/status';
+    url: '/o/segments-asah/v1.0/experiments/{experimentId}/status';
 };
 
 export type PostExperimentStatusResponses = {
@@ -165,7 +149,7 @@ export type PostExperimentStatusBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/experiments/{experimentId}/status/batch';
+    url: '/o/segments-asah/v1.0/experiments/{experimentId}/status/batch';
 };
 
 export type PostExperimentStatusBatchResponses = {
@@ -176,5 +160,5 @@ export type PostExperimentStatusBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/segments-asah/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -28,22 +28,6 @@ export type TrendWritable = {
     classification?: 'NEGATIVE' | 'NEUTRAL' | 'POSITIVE';
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetContentOverviewData = {
     body?: never;
     path?: never;
@@ -52,7 +36,7 @@ export type GetContentOverviewData = {
         rangeKey?: string;
         spaceId?: string;
     };
-    url: '/v1.0/content-overview';
+    url: '/o/analytics-cms-rest/v1.0/content-overview';
 };
 
 export type GetContentOverviewResponses = {
@@ -72,7 +56,7 @@ export type GetFileOverviewData = {
         rangeKey?: string;
         spaceId?: string;
     };
-    url: '/v1.0/file-overview';
+    url: '/o/analytics-cms-rest/v1.0/file-overview';
 };
 
 export type GetFileOverviewResponses = {
@@ -85,5 +69,5 @@ export type GetFileOverviewResponses = {
 export type GetFileOverviewResponse = GetFileOverviewResponses[keyof GetFileOverviewResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/analytics-cms-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -4882,7 +4882,7 @@ export type DeleteSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData =
         displayPageTemplateFolderExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses = {
@@ -4903,7 +4903,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses = {
@@ -4926,7 +4926,7 @@ export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses = {
@@ -4949,7 +4949,7 @@ export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses = {
@@ -4971,8 +4971,9 @@ export type GetSiteDisplayPageTemplateFolderPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/permissions';
 };
 
 export type GetSiteDisplayPageTemplateFolderPermissionsPageResponses = {
@@ -4991,7 +4992,7 @@ export type PutSiteDisplayPageTemplateFolderPermissionsPageData = {
         displayPageTemplateFolderExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/permissions';
 };
 
 export type PutSiteDisplayPageTemplateFolderPermissionsPageResponses = {
@@ -5019,7 +5020,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageData
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageResponses = {
@@ -5037,7 +5038,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders';
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses = {
@@ -5056,7 +5057,7 @@ export type DeleteSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
         displayPageTemplateExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
@@ -5077,7 +5078,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
@@ -5100,7 +5101,7 @@ export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
@@ -5123,7 +5124,7 @@ export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
@@ -5145,8 +5146,9 @@ export type GetSiteDisplayPageTemplatePermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/permissions';
 };
 
 export type GetSiteDisplayPageTemplatePermissionsPageResponses = {
@@ -5165,7 +5167,7 @@ export type PutSiteDisplayPageTemplatePermissionsPageData = {
         displayPageTemplateExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/permissions';
 };
 
 export type PutSiteDisplayPageTemplatePermissionsPageResponses = {
@@ -5189,7 +5191,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPa
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/display-page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/display-page-templates';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplatesPageResponses = {
@@ -5212,7 +5214,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayP
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/display-page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-template-folders/{displayPageTemplateFolderExternalReferenceCode}/display-page-templates';
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplateResponses = {
@@ -5240,7 +5242,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageResponses = {
@@ -5258,7 +5260,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates';
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
@@ -5281,7 +5283,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificati
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/page-specifications';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationsPageResponses = {
@@ -5304,7 +5306,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificat
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/page-specifications';
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationResponses = {
@@ -5323,7 +5325,7 @@ export type DeleteSiteSiteByExternalReferenceCodeFragmentCompositionData = {
         fragmentCompositionExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
@@ -5344,7 +5346,7 @@ export type GetSiteSiteByExternalReferenceCodeFragmentCompositionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
@@ -5367,7 +5369,7 @@ export type PatchSiteSiteByExternalReferenceCodeFragmentCompositionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
@@ -5390,7 +5392,7 @@ export type PutSiteSiteByExternalReferenceCodeFragmentCompositionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions/{fragmentCompositionExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
@@ -5417,7 +5419,7 @@ export type GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions';
 };
 
 export type GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageResponses = {
@@ -5438,7 +5440,7 @@ export type PostSiteSiteByExternalReferenceCodeFragmentCompositionData = {
         saveInlineContent?: string;
         saveMapping?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/fragment-compositions';
 };
 
 export type PostSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
@@ -5461,7 +5463,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHist
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/friendly-url-history';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/display-page-templates/{displayPageTemplateExternalReferenceCode}/friendly-url-history';
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHistoryResponses = {
@@ -5484,7 +5486,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/friendly-url-history';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/friendly-url-history';
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryResponses = {
@@ -5507,7 +5509,7 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryData 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/friendly-url-history';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/friendly-url-history';
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryResponses = {
@@ -5526,7 +5528,7 @@ export type DeleteSiteSiteByExternalReferenceCodeMasterPageData = {
         masterPageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeMasterPageResponses = {
@@ -5547,7 +5549,7 @@ export type GetSiteSiteByExternalReferenceCodeMasterPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPageResponses = {
@@ -5570,7 +5572,7 @@ export type PatchSiteSiteByExternalReferenceCodeMasterPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeMasterPageResponses = {
@@ -5593,7 +5595,7 @@ export type PutSiteSiteByExternalReferenceCodeMasterPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeMasterPageResponses = {
@@ -5615,8 +5617,9 @@ export type GetSiteMasterPagePermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/permissions';
 };
 
 export type GetSiteMasterPagePermissionsPageResponses = {
@@ -5635,7 +5638,7 @@ export type PutSiteMasterPagePermissionsPageData = {
         masterPageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/permissions';
 };
 
 export type PutSiteMasterPagePermissionsPageResponses = {
@@ -5663,7 +5666,7 @@ export type GetSiteSiteByExternalReferenceCodeMasterPagesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages';
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPagesPageResponses = {
@@ -5681,7 +5684,7 @@ export type PostSiteSiteByExternalReferenceCodeMasterPageData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages';
 };
 
 export type PostSiteSiteByExternalReferenceCodeMasterPageResponses = {
@@ -5704,7 +5707,7 @@ export type GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageDa
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/page-specifications';
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageResponses = {
@@ -5727,7 +5730,7 @@ export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationData =
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/master-pages/{masterPageExternalReferenceCode}/page-specifications';
 };
 
 export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponses = {
@@ -5739,22 +5742,6 @@ export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationRespon
 
 export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponse = PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type DeleteSiteSiteByExternalReferenceCodePageElementData = {
     body?: never;
     path: {
@@ -5764,7 +5751,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageElementData = {
         pageElementExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageElementResponses = {
@@ -5787,7 +5774,7 @@ export type GetSiteSiteByExternalReferenceCodePageElementData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageElementResponses = {
@@ -5812,7 +5799,7 @@ export type PatchSiteSiteByExternalReferenceCodePageElementData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageElementResponses = {
@@ -5837,7 +5824,7 @@ export type PutSiteSiteByExternalReferenceCodePageElementData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageElementResponses = {
@@ -5863,7 +5850,7 @@ export type GetSiteSiteByExternalReferenceCodePageElementPageElementsPageData = 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}/page-elements';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}/page-elements';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageElementPageElementsPageResponses = {
@@ -5888,7 +5875,7 @@ export type GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageData
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageResponses = {
@@ -5912,7 +5899,7 @@ export type PostSiteSiteByExternalReferenceCodePageExperiencePageElementData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageElementResponses = {
@@ -5938,7 +5925,7 @@ export type PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionDat
         position?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}/fragment-compositions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-elements/{pageElementExternalReferenceCode}/fragment-compositions';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionResponses = {
@@ -5961,7 +5948,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageExperienceData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageExperienceResponses = {
@@ -5982,7 +5969,7 @@ export type GetSiteSiteByExternalReferenceCodePageExperienceData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperienceResponses = {
@@ -6005,7 +5992,7 @@ export type PatchSiteSiteByExternalReferenceCodePageExperienceData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageExperienceResponses = {
@@ -6028,7 +6015,7 @@ export type PutSiteSiteByExternalReferenceCodePageExperienceData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageExperienceResponses = {
@@ -6051,7 +6038,7 @@ export type GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPa
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPageResponses = {
@@ -6074,7 +6061,7 @@ export type PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceDa
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/page-experiences';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceResponses = {
@@ -6097,7 +6084,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageRuleActionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageRuleActionResponses = {
@@ -6118,7 +6105,7 @@ export type GetSiteSiteByExternalReferenceCodePageRuleActionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleActionResponses = {
@@ -6141,7 +6128,7 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleActionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleActionResponses = {
@@ -6164,7 +6151,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleActionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-actions/{pageRuleActionExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleActionResponses = {
@@ -6188,7 +6175,7 @@ export type GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageData = 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-actions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-actions';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageResponses = {
@@ -6211,7 +6198,7 @@ export type PostSiteSiteByExternalReferenceCodePageRulePageRuleActionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-actions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-actions';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleActionResponses = {
@@ -6234,7 +6221,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageRuleConditionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
@@ -6255,7 +6242,7 @@ export type GetSiteSiteByExternalReferenceCodePageRuleConditionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
@@ -6278,7 +6265,7 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleConditionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
@@ -6301,7 +6288,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleConditionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rule-conditions/{pageRuleConditionExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
@@ -6325,7 +6312,7 @@ export type GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageData
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-conditions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-conditions';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageResponses = {
@@ -6348,7 +6335,7 @@ export type PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-conditions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}/page-rule-conditions';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionResponses = {
@@ -6371,7 +6358,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageRuleData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageRuleResponses = {
@@ -6392,7 +6379,7 @@ export type GetSiteSiteByExternalReferenceCodePageRuleData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleResponses = {
@@ -6415,7 +6402,7 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleResponses = {
@@ -6438,7 +6425,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-rules/{pageRuleExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleResponses = {
@@ -6462,7 +6449,7 @@ export type GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageData = 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-rules';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-rules';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageResponses = {
@@ -6485,7 +6472,7 @@ export type PostSiteSiteByExternalReferenceCodePageExperiencePageRuleData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-rules';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-experiences/{pageExperienceExternalReferenceCode}/page-rules';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageRuleResponses = {
@@ -6508,7 +6495,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageSpecificationData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageSpecificationResponses = {
@@ -6529,7 +6516,7 @@ export type GetSiteSiteByExternalReferenceCodePageSpecificationData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageSpecificationResponses = {
@@ -6552,7 +6539,7 @@ export type PatchSiteSiteByExternalReferenceCodePageSpecificationData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageSpecificationResponses = {
@@ -6575,7 +6562,7 @@ export type PutSiteSiteByExternalReferenceCodePageSpecificationData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageSpecificationResponses = {
@@ -6598,7 +6585,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPage
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/page-specifications';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPageResponses = {
@@ -6621,7 +6608,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationData
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/page-specifications';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationResponses = {
@@ -6644,7 +6631,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageData
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/page-specifications';
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageResponses = {
@@ -6667,7 +6654,7 @@ export type PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/page-specifications';
 };
 
 export type PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationResponses = {
@@ -6690,7 +6677,7 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageD
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/page-specifications';
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageResponses = {
@@ -6713,7 +6700,7 @@ export type PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationData 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/page-specifications';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/page-specifications';
 };
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationResponses = {
@@ -6736,7 +6723,7 @@ export type PostSiteSiteByExternalReferenceCodePageSpecificationPublishData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/publish';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-specifications/{pageSpecificationExternalReferenceCode}/publish';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageSpecificationPublishResponses = {
@@ -6755,7 +6742,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageTemplateData = {
         pageTemplateExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageTemplateResponses = {
@@ -6776,7 +6763,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateResponses = {
@@ -6799,7 +6786,7 @@ export type PatchSiteSiteByExternalReferenceCodePageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateResponses = {
@@ -6822,7 +6809,7 @@ export type PutSiteSiteByExternalReferenceCodePageTemplateData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateResponses = {
@@ -6844,8 +6831,9 @@ export type GetSitePageTemplatePermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/permissions';
 };
 
 export type GetSitePageTemplatePermissionsPageResponses = {
@@ -6864,7 +6852,7 @@ export type PutSitePageTemplatePermissionsPageData = {
         pageTemplateExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates/{pageTemplateExternalReferenceCode}/permissions';
 };
 
 export type PutSitePageTemplatePermissionsPageResponses = {
@@ -6888,7 +6876,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageDa
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/page-templates';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageResponses = {
@@ -6911,7 +6899,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateData =
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/page-templates';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateResponses = {
@@ -6939,7 +6927,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplatesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplatesPageResponses = {
@@ -6957,7 +6945,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-templates';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-templates';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateResponses = {
@@ -6976,7 +6964,7 @@ export type DeleteSiteSiteByExternalReferenceCodePageTemplateSetData = {
         pageTemplateSetExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
@@ -6997,7 +6985,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
@@ -7020,7 +7008,7 @@ export type PatchSiteSiteByExternalReferenceCodePageTemplateSetData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
@@ -7043,7 +7031,7 @@ export type PutSiteSiteByExternalReferenceCodePageTemplateSetData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
@@ -7065,8 +7053,9 @@ export type GetSitePageTemplateSetPermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/permissions';
 };
 
 export type GetSitePageTemplateSetPermissionsPageResponses = {
@@ -7085,7 +7074,7 @@ export type PutSitePageTemplateSetPermissionsPageData = {
         pageTemplateSetExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets/{pageTemplateSetExternalReferenceCode}/permissions';
 };
 
 export type PutSitePageTemplateSetPermissionsPageResponses = {
@@ -7113,7 +7102,7 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetsPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets';
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetsPageResponses = {
@@ -7131,7 +7120,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateSetData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/page-template-sets';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/page-template-sets';
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
@@ -7150,7 +7139,7 @@ export type DeleteSiteSiteByExternalReferenceCodeSitePageData = {
         sitePageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeSitePageResponses = {
@@ -7171,7 +7160,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageResponses = {
@@ -7194,7 +7183,7 @@ export type PatchSiteSiteByExternalReferenceCodeSitePageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeSitePageResponses = {
@@ -7217,7 +7206,7 @@ export type PutSiteSiteByExternalReferenceCodeSitePageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeSitePageResponses = {
@@ -7245,7 +7234,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePagesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages';
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePagesPageResponses = {
@@ -7263,7 +7252,7 @@ export type PostByExternalReferenceCodeSitePageData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages';
 };
 
 export type PostByExternalReferenceCodeSitePageResponses = {
@@ -7285,8 +7274,9 @@ export type GetSiteSitePagePermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/permissions';
 };
 
 export type GetSiteSitePagePermissionsPageResponses = {
@@ -7305,7 +7295,7 @@ export type PutSiteSitePagePermissionsPageData = {
         sitePageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/permissions';
 };
 
 export type PutSiteSitePagePermissionsPageResponses = {
@@ -7324,7 +7314,7 @@ export type DeleteSiteSiteByExternalReferenceCodeUtilityPageData = {
         utilityPageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeUtilityPageResponses = {
@@ -7345,7 +7335,7 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPageResponses = {
@@ -7368,7 +7358,7 @@ export type PatchSiteSiteByExternalReferenceCodeUtilityPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeUtilityPageResponses = {
@@ -7391,7 +7381,7 @@ export type PutSiteSiteByExternalReferenceCodeUtilityPageData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeUtilityPageResponses = {
@@ -7419,7 +7409,7 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPagesPageData = {
         search?: string;
         sort?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages';
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPagesPageResponses = {
@@ -7437,7 +7427,7 @@ export type PostSiteSiteByExternalReferenceCodeUtilityPageData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages';
 };
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPageResponses = {
@@ -7459,8 +7449,9 @@ export type GetSiteUtilityPagePermissionsPageData = {
         fields?: string;
         restrictFields?: string;
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/permissions';
 };
 
 export type GetSiteUtilityPagePermissionsPageResponses = {
@@ -7479,7 +7470,7 @@ export type PutSiteUtilityPagePermissionsPageData = {
         utilityPageExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/permissions';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/utility-pages/{utilityPageExternalReferenceCode}/permissions';
 };
 
 export type PutSiteUtilityPagePermissionsPageResponses = {
@@ -7499,7 +7490,7 @@ export type DeleteSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExt
         widgetInstanceExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
 };
 
 export type DeleteSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses = {
@@ -7521,7 +7512,7 @@ export type GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExtern
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
 };
 
 export type GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses = {
@@ -7545,7 +7536,7 @@ export type PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExte
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
 };
 
 export type PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses = {
@@ -7569,7 +7560,7 @@ export type PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExtern
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances/{widgetInstanceExternalReferenceCode}';
 };
 
 export type PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses = {
@@ -7592,7 +7583,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageData = 
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances';
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageResponses = {
@@ -7615,7 +7606,7 @@ export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceData = {
         nestedFields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances';
+    url: '/o/headless-admin-site/v1.0/sites/{siteExternalReferenceCode}/site-pages/{sitePageExternalReferenceCode}/widget-instances';
 };
 
 export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses = {
@@ -7628,5 +7619,5 @@ export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses =
 export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponse = PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses[keyof PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-admin-site/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -84,8 +84,10 @@ export type PageDispatchTriggerWritable = {
 export type GetDispatchTriggersPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/dispatch-triggers';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/dispatch-rest/v1.0/dispatch-triggers';
 };
 
 export type GetDispatchTriggersPageResponses = {
@@ -101,7 +103,7 @@ export type PostDispatchTriggerData = {
     body?: DispatchTriggerWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/dispatch-triggers';
+    url: '/o/dispatch-rest/v1.0/dispatch-triggers';
 };
 
 export type PostDispatchTriggerResponses = {
@@ -121,7 +123,7 @@ export type PostDispatchTriggerBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/dispatch-triggers/batch';
+    url: '/o/dispatch-rest/v1.0/dispatch-triggers/batch';
 };
 
 export type PostDispatchTriggerBatchResponses = {
@@ -137,7 +139,7 @@ export type PostDispatchTriggerRunData = {
         dispatchTriggerId: string;
     };
     query?: never;
-    url: '/v1.0/dispatch-triggers/{dispatchTriggerId}/run';
+    url: '/o/dispatch-rest/v1.0/dispatch-triggers/{dispatchTriggerId}/run';
 };
 
 export type PostDispatchTriggerRunResponses = {
@@ -155,7 +157,7 @@ export type PostDispatchTriggersPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/dispatch-triggers/export-batch';
+    url: '/o/dispatch-rest/v1.0/dispatch-triggers/export-batch';
 };
 
 export type PostDispatchTriggersPageExportBatchResponses = {
@@ -165,22 +167,6 @@ export type PostDispatchTriggersPageExportBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/dispatch-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

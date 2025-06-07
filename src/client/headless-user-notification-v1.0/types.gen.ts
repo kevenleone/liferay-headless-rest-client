@@ -77,22 +77,6 @@ export type UserNotificationWritable = {
     message?: string;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetMyUserNotificationsPageData = {
     body?: never;
     path?: never;
@@ -104,8 +88,9 @@ export type GetMyUserNotificationsPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/my-user-notifications';
+    url: '/o/headless-user-notification/v1.0/my-user-notifications';
 };
 
 export type GetMyUserNotificationsPageResponses = {
@@ -130,8 +115,9 @@ export type GetUserAccountUserNotificationsPageData = {
         restrictFields?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/user-accounts/{userAccountId}/user-notifications';
+    url: '/o/headless-user-notification/v1.0/user-accounts/{userAccountId}/user-notifications';
 };
 
 export type GetUserAccountUserNotificationsPageResponses = {
@@ -152,7 +138,7 @@ export type GetUserNotificationData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/user-notifications/{userNotificationId}';
+    url: '/o/headless-user-notification/v1.0/user-notifications/{userNotificationId}';
 };
 
 export type GetUserNotificationResponses = {
@@ -173,7 +159,7 @@ export type PutUserNotificationReadData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/user-notifications/{userNotificationId}/read';
+    url: '/o/headless-user-notification/v1.0/user-notifications/{userNotificationId}/read';
 };
 
 export type PutUserNotificationReadResponses = {
@@ -192,7 +178,7 @@ export type PutUserNotificationUnreadData = {
         fields?: string;
         restrictFields?: string;
     };
-    url: '/v1.0/user-notifications/{userNotificationId}/unread';
+    url: '/o/headless-user-notification/v1.0/user-notifications/{userNotificationId}/unread';
 };
 
 export type PutUserNotificationUnreadResponses = {
@@ -203,5 +189,5 @@ export type PutUserNotificationUnreadResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-user-notification/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

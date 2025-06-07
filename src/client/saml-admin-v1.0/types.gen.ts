@@ -55,27 +55,11 @@ export type SpWritable = {
     signAuthnRequest?: boolean;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetSamlProviderData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/saml-provider';
+    url: '/o/saml-admin/v1.0/saml-provider';
 };
 
 export type GetSamlProviderResponses = {
@@ -91,7 +75,7 @@ export type PatchSamlProviderData = {
     body?: SamlProviderWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/saml-provider';
+    url: '/o/saml-admin/v1.0/saml-provider';
 };
 
 export type PatchSamlProviderResponses = {
@@ -107,7 +91,7 @@ export type PostSamlProviderData = {
     body?: SamlProviderWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/saml-provider';
+    url: '/o/saml-admin/v1.0/saml-provider';
 };
 
 export type PostSamlProviderResponses = {
@@ -127,7 +111,7 @@ export type PostSamlProviderBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/saml-provider/batch';
+    url: '/o/saml-admin/v1.0/saml-provider/batch';
 };
 
 export type PostSamlProviderBatchResponses = {
@@ -138,5 +122,5 @@ export type PostSamlProviderBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/saml-admin/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

@@ -242,7 +242,7 @@ export type DeleteAvailabilityEstimateData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/availabilityEstimate/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/availabilityEstimate/{id}';
 };
 
 export type DeleteAvailabilityEstimateResponses = {
@@ -258,7 +258,7 @@ export type GetAvailabilityEstimateData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/availabilityEstimate/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/availabilityEstimate/{id}';
 };
 
 export type GetAvailabilityEstimateResponses = {
@@ -276,7 +276,7 @@ export type PutAvailabilityEstimateData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/availabilityEstimate/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/availabilityEstimate/{id}';
 };
 
 export type PutAvailabilityEstimateResponses = {
@@ -294,7 +294,7 @@ export type DeleteAvailabilityEstimateBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/availabilityEstimate/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/availabilityEstimate/batch';
 };
 
 export type DeleteAvailabilityEstimateBatchResponses = {
@@ -312,7 +312,7 @@ export type PutAvailabilityEstimateBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/availabilityEstimate/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/availabilityEstimate/batch';
 };
 
 export type PutAvailabilityEstimateBatchResponses = {
@@ -330,8 +330,9 @@ export type GetCommerceAdminSiteSettingGroupAvailabilityEstimatePageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/availabilityEstimate';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/availabilityEstimate';
 };
 
 export type GetCommerceAdminSiteSettingGroupAvailabilityEstimatePageResponses = {
@@ -349,7 +350,7 @@ export type PostCommerceAdminSiteSettingGroupAvailabilityEstimateData = {
         groupId: string;
     };
     query?: never;
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/availabilityEstimate';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/availabilityEstimate';
 };
 
 export type PostCommerceAdminSiteSettingGroupAvailabilityEstimateResponses = {
@@ -367,7 +368,7 @@ export type DeleteMeasurementUnitData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/{id}';
 };
 
 export type DeleteMeasurementUnitResponses = {
@@ -383,7 +384,7 @@ export type GetMeasurementUnitData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/{id}';
 };
 
 export type GetMeasurementUnitResponses = {
@@ -401,7 +402,7 @@ export type PatchMeasurementUnitData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/{id}';
 };
 
 export type PatchMeasurementUnitResponses = {
@@ -419,7 +420,7 @@ export type DeleteMeasurementUnitBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/measurement-units/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/batch';
 };
 
 export type DeleteMeasurementUnitBatchResponses = {
@@ -437,7 +438,7 @@ export type PostMeasurementUnitBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/measurement-units/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/batch';
 };
 
 export type PostMeasurementUnitBatchResponses = {
@@ -453,7 +454,7 @@ export type DeleteMeasurementUnitByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type DeleteMeasurementUnitByExternalReferenceCodeResponses = {
@@ -469,7 +470,7 @@ export type GetMeasurementUnitByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type GetMeasurementUnitByExternalReferenceCodeResponses = {
@@ -487,7 +488,7 @@ export type PatchMeasurementUnitByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PatchMeasurementUnitByExternalReferenceCodeResponses = {
@@ -503,7 +504,7 @@ export type PutMeasurementUnitByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-externalReferenceCode/{externalReferenceCode}';
 };
 
 export type PutMeasurementUnitByExternalReferenceCodeResponses = {
@@ -521,7 +522,7 @@ export type DeleteMeasurementUnitByKeyData = {
         key: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-key/{key}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-key/{key}';
 };
 
 export type DeleteMeasurementUnitByKeyResponses = {
@@ -537,7 +538,7 @@ export type GetMeasurementUnitByKeyData = {
         key: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-key/{key}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-key/{key}';
 };
 
 export type GetMeasurementUnitByKeyResponses = {
@@ -555,7 +556,7 @@ export type PatchMeasurementUnitByKeyData = {
         key: string;
     };
     query?: never;
-    url: '/v1.0/measurement-units/by-key/{key}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-key/{key}';
 };
 
 export type PatchMeasurementUnitByKeyResponses = {
@@ -575,7 +576,7 @@ export type GetMeasurementUnitsByTypeData = {
         pageSize?: string;
         sort?: string;
     };
-    url: '/v1.0/measurement-units/by-type/{measurementUnitType}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/by-type/{measurementUnitType}';
 };
 
 export type GetMeasurementUnitsByTypeResponses = {
@@ -595,8 +596,9 @@ export type GetMeasurementUnitsPageData = {
         page?: string;
         pageSize?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/measurement-units';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units';
 };
 
 export type GetMeasurementUnitsPageResponses = {
@@ -612,7 +614,7 @@ export type PostMeasurementUnitData = {
     body?: MeasurementUnitWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/measurement-units';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units';
 };
 
 export type PostMeasurementUnitResponses = {
@@ -634,26 +636,10 @@ export type PostMeasurementUnitsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/measurement-units/export-batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/measurement-units/export-batch';
 };
 
 export type PostMeasurementUnitsPageExportBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
     /**
      * default response
      */
@@ -666,7 +652,7 @@ export type DeleteTaxCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/taxCategory/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/taxCategory/{id}';
 };
 
 export type DeleteTaxCategoryResponses = {
@@ -682,7 +668,7 @@ export type GetTaxCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/taxCategory/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/taxCategory/{id}';
 };
 
 export type GetTaxCategoryResponses = {
@@ -700,7 +686,7 @@ export type PutTaxCategoryData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/taxCategory/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/taxCategory/{id}';
 };
 
 export type PutTaxCategoryResponses = {
@@ -718,7 +704,7 @@ export type DeleteTaxCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxCategory/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/taxCategory/batch';
 };
 
 export type DeleteTaxCategoryBatchResponses = {
@@ -736,7 +722,7 @@ export type PutTaxCategoryBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/taxCategory/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/taxCategory/batch';
 };
 
 export type PutTaxCategoryBatchResponses = {
@@ -754,8 +740,9 @@ export type GetCommerceAdminSiteSettingGroupTaxCategoryPageData = {
     query?: {
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/taxCategory';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/taxCategory';
 };
 
 export type GetCommerceAdminSiteSettingGroupTaxCategoryPageResponses = {
@@ -773,7 +760,7 @@ export type PostCommerceAdminSiteSettingGroupTaxCategoryData = {
         groupId: string;
     };
     query?: never;
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/taxCategory';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/taxCategory';
 };
 
 export type PostCommerceAdminSiteSettingGroupTaxCategoryResponses = {
@@ -791,7 +778,7 @@ export type DeleteWarehouseData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouse/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/warehouse/{id}';
 };
 
 export type DeleteWarehouseResponses = {
@@ -807,7 +794,7 @@ export type GetWarehouseData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouse/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/warehouse/{id}';
 };
 
 export type GetWarehouseResponses = {
@@ -825,7 +812,7 @@ export type PutWarehouseData = {
         id: string;
     };
     query?: never;
-    url: '/v1.0/warehouse/{id}';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/warehouse/{id}';
 };
 
 export type PutWarehouseResponses = {
@@ -843,7 +830,7 @@ export type DeleteWarehouseBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/warehouse/batch';
 };
 
 export type DeleteWarehouseBatchResponses = {
@@ -861,7 +848,7 @@ export type PutWarehouseBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/warehouse/batch';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/warehouse/batch';
 };
 
 export type PutWarehouseBatchResponses = {
@@ -880,8 +867,9 @@ export type GetCommerceAdminSiteSettingGroupWarehousePageData = {
         active?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/warehouse';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/warehouse';
 };
 
 export type GetCommerceAdminSiteSettingGroupWarehousePageResponses = {
@@ -899,7 +887,7 @@ export type PostCommerceAdminSiteSettingGroupWarehouseData = {
         groupId: string;
     };
     query?: never;
-    url: '/v1.0/commerceAdminSiteSetting/{groupId}/warehouse';
+    url: '/o/headless-commerce-admin-site-setting/v1.0/commerceAdminSiteSetting/{groupId}/warehouse';
 };
 
 export type PostCommerceAdminSiteSettingGroupWarehouseResponses = {
@@ -912,5 +900,5 @@ export type PostCommerceAdminSiteSettingGroupWarehouseResponses = {
 export type PostCommerceAdminSiteSettingGroupWarehouseResponse = PostCommerceAdminSiteSettingGroupWarehouseResponses[keyof PostCommerceAdminSiteSettingGroupWarehouseResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-admin-site-setting/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

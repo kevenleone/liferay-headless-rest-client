@@ -172,8 +172,9 @@ export type GetAccountCategoryForecastsByMonthlyRevenuePageData = {
         historyLength?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accountCategoryForecasts/by-monthlyRevenue';
+    url: '/o/headless-commerce-machine-learning/v1.0/accountCategoryForecasts/by-monthlyRevenue';
 };
 
 export type GetAccountCategoryForecastsByMonthlyRevenuePageResponses = {
@@ -195,8 +196,9 @@ export type GetAccountForecastsByMonthlyRevenuePageData = {
         historyLength?: string;
         page?: string;
         pageSize?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/accountForecasts/by-monthlyRevenue';
+    url: '/o/headless-commerce-machine-learning/v1.0/accountForecasts/by-monthlyRevenue';
 };
 
 export type GetAccountForecastsByMonthlyRevenuePageResponses = {
@@ -208,22 +210,6 @@ export type GetAccountForecastsByMonthlyRevenuePageResponses = {
 
 export type GetAccountForecastsByMonthlyRevenuePageResponse = GetAccountForecastsByMonthlyRevenuePageResponses[keyof GetAccountForecastsByMonthlyRevenuePageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetSkuForecastsByMonthlyRevenuePageData = {
     body?: never;
     path?: never;
@@ -234,8 +220,9 @@ export type GetSkuForecastsByMonthlyRevenuePageData = {
         page?: string;
         pageSize?: string;
         skus?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/skuForecasts/by-monthlyDemand';
+    url: '/o/headless-commerce-machine-learning/v1.0/skuForecasts/by-monthlyDemand';
 };
 
 export type GetSkuForecastsByMonthlyRevenuePageResponses = {
@@ -248,5 +235,5 @@ export type GetSkuForecastsByMonthlyRevenuePageResponses = {
 export type GetSkuForecastsByMonthlyRevenuePageResponse = GetSkuForecastsByMonthlyRevenuePageResponses[keyof GetSkuForecastsByMonthlyRevenuePageResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-machine-learning/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

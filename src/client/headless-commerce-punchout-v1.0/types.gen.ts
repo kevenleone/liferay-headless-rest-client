@@ -292,27 +292,11 @@ export type UserWritable = {
     roles?: Array<string>;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type PostPunchOutSessionRequestData = {
     body?: PunchOutSessionWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/punchout/session/request';
+    url: '/o/headless-commerce-punchout/v1.0/punchout/session/request';
 };
 
 export type PostPunchOutSessionRequestResponses = {
@@ -325,5 +309,5 @@ export type PostPunchOutSessionRequestResponses = {
 export type PostPunchOutSessionRequestResponse = PostPunchOutSessionRequestResponses[keyof PostPunchOutSessionRequestResponses];
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/headless-commerce-punchout/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

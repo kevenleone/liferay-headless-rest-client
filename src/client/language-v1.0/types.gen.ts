@@ -71,7 +71,7 @@ export type DeleteMessageData = {
         key?: string;
         languageId?: string;
     };
-    url: '/v1.0/messages';
+    url: '/o/language/v1.0/messages';
 };
 
 export type DeleteMessageResponses = {
@@ -88,7 +88,7 @@ export type GetMessageData = {
         key?: string;
         languageId?: string;
     };
-    url: '/v1.0/messages';
+    url: '/o/language/v1.0/messages';
 };
 
 export type GetMessageResponses = {
@@ -104,7 +104,7 @@ export type PostMessageData = {
     body?: MessageWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/messages';
+    url: '/o/language/v1.0/messages';
 };
 
 export type PostMessageResponses = {
@@ -120,7 +120,7 @@ export type PutMessageData = {
     body?: MessageWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/messages';
+    url: '/o/language/v1.0/messages';
 };
 
 export type PutMessageResponses = {
@@ -142,7 +142,7 @@ export type DeleteMessageBatchData = {
         languageId?: string;
         callbackURL?: string;
     };
-    url: '/v1.0/messages/batch';
+    url: '/o/language/v1.0/messages/batch';
 };
 
 export type DeleteMessageBatchResponses = {
@@ -160,7 +160,7 @@ export type PostMessageBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/messages/batch';
+    url: '/o/language/v1.0/messages/batch';
 };
 
 export type PostMessageBatchResponses = {
@@ -178,7 +178,7 @@ export type PutMessageBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/messages/batch';
+    url: '/o/language/v1.0/messages/batch';
 };
 
 export type PutMessageBatchResponses = {
@@ -194,7 +194,7 @@ export type PostMessageImportData = {
     query?: {
         languageId?: string;
     };
-    url: '/v1.0/messages/import';
+    url: '/o/language/v1.0/messages/import';
 };
 
 export type PostMessageImportResponses = {
@@ -210,7 +210,7 @@ export type PostMessagesExportPageData = {
     query?: {
         languageId?: string;
     };
-    url: '/v1.0/messages/export';
+    url: '/o/language/v1.0/messages/export';
 };
 
 export type PostMessagesExportPageResponses = {
@@ -222,22 +222,6 @@ export type PostMessagesExportPageResponses = {
 
 export type PostMessagesExportPageResponse = PostMessagesExportPageResponses[keyof PostMessagesExportPageResponses];
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/language/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

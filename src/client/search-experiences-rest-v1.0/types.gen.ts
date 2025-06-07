@@ -1190,8 +1190,9 @@ export type GetFieldMappingInfosPageData = {
         external?: string;
         indexName?: string;
         query?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/field-mapping-infos';
+    url: '/o/search-experiences-rest/v1.0/field-mapping-infos';
 };
 
 export type GetFieldMappingInfosPageResponses = {
@@ -1214,7 +1215,7 @@ export type PostFieldMappingInfosPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/field-mapping-infos/export-batch';
+    url: '/o/search-experiences-rest/v1.0/field-mapping-infos/export-batch';
 };
 
 export type PostFieldMappingInfosPageExportBatchResponses = {
@@ -1227,8 +1228,10 @@ export type PostFieldMappingInfosPageExportBatchResponses = {
 export type GetKeywordQueryContributorsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/keyword-query-contributors';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/keyword-query-contributors';
 };
 
 export type GetKeywordQueryContributorsPageResponses = {
@@ -1248,7 +1251,7 @@ export type PostKeywordQueryContributorsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/keyword-query-contributors/export-batch';
+    url: '/o/search-experiences-rest/v1.0/keyword-query-contributors/export-batch';
 };
 
 export type PostKeywordQueryContributorsPageExportBatchResponses = {
@@ -1261,8 +1264,10 @@ export type PostKeywordQueryContributorsPageExportBatchResponses = {
 export type GetModelPrefilterContributorsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/model-prefilter-contributors';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/model-prefilter-contributors';
 };
 
 export type GetModelPrefilterContributorsPageResponses = {
@@ -1282,7 +1287,7 @@ export type PostModelPrefilterContributorsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/model-prefilter-contributors/export-batch';
+    url: '/o/search-experiences-rest/v1.0/model-prefilter-contributors/export-batch';
 };
 
 export type PostModelPrefilterContributorsPageExportBatchResponses = {
@@ -1292,27 +1297,13 @@ export type PostModelPrefilterContributorsPageExportBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetQueryPrefilterContributorsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/query-prefilter-contributors';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/query-prefilter-contributors';
 };
 
 export type GetQueryPrefilterContributorsPageResponses = {
@@ -1332,7 +1323,7 @@ export type PostQueryPrefilterContributorsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/query-prefilter-contributors/export-batch';
+    url: '/o/search-experiences-rest/v1.0/query-prefilter-contributors/export-batch';
 };
 
 export type PostQueryPrefilterContributorsPageExportBatchResponses = {
@@ -1348,7 +1339,7 @@ export type DeleteSxpBlueprintData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}';
 };
 
 export type DeleteSxpBlueprintResponses = {
@@ -1364,7 +1355,7 @@ export type GetSxpBlueprintData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}';
 };
 
 export type GetSxpBlueprintResponses = {
@@ -1382,7 +1373,7 @@ export type PatchSxpBlueprintData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}';
 };
 
 export type PatchSxpBlueprintResponses = {
@@ -1400,7 +1391,7 @@ export type PutSxpBlueprintData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}';
 };
 
 export type PutSxpBlueprintResponses = {
@@ -1420,7 +1411,7 @@ export type DeleteSxpBlueprintBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-blueprints/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/batch';
 };
 
 export type DeleteSxpBlueprintBatchResponses = {
@@ -1438,7 +1429,7 @@ export type PostSxpBlueprintBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-blueprints/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/batch';
 };
 
 export type PostSxpBlueprintBatchResponses = {
@@ -1456,7 +1447,7 @@ export type PutSxpBlueprintBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-blueprints/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/batch';
 };
 
 export type PutSxpBlueprintBatchResponses = {
@@ -1472,7 +1463,7 @@ export type GetSxpBlueprintByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSxpBlueprintByExternalReferenceCodeResponses = {
@@ -1490,7 +1481,7 @@ export type PutSxpBlueprintByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSxpBlueprintByExternalReferenceCodeResponses = {
@@ -1508,7 +1499,7 @@ export type GetSxpBlueprintExportData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}/export';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export';
 };
 
 export type GetSxpBlueprintExportResponses = {
@@ -1527,8 +1518,9 @@ export type GetSxpBlueprintsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sxp-blueprints';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints';
 };
 
 export type GetSxpBlueprintsPageResponses = {
@@ -1544,7 +1536,7 @@ export type PostSxpBlueprintData = {
     body?: SxpBlueprintWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/sxp-blueprints';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints';
 };
 
 export type PostSxpBlueprintResponses = {
@@ -1562,7 +1554,7 @@ export type PostSxpBlueprintCopyData = {
         sxpBlueprintId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-blueprints/{sxpBlueprintId}/copy';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/copy';
 };
 
 export type PostSxpBlueprintCopyResponses = {
@@ -1578,7 +1570,7 @@ export type PostSxpBlueprintValidateData = {
     body?: string;
     path?: never;
     query?: never;
-    url: '/v1.0/sxp-blueprints/validate';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/validate';
 };
 
 export type PostSxpBlueprintValidateResponses = {
@@ -1601,7 +1593,7 @@ export type PostSxpBlueprintsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sxp-blueprints/export-batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-blueprints/export-batch';
 };
 
 export type PostSxpBlueprintsPageExportBatchResponses = {
@@ -1617,7 +1609,7 @@ export type DeleteSxpElementData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}';
 };
 
 export type DeleteSxpElementResponses = {
@@ -1633,7 +1625,7 @@ export type GetSxpElementData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}';
 };
 
 export type GetSxpElementResponses = {
@@ -1651,7 +1643,7 @@ export type PatchSxpElementData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}';
 };
 
 export type PatchSxpElementResponses = {
@@ -1669,7 +1661,7 @@ export type PutSxpElementData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}';
 };
 
 export type PutSxpElementResponses = {
@@ -1689,7 +1681,7 @@ export type DeleteSxpElementBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-elements/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/batch';
 };
 
 export type DeleteSxpElementBatchResponses = {
@@ -1707,7 +1699,7 @@ export type PostSxpElementBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-elements/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/batch';
 };
 
 export type PostSxpElementBatchResponses = {
@@ -1725,7 +1717,7 @@ export type PutSxpElementBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sxp-elements/batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/batch';
 };
 
 export type PutSxpElementBatchResponses = {
@@ -1741,7 +1733,7 @@ export type GetSxpElementByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSxpElementByExternalReferenceCodeResponses = {
@@ -1759,7 +1751,7 @@ export type PutSxpElementByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSxpElementByExternalReferenceCodeResponses = {
@@ -1777,7 +1769,7 @@ export type GetSxpElementExportData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}/export';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/export';
 };
 
 export type GetSxpElementExportResponses = {
@@ -1796,8 +1788,9 @@ export type GetSxpElementsPageData = {
         pageSize?: string;
         search?: string;
         sort?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/sxp-elements';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements';
 };
 
 export type GetSxpElementsPageResponses = {
@@ -1813,7 +1806,7 @@ export type PostSxpElementData = {
     body?: SxpElementWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/sxp-elements';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements';
 };
 
 export type PostSxpElementResponses = {
@@ -1831,7 +1824,7 @@ export type PostSxpElementCopyData = {
         sxpElementId: string;
     };
     query?: never;
-    url: '/v1.0/sxp-elements/{sxpElementId}/copy';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/copy';
 };
 
 export type PostSxpElementCopyResponses = {
@@ -1847,7 +1840,7 @@ export type PostSxpElementPreviewData = {
     body?: SxpElementWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/sxp-elements/preview';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/preview';
 };
 
 export type PostSxpElementPreviewResponses = {
@@ -1863,7 +1856,7 @@ export type PostSxpElementValidateData = {
     body?: string;
     path?: never;
     query?: never;
-    url: '/v1.0/sxp-elements/validate';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/validate';
 };
 
 export type PostSxpElementValidateResponses = {
@@ -1886,7 +1879,7 @@ export type PostSxpElementsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sxp-elements/export-batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-elements/export-batch';
 };
 
 export type PostSxpElementsPageExportBatchResponses = {
@@ -1899,8 +1892,10 @@ export type PostSxpElementsPageExportBatchResponses = {
 export type GetSxpParameterContributorDefinitionsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/sxp-parameter-contributor-definitions';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions';
 };
 
 export type GetSxpParameterContributorDefinitionsPageResponses = {
@@ -1920,7 +1915,7 @@ export type PostSxpParameterContributorDefinitionsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sxp-parameter-contributor-definitions/export-batch';
+    url: '/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions/export-batch';
 };
 
 export type PostSxpParameterContributorDefinitionsPageExportBatchResponses = {
@@ -1933,8 +1928,10 @@ export type PostSxpParameterContributorDefinitionsPageExportBatchResponses = {
 export type GetSearchIndexesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/search-indexes';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/search-indexes';
 };
 
 export type GetSearchIndexesPageResponses = {
@@ -1954,7 +1951,7 @@ export type PostSearchIndexesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/search-indexes/export-batch';
+    url: '/o/search-experiences-rest/v1.0/search-indexes/export-batch';
 };
 
 export type PostSearchIndexesPageExportBatchResponses = {
@@ -1972,7 +1969,7 @@ export type PostSearchData = {
         pageSize?: string;
         query?: string;
     };
-    url: '/v1.0/search';
+    url: '/o/search-experiences-rest/v1.0/search';
 };
 
 export type PostSearchResponses = {
@@ -1989,8 +1986,10 @@ export type GetSearchableAssetNameLanguagePageData = {
     path: {
         languageId: string;
     };
-    query?: never;
-    url: '/v1.0/searchable-asset-names/{languageId}';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/searchable-asset-names/{languageId}';
 };
 
 export type GetSearchableAssetNameLanguagePageResponses = {
@@ -2005,8 +2004,10 @@ export type GetSearchableAssetNameLanguagePageResponse = GetSearchableAssetNameL
 export type GetSearchableAssetNamesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/searchable-asset-names';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/search-experiences-rest/v1.0/searchable-asset-names';
 };
 
 export type GetSearchableAssetNamesPageResponses = {
@@ -2026,7 +2027,7 @@ export type PostSearchableAssetNamesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/searchable-asset-names/export-batch';
+    url: '/o/search-experiences-rest/v1.0/searchable-asset-names/export-batch';
 };
 
 export type PostSearchableAssetNamesPageExportBatchResponses = {
@@ -2037,5 +2038,5 @@ export type PostSearchableAssetNamesPageExportBatchResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/search-experiences-rest/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };

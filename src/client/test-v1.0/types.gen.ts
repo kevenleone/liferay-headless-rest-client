@@ -531,8 +531,10 @@ export type PostTestEntityMultipartBulkRequestBodyWritable = {
 export type GetCompanyTestEntitiesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/company-test-entities';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/company-test-entities';
 };
 
 export type GetCompanyTestEntitiesPageResponses = {
@@ -548,7 +550,7 @@ export type PostCompanyTestEntityData = {
     body?: CompanyTestEntityWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/company-test-entities';
+    url: '/o/test/v1.0/company-test-entities';
 };
 
 export type PostCompanyTestEntityResponses = {
@@ -566,7 +568,7 @@ export type GetCompanyTestEntityData = {
         companyTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/{companyTestEntityId}';
+    url: '/o/test/v1.0/company-test-entities/{companyTestEntityId}';
 };
 
 export type GetCompanyTestEntityResponses = {
@@ -584,7 +586,7 @@ export type PatchCompanyTestEntityData = {
         companyTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/{companyTestEntityId}';
+    url: '/o/test/v1.0/company-test-entities/{companyTestEntityId}';
 };
 
 export type PatchCompanyTestEntityResponses = {
@@ -602,7 +604,7 @@ export type PutCompanyTestEntityData = {
         companyTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/{companyTestEntityId}';
+    url: '/o/test/v1.0/company-test-entities/{companyTestEntityId}';
 };
 
 export type PutCompanyTestEntityResponses = {
@@ -620,7 +622,7 @@ export type GetCompanyTestEntityByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/test/v1.0/company-test-entities/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetCompanyTestEntityByExternalReferenceCodeResponses = {
@@ -638,7 +640,7 @@ export type PutCompanyTestEntityByExternalReferenceCodeData = {
         externalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/test/v1.0/company-test-entities/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutCompanyTestEntityByExternalReferenceCodeResponses = {
@@ -657,8 +659,9 @@ export type GetCompanyTestEntityPermissionsPageData = {
     };
     query?: {
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/company-test-entities/{companyTestEntityId}/permissions';
+    url: '/o/test/v1.0/company-test-entities/{companyTestEntityId}/permissions';
 };
 
 export type GetCompanyTestEntityPermissionsPageResponses = {
@@ -676,7 +679,7 @@ export type PutCompanyTestEntityPermissionsPageData = {
         companyTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/company-test-entities/{companyTestEntityId}/permissions';
+    url: '/o/test/v1.0/company-test-entities/{companyTestEntityId}/permissions';
 };
 
 export type PutCompanyTestEntityPermissionsPageResponses = {
@@ -696,7 +699,7 @@ export type PostCompanyTestEntitiesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/company-test-entities/export-batch';
+    url: '/o/test/v1.0/company-test-entities/export-batch';
 };
 
 export type PostCompanyTestEntitiesPageExportBatchResponses = {
@@ -714,7 +717,7 @@ export type PostCompanyTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/company-test-entities/batch';
+    url: '/o/test/v1.0/company-test-entities/batch';
 };
 
 export type PostCompanyTestEntityBatchResponses = {
@@ -732,7 +735,7 @@ export type PutCompanyTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/company-test-entities/batch';
+    url: '/o/test/v1.0/company-test-entities/batch';
 };
 
 export type PutCompanyTestEntityBatchResponses = {
@@ -747,8 +750,10 @@ export type GetAssetLibraryErcAssetLibraryTestEntitiesPageData = {
     path: {
         assetLibraryExternalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities';
 };
 
 export type GetAssetLibraryErcAssetLibraryTestEntitiesPageResponses = {
@@ -766,7 +771,7 @@ export type PostAssetLibraryErcAssetLibraryTestEntityData = {
         assetLibraryExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities';
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities';
 };
 
 export type PostAssetLibraryErcAssetLibraryTestEntityResponses = {
@@ -785,7 +790,7 @@ export type GetAssetLibraryErcAssetLibraryTestEntityErcAssetLibraryTestEntityExt
         ercAssetLibraryTestEntityExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/{ercAssetLibraryTestEntityExternalReferenceCode}';
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/{ercAssetLibraryTestEntityExternalReferenceCode}';
 };
 
 export type GetAssetLibraryErcAssetLibraryTestEntityErcAssetLibraryTestEntityExternalReferenceCodeResponses = {
@@ -804,7 +809,7 @@ export type PutAssetLibraryErcAssetLibraryTestEntityErcAssetLibraryTestEntityExt
         ercAssetLibraryTestEntityExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/{ercAssetLibraryTestEntityExternalReferenceCode}';
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/{ercAssetLibraryTestEntityExternalReferenceCode}';
 };
 
 export type PutAssetLibraryErcAssetLibraryTestEntityErcAssetLibraryTestEntityExternalReferenceCodeResponses = {
@@ -826,7 +831,7 @@ export type PostAssetLibraryErcAssetLibraryTestEntitiesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/export-batch';
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/export-batch';
 };
 
 export type PostAssetLibraryErcAssetLibraryTestEntitiesPageExportBatchResponses = {
@@ -846,7 +851,7 @@ export type PostAssetLibraryErcAssetLibraryTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/batch';
+    url: '/o/test/v1.0/asset-libraries/{assetLibraryExternalReferenceCode}/erc-asset-library-test-entities/batch';
 };
 
 export type PostAssetLibraryErcAssetLibraryTestEntityBatchResponses = {
@@ -861,8 +866,10 @@ export type GetSiteErcSiteTestEntitiesPageData = {
     path: {
         siteExternalReferenceCode: string;
     };
-    query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities';
 };
 
 export type GetSiteErcSiteTestEntitiesPageResponses = {
@@ -880,7 +887,7 @@ export type PostSiteErcSiteTestEntityData = {
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities';
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities';
 };
 
 export type PostSiteErcSiteTestEntityResponses = {
@@ -899,7 +906,7 @@ export type GetSiteErcSiteTestEntityErcSiteTestEntityExternalReferenceCodeData =
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/{ercSiteTestEntityExternalReferenceCode}';
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/{ercSiteTestEntityExternalReferenceCode}';
 };
 
 export type GetSiteErcSiteTestEntityErcSiteTestEntityExternalReferenceCodeResponses = {
@@ -918,7 +925,7 @@ export type PutSiteErcSiteTestEntityErcSiteTestEntityExternalReferenceCodeData =
         siteExternalReferenceCode: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/{ercSiteTestEntityExternalReferenceCode}';
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/{ercSiteTestEntityExternalReferenceCode}';
 };
 
 export type PutSiteErcSiteTestEntityErcSiteTestEntityExternalReferenceCodeResponses = {
@@ -940,7 +947,7 @@ export type PostSiteErcSiteTestEntitiesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/export-batch';
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/export-batch';
 };
 
 export type PostSiteErcSiteTestEntitiesPageExportBatchResponses = {
@@ -960,7 +967,7 @@ export type PostSiteErcSiteTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/batch';
+    url: '/o/test/v1.0/sites/{siteExternalReferenceCode}/erc-site-test-entities/batch';
 };
 
 export type PostSiteErcSiteTestEntityBatchResponses = {
@@ -973,8 +980,10 @@ export type PostSiteErcSiteTestEntityBatchResponses = {
 export type GetEntityModelResourceTestEntities1PageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/entity-model-resource-test-entities1';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/entity-model-resource-test-entities1';
 };
 
 export type GetEntityModelResourceTestEntities1PageResponses = {
@@ -992,7 +1001,7 @@ export type GetEntityModelResourceTestEntities2EntityModelResourceTestEntity2Dat
         entityModelResourceTestEntity2Id: string;
     };
     query?: never;
-    url: '/v1.0/entity-model-resource-test-entities2/{entityModelResourceTestEntity2Id}';
+    url: '/o/test/v1.0/entity-model-resource-test-entities2/{entityModelResourceTestEntity2Id}';
 };
 
 export type GetEntityModelResourceTestEntities2EntityModelResourceTestEntity2Responses = {
@@ -1007,8 +1016,10 @@ export type GetEntityModelResourceTestEntities2EntityModelResourceTestEntity2Res
 export type GetFiltersPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/filters';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/filters';
 };
 
 export type GetFiltersPageResponses = {
@@ -1028,7 +1039,7 @@ export type PostFiltersPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/filters/export-batch';
+    url: '/o/test/v1.0/filters/export-batch';
 };
 
 export type PostFiltersPageExportBatchResponses = {
@@ -1044,7 +1055,7 @@ export type GetMultipartTestEntityData = {
         multipartTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/multipart-test-entities/{multipartTestEntityId}';
+    url: '/o/test/v1.0/multipart-test-entities/{multipartTestEntityId}';
 };
 
 export type GetMultipartTestEntityResponses = {
@@ -1062,7 +1073,7 @@ export type PatchMultipartTestEntityData = {
         multipartTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/multipart-test-entities/{multipartTestEntityId}';
+    url: '/o/test/v1.0/multipart-test-entities/{multipartTestEntityId}';
 };
 
 export type PatchMultipartTestEntityResponses = {
@@ -1080,7 +1091,7 @@ export type PutMultipartTestEntityData = {
         multipartTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/multipart-test-entities/{multipartTestEntityId}';
+    url: '/o/test/v1.0/multipart-test-entities/{multipartTestEntityId}';
 };
 
 export type PutMultipartTestEntityResponses = {
@@ -1098,7 +1109,7 @@ export type PutMultipartTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/multipart-test-entities/batch';
+    url: '/o/test/v1.0/multipart-test-entities/batch';
 };
 
 export type PutMultipartTestEntityBatchResponses = {
@@ -1108,27 +1119,13 @@ export type PutMultipartTestEntityBatchResponses = {
     default: unknown;
 };
 
-export type GetOpenApiData = {
-    body?: never;
-    path: {
-        type: string;
-    };
-    query?: never;
-    url: '/v1.0/openapi.{type}';
-};
-
-export type GetOpenApiResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
 export type GetSchemasPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/schemas';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/schemas';
 };
 
 export type GetSchemasPageResponses = {
@@ -1148,7 +1145,7 @@ export type PostSchemasPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/schemas/export-batch';
+    url: '/o/test/v1.0/schemas/export-batch';
 };
 
 export type PostSchemasPageExportBatchResponses = {
@@ -1163,8 +1160,10 @@ export type GetSiteSiteTestEntitiesPageData = {
     path: {
         siteId: string;
     };
-    query?: never;
-    url: '/v1.0/sites/{siteId}/site-test-entities';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities';
 };
 
 export type GetSiteSiteTestEntitiesPageResponses = {
@@ -1182,7 +1181,7 @@ export type PostSiteSiteTestEntityData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/site-test-entities';
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities';
 };
 
 export type PostSiteSiteTestEntityResponses = {
@@ -1201,7 +1200,7 @@ export type GetSiteSiteTestEntityByExternalReferenceCodeData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/site-test-entities/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type GetSiteSiteTestEntityByExternalReferenceCodeResponses = {
@@ -1220,7 +1219,7 @@ export type PutSiteSiteTestEntityByExternalReferenceCodeData = {
         siteId: string;
     };
     query?: never;
-    url: '/v1.0/sites/{siteId}/site-test-entities/by-external-reference-code/{externalReferenceCode}';
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities/by-external-reference-code/{externalReferenceCode}';
 };
 
 export type PutSiteSiteTestEntityByExternalReferenceCodeResponses = {
@@ -1238,7 +1237,7 @@ export type GetSiteTestEntityData = {
         siteTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/site-test-entities/{siteTestEntityId}';
+    url: '/o/test/v1.0/site-test-entities/{siteTestEntityId}';
 };
 
 export type GetSiteTestEntityResponses = {
@@ -1256,7 +1255,7 @@ export type PatchSiteTestEntityData = {
         siteTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/site-test-entities/{siteTestEntityId}';
+    url: '/o/test/v1.0/site-test-entities/{siteTestEntityId}';
 };
 
 export type PatchSiteTestEntityResponses = {
@@ -1274,7 +1273,7 @@ export type PutSiteTestEntityData = {
         siteTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/site-test-entities/{siteTestEntityId}';
+    url: '/o/test/v1.0/site-test-entities/{siteTestEntityId}';
 };
 
 export type PutSiteTestEntityResponses = {
@@ -1293,8 +1292,9 @@ export type GetSiteTestEntityPermissionsPageData = {
     };
     query?: {
         roleNames?: string;
+        nestedFields?: string;
     };
-    url: '/v1.0/site-test-entities/{siteTestEntityId}/permissions';
+    url: '/o/test/v1.0/site-test-entities/{siteTestEntityId}/permissions';
 };
 
 export type GetSiteTestEntityPermissionsPageResponses = {
@@ -1312,7 +1312,7 @@ export type PutSiteTestEntityPermissionsPageData = {
         siteTestEntityId: string;
     };
     query?: never;
-    url: '/v1.0/site-test-entities/{siteTestEntityId}/permissions';
+    url: '/o/test/v1.0/site-test-entities/{siteTestEntityId}/permissions';
 };
 
 export type PutSiteTestEntityPermissionsPageResponses = {
@@ -1334,7 +1334,7 @@ export type PostSiteSiteTestEntitiesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sites/{siteId}/site-test-entities/export-batch';
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities/export-batch';
 };
 
 export type PostSiteSiteTestEntitiesPageExportBatchResponses = {
@@ -1354,7 +1354,7 @@ export type PostSiteSiteTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/sites/{siteId}/site-test-entities/batch';
+    url: '/o/test/v1.0/sites/{siteId}/site-test-entities/batch';
 };
 
 export type PostSiteSiteTestEntityBatchResponses = {
@@ -1372,7 +1372,7 @@ export type PutSiteTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/site-test-entities/batch';
+    url: '/o/test/v1.0/site-test-entities/batch';
 };
 
 export type PutSiteTestEntityBatchResponses = {
@@ -1385,8 +1385,10 @@ export type PutSiteTestEntityBatchResponses = {
 export type GetSortsPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/sorts';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/sorts';
 };
 
 export type GetSortsPageResponses = {
@@ -1406,7 +1408,7 @@ export type PostSortsPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/sorts/export-batch';
+    url: '/o/test/v1.0/sorts/export-batch';
 };
 
 export type PostSortsPageExportBatchResponses = {
@@ -1422,7 +1424,7 @@ export type GetTestEntityTestEntityAddressData = {
         testEntityId: string;
     };
     query?: never;
-    url: '/v1.0/test-entities/{testEntityId}/test-entity-address';
+    url: '/o/test/v1.0/test-entities/{testEntityId}/test-entity-address';
 };
 
 export type GetTestEntityTestEntityAddressResponses = {
@@ -1442,7 +1444,7 @@ export type DeleteTestEntityData = {
     query?: {
         permanent?: string;
     };
-    url: '/v1.0/test-entities/{testEntityId}';
+    url: '/o/test/v1.0/test-entities/{testEntityId}';
 };
 
 export type DeleteTestEntityResponses = {
@@ -1458,7 +1460,7 @@ export type GetTestEntityData = {
         testEntityId: string;
     };
     query?: never;
-    url: '/v1.0/test-entities/{testEntityId}';
+    url: '/o/test/v1.0/test-entities/{testEntityId}';
 };
 
 export type GetTestEntityResponses = {
@@ -1478,7 +1480,7 @@ export type PatchTestEntityData = {
     query?: {
         optionalParameter?: string;
     };
-    url: '/v1.0/test-entities/{testEntityId}';
+    url: '/o/test/v1.0/test-entities/{testEntityId}';
 };
 
 export type PatchTestEntityResponses = {
@@ -1498,7 +1500,7 @@ export type PutTestEntityData = {
     query?: {
         optionalParameter?: string;
     };
-    url: '/v1.0/test-entities/{testEntityId}';
+    url: '/o/test/v1.0/test-entities/{testEntityId}';
 };
 
 export type PutTestEntityResponses = {
@@ -1519,7 +1521,7 @@ export type DeleteTestEntityBatchData = {
         permanent?: string;
         callbackURL?: string;
     };
-    url: '/v1.0/test-entities/batch';
+    url: '/o/test/v1.0/test-entities/batch';
 };
 
 export type DeleteTestEntityBatchResponses = {
@@ -1537,7 +1539,7 @@ export type PostTestEntityBatchData = {
     query?: {
         callbackURL?: string;
     };
-    url: '/v1.0/test-entities/batch';
+    url: '/o/test/v1.0/test-entities/batch';
 };
 
 export type PostTestEntityBatchResponses = {
@@ -1556,7 +1558,7 @@ export type PutTestEntityBatchData = {
         optionalParameter?: string;
         callbackURL?: string;
     };
-    url: '/v1.0/test-entities/batch';
+    url: '/o/test/v1.0/test-entities/batch';
 };
 
 export type PutTestEntityBatchResponses = {
@@ -1569,8 +1571,10 @@ export type PutTestEntityBatchResponses = {
 export type GetTestEntitiesPageData = {
     body?: never;
     path?: never;
-    query?: never;
-    url: '/v1.0/test-entities';
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/test/v1.0/test-entities';
 };
 
 export type GetTestEntitiesPageResponses = {
@@ -1586,7 +1590,7 @@ export type PostTestEntityData = {
     body?: TestEntityWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/test-entities';
+    url: '/o/test/v1.0/test-entities';
 };
 
 export type PostTestEntityResponses = {
@@ -1602,7 +1606,7 @@ export type GetTestEntityCountData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/v1.0/test-entities/count';
+    url: '/o/test/v1.0/test-entities/count';
 };
 
 export type GetTestEntityCountResponses = {
@@ -1618,7 +1622,7 @@ export type PostReservedWordData = {
     body?: boolean;
     path?: never;
     query?: never;
-    url: '/v1.0/reserved-word';
+    url: '/o/test/v1.0/reserved-word';
 };
 
 export type PostReservedWordResponses = {
@@ -1636,7 +1640,7 @@ export type PostTestEntitiesPageExportBatchData = {
         contentType?: string;
         fieldNames?: string;
     };
-    url: '/v1.0/test-entities/export-batch';
+    url: '/o/test/v1.0/test-entities/export-batch';
 };
 
 export type PostTestEntitiesPageExportBatchResponses = {
@@ -1650,7 +1654,7 @@ export type PostTestEntityMultipartBulkData = {
     body?: PostTestEntityMultipartBulkRequestBodyWritable;
     path?: never;
     query?: never;
-    url: '/v1.0/test-entities/multipart/bulk';
+    url: '/o/test/v1.0/test-entities/multipart/bulk';
 };
 
 export type PostTestEntityMultipartBulkResponses = {
@@ -1661,5 +1665,5 @@ export type PostTestEntityMultipartBulkResponses = {
 };
 
 export type ClientOptions = {
-    baseUrl: 'http://localhost:8080/o/test/' | (string & {});
+    baseUrl: 'http://localhost:8080' | (string & {});
 };
