@@ -3,13 +3,17 @@
   "workspaces": {
     "": {
       "name": "liferay-rest-client",
+      "dependencies": {
+        "@hey-api/client-fetch": "^0.12.0",
+      },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
-        "@hey-api/openapi-ts": "^0.71.1",
+        "@hey-api/openapi-ts": "0.71.1",
         "@types/bun": "latest",
+        "dts-minify": "^0.3.3",
       },
       "peerDependencies": {
-        "typescript": "^5.0.0",
+        "typescript": "5.8.3",
       },
     },
   },
@@ -31,6 +35,8 @@
     "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@1.9.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg=="],
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@1.9.4", "", { "os": "win32", "cpu": "x64" }, "sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA=="],
+
+    "@hey-api/client-fetch": ["@hey-api/client-fetch@0.12.0", "", { "peerDependencies": { "@hey-api/openapi-ts": "< 2" } }, "sha512-/iZ6dhs39N0kjzCa9tlNeLNufVUd8zzv/wI1ewQt5AEHaVuDnAxvuQT+fRIPYkfIWKR3gVZKRp5mcCo29voYzQ=="],
 
     "@hey-api/json-schema-ref-parser": ["@hey-api/json-schema-ref-parser@1.0.6", "", { "dependencies": { "@jsdevtools/ono": "^7.1.3", "@types/json-schema": "^7.0.15", "js-yaml": "^4.1.0", "lodash": "^4.17.21" } }, "sha512-yktiFZoWPtEW8QKS65eqKwA5MTKp88CyiL8q72WynrBs/73SAaxlSWlA2zW/DZlywZ5hX1OYzrCC0wFdvO9c2w=="],
 
@@ -73,6 +79,8 @@
     "destr": ["destr@2.0.5", "", {}, "sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA=="],
 
     "dotenv": ["dotenv@16.5.0", "", {}, "sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg=="],
+
+    "dts-minify": ["dts-minify@0.3.3", "", {}, "sha512-REaaCkkcpfG+I3gVwU58xco6NH7ZOE7yCo780L008pONbgHvv6ukKZWxiC2V43JCN36lx4tE8qHctrwWdWZYnQ=="],
 
     "fs-minipass": ["fs-minipass@2.1.0", "", { "dependencies": { "minipass": "^3.0.0" } }, "sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg=="],
 

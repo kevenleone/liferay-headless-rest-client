@@ -1,5 +1,20 @@
 {
+    "author": {
+        "name": "Keven Leone",
+        "email": "keven.santos.sz@gmail.com"
+    },
+    "description": "A collection of Headless Clients used in Liferay Portal",
+    "dependencies": {
+        "@hey-api/client-fetch": "^0.12.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.4",
+        "@hey-api/openapi-ts": "0.71.1",
+        "@types/bun": "latest",
+        "dts-minify": "^0.3.3"
+    },
     "exports": {
+        ".": "./dist/client/index.js",
         "./analytics-cms-rest-v1.0": "./dist/client/analytics-cms-rest-v1.0/index.js",
         "./analytics-reports-rest-v1.0": "./dist/client/analytics-reports-rest-v1.0/index.js",
         "./analytics-settings-rest-v1.0": "./dist/client/analytics-settings-rest-v1.0/index.js",
@@ -52,22 +67,18 @@
         "./segments-asah-v1.0": "./dist/client/segments-asah-v1.0/index.js",
         "./test-v1.0": "./dist/client/test-v1.0/index.js"
     },
-    "devDependencies": {
-        "@biomejs/biome": "1.9.4",
-        "@hey-api/openapi-ts": "^0.71.1",
-        "@types/bun": "latest"
-    },
     "module": "index.ts",
-    "name": "liferay-rest-client",
-    "type": "module",
-    "sideEffects": false,
-    "types": "./dist/client/index.d.ts",
-    "scripts": {
-        "format": "biome format .",
-        "build": "bun build ./src/client/**/*.ts --outdir ./dist/client --target node --root ./src/client && tsc --emitDeclarationOnly --declaration --outDir ./dist/client ./src/client/index.ts"
-    },
+    "name": "liferay-headless-rest-client",
     "peerDependencies": {
-        "typescript": "^5.0.0"
+        "typescript": "5.8.3"
     },
+    "sideEffects": false,
+    "scripts": {
+        "build": "bun build ./src/client/*.ts ./src/client/**/*.ts --outdir ./dist/client --target node --root ./src/client --minify && tsc --emitDeclarationOnly --declaration --outDir ./dist/client ./src/client/index.ts || true",
+        "format": "biome format .",
+        "postbuild": "bun run src/tools/minify-dts"
+    },
+    "type": "module",
+    "types": "./dist/client/index.d.ts",
     "version": "1.0.0.2025Q2"
 }
