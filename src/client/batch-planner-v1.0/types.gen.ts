@@ -10,7 +10,7 @@ export type FacetValue = {
     term?: string;
 };
 
-export type FieldReadable = {
+export type Field = {
     anyOfGroup?: string;
     description?: string;
     name?: string;
@@ -20,19 +20,10 @@ export type FieldReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type FieldWritable = {
-    anyOfGroup?: string;
-    description?: string;
-    name?: string;
-    required?: boolean;
-    type?: string;
-    unsupportedFormats?: Array<string>;
-};
-
-export type PageFieldReadable = {
+export type PageField = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FieldReadable>;
+    items?: Array<Field>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -43,21 +34,7 @@ export type PageFieldReadable = {
     page?: number;
 };
 
-export type PageFieldWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<FieldWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type MappingReadable = {
+export type Mapping = {
     externalFieldName?: string;
     externalFieldType?: string;
     id?: number;
@@ -68,17 +45,7 @@ export type MappingReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type MappingWritable = {
-    externalFieldName?: string;
-    externalFieldType?: string;
-    id?: number;
-    internalFieldName?: string;
-    internalFieldType?: string;
-    planId?: number;
-    script?: string;
-};
-
-export type PlanReadable = {
+export type Plan = {
     active?: boolean;
     export?: boolean;
     externalType?: string;
@@ -86,9 +53,9 @@ export type PlanReadable = {
     id?: number;
     internalClassName?: string;
     readonly internalClassNameKey?: string;
-    mappings?: Array<MappingReadable>;
+    mappings?: Array<Mapping>;
     name?: string;
-    policies?: Array<PolicyReadable>;
+    policies?: Array<Policy>;
     size?: number;
     status?: number;
     taskItemDelegateName?: string;
@@ -97,24 +64,7 @@ export type PlanReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type PlanWritable = {
-    active?: boolean;
-    export?: boolean;
-    externalType?: string;
-    externalURL?: string;
-    id?: number;
-    internalClassName?: string;
-    mappings?: Array<MappingWritable>;
-    name?: string;
-    policies?: Array<PolicyWritable>;
-    size?: number;
-    status?: number;
-    taskItemDelegateName?: string;
-    template?: boolean;
-    total?: number;
-};
-
-export type PolicyReadable = {
+export type Policy = {
     id?: number;
     name?: string;
     planId?: number;
@@ -122,17 +72,10 @@ export type PolicyReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type PolicyWritable = {
-    id?: number;
-    name?: string;
-    planId?: number;
-    value?: string;
-};
-
-export type PagePlanReadable = {
+export type PagePlan = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlanReadable>;
+    items?: Array<Plan>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -143,10 +86,10 @@ export type PagePlanReadable = {
     page?: number;
 };
 
-export type PagePlanWritable = {
+export type PageSiteScope = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlanWritable>;
+    items?: Array<SiteScope>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -157,49 +100,16 @@ export type PagePlanWritable = {
     page?: number;
 };
 
-export type PageSiteScopeReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SiteScopeReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageSiteScopeWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SiteScopeWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type SiteScopeReadable = {
+export type SiteScope = {
     label?: string;
     value?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type SiteScopeWritable = {
-    label?: string;
-    value?: number;
-};
-
-export type PageStrategyReadable = {
+export type PageStrategy = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<StrategyReadable>;
+    items?: Array<Strategy>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -210,29 +120,10 @@ export type PageStrategyReadable = {
     page?: number;
 };
 
-export type PageStrategyWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<StrategyWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type StrategyReadable = {
+export type Strategy = {
     name?: string;
     type?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type StrategyWritable = {
-    name?: string;
-    type?: string;
 };
 
 export type GetPlanInternalClassNameKeyFieldsPageData = {
@@ -251,7 +142,7 @@ export type GetPlanInternalClassNameKeyFieldsPageResponses = {
     /**
      * default response
      */
-    default: PageFieldReadable;
+    default: PageField;
 };
 
 export type GetPlanInternalClassNameKeyFieldsPageResponse = GetPlanInternalClassNameKeyFieldsPageResponses[keyof GetPlanInternalClassNameKeyFieldsPageResponses];
@@ -285,13 +176,13 @@ export type GetPlanResponses = {
     /**
      * default response
      */
-    default: PlanReadable;
+    default: Plan;
 };
 
 export type GetPlanResponse = GetPlanResponses[keyof GetPlanResponses];
 
 export type PatchPlanData = {
-    body?: PlanWritable;
+    body?: Plan;
     path: {
         planId: string;
     };
@@ -303,7 +194,7 @@ export type PatchPlanResponses = {
     /**
      * default response
      */
-    default: PlanReadable;
+    default: Plan;
 };
 
 export type PatchPlanResponse = PatchPlanResponses[keyof PatchPlanResponses];
@@ -341,13 +232,13 @@ export type GetPlansPageResponses = {
     /**
      * default response
      */
-    default: PagePlanReadable;
+    default: PagePlan;
 };
 
 export type GetPlansPageResponse = GetPlansPageResponses[keyof GetPlansPageResponses];
 
 export type PostPlanData = {
-    body?: PlanWritable;
+    body?: Plan;
     path?: never;
     query?: never;
     url: '/o/batch-planner/v1.0/plans';
@@ -357,7 +248,7 @@ export type PostPlanResponses = {
     /**
      * default response
      */
-    default: PlanReadable;
+    default: Plan;
 };
 
 export type PostPlanResponse = PostPlanResponses[keyof PostPlanResponses];
@@ -378,7 +269,7 @@ export type GetPlanInternalClassNameKeySiteScopesPageResponses = {
     /**
      * default response
      */
-    default: PageSiteScopeReadable;
+    default: PageSiteScope;
 };
 
 export type GetPlanInternalClassNameKeySiteScopesPageResponse = GetPlanInternalClassNameKeySiteScopesPageResponses[keyof GetPlanInternalClassNameKeySiteScopesPageResponses];
@@ -398,7 +289,7 @@ export type GetPlanInternalClassNameKeyStrategiesPageResponses = {
     /**
      * default response
      */
-    default: PageStrategyReadable;
+    default: PageStrategy;
 };
 
 export type GetPlanInternalClassNameKeyStrategiesPageResponse = GetPlanInternalClassNameKeyStrategiesPageResponses[keyof GetPlanInternalClassNameKeyStrategiesPageResponses];

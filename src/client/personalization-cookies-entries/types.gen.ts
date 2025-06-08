@@ -3,7 +3,7 @@
 /**
  * Represents a collaborator for an entry.
  */
-export type CollaboratorReadable = {
+export type Collaborator = {
     /**
      * The collaborator actions for the shared asset.
      */
@@ -16,7 +16,7 @@ export type CollaboratorReadable = {
             [key: string]: unknown;
         };
     };
-    creator?: CreatorReadable;
+    creator?: Creator;
     /**
      * The expiration date to be a collaborator of the asset.
      */
@@ -48,34 +48,7 @@ export type CollaboratorReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Represents a collaborator for an entry.
- */
-export type CollaboratorWritable = {
-    /**
-     * The collaborator actions for the shared asset.
-     */
-    actionIds: Array<string>;
-    creator?: CreatorWritable;
-    /**
-     * The expiration date to be a collaborator of the asset.
-     */
-    dateExpired?: string;
-    /**
-     * The collaborator ID.
-     */
-    id?: number;
-    /**
-     * If the collaborator can share or not the asset.
-     */
-    share?: boolean;
-    /**
-     * The collaborator type.
-     */
-    type: string;
-};
-
-export type CreatorReadable = {
+export type Creator = {
     /**
      * The author's additional name (e.g., middle name).
      */
@@ -144,24 +117,10 @@ export type FacetValue = {
     term?: string;
 };
 
-export type PageCollaboratorReadable = {
+export type PageCollaborator = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CollaboratorReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageCollaboratorWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<CollaboratorWritable>;
+    items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -175,22 +134,15 @@ export type PageCollaboratorWritable = {
 /**
  * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
  */
-export type AuditEventReadable = {
-    readonly auditFieldChanges?: Array<AuditFieldChangeReadable>;
-    creator?: CreatorReadable;
+export type AuditEvent = {
+    readonly auditFieldChanges?: Array<AuditFieldChange>;
+    creator?: Creator;
     readonly dateCreated?: string;
     readonly eventType?: string;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
- */
-export type AuditEventWritable = {
-    creator?: CreatorWritable;
-};
-
-export type AuditFieldChangeReadable = {
+export type AuditFieldChange = {
     name?: string;
     newValue?: {
         [key: string]: unknown;
@@ -201,17 +153,7 @@ export type AuditFieldChangeReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type AuditFieldChangeWritable = {
-    name?: string;
-    newValue?: {
-        [key: string]: unknown;
-    };
-    oldValue?: {
-        [key: string]: unknown;
-    };
-};
-
-export type ParentTaxonomyCategoryReadable = {
+export type ParentTaxonomyCategory = {
     /**
      * The parent taxonomy category's external reference code.
      */
@@ -219,26 +161,12 @@ export type ParentTaxonomyCategoryReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ParentTaxonomyCategoryWritable = {
-    /**
-     * The parent taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-};
-
-export type ParentTaxonomyVocabularyReadable = {
+export type ParentTaxonomyVocabulary = {
     /**
      * The parent category's `TaxonomyVocabulary` external reference code.
      */
     externalReferenceCode?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type ParentTaxonomyVocabularyWritable = {
-    /**
-     * The parent category's `TaxonomyVocabulary` external reference code.
-     */
-    externalReferenceCode?: string;
 };
 
 export type Permission = {
@@ -248,43 +176,32 @@ export type Permission = {
     roleType?: string;
 };
 
-export type ScopeReadable = {
+export type Scope = {
     externalReferenceCode?: string;
     readonly 'x-class-name'?: string;
     type?: 'AssetLibrary' | 'Site';
 };
 
-export type ScopeWritable = {
-    externalReferenceCode?: string;
-    type?: 'AssetLibrary' | 'Site';
-};
-
-export type StatusReadable = {
+export type Status = {
     code: number;
     label?: string;
     label_i18n?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type StatusWritable = {
-    code: number;
-    label?: string;
-    label_i18n?: string;
 };
 
 /**
  * The categories associated with this object entry.
  */
-export type TaxonomyCategoryBriefReadable = {
+export type TaxonomyCategoryBrief = {
     /**
      * Optional field with the embedded taxonomy category, can be embedded with nestedFields
      */
     readonly embeddedTaxonomyCategory?: {
         [key: string]: unknown;
     };
-    parentTaxonomyCategory?: ParentTaxonomyCategoryReadable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyReadable;
-    scope?: ScopeReadable;
+    parentTaxonomyCategory?: ParentTaxonomyCategory;
+    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
+    scope?: Scope;
     /**
      * The category's external reference code.
      */
@@ -306,19 +223,6 @@ export type TaxonomyCategoryBriefReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The categories associated with this object entry.
- */
-export type TaxonomyCategoryBriefWritable = {
-    parentTaxonomyCategory?: ParentTaxonomyCategoryWritable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyWritable;
-    scope?: ScopeWritable;
-    /**
-     * The category's external reference code.
-     */
-    taxonomyCategoryExternalReferenceCode?: string;
-};
-
 export type Version = {
     readonly number?: number;
     readonly 'x-class-name'?: string;
@@ -338,43 +242,28 @@ export type PagePermission = {
     page?: number;
 };
 
-export type ValidationErrorReadable = {
+export type ValidationError = {
     errorMessage?: string;
     objectFieldName?: string;
     objectValidationRuleExternalReferenceCode?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type ValidationErrorWritable = {
-    errorMessage?: string;
-    objectFieldName?: string;
-    objectValidationRuleExternalReferenceCode?: string;
-};
-
-export type ValidationResponseReadable = {
-    validationErrors?: Array<ValidationErrorReadable>;
+export type ValidationResponse = {
+    validationErrors?: Array<ValidationError>;
     readonly 'x-class-name'?: string;
 };
 
-export type ValidationResponseWritable = {
-    validationErrors?: Array<ValidationErrorWritable>;
-};
-
-export type ValidationRequestReadable = {
+export type ValidationRequest = {
     objectValidationRuleExternalReferenceCodes?: Array<string>;
-    values?: PersonalizationCookieEntryReadable;
+    values?: PersonalizationCookieEntry;
     readonly 'x-class-name'?: string;
 };
 
-export type ValidationRequestWritable = {
-    objectValidationRuleExternalReferenceCodes?: Array<string>;
-    values?: PersonalizationCookieEntryWritable;
-};
-
-export type PagePersonalizationCookieEntryReadable = {
+export type PagePersonalizationCookieEntry = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PersonalizationCookieEntryReadable>;
+    items?: Array<PersonalizationCookieEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -386,21 +275,7 @@ export type PagePersonalizationCookieEntryReadable = {
     readonly 'x-schema-name'?: string;
 };
 
-export type PagePersonalizationCookieEntryWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PersonalizationCookieEntryWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PersonalizationCookieEntryReadable = {
+export type PersonalizationCookieEntry = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -409,7 +284,7 @@ export type PersonalizationCookieEntryReadable = {
     /**
      * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
      */
-    readonly auditEvents?: Array<AuditEventReadable>;
+    readonly auditEvents?: Array<AuditEvent>;
     readonly creator?: string;
     readonly dateCreated?: string;
     readonly dateModified?: string;
@@ -441,45 +316,10 @@ export type PersonalizationCookieEntryReadable = {
     /**
      * The categories associated with this object entry.
      */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBriefReadable>;
+    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    taxonomyCategoryIds?: Array<number>;
     readonly 'x-class-name'?: string;
     readonly 'x-schema-name'?: string;
-    collectedData?: string;
-    expiration?: string;
-    host?: string;
-    name: string;
-    purpose?: string;
-    type?: string;
-};
-
-export type PersonalizationCookieEntryWritable = {
-    defaultLanguageId?: string;
-    displayDate?: string;
-    expirationDate?: string;
-    externalReferenceCode?: string;
-    /**
-     * A relative URL to the page's rendered content.
-     */
-    friendlyUrlPath?: string;
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * A list of keywords describing the object entry.
-     */
-    keywords?: Array<string>;
-    objectEntryFolderExternalReferenceCode?: string;
-    objectEntryFolderId?: number;
-    permissions?: Array<Permission>;
-    reviewDate?: string;
-    /**
-     * The categories associated with this object entry.
-     */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBriefWritable>;
-    taxonomyCategoryIds?: Array<number>;
     collectedData?: string;
     expiration?: string;
     host?: string;
@@ -527,13 +367,13 @@ export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborato
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
 
 export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
-    body?: CollaboratorWritable;
+    body?: Collaborator;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -548,7 +388,7 @@ export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborato
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
@@ -573,13 +413,13 @@ export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses = 
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponse = GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses[keyof GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses];
 
 export type PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData = {
-    body?: Array<CollaboratorWritable>;
+    body?: Array<Collaborator>;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -592,7 +432,7 @@ export type PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses =
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponse = PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses[keyof PostScopeScopeKeyByExternalReferenceCodeCollaboratorsPageResponses];
@@ -630,13 +470,13 @@ export type GetByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type GetByExternalReferenceCodeResponse = GetByExternalReferenceCodeResponses[keyof GetByExternalReferenceCodeResponses];
 
 export type PatchByExternalReferenceCodeData = {
-    body?: PersonalizationCookieEntryWritable;
+    body?: PersonalizationCookieEntry;
     path: {
         externalReferenceCode: string;
     };
@@ -648,13 +488,13 @@ export type PatchByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PatchByExternalReferenceCodeResponse = PatchByExternalReferenceCodeResponses[keyof PatchByExternalReferenceCodeResponses];
 
 export type PutByExternalReferenceCodeData = {
-    body?: PersonalizationCookieEntryWritable;
+    body?: PersonalizationCookieEntry;
     path: {
         externalReferenceCode: string;
     };
@@ -666,7 +506,7 @@ export type PutByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PutByExternalReferenceCodeResponse = PutByExternalReferenceCodeResponses[keyof PutByExternalReferenceCodeResponses];
@@ -702,7 +542,7 @@ export type GetByExternalReferenceCodeByVersionResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type GetByExternalReferenceCodeByVersionResponse = GetByExternalReferenceCodeByVersionResponses[keyof GetByExternalReferenceCodeByVersionResponses];
@@ -778,7 +618,7 @@ export type GetByExternalReferenceCodeVersionsPageResponses = {
     /**
      * default response
      */
-    default: PagePersonalizationCookieEntryReadable;
+    default: PagePersonalizationCookieEntry;
 };
 
 export type GetByExternalReferenceCodeVersionsPageResponse = GetByExternalReferenceCodeVersionsPageResponses[keyof GetByExternalReferenceCodeVersionsPageResponses];
@@ -805,13 +645,13 @@ export type GetPersonalizationCookieEntriesPageResponses = {
     /**
      * default response
      */
-    default: PagePersonalizationCookieEntryReadable;
+    default: PagePersonalizationCookieEntry;
 };
 
 export type GetPersonalizationCookieEntriesPageResponse = GetPersonalizationCookieEntriesPageResponses[keyof GetPersonalizationCookieEntriesPageResponses];
 
 export type PostPersonalizationCookieEntryData = {
-    body?: PersonalizationCookieEntryWritable;
+    body?: PersonalizationCookieEntry;
     path?: never;
     query?: never;
     url: '/o/personalization-cookies-entries/';
@@ -821,7 +661,7 @@ export type PostPersonalizationCookieEntryResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PostPersonalizationCookieEntryResponse = PostPersonalizationCookieEntryResponses[keyof PostPersonalizationCookieEntryResponses];
@@ -840,7 +680,7 @@ export type PostByExternalReferenceCodeByVersionCopyResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PostByExternalReferenceCodeByVersionCopyResponse = PostByExternalReferenceCodeByVersionCopyResponses[keyof PostByExternalReferenceCodeByVersionCopyResponses];
@@ -859,7 +699,7 @@ export type PostByExternalReferenceCodeByVersionExpireResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PostByExternalReferenceCodeByVersionExpireResponse = PostByExternalReferenceCodeByVersionExpireResponses[keyof PostByExternalReferenceCodeByVersionExpireResponses];
@@ -886,7 +726,7 @@ export type PostPersonalizationCookieEntriesPageExportBatchResponses = {
 };
 
 export type PostValidateData = {
-    body?: ValidationRequestWritable;
+    body?: ValidationRequest;
     path?: never;
     query?: never;
     url: '/o/personalization-cookies-entries/validate';
@@ -896,7 +736,7 @@ export type PostValidateResponses = {
     /**
      * default response
      */
-    default: ValidationResponseReadable;
+    default: ValidationResponse;
 };
 
 export type PostValidateResponse = PostValidateResponses[keyof PostValidateResponses];
@@ -915,7 +755,7 @@ export type PutByExternalReferenceCodeByVersionRestoreResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PutByExternalReferenceCodeByVersionRestoreResponse = PutByExternalReferenceCodeByVersionRestoreResponses[keyof PutByExternalReferenceCodeByVersionRestoreResponses];
@@ -973,13 +813,13 @@ export type GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponse = GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses[keyof GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses];
 
 export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorData = {
-    body?: CollaboratorWritable;
+    body?: Collaborator;
     path: {
         personalizationCookieEntryId: string;
         type: string;
@@ -993,7 +833,7 @@ export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponse = PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses[keyof PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses];
@@ -1017,13 +857,13 @@ export type GetPersonalizationCookieEntryCollaboratorsPageResponses = {
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type GetPersonalizationCookieEntryCollaboratorsPageResponse = GetPersonalizationCookieEntryCollaboratorsPageResponses[keyof GetPersonalizationCookieEntryCollaboratorsPageResponses];
 
 export type PostPersonalizationCookieEntryCollaboratorsPageData = {
-    body?: Array<CollaboratorWritable>;
+    body?: Array<Collaborator>;
     path: {
         personalizationCookieEntryId: string;
     };
@@ -1035,7 +875,7 @@ export type PostPersonalizationCookieEntryCollaboratorsPageResponses = {
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type PostPersonalizationCookieEntryCollaboratorsPageResponse = PostPersonalizationCookieEntryCollaboratorsPageResponses[keyof PostPersonalizationCookieEntryCollaboratorsPageResponses];
@@ -1093,13 +933,13 @@ export type GetPersonalizationCookieEntryResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type GetPersonalizationCookieEntryResponse = GetPersonalizationCookieEntryResponses[keyof GetPersonalizationCookieEntryResponses];
 
 export type PatchPersonalizationCookieEntryData = {
-    body?: PersonalizationCookieEntryWritable;
+    body?: PersonalizationCookieEntry;
     path: {
         personalizationCookieEntryId: string;
     };
@@ -1111,13 +951,13 @@ export type PatchPersonalizationCookieEntryResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PatchPersonalizationCookieEntryResponse = PatchPersonalizationCookieEntryResponses[keyof PatchPersonalizationCookieEntryResponses];
 
 export type PutPersonalizationCookieEntryData = {
-    body?: PersonalizationCookieEntryWritable;
+    body?: PersonalizationCookieEntry;
     path: {
         personalizationCookieEntryId: string;
     };
@@ -1129,7 +969,7 @@ export type PutPersonalizationCookieEntryResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PutPersonalizationCookieEntryResponse = PutPersonalizationCookieEntryResponses[keyof PutPersonalizationCookieEntryResponses];
@@ -1165,7 +1005,7 @@ export type GetPersonalizationCookieEntryByVersionResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type GetPersonalizationCookieEntryByVersionResponse = GetPersonalizationCookieEntryByVersionResponses[keyof GetPersonalizationCookieEntryByVersionResponses];
@@ -1187,7 +1027,7 @@ export type GetPersonalizationCookieEntriesVersionsPageResponses = {
     /**
      * default response
      */
-    default: PagePersonalizationCookieEntryReadable;
+    default: PagePersonalizationCookieEntry;
 };
 
 export type GetPersonalizationCookieEntriesVersionsPageResponse = GetPersonalizationCookieEntriesVersionsPageResponses[keyof GetPersonalizationCookieEntriesVersionsPageResponses];
@@ -1247,7 +1087,7 @@ export type PostPersonalizationCookieEntryByVersionCopyResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PostPersonalizationCookieEntryByVersionCopyResponse = PostPersonalizationCookieEntryByVersionCopyResponses[keyof PostPersonalizationCookieEntryByVersionCopyResponses];
@@ -1266,7 +1106,7 @@ export type PostPersonalizationCookieEntryByVersionExpireResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PostPersonalizationCookieEntryByVersionExpireResponse = PostPersonalizationCookieEntryByVersionExpireResponses[keyof PostPersonalizationCookieEntryByVersionExpireResponses];
@@ -1285,7 +1125,7 @@ export type PutPersonalizationCookieEntryByVersionRestoreResponses = {
     /**
      * default response
      */
-    default: PersonalizationCookieEntryReadable;
+    default: PersonalizationCookieEntry;
 };
 
 export type PutPersonalizationCookieEntryByVersionRestoreResponse = PutPersonalizationCookieEntryByVersionRestoreResponses[keyof PutPersonalizationCookieEntryByVersionRestoreResponses];

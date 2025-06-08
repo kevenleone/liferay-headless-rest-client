@@ -3,7 +3,7 @@
 /**
  * The Client Extension for the theme spritemap of a page
  */
-export type ClientExtensionReadable = {
+export type ClientExtension = {
     clientExtensionConfig?: {
         [key: string]: string;
     };
@@ -18,20 +18,7 @@ export type ClientExtensionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The Client Extension for the theme spritemap of a page
- */
-export type ClientExtensionWritable = {
-    clientExtensionConfig?: {
-        [key: string]: string;
-    };
-    /**
-     * The client extension's external reference code.
-     */
-    externalReferenceCode?: string;
-};
-
-export type ContentAssociationReadable = {
+export type ContentAssociation = {
     /**
      * The subtype of the content. i.e. the Structure name if it's a Structured Content.
      */
@@ -43,21 +30,10 @@ export type ContentAssociationReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ContentAssociationWritable = {
-    /**
-     * The subtype of the content. i.e. the Structure name if it's a Structured Content.
-     */
-    contentSubtype?: string;
-    /**
-     * The type of the content, i.e. Structure Content, BlogsPosting, etc.
-     */
-    contentType?: string;
-};
-
 /**
  * The structured content's creator.
  */
-export type CreatorReadable = {
+export type Creator = {
     /**
      * The author's additional name (e.g., middle name).
      */
@@ -104,9 +80,9 @@ export type CreatorReadable = {
 /**
  * A list of the custom fields associated with the structured content.
  */
-export type CustomFieldReadable = {
+export type CustomField = {
     readonly 'x-class-name'?: string;
-    customValue?: CustomValueReadable;
+    customValue?: CustomValue;
     /**
      * The field type (e.g., image, text, etc.).
      */
@@ -118,20 +94,9 @@ export type CustomFieldReadable = {
 };
 
 /**
- * A list of the custom fields associated with the structured content.
- */
-export type CustomFieldWritable = {
-    customValue?: CustomValueWritable;
-    /**
-     * The field's internal name. This is valid for comparisons and unique in the structured content.
-     */
-    name?: string;
-};
-
-/**
  * The field's value.
  */
-export type CustomValueReadable = {
+export type CustomValue = {
     readonly 'x-class-name'?: string;
     /**
      * The field's content value for simple types.
@@ -145,32 +110,13 @@ export type CustomValueReadable = {
     data_i18n?: {
         [key: string]: string;
     };
-    geo?: GeoReadable;
-};
-
-/**
- * The field's value.
- */
-export type CustomValueWritable = {
-    /**
-     * The field's content value for simple types.
-     */
-    data?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The localized field's content values for simple types.
-     */
-    data_i18n?: {
-        [key: string]: string;
-    };
-    geo?: GeoWritable;
+    geo?: Geo;
 };
 
 /**
  * Represents a Display Page Template that has fields and is tied to a content type
  */
-export type DisplayPageTemplateReadable = {
+export type DisplayPageTemplate = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -180,11 +126,11 @@ export type DisplayPageTemplateReadable = {
      * The list of languages the Display Page Template has a translation for.
      */
     readonly availableLanguages?: Array<string>;
-    creator?: CreatorReadable;
+    creator?: Creator;
     /**
      * The custom fields associated to the page that renders the Display Page Template.
      */
-    customFields?: Array<CustomFieldReadable>;
+    customFields?: Array<CustomField>;
     /**
      * The Display Page Template's creation date.
      */
@@ -197,12 +143,12 @@ export type DisplayPageTemplateReadable = {
      * The Display Page Template's external key.
      */
     displayPageTemplateKey?: string;
-    displayPageTemplateSettings?: DisplayPageTemplateSettingsReadable;
+    displayPageTemplateSettings?: DisplayPageTemplateSettings;
     /**
      * Specifies if the Display Page Template is the default one for the content type.
      */
     markedAsDefault?: boolean;
-    pageDefinition?: PageDefinitionReadable;
+    pageDefinition?: PageDefinition;
     /**
      * The ID of the site to which this Page Template is scoped.
      */
@@ -219,68 +165,20 @@ export type DisplayPageTemplateReadable = {
 };
 
 /**
- * Represents a Display Page Template that has fields and is tied to a content type
- */
-export type DisplayPageTemplateWritable = {
-    creator?: CreatorWritable;
-    /**
-     * The custom fields associated to the page that renders the Display Page Template.
-     */
-    customFields?: Array<CustomFieldWritable>;
-    /**
-     * The Display Page Template's external key.
-     */
-    displayPageTemplateKey?: string;
-    displayPageTemplateSettings?: DisplayPageTemplateSettingsWritable;
-    /**
-     * Specifies if the Display Page Template is the default one for the content type.
-     */
-    markedAsDefault?: boolean;
-    pageDefinition?: PageDefinitionWritable;
-    /**
-     * The title of the Display Page Template
-     */
-    title: string;
-};
-
-/**
  * The Display Page Template's external key.
  */
-export type DisplayPageTemplateSettingsReadable = {
-    contentAssociation?: ContentAssociationReadable;
-    openGraphSettingsMapping?: OpenGraphSettingsMappingReadable;
-    seoSettingsMapping?: SeoSettingsMappingReadable;
+export type DisplayPageTemplateSettings = {
+    contentAssociation?: ContentAssociation;
+    openGraphSettingsMapping?: OpenGraphSettingsMapping;
+    seoSettingsMapping?: SeoSettingsMapping;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The Display Page Template's external key.
- */
-export type DisplayPageTemplateSettingsWritable = {
-    contentAssociation?: ContentAssociationWritable;
-    openGraphSettingsMapping?: OpenGraphSettingsMappingWritable;
-    seoSettingsMapping?: SeoSettingsMappingWritable;
 };
 
 /**
  * A point determined by latitude and longitude.
  */
-export type GeoReadable = {
+export type Geo = {
     readonly 'x-class-name'?: string;
-    /**
-     * The latitude of a point in space.
-     */
-    latitude?: number;
-    /**
-     * The longitude of a point in space.
-     */
-    longitude?: number;
-};
-
-/**
- * A point determined by latitude and longitude.
- */
-export type GeoWritable = {
     /**
      * The latitude of a point in space.
      */
@@ -294,7 +192,7 @@ export type GeoWritable = {
 /**
  * The page's master page.
  */
-export type MasterPageReadable = {
+export type MasterPage = {
     /**
      * The master page's key.
      */
@@ -306,21 +204,7 @@ export type MasterPageReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The page's master page.
- */
-export type MasterPageWritable = {
-    /**
-     * The master page's key.
-     */
-    key?: string;
-    /**
-     * The master page's name.
-     */
-    name?: string;
-};
-
-export type OpenGraphSettingsMappingReadable = {
+export type OpenGraphSettingsMapping = {
     /**
      * Field of the content type that will be used as the description
      */
@@ -340,26 +224,7 @@ export type OpenGraphSettingsMappingReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type OpenGraphSettingsMappingWritable = {
-    /**
-     * Field of the content type that will be used as the description
-     */
-    descriptionMappingFieldKey?: string;
-    /**
-     * Field of the content type that will be used as the alt property of the image
-     */
-    imageAltMappingFieldKey?: string;
-    /**
-     * Field of the content type that will be used as the image
-     */
-    imageMappingFieldKey?: string;
-    /**
-     * Field of the content type that will be used as the title
-     */
-    titleMappingFieldKey?: string;
-};
-
-export type OptionsReadable = {
+export type Options = {
     /**
      * The page rule condition's value.
      */
@@ -371,48 +236,24 @@ export type OptionsReadable = {
     type?: 'Equal' | 'NotEqual';
 };
 
-export type OptionsWritable = {
-    /**
-     * The page rule condition's value.
-     */
-    value?: string;
-    /**
-     * The page rule condition option's type.
-     */
-    type?: 'Equal' | 'NotEqual';
-};
-
-export type PageDefinitionReadable = {
-    pageElement?: PageElementReadable;
+export type PageDefinition = {
+    pageElement?: PageElement;
     /**
      * A list of the page rules this page has.
      */
-    pageRules?: Array<PageRuleReadable>;
-    settings?: SettingsReadable;
+    pageRules?: Array<PageRule>;
+    settings?: Settings;
     /**
      * The version of the JSON generated by page definition.
      */
     version?: number;
     readonly 'x-class-name'?: string;
-};
-
-export type PageDefinitionWritable = {
-    pageElement?: PageElementWritable;
-    /**
-     * A list of the page rules this page has.
-     */
-    pageRules?: Array<PageRuleWritable>;
-    settings?: SettingsWritable;
-    /**
-     * The version of the JSON generated by page definition.
-     */
-    version?: number;
 };
 
 /**
  * The page's page element.
  */
-export type PageElementReadable = {
+export type PageElement = {
     /**
      * The page element's definition.
      */
@@ -426,32 +267,8 @@ export type PageElementReadable = {
     /**
      * A list of the page elements this page element has.
      */
-    pageElements?: Array<PageElementReadable>;
+    pageElements?: Array<PageElement>;
     readonly 'x-class-name'?: string;
-    /**
-     * The page element's type (collection, collection item, column, drop zone, form, fragment, fragment drop zone, root, row, section or widget).
-     */
-    type?: 'Collection' | 'CollectionItem' | 'Column' | 'DropZone' | 'Form' | 'FormStep' | 'FormStepContainer' | 'Fragment' | 'FragmentDropZone' | 'Root' | 'Row' | 'Section' | 'Widget';
-};
-
-/**
- * The page's page element.
- */
-export type PageElementWritable = {
-    /**
-     * The page element's definition.
-     */
-    definition?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The page element's ID.
-     */
-    id?: string;
-    /**
-     * A list of the page elements this page element has.
-     */
-    pageElements?: Array<PageElementWritable>;
     /**
      * The page element's type (collection, collection item, column, drop zone, form, fragment, fragment drop zone, root, row, section or widget).
      */
@@ -461,7 +278,7 @@ export type PageElementWritable = {
 /**
  * A list of the page rules this page has.
  */
-export type PageRuleReadable = {
+export type PageRule = {
     /**
      * The page rule ID.
      */
@@ -473,38 +290,12 @@ export type PageRuleReadable = {
     /**
      * A list of actions of a Page rule.
      */
-    pageRuleActions?: Array<PageRuleActionReadable>;
+    pageRuleActions?: Array<PageRuleAction>;
     /**
      * A list of conditions of a Page rule.
      */
-    pageRuleConditions?: Array<PageRuleConditionReadable>;
+    pageRuleConditions?: Array<PageRuleCondition>;
     readonly 'x-class-name'?: string;
-    /**
-     * The custom name of a Page rule.
-     */
-    conditionType?: 'All' | 'Any';
-};
-
-/**
- * A list of the page rules this page has.
- */
-export type PageRuleWritable = {
-    /**
-     * The page rule ID.
-     */
-    id?: string;
-    /**
-     * The custom name of a Page rule.
-     */
-    name?: string;
-    /**
-     * A list of actions of a Page rule.
-     */
-    pageRuleActions?: Array<PageRuleActionWritable>;
-    /**
-     * A list of conditions of a Page rule.
-     */
-    pageRuleConditions?: Array<PageRuleConditionWritable>;
     /**
      * The custom name of a Page rule.
      */
@@ -514,7 +305,7 @@ export type PageRuleWritable = {
 /**
  * A list of actions of a Page rule.
  */
-export type PageRuleActionReadable = {
+export type PageRuleAction = {
     /**
      * The page rule action's ID.
      */
@@ -531,27 +322,9 @@ export type PageRuleActionReadable = {
 };
 
 /**
- * A list of actions of a Page rule.
- */
-export type PageRuleActionWritable = {
-    /**
-     * The page rule action's ID.
-     */
-    id?: string;
-    /**
-     * The page rule condition's item ID.
-     */
-    itemId?: string;
-    /**
-     * The page rule action's type.
-     */
-    type?: string;
-};
-
-/**
  * A list of conditions of a Page rule.
  */
-export type PageRuleConditionReadable = {
+export type PageRuleCondition = {
     /**
      * The page rule condition's field.
      */
@@ -560,7 +333,7 @@ export type PageRuleConditionReadable = {
      * The page rule condition's ID.
      */
     id?: string;
-    options?: OptionsReadable;
+    options?: Options;
     /**
      * The page rule condition's type.
      */
@@ -568,26 +341,7 @@ export type PageRuleConditionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * A list of conditions of a Page rule.
- */
-export type PageRuleConditionWritable = {
-    /**
-     * The page rule condition's field.
-     */
-    field?: string;
-    /**
-     * The page rule condition's ID.
-     */
-    id?: string;
-    options?: OptionsWritable;
-    /**
-     * The page rule condition's type.
-     */
-    type?: string;
-};
-
-export type SeoSettingsMappingReadable = {
+export type SeoSettingsMapping = {
     /**
      * Field of the content type that will be used as the description
      */
@@ -609,31 +363,10 @@ export type SeoSettingsMappingReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type SeoSettingsMappingWritable = {
-    /**
-     * Field of the content type that will be used as the description
-     */
-    descriptionMappingFieldKey?: string;
-    /**
-     * Field of the content type that will be used as the HTML title
-     */
-    htmlTitleMappingFieldKey?: string;
-    /**
-     * Robots of the page that renders the Display Page Template
-     */
-    robots?: string;
-    /**
-     * Internationalized field of the robots of the page that renders the Display Page Template
-     */
-    robots_i18n?: {
-        [key: string]: string;
-    };
-};
-
 /**
  * The page's settings.
  */
-export type SettingsReadable = {
+export type Settings = {
     /**
      * The page's color scheme name.
      */
@@ -651,18 +384,18 @@ export type SettingsReadable = {
     /**
      * The client extensions for global css associated to the page.
      */
-    globalCSSClientExtensions?: Array<ClientExtensionReadable>;
+    globalCSSClientExtensions?: Array<ClientExtension>;
     /**
      * The client extensions for global js associated to the page.
      */
-    globalJSClientExtensions?: Array<ClientExtensionReadable>;
+    globalJSClientExtensions?: Array<ClientExtension>;
     /**
      * The page's JavaScript.
      */
     javascript?: string;
-    masterPage?: MasterPageReadable;
-    styleBook?: StyleBookReadable;
-    themeCSSClientExtension?: ClientExtensionReadable;
+    masterPage?: MasterPage;
+    styleBook?: StyleBook;
+    themeCSSClientExtension?: ClientExtension;
     /**
      * The page's theme name.
      */
@@ -673,60 +406,14 @@ export type SettingsReadable = {
     themeSettings?: {
         [key: string]: unknown;
     };
-    themeSpritemapClientExtension?: ClientExtensionReadable;
+    themeSpritemapClientExtension?: ClientExtension;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The page's settings.
- */
-export type SettingsWritable = {
-    /**
-     * The page's color scheme name.
-     */
-    colorSchemeName?: string;
-    /**
-     * The page's CSS.
-     */
-    css?: string;
-    /**
-     * The FavIcon of the page
-     */
-    favIcon?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The client extensions for global css associated to the page.
-     */
-    globalCSSClientExtensions?: Array<ClientExtensionWritable>;
-    /**
-     * The client extensions for global js associated to the page.
-     */
-    globalJSClientExtensions?: Array<ClientExtensionWritable>;
-    /**
-     * The page's JavaScript.
-     */
-    javascript?: string;
-    masterPage?: MasterPageWritable;
-    styleBook?: StyleBookWritable;
-    themeCSSClientExtension?: ClientExtensionWritable;
-    /**
-     * The page's theme name.
-     */
-    themeName?: string;
-    /**
-     * The page's theme settings.
-     */
-    themeSettings?: {
-        [key: string]: unknown;
-    };
-    themeSpritemapClientExtension?: ClientExtensionWritable;
 };
 
 /**
  * The StyleBook that is applied to the page.
  */
-export type StyleBookReadable = {
+export type StyleBook = {
     /**
      * The stylebook's key.
      */
@@ -736,20 +423,6 @@ export type StyleBookReadable = {
      */
     name?: string;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The StyleBook that is applied to the page.
- */
-export type StyleBookWritable = {
-    /**
-     * The stylebook's key.
-     */
-    key?: string;
-    /**
-     * The stylebook's name.
-     */
-    name?: string;
 };
 
 /**
@@ -777,24 +450,10 @@ export type FacetValue = {
     term?: string;
 };
 
-export type PageDisplayPageTemplateReadable = {
+export type PageDisplayPageTemplate = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DisplayPageTemplateReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageDisplayPageTemplateWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<DisplayPageTemplateWritable>;
+    items?: Array<DisplayPageTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -835,7 +494,7 @@ export type AggregateRating = {
 /**
  * A content document element that stores an image file.
  */
-export type ContentDocumentReadable = {
+export type ContentDocument = {
     /**
      * Block of actions allowed by the user making the request.
      */
@@ -884,33 +543,15 @@ export type ContentDocumentReadable = {
 };
 
 /**
- * A content document element that stores an image file.
- */
-export type ContentDocumentWritable = {
-    /**
-     * The document's description.
-     */
-    description?: string;
-    /**
-     * The document's ID.
-     */
-    id?: number;
-    /**
-     * The document's title.
-     */
-    title?: string;
-};
-
-/**
  * The list of fields that store the structured content's information.
  */
-export type ContentFieldReadable = {
-    contentFieldValue?: ContentFieldValueReadable;
+export type ContentField = {
+    contentFieldValue?: ContentFieldValue;
     /**
      * The localized field's values.
      */
     contentFieldValue_i18n?: {
-        [key: string]: ContentFieldValueReadable;
+        [key: string]: ContentFieldValue;
     };
     /**
      * The field type (e.g., image, text, etc.).
@@ -937,7 +578,7 @@ export type ContentFieldReadable = {
     /**
      * A list of child content fields that depend on this resource.
      */
-    nestedContentFields?: Array<ContentFieldReadable>;
+    nestedContentFields?: Array<ContentField>;
     /**
      * A flag that indicates whether this field can be rendered multiple times.
      */
@@ -946,42 +587,21 @@ export type ContentFieldReadable = {
 };
 
 /**
- * The list of fields that store the structured content's information.
- */
-export type ContentFieldWritable = {
-    contentFieldValue?: ContentFieldValueWritable;
-    /**
-     * The localized field's values.
-     */
-    contentFieldValue_i18n?: {
-        [key: string]: ContentFieldValueWritable;
-    };
-    /**
-     * The field's internal name. This is valid for comparisons and unique in the structured content.
-     */
-    name?: string;
-    /**
-     * A list of child content fields that depend on this resource.
-     */
-    nestedContentFields?: Array<ContentFieldWritable>;
-};
-
-/**
  * The localized field's values.
  */
-export type ContentFieldValueReadable = {
+export type ContentFieldValue = {
     /**
      * The field's content for simple types.
      */
     data?: string;
-    document?: ContentDocumentReadable;
-    geo?: GeoReadable;
-    image?: ContentDocumentReadable;
+    document?: ContentDocument;
+    geo?: Geo;
+    image?: ContentDocument;
     /**
      * A link to a page on the server.
      */
     link?: string;
-    structuredContentLink?: StructuredContentLinkReadable;
+    structuredContentLink?: StructuredContentLink;
     /**
      * The field's visible value
      */
@@ -989,46 +609,10 @@ export type ContentFieldValueReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The localized field's values.
- */
-export type ContentFieldValueWritable = {
-    /**
-     * The field's content for simple types.
-     */
-    data?: string;
-    document?: ContentDocumentWritable;
-    geo?: GeoWritable;
-    image?: ContentDocumentWritable;
-    /**
-     * A link to a page on the server.
-     */
-    link?: string;
-    structuredContentLink?: StructuredContentLinkWritable;
-    /**
-     * The field's visible value
-     */
-    value?: string;
-};
-
-export type PageStructuredContentReadable = {
+export type PageStructuredContent = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<StructuredContentReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageStructuredContentWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<StructuredContentWritable>;
+    items?: Array<StructuredContent>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -1049,7 +633,7 @@ export type Permission = {
 /**
  * A list of related contents to this structured content.
  */
-export type RelatedContentReadable = {
+export type RelatedContent = {
     /**
      * The type of the content.
      */
@@ -1066,23 +650,9 @@ export type RelatedContentReadable = {
 };
 
 /**
- * A list of related contents to this structured content.
- */
-export type RelatedContentWritable = {
-    /**
-     * The type of the content.
-     */
-    contentType?: string;
-    /**
-     * The identifier of the resource.
-     */
-    id?: number;
-};
-
-/**
  * A list of rendered content, which results from using a template to process the content and return HTML.
  */
-export type RenderedContentReadable = {
+export type RenderedContent = {
     /**
      * The ID of the template or display page used to render the content.
      */
@@ -1113,37 +683,9 @@ export type RenderedContentReadable = {
 };
 
 /**
- * A list of rendered content, which results from using a template to process the content and return HTML.
- */
-export type RenderedContentWritable = {
-    /**
-     * The name of the template or display page used to render the content.
-     */
-    contentTemplateName?: string;
-    /**
-     * The localized names of the template or display page used to render the content.
-     */
-    contentTemplateName_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * Specifies if the template or display page are marked as default to display the content.
-     */
-    markedAsDefault?: boolean;
-    /**
-     * An absolute URL to the rendered content.
-     */
-    renderedContentURL?: string;
-    /**
-     * Optional field with the rendered content, can be embedded with nestedFields.
-     */
-    renderedContentValue?: string;
-};
-
-/**
  * Represents content that has fields and is rendered by a template backed by a `ContentStructure`. This is modeled internally as a `JournalArticle`.
  */
-export type StructuredContentReadable = {
+export type StructuredContent = {
     /**
      * Block of actions allowed by the user making the request.
      */
@@ -1164,16 +706,16 @@ export type StructuredContentReadable = {
     /**
      * The list of fields that store the structured content's information.
      */
-    contentFields?: Array<ContentFieldReadable>;
+    contentFields?: Array<ContentField>;
     /**
      * The ID of the `ContentStructure`.
      */
     contentStructureId: number;
-    creator?: CreatorReadable;
+    creator?: Creator;
     /**
      * A list of the custom fields associated with the structured content.
      */
-    customFields?: Array<CustomFieldReadable>;
+    customFields?: Array<CustomField>;
     /**
      * The structured content's creation date.
      */
@@ -1234,6 +776,7 @@ export type StructuredContentReadable = {
      * The number of comments the structured content has received.
      */
     readonly numberOfComments?: number;
+    permissions?: Array<Permission>;
     /**
      * The structured content's priority.
      */
@@ -1241,11 +784,11 @@ export type StructuredContentReadable = {
     /**
      * A list of related contents to this structured content.
      */
-    relatedContents?: Array<RelatedContentReadable>;
+    relatedContents?: Array<RelatedContent>;
     /**
      * A list of rendered content, which results from using a template to process the content and return HTML.
      */
-    readonly renderedContents?: Array<RenderedContentReadable>;
+    readonly renderedContents?: Array<RenderedContent>;
     /**
      * The ID of the site to which this structured content is scoped.
      */
@@ -1261,7 +804,8 @@ export type StructuredContentReadable = {
     /**
      * The categories associated with this structured content.
      */
-    readonly taxonomyCategoryBriefs?: Array<TaxonomyCategoryBriefReadable>;
+    readonly taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    taxonomyCategoryIds?: Array<number>;
     /**
      * The structured content's main title.
      */
@@ -1281,98 +825,14 @@ export type StructuredContentReadable = {
 };
 
 /**
- * Represents content that has fields and is rendered by a template backed by a `ContentStructure`. This is modeled internally as a `JournalArticle`.
- */
-export type StructuredContentWritable = {
-    /**
-     * The list of fields that store the structured content's information.
-     */
-    contentFields?: Array<ContentFieldWritable>;
-    /**
-     * The ID of the `ContentStructure`.
-     */
-    contentStructureId: number;
-    creator?: CreatorWritable;
-    /**
-     * A list of the custom fields associated with the structured content.
-     */
-    customFields?: Array<CustomFieldWritable>;
-    /**
-     * The expiration date of the structured content.
-     */
-    dateExpired?: string;
-    /**
-     * The structured content's most recent publication date.
-     */
-    datePublished?: string;
-    /**
-     * The structured content's description.
-     */
-    description?: string;
-    /**
-     * The localized structured content's descriptions.
-     */
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The structured content's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * A relative URL to the structured content's rendered content.
-     */
-    friendlyUrlPath?: string;
-    /**
-     * The localized relative URLs to the structured content's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * A list of keywords describing the structured content.
-     */
-    keywords?: Array<string>;
-    /**
-     * Whether the web content article is not set to auto expire
-     */
-    neverExpire?: boolean;
-    permissions?: Array<Permission>;
-    /**
-     * The structured content's priority.
-     */
-    priority?: number;
-    /**
-     * A list of related contents to this structured content.
-     */
-    relatedContents?: Array<RelatedContentWritable>;
-    /**
-     * The ID of the folder where structured content is stored.
-     */
-    structuredContentFolderId?: number;
-    taxonomyCategoryIds?: Array<number>;
-    /**
-     * The structured content's main title.
-     */
-    title: string;
-    /**
-     * The localized structured content's main titles.
-     */
-    title_i18n?: {
-        [key: string]: string;
-    };
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-};
-
-/**
  * A link to structured content on the server.
  */
-export type StructuredContentLinkReadable = {
+export type StructuredContentLink = {
     /**
      * The type of content.
      */
     readonly contentType?: string;
-    embeddedStructuredContent?: StructuredContentReadable;
+    embeddedStructuredContent?: StructuredContent;
     /**
      * The resource's ID.
      */
@@ -1385,24 +845,9 @@ export type StructuredContentLinkReadable = {
 };
 
 /**
- * A link to structured content on the server.
- */
-export type StructuredContentLinkWritable = {
-    embeddedStructuredContent?: StructuredContentWritable;
-    /**
-     * The resource's ID.
-     */
-    id?: number;
-    /**
-     * The resource's title.
-     */
-    title?: string;
-};
-
-/**
  * The categories associated with this structured content.
  */
-export type TaxonomyCategoryBriefReadable = {
+export type TaxonomyCategoryBrief = {
     /**
      * Optional field with the embedded taxonomy category, can be embedded with nestedFields
      */
@@ -1423,21 +868,14 @@ export type TaxonomyCategoryBriefReadable = {
     readonly taxonomyCategoryName_i18n?: {
         [key: string]: string;
     };
-    taxonomyCategoryReference?: TaxonomyCategoryReferenceReadable;
+    taxonomyCategoryReference?: TaxonomyCategoryReference;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The categories associated with this structured content.
- */
-export type TaxonomyCategoryBriefWritable = {
-    taxonomyCategoryReference?: TaxonomyCategoryReferenceWritable;
 };
 
 /**
  * A unique reference to a taxonomy category.
  */
-export type TaxonomyCategoryReferenceReadable = {
+export type TaxonomyCategoryReference = {
     /**
      * The taxonomy category's external reference code.
      */
@@ -1447,20 +885,6 @@ export type TaxonomyCategoryReferenceReadable = {
      */
     siteKey?: string;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A unique reference to a taxonomy category.
- */
-export type TaxonomyCategoryReferenceWritable = {
-    /**
-     * The taxonomy category's external reference code.
-     */
-    externalReferenceCode: string;
-    /**
-     * The key of the site or asset library where the taxonomy category is located. It can be left out if the taxonomy category is in the same site as the page.
-     */
-    siteKey?: string;
 };
 
 export type GetSiteDisplayPageTemplateData = {
@@ -1481,7 +905,7 @@ export type GetSiteDisplayPageTemplateResponses = {
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type GetSiteDisplayPageTemplateResponse = GetSiteDisplayPageTemplateResponses[keyof GetSiteDisplayPageTemplateResponses];
@@ -1506,13 +930,13 @@ export type GetSiteDisplayPageTemplatesPageResponses = {
     /**
      * default response
      */
-    default: PageDisplayPageTemplateReadable;
+    default: PageDisplayPageTemplate;
 };
 
 export type GetSiteDisplayPageTemplatesPageResponse = GetSiteDisplayPageTemplatesPageResponses[keyof GetSiteDisplayPageTemplatesPageResponses];
 
 export type PostSitePageDefinitionPreviewData = {
-    body?: PageDefinitionWritable;
+    body?: PageDefinition;
     path: {
         siteId: string;
     };
@@ -1562,7 +986,7 @@ export type GetStructuredContentByVersionResponses = {
     /**
      * default response
      */
-    default: StructuredContentReadable;
+    default: StructuredContent;
 };
 
 export type GetStructuredContentByVersionResponse = GetStructuredContentByVersionResponses[keyof GetStructuredContentByVersionResponses];
@@ -1591,7 +1015,7 @@ export type GetSiteStructuredContentsPageResponses = {
     /**
      * default response
      */
-    default: PageStructuredContentReadable;
+    default: PageStructuredContent;
 };
 
 export type GetSiteStructuredContentsPageResponse = GetSiteStructuredContentsPageResponses[keyof GetSiteStructuredContentsPageResponses];
@@ -1613,13 +1037,13 @@ export type GetStructuredContentsVersionsPageResponses = {
     /**
      * default response
      */
-    default: PageStructuredContentReadable;
+    default: PageStructuredContent;
 };
 
 export type GetStructuredContentsVersionsPageResponse = GetStructuredContentsVersionsPageResponses[keyof GetStructuredContentsVersionsPageResponses];
 
 export type PostSiteStructuredContentDraftData = {
-    body?: StructuredContentWritable;
+    body?: StructuredContent;
     path: {
         siteId: string;
     };
@@ -1631,7 +1055,7 @@ export type PostSiteStructuredContentDraftResponses = {
     /**
      * default response
      */
-    default: StructuredContentReadable;
+    default: StructuredContent;
 };
 
 export type PostSiteStructuredContentDraftResponse = PostSiteStructuredContentDraftResponses[keyof PostSiteStructuredContentDraftResponses];

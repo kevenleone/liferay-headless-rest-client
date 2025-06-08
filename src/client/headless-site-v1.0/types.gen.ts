@@ -3,7 +3,7 @@
 /**
  * Represents the site being created.
  */
-export type SiteReadable = {
+export type Site = {
     /**
      * The site's external reference code.
      */
@@ -13,39 +13,18 @@ export type SiteReadable = {
     readonly key?: string;
     membershipType?: 'open' | 'private' | 'restricted';
     name: string;
+    parentSiteKey?: string;
+    templateKey?: string;
     templateType?: 'site-initializer' | 'site-template';
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Represents the site being created.
- */
-export type SiteWritable = {
-    /**
-     * The site's external reference code.
-     */
-    externalReferenceCode?: string;
-    membershipType?: 'open' | 'private' | 'restricted';
-    name: string;
-    parentSiteKey?: string;
-    templateKey?: string;
-    templateType?: 'site-initializer' | 'site-template';
-};
-
-export type PostSiteRequestBodyReadable = {
+export type PostSiteRequestBody = {
     /**
      * File
      */
     file?: Blob | File;
-    site?: SiteReadable;
-};
-
-export type PostSiteRequestBodyWritable = {
-    /**
-     * File
-     */
-    file?: Blob | File;
-    site?: SiteWritable;
+    site?: Site;
 };
 
 export type MultipartBody = {
@@ -106,7 +85,7 @@ export type GetSiteByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SiteReadable;
+    default: Site;
 };
 
 export type GetSiteByExternalReferenceCodeResponse = GetSiteByExternalReferenceCodeResponses[keyof GetSiteByExternalReferenceCodeResponses];
@@ -124,7 +103,7 @@ export type PutSiteByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SiteReadable;
+    default: Site;
 };
 
 export type PutSiteByExternalReferenceCodeResponse = PutSiteByExternalReferenceCodeResponses[keyof PutSiteByExternalReferenceCodeResponses];
@@ -148,7 +127,7 @@ export type GetSiteByExternalReferenceCodeSiteInitializerResponses = {
 export type GetSiteByExternalReferenceCodeSiteInitializerResponse = GetSiteByExternalReferenceCodeSiteInitializerResponses[keyof GetSiteByExternalReferenceCodeSiteInitializerResponses];
 
 export type PostSite1Data = {
-    body?: SiteWritable;
+    body?: Site;
     path?: never;
     query?: never;
     url: '/o/headless-site/v1.0/sites';
@@ -158,7 +137,7 @@ export type PostSite1Responses = {
     /**
      * default response
      */
-    default: SiteReadable;
+    default: Site;
 };
 
 export type PostSite1Response = PostSite1Responses[keyof PostSite1Responses];

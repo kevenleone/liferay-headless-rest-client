@@ -3,7 +3,7 @@
 /**
  * Represents a collaborator for an entry.
  */
-export type CollaboratorReadable = {
+export type Collaborator = {
     /**
      * The collaborator actions for the shared asset.
      */
@@ -16,7 +16,7 @@ export type CollaboratorReadable = {
             [key: string]: unknown;
         };
     };
-    creator?: CreatorReadable;
+    creator?: Creator;
     /**
      * The expiration date to be a collaborator of the asset.
      */
@@ -49,36 +49,9 @@ export type CollaboratorReadable = {
 };
 
 /**
- * Represents a collaborator for an entry.
- */
-export type CollaboratorWritable = {
-    /**
-     * The collaborator actions for the shared asset.
-     */
-    actionIds: Array<string>;
-    creator?: CreatorWritable;
-    /**
-     * The expiration date to be a collaborator of the asset.
-     */
-    dateExpired?: string;
-    /**
-     * The collaborator ID.
-     */
-    id?: number;
-    /**
-     * If the collaborator can share or not the asset.
-     */
-    share?: boolean;
-    /**
-     * The collaborator type.
-     */
-    type: string;
-};
-
-/**
  * The object entry folder's creator.
  */
-export type CreatorReadable = {
+export type Creator = {
     /**
      * The author's additional name (e.g., middle name).
      */
@@ -147,24 +120,10 @@ export type FacetValue = {
     term?: string;
 };
 
-export type PageCollaboratorReadable = {
+export type PageCollaborator = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CollaboratorReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageCollaboratorWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<CollaboratorWritable>;
+    items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -178,7 +137,7 @@ export type PageCollaboratorWritable = {
 /**
  * Represents a object entry folder that contains objects entries and other object entry folders.
  */
-export type ObjectEntryFolderReadable = {
+export type ObjectEntryFolder = {
     /**
      * Block of actions allowed by the user making the request.
      */
@@ -187,7 +146,7 @@ export type ObjectEntryFolderReadable = {
             [key: string]: string;
         };
     };
-    creator?: CreatorReadable;
+    creator?: Creator;
     /**
      * The object entry folder's creation date.
      */
@@ -226,7 +185,7 @@ export type ObjectEntryFolderReadable = {
      * The number of this object entry folder's child object entry folders.
      */
     readonly numberOfObjectEntryFolders?: number;
-    parentObjectEntryFolderBrief?: ParentObjectEntryFolderBriefReadable;
+    parentObjectEntryFolderBrief?: ParentObjectEntryFolderBrief;
     /**
      * The parent entry folder's external reference code, if it exists.
      */
@@ -248,48 +207,9 @@ export type ObjectEntryFolderReadable = {
 };
 
 /**
- * Represents a object entry folder that contains objects entries and other object entry folders.
- */
-export type ObjectEntryFolderWritable = {
-    creator?: CreatorWritable;
-    /**
-     * The object entry folder's description.
-     */
-    description?: string;
-    /**
-     * The object entry folder's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The object entry folder's label.
-     */
-    label?: string;
-    /**
-     * The localized object entry folder's label.
-     */
-    label_i18n?: {
-        [key: string]: string;
-    };
-    parentObjectEntryFolderBrief?: ParentObjectEntryFolderBriefWritable;
-    /**
-     * The parent entry folder's external reference code, if it exists.
-     */
-    parentObjectEntryFolderExternalReferenceCode?: string;
-    /**
-     * The ID of the object entry folder's parent, if it exists.
-     */
-    parentObjectEntryFolderId?: number;
-    /**
-     * The object entry folder's main title/name.
-     */
-    title: string;
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-};
-
-/**
  * The object entry folder's parent, if it exists.
  */
-export type ParentObjectEntryFolderBriefReadable = {
+export type ParentObjectEntryFolderBrief = {
     /**
      * The parent object entry folder's external reference code.
      */
@@ -315,52 +235,10 @@ export type ParentObjectEntryFolderBriefReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The object entry folder's parent, if it exists.
- */
-export type ParentObjectEntryFolderBriefWritable = {
-    /**
-     * The parent object entry folder's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The parent object entry folder's ID.
-     */
-    id?: number;
-    /**
-     * The parent object entry folder's label.
-     */
-    label?: string;
-    /**
-     * The localized parent object entry folder's label.
-     */
-    label_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The parent object entry folder's main title/name.
-     */
-    title?: string;
-};
-
-export type PageObjectEntryFolderReadable = {
+export type PageObjectEntryFolder = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectEntryFolderReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageObjectEntryFolderWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<ObjectEntryFolderWritable>;
+    items?: Array<ObjectEntryFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -408,13 +286,13 @@ export type GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses = {
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type GetObjectEntryFolderCollaboratorByTypeCollaboratorResponse = GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses[keyof GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses];
 
 export type PutObjectEntryFolderCollaboratorByTypeCollaboratorData = {
-    body?: CollaboratorWritable;
+    body?: Collaborator;
     path: {
         objectEntryFolderId: string;
         type: string;
@@ -428,7 +306,7 @@ export type PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses = {
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type PutObjectEntryFolderCollaboratorByTypeCollaboratorResponse = PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses[keyof PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses];
@@ -472,13 +350,13 @@ export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaborator
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
 
 export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
-    body?: CollaboratorWritable;
+    body?: Collaborator;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -493,7 +371,7 @@ export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaborator
     /**
      * default response
      */
-    default: CollaboratorReadable;
+    default: Collaborator;
 };
 
 export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
@@ -517,13 +395,13 @@ export type GetObjectEntryFolderCollaboratorsPageResponses = {
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type GetObjectEntryFolderCollaboratorsPageResponse = GetObjectEntryFolderCollaboratorsPageResponses[keyof GetObjectEntryFolderCollaboratorsPageResponses];
 
 export type PostObjectEntryFolderCollaboratorsPageData = {
-    body?: Array<CollaboratorWritable>;
+    body?: Array<Collaborator>;
     path: {
         objectEntryFolderId: string;
     };
@@ -535,7 +413,7 @@ export type PostObjectEntryFolderCollaboratorsPageResponses = {
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type PostObjectEntryFolderCollaboratorsPageResponse = PostObjectEntryFolderCollaboratorsPageResponses[keyof PostObjectEntryFolderCollaboratorsPageResponses];
@@ -560,13 +438,13 @@ export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaborator
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponse = GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponses[keyof GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponses];
 
 export type PostScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageData = {
-    body?: Array<CollaboratorWritable>;
+    body?: Array<Collaborator>;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -579,7 +457,7 @@ export type PostScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaborato
     /**
      * default response
      */
-    default: PageCollaboratorReadable;
+    default: PageCollaborator;
 };
 
 export type PostScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponse = PostScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponses[keyof PostScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPageResponses];
@@ -637,13 +515,13 @@ export type GetObjectEntryFolderResponses = {
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type GetObjectEntryFolderResponse = GetObjectEntryFolderResponses[keyof GetObjectEntryFolderResponses];
 
 export type PatchObjectEntryFolderData = {
-    body?: ObjectEntryFolderWritable;
+    body?: ObjectEntryFolder;
     path: {
         objectEntryFolderId: string;
     };
@@ -655,7 +533,7 @@ export type PatchObjectEntryFolderResponses = {
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type PatchObjectEntryFolderResponse = PatchObjectEntryFolderResponses[keyof PatchObjectEntryFolderResponses];
@@ -713,13 +591,13 @@ export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses = 
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponse = GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses[keyof GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses];
 
 export type PatchScopeScopeKeyObjectEntryFolderByExternalReferenceCodeData = {
-    body?: ObjectEntryFolderWritable;
+    body?: ObjectEntryFolder;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -732,13 +610,13 @@ export type PatchScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses 
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type PatchScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponse = PatchScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses[keyof PatchScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses];
 
 export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeData = {
-    body?: ObjectEntryFolderWritable;
+    body?: ObjectEntryFolder;
     path: {
         scopeKey: string;
         externalReferenceCode: string;
@@ -751,7 +629,7 @@ export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses = 
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponse = PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses[keyof PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses];
@@ -780,13 +658,13 @@ export type GetScopeScopeKeyObjectEntryFoldersPageResponses = {
     /**
      * default response
      */
-    default: PageObjectEntryFolderReadable;
+    default: PageObjectEntryFolder;
 };
 
 export type GetScopeScopeKeyObjectEntryFoldersPageResponse = GetScopeScopeKeyObjectEntryFoldersPageResponses[keyof GetScopeScopeKeyObjectEntryFoldersPageResponses];
 
 export type PostScopeScopeKeyObjectEntryFolderData = {
-    body?: ObjectEntryFolderWritable;
+    body?: ObjectEntryFolder;
     path: {
         scopeKey: string;
     };
@@ -798,7 +676,7 @@ export type PostScopeScopeKeyObjectEntryFolderResponses = {
     /**
      * default response
      */
-    default: ObjectEntryFolderReadable;
+    default: ObjectEntryFolder;
 };
 
 export type PostScopeScopeKeyObjectEntryFolderResponse = PostScopeScopeKeyObjectEntryFolderResponses[keyof PostScopeScopeKeyObjectEntryFolderResponses];

@@ -17,20 +17,13 @@ export type Assignee = {
     readonly 'x-class-name'?: string;
 };
 
-export type AssigneeMetricReadable = {
+export type AssigneeMetric = {
     assignee?: Assignee;
     durationTaskAvg?: number;
     onTimeTaskCount?: number;
     overdueTaskCount?: number;
     taskCount?: number;
     readonly 'x-class-name'?: string;
-};
-
-export type AssigneeMetricWritable = {
-    durationTaskAvg?: number;
-    onTimeTaskCount?: number;
-    overdueTaskCount?: number;
-    taskCount?: number;
 };
 
 export type Facet = {
@@ -43,10 +36,10 @@ export type FacetValue = {
     term?: string;
 };
 
-export type PageAssigneeMetricReadable = {
+export type PageAssigneeMetric = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AssigneeMetricReadable>;
+    items?: Array<AssigneeMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -57,21 +50,7 @@ export type PageAssigneeMetricReadable = {
     page?: number;
 };
 
-export type PageAssigneeMetricWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<AssigneeMetricWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type AssigneeMetricBulkSelectionReadable = {
+export type AssigneeMetricBulkSelection = {
     completed?: boolean;
     dateEnd?: string;
     dateStart?: string;
@@ -82,17 +61,7 @@ export type AssigneeMetricBulkSelectionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type AssigneeMetricBulkSelectionWritable = {
-    completed?: boolean;
-    dateEnd?: string;
-    dateStart?: string;
-    instanceIds?: Array<number>;
-    keywords?: string;
-    roleIds?: Array<number>;
-    taskNames?: Array<string>;
-};
-
-export type PageAssigneeReadable = {
+export type PageAssignee = {
     lastPage?: number;
     totalCount?: number;
     items?: Array<Assignee>;
@@ -106,45 +75,22 @@ export type PageAssigneeReadable = {
     page?: number;
 };
 
-export type PageAssigneeWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type AssigneeBulkSelectionReadable = {
+export type AssigneeBulkSelection = {
     instanceIds?: Array<number>;
     readonly 'x-class-name'?: string;
 };
 
-export type AssigneeBulkSelectionWritable = {
-    instanceIds?: Array<number>;
-};
-
-export type CalendarReadable = {
+export type Calendar = {
     defaultCalendar?: boolean;
     key?: string;
     title?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type CalendarWritable = {
-    defaultCalendar?: boolean;
-    key?: string;
-    title?: string;
-};
-
-export type PageCalendarReadable = {
+export type PageCalendar = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CalendarReadable>;
+    items?: Array<Calendar>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -155,60 +101,30 @@ export type PageCalendarReadable = {
     page?: number;
 };
 
-export type PageCalendarWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<CalendarWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type HistogramReadable = {
+export type Histogram = {
     key?: string;
     value?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type HistogramWritable = {
-    key?: string;
-    value?: number;
-};
-
-export type HistogramMetricReadable = {
-    histograms?: Array<HistogramReadable>;
+export type HistogramMetric = {
+    histograms?: Array<Histogram>;
     value?: number;
     readonly 'x-class-name'?: string;
     unit?: 'Days' | 'Hours' | 'Months' | 'Weeks' | 'Years';
 };
 
-export type HistogramMetricWritable = {
-    histograms?: Array<HistogramWritable>;
-    value?: number;
-    unit?: 'Days' | 'Hours' | 'Months' | 'Weeks' | 'Years';
-};
-
-export type IndexReadable = {
+export type Index = {
     key?: string;
     readonly label?: string;
     readonly 'x-class-name'?: string;
     group?: 'All' | 'Metric' | 'SLA';
 };
 
-export type IndexWritable = {
-    key?: string;
-    group?: 'All' | 'Metric' | 'SLA';
-};
-
-export type PageIndexReadable = {
+export type PageIndex = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<IndexReadable>;
+    items?: Array<Index>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -219,21 +135,7 @@ export type PageIndexReadable = {
     page?: number;
 };
 
-export type PageIndexWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<IndexWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type CreatorReadable = {
+export type Creator = {
     /**
      * The user's ID.
      */
@@ -245,18 +147,7 @@ export type CreatorReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type CreatorWritable = {
-    /**
-     * The user's ID.
-     */
-    id?: number;
-    /**
-     * The user's full name.
-     */
-    name?: string;
-};
-
-export type InstanceReadable = {
+export type Instance = {
     active?: boolean;
     readonly assetTitle?: string;
     assetTitle_i18n?: {
@@ -270,7 +161,7 @@ export type InstanceReadable = {
     className?: string;
     classPK?: number;
     completed?: boolean;
-    creator?: CreatorReadable;
+    creator?: Creator;
     dateCompletion?: string;
     dateCreated?: string;
     dateModified?: string;
@@ -278,36 +169,14 @@ export type InstanceReadable = {
     id?: number;
     processId?: number;
     processVersion?: string;
-    readonly slaResults?: Array<SlaResultReadable>;
+    readonly slaResults?: Array<SlaResult>;
     slaStatus?: 'OnTime' | 'Overdue' | 'Untracked';
     readonly taskNames?: Array<string>;
     transitions?: Array<Transition>;
     readonly 'x-class-name'?: string;
 };
 
-export type InstanceWritable = {
-    active?: boolean;
-    assetTitle_i18n?: {
-        [key: string]: string;
-    };
-    assetType_i18n?: {
-        [key: string]: string;
-    };
-    className?: string;
-    classPK?: number;
-    completed?: boolean;
-    creator?: CreatorWritable;
-    dateCompletion?: string;
-    dateCreated?: string;
-    dateModified?: string;
-    duration?: number;
-    id?: number;
-    processId?: number;
-    processVersion?: string;
-    slaStatus?: 'OnTime' | 'Overdue' | 'Untracked';
-};
-
-export type SlaResultReadable = {
+export type SlaResult = {
     dateModified?: string;
     dateOverdue?: string;
     id?: number;
@@ -315,16 +184,6 @@ export type SlaResultReadable = {
     onTime?: boolean;
     remainingTime?: number;
     readonly 'x-class-name'?: string;
-    status?: 'NEW' | 'PAUSED' | 'RUNNING' | 'STOPPED';
-};
-
-export type SlaResultWritable = {
-    dateModified?: string;
-    dateOverdue?: string;
-    id?: number;
-    name?: string;
-    onTime?: boolean;
-    remainingTime?: number;
     status?: 'NEW' | 'PAUSED' | 'RUNNING' | 'STOPPED';
 };
 
@@ -334,10 +193,10 @@ export type Transition = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageInstanceReadable = {
+export type PageInstance = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<InstanceReadable>;
+    items?: Array<Instance>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -348,21 +207,7 @@ export type PageInstanceReadable = {
     page?: number;
 };
 
-export type PageInstanceWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<InstanceWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type NodeReadable = {
+export type Node = {
     dateCreated?: string;
     dateModified?: string;
     id?: number;
@@ -376,43 +221,21 @@ export type NodeReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type NodeWritable = {
-    dateCreated?: string;
-    dateModified?: string;
-    id?: number;
-    initial?: boolean;
-    name?: string;
-    processId?: number;
-    processVersion?: string;
-    terminal?: boolean;
-    type?: string;
-};
-
-export type NodeMetricReadable = {
+export type NodeMetric = {
     breachedInstanceCount?: number;
     breachedInstancePercentage?: number;
     durationAvg?: number;
     instanceCount?: number;
-    node?: NodeReadable;
+    node?: Node;
     onTimeInstanceCount?: number;
     overdueInstanceCount?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type NodeMetricWritable = {
-    breachedInstanceCount?: number;
-    breachedInstancePercentage?: number;
-    durationAvg?: number;
-    instanceCount?: number;
-    node?: NodeWritable;
-    onTimeInstanceCount?: number;
-    overdueInstanceCount?: number;
-};
-
-export type PageNodeMetricReadable = {
+export type PageNodeMetric = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NodeMetricReadable>;
+    items?: Array<NodeMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -423,10 +246,10 @@ export type PageNodeMetricReadable = {
     page?: number;
 };
 
-export type PageNodeMetricWritable = {
+export type PageNode = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NodeMetricWritable>;
+    items?: Array<Node>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -437,35 +260,7 @@ export type PageNodeMetricWritable = {
     page?: number;
 };
 
-export type PageNodeReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<NodeReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageNodeWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<NodeWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ProcessReadable = {
+export type Process = {
     active?: boolean;
     dateCreated?: string;
     dateModified?: string;
@@ -480,40 +275,19 @@ export type ProcessReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ProcessWritable = {
-    active?: boolean;
-    dateCreated?: string;
-    dateModified?: string;
-    description?: string;
-    id?: number;
-    name?: string;
-    title_i18n?: {
-        [key: string]: string;
-    };
-    version?: string;
-};
-
-export type ProcessMetricReadable = {
+export type ProcessMetric = {
     instanceCount?: number;
     onTimeInstanceCount?: number;
     overdueInstanceCount?: number;
-    process?: ProcessReadable;
+    process?: Process;
     untrackedInstanceCount?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type ProcessMetricWritable = {
-    instanceCount?: number;
-    onTimeInstanceCount?: number;
-    overdueInstanceCount?: number;
-    process?: ProcessWritable;
-    untrackedInstanceCount?: number;
-};
-
-export type PageProcessMetricReadable = {
+export type PageProcessMetric = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProcessMetricReadable>;
+    items?: Array<ProcessMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -524,10 +298,10 @@ export type PageProcessMetricReadable = {
     page?: number;
 };
 
-export type PageProcessMetricWritable = {
+export type PageProcessVersion = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProcessMetricWritable>;
+    items?: Array<ProcessVersion>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -538,60 +312,15 @@ export type PageProcessMetricWritable = {
     page?: number;
 };
 
-export type PageProcessVersionReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<ProcessVersionReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageProcessVersionWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<ProcessVersionWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ProcessVersionReadable = {
+export type ProcessVersion = {
     name?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type ProcessVersionWritable = {
-    name?: string;
-};
-
-export type PageReindexStatusReadable = {
+export type PageReindexStatus = {
     lastPage?: number;
     totalCount?: number;
     items?: Array<ReindexStatus>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageReindexStatusWritable = {
-    lastPage?: number;
-    totalCount?: number;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -608,23 +337,10 @@ export type ReindexStatus = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageRoleReadable = {
+export type PageRole = {
     lastPage?: number;
     totalCount?: number;
     items?: Array<Role>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageRoleWritable = {
-    lastPage?: number;
-    totalCount?: number;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -647,21 +363,16 @@ export type Role = {
     readonly 'x-class-name'?: string;
 };
 
-export type NodeKeyReadable = {
+export type NodeKey = {
     executionType?: string;
     id?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type NodeKeyWritable = {
-    executionType?: string;
-    id?: string;
-};
-
-export type PageSlaReadable = {
+export type PageSla = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SlaReadable>;
+    items?: Array<Sla>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -672,83 +383,40 @@ export type PageSlaReadable = {
     page?: number;
 };
 
-export type PageSlaWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SlaWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PauseNodeKeysReadable = {
-    nodeKeys?: Array<NodeKeyReadable>;
+export type PauseNodeKeys = {
+    nodeKeys?: Array<NodeKey>;
     status?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type PauseNodeKeysWritable = {
-    nodeKeys?: Array<NodeKeyWritable>;
-    status?: number;
-};
-
-export type SlaReadable = {
+export type Sla = {
     calendarKey?: string;
     dateModified?: string;
     description?: string;
     duration?: number;
     id?: number;
     name?: string;
-    pauseNodeKeys?: PauseNodeKeysReadable;
+    pauseNodeKeys?: PauseNodeKeys;
     processId?: number;
-    startNodeKeys?: StartNodeKeysReadable;
+    startNodeKeys?: StartNodeKeys;
     status?: number;
-    stopNodeKeys?: StopNodeKeysReadable;
+    stopNodeKeys?: StopNodeKeys;
     readonly 'x-class-name'?: string;
 };
 
-export type SlaWritable = {
-    calendarKey?: string;
-    dateModified?: string;
-    description?: string;
-    duration?: number;
-    id?: number;
-    name?: string;
-    pauseNodeKeys?: PauseNodeKeysWritable;
-    processId?: number;
-    startNodeKeys?: StartNodeKeysWritable;
-    status?: number;
-    stopNodeKeys?: StopNodeKeysWritable;
-};
-
-export type StartNodeKeysReadable = {
-    nodeKeys?: Array<NodeKeyReadable>;
+export type StartNodeKeys = {
+    nodeKeys?: Array<NodeKey>;
     status?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type StartNodeKeysWritable = {
-    nodeKeys?: Array<NodeKeyWritable>;
-    status?: number;
-};
-
-export type StopNodeKeysReadable = {
-    nodeKeys?: Array<NodeKeyReadable>;
+export type StopNodeKeys = {
+    nodeKeys?: Array<NodeKey>;
     status?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type StopNodeKeysWritable = {
-    nodeKeys?: Array<NodeKeyWritable>;
-    status?: number;
-};
-
-export type TaskReadable = {
+export type Task = {
     readonly assetTitle?: string;
     assetTitle_i18n?: {
         [key: string]: string;
@@ -776,33 +444,10 @@ export type TaskReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type TaskWritable = {
-    assetTitle_i18n?: {
-        [key: string]: string;
-    };
-    assetType_i18n?: {
-        [key: string]: string;
-    };
-    className?: string;
-    classPK?: number;
-    completed?: boolean;
-    completionUserId?: number;
-    dateCompletion?: string;
-    dateCreated?: string;
-    dateModified?: string;
-    duration?: number;
-    id?: number;
-    instanceId?: number;
-    name?: string;
-    nodeId?: number;
-    processId?: number;
-    processVersion?: string;
-};
-
-export type PageTaskReadable = {
+export type PageTask = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaskReadable>;
+    items?: Array<Task>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -813,21 +458,7 @@ export type PageTaskReadable = {
     page?: number;
 };
 
-export type PageTaskWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<TaskWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type TaskBulkSelectionReadable = {
+export type TaskBulkSelection = {
     assigneeIds?: Array<number>;
     instanceIds?: Array<number>;
     processId?: number;
@@ -836,18 +467,10 @@ export type TaskBulkSelectionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type TaskBulkSelectionWritable = {
-    assigneeIds?: Array<number>;
-    instanceIds?: Array<number>;
-    processId?: number;
-    slaStatuses?: Array<string>;
-    taskNames?: Array<string>;
-};
-
-export type PageTimeRangeReadable = {
+export type PageTimeRange = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TimeRangeReadable>;
+    items?: Array<TimeRange>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -858,39 +481,17 @@ export type PageTimeRangeReadable = {
     page?: number;
 };
 
-export type PageTimeRangeWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<TimeRangeWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type TimeRangeReadable = {
+export type TimeRange = {
     dateEnd?: string;
     dateStart?: string;
     defaultTimeRange?: boolean;
     id?: number;
     name?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type TimeRangeWritable = {
-    dateEnd?: string;
-    dateStart?: string;
-    defaultTimeRange?: boolean;
-    id?: number;
-    name?: string;
 };
 
 export type PostProcessAssigneeMetricsPageData = {
-    body?: AssigneeMetricBulkSelectionWritable;
+    body?: AssigneeMetricBulkSelection;
     path: {
         processId: string;
     };
@@ -906,13 +507,13 @@ export type PostProcessAssigneeMetricsPageResponses = {
     /**
      * default response
      */
-    default: PageAssigneeMetricReadable;
+    default: PageAssigneeMetric;
 };
 
 export type PostProcessAssigneeMetricsPageResponse = PostProcessAssigneeMetricsPageResponses[keyof PostProcessAssigneeMetricsPageResponses];
 
 export type PostProcessAssigneesPageData = {
-    body?: AssigneeBulkSelectionWritable;
+    body?: AssigneeBulkSelection;
     path: {
         processId: string;
     };
@@ -924,7 +525,7 @@ export type PostProcessAssigneesPageResponses = {
     /**
      * default response
      */
-    default: PageAssigneeReadable;
+    default: PageAssignee;
 };
 
 export type PostProcessAssigneesPageResponse = PostProcessAssigneesPageResponses[keyof PostProcessAssigneesPageResponses];
@@ -942,7 +543,7 @@ export type GetCalendarsPageResponses = {
     /**
      * default response
      */
-    default: PageCalendarReadable;
+    default: PageCalendar;
 };
 
 export type GetCalendarsPageResponse = GetCalendarsPageResponses[keyof GetCalendarsPageResponses];
@@ -982,7 +583,7 @@ export type GetProcessHistogramMetricResponses = {
     /**
      * default response
      */
-    default: HistogramMetricReadable;
+    default: HistogramMetric;
 };
 
 export type GetProcessHistogramMetricResponse = GetProcessHistogramMetricResponses[keyof GetProcessHistogramMetricResponses];
@@ -1000,13 +601,13 @@ export type GetIndexesPageResponses = {
     /**
      * default response
      */
-    default: PageIndexReadable;
+    default: PageIndex;
 };
 
 export type GetIndexesPageResponse = GetIndexesPageResponses[keyof GetIndexesPageResponses];
 
 export type PatchIndexRefreshData = {
-    body?: IndexWritable;
+    body?: Index;
     path?: never;
     query?: never;
     url: '/o/portal-workflow-metrics/v1.0/indexes/refresh';
@@ -1020,7 +621,7 @@ export type PatchIndexRefreshResponses = {
 };
 
 export type PatchIndexReindexData = {
-    body?: IndexWritable;
+    body?: Index;
     path?: never;
     query?: never;
     url: '/o/portal-workflow-metrics/v1.0/indexes/reindex';
@@ -1082,13 +683,13 @@ export type GetProcessInstanceResponses = {
     /**
      * default response
      */
-    default: InstanceReadable;
+    default: Instance;
 };
 
 export type GetProcessInstanceResponse = GetProcessInstanceResponses[keyof GetProcessInstanceResponses];
 
 export type PatchProcessInstanceData = {
-    body?: InstanceWritable;
+    body?: Instance;
     path: {
         processId: string;
         instanceId: string;
@@ -1129,13 +730,13 @@ export type GetProcessInstancesPageResponses = {
     /**
      * default response
      */
-    default: PageInstanceReadable;
+    default: PageInstance;
 };
 
 export type GetProcessInstancesPageResponse = GetProcessInstancesPageResponses[keyof GetProcessInstancesPageResponses];
 
 export type PostProcessInstanceData = {
-    body?: InstanceWritable;
+    body?: Instance;
     path: {
         processId: string;
     };
@@ -1147,13 +748,13 @@ export type PostProcessInstanceResponses = {
     /**
      * default response
      */
-    default: InstanceReadable;
+    default: Instance;
 };
 
 export type PostProcessInstanceResponse = PostProcessInstanceResponses[keyof PostProcessInstanceResponses];
 
 export type PatchProcessInstanceCompleteData = {
-    body?: InstanceWritable;
+    body?: Instance;
     path: {
         processId: string;
         instanceId: string;
@@ -1240,7 +841,7 @@ export type GetProcessNodeMetricsPageResponses = {
     /**
      * default response
      */
-    default: PageNodeMetricReadable;
+    default: PageNodeMetric;
 };
 
 export type GetProcessNodeMetricsPageResponse = GetProcessNodeMetricsPageResponses[keyof GetProcessNodeMetricsPageResponses];
@@ -1277,13 +878,13 @@ export type GetProcessNodesPageResponses = {
     /**
      * default response
      */
-    default: PageNodeReadable;
+    default: PageNode;
 };
 
 export type GetProcessNodesPageResponse = GetProcessNodesPageResponses[keyof GetProcessNodesPageResponses];
 
 export type PostProcessNodeData = {
-    body?: NodeWritable;
+    body?: Node;
     path: {
         processId: string;
     };
@@ -1295,7 +896,7 @@ export type PostProcessNodeResponses = {
     /**
      * default response
      */
-    default: NodeReadable;
+    default: Node;
 };
 
 export type PostProcessNodeResponse = PostProcessNodeResponses[keyof PostProcessNodeResponses];
@@ -1357,7 +958,7 @@ export type GetProcessMetricResponses = {
     /**
      * default response
      */
-    default: ProcessMetricReadable;
+    default: ProcessMetric;
 };
 
 export type GetProcessMetricResponse = GetProcessMetricResponses[keyof GetProcessMetricResponses];
@@ -1379,7 +980,7 @@ export type GetProcessMetricsPageResponses = {
     /**
      * default response
      */
-    default: PageProcessMetricReadable;
+    default: PageProcessMetric;
 };
 
 export type GetProcessMetricsPageResponse = GetProcessMetricsPageResponses[keyof GetProcessMetricsPageResponses];
@@ -1433,13 +1034,13 @@ export type GetProcessResponses = {
     /**
      * default response
      */
-    default: ProcessReadable;
+    default: Process;
 };
 
 export type GetProcessResponse = GetProcessResponses[keyof GetProcessResponses];
 
 export type PutProcessData = {
-    body?: ProcessWritable;
+    body?: Process;
     path: {
         processId: string;
     };
@@ -1527,7 +1128,7 @@ export type GetProcessTitleResponses = {
 export type GetProcessTitleResponse = GetProcessTitleResponses[keyof GetProcessTitleResponses];
 
 export type PostProcessData = {
-    body?: ProcessWritable;
+    body?: Process;
     path?: never;
     query?: never;
     url: '/o/portal-workflow-metrics/v1.0/processes';
@@ -1537,7 +1138,7 @@ export type PostProcessResponses = {
     /**
      * default response
      */
-    default: ProcessReadable;
+    default: Process;
 };
 
 export type PostProcessResponse = PostProcessResponses[keyof PostProcessResponses];
@@ -1557,7 +1158,7 @@ export type GetProcessProcessVersionsPageResponses = {
     /**
      * default response
      */
-    default: PageProcessVersionReadable;
+    default: PageProcessVersion;
 };
 
 export type GetProcessProcessVersionsPageResponse = GetProcessProcessVersionsPageResponses[keyof GetProcessProcessVersionsPageResponses];
@@ -1595,7 +1196,7 @@ export type GetReindexStatusesPageResponses = {
     /**
      * default response
      */
-    default: PageReindexStatusReadable;
+    default: PageReindexStatus;
 };
 
 export type GetReindexStatusesPageResponse = GetReindexStatusesPageResponses[keyof GetReindexStatusesPageResponses];
@@ -1634,7 +1235,7 @@ export type GetProcessRolesPageResponses = {
     /**
      * default response
      */
-    default: PageRoleReadable;
+    default: PageRole;
 };
 
 export type GetProcessRolesPageResponse = GetProcessRolesPageResponses[keyof GetProcessRolesPageResponses];
@@ -1689,13 +1290,13 @@ export type GetSlaResponses = {
     /**
      * default response
      */
-    default: SlaReadable;
+    default: Sla;
 };
 
 export type GetSlaResponse = GetSlaResponses[keyof GetSlaResponses];
 
 export type PutSlaData = {
-    body?: SlaWritable;
+    body?: Sla;
     path: {
         slaId: string;
     };
@@ -1707,7 +1308,7 @@ export type PutSlaResponses = {
     /**
      * default response
      */
-    default: SlaReadable;
+    default: Sla;
 };
 
 export type PutSlaResponse = PutSlaResponses[keyof PutSlaResponses];
@@ -1766,13 +1367,13 @@ export type GetProcessSlasPageResponses = {
     /**
      * default response
      */
-    default: PageSlaReadable;
+    default: PageSla;
 };
 
 export type GetProcessSlasPageResponse = GetProcessSlasPageResponses[keyof GetProcessSlasPageResponses];
 
 export type PostProcessSlaData = {
-    body?: SlaWritable;
+    body?: Sla;
     path: {
         processId: string;
     };
@@ -1784,7 +1385,7 @@ export type PostProcessSlaResponses = {
     /**
      * default response
      */
-    default: SlaReadable;
+    default: Sla;
 };
 
 export type PostProcessSlaResponse = PostProcessSlaResponses[keyof PostProcessSlaResponses];
@@ -1843,7 +1444,7 @@ export type GetProcessLastSlaResultResponses = {
     /**
      * default response
      */
-    default: SlaResultReadable;
+    default: SlaResult;
 };
 
 export type GetProcessLastSlaResultResponse = GetProcessLastSlaResultResponses[keyof GetProcessLastSlaResultResponses];
@@ -1879,13 +1480,13 @@ export type GetProcessTaskResponses = {
     /**
      * default response
      */
-    default: TaskReadable;
+    default: Task;
 };
 
 export type GetProcessTaskResponse = GetProcessTaskResponses[keyof GetProcessTaskResponses];
 
 export type PatchProcessTaskData = {
-    body?: TaskWritable;
+    body?: Task;
     path: {
         processId: string;
         taskId: string;
@@ -1916,13 +1517,13 @@ export type GetProcessTasksPageResponses = {
     /**
      * default response
      */
-    default: PageTaskReadable;
+    default: PageTask;
 };
 
 export type GetProcessTasksPageResponse = GetProcessTasksPageResponses[keyof GetProcessTasksPageResponses];
 
 export type PostProcessTaskData = {
-    body?: TaskWritable;
+    body?: Task;
     path: {
         processId: string;
     };
@@ -1934,13 +1535,13 @@ export type PostProcessTaskResponses = {
     /**
      * default response
      */
-    default: TaskReadable;
+    default: Task;
 };
 
 export type PostProcessTaskResponse = PostProcessTaskResponses[keyof PostProcessTaskResponses];
 
 export type PatchProcessTaskCompleteData = {
-    body?: TaskWritable;
+    body?: Task;
     path: {
         processId: string;
         taskId: string;
@@ -1997,7 +1598,7 @@ export type PostProcessTasksPageExportBatchResponses = {
 };
 
 export type PostTasksPageData = {
-    body?: TaskBulkSelectionWritable;
+    body?: TaskBulkSelection;
     path?: never;
     query?: {
         page?: string;
@@ -2010,7 +1611,7 @@ export type PostTasksPageResponses = {
     /**
      * default response
      */
-    default: PageTaskReadable;
+    default: PageTask;
 };
 
 export type PostTasksPageResponse = PostTasksPageResponses[keyof PostTasksPageResponses];
@@ -2028,7 +1629,7 @@ export type GetTimeRangesPageResponses = {
     /**
      * default response
      */
-    default: PageTimeRangeReadable;
+    default: PageTimeRange;
 };
 
 export type GetTimeRangesPageResponse = GetTimeRangesPageResponses[keyof GetTimeRangesPageResponses];

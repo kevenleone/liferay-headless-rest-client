@@ -10,7 +10,7 @@ export type FacetValue = {
     term?: string;
 };
 
-export type NotificationQueueEntryReadable = {
+export type NotificationQueueEntry = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -32,19 +32,10 @@ export type NotificationQueueEntryReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type NotificationQueueEntryWritable = {
-    body?: string;
-    recipients?: Array<{
-        [key: string]: unknown;
-    }>;
-    subject?: string;
-    type?: string;
-};
-
-export type PageNotificationQueueEntryReadable = {
+export type PageNotificationQueueEntry = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NotificationQueueEntryReadable>;
+    items?: Array<NotificationQueueEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -55,21 +46,7 @@ export type PageNotificationQueueEntryReadable = {
     page?: number;
 };
 
-export type PageNotificationQueueEntryWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<NotificationQueueEntryWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type NotificationTemplateReadable = {
+export type NotificationTemplate = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -105,51 +82,10 @@ export type NotificationTemplateReadable = {
     editorType?: 'freeMarker' | 'richText';
 };
 
-export type NotificationTemplateWritable = {
-    attachmentObjectFieldExternalReferenceCodes?: Array<string>;
-    attachmentObjectFieldIds?: Array<number>;
-    body?: {
-        [key: string]: string;
-    };
-    description?: string;
-    externalReferenceCode?: string;
-    name?: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-    objectDefinitionExternalReferenceCode?: string;
-    objectDefinitionId?: number;
-    recipientType?: string;
-    recipients?: Array<{
-        [key: string]: unknown;
-    }>;
-    subject?: {
-        [key: string]: string;
-    };
-    system?: boolean;
-    type?: string;
-    typeLabel?: string;
-    editorType?: 'freeMarker' | 'richText';
-};
-
-export type PageNotificationTemplateReadable = {
+export type PageNotificationTemplate = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NotificationTemplateReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageNotificationTemplateWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<NotificationTemplateWritable>;
+    items?: Array<NotificationTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -189,7 +125,7 @@ export type GetNotificationQueueEntryResponses = {
     /**
      * default response
      */
-    default: NotificationQueueEntryReadable;
+    default: NotificationQueueEntry;
 };
 
 export type GetNotificationQueueEntryResponse = GetNotificationQueueEntryResponses[keyof GetNotificationQueueEntryResponses];
@@ -248,13 +184,13 @@ export type GetNotificationQueueEntriesPageResponses = {
     /**
      * default response
      */
-    default: PageNotificationQueueEntryReadable;
+    default: PageNotificationQueueEntry;
 };
 
 export type GetNotificationQueueEntriesPageResponse = GetNotificationQueueEntriesPageResponses[keyof GetNotificationQueueEntriesPageResponses];
 
 export type PostNotificationQueueEntryData = {
-    body?: NotificationQueueEntryWritable;
+    body?: NotificationQueueEntry;
     path?: never;
     query?: never;
     url: '/o/notification/v1.0/notification-queue-entries';
@@ -264,7 +200,7 @@ export type PostNotificationQueueEntryResponses = {
     /**
      * default response
      */
-    default: NotificationQueueEntryReadable;
+    default: NotificationQueueEntry;
 };
 
 export type PostNotificationQueueEntryResponse = PostNotificationQueueEntryResponses[keyof PostNotificationQueueEntryResponses];
@@ -335,13 +271,13 @@ export type GetNotificationTemplateResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type GetNotificationTemplateResponse = GetNotificationTemplateResponses[keyof GetNotificationTemplateResponses];
 
 export type PatchNotificationTemplateData = {
-    body?: NotificationTemplateWritable;
+    body?: NotificationTemplate;
     path: {
         notificationTemplateId: string;
     };
@@ -353,13 +289,13 @@ export type PatchNotificationTemplateResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type PatchNotificationTemplateResponse = PatchNotificationTemplateResponses[keyof PatchNotificationTemplateResponses];
 
 export type PutNotificationTemplateData = {
-    body?: NotificationTemplateWritable;
+    body?: NotificationTemplate;
     path: {
         notificationTemplateId: string;
     };
@@ -371,7 +307,7 @@ export type PutNotificationTemplateResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type PutNotificationTemplateResponse = PutNotificationTemplateResponses[keyof PutNotificationTemplateResponses];
@@ -443,13 +379,13 @@ export type GetNotificationTemplateByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type GetNotificationTemplateByExternalReferenceCodeResponse = GetNotificationTemplateByExternalReferenceCodeResponses[keyof GetNotificationTemplateByExternalReferenceCodeResponses];
 
 export type PutNotificationTemplateByExternalReferenceCodeData = {
-    body?: NotificationTemplateWritable;
+    body?: NotificationTemplate;
     path: {
         externalReferenceCode: string;
     };
@@ -461,7 +397,7 @@ export type PutNotificationTemplateByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type PutNotificationTemplateByExternalReferenceCodeResponse = PutNotificationTemplateByExternalReferenceCodeResponses[keyof PutNotificationTemplateByExternalReferenceCodeResponses];
@@ -485,13 +421,13 @@ export type GetNotificationTemplatesPageResponses = {
     /**
      * default response
      */
-    default: PageNotificationTemplateReadable;
+    default: PageNotificationTemplate;
 };
 
 export type GetNotificationTemplatesPageResponse = GetNotificationTemplatesPageResponses[keyof GetNotificationTemplatesPageResponses];
 
 export type PostNotificationTemplateData = {
-    body?: NotificationTemplateWritable;
+    body?: NotificationTemplate;
     path?: never;
     query?: never;
     url: '/o/notification/v1.0/notification-templates';
@@ -501,7 +437,7 @@ export type PostNotificationTemplateResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type PostNotificationTemplateResponse = PostNotificationTemplateResponses[keyof PostNotificationTemplateResponses];
@@ -519,7 +455,7 @@ export type PostNotificationTemplateCopyResponses = {
     /**
      * default response
      */
-    default: NotificationTemplateReadable;
+    default: NotificationTemplate;
 };
 
 export type PostNotificationTemplateCopyResponse = PostNotificationTemplateCopyResponses[keyof PostNotificationTemplateCopyResponses];

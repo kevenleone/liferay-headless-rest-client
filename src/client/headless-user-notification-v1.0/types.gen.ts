@@ -10,10 +10,10 @@ export type FacetValue = {
     term?: string;
 };
 
-export type PageUserNotificationReadable = {
+export type PageUserNotification = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserNotificationReadable>;
+    items?: Array<UserNotification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -24,21 +24,7 @@ export type PageUserNotificationReadable = {
     page?: number;
 };
 
-export type PageUserNotificationWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<UserNotificationWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type UserNotificationReadable = {
+export type UserNotification = {
     /**
      * Block of actions allowed by the user making the request.
      */
@@ -70,13 +56,6 @@ export type UserNotificationReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type UserNotificationWritable = {
-    /**
-     * The user notification's message.
-     */
-    message?: string;
-};
-
 export type GetMyUserNotificationsPageData = {
     body?: never;
     path?: never;
@@ -97,7 +76,7 @@ export type GetMyUserNotificationsPageResponses = {
     /**
      * default response
      */
-    default: PageUserNotificationReadable;
+    default: PageUserNotification;
 };
 
 export type GetMyUserNotificationsPageResponse = GetMyUserNotificationsPageResponses[keyof GetMyUserNotificationsPageResponses];
@@ -124,7 +103,7 @@ export type GetUserAccountUserNotificationsPageResponses = {
     /**
      * default response
      */
-    default: PageUserNotificationReadable;
+    default: PageUserNotification;
 };
 
 export type GetUserAccountUserNotificationsPageResponse = GetUserAccountUserNotificationsPageResponses[keyof GetUserAccountUserNotificationsPageResponses];
@@ -145,7 +124,7 @@ export type GetUserNotificationResponses = {
     /**
      * default response
      */
-    default: UserNotificationReadable;
+    default: UserNotification;
 };
 
 export type GetUserNotificationResponse = GetUserNotificationResponses[keyof GetUserNotificationResponses];

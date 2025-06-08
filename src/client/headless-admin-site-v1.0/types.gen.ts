@@ -73,7 +73,7 @@ export type Creator = {
 /**
  * The display page template's parent folder.
  */
-export type DisplayPageTemplateFolderReadable = {
+export type DisplayPageTemplateFolder = {
     creator?: Creator;
     /**
      * The display page template folder's creator external reference code.
@@ -114,66 +114,10 @@ export type DisplayPageTemplateFolderReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The display page template's parent folder.
- */
-export type DisplayPageTemplateFolderWritable = {
-    /**
-     * The display page template folder's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The display page template folder's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time any field of the display page template folder was changed.
-     */
-    dateModified?: string;
-    /**
-     * The display page template folder's description.
-     */
-    description?: string;
-    /**
-     * The display page template folder's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The display page template folder's key.
-     */
-    key?: string;
-    /**
-     * The display page template folder's name.
-     */
-    name?: string;
-    /**
-     * The parent display page template folder's external reference code.
-     */
-    parentDisplayPageTemplateFolderExternalReferenceCode?: string;
-    /**
-     * A valid external identifier to reference this page template folder.
-     */
-    uuid?: string;
-};
-
-export type PageDisplayPageTemplateFolderReadable = {
+export type PageDisplayPageTemplateFolder = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DisplayPageTemplateFolderReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageDisplayPageTemplateFolderWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<DisplayPageTemplateFolderWritable>;
+    items?: Array<DisplayPageTemplateFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -187,7 +131,7 @@ export type PageDisplayPageTemplateFolderWritable = {
 /**
  * A reference specifying the class name.
  */
-export type ClassNameReferenceReadable = CollectionReferenceReadable & {
+export type ClassNameReference = CollectionReference & {
     collectionType?: 'ClassNameReference';
 } & {
     readonly 'x-class-name'?: string;
@@ -195,35 +139,18 @@ export type ClassNameReferenceReadable = CollectionReferenceReadable & {
 };
 
 /**
- * A reference specifying the class name.
- */
-export type ClassNameReferenceWritable = CollectionReferenceWritable & {
-    collectionType?: 'ClassNameReference';
-} & {
-    className: string;
-};
-
-/**
  * A reference specifying the class name and an optional subtype.
  */
-export type ClassSubtypeReferenceReadable = {
+export type ClassSubtypeReference = {
     className: string;
-    subTypeExternalReference?: ItemExternalReferenceReadable;
+    subTypeExternalReference?: ItemExternalReference;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A reference specifying the class name and an optional subtype.
- */
-export type ClassSubtypeReferenceWritable = {
-    className: string;
-    subTypeExternalReference?: ItemExternalReferenceWritable;
 };
 
 /**
  * The client extension for the theme spritemap of a page specification.
  */
-export type ClientExtensionReadable = {
+export type ClientExtension = {
     /**
      * The configuration keys and values of the client extension.
      */
@@ -237,40 +164,16 @@ export type ClientExtensionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The client extension for the theme spritemap of a page specification.
- */
-export type ClientExtensionWritable = {
-    /**
-     * The configuration keys and values of the client extension.
-     */
-    clientExtensionConfig?: {
-        [key: string]: string;
-    };
-    /**
-     * The client extension's external reference code.
-     */
-    externalReferenceCode?: string;
-};
-
-export type CollectionItemExternalReferenceReadable = CollectionReferenceReadable & {
+export type CollectionItemExternalReference = CollectionReference & {
     collectionType?: 'CollectionItemExternalReference';
 } & {
     readonly 'x-class-name'?: string;
     className?: string;
     externalReferenceCode?: string;
-    scope?: ScopeReadable;
+    scope?: Scope;
 };
 
-export type CollectionItemExternalReferenceWritable = CollectionReferenceWritable & {
-    collectionType?: 'CollectionItemExternalReference';
-} & {
-    className?: string;
-    externalReferenceCode?: string;
-    scope?: ScopeWritable;
-};
-
-export type CollectionItemPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type CollectionItemPageElementDefinition = PageElementDefinition & {
     type?: 'CollectionItemPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -282,26 +185,15 @@ export type CollectionItemPageElementDefinitionReadable = PageElementDefinitionR
     };
 };
 
-export type CollectionItemPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'CollectionItemPageElementDefinition';
-} & {
-    /**
-     * The collection item page element's configuration.
-     */
-    collectionItemConfig?: {
-        [key: string]: unknown;
-    };
-};
-
-export type CollectionPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type CollectionPageElementDefinition = PageElementDefinition & {
     type?: 'CollectionPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
-    collectionReference?: CollectionReferenceReadable;
+    collectionReference?: CollectionReference;
     /**
      * A list of viewports of the collection page element.
      */
-    collectionViewports?: Array<CollectionViewportReadable>;
+    collectionViewports?: Array<CollectionViewport>;
     /**
      * Whether to show all items when pagination is disabled.
      */
@@ -310,13 +202,13 @@ export type CollectionPageElementDefinitionReadable = PageElementDefinitionReada
      * Whether to show all pages when pagination is enabled.
      */
     displayAllPages?: boolean;
-    emptyCollectionConfig?: EmptyCollectionConfigReadable;
-    fragmentStyle?: FragmentStyleReadable;
+    emptyCollectionConfig?: EmptyCollectionConfig;
+    fragmentStyle?: FragmentStyle;
     /**
      * The fragment viewports of the collection page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
-    layout?: LayoutReadable;
+    fragmentViewports?: Array<FragmentViewport>;
+    layout?: Layout;
     /**
      * The style of a list of items in the collection page element.
      */
@@ -355,76 +247,8 @@ export type CollectionPageElementDefinitionReadable = PageElementDefinitionReada
     paginationType?: 'None' | 'Numeric' | 'Regular' | 'Simple';
 };
 
-export type CollectionPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'CollectionPageElementDefinition';
-} & {
-    collectionReference?: CollectionReferenceWritable;
-    /**
-     * A list of viewports of the collection page element.
-     */
-    collectionViewports?: Array<CollectionViewportWritable>;
-    /**
-     * Whether to show all items when pagination is disabled.
-     */
-    displayAllItems?: boolean;
-    /**
-     * Whether to show all pages when pagination is enabled.
-     */
-    displayAllPages?: boolean;
-    emptyCollectionConfig?: EmptyCollectionConfigWritable;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * The fragment viewports of the collection page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    layout?: LayoutWritable;
-    /**
-     * The style of a list of items in the collection page element.
-     */
-    listItemStyle?: string;
-    /**
-     * The style of a list in the collection page element.
-     */
-    listStyle?: string;
-    /**
-     * The custom name of a collection page element.
-     */
-    name?: string;
-    /**
-     * The number of columns in the collection page element.
-     */
-    numberOfColumns?: number;
-    /**
-     * The maximum number of items to display in the collection page element when pagination is disabled.
-     */
-    numberOfItems?: number;
-    /**
-     * The number of items per page in the collection page element.
-     */
-    numberOfItemsPerPage?: number;
-    /**
-     * The maximum number of pages to show when pagination is enabled.
-     */
-    numberOfPages?: number;
-    /**
-     * The collection page element's template key.
-     */
-    templateKey?: string;
-    /**
-     * The type of pagination.
-     */
-    paginationType?: 'None' | 'Numeric' | 'Regular' | 'Simple';
-};
-
-export type CollectionReferenceReadable = {
+export type CollectionReference = {
     readonly 'x-class-name'?: string;
-    /**
-     * The collection's type (Collection, CollectionProvider).
-     */
-    collectionType?: 'Collection' | 'CollectionProvider';
-};
-
-export type CollectionReferenceWritable = {
     /**
      * The collection's type (Collection, CollectionProvider).
      */
@@ -434,8 +258,8 @@ export type CollectionReferenceWritable = {
 /**
  * A collection viewport.
  */
-export type CollectionViewportReadable = {
-    collectionViewportDefinition: CollectionViewportDefinitionReadable;
+export type CollectionViewport = {
+    collectionViewportDefinition: CollectionViewportDefinition;
     /**
      * The collection viewport's ID.
      */
@@ -444,20 +268,9 @@ export type CollectionViewportReadable = {
 };
 
 /**
- * A collection viewport.
- */
-export type CollectionViewportWritable = {
-    collectionViewportDefinition: CollectionViewportDefinitionWritable;
-    /**
-     * The collection viewport's ID.
-     */
-    id: string;
-};
-
-/**
  * The definition of the collection viewport.
  */
-export type CollectionViewportDefinitionReadable = {
+export type CollectionViewportDefinition = {
     /**
      * The number of columns of the collection viewport.
      */
@@ -465,37 +278,14 @@ export type CollectionViewportDefinitionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The definition of the collection viewport.
- */
-export type CollectionViewportDefinitionWritable = {
-    /**
-     * The number of columns of the collection viewport.
-     */
-    numberOfColumns?: number;
-};
-
-export type ColumnPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type ColumnPageElementDefinition = PageElementDefinition & {
     type?: 'ColumnPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
     /**
      * A list of column viewports of the column page element.
      */
-    columnViewports?: Array<ColumnViewportReadable>;
-    /**
-     * The page column's size.
-     */
-    size?: number;
-};
-
-export type ColumnPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'ColumnPageElementDefinition';
-} & {
-    /**
-     * A list of column viewports of the column page element.
-     */
-    columnViewports?: Array<ColumnViewportWritable>;
+    columnViewports?: Array<ColumnViewport>;
     /**
      * The page column's size.
      */
@@ -505,33 +295,21 @@ export type ColumnPageElementDefinitionWritable = PageElementDefinitionWritable 
 /**
  * A column in a viewport.
  */
-export type ColumnViewportReadable = {
-    columnViewportDefinition: ColumnViewportDefinitionReadable;
+export type ColumnViewport = {
+    columnViewportDefinition: ColumnViewportDefinition;
     id: string;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * A column in a viewport.
- */
-export type ColumnViewportWritable = {
-    columnViewportDefinition: ColumnViewportDefinitionWritable;
-    id: string;
-};
-
-export type ColumnViewportDefinitionReadable = {
+export type ColumnViewportDefinition = {
     size?: number;
     readonly 'x-class-name'?: string;
-};
-
-export type ColumnViewportDefinitionWritable = {
-    size?: number;
 };
 
 /**
  * Represents the Adaptive Media fragment image configuration for different viewports.
  */
-export type ConfigReadable = {
+export type Config = {
     /**
      * The landscape mobile configuration of the fragment image.
      */
@@ -547,29 +325,11 @@ export type ConfigReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Represents the Adaptive Media fragment image configuration for different viewports.
- */
-export type ConfigWritable = {
-    /**
-     * The landscape mobile configuration of the fragment image.
-     */
-    landscapeMobile?: string;
-    /**
-     * The portrait mobile configuration of the fragment image.
-     */
-    portraitMobile?: string;
-    /**
-     * The tablet configuration of the fragment image.
-     */
-    tablet?: string;
-};
-
-export type ContainerPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type ContainerPageElementDefinition = PageElementDefinition & {
     type?: 'ContainerPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
-    backgroundFragmentImage?: FragmentImageReadable;
+    backgroundFragmentImage?: FragmentImage;
     /**
      * The content visibility of the container.
      */
@@ -585,64 +345,26 @@ export type ContainerPageElementDefinitionReadable = PageElementDefinitionReadab
     /**
      * The custom CSS viewports of the container page element.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
-    fragmentLink?: FragmentLinkReadable;
-    fragmentStyle?: FragmentStyleReadable;
+    customCSSViewports?: Array<CustomCssViewport>;
+    fragmentLink?: FragmentLink;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of the container page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
-    htmlProperties?: HtmlPropertiesReadable;
+    fragmentViewports?: Array<FragmentViewport>;
+    htmlProperties?: HtmlProperties;
     /**
      * A flag that indicates whether the container page element is indexed or not.
      */
     indexed?: boolean;
-    layout?: LayoutReadable;
+    layout?: Layout;
     /**
      * The custom name of a container page element.
      */
     name?: string;
 };
 
-export type ContainerPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'ContainerPageElementDefinition';
-} & {
-    backgroundFragmentImage?: FragmentImageWritable;
-    /**
-     * The content visibility of the container.
-     */
-    contentVisibility?: string;
-    /**
-     * A list of CSS Classes that are applied to the element.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the container page element.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the container page element.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    fragmentLink?: FragmentLinkWritable;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of the container page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    htmlProperties?: HtmlPropertiesWritable;
-    /**
-     * A flag that indicates whether the container page element is indexed or not.
-     */
-    indexed?: boolean;
-    layout?: LayoutWritable;
-    /**
-     * The custom name of a container page element.
-     */
-    name?: string;
-};
-
-export type ContentPageSpecificationReadable = PageSpecificationReadable & {
+export type ContentPageSpecification = PageSpecification & {
     type?: 'ContentPageSpecification';
 } & {
     readonly 'x-class-name'?: string;
@@ -650,23 +372,13 @@ export type ContentPageSpecificationReadable = PageSpecificationReadable & {
      * The draft content page specification external reference code or null if it is a draft content page specification.
      */
     draftContentPageSpecificationExternalReferenceCode?: string;
-    pageExperiences?: Array<PageExperienceReadable>;
-};
-
-export type ContentPageSpecificationWritable = PageSpecificationWritable & {
-    type?: 'ContentPageSpecification';
-} & {
-    /**
-     * The draft content page specification external reference code or null if it is a draft content page specification.
-     */
-    draftContentPageSpecificationExternalReferenceCode?: string;
-    pageExperiences?: Array<PageExperienceWritable>;
+    pageExperiences?: Array<PageExperience>;
 };
 
 /**
  * A custom CSS viewport.
  */
-export type CustomCssViewportReadable = {
+export type CustomCssViewport = {
     /**
      * The definition of the custom CSS viewport.
      */
@@ -678,22 +390,8 @@ export type CustomCssViewportReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * A custom CSS viewport.
- */
-export type CustomCssViewportWritable = {
-    /**
-     * The definition of the custom CSS viewport.
-     */
-    customCSS: string;
-    /**
-     * The custom CSS viewport's ID.
-     */
-    id: string;
-};
-
-export type DisplayPageTemplateReadable = {
-    contentTypeReference?: ClassSubtypeReferenceReadable;
+export type DisplayPageTemplate = {
+    contentTypeReference?: ClassSubtypeReference;
     creator?: Creator;
     /**
      * The display page template's creator external reference code.
@@ -711,12 +409,12 @@ export type DisplayPageTemplateReadable = {
      * The display page template's most recent publication date.
      */
     datePublished?: string;
-    displayPageTemplateSettings?: DisplayPageTemplateSettingsReadable;
+    displayPageTemplateSettings?: DisplayPageTemplateSettings;
     /**
      * The display page template's external reference code.
      */
     externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryReadable;
+    friendlyUrlHistory?: FriendlyUrlHistory;
     /**
      * The localized relative URLs to the display page template's rendered content.
      */
@@ -738,9 +436,9 @@ export type DisplayPageTemplateReadable = {
     /**
      * The display page template's specifications. A display page template will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
      */
-    pageSpecifications?: Array<PageSpecificationReadable>;
-    parentFolder?: DisplayPageTemplateFolderReadable;
-    thumbnail?: ItemExternalReferenceReadable;
+    pageSpecifications?: Array<PageSpecification>;
+    parentFolder?: DisplayPageTemplateFolder;
+    thumbnail?: ItemExternalReference;
     /**
      * A valid external identifier to reference this display page template.
      */
@@ -748,64 +446,10 @@ export type DisplayPageTemplateReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type DisplayPageTemplateWritable = {
-    contentTypeReference?: ClassSubtypeReferenceWritable;
-    /**
-     * The display page template's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The display page template's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time any field of the display page template was changed.
-     */
-    dateModified?: string;
-    /**
-     * The display page template's most recent publication date.
-     */
-    datePublished?: string;
-    displayPageTemplateSettings?: DisplayPageTemplateSettingsWritable;
-    /**
-     * The display page template's external reference code.
-     */
-    externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryWritable;
-    /**
-     * The localized relative URLs to the display page template's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The display page template's key.
-     */
-    key?: string;
-    /**
-     * Whether the display page template is the default one for the given content type/subtype.
-     */
-    markedAsDefault?: boolean;
-    /**
-     * The display page template's name.
-     */
-    name?: string;
-    /**
-     * The display page template's specifications. A display page template will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
-     */
-    pageSpecifications?: Array<PageSpecificationWritable>;
-    parentFolder?: DisplayPageTemplateFolderWritable;
-    thumbnail?: ItemExternalReferenceWritable;
-    /**
-     * A valid external identifier to reference this display page template.
-     */
-    uuid?: string;
-};
-
 /**
  * The display page template's Open Graph settings.
  */
-export type DisplayPageTemplateOpenGraphSettingsReadable = {
+export type DisplayPageTemplateOpenGraphSettings = {
     /**
      * The Open Graph's description template.
      */
@@ -826,31 +470,9 @@ export type DisplayPageTemplateOpenGraphSettingsReadable = {
 };
 
 /**
- * The display page template's Open Graph settings.
- */
-export type DisplayPageTemplateOpenGraphSettingsWritable = {
-    /**
-     * The Open Graph's description template.
-     */
-    descriptionTemplate?: string;
-    /**
-     * The Open Graph's image alt template.
-     */
-    imageAltTemplate?: string;
-    /**
-     * The Open Graph's image template.
-     */
-    imageTemplate?: string;
-    /**
-     * The Open Graph's title template.
-     */
-    titleTemplate?: string;
-};
-
-/**
  * The display page template's SEO settings.
  */
-export type DisplayPageTemplateSeoSettingsReadable = {
+export type DisplayPageTemplateSeoSettings = {
     /**
      * The description template of the display page template to be used as summary for search engines.
      */
@@ -865,49 +487,20 @@ export type DisplayPageTemplateSeoSettingsReadable = {
     robots_i18n?: {
         [key: string]: string;
     };
-    sitemapSettings?: SitemapSettingsReadable;
-    readonly 'x-class-name'?: string;
-};
-
-/**
- * The display page template's SEO settings.
- */
-export type DisplayPageTemplateSeoSettingsWritable = {
-    /**
-     * The description template of the display page template to be used as summary for search engines.
-     */
-    descriptionTemplate?: string;
-    /**
-     * The main title template of the display page template to be used by search engines.
-     */
-    htmlTitleTemplate?: string;
-    /**
-     * A localized tag telling search engines if and how they should crawl the display page template.
-     */
-    robots_i18n?: {
-        [key: string]: string;
-    };
-    sitemapSettings?: SitemapSettingsWritable;
-};
-
-/**
- * Settings of the display page template, such as SEO or OpenGraph.
- */
-export type DisplayPageTemplateSettingsReadable = {
-    openGraphSettings?: DisplayPageTemplateOpenGraphSettingsReadable;
-    seoSettings?: DisplayPageTemplateSeoSettingsReadable;
+    sitemapSettings?: SitemapSettings;
     readonly 'x-class-name'?: string;
 };
 
 /**
  * Settings of the display page template, such as SEO or OpenGraph.
  */
-export type DisplayPageTemplateSettingsWritable = {
-    openGraphSettings?: DisplayPageTemplateOpenGraphSettingsWritable;
-    seoSettings?: DisplayPageTemplateSeoSettingsWritable;
+export type DisplayPageTemplateSettings = {
+    openGraphSettings?: DisplayPageTemplateOpenGraphSettings;
+    seoSettings?: DisplayPageTemplateSeoSettings;
+    readonly 'x-class-name'?: string;
 };
 
-export type DropZonePageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type DropZonePageElementDefinition = PageElementDefinition & {
     type?: 'DropZonePageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -919,18 +512,7 @@ export type DropZonePageElementDefinitionReadable = PageElementDefinitionReadabl
     };
 };
 
-export type DropZonePageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'DropZonePageElementDefinition';
-} & {
-    /**
-     * The drop zone page element's allowed or unallowed fragments.
-     */
-    fragmentSettings?: {
-        [key: string]: unknown;
-    };
-};
-
-export type EmptyCollectionConfigReadable = {
+export type EmptyCollectionConfig = {
     /**
      * Whether to display a message when the collection is empty or no results match the applied filters (true by default).
      */
@@ -944,20 +526,7 @@ export type EmptyCollectionConfigReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type EmptyCollectionConfigWritable = {
-    /**
-     * Whether to display a message when the collection is empty or no results match the applied filters (true by default).
-     */
-    displayMessage?: boolean;
-    /**
-     * The localized message to display when the collection is empty or no results match the applied filters ('No Results Found' by default).
-     */
-    message_i18n?: {
-        [key: string]: string;
-    };
-};
-
-export type FormConfigReadable = {
+export type FormConfig = {
     /**
      * The form reference.
      */
@@ -978,27 +547,7 @@ export type FormConfigReadable = {
     formType?: 'Multistep' | 'Simple';
 };
 
-export type FormConfigWritable = {
-    /**
-     * The form reference.
-     */
-    formReference?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The form page element's number of steps.
-     */
-    numberOfSteps?: number;
-    /**
-     * The definition of the result when a form submission is successful.
-     */
-    successFormSubmissionResult?: {
-        [key: string]: unknown;
-    };
-    formType?: 'Multistep' | 'Simple';
-};
-
-export type FormPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FormPageElementDefinition = PageElementDefinition & {
     type?: 'FormPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -1013,57 +562,25 @@ export type FormPageElementDefinitionReadable = PageElementDefinitionReadable & 
     /**
      * The custom CSS viewports of the page form.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
-    formConfig?: FormConfigReadable;
-    fragmentStyle?: FragmentStyleReadable;
+    customCSSViewports?: Array<CustomCssViewport>;
+    formConfig?: FormConfig;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of a form page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
+    fragmentViewports?: Array<FragmentViewport>;
     /**
      * A flag that indicates whether the page fragment instance is indexed or not.
      */
     indexed?: boolean;
-    layout?: LayoutReadable;
+    layout?: Layout;
     /**
      * The custom name of a form page element.
      */
     name?: string;
 };
 
-export type FormPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FormPageElementDefinition';
-} & {
-    /**
-     * A list of CSS classes that are applied to the form page element.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the form page element.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the page form.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    formConfig?: FormConfigWritable;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of a form page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    /**
-     * A flag that indicates whether the page fragment instance is indexed or not.
-     */
-    indexed?: boolean;
-    layout?: LayoutWritable;
-    /**
-     * The custom name of a form page element.
-     */
-    name?: string;
-};
-
-export type FormStepContainerPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FormStepContainerPageElementDefinition = PageElementDefinition & {
     type?: 'FormStepContainerPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -1078,47 +595,20 @@ export type FormStepContainerPageElementDefinitionReadable = PageElementDefiniti
     /**
      * The custom CSS viewports of the form step container page element.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
-    fragmentStyle?: FragmentStyleReadable;
+    customCSSViewports?: Array<CustomCssViewport>;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of a form step container page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
-    layout?: LayoutReadable;
+    fragmentViewports?: Array<FragmentViewport>;
+    layout?: Layout;
     /**
      * The custom name of a form step container page element.
      */
     name?: string;
 };
 
-export type FormStepContainerPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FormStepContainerPageElementDefinition';
-} & {
-    /**
-     * A list of CSS classes that are applied to the form step container page element.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the form step container page element.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the form step container page element.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of a form step container page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    layout?: LayoutWritable;
-    /**
-     * The custom name of a form step container page element.
-     */
-    name?: string;
-};
-
-export type FormStepPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FormStepPageElementDefinition = PageElementDefinition & {
     type?: 'FormStepPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -1130,43 +620,17 @@ export type FormStepPageElementDefinitionReadable = PageElementDefinitionReadabl
     };
 };
 
-export type FormStepPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FormStepPageElementDefinition';
-} & {
-    /**
-     * The form step's configuration.
-     */
-    formStepConfig?: {
-        [key: string]: unknown;
-    };
-};
-
-export type FragmentCompositionInstancePageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FragmentCompositionInstancePageElementDefinition = PageElementDefinition & {
     type?: 'FragmentCompositionInstancePageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
-    fragmentComposition?: ItemExternalReferenceReadable;
+    fragmentComposition?: ItemExternalReference;
 };
 
-export type FragmentCompositionInstancePageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FragmentCompositionInstancePageElementDefinition';
-} & {
-    fragmentComposition?: ItemExternalReferenceWritable;
-};
-
-export type FragmentDropZonePageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FragmentDropZonePageElementDefinition = PageElementDefinition & {
     type?: 'FragmentDropZonePageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
-    /**
-     * The id of the fragment drop zone
-     */
-    fragmentDropZoneId?: string;
-};
-
-export type FragmentDropZonePageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FragmentDropZonePageElementDefinition';
-} & {
     /**
      * The id of the fragment drop zone
      */
@@ -1176,7 +640,7 @@ export type FragmentDropZonePageElementDefinitionWritable = PageElementDefinitio
 /**
  * The fragment field values of the the fragment instance.
  */
-export type FragmentFieldReadable = {
+export type FragmentField = {
     /**
      * The fragment field's ID.
      */
@@ -1188,36 +652,20 @@ export type FragmentFieldReadable = {
         [key: string]: unknown;
     };
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The fragment field values of the the fragment instance.
- */
-export type FragmentFieldWritable = {
-    /**
-     * The fragment field's ID.
-     */
-    id?: string;
-    /**
-     * The fragment field's value.
-     */
-    value?: {
-        [key: string]: unknown;
-    };
 };
 
 /**
  * The background fragment image of the container page element.
  */
-export type FragmentImageReadable = {
-    config?: ConfigReadable;
+export type FragmentImage = {
+    config?: Config;
     /**
      * The fragment image's description.
      */
     description?: {
         [key: string]: unknown;
     };
-    itemExternalReference?: ItemExternalReferenceReadable;
+    itemExternalReference?: ItemExternalReference;
     /**
      * The fragment image's title.
      */
@@ -1233,33 +681,7 @@ export type FragmentImageReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The background fragment image of the container page element.
- */
-export type FragmentImageWritable = {
-    config?: ConfigWritable;
-    /**
-     * The fragment image's description.
-     */
-    description?: {
-        [key: string]: unknown;
-    };
-    itemExternalReference?: ItemExternalReferenceWritable;
-    /**
-     * The fragment image's title.
-     */
-    title?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The fragment image's url. Can be inline or mapped to an external value.
-     */
-    url?: {
-        [key: string]: unknown;
-    };
-};
-
-export type FragmentInstancePageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type FragmentInstancePageElementDefinition = PageElementDefinition & {
     type?: 'FragmentInstancePageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -1274,7 +696,7 @@ export type FragmentInstancePageElementDefinitionReadable = PageElementDefinitio
     /**
      * The custom CSS viewports of the fragment instance.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
+    customCSSViewports?: Array<CustomCssViewport>;
     /**
      * The fragment instance's most recent propagation date.
      */
@@ -1298,18 +720,18 @@ export type FragmentInstancePageElementDefinitionReadable = PageElementDefinitio
     /**
      * The fragment field values of the the fragment instance.
      */
-    fragmentFields?: Array<FragmentFieldReadable>;
+    fragmentFields?: Array<FragmentField>;
     /**
      * An external reference to the fragment.
      */
     fragmentReference?: {
         [key: string]: unknown;
     };
-    fragmentStyle?: FragmentStyleReadable;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of the fragment instance page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
+    fragmentViewports?: Array<FragmentViewport>;
     /**
      * A flag that indicates whether the fragment instance page element is indexed or not.
      */
@@ -1329,110 +751,26 @@ export type FragmentInstancePageElementDefinitionReadable = PageElementDefinitio
     /**
      * A list of widget instances within the fragment instance page element.
      */
-    widgetInstances?: Array<WidgetInstanceReadable>;
-};
-
-export type FragmentInstancePageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'FragmentInstancePageElementDefinition';
-} & {
-    /**
-     * A list of CSS classes that are applied to the fragment instance.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the fragment instance.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the fragment instance.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    /**
-     * The fragment instance's most recent propagation date.
-     */
-    datePropagated?: string;
-    /**
-     * The fragment instance's most recent publication date.
-     */
-    datePublished?: string;
-    /**
-     * The external reference code of the corresponding page element in the draft of the page. Available only in the published page specification.
-     */
-    draftPageElementExternalReferenceCode?: string;
-    /**
-     * The configuration values of the fragment instance.
-     */
-    fragmentConfig?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-    /**
-     * The fragment field values of the the fragment instance.
-     */
-    fragmentFields?: Array<FragmentFieldWritable>;
-    /**
-     * An external reference to the fragment.
-     */
-    fragmentReference?: {
-        [key: string]: unknown;
-    };
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of the fragment instance page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    /**
-     * A flag that indicates whether the fragment instance page element is indexed or not.
-     */
-    indexed?: boolean;
-    /**
-     * The custom name of a fragment instance page element.
-     */
-    name?: string;
-    /**
-     * The fragment instance page element's namespace.
-     */
-    namespace?: string;
-    /**
-     * A valid external identifier to reference this fragment instance page element.
-     */
-    uuid?: string;
-    /**
-     * A list of widget instances within the fragment instance page element.
-     */
-    widgetInstances?: Array<WidgetInstanceWritable>;
+    widgetInstances?: Array<WidgetInstance>;
 };
 
 /**
  * The fragment link of the container page element.
  */
-export type FragmentLinkReadable = {
+export type FragmentLink = {
     /**
      * The localized fragment link's values.
      */
     value_i18n?: {
-        [key: string]: FragmentLinkValueReadable;
+        [key: string]: FragmentLinkValue;
     };
     readonly 'x-class-name'?: string;
 };
 
 /**
- * The fragment link of the container page element.
- */
-export type FragmentLinkWritable = {
-    /**
-     * The localized fragment link's values.
-     */
-    value_i18n?: {
-        [key: string]: FragmentLinkValueWritable;
-    };
-};
-
-/**
  * The localized fragment link's values.
  */
-export type FragmentLinkValueReadable = {
+export type FragmentLinkValue = {
     /**
      * The fragment link value's hypertext reference. Can be an inline value or mapped to an external value.
      */
@@ -1440,22 +778,6 @@ export type FragmentLinkValueReadable = {
         [key: string]: unknown;
     };
     readonly 'x-class-name'?: string;
-    /**
-     * The fragment link value's target (blank, parent, self, top).
-     */
-    target?: 'Blank' | 'Parent' | 'Self' | 'Top';
-};
-
-/**
- * The localized fragment link's values.
- */
-export type FragmentLinkValueWritable = {
-    /**
-     * The fragment link value's hypertext reference. Can be an inline value or mapped to an external value.
-     */
-    href?: {
-        [key: string]: unknown;
-    };
     /**
      * The fragment link value's target (blank, parent, self, top).
      */
@@ -1465,12 +787,12 @@ export type FragmentLinkValueWritable = {
 /**
  * The fragment style of the widget instance page element.
  */
-export type FragmentStyleReadable = {
+export type FragmentStyle = {
     /**
      * The fragment's background color.
      */
     backgroundColor?: string;
-    backgroundFragmentImage?: FragmentImageReadable;
+    backgroundFragmentImage?: FragmentImage;
     /**
      * The fragment's border color.
      */
@@ -1579,147 +901,21 @@ export type FragmentStyleReadable = {
 };
 
 /**
- * The fragment style of the widget instance page element.
- */
-export type FragmentStyleWritable = {
-    /**
-     * The fragment's background color.
-     */
-    backgroundColor?: string;
-    backgroundFragmentImage?: FragmentImageWritable;
-    /**
-     * The fragment's border color.
-     */
-    borderColor?: string;
-    /**
-     * The fragment's background radius.
-     */
-    borderRadius?: string;
-    /**
-     * The fragment's border width.
-     */
-    borderWidth?: string;
-    /**
-     * The fragment's font family.
-     */
-    fontFamily?: string;
-    /**
-     * The fragment's font size.
-     */
-    fontSize?: string;
-    /**
-     * The fragment's font weight.
-     */
-    fontWeight?: string;
-    /**
-     * The fragment's height.
-     */
-    height?: string;
-    /**
-     * Specifies if the fragment is hidden to the user.
-     */
-    hidden?: boolean;
-    /**
-     * The fragment's margin bottom.
-     */
-    marginBottom?: string;
-    /**
-     * The fragment's margin left.
-     */
-    marginLeft?: string;
-    /**
-     * The fragment's margin right.
-     */
-    marginRight?: string;
-    /**
-     * The fragment's margin top.
-     */
-    marginTop?: string;
-    /**
-     * The fragment's max height.
-     */
-    maxHeight?: string;
-    /**
-     * The fragment's max width.
-     */
-    maxWidth?: string;
-    /**
-     * The fragment's min height.
-     */
-    minHeight?: string;
-    /**
-     * The fragment's min width.
-     */
-    minWidth?: string;
-    /**
-     * The fragment's opacity.
-     */
-    opacity?: string;
-    /**
-     * The fragment's overflow behavior.
-     */
-    overflow?: string;
-    /**
-     * The fragment's padding bottom.
-     */
-    paddingBottom?: string;
-    /**
-     * The fragment's padding left.
-     */
-    paddingLeft?: string;
-    /**
-     * The fragment's padding right.
-     */
-    paddingRight?: string;
-    /**
-     * The fragment's padding top.
-     */
-    paddingTop?: string;
-    /**
-     * The fragment's shadow effect.
-     */
-    shadow?: string;
-    /**
-     * The fragment's text align.
-     */
-    textAlign?: string;
-    /**
-     * The fragment's text color.
-     */
-    textColor?: string;
-    /**
-     * The fragment's width.
-     */
-    width?: string;
-};
-
-/**
  * A fragment viewport.
  */
-export type FragmentViewportReadable = {
-    fragmentViewportStyle: FragmentViewportStyleReadable;
+export type FragmentViewport = {
+    fragmentViewportStyle: FragmentViewportStyle;
     /**
      * The fragment viewport's ID.
      */
     id: string;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A fragment viewport.
- */
-export type FragmentViewportWritable = {
-    fragmentViewportStyle: FragmentViewportStyleWritable;
-    /**
-     * The fragment viewport's ID.
-     */
-    id: string;
 };
 
 /**
  * The fragment's viewport style.
  */
-export type FragmentViewportStyleReadable = {
+export type FragmentViewportStyle = {
     /**
      * The fragment viewport's background color.
      */
@@ -1832,123 +1028,9 @@ export type FragmentViewportStyleReadable = {
 };
 
 /**
- * The fragment's viewport style.
- */
-export type FragmentViewportStyleWritable = {
-    /**
-     * The fragment viewport's background color.
-     */
-    backgroundColor?: string;
-    /**
-     * The fragment viewport's border color.
-     */
-    borderColor?: string;
-    /**
-     * The fragment viewport's background radius.
-     */
-    borderRadius?: string;
-    /**
-     * The fragment viewport's border width.
-     */
-    borderWidth?: string;
-    /**
-     * The fragment viewport's font family.
-     */
-    fontFamily?: string;
-    /**
-     * The fragment viewport's font size.
-     */
-    fontSize?: string;
-    /**
-     * The fragment viewport's font weight.
-     */
-    fontWeight?: string;
-    /**
-     * The fragment viewport's height.
-     */
-    height?: string;
-    /**
-     * Specifies if the fragment's viewport is hidden to the user.
-     */
-    hidden?: boolean;
-    /**
-     * The fragment viewport's margin bottom.
-     */
-    marginBottom?: string;
-    /**
-     * The fragment viewport's margin left.
-     */
-    marginLeft?: string;
-    /**
-     * The fragment viewport's margin right.
-     */
-    marginRight?: string;
-    /**
-     * The fragment viewport's margin top.
-     */
-    marginTop?: string;
-    /**
-     * The fragment viewport's max height.
-     */
-    maxHeight?: string;
-    /**
-     * The fragment viewport's max width.
-     */
-    maxWidth?: string;
-    /**
-     * The fragment viewport's min height.
-     */
-    minHeight?: string;
-    /**
-     * The fragment viewport's min width.
-     */
-    minWidth?: string;
-    /**
-     * The fragment viewport's opacity.
-     */
-    opacity?: string;
-    /**
-     * The fragment viewport's overflow behavior.
-     */
-    overflow?: string;
-    /**
-     * The fragment viewport's padding bottom.
-     */
-    paddingBottom?: string;
-    /**
-     * The fragment viewport's padding left.
-     */
-    paddingLeft?: string;
-    /**
-     * The fragment viewport's padding right.
-     */
-    paddingRight?: string;
-    /**
-     * The fragment viewport's padding top.
-     */
-    paddingTop?: string;
-    /**
-     * The fragment viewport's shadow effect.
-     */
-    shadow?: string;
-    /**
-     * The fragment viewport's text align.
-     */
-    textAlign?: string;
-    /**
-     * The fragment viewport's text color.
-     */
-    textColor?: string;
-    /**
-     * The fragment viewport's width.
-     */
-    width?: string;
-};
-
-/**
  * The history of previously used URLs to the utility page's rendered content. This field is not returned by default. It can be requested via nestedFields.
  */
-export type FriendlyUrlHistoryReadable = {
+export type FriendlyUrlHistory = {
     /**
      * The old localized relative URLs to the page's rendered content.
      */
@@ -1958,66 +1040,26 @@ export type FriendlyUrlHistoryReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The history of previously used URLs to the utility page's rendered content. This field is not returned by default. It can be requested via nestedFields.
- */
-export type FriendlyUrlHistoryWritable = {
-    /**
-     * The old localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: unknown;
-    };
-};
-
-export type HtmlPropertiesReadable = {
+export type HtmlProperties = {
     readonly 'x-class-name'?: string;
-    htmlTag?: 'Article' | 'Aside' | 'Div' | 'Footer' | 'Header' | 'Nav' | 'Section';
-};
-
-export type HtmlPropertiesWritable = {
     htmlTag?: 'Article' | 'Aside' | 'Div' | 'Footer' | 'Header' | 'Nav' | 'Section';
 };
 
 /**
  * A unique reference to an entity which remains constant across environments.
  */
-export type ItemExternalReferenceReadable = {
+export type ItemExternalReference = {
     className?: string;
     externalReferenceCode: string;
-    scope?: ScopeReadable;
+    scope?: Scope;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A unique reference to an entity which remains constant across environments.
- */
-export type ItemExternalReferenceWritable = {
-    className?: string;
-    externalReferenceCode: string;
-    scope?: ScopeWritable;
 };
 
 /**
  * The form step container page element's layout.
  */
-export type LayoutReadable = {
+export type Layout = {
     readonly 'x-class-name'?: string;
-    /**
-     * The container's type (fixed or fluid).
-     */
-    containerType?: 'Fixed' | 'Fluid';
-    flexWrap?: 'NoWrap' | 'Wrap' | 'WrapReverse';
-    /**
-     * The width's type (fixed or fluid).
-     */
-    widthType?: 'Fixed' | 'Fluid';
-};
-
-/**
- * The form step container page element's layout.
- */
-export type LayoutWritable = {
     /**
      * The container's type (fixed or fluid).
      */
@@ -2032,16 +1074,16 @@ export type LayoutWritable = {
 /**
  * The page elements in the experience.
  */
-export type PageElementReadable = {
+export type PageElement = {
     /**
      * The page element's external reference code. Unique within the site.
      */
     externalReferenceCode?: string;
-    pageElementDefinition?: PageElementDefinitionReadable;
+    pageElementDefinition?: PageElementDefinition;
     /**
      * A list of the page elements this page element has.
      */
-    pageElements?: Array<PageElementReadable>;
+    pageElements?: Array<PageElement>;
     /**
      * The parent's page element's external reference code. Unique within the site.
      */
@@ -2054,32 +1096,9 @@ export type PageElementReadable = {
 };
 
 /**
- * The page elements in the experience.
- */
-export type PageElementWritable = {
-    /**
-     * The page element's external reference code. Unique within the site.
-     */
-    externalReferenceCode?: string;
-    pageElementDefinition?: PageElementDefinitionWritable;
-    /**
-     * A list of the page elements this page element has.
-     */
-    pageElements?: Array<PageElementWritable>;
-    /**
-     * The parent's page element's external reference code. Unique within the site.
-     */
-    parentExternalReferenceCode?: string;
-    /**
-     * The 0-based position this page element occupies with respect to its siblings (0 for first child, 1 for second child, ...). If not specified when creating a page element the page element will be added at the last valid position.
-     */
-    position?: number;
-};
-
-/**
  * The page element's definition.
  */
-export type PageElementDefinitionReadable = {
+export type PageElementDefinition = {
     readonly 'x-class-name'?: string;
     /**
      * The page element definition's type (collection, collection item, column, container, drop zone, form, form step, form step container, fragment, fragment composition, fragment drop zone, row or widget).
@@ -2087,17 +1106,7 @@ export type PageElementDefinitionReadable = {
     type?: 'Collection' | 'CollectionItem' | 'Column' | 'Container' | 'DropZone' | 'Form' | 'FormStep' | 'FormStepContainer' | 'Fragment' | 'FragmentComposition' | 'FragmentDropZone' | 'Row' | 'Widget';
 };
 
-/**
- * The page element's definition.
- */
-export type PageElementDefinitionWritable = {
-    /**
-     * The page element definition's type (collection, collection item, column, container, drop zone, form, form step, form step container, fragment, fragment composition, fragment drop zone, row or widget).
-     */
-    type?: 'Collection' | 'CollectionItem' | 'Column' | 'Container' | 'DropZone' | 'Form' | 'FormStep' | 'FormStepContainer' | 'Fragment' | 'FragmentComposition' | 'FragmentDropZone' | 'Row' | 'Widget';
-};
-
-export type PageExperienceReadable = {
+export type PageExperience = {
     /**
      * The experience's external reference code, unique per site.
      */
@@ -2115,11 +1124,11 @@ export type PageExperienceReadable = {
     /**
      * The page elements in the experience.
      */
-    pageElements?: Array<PageElementReadable>;
+    pageElements?: Array<PageElement>;
     /**
      * The page rules in the experience.
      */
-    pageRules?: Array<PageRuleReadable>;
+    pageRules?: Array<PageRule>;
     /**
      * The page specification's external reference code.
      */
@@ -2135,47 +1144,10 @@ export type PageExperienceReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageExperienceWritable = {
-    /**
-     * The experience's external reference code, unique per site.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The experience's key.
-     */
-    key?: string;
-    /**
-     * The localized experience's names.
-     */
-    name_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The page elements in the experience.
-     */
-    pageElements?: Array<PageElementWritable>;
-    /**
-     * The page rules in the experience.
-     */
-    pageRules?: Array<PageRuleWritable>;
-    /**
-     * The page specification's external reference code.
-     */
-    pageSpecificationExternalReferenceCode?: string;
-    /**
-     * the experience's priority. It must be a unique value within the page specification. The default experience will always be assigned priority 0. A priority higher than 0 will result in an experience being active and a priority lower than 0 will result in an experience being inactive.
-     */
-    priority?: number;
-    /**
-     * The segment's external reference code.
-     */
-    segmentExternalReferenceCode?: string;
-};
-
 /**
  * The page rules in the experience.
  */
-export type PageRuleReadable = {
+export type PageRule = {
     /**
      * The page rule external reference code.
      */
@@ -2187,38 +1159,12 @@ export type PageRuleReadable = {
     /**
      * A list of actions of a page rule.
      */
-    pageRuleActions?: Array<PageRuleActionReadable>;
+    pageRuleActions?: Array<PageRuleAction>;
     /**
      * A list of conditions of a page rule.
      */
-    pageRuleConditions?: Array<PageRuleConditionReadable>;
+    pageRuleConditions?: Array<PageRuleCondition>;
     readonly 'x-class-name'?: string;
-    /**
-     * The custom name of a Page rule.
-     */
-    conditionType?: 'All' | 'Any';
-};
-
-/**
- * The page rules in the experience.
- */
-export type PageRuleWritable = {
-    /**
-     * The page rule external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The custom name of a page rule.
-     */
-    name?: string;
-    /**
-     * A list of actions of a page rule.
-     */
-    pageRuleActions?: Array<PageRuleActionWritable>;
-    /**
-     * A list of conditions of a page rule.
-     */
-    pageRuleConditions?: Array<PageRuleConditionWritable>;
     /**
      * The custom name of a Page rule.
      */
@@ -2228,7 +1174,7 @@ export type PageRuleWritable = {
 /**
  * A list of actions of a page rule.
  */
-export type PageRuleActionReadable = {
+export type PageRuleAction = {
     /**
      * The page rule action's action.
      */
@@ -2249,31 +1195,9 @@ export type PageRuleActionReadable = {
 };
 
 /**
- * A list of actions of a page rule.
- */
-export type PageRuleActionWritable = {
-    /**
-     * The page rule action's action.
-     */
-    action?: string;
-    /**
-     * The page rule action's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The page rule action's item ID.
-     */
-    itemId?: string;
-    /**
-     * The page rule action's type.
-     */
-    type?: string;
-};
-
-/**
  * A list of conditions of a page rule.
  */
-export type PageRuleConditionReadable = {
+export type PageRuleCondition = {
     /**
      * The page rule condition's description.
      */
@@ -2294,36 +1218,14 @@ export type PageRuleConditionReadable = {
 };
 
 /**
- * A list of conditions of a page rule.
- */
-export type PageRuleConditionWritable = {
-    /**
-     * The page rule condition's description.
-     */
-    condition?: string;
-    /**
-     * The page rule condition's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The page rule condition's type.
-     */
-    type?: string;
-    /**
-     * The page rule condition's value.
-     */
-    value?: string;
-};
-
-/**
  * The utility page's specifications. A utility page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
  */
-export type PageSpecificationReadable = {
+export type PageSpecification = {
     /**
      * The page specification's external reference code, unique per site.
      */
     externalReferenceCode?: string;
-    settings?: SettingsReadable;
+    settings?: Settings;
     readonly 'x-class-name'?: string;
     /**
      * The status of the page specification.
@@ -2335,26 +1237,7 @@ export type PageSpecificationReadable = {
     type?: 'ContentPageSpecification' | 'WidgetPageSpecification';
 };
 
-/**
- * The utility page's specifications. A utility page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
- */
-export type PageSpecificationWritable = {
-    /**
-     * The page specification's external reference code, unique per site.
-     */
-    externalReferenceCode?: string;
-    settings?: SettingsWritable;
-    /**
-     * The status of the page specification.
-     */
-    status?: 'Approved' | 'Draft';
-    /**
-     * The type of the page specification.
-     */
-    type?: 'ContentPageSpecification' | 'WidgetPageSpecification';
-};
-
-export type RowPageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type RowPageElementDefinition = PageElementDefinition & {
     type?: 'RowPageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -2369,12 +1252,12 @@ export type RowPageElementDefinitionReadable = PageElementDefinitionReadable & {
     /**
      * The custom CSS viewports of the row page element.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
-    fragmentStyle?: FragmentStyleReadable;
+    customCSSViewports?: Array<CustomCssViewport>;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of a row page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
+    fragmentViewports?: Array<FragmentViewport>;
     /**
      * A flag that indicates whether the row page element has gutters.
      */
@@ -2402,61 +1285,7 @@ export type RowPageElementDefinitionReadable = PageElementDefinitionReadable & {
     /**
      * A list of viewports of the row page element.
      */
-    rowViewports?: Array<RowViewportReadable>;
-    /**
-     * The vertical alignment property of the row page element.
-     */
-    verticalAlignment?: string;
-};
-
-export type RowPageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'RowPageElementDefinition';
-} & {
-    /**
-     * A list of CSS classes that are applied to the row page element.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the row page element.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the row page element.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of a row page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    /**
-     * A flag that indicates whether the row page element has gutters.
-     */
-    gutters?: boolean;
-    /**
-     * A flag that indicates whether the row page element is indexed or not.
-     */
-    indexed?: boolean;
-    /**
-     * The row page element's modules per row.
-     */
-    modulesPerRow?: number;
-    /**
-     * The custom name of a row page element.
-     */
-    name?: string;
-    /**
-     * The row page element's number of columns.
-     */
-    numberOfColumns?: number;
-    /**
-     * A flag that indicates whether the row page element has reverse order.
-     */
-    reverseOrder?: boolean;
-    /**
-     * A list of viewports of the row page element.
-     */
-    rowViewports?: Array<RowViewportWritable>;
+    rowViewports?: Array<RowViewport>;
     /**
      * The vertical alignment property of the row page element.
      */
@@ -2466,30 +1295,19 @@ export type RowPageElementDefinitionWritable = PageElementDefinitionWritable & {
 /**
  * A row viewport.
  */
-export type RowViewportReadable = {
+export type RowViewport = {
     /**
      * The row viewport's ID.
      */
     id: string;
-    rowViewportDefinition: RowViewportDefinitionReadable;
+    rowViewportDefinition: RowViewportDefinition;
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A row viewport.
- */
-export type RowViewportWritable = {
-    /**
-     * The row viewport's ID.
-     */
-    id: string;
-    rowViewportDefinition: RowViewportDefinitionWritable;
 };
 
 /**
  * The definition of the row viewport.
  */
-export type RowViewportDefinitionReadable = {
+export type RowViewportDefinition = {
     /**
      * The number of modules per row.
      */
@@ -2505,36 +1323,13 @@ export type RowViewportDefinitionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The definition of the row viewport.
- */
-export type RowViewportDefinitionWritable = {
-    /**
-     * The number of modules per row.
-     */
-    modulesPerRow?: number;
-    /**
-     * A flag that indicates whether the row viewport has reverse order.
-     */
-    reverseOrder?: boolean;
-    /**
-     * The vertical alignment property of the row viewport.
-     */
-    verticalAlignment?: string;
-};
-
-export type ScopeReadable = {
+export type Scope = {
     externalReferenceCode: string;
     readonly 'x-class-name'?: string;
     type: 'AssetLibrary' | 'Site';
 };
 
-export type ScopeWritable = {
-    externalReferenceCode: string;
-    type: 'AssetLibrary' | 'Site';
-};
-
-export type SettingsReadable = {
+export type Settings = {
     /**
      * The page specification's color scheme name.
      */
@@ -2552,18 +1347,18 @@ export type SettingsReadable = {
     /**
      * The client extensions for global CSS associated to the page.
      */
-    globalCSSClientExtensions?: Array<ClientExtensionReadable>;
+    globalCSSClientExtensions?: Array<ClientExtension>;
     /**
      * The client extensions for global JS associated to the page.
      */
-    globalJSClientExtensions?: Array<ClientExtensionReadable>;
+    globalJSClientExtensions?: Array<ClientExtension>;
     /**
      * The page specification's JavaScript.
      */
     javascript?: string;
-    masterPageItemExternalReference?: ItemExternalReferenceReadable;
-    styleBookItemExternalReference?: ItemExternalReferenceReadable;
-    themeCSSClientExtension?: ClientExtensionReadable;
+    masterPageItemExternalReference?: ItemExternalReference;
+    styleBookItemExternalReference?: ItemExternalReference;
+    themeCSSClientExtension?: ClientExtension;
     /**
      * The page specification's theme name.
      */
@@ -2574,57 +1369,14 @@ export type SettingsReadable = {
     themeSettings?: {
         [key: string]: string;
     };
-    themeSpritemapClientExtension?: ClientExtensionReadable;
+    themeSpritemapClientExtension?: ClientExtension;
     readonly 'x-class-name'?: string;
-};
-
-export type SettingsWritable = {
-    /**
-     * The page specification's color scheme name.
-     */
-    colorSchemeName?: string;
-    /**
-     * The page specification's CSS.
-     */
-    css?: string;
-    /**
-     * The FavIcon of the page specification.
-     */
-    favIcon?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The client extensions for global CSS associated to the page.
-     */
-    globalCSSClientExtensions?: Array<ClientExtensionWritable>;
-    /**
-     * The client extensions for global JS associated to the page.
-     */
-    globalJSClientExtensions?: Array<ClientExtensionWritable>;
-    /**
-     * The page specification's JavaScript.
-     */
-    javascript?: string;
-    masterPageItemExternalReference?: ItemExternalReferenceWritable;
-    styleBookItemExternalReference?: ItemExternalReferenceWritable;
-    themeCSSClientExtension?: ClientExtensionWritable;
-    /**
-     * The page specification's theme name.
-     */
-    themeName?: string;
-    /**
-     * The page specification's theme settings.
-     */
-    themeSettings?: {
-        [key: string]: string;
-    };
-    themeSpritemapClientExtension?: ClientExtensionWritable;
 };
 
 /**
  * Represents settings related with the site map.
  */
-export type SitemapSettingsReadable = {
+export type SitemapSettings = {
     /**
      * Whether search engines should crawl and index the page.
      */
@@ -2645,31 +1397,9 @@ export type SitemapSettingsReadable = {
 };
 
 /**
- * Represents settings related with the site map.
- */
-export type SitemapSettingsWritable = {
-    /**
-     * Whether search engines should crawl and index the page.
-     */
-    include?: boolean;
-    /**
-     * Whether search engines should crawl and index the child pages.
-     */
-    includeChildSitePages?: boolean;
-    /**
-     * How the page should be prioritized relative to other pages.
-     */
-    pagePriority?: number;
-    /**
-     * Indicates how often a page is updated.
-     */
-    changeFrequency?: 'Always' | 'Hourly' | 'Daily' | 'Weekly' | 'Monthly' | 'Yearly' | 'Never';
-};
-
-/**
  * The widget instance.
  */
-export type WidgetInstanceReadable = {
+export type WidgetInstance = {
     /**
      * The configuration keys and values of the widget instance.
      */
@@ -2689,37 +1419,11 @@ export type WidgetInstanceReadable = {
     /**
      * The widget instance's permissions.
      */
-    widgetPermissions?: Array<WidgetPermissionReadable>;
+    widgetPermissions?: Array<WidgetPermission>;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The widget instance.
- */
-export type WidgetInstanceWritable = {
-    /**
-     * The configuration keys and values of the widget instance.
-     */
-    widgetConfig?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-    /**
-     * The widget instance's ID.
-     */
-    widgetInstanceId?: string;
-    /**
-     * The widget instance's name.
-     */
-    widgetName?: string;
-    /**
-     * The widget instance's permissions.
-     */
-    widgetPermissions?: Array<WidgetPermissionWritable>;
-};
-
-export type WidgetInstancePageElementDefinitionReadable = PageElementDefinitionReadable & {
+export type WidgetInstancePageElementDefinition = PageElementDefinition & {
     type?: 'WidgetInstancePageElementDefinition';
 } & {
     readonly 'x-class-name'?: string;
@@ -2734,50 +1438,23 @@ export type WidgetInstancePageElementDefinitionReadable = PageElementDefinitionR
     /**
      * The custom CSS viewports of the widget instance page element.
      */
-    customCSSViewports?: Array<CustomCssViewportReadable>;
-    fragmentStyle?: FragmentStyleReadable;
+    customCSSViewports?: Array<CustomCssViewport>;
+    fragmentStyle?: FragmentStyle;
     /**
      * A list of fragment viewports of the widget instance page element.
      */
-    fragmentViewports?: Array<FragmentViewportReadable>;
+    fragmentViewports?: Array<FragmentViewport>;
     /**
      * The custom name of a widget instance page element.
      */
     name?: string;
-    widgetInstance?: WidgetInstanceReadable;
-};
-
-export type WidgetInstancePageElementDefinitionWritable = PageElementDefinitionWritable & {
-    type?: 'WidgetInstancePageElementDefinition';
-} & {
-    /**
-     * A list of CSS classes that are applied to the widget instance page element.
-     */
-    cssClasses?: Array<string>;
-    /**
-     * Custom CSS that is applied on the widget instance page element.
-     */
-    customCSS?: string;
-    /**
-     * The custom CSS viewports of the widget instance page element.
-     */
-    customCSSViewports?: Array<CustomCssViewportWritable>;
-    fragmentStyle?: FragmentStyleWritable;
-    /**
-     * A list of fragment viewports of the widget instance page element.
-     */
-    fragmentViewports?: Array<FragmentViewportWritable>;
-    /**
-     * The custom name of a widget instance page element.
-     */
-    name?: string;
-    widgetInstance?: WidgetInstanceWritable;
+    widgetInstance?: WidgetInstance;
 };
 
 /**
  * The widget instance's look and feel configuration.
  */
-export type WidgetLookAndFeelConfigReadable = {
+export type WidgetLookAndFeelConfig = {
     advancedStylingConfig?: {
         [key: string]: unknown;
     };
@@ -2800,33 +1477,9 @@ export type WidgetLookAndFeelConfigReadable = {
 };
 
 /**
- * The widget instance's look and feel configuration.
- */
-export type WidgetLookAndFeelConfigWritable = {
-    advancedStylingConfig?: {
-        [key: string]: unknown;
-    };
-    backgroundStylesConfig?: {
-        [key: string]: unknown;
-    };
-    borderStylesConfig?: {
-        [key: string]: unknown;
-    };
-    generalConfig?: {
-        [key: string]: unknown;
-    };
-    marginAndPaddingConfig?: {
-        [key: string]: unknown;
-    };
-    textStylesConfig?: {
-        [key: string]: unknown;
-    };
-};
-
-/**
  * The sections of a widget page.
  */
-export type WidgetPageSectionReadable = {
+export type WidgetPageSection = {
     /**
      * A flag that indicates whether the widget page section is customizable or not.
      */
@@ -2838,48 +1491,21 @@ export type WidgetPageSectionReadable = {
     /**
      * A list of the widget instances within this page section.
      */
-    widgetPageWidgetInstances?: Array<WidgetPageWidgetInstanceReadable>;
+    widgetPageWidgetInstances?: Array<WidgetPageWidgetInstance>;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The sections of a widget page.
- */
-export type WidgetPageSectionWritable = {
-    /**
-     * A flag that indicates whether the widget page section is customizable or not.
-     */
-    customizable?: boolean;
-    /**
-     * The widget page section's id.
-     */
-    id?: string;
-    /**
-     * A list of the widget instances within this page section.
-     */
-    widgetPageWidgetInstances?: Array<WidgetPageWidgetInstanceWritable>;
-};
-
-export type WidgetPageSpecificationReadable = PageSpecificationReadable & {
+export type WidgetPageSpecification = PageSpecification & {
     type?: 'WidgetPageSpecification';
 } & {
     readonly 'x-class-name'?: string;
     /**
      * The sections of a widget page.
      */
-    widgetPageSections?: Array<WidgetPageSectionReadable>;
+    widgetPageSections?: Array<WidgetPageSection>;
 };
 
-export type WidgetPageSpecificationWritable = PageSpecificationWritable & {
-    type?: 'WidgetPageSpecification';
-} & {
-    /**
-     * The sections of a widget page.
-     */
-    widgetPageSections?: Array<WidgetPageSectionWritable>;
-};
-
-export type WidgetPageWidgetInstanceReadable = {
+export type WidgetPageWidgetInstance = {
     /**
      * The external reference code of the widget instance.
      */
@@ -2911,7 +1537,7 @@ export type WidgetPageWidgetInstanceReadable = {
     /**
      * The widget instance's look and feel configuration.
      */
-    widgetLookAndFeelConfig?: Array<WidgetLookAndFeelConfigReadable>;
+    widgetLookAndFeelConfig?: Array<WidgetLookAndFeelConfig>;
     /**
      * The widget instance's name.
      */
@@ -2919,57 +1545,14 @@ export type WidgetPageWidgetInstanceReadable = {
     /**
      * The widget instance's permissions.
      */
-    widgetPermissions?: Array<WidgetPermissionReadable>;
+    widgetPermissions?: Array<WidgetPermission>;
     readonly 'x-class-name'?: string;
-};
-
-export type WidgetPageWidgetInstanceWritable = {
-    /**
-     * The external reference code of the widget instance.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The section's ID of the widget page or the nested application widget instance this widget belongs to.
-     */
-    parentSectionId?: string;
-    /**
-     * The external reference code of the parent widget instance. Only available if this widget instance is within a nested applications widget instance.
-     */
-    parentWidgetInstanceExternalReferenceCode?: string;
-    /**
-     * The 0-based position this widget instance occupies with respect to its siblings (0 for first child, 1 for second child, ...). If not specified when creating a widget instance the widget instance will be added at the last valid position.
-     */
-    position?: number;
-    /**
-     * The configuration keys and values of the widget instance.
-     */
-    widgetConfig?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-    /**
-     * The widget instance's ID.
-     */
-    widgetInstanceId?: string;
-    /**
-     * The widget instance's look and feel configuration.
-     */
-    widgetLookAndFeelConfig?: Array<WidgetLookAndFeelConfigWritable>;
-    /**
-     * The widget instance's name.
-     */
-    widgetName?: string;
-    /**
-     * The widget instance's permissions.
-     */
-    widgetPermissions?: Array<WidgetPermissionWritable>;
 };
 
 /**
  * The widget instance's permissions.
  */
-export type WidgetPermissionReadable = {
+export type WidgetPermission = {
     /**
      * The IDs of the actions the role has permission for.
      */
@@ -2981,24 +1564,10 @@ export type WidgetPermissionReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The widget instance's permissions.
- */
-export type WidgetPermissionWritable = {
-    /**
-     * The IDs of the actions the role has permission for.
-     */
-    actionIds?: Array<string>;
-    /**
-     * The role's name.
-     */
-    roleName?: string;
-};
-
-export type PageDisplayPageTemplateReadable = {
+export type PageDisplayPageTemplate = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DisplayPageTemplateReadable>;
+    items?: Array<DisplayPageTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3009,21 +1578,7 @@ export type PageDisplayPageTemplateReadable = {
     page?: number;
 };
 
-export type PageDisplayPageTemplateWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<DisplayPageTemplateWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type FragmentCompositionReadable = {
+export type FragmentComposition = {
     creator?: Creator;
     /**
      * The page's creator external reference code.
@@ -3061,70 +1616,15 @@ export type FragmentCompositionReadable = {
      * The fragment composition's name.
      */
     name?: string;
-    pageElement?: PageElementReadable;
-    thumbnail?: ItemExternalReferenceReadable;
+    pageElement?: PageElement;
+    thumbnail?: ItemExternalReference;
     readonly 'x-class-name'?: string;
 };
 
-export type FragmentCompositionWritable = {
-    /**
-     * The page's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The structured content's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time any field of the structured content was changed.
-     */
-    dateModified?: string;
-    /**
-     * The structured content's most recent publication date.
-     */
-    datePublished?: string;
-    /**
-     * The description of this fragment composition.
-     */
-    description?: string;
-    /**
-     * The external reference code of this fragment composition.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The external reference code of the fragment set this fragment composition belongs to.
-     */
-    fragmentSetExternalReferenceCode?: string;
-    /**
-     * The fragment composition's key.
-     */
-    key?: string;
-    /**
-     * The fragment composition's name.
-     */
-    name?: string;
-    pageElement?: PageElementWritable;
-    thumbnail?: ItemExternalReferenceWritable;
-};
-
-export type PageFragmentCompositionReadable = {
+export type PageFragmentComposition = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FragmentCompositionReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageFragmentCompositionWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<FragmentCompositionWritable>;
+    items?: Array<FragmentComposition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3138,7 +1638,7 @@ export type PageFragmentCompositionWritable = {
 /**
  * A list of asset libraries that are associated with this keyword.
  */
-export type AssetLibraryReadable = {
+export type AssetLibrary = {
     /**
      * The asset library's site ID.
      */
@@ -3157,19 +1657,9 @@ export type AssetLibraryReadable = {
 };
 
 /**
- * A list of asset libraries that are associated with this keyword.
- */
-export type AssetLibraryWritable = {
-    /**
-     * The asset library's site ID.
-     */
-    id?: number;
-};
-
-/**
  * Represents a keyword that describes content. Properties follow the [keywords](https://schema.org/keywords) specification.
  */
-export type KeywordReadable = {
+export type Keyword = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3178,7 +1668,7 @@ export type KeywordReadable = {
     /**
      * A list of asset libraries that are associated with this keyword.
      */
-    assetLibraries?: Array<AssetLibraryReadable>;
+    assetLibraries?: Array<AssetLibrary>;
     readonly assetLibraryKey?: string;
     creator?: Creator;
     /**
@@ -3220,25 +1710,7 @@ export type KeywordReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Represents a keyword that describes content. Properties follow the [keywords](https://schema.org/keywords) specification.
- */
-export type KeywordWritable = {
-    /**
-     * A list of asset libraries that are associated with this keyword.
-     */
-    assetLibraries?: Array<AssetLibraryWritable>;
-    /**
-     * The keyword's external reference code
-     */
-    externalReferenceCode?: string;
-    /**
-     * The keyword's name.
-     */
-    name: string;
-};
-
-export type MasterPageReadable = {
+export type MasterPage = {
     creator?: Creator;
     /**
      * The page's creator external reference code.
@@ -3267,11 +1739,11 @@ export type MasterPageReadable = {
     /**
      * The external references to the associated keywords.
      */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceReadable>;
+    keywordItemExternalReferences?: Array<ItemExternalReference>;
     /**
      * The associated keywords. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly keywords?: Array<KeywordReadable>;
+    readonly keywords?: Array<Keyword>;
     /**
      * Whether the master page is the default one.
      */
@@ -3283,16 +1755,16 @@ export type MasterPageReadable = {
     /**
      * The master page's specifications. A master page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
      */
-    pageSpecifications?: Array<PageSpecificationReadable>;
+    pageSpecifications?: Array<PageSpecification>;
     /**
      * The associated categories. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly taxonomyCategories?: Array<TaxonomyCategoryReadable>;
+    readonly taxonomyCategories?: Array<TaxonomyCategory>;
     /**
      * The external references to the associated categories.
      */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceReadable>;
-    thumbnail?: ItemExternalReferenceReadable;
+    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReference>;
+    thumbnail?: ItemExternalReference;
     /**
      * A valid external identifier to reference this page.
      */
@@ -3300,62 +1772,10 @@ export type MasterPageReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type MasterPageWritable = {
-    /**
-     * The page's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The master page's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time any field of the master page was changed.
-     */
-    dateModified?: string;
-    /**
-     * The master page's most recent publication date.
-     */
-    datePublished?: string;
-    /**
-     * The master page's external reference code, unique per site.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The master page's key.
-     */
-    key?: string;
-    /**
-     * The external references to the associated keywords.
-     */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    /**
-     * Whether the master page is the default one.
-     */
-    markedAsDefault?: boolean;
-    /**
-     * The master page's name.
-     */
-    name?: string;
-    /**
-     * The master page's specifications. A master page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
-     */
-    pageSpecifications?: Array<PageSpecificationWritable>;
-    /**
-     * The external references to the associated categories.
-     */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    thumbnail?: ItemExternalReferenceWritable;
-    /**
-     * A valid external identifier to reference this page.
-     */
-    uuid?: string;
-};
-
 /**
  * The category's parent category, if it exists.
  */
-export type ParentTaxonomyCategoryReadable = {
+export type ParentTaxonomyCategory = {
     /**
      * The parent taxonomy category's external reference code.
      */
@@ -3369,24 +1789,9 @@ export type ParentTaxonomyCategoryReadable = {
 };
 
 /**
- * The category's parent category, if it exists.
- */
-export type ParentTaxonomyCategoryWritable = {
-    /**
-     * The parent taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-};
-
-/**
  * The parent category's `TaxonomyVocabulary`, if such a parent category exists.
  */
-export type ParentTaxonomyVocabularyReadable = {
+export type ParentTaxonomyVocabulary = {
     /**
      * The parent category's `TaxonomyVocabulary` external reference code.
      */
@@ -3397,27 +1802,12 @@ export type ParentTaxonomyVocabularyReadable = {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The parent category's `TaxonomyVocabulary`, if such a parent category exists.
- */
-export type ParentTaxonomyVocabularyWritable = {
-    /**
-     * The parent category's `TaxonomyVocabulary` external reference code.
-     */
-    externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
 };
 
 /**
  * Represents a category, which is a hierarchical classification that can be associated with particular asset types. Properties follow the [category](https://schema.org/category) specification.
  */
-export type TaxonomyCategoryReadable = {
+export type TaxonomyCategory = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3462,8 +1852,8 @@ export type TaxonomyCategoryReadable = {
      * The number of times this category has been used in other assets.
      */
     readonly numberOfTaxonomyCategories?: number;
-    parentTaxonomyCategory?: ParentTaxonomyCategoryReadable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyReadable;
+    parentTaxonomyCategory?: ParentTaxonomyCategory;
+    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
     permissions?: Array<Permission>;
     /**
      * The external reference code of the site to which this category is scoped.
@@ -3476,7 +1866,7 @@ export type TaxonomyCategoryReadable = {
     /**
      * The category's properties.
      */
-    taxonomyCategoryProperties?: Array<TaxonomyCategoryPropertyReadable>;
+    taxonomyCategoryProperties?: Array<TaxonomyCategoryProperty>;
     readonly taxonomyCategoryUsageCount?: number;
     /**
      * The `TaxonomyVocabulary` id, only if the category does not have a parent category.
@@ -3487,45 +1877,9 @@ export type TaxonomyCategoryReadable = {
 };
 
 /**
- * Represents a category, which is a hierarchical classification that can be associated with particular asset types. Properties follow the [category](https://schema.org/category) specification.
- */
-export type TaxonomyCategoryWritable = {
-    /**
-     * The category's text description.
-     */
-    description?: string;
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The category's external reference code
-     */
-    externalReferenceCode?: string;
-    /**
-     * The category's name.
-     */
-    name: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-    parentTaxonomyCategory?: ParentTaxonomyCategoryWritable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyWritable;
-    permissions?: Array<Permission>;
-    /**
-     * The category's properties.
-     */
-    taxonomyCategoryProperties?: Array<TaxonomyCategoryPropertyWritable>;
-    /**
-     * The `TaxonomyVocabulary` id, only if the category does not have a parent category.
-     */
-    taxonomyVocabularyId?: number;
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-};
-
-/**
  * Key value pair to associate detailed information with a category.
  */
-export type TaxonomyCategoryPropertyReadable = {
+export type TaxonomyCategoryProperty = {
     /**
      * The taxonomy category's external reference code.
      */
@@ -3541,28 +1895,10 @@ export type TaxonomyCategoryPropertyReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Key value pair to associate detailed information with a category.
- */
-export type TaxonomyCategoryPropertyWritable = {
-    /**
-     * The taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The taxonomy category property's key.
-     */
-    key: string;
-    /**
-     * The taxonomy category property's value.
-     */
-    value?: string;
-};
-
-export type PageMasterPageReadable = {
+export type PageMasterPage = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MasterPageReadable>;
+    items?: Array<MasterPage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3573,10 +1909,10 @@ export type PageMasterPageReadable = {
     page?: number;
 };
 
-export type PageMasterPageWritable = {
+export type PagePageElement = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MasterPageWritable>;
+    items?: Array<PageElement>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3587,10 +1923,10 @@ export type PageMasterPageWritable = {
     page?: number;
 };
 
-export type PagePageElementReadable = {
+export type PagePageExperience = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageElementReadable>;
+    items?: Array<PageExperience>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3601,10 +1937,10 @@ export type PagePageElementReadable = {
     page?: number;
 };
 
-export type PagePageElementWritable = {
+export type PagePageRuleAction = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageElementWritable>;
+    items?: Array<PageRuleAction>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3615,10 +1951,10 @@ export type PagePageElementWritable = {
     page?: number;
 };
 
-export type PagePageExperienceReadable = {
+export type PagePageRuleCondition = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageExperienceReadable>;
+    items?: Array<PageRuleCondition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3629,10 +1965,10 @@ export type PagePageExperienceReadable = {
     page?: number;
 };
 
-export type PagePageExperienceWritable = {
+export type PagePageRule = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageExperienceWritable>;
+    items?: Array<PageRule>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3643,10 +1979,10 @@ export type PagePageExperienceWritable = {
     page?: number;
 };
 
-export type PagePageRuleActionReadable = {
+export type PagePageSpecification = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageRuleActionReadable>;
+    items?: Array<PageSpecification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -3657,128 +1993,22 @@ export type PagePageRuleActionReadable = {
     page?: number;
 };
 
-export type PagePageRuleActionWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageRuleActionWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageRuleConditionReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageRuleConditionReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageRuleConditionWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageRuleConditionWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageRuleReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageRuleReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageRuleWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageRuleWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageSpecificationReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageSpecificationReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageSpecificationWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageSpecificationWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ContentPageTemplateReadable = PageTemplateReadable & {
+export type ContentPageTemplate = PageTemplate & {
     type?: 'ContentPageTemplate';
 } & {
     readonly 'x-class-name'?: string;
 };
 
-export type ContentPageTemplateWritable = PageTemplateWritable & {
-    type?: 'ContentPageTemplate';
-};
-
-export type ContentPageTemplateSettingsReadable = PageTemplateSettingsReadable & {
+export type ContentPageTemplateSettings = PageTemplateSettings & {
     type?: 'ContentPageTemplateSettings';
 } & {
     readonly 'x-class-name'?: string;
-};
-
-export type ContentPageTemplateSettingsWritable = PageTemplateSettingsWritable & {
-    type?: 'ContentPageTemplateSettings';
 };
 
 /**
  * The page's site navigation menu settings.
  */
-export type NavigationMenuSettingsReadable = {
+export type NavigationMenuSettings = {
     /**
      * The page's description to be used as summary for search engines.
      */
@@ -3790,21 +2020,7 @@ export type NavigationMenuSettingsReadable = {
     targetType?: 'SpecificFrame' | 'NewTab';
 };
 
-/**
- * The page's site navigation menu settings.
- */
-export type NavigationMenuSettingsWritable = {
-    /**
-     * The page's description to be used as summary for search engines.
-     */
-    target?: string;
-    /**
-     * The target's type (specific frame or new tab).
-     */
-    targetType?: 'SpecificFrame' | 'NewTab';
-};
-
-export type PageTemplateReadable = {
+export type PageTemplate = {
     creator?: Creator;
     /**
      * The page's creator external reference code.
@@ -3833,11 +2049,11 @@ export type PageTemplateReadable = {
     /**
      * The external references to the associated keywords.
      */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceReadable>;
+    keywordItemExternalReferences?: Array<ItemExternalReference>;
     /**
      * The associated keywords. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly keywords?: Array<KeywordReadable>;
+    readonly keywords?: Array<Keyword>;
     /**
      * The page template's name.
      */
@@ -3845,17 +2061,17 @@ export type PageTemplateReadable = {
     /**
      * The page template's specifications. A page template of type content will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. A page template of type widget contains only 1 page specification for its published layout. This field is not returned by default. It can be requested via nestedFields.
      */
-    pageSpecifications?: Array<PageSpecificationReadable>;
-    pageTemplateSet?: PageTemplateSetReadable;
-    pageTemplateSettings?: PageTemplateSettingsReadable;
+    pageSpecifications?: Array<PageSpecification>;
+    pageTemplateSet?: PageTemplateSet;
+    pageTemplateSettings?: PageTemplateSettings;
     /**
      * The associated categories. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly taxonomyCategories?: Array<TaxonomyCategoryReadable>;
+    readonly taxonomyCategories?: Array<TaxonomyCategory>;
     /**
      * The external references to the associated categories.
      */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceReadable>;
+    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReference>;
     /**
      * A valid external identifier to reference this page template.
      */
@@ -3867,60 +2083,7 @@ export type PageTemplateReadable = {
     type?: 'ContentPageTemplate' | 'WidgetPageTemplate';
 };
 
-export type PageTemplateWritable = {
-    /**
-     * The page's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The page template's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time the page template changed.
-     */
-    dateModified?: string;
-    /**
-     * The last time the page template was published.
-     */
-    datePublished?: string;
-    /**
-     * The page template's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The page template's key.
-     */
-    key?: string;
-    /**
-     * The external references to the associated keywords.
-     */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    /**
-     * The page template's name.
-     */
-    name?: string;
-    /**
-     * The page template's specifications. A page template of type content will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. A page template of type widget contains only 1 page specification for its published layout. This field is not returned by default. It can be requested via nestedFields.
-     */
-    pageSpecifications?: Array<PageSpecificationWritable>;
-    pageTemplateSet?: PageTemplateSetWritable;
-    pageTemplateSettings?: PageTemplateSettingsWritable;
-    /**
-     * The external references to the associated categories.
-     */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    /**
-     * A valid external identifier to reference this page template.
-     */
-    uuid?: string;
-    /**
-     * The type of the page template.
-     */
-    type?: 'ContentPageTemplate' | 'WidgetPageTemplate';
-};
-
-export type PageTemplateSetReadable = {
+export type PageTemplateSet = {
     creator?: Creator;
     /**
      * The page template set's creator external reference code.
@@ -3957,57 +2120,15 @@ export type PageTemplateSetReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageTemplateSetWritable = {
-    /**
-     * The page template set's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The page template set's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time the page template set changed.
-     */
-    dateModified?: string;
-    /**
-     * The page template set's description.
-     */
-    description?: string;
-    /**
-     * The page template set's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The page template set's key.
-     */
-    key?: string;
-    /**
-     * The page template set's name.
-     */
-    name?: string;
-    /**
-     * A valid external identifier to reference this page template set.
-     */
-    uuid?: string;
-};
-
 /**
  * The settings of the page template.
  */
-export type PageTemplateSettingsReadable = {
+export type PageTemplateSettings = {
     readonly 'x-class-name'?: string;
     type?: 'ContentPageTemplateSettings' | 'WidgetPageTemplateSettings';
 };
 
-/**
- * The settings of the page template.
- */
-export type PageTemplateSettingsWritable = {
-    type?: 'ContentPageTemplateSettings' | 'WidgetPageTemplateSettings';
-};
-
-export type WidgetPageTemplateReadable = PageTemplateReadable & {
+export type WidgetPageTemplate = PageTemplate & {
     type?: 'WidgetPageTemplate';
 } & {
     readonly 'x-class-name'?: string;
@@ -4039,38 +2160,7 @@ export type WidgetPageTemplateReadable = PageTemplateReadable & {
     };
 };
 
-export type WidgetPageTemplateWritable = PageTemplateWritable & {
-    type?: 'WidgetPageTemplate';
-} & {
-    /**
-     * A flag that indicates whether the widget page template is active.
-     */
-    active?: boolean;
-    /**
-     * The localized descriptions of the widget page template.
-     */
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * A flag that indicates whether the page created based on this page template is hidden from navigation.
-     */
-    hiddenFromNavigation?: boolean;
-    /**
-     * The localized names of the widget page template.
-     */
-    name_i18n?: {
-        [key: string]: string;
-    };
-};
-
-export type WidgetPageTemplateSettingsReadable = PageTemplateSettingsReadable & {
+export type WidgetPageTemplateSettings = PageTemplateSettings & {
     type?: 'WidgetPageTemplateSettings';
 } & {
     readonly 'x-class-name'?: string;
@@ -4078,23 +2168,13 @@ export type WidgetPageTemplateSettingsReadable = PageTemplateSettingsReadable & 
      * The identifier of the layout template.
      */
     layoutTemplateId?: string;
-    navigationMenuSettings?: NavigationMenuSettingsReadable;
+    navigationMenuSettings?: NavigationMenuSettings;
 };
 
-export type WidgetPageTemplateSettingsWritable = PageTemplateSettingsWritable & {
-    type?: 'WidgetPageTemplateSettings';
-} & {
-    /**
-     * The identifier of the layout template.
-     */
-    layoutTemplateId?: string;
-    navigationMenuSettings?: NavigationMenuSettingsWritable;
-};
-
-export type PagePageTemplateReadable = {
+export type PagePageTemplate = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageTemplateReadable>;
+    items?: Array<PageTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -4105,10 +2185,10 @@ export type PagePageTemplateReadable = {
     page?: number;
 };
 
-export type PagePageTemplateWritable = {
+export type PagePageTemplateSet = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PageTemplateWritable>;
+    items?: Array<PageTemplateSet>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -4119,50 +2199,18 @@ export type PagePageTemplateWritable = {
     page?: number;
 };
 
-export type PagePageTemplateSetReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageTemplateSetReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PagePageTemplateSetWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<PageTemplateSetWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ContentPageSettingsReadable = PageSettingsReadable & {
+export type ContentPageSettings = PageSettings & {
     type?: 'ContentPageSettings';
 } & {
     readonly 'x-class-name'?: string;
-};
-
-export type ContentPageSettingsWritable = PageSettingsWritable & {
-    type?: 'ContentPageSettings';
 };
 
 /**
  * Custom fields associated with the page.
  */
-export type CustomFieldReadable = {
+export type CustomField = {
     readonly 'x-class-name'?: string;
-    customValue?: CustomValueReadable;
+    customValue?: CustomValue;
     /**
      * The field type (e.g., image, text, etc.).
      */
@@ -4174,20 +2222,9 @@ export type CustomFieldReadable = {
 };
 
 /**
- * Custom fields associated with the page.
- */
-export type CustomFieldWritable = {
-    customValue?: CustomValueWritable;
-    /**
-     * The field's internal name. This is valid for comparisons and unique in the structured content.
-     */
-    name?: string;
-};
-
-/**
  * A list of custom meta tags this page has.
  */
-export type CustomMetaTagReadable = {
+export type CustomMetaTag = {
     /**
      * The custom meta tag's key.
      */
@@ -4202,25 +2239,9 @@ export type CustomMetaTagReadable = {
 };
 
 /**
- * A list of custom meta tags this page has.
- */
-export type CustomMetaTagWritable = {
-    /**
-     * The custom meta tag's key.
-     */
-    key?: string;
-    /**
-     * The localized custom meta tag's values.
-     */
-    value_i18n?: {
-        [key: string]: string;
-    };
-};
-
-/**
  * The field's value.
  */
-export type CustomValueReadable = {
+export type CustomValue = {
     readonly 'x-class-name'?: string;
     /**
      * The field's content value for simple types.
@@ -4234,47 +2255,14 @@ export type CustomValueReadable = {
     data_i18n?: {
         [key: string]: string;
     };
-    geo?: GeoReadable;
-};
-
-/**
- * The field's value.
- */
-export type CustomValueWritable = {
-    /**
-     * The field's content value for simple types.
-     */
-    data?: {
-        [key: string]: unknown;
-    };
-    /**
-     * The localized field's content values for simple types.
-     */
-    data_i18n?: {
-        [key: string]: string;
-    };
-    geo?: GeoWritable;
+    geo?: Geo;
 };
 
 /**
  * A point determined by latitude and longitude.
  */
-export type GeoReadable = {
+export type Geo = {
     readonly 'x-class-name'?: string;
-    /**
-     * The latitude of a point in space.
-     */
-    latitude?: number;
-    /**
-     * The longitude of a point in space.
-     */
-    longitude?: number;
-};
-
-/**
- * A point determined by latitude and longitude.
- */
-export type GeoWritable = {
     /**
      * The latitude of a point in space.
      */
@@ -4288,14 +2276,14 @@ export type GeoWritable = {
 /**
  * The page's Open Graph settings.
  */
-export type OpenGraphSettingsReadable = {
+export type OpenGraphSettings = {
     /**
      * The localized Open Graph's descriptions.
      */
     description_i18n?: {
         [key: string]: string;
     };
-    image?: ItemExternalReferenceReadable;
+    image?: ItemExternalReference;
     /**
      * The localized Open Graph's image alts.
      */
@@ -4312,71 +2300,28 @@ export type OpenGraphSettingsReadable = {
 };
 
 /**
- * The page's Open Graph settings.
- */
-export type OpenGraphSettingsWritable = {
-    /**
-     * The localized Open Graph's descriptions.
-     */
-    description_i18n?: {
-        [key: string]: string;
-    };
-    image?: ItemExternalReferenceWritable;
-    /**
-     * The localized Open Graph's image alts.
-     */
-    imageAlt_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The localized Open Graph's titles.
-     */
-    title_i18n?: {
-        [key: string]: string;
-    };
-};
-
-/**
  * Settings of the page, such as SEO or OpenGraph.
  */
-export type PageSettingsReadable = {
+export type PageSettings = {
     /**
      * A list of custom meta tags this page has.
      */
-    customMetaTags?: Array<CustomMetaTagReadable>;
+    customMetaTags?: Array<CustomMetaTag>;
     /**
      * A flag that indicates whether the page is hidden from navigation.
      */
     hiddenFromNavigation?: boolean;
-    navigationMenuSettings?: NavigationMenuSettingsReadable;
-    openGraphSettings?: OpenGraphSettingsReadable;
-    seoSettings?: SeoSettingsReadable;
+    navigationMenuSettings?: NavigationMenuSettings;
+    openGraphSettings?: OpenGraphSettings;
+    seoSettings?: SeoSettings;
     readonly 'x-class-name'?: string;
-    type?: 'ContentPageSettings' | 'WidgetPageSettings';
-};
-
-/**
- * Settings of the page, such as SEO or OpenGraph.
- */
-export type PageSettingsWritable = {
-    /**
-     * A list of custom meta tags this page has.
-     */
-    customMetaTags?: Array<CustomMetaTagWritable>;
-    /**
-     * A flag that indicates whether the page is hidden from navigation.
-     */
-    hiddenFromNavigation?: boolean;
-    navigationMenuSettings?: NavigationMenuSettingsWritable;
-    openGraphSettings?: OpenGraphSettingsWritable;
-    seoSettings?: SeoSettingsWritable;
     type?: 'ContentPageSettings' | 'WidgetPageSettings';
 };
 
 /**
  * The page's SEO settings.
  */
-export type SeoSettingsReadable = {
+export type SeoSettings = {
     /**
      * The localized canonical URL of the page, if it exists.
      */
@@ -4407,48 +2352,11 @@ export type SeoSettingsReadable = {
     seoKeywords_i18n?: {
         [key: string]: string;
     };
-    sitemapSettings?: SitemapSettingsReadable;
+    sitemapSettings?: SitemapSettings;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * The page's SEO settings.
- */
-export type SeoSettingsWritable = {
-    /**
-     * The localized canonical URL of the page, if it exists.
-     */
-    customCanonicalURL_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The localized descriptions of the page to be used as summary for search engines.
-     */
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The localized main titles of the page to be used by search engines.
-     */
-    htmlTitle_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * A localized tag telling search engines if and how they should crawl the page.
-     */
-    robots_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * A list of localized target keywords of the page to be used by search engines.
-     */
-    seoKeywords_i18n?: {
-        [key: string]: string;
-    };
-    sitemapSettings?: SitemapSettingsWritable;
-};
-
-export type SitePageReadable = {
+export type SitePage = {
     /**
      * The list of languages the page has a translation for.
      */
@@ -4461,7 +2369,7 @@ export type SitePageReadable = {
     /**
      * Custom fields associated with the page.
      */
-    customFields?: Array<CustomFieldReadable>;
+    customFields?: Array<CustomField>;
     /**
      * The page's creation date.
      */
@@ -4478,7 +2386,7 @@ export type SitePageReadable = {
      * The page's external reference code.
      */
     externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryReadable;
+    friendlyUrlHistory?: FriendlyUrlHistory;
     /**
      * The localized relative URLs to the page's rendered content.
      */
@@ -4488,22 +2396,22 @@ export type SitePageReadable = {
     /**
      * The external references to the associated keywords.
      */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceReadable>;
+    keywordItemExternalReferences?: Array<ItemExternalReference>;
     /**
      * The associated keywords. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly keywords?: Array<KeywordReadable>;
+    readonly keywords?: Array<Keyword>;
     /**
      * The localized page's names.
      */
     name_i18n?: {
         [key: string]: string;
     };
-    pageSettings?: PageSettingsReadable;
+    pageSettings?: PageSettings;
     /**
      * The page's specifications. A page of type content will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. A page of type widget contains only 1 page specification for its published layout. This field is not returned by default. It can be requested via nestedFields.
      */
-    pageSpecifications?: Array<PageSpecificationReadable>;
+    pageSpecifications?: Array<PageSpecification>;
     /**
      * The parent page external reference code or null if it is a top level page.
      */
@@ -4511,11 +2419,11 @@ export type SitePageReadable = {
     /**
      * The associated categories. They are not returned by default. They can be embedded via nestedFields.
      */
-    readonly taxonomyCategories?: Array<TaxonomyCategoryReadable>;
+    readonly taxonomyCategories?: Array<TaxonomyCategory>;
     /**
      * The external references to the associated categories.
      */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceReadable>;
+    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReference>;
     /**
      * A valid external identifier to reference this page.
      */
@@ -4525,70 +2433,7 @@ export type SitePageReadable = {
     type?: 'ContentPage' | 'WidgetPage';
 };
 
-export type SitePageWritable = {
-    /**
-     * The page's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * Custom fields associated with the page.
-     */
-    customFields?: Array<CustomFieldWritable>;
-    /**
-     * The page's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time any field of the page was changed.
-     */
-    dateModified?: string;
-    /**
-     * The page's most recent publication date.
-     */
-    datePublished?: string;
-    /**
-     * The page's external reference code.
-     */
-    externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryWritable;
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The external references to the associated keywords.
-     */
-    keywordItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    /**
-     * The localized page's names.
-     */
-    name_i18n?: {
-        [key: string]: string;
-    };
-    pageSettings?: PageSettingsWritable;
-    /**
-     * The page's specifications. A page of type content will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. A page of type widget contains only 1 page specification for its published layout. This field is not returned by default. It can be requested via nestedFields.
-     */
-    pageSpecifications?: Array<PageSpecificationWritable>;
-    /**
-     * The parent page external reference code or null if it is a top level page.
-     */
-    parentSitePageExternalReferenceCode?: string;
-    /**
-     * The external references to the associated categories.
-     */
-    taxonomyCategoryItemExternalReferences?: Array<ItemExternalReferenceWritable>;
-    /**
-     * A valid external identifier to reference this page.
-     */
-    uuid?: string;
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-    type?: 'ContentPage' | 'WidgetPage';
-};
-
-export type WidgetPageSettingsReadable = PageSettingsReadable & {
+export type WidgetPageSettings = PageSettings & {
     type?: 'WidgetPageSettings';
 } & {
     readonly 'x-class-name'?: string;
@@ -4608,35 +2453,13 @@ export type WidgetPageSettingsReadable = PageSettingsReadable & {
      * The ID of the layout template.
      */
     layoutTemplateId?: string;
-    widgetPageTemplateReference?: ItemExternalReferenceReadable;
+    widgetPageTemplateReference?: ItemExternalReference;
 };
 
-export type WidgetPageSettingsWritable = PageSettingsWritable & {
-    type?: 'WidgetPageSettings';
-} & {
-    /**
-     * A flag that indicates whether the widget page is customizable.
-     */
-    customizable?: boolean;
-    /**
-     * The IDs of the customizable sections.
-     */
-    customizableSectionIds?: Array<string>;
-    /**
-     * Whether this widget page will inherit changes made to the associated widget page template.
-     */
-    inheritChanges?: boolean;
-    /**
-     * The ID of the layout template.
-     */
-    layoutTemplateId?: string;
-    widgetPageTemplateReference?: ItemExternalReferenceWritable;
-};
-
-export type PageSitePageReadable = {
+export type PageSitePage = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SitePageReadable>;
+    items?: Array<SitePage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -4647,21 +2470,7 @@ export type PageSitePageReadable = {
     page?: number;
 };
 
-export type PageSitePageWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SitePageWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type UtilityPageReadable = {
+export type UtilityPage = {
     creator?: Creator;
     /**
      * The utility page's creator external reference code.
@@ -4683,7 +2492,7 @@ export type UtilityPageReadable = {
      * The utility page's external reference code.
      */
     externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryReadable;
+    friendlyUrlHistory?: FriendlyUrlHistory;
     /**
      * The localized relative URLs to the utility page's rendered content.
      */
@@ -4701,9 +2510,9 @@ export type UtilityPageReadable = {
     /**
      * The utility page's specifications. A utility page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
      */
-    pageSpecifications?: Array<PageSpecificationReadable>;
-    thumbnail?: ItemExternalReferenceReadable;
-    utilityPageSettings?: UtilityPageSettingsReadable;
+    pageSpecifications?: Array<PageSpecification>;
+    thumbnail?: ItemExternalReference;
+    utilityPageSettings?: UtilityPageSettings;
     /**
      * A valid external identifier to reference this utility page.
      */
@@ -4715,62 +2524,10 @@ export type UtilityPageReadable = {
     type?: 'CookiePolicy' | 'CreateAccount' | 'Error' | 'ErrorCode404' | 'ErrorCode500' | 'ForgotPassword' | 'Login' | 'TermsOfUse';
 };
 
-export type UtilityPageWritable = {
-    /**
-     * The utility page's creator external reference code.
-     */
-    creatorExternalReferenceCode?: string;
-    /**
-     * The utility page's creation date.
-     */
-    dateCreated?: string;
-    /**
-     * The last time the utility page changed.
-     */
-    dateModified?: string;
-    /**
-     * The last time the utility page changed.
-     */
-    datePublished?: string;
-    /**
-     * The utility page's external reference code.
-     */
-    externalReferenceCode?: string;
-    friendlyUrlHistory?: FriendlyUrlHistoryWritable;
-    /**
-     * The localized relative URLs to the utility page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * Specifies if the utility page should be the default for the given type.
-     */
-    markedAsDefault?: boolean;
-    /**
-     * The utility page's name.
-     */
-    name?: string;
-    /**
-     * The utility page's specifications. A utility page will contain 1 page specifications for its draft layout and 1 page specifications for its published layout. This field is not returned by default. It can be requested via nestedFields.
-     */
-    pageSpecifications?: Array<PageSpecificationWritable>;
-    thumbnail?: ItemExternalReferenceWritable;
-    utilityPageSettings?: UtilityPageSettingsWritable;
-    /**
-     * A valid external identifier to reference this utility page.
-     */
-    uuid?: string;
-    /**
-     * The utility page's type.
-     */
-    type?: 'CookiePolicy' | 'CreateAccount' | 'Error' | 'ErrorCode404' | 'ErrorCode500' | 'ForgotPassword' | 'Login' | 'TermsOfUse';
-};
-
 /**
  * The utility page's SEO settings.
  */
-export type UtilityPageSeoSettingsReadable = {
+export type UtilityPageSeoSettings = {
     /**
      * The localized descriptions of the utility page to be used as summary for search engines.
      */
@@ -4787,42 +2544,17 @@ export type UtilityPageSeoSettingsReadable = {
 };
 
 /**
- * The utility page's SEO settings.
- */
-export type UtilityPageSeoSettingsWritable = {
-    /**
-     * The localized descriptions of the utility page to be used as summary for search engines.
-     */
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The localized main titles of the utility page to be used by search engines.
-     */
-    htmlTitle_i18n?: {
-        [key: string]: string;
-    };
-};
-
-/**
  * Settings of the utility page.
  */
-export type UtilityPageSettingsReadable = {
-    seoSettings?: UtilityPageSeoSettingsReadable;
+export type UtilityPageSettings = {
+    seoSettings?: UtilityPageSeoSettings;
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Settings of the utility page.
- */
-export type UtilityPageSettingsWritable = {
-    seoSettings?: UtilityPageSeoSettingsWritable;
-};
-
-export type PageUtilityPageReadable = {
+export type PageUtilityPage = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UtilityPageReadable>;
+    items?: Array<UtilityPage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -4833,38 +2565,10 @@ export type PageUtilityPageReadable = {
     page?: number;
 };
 
-export type PageUtilityPageWritable = {
+export type PageWidgetPageWidgetInstance = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UtilityPageWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageWidgetPageWidgetInstanceReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<WidgetPageWidgetInstanceReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageWidgetPageWidgetInstanceWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<WidgetPageWidgetInstanceWritable>;
+    items?: Array<WidgetPageWidgetInstance>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -4910,13 +2614,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses
     /**
      * default response
      */
-    default: DisplayPageTemplateFolderReadable;
+    default: DisplayPageTemplateFolder;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
-    body?: DisplayPageTemplateFolderWritable;
+    body?: DisplayPageTemplateFolder;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateFolderExternalReferenceCode: string;
@@ -4933,13 +2637,13 @@ export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderRespons
     /**
      * default response
      */
-    default: DisplayPageTemplateFolderReadable;
+    default: DisplayPageTemplateFolder;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponse = PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses[keyof PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses];
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
-    body?: DisplayPageTemplateFolderWritable;
+    body?: DisplayPageTemplateFolder;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateFolderExternalReferenceCode: string;
@@ -4956,7 +2660,7 @@ export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses
     /**
      * default response
      */
-    default: DisplayPageTemplateFolderReadable;
+    default: DisplayPageTemplateFolder;
 };
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponse = PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses[keyof PutSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses];
@@ -5027,13 +2731,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageResp
     /**
      * default response
      */
-    default: PageDisplayPageTemplateFolderReadable;
+    default: PageDisplayPageTemplateFolder;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFoldersPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderData = {
-    body?: DisplayPageTemplateFolderWritable;
+    body?: DisplayPageTemplateFolder;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -5045,7 +2749,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponse
     /**
      * default response
      */
-    default: DisplayPageTemplateFolderReadable;
+    default: DisplayPageTemplateFolder;
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponse = PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses[keyof PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderResponses];
@@ -5085,13 +2789,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
-    body?: DisplayPageTemplateWritable;
+    body?: DisplayPageTemplate;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateExternalReferenceCode: string;
@@ -5108,13 +2812,13 @@ export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateResponse = PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses[keyof PatchSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses];
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
-    body?: DisplayPageTemplateWritable;
+    body?: DisplayPageTemplate;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateExternalReferenceCode: string;
@@ -5131,7 +2835,7 @@ export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type PutSiteSiteByExternalReferenceCodeDisplayPageTemplateResponse = PutSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses[keyof PutSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses];
@@ -5198,13 +2902,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPa
     /**
      * default response
      */
-    default: PageDisplayPageTemplateReadable;
+    default: PageDisplayPageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplatesPageResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplatesPageResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplatesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplateData = {
-    body?: DisplayPageTemplateWritable;
+    body?: DisplayPageTemplate;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateFolderExternalReferenceCode: string;
@@ -5221,7 +2925,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayP
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplateResponse = PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplateResponses[keyof PostSiteSiteByExternalReferenceCodeDisplayPageTemplateFolderDisplayPageTemplateResponses];
@@ -5249,13 +2953,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageResponses 
     /**
      * default response
      */
-    default: PageDisplayPageTemplateReadable;
+    default: PageDisplayPageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplatesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateData = {
-    body?: DisplayPageTemplateWritable;
+    body?: DisplayPageTemplate;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -5267,7 +2971,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses = {
     /**
      * default response
      */
-    default: DisplayPageTemplateReadable;
+    default: DisplayPageTemplate;
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplateResponse = PostSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses[keyof PostSiteSiteByExternalReferenceCodeDisplayPageTemplateResponses];
@@ -5290,13 +2994,13 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificati
     /**
      * default response
      */
-    default: PagePageSpecificationReadable;
+    default: PagePageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationsPageResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationsPageResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationData = {
-    body?: ContentPageSpecificationWritable;
+    body?: ContentPageSpecification;
     path: {
         siteExternalReferenceCode: string;
         displayPageTemplateExternalReferenceCode: string;
@@ -5313,7 +3017,7 @@ export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificat
     /**
      * default response
      */
-    default: ContentPageSpecificationReadable;
+    default: ContentPageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationResponse = PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodeDisplayPageTemplatePageSpecificationResponses];
@@ -5353,13 +3057,13 @@ export type GetSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
     /**
      * default response
      */
-    default: FragmentCompositionReadable;
+    default: FragmentComposition;
 };
 
 export type GetSiteSiteByExternalReferenceCodeFragmentCompositionResponse = GetSiteSiteByExternalReferenceCodeFragmentCompositionResponses[keyof GetSiteSiteByExternalReferenceCodeFragmentCompositionResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeFragmentCompositionData = {
-    body?: FragmentCompositionWritable;
+    body?: FragmentComposition;
     path: {
         siteExternalReferenceCode: string;
         fragmentCompositionExternalReferenceCode: string;
@@ -5376,13 +3080,13 @@ export type PatchSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
     /**
      * default response
      */
-    default: FragmentCompositionReadable;
+    default: FragmentComposition;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeFragmentCompositionResponse = PatchSiteSiteByExternalReferenceCodeFragmentCompositionResponses[keyof PatchSiteSiteByExternalReferenceCodeFragmentCompositionResponses];
 
 export type PutSiteSiteByExternalReferenceCodeFragmentCompositionData = {
-    body?: FragmentCompositionWritable;
+    body?: FragmentComposition;
     path: {
         siteExternalReferenceCode: string;
         fragmentCompositionExternalReferenceCode: string;
@@ -5399,7 +3103,7 @@ export type PutSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
     /**
      * default response
      */
-    default: FragmentCompositionReadable;
+    default: FragmentComposition;
 };
 
 export type PutSiteSiteByExternalReferenceCodeFragmentCompositionResponse = PutSiteSiteByExternalReferenceCodeFragmentCompositionResponses[keyof PutSiteSiteByExternalReferenceCodeFragmentCompositionResponses];
@@ -5426,13 +3130,13 @@ export type GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageResponses 
     /**
      * default response
      */
-    default: PageFragmentCompositionReadable;
+    default: PageFragmentComposition;
 };
 
 export type GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageResponse = GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageResponses[keyof GetSiteSiteByExternalReferenceCodeFragmentCompositionsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeFragmentCompositionData = {
-    body?: FragmentCompositionWritable;
+    body?: FragmentComposition;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -5447,7 +3151,7 @@ export type PostSiteSiteByExternalReferenceCodeFragmentCompositionResponses = {
     /**
      * default response
      */
-    default: FragmentCompositionReadable;
+    default: FragmentComposition;
 };
 
 export type PostSiteSiteByExternalReferenceCodeFragmentCompositionResponse = PostSiteSiteByExternalReferenceCodeFragmentCompositionResponses[keyof PostSiteSiteByExternalReferenceCodeFragmentCompositionResponses];
@@ -5470,7 +3174,7 @@ export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHist
     /**
      * default response
      */
-    default: FriendlyUrlHistoryReadable;
+    default: FriendlyUrlHistory;
 };
 
 export type GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHistoryResponse = GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHistoryResponses[keyof GetSiteSiteByExternalReferenceCodeDisplayPageTemplateFriendlyUrlHistoryResponses];
@@ -5493,7 +3197,7 @@ export type GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryResponse
     /**
      * default response
      */
-    default: FriendlyUrlHistoryReadable;
+    default: FriendlyUrlHistory;
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryResponse = GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryResponses[keyof GetSiteSiteByExternalReferenceCodeSitePageFriendlyUrlHistoryResponses];
@@ -5516,7 +3220,7 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryRespo
     /**
      * default response
      */
-    default: FriendlyUrlHistoryReadable;
+    default: FriendlyUrlHistory;
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryResponse = GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryResponses[keyof GetSiteSiteByExternalReferenceCodeUtilityPageFriendlyUrlHistoryResponses];
@@ -5556,13 +3260,13 @@ export type GetSiteSiteByExternalReferenceCodeMasterPageResponses = {
     /**
      * default response
      */
-    default: MasterPageReadable;
+    default: MasterPage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPageResponse = GetSiteSiteByExternalReferenceCodeMasterPageResponses[keyof GetSiteSiteByExternalReferenceCodeMasterPageResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeMasterPageData = {
-    body?: MasterPageWritable;
+    body?: MasterPage;
     path: {
         siteExternalReferenceCode: string;
         masterPageExternalReferenceCode: string;
@@ -5579,13 +3283,13 @@ export type PatchSiteSiteByExternalReferenceCodeMasterPageResponses = {
     /**
      * default response
      */
-    default: MasterPageReadable;
+    default: MasterPage;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeMasterPageResponse = PatchSiteSiteByExternalReferenceCodeMasterPageResponses[keyof PatchSiteSiteByExternalReferenceCodeMasterPageResponses];
 
 export type PutSiteSiteByExternalReferenceCodeMasterPageData = {
-    body?: MasterPageWritable;
+    body?: MasterPage;
     path: {
         siteExternalReferenceCode: string;
         masterPageExternalReferenceCode: string;
@@ -5602,7 +3306,7 @@ export type PutSiteSiteByExternalReferenceCodeMasterPageResponses = {
     /**
      * default response
      */
-    default: MasterPageReadable;
+    default: MasterPage;
 };
 
 export type PutSiteSiteByExternalReferenceCodeMasterPageResponse = PutSiteSiteByExternalReferenceCodeMasterPageResponses[keyof PutSiteSiteByExternalReferenceCodeMasterPageResponses];
@@ -5673,13 +3377,13 @@ export type GetSiteSiteByExternalReferenceCodeMasterPagesPageResponses = {
     /**
      * default response
      */
-    default: PageMasterPageReadable;
+    default: PageMasterPage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPagesPageResponse = GetSiteSiteByExternalReferenceCodeMasterPagesPageResponses[keyof GetSiteSiteByExternalReferenceCodeMasterPagesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeMasterPageData = {
-    body?: MasterPageWritable;
+    body?: MasterPage;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -5691,7 +3395,7 @@ export type PostSiteSiteByExternalReferenceCodeMasterPageResponses = {
     /**
      * default response
      */
-    default: MasterPageReadable;
+    default: MasterPage;
 };
 
 export type PostSiteSiteByExternalReferenceCodeMasterPageResponse = PostSiteSiteByExternalReferenceCodeMasterPageResponses[keyof PostSiteSiteByExternalReferenceCodeMasterPageResponses];
@@ -5714,13 +3418,13 @@ export type GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageRe
     /**
      * default response
      */
-    default: PagePageSpecificationReadable;
+    default: PagePageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageResponse = GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageResponses[keyof GetSiteSiteByExternalReferenceCodeMasterPagePageSpecificationsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationData = {
-    body?: ContentPageSpecificationWritable;
+    body?: ContentPageSpecification;
     path: {
         siteExternalReferenceCode: string;
         masterPageExternalReferenceCode: string;
@@ -5737,7 +3441,7 @@ export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationRespon
     /**
      * default response
      */
-    default: ContentPageSpecificationReadable;
+    default: ContentPageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponse = PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodeMasterPagePageSpecificationResponses];
@@ -5781,13 +3485,13 @@ export type GetSiteSiteByExternalReferenceCodePageElementResponses = {
     /**
      * default response
      */
-    default: PageElementReadable;
+    default: PageElement;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageElementResponse = GetSiteSiteByExternalReferenceCodePageElementResponses[keyof GetSiteSiteByExternalReferenceCodePageElementResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageElementData = {
-    body?: PageElementWritable;
+    body?: PageElement;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -5806,13 +3510,13 @@ export type PatchSiteSiteByExternalReferenceCodePageElementResponses = {
     /**
      * default response
      */
-    default: PageElementReadable;
+    default: PageElement;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageElementResponse = PatchSiteSiteByExternalReferenceCodePageElementResponses[keyof PatchSiteSiteByExternalReferenceCodePageElementResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageElementData = {
-    body?: PageElementWritable;
+    body?: PageElement;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -5831,7 +3535,7 @@ export type PutSiteSiteByExternalReferenceCodePageElementResponses = {
     /**
      * default response
      */
-    default: PageElementReadable;
+    default: PageElement;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageElementResponse = PutSiteSiteByExternalReferenceCodePageElementResponses[keyof PutSiteSiteByExternalReferenceCodePageElementResponses];
@@ -5857,7 +3561,7 @@ export type GetSiteSiteByExternalReferenceCodePageElementPageElementsPageRespons
     /**
      * default response
      */
-    default: PagePageElementReadable;
+    default: PagePageElement;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageElementPageElementsPageResponse = GetSiteSiteByExternalReferenceCodePageElementPageElementsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageElementPageElementsPageResponses];
@@ -5882,13 +3586,13 @@ export type GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageResp
     /**
      * default response
      */
-    default: PagePageElementReadable;
+    default: PagePageElement;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageResponse = GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageExperiencePageElementsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageElementData = {
-    body?: PageElementWritable;
+    body?: PageElement;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -5906,13 +3610,13 @@ export type PostSiteSiteByExternalReferenceCodePageExperiencePageElementResponse
     /**
      * default response
      */
-    default: PageElementReadable;
+    default: PageElement;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageElementResponse = PostSiteSiteByExternalReferenceCodePageExperiencePageElementResponses[keyof PostSiteSiteByExternalReferenceCodePageExperiencePageElementResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionData = {
-    body?: FragmentCompositionWritable;
+    body?: FragmentComposition;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -5932,7 +3636,7 @@ export type PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionRes
     /**
      * default response
      */
-    default: PageElementReadable;
+    default: PageElement;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionResponse = PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionResponses[keyof PostSiteSiteByExternalReferenceCodePageElementFragmentCompositionResponses];
@@ -5976,13 +3680,13 @@ export type GetSiteSiteByExternalReferenceCodePageExperienceResponses = {
     /**
      * default response
      */
-    default: PageExperienceReadable;
+    default: PageExperience;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperienceResponse = GetSiteSiteByExternalReferenceCodePageExperienceResponses[keyof GetSiteSiteByExternalReferenceCodePageExperienceResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageExperienceData = {
-    body?: PageExperienceWritable;
+    body?: PageExperience;
     path: {
         siteExternalReferenceCode: string;
         pageExperienceExternalReferenceCode: string;
@@ -5999,13 +3703,13 @@ export type PatchSiteSiteByExternalReferenceCodePageExperienceResponses = {
     /**
      * default response
      */
-    default: PageExperienceReadable;
+    default: PageExperience;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageExperienceResponse = PatchSiteSiteByExternalReferenceCodePageExperienceResponses[keyof PatchSiteSiteByExternalReferenceCodePageExperienceResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageExperienceData = {
-    body?: PageExperienceWritable;
+    body?: PageExperience;
     path: {
         siteExternalReferenceCode: string;
         pageExperienceExternalReferenceCode: string;
@@ -6022,7 +3726,7 @@ export type PutSiteSiteByExternalReferenceCodePageExperienceResponses = {
     /**
      * default response
      */
-    default: PageExperienceReadable;
+    default: PageExperience;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageExperienceResponse = PutSiteSiteByExternalReferenceCodePageExperienceResponses[keyof PutSiteSiteByExternalReferenceCodePageExperienceResponses];
@@ -6045,13 +3749,13 @@ export type GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPa
     /**
      * default response
      */
-    default: PagePageExperienceReadable;
+    default: PagePageExperience;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPageResponse = GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPageResponses[keyof GetSiteSiteByExternalReferenceCodePageSpecificationPageExperiencesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceData = {
-    body?: PageExperienceWritable;
+    body?: PageExperience;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -6068,7 +3772,7 @@ export type PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceRe
     /**
      * default response
      */
-    default: PageExperienceReadable;
+    default: PageExperience;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceResponse = PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceResponses[keyof PostSiteSiteByExternalReferenceCodePageSpecificationPageExperienceResponses];
@@ -6112,13 +3816,13 @@ export type GetSiteSiteByExternalReferenceCodePageRuleActionResponses = {
     /**
      * default response
      */
-    default: PageRuleActionReadable;
+    default: PageRuleAction;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleActionResponse = GetSiteSiteByExternalReferenceCodePageRuleActionResponses[keyof GetSiteSiteByExternalReferenceCodePageRuleActionResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleActionData = {
-    body?: PageRuleActionWritable;
+    body?: PageRuleAction;
     path: {
         siteExternalReferenceCode: string;
         pageRuleActionExternalReferenceCode: string;
@@ -6135,13 +3839,13 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleActionResponses = {
     /**
      * default response
      */
-    default: PageRuleActionReadable;
+    default: PageRuleAction;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleActionResponse = PatchSiteSiteByExternalReferenceCodePageRuleActionResponses[keyof PatchSiteSiteByExternalReferenceCodePageRuleActionResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageRuleActionData = {
-    body?: PageRuleActionWritable;
+    body?: PageRuleAction;
     path: {
         siteExternalReferenceCode: string;
         pageRuleActionExternalReferenceCode: string;
@@ -6158,7 +3862,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleActionResponses = {
     /**
      * default response
      */
-    default: PageRuleActionReadable;
+    default: PageRuleAction;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleActionResponse = PutSiteSiteByExternalReferenceCodePageRuleActionResponses[keyof PutSiteSiteByExternalReferenceCodePageRuleActionResponses];
@@ -6182,13 +3886,13 @@ export type GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageRespons
     /**
      * default response
      */
-    default: PagePageRuleActionReadable;
+    default: PagePageRuleAction;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageResponse = GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageRulePageRuleActionsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleActionData = {
-    body?: PageRuleActionWritable;
+    body?: PageRuleAction;
     path: {
         siteExternalReferenceCode: string;
         pageRuleExternalReferenceCode: string;
@@ -6205,7 +3909,7 @@ export type PostSiteSiteByExternalReferenceCodePageRulePageRuleActionResponses =
     /**
      * default response
      */
-    default: PageRuleActionReadable;
+    default: PageRuleAction;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleActionResponse = PostSiteSiteByExternalReferenceCodePageRulePageRuleActionResponses[keyof PostSiteSiteByExternalReferenceCodePageRulePageRuleActionResponses];
@@ -6249,13 +3953,13 @@ export type GetSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
     /**
      * default response
      */
-    default: PageRuleConditionReadable;
+    default: PageRuleCondition;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleConditionResponse = GetSiteSiteByExternalReferenceCodePageRuleConditionResponses[keyof GetSiteSiteByExternalReferenceCodePageRuleConditionResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleConditionData = {
-    body?: PageRuleConditionWritable;
+    body?: PageRuleCondition;
     path: {
         siteExternalReferenceCode: string;
         pageRuleConditionExternalReferenceCode: string;
@@ -6272,13 +3976,13 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
     /**
      * default response
      */
-    default: PageRuleConditionReadable;
+    default: PageRuleCondition;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleConditionResponse = PatchSiteSiteByExternalReferenceCodePageRuleConditionResponses[keyof PatchSiteSiteByExternalReferenceCodePageRuleConditionResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageRuleConditionData = {
-    body?: PageRuleConditionWritable;
+    body?: PageRuleCondition;
     path: {
         siteExternalReferenceCode: string;
         pageRuleConditionExternalReferenceCode: string;
@@ -6295,7 +3999,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleConditionResponses = {
     /**
      * default response
      */
-    default: PageRuleConditionReadable;
+    default: PageRuleCondition;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleConditionResponse = PutSiteSiteByExternalReferenceCodePageRuleConditionResponses[keyof PutSiteSiteByExternalReferenceCodePageRuleConditionResponses];
@@ -6319,13 +4023,13 @@ export type GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageResp
     /**
      * default response
      */
-    default: PagePageRuleConditionReadable;
+    default: PagePageRuleCondition;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageResponse = GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageRulePageRuleConditionsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionData = {
-    body?: PageRuleConditionWritable;
+    body?: PageRuleCondition;
     path: {
         siteExternalReferenceCode: string;
         pageRuleExternalReferenceCode: string;
@@ -6342,7 +4046,7 @@ export type PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionResponse
     /**
      * default response
      */
-    default: PageRuleConditionReadable;
+    default: PageRuleCondition;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionResponse = PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionResponses[keyof PostSiteSiteByExternalReferenceCodePageRulePageRuleConditionResponses];
@@ -6386,13 +4090,13 @@ export type GetSiteSiteByExternalReferenceCodePageRuleResponses = {
     /**
      * default response
      */
-    default: PageRuleReadable;
+    default: PageRule;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageRuleResponse = GetSiteSiteByExternalReferenceCodePageRuleResponses[keyof GetSiteSiteByExternalReferenceCodePageRuleResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleData = {
-    body?: PageRuleWritable;
+    body?: PageRule;
     path: {
         siteExternalReferenceCode: string;
         pageRuleExternalReferenceCode: string;
@@ -6409,13 +4113,13 @@ export type PatchSiteSiteByExternalReferenceCodePageRuleResponses = {
     /**
      * default response
      */
-    default: PageRuleReadable;
+    default: PageRule;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageRuleResponse = PatchSiteSiteByExternalReferenceCodePageRuleResponses[keyof PatchSiteSiteByExternalReferenceCodePageRuleResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageRuleData = {
-    body?: PageRuleWritable;
+    body?: PageRule;
     path: {
         siteExternalReferenceCode: string;
         pageRuleExternalReferenceCode: string;
@@ -6432,7 +4136,7 @@ export type PutSiteSiteByExternalReferenceCodePageRuleResponses = {
     /**
      * default response
      */
-    default: PageRuleReadable;
+    default: PageRule;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageRuleResponse = PutSiteSiteByExternalReferenceCodePageRuleResponses[keyof PutSiteSiteByExternalReferenceCodePageRuleResponses];
@@ -6456,13 +4160,13 @@ export type GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageRespons
     /**
      * default response
      */
-    default: PagePageRuleReadable;
+    default: PagePageRule;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageResponse = GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageResponses[keyof GetSiteSiteByExternalReferenceCodePageExperiencePageRulesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageRuleData = {
-    body?: PageRuleWritable;
+    body?: PageRule;
     path: {
         siteExternalReferenceCode: string;
         pageExperienceExternalReferenceCode: string;
@@ -6479,7 +4183,7 @@ export type PostSiteSiteByExternalReferenceCodePageExperiencePageRuleResponses =
     /**
      * default response
      */
-    default: PageRuleReadable;
+    default: PageRule;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageExperiencePageRuleResponse = PostSiteSiteByExternalReferenceCodePageExperiencePageRuleResponses[keyof PostSiteSiteByExternalReferenceCodePageExperiencePageRuleResponses];
@@ -6523,13 +4227,13 @@ export type GetSiteSiteByExternalReferenceCodePageSpecificationResponses = {
     /**
      * default response
      */
-    default: PageSpecificationReadable;
+    default: PageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageSpecificationResponse = GetSiteSiteByExternalReferenceCodePageSpecificationResponses[keyof GetSiteSiteByExternalReferenceCodePageSpecificationResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageSpecificationData = {
-    body?: PageSpecificationWritable;
+    body?: PageSpecification;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -6546,13 +4250,13 @@ export type PatchSiteSiteByExternalReferenceCodePageSpecificationResponses = {
     /**
      * default response
      */
-    default: PageSpecificationReadable;
+    default: PageSpecification;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageSpecificationResponse = PatchSiteSiteByExternalReferenceCodePageSpecificationResponses[keyof PatchSiteSiteByExternalReferenceCodePageSpecificationResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageSpecificationData = {
-    body?: PageSpecificationWritable;
+    body?: PageSpecification;
     path: {
         siteExternalReferenceCode: string;
         pageSpecificationExternalReferenceCode: string;
@@ -6569,7 +4273,7 @@ export type PutSiteSiteByExternalReferenceCodePageSpecificationResponses = {
     /**
      * default response
      */
-    default: PageSpecificationReadable;
+    default: PageSpecification;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageSpecificationResponse = PutSiteSiteByExternalReferenceCodePageSpecificationResponses[keyof PutSiteSiteByExternalReferenceCodePageSpecificationResponses];
@@ -6592,13 +4296,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPage
     /**
      * default response
      */
-    default: PagePageSpecificationReadable;
+    default: PagePageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPageResponse = GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplatePageSpecificationsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationData = {
-    body?: ContentPageSpecificationWritable;
+    body?: ContentPageSpecification;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateExternalReferenceCode: string;
@@ -6615,7 +4319,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationResp
     /**
      * default response
      */
-    default: ContentPageSpecificationReadable;
+    default: ContentPageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationResponse = PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodePageTemplatePageSpecificationResponses];
@@ -6638,13 +4342,13 @@ export type GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageResp
     /**
      * default response
      */
-    default: PagePageSpecificationReadable;
+    default: PagePageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageResponse = GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageResponses[keyof GetSiteSiteByExternalReferenceCodeSitePagePageSpecificationsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationData = {
-    body?: ContentPageSpecificationWritable;
+    body?: ContentPageSpecification;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -6661,7 +4365,7 @@ export type PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationResponse
     /**
      * default response
      */
-    default: ContentPageSpecificationReadable;
+    default: ContentPageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationResponse = PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodeSitePagePageSpecificationResponses];
@@ -6684,13 +4388,13 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageR
     /**
      * default response
      */
-    default: PagePageSpecificationReadable;
+    default: PagePageSpecification;
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageResponse = GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageResponses[keyof GetSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationData = {
-    body?: ContentPageSpecificationWritable;
+    body?: ContentPageSpecification;
     path: {
         siteExternalReferenceCode: string;
         utilityPageExternalReferenceCode: string;
@@ -6707,7 +4411,7 @@ export type PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationRespo
     /**
      * default response
      */
-    default: ContentPageSpecificationReadable;
+    default: ContentPageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationResponse = PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationResponses[keyof PostSiteSiteByExternalReferenceCodeUtilityPagePageSpecificationResponses];
@@ -6730,7 +4434,7 @@ export type PostSiteSiteByExternalReferenceCodePageSpecificationPublishResponses
     /**
      * default response
      */
-    default: PageSpecificationReadable;
+    default: PageSpecification;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageSpecificationPublishResponse = PostSiteSiteByExternalReferenceCodePageSpecificationPublishResponses[keyof PostSiteSiteByExternalReferenceCodePageSpecificationPublishResponses];
@@ -6770,13 +4474,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateResponses = {
     /**
      * default response
      */
-    default: PageTemplateReadable;
+    default: PageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateResponse = GetSiteSiteByExternalReferenceCodePageTemplateResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplateResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateData = {
-    body?: PageTemplateWritable;
+    body?: PageTemplate;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateExternalReferenceCode: string;
@@ -6793,13 +4497,13 @@ export type PatchSiteSiteByExternalReferenceCodePageTemplateResponses = {
     /**
      * default response
      */
-    default: PageTemplateReadable;
+    default: PageTemplate;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateResponse = PatchSiteSiteByExternalReferenceCodePageTemplateResponses[keyof PatchSiteSiteByExternalReferenceCodePageTemplateResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateData = {
-    body?: PageTemplateWritable;
+    body?: PageTemplate;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateExternalReferenceCode: string;
@@ -6816,7 +4520,7 @@ export type PutSiteSiteByExternalReferenceCodePageTemplateResponses = {
     /**
      * default response
      */
-    default: PageTemplateReadable;
+    default: PageTemplate;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateResponse = PutSiteSiteByExternalReferenceCodePageTemplateResponses[keyof PutSiteSiteByExternalReferenceCodePageTemplateResponses];
@@ -6883,13 +4587,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageRe
     /**
      * default response
      */
-    default: PagePageTemplateReadable;
+    default: PagePageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageResponse = GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplateSetPageTemplatesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateData = {
-    body?: PageTemplateWritable;
+    body?: PageTemplate;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateSetExternalReferenceCode: string;
@@ -6906,7 +4610,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateRespon
     /**
      * default response
      */
-    default: PageTemplateReadable;
+    default: PageTemplate;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateResponse = PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateResponses[keyof PostSiteSiteByExternalReferenceCodePageTemplateSetPageTemplateResponses];
@@ -6934,13 +4638,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplatesPageResponses = {
     /**
      * default response
      */
-    default: PagePageTemplateReadable;
+    default: PagePageTemplate;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplatesPageResponse = GetSiteSiteByExternalReferenceCodePageTemplatesPageResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplatesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateData = {
-    body?: PageTemplateWritable;
+    body?: PageTemplate;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -6952,7 +4656,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateResponses = {
     /**
      * default response
      */
-    default: PageTemplateReadable;
+    default: PageTemplate;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateResponse = PostSiteSiteByExternalReferenceCodePageTemplateResponses[keyof PostSiteSiteByExternalReferenceCodePageTemplateResponses];
@@ -6992,13 +4696,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
     /**
      * default response
      */
-    default: PageTemplateSetReadable;
+    default: PageTemplateSet;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetResponse = GetSiteSiteByExternalReferenceCodePageTemplateSetResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplateSetResponses];
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateSetData = {
-    body?: PageTemplateSetWritable;
+    body?: PageTemplateSet;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateSetExternalReferenceCode: string;
@@ -7015,13 +4719,13 @@ export type PatchSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
     /**
      * default response
      */
-    default: PageTemplateSetReadable;
+    default: PageTemplateSet;
 };
 
 export type PatchSiteSiteByExternalReferenceCodePageTemplateSetResponse = PatchSiteSiteByExternalReferenceCodePageTemplateSetResponses[keyof PatchSiteSiteByExternalReferenceCodePageTemplateSetResponses];
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateSetData = {
-    body?: PageTemplateSetWritable;
+    body?: PageTemplateSet;
     path: {
         siteExternalReferenceCode: string;
         pageTemplateSetExternalReferenceCode: string;
@@ -7038,7 +4742,7 @@ export type PutSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
     /**
      * default response
      */
-    default: PageTemplateSetReadable;
+    default: PageTemplateSet;
 };
 
 export type PutSiteSiteByExternalReferenceCodePageTemplateSetResponse = PutSiteSiteByExternalReferenceCodePageTemplateSetResponses[keyof PutSiteSiteByExternalReferenceCodePageTemplateSetResponses];
@@ -7109,13 +4813,13 @@ export type GetSiteSiteByExternalReferenceCodePageTemplateSetsPageResponses = {
     /**
      * default response
      */
-    default: PagePageTemplateSetReadable;
+    default: PagePageTemplateSet;
 };
 
 export type GetSiteSiteByExternalReferenceCodePageTemplateSetsPageResponse = GetSiteSiteByExternalReferenceCodePageTemplateSetsPageResponses[keyof GetSiteSiteByExternalReferenceCodePageTemplateSetsPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetData = {
-    body?: PageTemplateSetWritable;
+    body?: PageTemplateSet;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -7127,7 +4831,7 @@ export type PostSiteSiteByExternalReferenceCodePageTemplateSetResponses = {
     /**
      * default response
      */
-    default: PageTemplateSetReadable;
+    default: PageTemplateSet;
 };
 
 export type PostSiteSiteByExternalReferenceCodePageTemplateSetResponse = PostSiteSiteByExternalReferenceCodePageTemplateSetResponses[keyof PostSiteSiteByExternalReferenceCodePageTemplateSetResponses];
@@ -7167,13 +4871,13 @@ export type GetSiteSiteByExternalReferenceCodeSitePageResponses = {
     /**
      * default response
      */
-    default: SitePageReadable;
+    default: SitePage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageResponse = GetSiteSiteByExternalReferenceCodeSitePageResponses[keyof GetSiteSiteByExternalReferenceCodeSitePageResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeSitePageData = {
-    body?: SitePageWritable;
+    body?: SitePage;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -7190,13 +4894,13 @@ export type PatchSiteSiteByExternalReferenceCodeSitePageResponses = {
     /**
      * default response
      */
-    default: SitePageReadable;
+    default: SitePage;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeSitePageResponse = PatchSiteSiteByExternalReferenceCodeSitePageResponses[keyof PatchSiteSiteByExternalReferenceCodeSitePageResponses];
 
 export type PutSiteSiteByExternalReferenceCodeSitePageData = {
-    body?: SitePageWritable;
+    body?: SitePage;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -7213,7 +4917,7 @@ export type PutSiteSiteByExternalReferenceCodeSitePageResponses = {
     /**
      * default response
      */
-    default: SitePageReadable;
+    default: SitePage;
 };
 
 export type PutSiteSiteByExternalReferenceCodeSitePageResponse = PutSiteSiteByExternalReferenceCodeSitePageResponses[keyof PutSiteSiteByExternalReferenceCodeSitePageResponses];
@@ -7241,13 +4945,13 @@ export type GetSiteSiteByExternalReferenceCodeSitePagesPageResponses = {
     /**
      * default response
      */
-    default: PageSitePageReadable;
+    default: PageSitePage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePagesPageResponse = GetSiteSiteByExternalReferenceCodeSitePagesPageResponses[keyof GetSiteSiteByExternalReferenceCodeSitePagesPageResponses];
 
 export type PostByExternalReferenceCodeSitePageData = {
-    body?: SitePageWritable;
+    body?: SitePage;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -7259,7 +4963,7 @@ export type PostByExternalReferenceCodeSitePageResponses = {
     /**
      * default response
      */
-    default: SitePageReadable;
+    default: SitePage;
 };
 
 export type PostByExternalReferenceCodeSitePageResponse = PostByExternalReferenceCodeSitePageResponses[keyof PostByExternalReferenceCodeSitePageResponses];
@@ -7342,13 +5046,13 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPageResponses = {
     /**
      * default response
      */
-    default: UtilityPageReadable;
+    default: UtilityPage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPageResponse = GetSiteSiteByExternalReferenceCodeUtilityPageResponses[keyof GetSiteSiteByExternalReferenceCodeUtilityPageResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeUtilityPageData = {
-    body?: UtilityPageWritable;
+    body?: UtilityPage;
     path: {
         siteExternalReferenceCode: string;
         utilityPageExternalReferenceCode: string;
@@ -7365,13 +5069,13 @@ export type PatchSiteSiteByExternalReferenceCodeUtilityPageResponses = {
     /**
      * default response
      */
-    default: UtilityPageReadable;
+    default: UtilityPage;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeUtilityPageResponse = PatchSiteSiteByExternalReferenceCodeUtilityPageResponses[keyof PatchSiteSiteByExternalReferenceCodeUtilityPageResponses];
 
 export type PutSiteSiteByExternalReferenceCodeUtilityPageData = {
-    body?: UtilityPageWritable;
+    body?: UtilityPage;
     path: {
         siteExternalReferenceCode: string;
         utilityPageExternalReferenceCode: string;
@@ -7388,7 +5092,7 @@ export type PutSiteSiteByExternalReferenceCodeUtilityPageResponses = {
     /**
      * default response
      */
-    default: UtilityPageReadable;
+    default: UtilityPage;
 };
 
 export type PutSiteSiteByExternalReferenceCodeUtilityPageResponse = PutSiteSiteByExternalReferenceCodeUtilityPageResponses[keyof PutSiteSiteByExternalReferenceCodeUtilityPageResponses];
@@ -7416,13 +5120,13 @@ export type GetSiteSiteByExternalReferenceCodeUtilityPagesPageResponses = {
     /**
      * default response
      */
-    default: PageUtilityPageReadable;
+    default: PageUtilityPage;
 };
 
 export type GetSiteSiteByExternalReferenceCodeUtilityPagesPageResponse = GetSiteSiteByExternalReferenceCodeUtilityPagesPageResponses[keyof GetSiteSiteByExternalReferenceCodeUtilityPagesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPageData = {
-    body?: UtilityPageWritable;
+    body?: UtilityPage;
     path: {
         siteExternalReferenceCode: string;
     };
@@ -7434,7 +5138,7 @@ export type PostSiteSiteByExternalReferenceCodeUtilityPageResponses = {
     /**
      * default response
      */
-    default: UtilityPageReadable;
+    default: UtilityPage;
 };
 
 export type PostSiteSiteByExternalReferenceCodeUtilityPageResponse = PostSiteSiteByExternalReferenceCodeUtilityPageResponses[keyof PostSiteSiteByExternalReferenceCodeUtilityPageResponses];
@@ -7519,13 +5223,13 @@ export type GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExtern
     /**
      * default response
      */
-    default: WidgetPageWidgetInstanceReadable;
+    default: WidgetPageWidgetInstance;
 };
 
 export type GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponse = GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses[keyof GetSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses];
 
 export type PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeData = {
-    body?: WidgetPageWidgetInstanceWritable;
+    body?: WidgetPageWidgetInstance;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -7543,13 +5247,13 @@ export type PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExte
     /**
      * default response
      */
-    default: WidgetPageWidgetInstanceReadable;
+    default: WidgetPageWidgetInstance;
 };
 
 export type PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponse = PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses[keyof PatchSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses];
 
 export type PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeData = {
-    body?: WidgetPageWidgetInstanceWritable;
+    body?: WidgetPageWidgetInstance;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -7567,7 +5271,7 @@ export type PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExtern
     /**
      * default response
      */
-    default: WidgetPageWidgetInstanceReadable;
+    default: WidgetPageWidgetInstance;
 };
 
 export type PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponse = PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses[keyof PutSiteSiteByExternalReferenceCodeWidgetInstanceWidgetInstanceExternalReferenceCodeResponses];
@@ -7590,13 +5294,13 @@ export type GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageRespons
     /**
      * default response
      */
-    default: PageWidgetPageWidgetInstanceReadable;
+    default: PageWidgetPageWidgetInstance;
 };
 
 export type GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageResponse = GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageResponses[keyof GetSiteSiteByExternalReferenceCodeSitePageWidgetInstancesPageResponses];
 
 export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceData = {
-    body?: WidgetPageWidgetInstanceWritable;
+    body?: WidgetPageWidgetInstance;
     path: {
         siteExternalReferenceCode: string;
         sitePageExternalReferenceCode: string;
@@ -7613,7 +5317,7 @@ export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses =
     /**
      * default response
      */
-    default: WidgetPageWidgetInstanceReadable;
+    default: WidgetPageWidgetInstance;
 };
 
 export type PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponse = PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses[keyof PostSiteSiteByExternalReferenceCodeSitePageWidgetInstanceResponses];

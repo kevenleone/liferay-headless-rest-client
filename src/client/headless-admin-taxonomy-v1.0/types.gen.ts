@@ -3,7 +3,7 @@
 /**
  * A list of asset libraries (spaces) that this vocabulary is associated with.
  */
-export type AssetLibraryReadable = {
+export type AssetLibrary = {
     /**
      * The asset library's site ID.
      */
@@ -19,16 +19,6 @@ export type AssetLibraryReadable = {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
-};
-
-/**
- * A list of asset libraries (spaces) that this vocabulary is associated with.
- */
-export type AssetLibraryWritable = {
-    /**
-     * The asset library's site ID.
-     */
-    id?: number;
 };
 
 /**
@@ -77,7 +67,7 @@ export type Creator = {
 /**
  * Represents a keyword that describes content. Properties follow the [keywords](https://schema.org/keywords) specification.
  */
-export type KeywordReadable = {
+export type Keyword = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -86,7 +76,7 @@ export type KeywordReadable = {
     /**
      * A list of asset libraries that are associated with this keyword.
      */
-    assetLibraries?: Array<AssetLibraryReadable>;
+    assetLibraries?: Array<AssetLibrary>;
     readonly assetLibraryKey?: string;
     creator?: Creator;
     /**
@@ -128,24 +118,6 @@ export type KeywordReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * Represents a keyword that describes content. Properties follow the [keywords](https://schema.org/keywords) specification.
- */
-export type KeywordWritable = {
-    /**
-     * A list of asset libraries that are associated with this keyword.
-     */
-    assetLibraries?: Array<AssetLibraryWritable>;
-    /**
-     * The keyword's external reference code
-     */
-    externalReferenceCode?: string;
-    /**
-     * The keyword's name.
-     */
-    name: string;
-};
-
 export type Facet = {
     facetCriteria?: string;
     facetValues?: Array<FacetValue>;
@@ -177,10 +149,10 @@ export type Permission = {
     roleType?: string;
 };
 
-export type PageKeywordReadable = {
+export type PageKeyword = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KeywordReadable>;
+    items?: Array<Keyword>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -191,38 +163,10 @@ export type PageKeywordReadable = {
     page?: number;
 };
 
-export type PageKeywordWritable = {
+export type PageTaxonomyCategory = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KeywordWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageTaxonomyCategoryReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<TaxonomyCategoryReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageTaxonomyCategoryWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<TaxonomyCategoryWritable>;
+    items?: Array<TaxonomyCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -236,7 +180,7 @@ export type PageTaxonomyCategoryWritable = {
 /**
  * The category's parent category, if it exists.
  */
-export type ParentTaxonomyCategoryReadable = {
+export type ParentTaxonomyCategory = {
     /**
      * The parent taxonomy category's external reference code.
      */
@@ -250,24 +194,9 @@ export type ParentTaxonomyCategoryReadable = {
 };
 
 /**
- * The category's parent category, if it exists.
- */
-export type ParentTaxonomyCategoryWritable = {
-    /**
-     * The parent taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-};
-
-/**
  * The parent category's `TaxonomyVocabulary`, if such a parent category exists.
  */
-export type ParentTaxonomyVocabularyReadable = {
+export type ParentTaxonomyVocabulary = {
     /**
      * The parent category's `TaxonomyVocabulary` external reference code.
      */
@@ -278,27 +207,12 @@ export type ParentTaxonomyVocabularyReadable = {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
-};
-
-/**
- * The parent category's `TaxonomyVocabulary`, if such a parent category exists.
- */
-export type ParentTaxonomyVocabularyWritable = {
-    /**
-     * The parent category's `TaxonomyVocabulary` external reference code.
-     */
-    externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
 };
 
 /**
  * Represents a category, which is a hierarchical classification that can be associated with particular asset types. Properties follow the [category](https://schema.org/category) specification.
  */
-export type TaxonomyCategoryReadable = {
+export type TaxonomyCategory = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -343,8 +257,8 @@ export type TaxonomyCategoryReadable = {
      * The number of times this category has been used in other assets.
      */
     readonly numberOfTaxonomyCategories?: number;
-    parentTaxonomyCategory?: ParentTaxonomyCategoryReadable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyReadable;
+    parentTaxonomyCategory?: ParentTaxonomyCategory;
+    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
     permissions?: Array<Permission>;
     /**
      * The external reference code of the site to which this category is scoped.
@@ -357,7 +271,7 @@ export type TaxonomyCategoryReadable = {
     /**
      * The category's properties.
      */
-    taxonomyCategoryProperties?: Array<TaxonomyCategoryPropertyReadable>;
+    taxonomyCategoryProperties?: Array<TaxonomyCategoryProperty>;
     readonly taxonomyCategoryUsageCount?: number;
     /**
      * The `TaxonomyVocabulary` id, only if the category does not have a parent category.
@@ -368,45 +282,9 @@ export type TaxonomyCategoryReadable = {
 };
 
 /**
- * Represents a category, which is a hierarchical classification that can be associated with particular asset types. Properties follow the [category](https://schema.org/category) specification.
- */
-export type TaxonomyCategoryWritable = {
-    /**
-     * The category's text description.
-     */
-    description?: string;
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The category's external reference code
-     */
-    externalReferenceCode?: string;
-    /**
-     * The category's name.
-     */
-    name: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-    parentTaxonomyCategory?: ParentTaxonomyCategoryWritable;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabularyWritable;
-    permissions?: Array<Permission>;
-    /**
-     * The category's properties.
-     */
-    taxonomyCategoryProperties?: Array<TaxonomyCategoryPropertyWritable>;
-    /**
-     * The `TaxonomyVocabulary` id, only if the category does not have a parent category.
-     */
-    taxonomyVocabularyId?: number;
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-};
-
-/**
  * Key value pair to associate detailed information with a category.
  */
-export type TaxonomyCategoryPropertyReadable = {
+export type TaxonomyCategoryProperty = {
     /**
      * The taxonomy category's external reference code.
      */
@@ -423,27 +301,9 @@ export type TaxonomyCategoryPropertyReadable = {
 };
 
 /**
- * Key value pair to associate detailed information with a category.
- */
-export type TaxonomyCategoryPropertyWritable = {
-    /**
-     * The taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * The taxonomy category property's key.
-     */
-    key: string;
-    /**
-     * The taxonomy category property's value.
-     */
-    value?: string;
-};
-
-/**
  * A list of asset types that can be associated with this vocabulary.
  */
-export type AssetTypeReadable = {
+export type AssetType = {
     /**
      * A flag that marks if this type is required.
      */
@@ -463,46 +323,10 @@ export type AssetTypeReadable = {
     readonly 'x-class-name'?: string;
 };
 
-/**
- * A list of asset types that can be associated with this vocabulary.
- */
-export type AssetTypeWritable = {
-    /**
-     * A flag that marks if this type is required.
-     */
-    required?: boolean;
-    /**
-     * The asset's subtype.
-     */
-    subtype?: string;
-    /**
-     * The asset's type (e.g., `BlogPosting`, `Document`, etc.).
-     */
-    type?: string;
-    /**
-     * The classNameId of the asset's type.
-     */
-    typeId?: number;
-};
-
-export type PageTaxonomyVocabularyReadable = {
+export type PageTaxonomyVocabulary = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxonomyVocabularyReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageTaxonomyVocabularyWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<TaxonomyVocabularyWritable>;
+    items?: Array<TaxonomyVocabulary>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -516,7 +340,7 @@ export type PageTaxonomyVocabularyWritable = {
 /**
  * Represents a vocabulary, which is a grouping of categories for a specific purpose (e.g., classification, sorting, etc.).
  */
-export type TaxonomyVocabularyReadable = {
+export type TaxonomyVocabulary = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -525,12 +349,12 @@ export type TaxonomyVocabularyReadable = {
     /**
      * A list of asset libraries (spaces) that this vocabulary is associated with.
      */
-    assetLibraries?: Array<AssetLibraryReadable>;
+    assetLibraries?: Array<AssetLibrary>;
     readonly assetLibraryKey?: string;
     /**
      * A list of asset types that can be associated with this vocabulary.
      */
-    assetTypes?: Array<AssetTypeReadable>;
+    assetTypes?: Array<AssetType>;
     /**
      * A list of languages the vocabulary has a translation for.
      */
@@ -591,48 +415,6 @@ export type TaxonomyVocabularyReadable = {
     visibilityType?: 'PUBLIC' | 'INTERNAL';
 };
 
-/**
- * Represents a vocabulary, which is a grouping of categories for a specific purpose (e.g., classification, sorting, etc.).
- */
-export type TaxonomyVocabularyWritable = {
-    /**
-     * A list of asset libraries (spaces) that this vocabulary is associated with.
-     */
-    assetLibraries?: Array<AssetLibraryWritable>;
-    /**
-     * A list of asset types that can be associated with this vocabulary.
-     */
-    assetTypes?: Array<AssetTypeWritable>;
-    /**
-     * The vocabulary's text description.
-     */
-    description?: string;
-    description_i18n?: {
-        [key: string]: string;
-    };
-    /**
-     * The vocabulary's external reference code.
-     */
-    externalReferenceCode?: string;
-    /**
-     * Whether multiple categories can be associated with this vocabulary.
-     */
-    multiValued?: boolean;
-    /**
-     * The vocabulary's name.
-     */
-    name: string;
-    name_i18n?: {
-        [key: string]: string;
-    };
-    permissions?: Array<Permission>;
-    viewableBy?: 'Anyone' | 'Members' | 'Owner';
-    /**
-     * The vocabulary's visibility type.
-     */
-    visibilityType?: 'PUBLIC' | 'INTERNAL';
-};
-
 export type DeleteAssetLibraryKeywordByExternalReferenceCodeData = {
     body?: never;
     path: {
@@ -667,13 +449,13 @@ export type GetAssetLibraryKeywordByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type GetAssetLibraryKeywordByExternalReferenceCodeResponse = GetAssetLibraryKeywordByExternalReferenceCodeResponses[keyof GetAssetLibraryKeywordByExternalReferenceCodeResponses];
 
 export type PutAssetLibraryKeywordByExternalReferenceCodeData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path: {
         assetLibraryId: string;
         externalReferenceCode: string;
@@ -686,7 +468,7 @@ export type PutAssetLibraryKeywordByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PutAssetLibraryKeywordByExternalReferenceCodeResponse = PutAssetLibraryKeywordByExternalReferenceCodeResponses[keyof PutAssetLibraryKeywordByExternalReferenceCodeResponses];
@@ -723,13 +505,13 @@ export type GetKeywordResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type GetKeywordResponse = GetKeywordResponses[keyof GetKeywordResponses];
 
 export type PutKeywordData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path: {
         keywordId: string;
     };
@@ -741,7 +523,7 @@ export type PutKeywordResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PutKeywordResponse = PutKeywordResponses[keyof PutKeywordResponses];
@@ -834,13 +616,13 @@ export type GetSiteKeywordByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type GetSiteKeywordByExternalReferenceCodeResponse = GetSiteKeywordByExternalReferenceCodeResponses[keyof GetSiteKeywordByExternalReferenceCodeResponses];
 
 export type PutSiteKeywordByExternalReferenceCodeData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path: {
         siteId: string;
         externalReferenceCode: string;
@@ -853,7 +635,7 @@ export type PutSiteKeywordByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PutSiteKeywordByExternalReferenceCodeResponse = PutSiteKeywordByExternalReferenceCodeResponses[keyof PutSiteKeywordByExternalReferenceCodeResponses];
@@ -922,13 +704,13 @@ export type GetAssetLibraryKeywordsPageResponses = {
     /**
      * default response
      */
-    default: PageKeywordReadable;
+    default: PageKeyword;
 };
 
 export type GetAssetLibraryKeywordsPageResponse = GetAssetLibraryKeywordsPageResponses[keyof GetAssetLibraryKeywordsPageResponses];
 
 export type PostAssetLibraryKeywordData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path: {
         assetLibraryId: string;
     };
@@ -940,7 +722,7 @@ export type PostAssetLibraryKeywordResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PostAssetLibraryKeywordResponse = PostAssetLibraryKeywordResponses[keyof PostAssetLibraryKeywordResponses];
@@ -966,13 +748,13 @@ export type GetKeywordsPageResponses = {
     /**
      * default response
      */
-    default: PageKeywordReadable;
+    default: PageKeyword;
 };
 
 export type GetKeywordsPageResponse = GetKeywordsPageResponses[keyof GetKeywordsPageResponses];
 
 export type PostKeywordData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path?: never;
     query?: never;
     url: '/o/headless-admin-taxonomy/v1.0/keywords';
@@ -982,7 +764,7 @@ export type PostKeywordResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PostKeywordResponse = PostKeywordResponses[keyof PostKeywordResponses];
@@ -1006,7 +788,7 @@ export type GetKeywordsRankedPageResponses = {
     /**
      * default response
      */
-    default: PageKeywordReadable;
+    default: PageKeyword;
 };
 
 export type GetKeywordsRankedPageResponse = GetKeywordsRankedPageResponses[keyof GetKeywordsRankedPageResponses];
@@ -1075,13 +857,13 @@ export type GetSiteKeywordsPageResponses = {
     /**
      * default response
      */
-    default: PageKeywordReadable;
+    default: PageKeyword;
 };
 
 export type GetSiteKeywordsPageResponse = GetSiteKeywordsPageResponses[keyof GetSiteKeywordsPageResponses];
 
 export type PostSiteKeywordData = {
-    body?: KeywordWritable;
+    body?: Keyword;
     path: {
         siteId: string;
     };
@@ -1093,7 +875,7 @@ export type PostSiteKeywordResponses = {
     /**
      * default response
      */
-    default: KeywordReadable;
+    default: Keyword;
 };
 
 export type PostSiteKeywordResponse = PostSiteKeywordResponses[keyof PostSiteKeywordResponses];
@@ -1287,13 +1069,13 @@ export type GetTaxonomyCategoryResponses = {
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type GetTaxonomyCategoryResponse = GetTaxonomyCategoryResponses[keyof GetTaxonomyCategoryResponses];
 
 export type PatchTaxonomyCategoryData = {
-    body?: TaxonomyCategoryWritable;
+    body?: TaxonomyCategory;
     path: {
         taxonomyCategoryId: string;
     };
@@ -1305,13 +1087,13 @@ export type PatchTaxonomyCategoryResponses = {
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type PatchTaxonomyCategoryResponse = PatchTaxonomyCategoryResponses[keyof PatchTaxonomyCategoryResponses];
 
 export type PutTaxonomyCategoryData = {
-    body?: TaxonomyCategoryWritable;
+    body?: TaxonomyCategory;
     path: {
         taxonomyCategoryId: string;
     };
@@ -1323,7 +1105,7 @@ export type PutTaxonomyCategoryResponses = {
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type PutTaxonomyCategoryResponse = PutTaxonomyCategoryResponses[keyof PutTaxonomyCategoryResponses];
@@ -1398,13 +1180,13 @@ export type GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse = GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses[keyof GetTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses];
 
 export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeData = {
-    body?: TaxonomyCategoryWritable;
+    body?: TaxonomyCategory;
     path: {
         taxonomyVocabularyId: string;
         externalReferenceCode: string;
@@ -1417,7 +1199,7 @@ export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse = PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses[keyof PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses];
@@ -1440,7 +1222,7 @@ export type GetTaxonomyCategoriesRankedPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyCategoryReadable;
+    default: PageTaxonomyCategory;
 };
 
 export type GetTaxonomyCategoriesRankedPageResponse = GetTaxonomyCategoriesRankedPageResponses[keyof GetTaxonomyCategoriesRankedPageResponses];
@@ -1509,13 +1291,13 @@ export type GetTaxonomyCategoryTaxonomyCategoriesPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyCategoryReadable;
+    default: PageTaxonomyCategory;
 };
 
 export type GetTaxonomyCategoryTaxonomyCategoriesPageResponse = GetTaxonomyCategoryTaxonomyCategoriesPageResponses[keyof GetTaxonomyCategoryTaxonomyCategoriesPageResponses];
 
 export type PostTaxonomyCategoryTaxonomyCategoryData = {
-    body?: TaxonomyCategoryWritable;
+    body?: TaxonomyCategory;
     path: {
         parentTaxonomyCategoryId: string;
     };
@@ -1527,7 +1309,7 @@ export type PostTaxonomyCategoryTaxonomyCategoryResponses = {
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type PostTaxonomyCategoryTaxonomyCategoryResponse = PostTaxonomyCategoryTaxonomyCategoryResponses[keyof PostTaxonomyCategoryTaxonomyCategoryResponses];
@@ -1556,13 +1338,13 @@ export type GetTaxonomyVocabularyTaxonomyCategoriesPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyCategoryReadable;
+    default: PageTaxonomyCategory;
 };
 
 export type GetTaxonomyVocabularyTaxonomyCategoriesPageResponse = GetTaxonomyVocabularyTaxonomyCategoriesPageResponses[keyof GetTaxonomyVocabularyTaxonomyCategoriesPageResponses];
 
 export type PostTaxonomyVocabularyTaxonomyCategoryData = {
-    body?: TaxonomyCategoryWritable;
+    body?: TaxonomyCategory;
     path: {
         taxonomyVocabularyId: string;
     };
@@ -1574,7 +1356,7 @@ export type PostTaxonomyVocabularyTaxonomyCategoryResponses = {
     /**
      * default response
      */
-    default: TaxonomyCategoryReadable;
+    default: TaxonomyCategory;
 };
 
 export type PostTaxonomyVocabularyTaxonomyCategoryResponse = PostTaxonomyVocabularyTaxonomyCategoryResponses[keyof PostTaxonomyVocabularyTaxonomyCategoryResponses];
@@ -1656,13 +1438,13 @@ export type GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses = 
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponse = GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses[keyof GetAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses];
 
 export type PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         assetLibraryId: string;
         externalReferenceCode: string;
@@ -1675,7 +1457,7 @@ export type PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses = 
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponse = PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses[keyof PutAssetLibraryTaxonomyVocabularyByExternalReferenceCodeResponses];
@@ -1714,13 +1496,13 @@ export type GetSiteTaxonomyVocabularyByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type GetSiteTaxonomyVocabularyByExternalReferenceCodeResponse = GetSiteTaxonomyVocabularyByExternalReferenceCodeResponses[keyof GetSiteTaxonomyVocabularyByExternalReferenceCodeResponses];
 
 export type PutSiteTaxonomyVocabularyByExternalReferenceCodeData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         siteId: string;
         externalReferenceCode: string;
@@ -1733,7 +1515,7 @@ export type PutSiteTaxonomyVocabularyByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PutSiteTaxonomyVocabularyByExternalReferenceCodeResponse = PutSiteTaxonomyVocabularyByExternalReferenceCodeResponses[keyof PutSiteTaxonomyVocabularyByExternalReferenceCodeResponses];
@@ -1770,13 +1552,13 @@ export type GetTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type GetTaxonomyVocabularyResponse = GetTaxonomyVocabularyResponses[keyof GetTaxonomyVocabularyResponses];
 
 export type PatchTaxonomyVocabularyData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         taxonomyVocabularyId: string;
     };
@@ -1788,13 +1570,13 @@ export type PatchTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PatchTaxonomyVocabularyResponse = PatchTaxonomyVocabularyResponses[keyof PatchTaxonomyVocabularyResponses];
 
 export type PutTaxonomyVocabularyData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         taxonomyVocabularyId: string;
     };
@@ -1806,7 +1588,7 @@ export type PutTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PutTaxonomyVocabularyResponse = PutTaxonomyVocabularyResponses[keyof PutTaxonomyVocabularyResponses];
@@ -1888,13 +1670,13 @@ export type GetAssetLibraryTaxonomyVocabulariesPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyVocabularyReadable;
+    default: PageTaxonomyVocabulary;
 };
 
 export type GetAssetLibraryTaxonomyVocabulariesPageResponse = GetAssetLibraryTaxonomyVocabulariesPageResponses[keyof GetAssetLibraryTaxonomyVocabulariesPageResponses];
 
 export type PostAssetLibraryTaxonomyVocabularyData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         assetLibraryId: string;
     };
@@ -1906,7 +1688,7 @@ export type PostAssetLibraryTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PostAssetLibraryTaxonomyVocabularyResponse = PostAssetLibraryTaxonomyVocabularyResponses[keyof PostAssetLibraryTaxonomyVocabularyResponses];
@@ -1975,13 +1757,13 @@ export type GetSiteTaxonomyVocabulariesPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyVocabularyReadable;
+    default: PageTaxonomyVocabulary;
 };
 
 export type GetSiteTaxonomyVocabulariesPageResponse = GetSiteTaxonomyVocabulariesPageResponses[keyof GetSiteTaxonomyVocabulariesPageResponses];
 
 export type PostSiteTaxonomyVocabularyData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path: {
         siteId: string;
     };
@@ -1993,7 +1775,7 @@ export type PostSiteTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PostSiteTaxonomyVocabularyResponse = PostSiteTaxonomyVocabularyResponses[keyof PostSiteTaxonomyVocabularyResponses];
@@ -2060,13 +1842,13 @@ export type GetTaxonomyVocabulariesPageResponses = {
     /**
      * default response
      */
-    default: PageTaxonomyVocabularyReadable;
+    default: PageTaxonomyVocabulary;
 };
 
 export type GetTaxonomyVocabulariesPageResponse = GetTaxonomyVocabulariesPageResponses[keyof GetTaxonomyVocabulariesPageResponses];
 
 export type PostTaxonomyVocabularyData = {
-    body?: TaxonomyVocabularyWritable;
+    body?: TaxonomyVocabulary;
     path?: never;
     query?: never;
     url: '/o/headless-admin-taxonomy/v1.0/taxonomy-vocabularies';
@@ -2076,7 +1858,7 @@ export type PostTaxonomyVocabularyResponses = {
     /**
      * default response
      */
-    default: TaxonomyVocabularyReadable;
+    default: TaxonomyVocabulary;
 };
 
 export type PostTaxonomyVocabularyResponse = PostTaxonomyVocabularyResponses[keyof PostTaxonomyVocabularyResponses];

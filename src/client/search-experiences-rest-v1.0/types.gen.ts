@@ -10,23 +10,17 @@ export type FacetValue = {
     term?: string;
 };
 
-export type FieldMappingInfoReadable = {
+export type FieldMappingInfo = {
     languageIdPosition?: number;
     name?: string;
     type?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type FieldMappingInfoWritable = {
-    languageIdPosition?: number;
-    name?: string;
-    type?: string;
-};
-
-export type PageFieldMappingInfoReadable = {
+export type PageFieldMappingInfo = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FieldMappingInfoReadable>;
+    items?: Array<FieldMappingInfo>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -37,33 +31,15 @@ export type PageFieldMappingInfoReadable = {
     page?: number;
 };
 
-export type PageFieldMappingInfoWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<FieldMappingInfoWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type KeywordQueryContributorReadable = {
+export type KeywordQueryContributor = {
     className?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type KeywordQueryContributorWritable = {
-    className?: string;
-};
-
-export type PageKeywordQueryContributorReadable = {
+export type PageKeywordQueryContributor = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KeywordQueryContributorReadable>;
+    items?: Array<KeywordQueryContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -74,33 +50,15 @@ export type PageKeywordQueryContributorReadable = {
     page?: number;
 };
 
-export type PageKeywordQueryContributorWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<KeywordQueryContributorWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ModelPrefilterContributorReadable = {
+export type ModelPrefilterContributor = {
     className?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type ModelPrefilterContributorWritable = {
-    className?: string;
-};
-
-export type PageModelPrefilterContributorReadable = {
+export type PageModelPrefilterContributor = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ModelPrefilterContributorReadable>;
+    items?: Array<ModelPrefilterContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -111,10 +69,10 @@ export type PageModelPrefilterContributorReadable = {
     page?: number;
 };
 
-export type PageModelPrefilterContributorWritable = {
+export type PageQueryPrefilterContributor = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ModelPrefilterContributorWritable>;
+    items?: Array<QueryPrefilterContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -125,72 +83,27 @@ export type PageModelPrefilterContributorWritable = {
     page?: number;
 };
 
-export type PageQueryPrefilterContributorReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<QueryPrefilterContributorReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageQueryPrefilterContributorWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<QueryPrefilterContributorWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type QueryPrefilterContributorReadable = {
+export type QueryPrefilterContributor = {
     className?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type QueryPrefilterContributorWritable = {
-    className?: string;
-};
-
-export type AdvancedConfigurationReadable = {
-    collapse?: CollapseReadable;
+export type AdvancedConfiguration = {
+    collapse?: Collapse;
     fields?: Array<string>;
-    source?: SourceReadable;
+    source?: Source;
     stored_fields?: Array<string>;
     readonly 'x-class-name'?: string;
 };
 
-export type AdvancedConfigurationWritable = {
-    collapse?: CollapseWritable;
-    fields?: Array<string>;
-    source?: SourceWritable;
-    stored_fields?: Array<string>;
-};
-
-export type AggregationConfigurationReadable = {
+export type AggregationConfiguration = {
     aggs?: {
         [key: string]: unknown;
     };
     readonly 'x-class-name'?: string;
 };
 
-export type AggregationConfigurationWritable = {
-    aggs?: {
-        [key: string]: unknown;
-    };
-};
-
-export type ClauseReadable = {
+export type Clause = {
     additive?: boolean;
     boost?: number;
     context?: string;
@@ -207,92 +120,43 @@ export type ClauseReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ClauseWritable = {
-    additive?: boolean;
-    boost?: number;
-    context?: string;
-    disabled?: boolean;
+export type Collapse = {
     field?: string;
-    name?: string;
-    occur?: string;
-    parent?: string;
-    query?: {
-        [key: string]: unknown;
-    };
-    type?: string;
-    value?: string;
-};
-
-export type CollapseReadable = {
-    field?: string;
-    innerHits?: Array<InnerHitReadable>;
+    innerHits?: Array<InnerHit>;
     maxConcurrentGroupRequests?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type CollapseWritable = {
-    field?: string;
-    innerHits?: Array<InnerHitWritable>;
-    maxConcurrentGroupRequests?: number;
-};
-
-export type ConditionReadable = {
-    allConditions?: Array<ConditionReadable>;
-    anyConditions?: Array<ConditionReadable>;
-    contains?: ContainsReadable;
-    equals?: EqualsReadable;
-    exists?: ExistsReadable;
-    in?: InReadable;
-    not?: ConditionReadable;
-    range?: RangeReadable;
+export type Condition = {
+    allConditions?: Array<Condition>;
+    anyConditions?: Array<Condition>;
+    contains?: Contains;
+    equals?: Equals;
+    exists?: Exists;
+    in?: In;
+    not?: Condition;
+    range?: Range;
     readonly 'x-class-name'?: string;
 };
 
-export type ConditionWritable = {
-    allConditions?: Array<ConditionWritable>;
-    anyConditions?: Array<ConditionWritable>;
-    contains?: ContainsWritable;
-    equals?: EqualsWritable;
-    exists?: ExistsWritable;
-    in?: InWritable;
-    not?: ConditionWritable;
-    range?: RangeWritable;
-};
-
-export type ConfigurationReadable = {
-    advancedConfiguration?: AdvancedConfigurationReadable;
-    aggregationConfiguration?: AggregationConfigurationReadable;
-    generalConfiguration?: GeneralConfigurationReadable;
-    highlightConfiguration?: HighlightConfigurationReadable;
-    indexConfiguration?: IndexConfigurationReadable;
-    parameterConfiguration?: ParameterConfigurationReadable;
-    queryConfiguration?: QueryConfigurationReadable;
+export type Configuration = {
+    advancedConfiguration?: AdvancedConfiguration;
+    aggregationConfiguration?: AggregationConfiguration;
+    generalConfiguration?: GeneralConfiguration;
+    highlightConfiguration?: HighlightConfiguration;
+    indexConfiguration?: IndexConfiguration;
+    parameterConfiguration?: ParameterConfiguration;
+    queryConfiguration?: QueryConfiguration;
     searchContextAttributes?: {
         [key: string]: {
             [key: string]: unknown;
         };
     };
-    sortConfiguration?: SortConfigurationReadable;
+    sortConfiguration?: SortConfiguration;
     readonly 'x-class-name'?: string;
 };
 
-export type ConfigurationWritable = {
-    advancedConfiguration?: AdvancedConfigurationWritable;
-    aggregationConfiguration?: AggregationConfigurationWritable;
-    generalConfiguration?: GeneralConfigurationWritable;
-    highlightConfiguration?: HighlightConfigurationWritable;
-    indexConfiguration?: IndexConfigurationWritable;
-    parameterConfiguration?: ParameterConfigurationWritable;
-    queryConfiguration?: QueryConfigurationWritable;
-    searchContextAttributes?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-    sortConfiguration?: SortConfigurationWritable;
-};
-
-export type ContainsReadable = {
+export type Contains = {
     parameterName?: string;
     value?: {
         [key: string]: unknown;
@@ -300,31 +164,17 @@ export type ContainsReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ContainsWritable = {
-    parameterName?: string;
-    value?: {
-        [key: string]: unknown;
-    };
-};
-
-export type ElementDefinitionReadable = {
+export type ElementDefinition = {
     category?: string;
-    configuration?: ConfigurationReadable;
+    configuration?: Configuration;
     icon?: string;
-    uiConfiguration?: UiConfigurationReadable;
+    uiConfiguration?: UiConfiguration;
     readonly 'x-class-name'?: string;
 };
 
-export type ElementDefinitionWritable = {
-    category?: string;
-    configuration?: ConfigurationWritable;
-    icon?: string;
-    uiConfiguration?: UiConfigurationWritable;
-};
-
-export type ElementInstanceReadable = {
-    configurationEntry?: ConfigurationReadable;
-    sxpElement?: SxpElementReadable;
+export type ElementInstance = {
+    configurationEntry?: Configuration;
+    sxpElement?: SxpElement;
     sxpElementId?: number;
     type?: number;
     uiConfigurationValues?: {
@@ -335,19 +185,7 @@ export type ElementInstanceReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type ElementInstanceWritable = {
-    configurationEntry?: ConfigurationWritable;
-    sxpElement?: SxpElementWritable;
-    sxpElementId?: number;
-    type?: number;
-    uiConfigurationValues?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-};
-
-export type EqualsReadable = {
+export type Equals = {
     format?: string;
     parameterName?: string;
     value?: {
@@ -356,75 +194,39 @@ export type EqualsReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type EqualsWritable = {
-    format?: string;
-    parameterName?: string;
-    value?: {
-        [key: string]: unknown;
-    };
-};
-
-export type ExistsReadable = {
+export type Exists = {
     parameterName?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type ExistsWritable = {
-    parameterName?: string;
-};
-
-export type FieldReadable = {
+export type Field = {
     defaultValue?: {
         [key: string]: unknown;
     };
-    fieldMappings?: Array<FieldMappingReadable>;
+    fieldMappings?: Array<FieldMapping>;
     helpText?: string;
     helpTextLocalized?: string;
     label?: string;
     labelLocalized?: string;
     name?: string;
     type?: string;
-    typeOptions?: TypeOptionsReadable;
+    typeOptions?: TypeOptions;
     readonly 'x-class-name'?: string;
 };
 
-export type FieldWritable = {
-    defaultValue?: {
-        [key: string]: unknown;
-    };
-    fieldMappings?: Array<FieldMappingWritable>;
-    helpText?: string;
-    helpTextLocalized?: string;
-    label?: string;
-    labelLocalized?: string;
-    name?: string;
-    type?: string;
-    typeOptions?: TypeOptionsWritable;
-};
-
-export type FieldMappingReadable = {
+export type FieldMapping = {
     boost?: number;
     field?: string;
     locale?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type FieldMappingWritable = {
-    boost?: number;
-    field?: string;
-    locale?: string;
-};
-
-export type FieldSetReadable = {
-    fields?: Array<FieldReadable>;
+export type FieldSet = {
+    fields?: Array<Field>;
     readonly 'x-class-name'?: string;
 };
 
-export type FieldSetWritable = {
-    fields?: Array<FieldWritable>;
-};
-
-export type GeneralConfigurationReadable = {
+export type GeneralConfiguration = {
     clauseContributorsExcludes?: Array<string>;
     clauseContributorsIncludes?: Array<string>;
     collectionProvider?: boolean;
@@ -439,23 +241,9 @@ export type GeneralConfigurationReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type GeneralConfigurationWritable = {
-    clauseContributorsExcludes?: Array<string>;
-    clauseContributorsIncludes?: Array<string>;
-    collectionProvider?: boolean;
-    collectionProviderType?: string;
-    emptySearchEnabled?: boolean;
-    explain?: boolean;
-    includeResponseString?: boolean;
-    languageId?: string;
-    queryString?: string;
-    searchableAssetTypes?: Array<string>;
-    timeZoneId?: string;
-};
-
-export type HighlightConfigurationReadable = {
+export type HighlightConfiguration = {
     fields?: {
-        [key: string]: HighlightFieldReadable;
+        [key: string]: HighlightField;
     };
     fragment_size?: number;
     number_of_fragments?: number;
@@ -466,32 +254,14 @@ export type HighlightConfigurationReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type HighlightConfigurationWritable = {
-    fields?: {
-        [key: string]: HighlightFieldWritable;
-    };
-    fragment_size?: number;
-    number_of_fragments?: number;
-    post_tags?: Array<string>;
-    pre_tags?: Array<string>;
-    require_field_match?: boolean;
-    type?: string;
-};
-
-export type HighlightFieldReadable = {
+export type HighlightField = {
     fragment_offset?: number;
     fragment_size?: number;
     number_of_fragments?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type HighlightFieldWritable = {
-    fragment_offset?: number;
-    fragment_size?: number;
-    number_of_fragments?: number;
-};
-
-export type InReadable = {
+export type In = {
     parameterName?: string;
     value?: {
         [key: string]: unknown;
@@ -499,35 +269,19 @@ export type InReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type InWritable = {
-    parameterName?: string;
-    value?: {
-        [key: string]: unknown;
-    };
-};
-
-export type IndexConfigurationReadable = {
+export type IndexConfiguration = {
     external?: boolean;
     indexName?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type IndexConfigurationWritable = {
-    external?: boolean;
-    indexName?: string;
-};
-
-export type InnerCollapseReadable = {
+export type InnerCollapse = {
     field?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type InnerCollapseWritable = {
-    field?: string;
-};
-
-export type InnerHitReadable = {
-    innerCollapse?: InnerCollapseReadable;
+export type InnerHit = {
+    innerCollapse?: InnerCollapse;
     name?: string;
     size?: number;
     sorts?: Array<{
@@ -536,27 +290,13 @@ export type InnerHitReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type InnerHitWritable = {
-    innerCollapse?: InnerCollapseWritable;
-    name?: string;
-    size?: number;
-    sorts?: Array<{
-        [key: string]: unknown;
-    }>;
-};
-
-export type OptionReadable = {
+export type Option = {
     label?: string;
     value?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type OptionWritable = {
-    label?: string;
-    value?: string;
-};
-
-export type ParameterReadable = {
+export type Parameter = {
     defaultValue?: {
         [key: string]: unknown;
     };
@@ -571,62 +311,29 @@ export type ParameterReadable = {
     type?: 'Boolean' | 'Date' | 'Double' | 'Float' | 'Integer' | 'IntegerArray' | 'Long' | 'LongArray' | 'String' | 'StringArray' | 'TimeRange';
 };
 
-export type ParameterWritable = {
-    defaultValue?: {
-        [key: string]: unknown;
-    };
-    format?: string;
-    max?: {
-        [key: string]: unknown;
-    };
-    min?: {
-        [key: string]: unknown;
-    };
-    type?: 'Boolean' | 'Date' | 'Double' | 'Float' | 'Integer' | 'IntegerArray' | 'Long' | 'LongArray' | 'String' | 'StringArray' | 'TimeRange';
-};
-
-export type ParameterConfigurationReadable = {
+export type ParameterConfiguration = {
     parameters?: {
-        [key: string]: ParameterReadable;
+        [key: string]: Parameter;
     };
     readonly 'x-class-name'?: string;
 };
 
-export type ParameterConfigurationWritable = {
-    parameters?: {
-        [key: string]: ParameterWritable;
-    };
-};
-
-export type QueryConfigurationReadable = {
+export type QueryConfiguration = {
     applyIndexerClauses?: boolean;
-    queryEntries?: Array<QueryEntryReadable>;
+    queryEntries?: Array<QueryEntry>;
     readonly 'x-class-name'?: string;
 };
 
-export type QueryConfigurationWritable = {
-    applyIndexerClauses?: boolean;
-    queryEntries?: Array<QueryEntryWritable>;
-};
-
-export type QueryEntryReadable = {
-    clauses?: Array<ClauseReadable>;
-    condition?: ConditionReadable;
+export type QueryEntry = {
+    clauses?: Array<Clause>;
+    condition?: Condition;
     enabled?: boolean;
-    postFilterClauses?: Array<ClauseReadable>;
-    rescores?: Array<RescoreReadable>;
+    postFilterClauses?: Array<Clause>;
+    rescores?: Array<Rescore>;
     readonly 'x-class-name'?: string;
 };
 
-export type QueryEntryWritable = {
-    clauses?: Array<ClauseWritable>;
-    condition?: ConditionWritable;
-    enabled?: boolean;
-    postFilterClauses?: Array<ClauseWritable>;
-    rescores?: Array<RescoreWritable>;
-};
-
-export type RangeReadable = {
+export type Range = {
     format?: string;
     gt?: {
         [key: string]: unknown;
@@ -644,24 +351,7 @@ export type RangeReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type RangeWritable = {
-    format?: string;
-    gt?: {
-        [key: string]: unknown;
-    };
-    gte?: {
-        [key: string]: unknown;
-    };
-    lt?: {
-        [key: string]: unknown;
-    };
-    lte?: {
-        [key: string]: unknown;
-    };
-    parameterName?: string;
-};
-
-export type RescoreReadable = {
+export type Rescore = {
     query?: {
         [key: string]: unknown;
     };
@@ -678,23 +368,7 @@ export type RescoreReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type RescoreWritable = {
-    query?: {
-        [key: string]: unknown;
-    };
-    queryWeight?: {
-        [key: string]: unknown;
-    };
-    rescoreQueryWeight?: {
-        [key: string]: unknown;
-    };
-    scoreMode?: string;
-    windowSize?: {
-        [key: string]: unknown;
-    };
-};
-
-export type SxpBlueprintReadable = {
+export type SxpBlueprint = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -702,13 +376,13 @@ export type SxpBlueprintReadable = {
     };
     collectionProviderSubtypeName?: string;
     collectionProviderTypeName?: string;
-    configuration?: ConfigurationReadable;
+    configuration?: Configuration;
     createDate?: string;
     description?: string;
     description_i18n?: {
         [key: string]: string;
     };
-    elementInstances?: Array<ElementInstanceReadable>;
+    elementInstances?: Array<ElementInstance>;
     externalReferenceCode?: string;
     id?: number;
     modifiedDate?: string;
@@ -722,29 +396,7 @@ export type SxpBlueprintReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type SxpBlueprintWritable = {
-    collectionProviderSubtypeName?: string;
-    collectionProviderTypeName?: string;
-    configuration?: ConfigurationWritable;
-    createDate?: string;
-    description?: string;
-    description_i18n?: {
-        [key: string]: string;
-    };
-    elementInstances?: Array<ElementInstanceWritable>;
-    externalReferenceCode?: string;
-    id?: number;
-    modifiedDate?: string;
-    schemaVersion?: string;
-    title?: string;
-    title_i18n?: {
-        [key: string]: string;
-    };
-    userName?: string;
-    version?: string;
-};
-
-export type SxpElementReadable = {
+export type SxpElement = {
     readonly actions?: {
         [key: string]: {
             [key: string]: string;
@@ -755,7 +407,7 @@ export type SxpElementReadable = {
     description_i18n?: {
         [key: string]: string;
     };
-    elementDefinition?: ElementDefinitionReadable;
+    elementDefinition?: ElementDefinition;
     externalReferenceCode?: string;
     fallbackDescription?: string;
     fallbackTitle?: string;
@@ -774,57 +426,21 @@ export type SxpElementReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type SxpElementWritable = {
-    createDate?: string;
-    description?: string;
-    description_i18n?: {
-        [key: string]: string;
-    };
-    elementDefinition?: ElementDefinitionWritable;
-    externalReferenceCode?: string;
-    fallbackDescription?: string;
-    fallbackTitle?: string;
-    hidden?: boolean;
-    id?: number;
-    modifiedDate?: string;
-    readOnly?: boolean;
-    schemaVersion?: string;
-    title?: string;
-    title_i18n?: {
-        [key: string]: string;
-    };
-    type?: number;
-    userName?: string;
-    version?: string;
-};
-
-export type SortConfigurationReadable = {
+export type SortConfiguration = {
     sorts?: {
         [key: string]: unknown;
     };
     readonly 'x-class-name'?: string;
 };
 
-export type SortConfigurationWritable = {
-    sorts?: {
-        [key: string]: unknown;
-    };
-};
-
-export type SourceReadable = {
+export type Source = {
     excludes?: Array<string>;
     fetchSource?: boolean;
     includes?: Array<string>;
     readonly 'x-class-name'?: string;
 };
 
-export type SourceWritable = {
-    excludes?: Array<string>;
-    fetchSource?: boolean;
-    includes?: Array<string>;
-};
-
-export type TypeOptionsReadable = {
+export type TypeOptions = {
     boost?: boolean;
     format?: string;
     max?: {
@@ -834,7 +450,7 @@ export type TypeOptionsReadable = {
         [key: string]: unknown;
     };
     nullable?: boolean;
-    options?: Array<OptionReadable>;
+    options?: Array<Option>;
     required?: boolean;
     step?: {
         [key: string]: unknown;
@@ -844,38 +460,15 @@ export type TypeOptionsReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type TypeOptionsWritable = {
-    boost?: boolean;
-    format?: string;
-    max?: {
-        [key: string]: unknown;
-    };
-    min?: {
-        [key: string]: unknown;
-    };
-    nullable?: boolean;
-    options?: Array<OptionWritable>;
-    required?: boolean;
-    step?: {
-        [key: string]: unknown;
-    };
-    unit?: string;
-    unitSuffix?: string;
-};
-
-export type UiConfigurationReadable = {
-    fieldSets?: Array<FieldSetReadable>;
+export type UiConfiguration = {
+    fieldSets?: Array<FieldSet>;
     readonly 'x-class-name'?: string;
 };
 
-export type UiConfigurationWritable = {
-    fieldSets?: Array<FieldSetWritable>;
-};
-
-export type PageSxpBlueprintReadable = {
+export type PageSxpBlueprint = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpBlueprintReadable>;
+    items?: Array<SxpBlueprint>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -886,10 +479,10 @@ export type PageSxpBlueprintReadable = {
     page?: number;
 };
 
-export type PageSxpBlueprintWritable = {
+export type PageSxpElement = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpBlueprintWritable>;
+    items?: Array<SxpElement>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -900,10 +493,10 @@ export type PageSxpBlueprintWritable = {
     page?: number;
 };
 
-export type PageSxpElementReadable = {
+export type PageSxpParameterContributorDefinition = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpElementReadable>;
+    items?: Array<SxpParameterContributorDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -914,65 +507,17 @@ export type PageSxpElementReadable = {
     page?: number;
 };
 
-export type PageSxpElementWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SxpElementWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageSxpParameterContributorDefinitionReadable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SxpParameterContributorDefinitionReadable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type PageSxpParameterContributorDefinitionWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SxpParameterContributorDefinitionWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type SxpParameterContributorDefinitionReadable = {
+export type SxpParameterContributorDefinition = {
     className?: string;
     description?: string;
     templateVariable?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type SxpParameterContributorDefinitionWritable = {
-    className?: string;
-    description?: string;
-    templateVariable?: string;
-};
-
-export type PageSearchIndexReadable = {
+export type PageSearchIndex = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchIndexReadable>;
+    items?: Array<SearchIndex>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -983,47 +528,22 @@ export type PageSearchIndexReadable = {
     page?: number;
 };
 
-export type PageSearchIndexWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SearchIndexWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type SearchIndexReadable = {
+export type SearchIndex = {
     external?: boolean;
     name?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type SearchIndexWritable = {
-    external?: boolean;
-    name?: string;
-};
-
-export type DocumentFieldReadable = {
+export type DocumentField = {
     values?: Array<{
         [key: string]: unknown;
     }>;
     readonly 'x-class-name'?: string;
 };
 
-export type DocumentFieldWritable = {
-    values?: Array<{
-        [key: string]: unknown;
-    }>;
-};
-
-export type HitReadable = {
+export type Hit = {
     documentFields?: {
-        [key: string]: DocumentFieldReadable;
+        [key: string]: DocumentField;
     };
     explanation?: string;
     id?: string;
@@ -1032,39 +552,19 @@ export type HitReadable = {
     readonly 'x-class-name'?: string;
 };
 
-export type HitWritable = {
-    documentFields?: {
-        [key: string]: DocumentFieldWritable;
-    };
-    explanation?: string;
-    id?: string;
-    score?: number;
-    version?: number;
-};
-
-export type SearchHitsReadable = {
-    hits?: Array<HitReadable>;
+export type SearchHits = {
+    hits?: Array<Hit>;
     maxScore?: number;
     totalHits?: number;
     readonly 'x-class-name'?: string;
 };
 
-export type SearchHitsWritable = {
-    hits?: Array<HitWritable>;
-    maxScore?: number;
-    totalHits?: number;
-};
-
-export type SearchRequestReadable = {
+export type SearchRequest = {
     queryString?: string;
     readonly 'x-class-name'?: string;
 };
 
-export type SearchRequestWritable = {
-    queryString?: string;
-};
-
-export type SearchResponseReadable = {
+export type SearchResponse = {
     errors?: Array<{
         [key: string]: {
             [key: string]: unknown;
@@ -1080,35 +580,15 @@ export type SearchResponseReadable = {
         [key: string]: unknown;
     };
     responseString?: string;
-    searchHits?: SearchHitsReadable;
-    searchRequest?: SearchRequestReadable;
+    searchHits?: SearchHits;
+    searchRequest?: SearchRequest;
     readonly 'x-class-name'?: string;
 };
 
-export type SearchResponseWritable = {
-    errors?: Array<{
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    }>;
-    page?: number;
-    pageSize?: number;
-    request?: {
-        [key: string]: unknown;
-    };
-    requestString?: string;
-    response?: {
-        [key: string]: unknown;
-    };
-    responseString?: string;
-    searchHits?: SearchHitsWritable;
-    searchRequest?: SearchRequestWritable;
-};
-
-export type PageSearchableAssetNameDisplayReadable = {
+export type PageSearchableAssetNameDisplay = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchableAssetNameDisplayReadable>;
+    items?: Array<SearchableAssetNameDisplay>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -1119,37 +599,17 @@ export type PageSearchableAssetNameDisplayReadable = {
     page?: number;
 };
 
-export type PageSearchableAssetNameDisplayWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SearchableAssetNameDisplayWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type SearchableAssetNameDisplayReadable = {
+export type SearchableAssetNameDisplay = {
     className?: string;
     displayName?: string;
     hasSubtype?: boolean;
     readonly 'x-class-name'?: string;
 };
 
-export type SearchableAssetNameDisplayWritable = {
-    className?: string;
-    displayName?: string;
-    hasSubtype?: boolean;
-};
-
-export type PageSearchableAssetNameReadable = {
+export type PageSearchableAssetName = {
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchableAssetNameReadable>;
+    items?: Array<SearchableAssetName>;
     actions?: {
         [key: string]: {
             [key: string]: string;
@@ -1160,27 +620,9 @@ export type PageSearchableAssetNameReadable = {
     page?: number;
 };
 
-export type PageSearchableAssetNameWritable = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<SearchableAssetNameWritable>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type SearchableAssetNameReadable = {
+export type SearchableAssetName = {
     className?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type SearchableAssetNameWritable = {
-    className?: string;
 };
 
 export type GetFieldMappingInfosPageData = {
@@ -1199,7 +641,7 @@ export type GetFieldMappingInfosPageResponses = {
     /**
      * default response
      */
-    default: PageFieldMappingInfoReadable;
+    default: PageFieldMappingInfo;
 };
 
 export type GetFieldMappingInfosPageResponse = GetFieldMappingInfosPageResponses[keyof GetFieldMappingInfosPageResponses];
@@ -1238,7 +680,7 @@ export type GetKeywordQueryContributorsPageResponses = {
     /**
      * default response
      */
-    default: PageKeywordQueryContributorReadable;
+    default: PageKeywordQueryContributor;
 };
 
 export type GetKeywordQueryContributorsPageResponse = GetKeywordQueryContributorsPageResponses[keyof GetKeywordQueryContributorsPageResponses];
@@ -1274,7 +716,7 @@ export type GetModelPrefilterContributorsPageResponses = {
     /**
      * default response
      */
-    default: PageModelPrefilterContributorReadable;
+    default: PageModelPrefilterContributor;
 };
 
 export type GetModelPrefilterContributorsPageResponse = GetModelPrefilterContributorsPageResponses[keyof GetModelPrefilterContributorsPageResponses];
@@ -1310,7 +752,7 @@ export type GetQueryPrefilterContributorsPageResponses = {
     /**
      * default response
      */
-    default: PageQueryPrefilterContributorReadable;
+    default: PageQueryPrefilterContributor;
 };
 
 export type GetQueryPrefilterContributorsPageResponse = GetQueryPrefilterContributorsPageResponses[keyof GetQueryPrefilterContributorsPageResponses];
@@ -1362,13 +804,13 @@ export type GetSxpBlueprintResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type GetSxpBlueprintResponse = GetSxpBlueprintResponses[keyof GetSxpBlueprintResponses];
 
 export type PatchSxpBlueprintData = {
-    body?: SxpBlueprintWritable;
+    body?: SxpBlueprint;
     path: {
         sxpBlueprintId: string;
     };
@@ -1380,13 +822,13 @@ export type PatchSxpBlueprintResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PatchSxpBlueprintResponse = PatchSxpBlueprintResponses[keyof PatchSxpBlueprintResponses];
 
 export type PutSxpBlueprintData = {
-    body?: SxpBlueprintWritable;
+    body?: SxpBlueprint;
     path: {
         sxpBlueprintId: string;
     };
@@ -1398,7 +840,7 @@ export type PutSxpBlueprintResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PutSxpBlueprintResponse = PutSxpBlueprintResponses[keyof PutSxpBlueprintResponses];
@@ -1470,13 +912,13 @@ export type GetSxpBlueprintByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type GetSxpBlueprintByExternalReferenceCodeResponse = GetSxpBlueprintByExternalReferenceCodeResponses[keyof GetSxpBlueprintByExternalReferenceCodeResponses];
 
 export type PutSxpBlueprintByExternalReferenceCodeData = {
-    body?: SxpBlueprintWritable;
+    body?: SxpBlueprint;
     path: {
         externalReferenceCode: string;
     };
@@ -1488,7 +930,7 @@ export type PutSxpBlueprintByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PutSxpBlueprintByExternalReferenceCodeResponse = PutSxpBlueprintByExternalReferenceCodeResponses[keyof PutSxpBlueprintByExternalReferenceCodeResponses];
@@ -1527,13 +969,13 @@ export type GetSxpBlueprintsPageResponses = {
     /**
      * default response
      */
-    default: PageSxpBlueprintReadable;
+    default: PageSxpBlueprint;
 };
 
 export type GetSxpBlueprintsPageResponse = GetSxpBlueprintsPageResponses[keyof GetSxpBlueprintsPageResponses];
 
 export type PostSxpBlueprintData = {
-    body?: SxpBlueprintWritable;
+    body?: SxpBlueprint;
     path?: never;
     query?: never;
     url: '/o/search-experiences-rest/v1.0/sxp-blueprints';
@@ -1543,7 +985,7 @@ export type PostSxpBlueprintResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PostSxpBlueprintResponse = PostSxpBlueprintResponses[keyof PostSxpBlueprintResponses];
@@ -1561,7 +1003,7 @@ export type PostSxpBlueprintCopyResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PostSxpBlueprintCopyResponse = PostSxpBlueprintCopyResponses[keyof PostSxpBlueprintCopyResponses];
@@ -1577,7 +1019,7 @@ export type PostSxpBlueprintValidateResponses = {
     /**
      * default response
      */
-    default: SxpBlueprintReadable;
+    default: SxpBlueprint;
 };
 
 export type PostSxpBlueprintValidateResponse = PostSxpBlueprintValidateResponses[keyof PostSxpBlueprintValidateResponses];
@@ -1632,13 +1074,13 @@ export type GetSxpElementResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type GetSxpElementResponse = GetSxpElementResponses[keyof GetSxpElementResponses];
 
 export type PatchSxpElementData = {
-    body?: SxpElementWritable;
+    body?: SxpElement;
     path: {
         sxpElementId: string;
     };
@@ -1650,13 +1092,13 @@ export type PatchSxpElementResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PatchSxpElementResponse = PatchSxpElementResponses[keyof PatchSxpElementResponses];
 
 export type PutSxpElementData = {
-    body?: SxpElementWritable;
+    body?: SxpElement;
     path: {
         sxpElementId: string;
     };
@@ -1668,7 +1110,7 @@ export type PutSxpElementResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PutSxpElementResponse = PutSxpElementResponses[keyof PutSxpElementResponses];
@@ -1740,13 +1182,13 @@ export type GetSxpElementByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type GetSxpElementByExternalReferenceCodeResponse = GetSxpElementByExternalReferenceCodeResponses[keyof GetSxpElementByExternalReferenceCodeResponses];
 
 export type PutSxpElementByExternalReferenceCodeData = {
-    body?: SxpElementWritable;
+    body?: SxpElement;
     path: {
         externalReferenceCode: string;
     };
@@ -1758,7 +1200,7 @@ export type PutSxpElementByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PutSxpElementByExternalReferenceCodeResponse = PutSxpElementByExternalReferenceCodeResponses[keyof PutSxpElementByExternalReferenceCodeResponses];
@@ -1797,13 +1239,13 @@ export type GetSxpElementsPageResponses = {
     /**
      * default response
      */
-    default: PageSxpElementReadable;
+    default: PageSxpElement;
 };
 
 export type GetSxpElementsPageResponse = GetSxpElementsPageResponses[keyof GetSxpElementsPageResponses];
 
 export type PostSxpElementData = {
-    body?: SxpElementWritable;
+    body?: SxpElement;
     path?: never;
     query?: never;
     url: '/o/search-experiences-rest/v1.0/sxp-elements';
@@ -1813,7 +1255,7 @@ export type PostSxpElementResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PostSxpElementResponse = PostSxpElementResponses[keyof PostSxpElementResponses];
@@ -1831,13 +1273,13 @@ export type PostSxpElementCopyResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PostSxpElementCopyResponse = PostSxpElementCopyResponses[keyof PostSxpElementCopyResponses];
 
 export type PostSxpElementPreviewData = {
-    body?: SxpElementWritable;
+    body?: SxpElement;
     path?: never;
     query?: never;
     url: '/o/search-experiences-rest/v1.0/sxp-elements/preview';
@@ -1847,7 +1289,7 @@ export type PostSxpElementPreviewResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PostSxpElementPreviewResponse = PostSxpElementPreviewResponses[keyof PostSxpElementPreviewResponses];
@@ -1863,7 +1305,7 @@ export type PostSxpElementValidateResponses = {
     /**
      * default response
      */
-    default: SxpElementReadable;
+    default: SxpElement;
 };
 
 export type PostSxpElementValidateResponse = PostSxpElementValidateResponses[keyof PostSxpElementValidateResponses];
@@ -1902,7 +1344,7 @@ export type GetSxpParameterContributorDefinitionsPageResponses = {
     /**
      * default response
      */
-    default: PageSxpParameterContributorDefinitionReadable;
+    default: PageSxpParameterContributorDefinition;
 };
 
 export type GetSxpParameterContributorDefinitionsPageResponse = GetSxpParameterContributorDefinitionsPageResponses[keyof GetSxpParameterContributorDefinitionsPageResponses];
@@ -1938,7 +1380,7 @@ export type GetSearchIndexesPageResponses = {
     /**
      * default response
      */
-    default: PageSearchIndexReadable;
+    default: PageSearchIndex;
 };
 
 export type GetSearchIndexesPageResponse = GetSearchIndexesPageResponses[keyof GetSearchIndexesPageResponses];
@@ -1962,7 +1404,7 @@ export type PostSearchIndexesPageExportBatchResponses = {
 };
 
 export type PostSearchData = {
-    body?: SxpBlueprintWritable;
+    body?: SxpBlueprint;
     path?: never;
     query?: {
         page?: string;
@@ -1976,7 +1418,7 @@ export type PostSearchResponses = {
     /**
      * default response
      */
-    default: SearchResponseReadable;
+    default: SearchResponse;
 };
 
 export type PostSearchResponse = PostSearchResponses[keyof PostSearchResponses];
@@ -1996,7 +1438,7 @@ export type GetSearchableAssetNameLanguagePageResponses = {
     /**
      * default response
      */
-    default: PageSearchableAssetNameDisplayReadable;
+    default: PageSearchableAssetNameDisplay;
 };
 
 export type GetSearchableAssetNameLanguagePageResponse = GetSearchableAssetNameLanguagePageResponses[keyof GetSearchableAssetNameLanguagePageResponses];
@@ -2014,7 +1456,7 @@ export type GetSearchableAssetNamesPageResponses = {
     /**
      * default response
      */
-    default: PageSearchableAssetNameReadable;
+    default: PageSearchableAssetName;
 };
 
 export type GetSearchableAssetNamesPageResponse = GetSearchableAssetNamesPageResponses[keyof GetSearchableAssetNamesPageResponses];
