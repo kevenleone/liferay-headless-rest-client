@@ -1,7 +1,6 @@
-import { defineConfig } from "@hey-api/openapi-ts";
+import { defineConfig, defaultPlugins } from "@hey-api/openapi-ts";
 
-const file = process.env.FILE;
-const name = process.env.NAME;
+const { file, name } = process.env;
 
 if (!file || !name) {
     throw new Error("File or name is empty");
@@ -9,6 +8,19 @@ if (!file || !name) {
 
 export default defineConfig({
     input: `src/tools/generated/${file}`,
-    output: `src/client/${name}`,
-    plugins: ["@hey-api/client-fetch"],
+    output: {
+        path: `src/client/${name}`,
+    },
+    plugins: [
+        ...defaultPlugins,
+        "@hey-api/client-fetch",
+        {
+            asClass: false,
+            name: "@hey-api/sdk",
+        },
+        {
+            name: "@hey-api/typescript",
+            readOnlyWriteOnlyBehavior: "off",
+        },
+    ],
 });
