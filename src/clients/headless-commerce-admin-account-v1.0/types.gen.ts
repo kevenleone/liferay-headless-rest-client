@@ -283,15 +283,15 @@ export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
-export type CUserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
 export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
+    [key: string]: unknown;
+};
+
+export type CUserAdditionalInfo = {
     [key: string]: unknown;
 };
 

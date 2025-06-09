@@ -1,15 +1,15 @@
 import { defineConfig, defaultPlugins } from "@hey-api/openapi-ts";
 
-const { file, name } = process.env;
+const { FILE, NAME } = process.env;
 
-if (!file || !name) {
+if (!FILE || !NAME) {
     throw new Error("File or name is empty");
 }
 
 export default defineConfig({
-    input: `src/tools/generated/${file}`,
+    input: `src/tools/generated/${FILE}`,
     output: {
-        path: `src/client/${name}`,
+        path: `src/clients/${NAME}`,
     },
     plugins: [
         ...defaultPlugins,

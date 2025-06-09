@@ -5,11 +5,7 @@ class OpenAPIExporter {
     private readonly liferayHost = Bun.env.LIFERAY_HOST;
     private readonly liferayUser = Bun.env.LIFERAY_USER;
     private readonly liferayPassword = Bun.env.LIFERAY_PASSWORD;
-    private readonly outputDir: string;
-
-    constructor(outputDir: string = path.join(__dirname, "generated")) {
-        this.outputDir = outputDir;
-    }
+    private readonly outputDir = path.join(__dirname, "generated");
 
     private async fetchOpenAPISpec(resource: string): Promise<OpenAPISpec> {
         const response = await fetch(
@@ -126,7 +122,6 @@ class OpenAPIExporter {
     }
 }
 
-// Example usage
 const resources = [
     "analytics-cms-rest/v1.0",
     "analytics-reports-rest/v1.0",

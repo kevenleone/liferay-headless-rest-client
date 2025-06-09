@@ -388,15 +388,15 @@ export type TaxCategory = {
     readonly 'x-class-name'?: string;
 };
 
+export type UserAdditionalInfo = {
+    [key: string]: unknown;
+};
+
 export type PublisherAssets = {
     [key: string]: unknown;
 };
 
 export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
-export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 

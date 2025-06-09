@@ -1,4 +1,4 @@
-import { getProductsPage } from "./src/client/headless-commerce-admin-catalog-v1.0";
+import { postCatalog } from "./src/client/headless-commerce-admin-catalog-v1.0";
 import { createLiferayClient } from "./src/client";
 
 const liferayHost = Bun.env.LIFERAY_HOST;
@@ -13,14 +13,12 @@ const client = createLiferayClient({
 });
 
 async function main() {
-    const { data } = await getProductsPage({
+    const response = await postCatalog({
+        body: { currencyCode: "USD", name: "Catalog name..." },
         client,
-        query: { nestedFields: "catalog" },
     });
 
-    for (const product of data?.items ?? []) {
-        console.log(product);
-    }
+    console.log(response);
 }
 
 main();

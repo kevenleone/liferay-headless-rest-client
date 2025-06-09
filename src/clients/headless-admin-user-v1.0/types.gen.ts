@@ -1566,63 +1566,6 @@ export type PageWebUrl = {
     page?: number;
 };
 
-export type OAuth2DxpAuthorization = {
-    readonly actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    /**
-     * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
-     */
-    readonly auditEvents?: Array<AuditEvent>;
-    readonly creator?: string;
-    readonly dateCreated?: string;
-    readonly dateModified?: string;
-    defaultLanguageId?: string;
-    displayDate?: string;
-    expirationDate?: string;
-    externalReferenceCode?: string;
-    /**
-     * A relative URL to the page's rendered content.
-     */
-    friendlyUrlPath?: string;
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    readonly id?: number;
-    /**
-     * A list of keywords describing the object entry.
-     */
-    keywords?: Array<string>;
-    objectEntryFolderExternalReferenceCode?: string;
-    objectEntryFolderId?: number;
-    permissions?: Array<Permission>;
-    reviewDate?: string;
-    readonly scopeKey?: string;
-    readonly status?: number;
-    /**
-     * The categories associated with this object entry.
-     */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
-    taxonomyCategoryIds?: Array<number>;
-    readonly 'x-class-name'?: string;
-    readonly 'x-schema-name'?: string;
-    connectionSource?: string;
-    r_accountToOAuth2DxpAuthorization_accountEntryId?: number;
-    /**
-     * Information about the relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
-     */
-    accountToOAuth2DxpAuthorization?: {
-        [key: string]: unknown;
-    };
-    r_accountToOAuth2DxpAuthorization_accountEntryERC?: string;
-    readonly accountToOAuth2DxpAuthorizationERC?: string;
-};
-
 export type PublisherAssets = {
     readonly actions?: {
         [key: string]: {
@@ -1690,6 +1633,63 @@ export type PublisherAssets = {
     readonly productEntryToPublisherAssetsERC?: string;
     sourceCode?: FileEntry;
     version?: string;
+};
+
+export type OAuth2DxpAuthorization = {
+    readonly actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    /**
+     * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
+     */
+    readonly auditEvents?: Array<AuditEvent>;
+    readonly creator?: string;
+    readonly dateCreated?: string;
+    readonly dateModified?: string;
+    defaultLanguageId?: string;
+    displayDate?: string;
+    expirationDate?: string;
+    externalReferenceCode?: string;
+    /**
+     * A relative URL to the page's rendered content.
+     */
+    friendlyUrlPath?: string;
+    /**
+     * The localized relative URLs to the page's rendered content.
+     */
+    friendlyUrlPath_i18n?: {
+        [key: string]: string;
+    };
+    readonly id?: number;
+    /**
+     * A list of keywords describing the object entry.
+     */
+    keywords?: Array<string>;
+    objectEntryFolderExternalReferenceCode?: string;
+    objectEntryFolderId?: number;
+    permissions?: Array<Permission>;
+    reviewDate?: string;
+    readonly scopeKey?: string;
+    readonly status?: number;
+    /**
+     * The categories associated with this object entry.
+     */
+    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    taxonomyCategoryIds?: Array<number>;
+    readonly 'x-class-name'?: string;
+    readonly 'x-schema-name'?: string;
+    connectionSource?: string;
+    r_accountToOAuth2DxpAuthorization_accountEntryId?: number;
+    /**
+     * Information about the relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
+     */
+    accountToOAuth2DxpAuthorization?: {
+        [key: string]: unknown;
+    };
+    r_accountToOAuth2DxpAuthorization_accountEntryERC?: string;
+    readonly accountToOAuth2DxpAuthorizationERC?: string;
 };
 
 export type UserAdditionalInfo = {
