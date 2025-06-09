@@ -74,7 +74,7 @@
     },
     "sideEffects": false,
     "scripts": {
-        "build": "bun build ./src/client/*.ts ./src/client/**/*.ts --outdir ./dist/client --target node --root ./src/client --minify && tsc --emitDeclarationOnly --declaration --outDir ./dist/client ./src/client/index.ts || true",
+        "build": "bun build ./src/clients/*.ts ./src/clients/**/*.ts --outdir ./dist/clients --target node --root ./src/clients --minify && tsc -p src/clients/tsconfig.json || true",
         "format": "biome format .",
         "postbuild": "bun run src/tools/minify-dts"
     },

@@ -3,7 +3,7 @@ import { readdir, readFile, writeFile, stat } from "node:fs/promises";
 import path from "node:path";
 import ts from "typescript";
 
-const baseDir = path.join(__dirname, "..", "..", "dist", "client");
+const baseDir = path.join(__dirname, "..", "..", "dist", "clients");
 const minifier = createMinifier(ts);
 
 async function minifyDtsFile(filePath: string): Promise<void> {

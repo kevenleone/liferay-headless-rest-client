@@ -10,4 +10,8 @@ declare global {
     }
 }
 
+// Extend the globalThis type
+declare var globalThis: Window & typeof globalThis;
+
+// This ensures the file is treated as a module
 export {};

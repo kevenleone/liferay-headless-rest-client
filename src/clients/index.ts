@@ -11,12 +11,12 @@ export function createLiferayClient(options?: ClientArgs) {
 
     let customFetch = options?.fetch || fetch;
 
-    const isLiferay = !!globalThis?.window?.Liferay;
+    const isLiferay = typeof window !== "undefined" && !!window.Liferay;
 
     if (isLiferay) {
         baseUrl = "/";
 
-        customFetch = globalThis.window.Liferay.Util.fetch;
+        customFetch = window.Liferay.Util.fetch;
     }
 
     const client = createClient(
