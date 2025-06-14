@@ -21,11 +21,11 @@ bun add liferay-headless-rest-client
 ## Quick Start
 
 ```typescript
-import { createLiferayClient } from 'liferay-headless-rest-client';
+import { createClient } from 'liferay-headless-rest-client';
 import { getProductsPage } from 'liferay-headless-rest-client/headless-commerce-admin-catalog-v1.0';
 
 // Create a client instance
-const client = createLiferayClient({
+const client = createClient({
     baseUrl: 'https://your-liferay-instance.com',
     headers: {
         Authorization: `Basic ${btoa('username:password')}`,
@@ -83,19 +83,6 @@ The library provides access to various Liferay services through different client
 - `headless-object-v1.0` - Object management
 - `notification-v1.0` - Notification system
 - `search-v1.0` - Search functionality
-
-## Authentication
-
-The client supports Basic Authentication. You can provide credentials in the client configuration:
-
-```typescript
-const client = createLiferayClient({
-    baseUrl: 'https://your-liferay-instance.com',
-    headers: {
-        Authorization: `Basic ${btoa('username:password')}`,
-    },
-});
-```
 
 ## Type Safety
 
