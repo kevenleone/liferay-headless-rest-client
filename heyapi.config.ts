@@ -17,12 +17,10 @@ export default defineConfig({
         {
             asClass: false,
             name: "@hey-api/sdk",
-            exportFromIndex: false,
         },
         {
             name: "@hey-api/typescript",
             readOnlyWriteOnlyBehavior: "off",
-            exportFromIndex: false,
         },
     ],
 });

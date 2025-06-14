@@ -2825,7 +2825,7 @@ export type OpenGraphSettings = {
     readonly 'x-class-name'?: string;
 };
 
-export type Options = {
+export type PageRuleConditionOptions = {
     /**
      * The page rule condition's value.
      */
@@ -2937,7 +2937,7 @@ export type PageRuleCondition = {
      * The page rule condition's ID.
      */
     id?: string;
-    options?: Options;
+    options?: PageRuleConditionOptions;
     /**
      * The page rule condition's type.
      */

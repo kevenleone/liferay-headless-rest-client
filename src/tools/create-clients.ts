@@ -8,11 +8,15 @@ async function main() {
     for (const file of files) {
         const name = file.replace(".json", "");
 
+        console.time(file);
+
         try {
-            await $`FILE=${file} NAME=${name} npx openapi-ts --file heyapi.config.ts`;
+            await $`FILE=${file} NAME=${name} bun run openapi-ts --file heyapi.config.ts`;
         } catch (error) {
             console.error("Unable to process", name);
         }
+
+        console.timeEnd(file);
     }
 }
 
