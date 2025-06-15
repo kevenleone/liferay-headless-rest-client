@@ -45,6 +45,26 @@ async function main() {
 }
 ```
 
+## Custom Client Examples
+
+The library supports custom client implementations for different authentication methods and HTTP clients. Check out the [examples directory](https://github.com/kevenleone/liferay-headless-rest-client/tree/main/examples) for complete implementations.
+
+#### Available Examples
+
+1. **Ky Client** (`ky.auth.client.ts`)
+   - Implements OAuth2 authentication
+   - Includes retry mechanism
+   - Uses the Ky HTTP client for requests
+
+2. **Basic Authentication** (`basic.auth.client.ts`)
+   - Simple Basic Auth implementation
+   - Uses username/password authentication
+
+3. **Liferay Fetch** (`liferay-fetch.auth.client.ts`)
+   - Inherits fetch from Portal
+   - Client-side only implementation
+   - Useful for browser-based applications
+
 ## Available Clients
 
 The library provides access to various Liferay services through different client modules:
