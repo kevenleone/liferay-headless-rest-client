@@ -1,1 +1,680 @@
-{"openapi":"3.0.1","info":{"title":"Liferay Commerce ML API","description":"Liferay Commerce ML API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.machine.learning.client', and version '1.0.30'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/headless-commerce-machine-learning/v1.0/accountCategoryForecasts/by-monthlyRevenue":{"get":{"tags":["AccountCategoryForecast"],"description":"Get the forecast points","operationId":"getAccountCategoryForecastsByMonthlyRevenuePage","parameters":[{"name":"accountIds","in":"query","schema":{"type":"string"}},{"name":"categoryIds","in":"query","schema":{"type":"string"}},{"name":"forecastLength","in":"query","schema":{"type":"string"}},{"name":"forecastStartDate","in":"query","schema":{"type":"string"}},{"name":"historyLength","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageAccountCategoryForecast"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageAccountCategoryForecast"}}}}}}},"/o/headless-commerce-machine-learning/v1.0/accountForecasts/by-monthlyRevenue":{"get":{"tags":["AccountForecast"],"description":"Get the forecast points","operationId":"getAccountForecastsByMonthlyRevenuePage","parameters":[{"name":"accountIds","in":"query","schema":{"type":"string"}},{"name":"forecastLength","in":"query","schema":{"type":"string"}},{"name":"forecastStartDate","in":"query","schema":{"type":"string"}},{"name":"historyLength","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageAccountForecast"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageAccountForecast"}}}}}}},"/o/headless-commerce-machine-learning/v1.0/skuForecasts/by-monthlyDemand":{"get":{"tags":["SkuForecast"],"description":"Get the forecast points","operationId":"getSkuForecastsByMonthlyRevenuePage","parameters":[{"name":"forecastLength","in":"query","schema":{"type":"string"}},{"name":"forecastStartDate","in":"query","schema":{"type":"string"}},{"name":"historyLength","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"skus","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageSkuForecast"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageSkuForecast"}}}}}}}},"components":{"schemas":{"AccountCategoryForecast":{"type":"object","properties":{"account":{"type":"integer","format":"int64"},"actual":{"type":"number","format":"float"},"category":{"type":"integer","format":"int64"},"categoryTitle":{"type":"string"},"forecast":{"type":"number","format":"float"},"forecastLowerBound":{"type":"number","format":"float"},"forecastUpperBound":{"type":"number","format":"float"},"timestamp":{"type":"string","format":"date-time"},"unit":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.commerce.machine.learning.dto.v1_0.AccountCategoryForecast"}},"xml":{"name":"AccountCategoryForecast"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageAccountCategoryForecast":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/AccountCategoryForecast"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"AccountForecast":{"type":"object","properties":{"account":{"type":"integer","format":"int64"},"actual":{"type":"number","format":"float"},"forecast":{"type":"number","format":"float"},"forecastLowerBound":{"type":"number","format":"float"},"forecastUpperBound":{"type":"number","format":"float"},"timestamp":{"type":"string","format":"date-time"},"unit":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.commerce.machine.learning.dto.v1_0.AccountForecast"}},"xml":{"name":"AccountForecast"},"x-filterable":[]},"PageAccountForecast":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/AccountForecast"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"PageSkuForecast":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/SkuForecast"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"SkuForecast":{"type":"object","properties":{"actual":{"type":"number","format":"float"},"forecast":{"type":"number","format":"float"},"forecastLowerBound":{"type":"number","format":"float"},"forecastUpperBound":{"type":"number","format":"float"},"sku":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"unit":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.commerce.machine.learning.dto.v1_0.SkuForecast"}},"xml":{"name":"SkuForecast"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Liferay Commerce ML API",
+        "description": "Liferay Commerce ML API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.machine.learning.client', and version '1.0.31'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/headless-commerce-machine-learning/v1.0/accountCategoryForecasts/by-monthlyRevenue": {
+            "get": {
+                "tags": [
+                    "AccountCategoryForecast"
+                ],
+                "description": "Get the forecast points",
+                "operationId": "getAccountCategoryForecastsByMonthlyRevenuePage",
+                "parameters": [
+                    {
+                        "name": "accountIds",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "categoryIds",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "forecastLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "forecastStartDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "historyLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageAccountCategoryForecast"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageAccountCategoryForecast"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAccountCategoryForecastsByMonthlyRevenuePage } from 'liferay-headless-rest-client/headless-commerce-machine-learning-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAccountCategoryForecastsByMonthlyRevenuePage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-machine-learning/v1.0/accountCategoryForecasts/by-monthlyRevenue', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-machine-learning/v1.0/accountForecasts/by-monthlyRevenue": {
+            "get": {
+                "tags": [
+                    "AccountForecast"
+                ],
+                "description": "Get the forecast points",
+                "operationId": "getAccountForecastsByMonthlyRevenuePage",
+                "parameters": [
+                    {
+                        "name": "accountIds",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "forecastLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "forecastStartDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "historyLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageAccountForecast"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageAccountForecast"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAccountForecastsByMonthlyRevenuePage } from 'liferay-headless-rest-client/headless-commerce-machine-learning-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAccountForecastsByMonthlyRevenuePage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-machine-learning/v1.0/accountForecasts/by-monthlyRevenue', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-machine-learning/v1.0/skuForecasts/by-monthlyDemand": {
+            "get": {
+                "tags": [
+                    "SkuForecast"
+                ],
+                "description": "Get the forecast points",
+                "operationId": "getSkuForecastsByMonthlyRevenuePage",
+                "parameters": [
+                    {
+                        "name": "forecastLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "forecastStartDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "historyLength",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "skus",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSkuForecast"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSkuForecast"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSkuForecastsByMonthlyRevenuePage } from 'liferay-headless-rest-client/headless-commerce-machine-learning-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSkuForecastsByMonthlyRevenuePage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-machine-learning/v1.0/skuForecasts/by-monthlyDemand', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AccountCategoryForecast": {
+                "type": "object",
+                "properties": {
+                    "account": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "actual": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "category": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "categoryTitle": {
+                        "type": "string"
+                    },
+                    "forecast": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastLowerBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastUpperBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.commerce.machine.learning.dto.v1_0.AccountCategoryForecast"
+                    }
+                },
+                "xml": {
+                    "name": "AccountCategoryForecast"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageAccountCategoryForecast": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AccountCategoryForecast"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "AccountForecast": {
+                "type": "object",
+                "properties": {
+                    "account": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "actual": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecast": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastLowerBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastUpperBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.commerce.machine.learning.dto.v1_0.AccountForecast"
+                    }
+                },
+                "xml": {
+                    "name": "AccountForecast"
+                },
+                "x-filterable": []
+            },
+            "PageAccountForecast": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AccountForecast"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageSkuForecast": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SkuForecast"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "SkuForecast": {
+                "type": "object",
+                "properties": {
+                    "actual": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecast": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastLowerBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "forecastUpperBound": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "sku": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.commerce.machine.learning.dto.v1_0.SkuForecast"
+                    }
+                },
+                "xml": {
+                    "name": "SkuForecast"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

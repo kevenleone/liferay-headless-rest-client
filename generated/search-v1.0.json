@@ -1,1 +1,1065 @@
-{"openapi":"3.0.1","info":{"description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.search.rest.client', and version '1.0.25'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/search/v1.0/embeddings/embedding-models":{"get":{"tags":["EmbeddingModel"],"operationId":"getEmbeddingEmbeddingModelsPage","parameters":[{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"provider","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageEmbeddingModel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageEmbeddingModel"}}}}}}},"/o/search/v1.0/embeddings/validate-provider-configuration":{"post":{"tags":["EmbeddingProviderValidationResult"],"operationId":"postEmbeddingValidateProviderConfiguration","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/EmbeddingProviderConfiguration"}},"application/xml":{"schema":{"$ref":"#/components/schemas/EmbeddingProviderConfiguration"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/EmbeddingProviderValidationResult"}},"application/xml":{"schema":{"$ref":"#/components/schemas/EmbeddingProviderValidationResult"}}}}}}},"/o/search/v1.0/search":{"get":{"tags":["SearchResult"],"description":"Search the company index for matching content. This endpoint is development and requires setting the portal property 'feature.flag.LPD-11232' to true or enabling via Instance Settings > Feature Flags: Developer.","operationId":"getSearchPage","parameters":[{"name":"blueprintExternalReferenceCode","in":"query","schema":{"type":"string"}},{"name":"emptySearch","in":"query","schema":{"type":"string"}},{"name":"entryClassNames","in":"query","schema":{"type":"string"}},{"name":"fields","in":"query","schema":{"type":"string"}},{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"restrictFields","in":"query","schema":{"type":"string"}},{"name":"scope","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageSearchResult"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageSearchResult"}}}}}},"post":{"tags":["SearchResult"],"description":"Search the company index for matching content. This endpoint requires setting the portal property 'feature.flag.LPS-179669' to true or enabling via Instance Settings > Feature Flags: Release.","operationId":"postSearchPage","parameters":[{"name":"entryClassNames","in":"query","schema":{"type":"string"}},{"name":"fields","in":"query","schema":{"type":"string"}},{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"restrictFields","in":"query","schema":{"type":"string"}},{"name":"scope","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/SearchRequestBody"}},"application/xml":{"schema":{"$ref":"#/components/schemas/SearchRequestBody"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageSearchResult"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageSearchResult"}}}}}}},"/o/search/v1.0/suggestions":{"post":{"tags":["Suggestion"],"operationId":"postSuggestionsPage","parameters":[{"name":"currentURL","in":"query","schema":{"type":"string"}},{"name":"destinationFriendlyURL","in":"query","schema":{"type":"string"}},{"name":"groupId","in":"query","deprecated":true,"schema":{"type":"string"}},{"name":"keywordsParameterName","in":"query","schema":{"type":"string"}},{"name":"plid","in":"query","schema":{"type":"string"}},{"name":"scope","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/SuggestionsContributorConfiguration"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/SuggestionsContributorConfiguration"}}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageSuggestionsContributorResults"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageSuggestionsContributorResults"}}}}}}}},"components":{"schemas":{"EmbeddingModel":{"type":"object","properties":{"modelId":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.EmbeddingModel"}},"xml":{"name":"EmbeddingModel"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageEmbeddingModel":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/EmbeddingModel"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"EmbeddingProviderValidationResult":{"type":"object","properties":{"errorMessage":{"type":"string"},"expectedDimensions":{"type":"integer","format":"int32"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.EmbeddingProviderValidationResult"}},"xml":{"name":"EmbeddingProviderValidationResult"},"x-filterable":[]},"EmbeddingProviderConfiguration":{"type":"object","properties":{"attributes":{"type":"object"},"embeddingVectorDimensions":{"type":"integer","format":"int32"},"languageIds":{"type":"array","items":{"type":"string"}},"modelClassNames":{"type":"array","items":{"type":"string"}},"providerName":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.EmbeddingProviderConfiguration"}},"xml":{"name":"EmbeddingProviderConfiguration"},"x-filterable":[]},"PageSearchResult":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/SearchResult"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"SearchResult":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"dateCreated":{"type":"string","description":"The time the item was created.","format":"date-time"},"dateModified":{"type":"string","description":"The last time the item was changed.","format":"date-time"},"description":{"type":"string","description":"The item's description."},"embedded":{"type":"object"},"entryClassName":{"type":"string","description":"The object entry class name."},"itemURL":{"type":"string","description":"The link to the embedded item."},"score":{"type":"number","description":"The item's score.","format":"float"},"title":{"type":"string","description":"The item's title."},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.SearchResult"}},"xml":{"name":"SearchResult"},"x-filterable":["cmsKind","cmsRoot","cmsSection","creatorId","dateCreated","dateDisplay","dateExpiration","dateModified","datePublish","dateReview","folderId","groupIds","keywords","objectDefinitionId","objectFolderExternalReferenceCode","status","taxonomyCategoryIds","title"]},"FacetConfiguration":{"type":"object","properties":{"aggregationName":{"type":"string","description":"The name of the aggregation."},"attributes":{"type":"object","additionalProperties":{"type":"object","description":"Additional attributes for the facet."},"description":"Additional attributes for the facet."},"frequencyThreshold":{"type":"integer","description":"Frequency threshold for showing the terms.","format":"int32"},"maxTerms":{"type":"integer","description":"Maximum number of terms to be shown.","format":"int32"},"name":{"type":"string","description":"The name of the facet."},"values":{"type":"array","description":"The values / selections to be filtered by.","items":{"type":"object","description":"The values / selections to be filtered by."}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.FacetConfiguration"}},"xml":{"name":"FacetConfiguration"},"x-filterable":[]},"SearchRequestBody":{"type":"object","properties":{"attributes":{"type":"object","additionalProperties":{"type":"object"}},"facetConfigurations":{"type":"array","items":{"$ref":"#/components/schemas/FacetConfiguration"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.SearchRequestBody"}},"xml":{"name":"SearchRequestBody"},"x-filterable":[]},"PageSuggestionsContributorResults":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/SuggestionsContributorResults"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"Suggestion":{"type":"object","properties":{"attributes":{"type":"object"},"score":{"type":"number","format":"float"},"text":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.Suggestion"}},"xml":{"name":"Suggestion"},"x-filterable":[]},"SuggestionsContributorResults":{"type":"object","properties":{"attributes":{"type":"object"},"displayGroupName":{"type":"string"},"suggestions":{"type":"array","items":{"$ref":"#/components/schemas/Suggestion"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.SuggestionsContributorResults"}},"xml":{"name":"SuggestionsContributorResults"},"x-filterable":[]},"SuggestionsContributorConfiguration":{"type":"object","properties":{"attributes":{"type":"object"},"contributorName":{"type":"string"},"displayGroupName":{"type":"string"},"size":{"type":"integer","format":"int32"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.portal.search.rest.dto.v1_0.SuggestionsContributorConfiguration"}},"xml":{"name":"SuggestionsContributorConfiguration"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.search.rest.client', and version '1.0.26'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/search/v1.0/embeddings/embedding-models": {
+            "get": {
+                "tags": [
+                    "EmbeddingModel"
+                ],
+                "operationId": "getEmbeddingEmbeddingModelsPage",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "provider",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageEmbeddingModel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageEmbeddingModel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getEmbeddingEmbeddingModelsPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getEmbeddingEmbeddingModelsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/search/v1.0/embeddings/embedding-models', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/search/v1.0/embeddings/validate-provider-configuration": {
+            "post": {
+                "tags": [
+                    "EmbeddingProviderValidationResult"
+                ],
+                "operationId": "postEmbeddingValidateProviderConfiguration",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EmbeddingProviderConfiguration"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EmbeddingProviderConfiguration"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/EmbeddingProviderValidationResult"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/EmbeddingProviderValidationResult"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postEmbeddingValidateProviderConfiguration } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postEmbeddingValidateProviderConfiguration({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/search/v1.0/embeddings/validate-provider-configuration', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/search/v1.0/search": {
+            "get": {
+                "tags": [
+                    "SearchResult"
+                ],
+                "description": "Search the company index for matching content. This endpoint is development and requires setting the portal property 'feature.flag.LPD-11232' to true or enabling via Instance Settings > Feature Flags: Developer.",
+                "operationId": "getSearchPage",
+                "parameters": [
+                    {
+                        "name": "blueprintExternalReferenceCode",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "emptySearch",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "entryClassNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "scope",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSearchResult"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSearchResult"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/search/v1.0/search', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "SearchResult"
+                ],
+                "description": "Search the company index for matching content. This endpoint requires setting the portal property 'feature.flag.LPS-179669' to true or enabling via Instance Settings > Feature Flags: Release.",
+                "operationId": "postSearchPage",
+                "parameters": [
+                    {
+                        "name": "entryClassNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "scope",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SearchRequestBody"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SearchRequestBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSearchResult"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSearchResult"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSearchPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSearchPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/search/v1.0/search', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/search/v1.0/suggestions": {
+            "post": {
+                "tags": [
+                    "Suggestion"
+                ],
+                "operationId": "postSuggestionsPage",
+                "parameters": [
+                    {
+                        "name": "currentURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "destinationFriendlyURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "groupId",
+                        "in": "query",
+                        "deprecated": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "keywordsParameterName",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "plid",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "scope",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/SuggestionsContributorConfiguration"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/SuggestionsContributorConfiguration"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSuggestionsContributorResults"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSuggestionsContributorResults"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSuggestionsPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSuggestionsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/search/v1.0/suggestions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "EmbeddingModel": {
+                "type": "object",
+                "properties": {
+                    "modelId": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.EmbeddingModel"
+                    }
+                },
+                "xml": {
+                    "name": "EmbeddingModel"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageEmbeddingModel": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddingModel"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "EmbeddingProviderValidationResult": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "type": "string"
+                    },
+                    "expectedDimensions": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.EmbeddingProviderValidationResult"
+                    }
+                },
+                "xml": {
+                    "name": "EmbeddingProviderValidationResult"
+                },
+                "x-filterable": []
+            },
+            "EmbeddingProviderConfiguration": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "object"
+                    },
+                    "embeddingVectorDimensions": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "languageIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "modelClassNames": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "providerName": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.EmbeddingProviderConfiguration"
+                    }
+                },
+                "xml": {
+                    "name": "EmbeddingProviderConfiguration"
+                },
+                "x-filterable": []
+            },
+            "PageSearchResult": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchResult"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "SearchResult": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "description": "The time the item was created.",
+                        "format": "date-time"
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "description": "The last time the item was changed.",
+                        "format": "date-time"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The item's description."
+                    },
+                    "embedded": {
+                        "type": "object"
+                    },
+                    "entryClassName": {
+                        "type": "string",
+                        "description": "The object entry class name."
+                    },
+                    "itemURL": {
+                        "type": "string",
+                        "description": "The link to the embedded item."
+                    },
+                    "score": {
+                        "type": "number",
+                        "description": "The item's score.",
+                        "format": "float"
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "The item's title."
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.SearchResult"
+                    }
+                },
+                "xml": {
+                    "name": "SearchResult"
+                },
+                "x-filterable": [
+                    "cmsKind",
+                    "cmsRoot",
+                    "cmsSection",
+                    "creatorId",
+                    "dateCreated",
+                    "dateDisplay",
+                    "dateExpiration",
+                    "dateModified",
+                    "datePublish",
+                    "dateReview",
+                    "folderId",
+                    "groupIds",
+                    "keywords",
+                    "objectDefinitionId",
+                    "objectFolderExternalReferenceCode",
+                    "status",
+                    "taxonomyCategoryIds",
+                    "title"
+                ]
+            },
+            "FacetConfiguration": {
+                "type": "object",
+                "properties": {
+                    "aggregationName": {
+                        "type": "string",
+                        "description": "The name of the aggregation."
+                    },
+                    "attributes": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "description": "Additional attributes for the facet."
+                        },
+                        "description": "Additional attributes for the facet."
+                    },
+                    "frequencyThreshold": {
+                        "type": "integer",
+                        "description": "Frequency threshold for showing the terms.",
+                        "format": "int32"
+                    },
+                    "maxTerms": {
+                        "type": "integer",
+                        "description": "Maximum number of terms to be shown.",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the facet."
+                    },
+                    "values": {
+                        "type": "array",
+                        "description": "The values / selections to be filtered by.",
+                        "items": {
+                            "type": "object",
+                            "description": "The values / selections to be filtered by."
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.FacetConfiguration"
+                    }
+                },
+                "xml": {
+                    "name": "FacetConfiguration"
+                },
+                "x-filterable": []
+            },
+            "SearchRequestBody": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
+                    },
+                    "facetConfigurations": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetConfiguration"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.SearchRequestBody"
+                    }
+                },
+                "xml": {
+                    "name": "SearchRequestBody"
+                },
+                "x-filterable": []
+            },
+            "PageSuggestionsContributorResults": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SuggestionsContributorResults"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "Suggestion": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "object"
+                    },
+                    "score": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.Suggestion"
+                    }
+                },
+                "xml": {
+                    "name": "Suggestion"
+                },
+                "x-filterable": []
+            },
+            "SuggestionsContributorResults": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "object"
+                    },
+                    "displayGroupName": {
+                        "type": "string"
+                    },
+                    "suggestions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Suggestion"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.SuggestionsContributorResults"
+                    }
+                },
+                "xml": {
+                    "name": "SuggestionsContributorResults"
+                },
+                "x-filterable": []
+            },
+            "SuggestionsContributorConfiguration": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "object"
+                    },
+                    "contributorName": {
+                        "type": "string"
+                    },
+                    "displayGroupName": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.portal.search.rest.dto.v1_0.SuggestionsContributorConfiguration"
+                    }
+                },
+                "xml": {
+                    "name": "SuggestionsContributorConfiguration"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

@@ -1,1 +1,2833 @@
-{"openapi":"3.0.1","info":{"description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.change.tracking.rest.client', and version '5.0.2'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}":{"get":{"tags":["CTCollection"],"operationId":"getCTCollection","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}},"put":{"tags":["CTCollection"],"operationId":"putCTCollection","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}},"delete":{"tags":["CTCollection"],"operationId":"deleteCTCollection","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["CTCollection"],"operationId":"patchCTCollection","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/batch":{"put":{"tags":["CTCollection"],"operationId":"putCTCollectionBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"post":{"tags":["CTCollection"],"operationId":"postCTCollectionBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["CTCollection"],"operationId":"deleteCTCollectionBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}":{"get":{"tags":["CTCollection"],"operationId":"getCTCollectionByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}},"delete":{"tags":["CTCollection"],"operationId":"deleteCTCollectionByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["CTCollection"],"operationId":"patchCTCollectionByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link":{"get":{"tags":["CTCollection"],"operationId":"getCTCollectionByExternalReferenceCodeShareLink","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"text/plain":{"schema":{"type":"string"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link":{"get":{"tags":["CTCollection"],"operationId":"getCTCollectionShareLink","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"text/plain":{"schema":{"type":"string"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections":{"get":{"tags":["CTCollection"],"operationId":"getCTCollectionsPage","parameters":[{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCTCollection"}}}}}},"post":{"tags":["CTCollection"],"operationId":"postCTCollection","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTCollection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTCollection"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionByExternalReferenceCodePublish","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionByExternalReferenceCodeSchedulePublish","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}},{"name":"publishDate","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionCheckout","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionPublish","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionSchedulePublish","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}},{"name":"publishDate","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/export-batch":{"post":{"tags":["CTCollection"],"operationId":"postCTCollectionsPageExportBatch","parameters":[{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/change-tracking-rest/v1.0/ct-entries/history":{"get":{"tags":["CTEntry"],"operationId":"getCTEntriesHistoryPage","parameters":[{"name":"classNameId","in":"query","schema":{"type":"string"}},{"name":"classPK","in":"query","schema":{"type":"string"}},{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"siteId","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCTEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCTEntry"}}}}}}},"/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}":{"get":{"tags":["CTEntry"],"operationId":"getCTEntry","parameters":[{"name":"ctEntryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTEntry"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries":{"get":{"tags":["CTEntry"],"operationId":"getCtCollectionCTEntriesPage","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}},{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"showHideable","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCTEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCTEntry"}}}}}}},"/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}":{"get":{"tags":["CTEntry"],"operationId":"getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK","parameters":[{"name":"ctCollectionId","in":"path","required":true,"schema":{"type":"string"}},{"name":"modelClassNameId","in":"path","required":true,"schema":{"type":"string"}},{"name":"modelClassPK","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTEntry"}}}}}}},"/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}":{"get":{"tags":["CTProcess"],"operationId":"getCTProcess","parameters":[{"name":"ctProcessId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTProcess"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTProcess"}}}}}},"delete":{"tags":["CTProcess"],"operationId":"deleteCTProcess","parameters":[{"name":"ctProcessId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-processes/batch":{"delete":{"tags":["CTProcess"],"operationId":"deleteCTProcessBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/change-tracking-rest/v1.0/ct-processes":{"get":{"tags":["CTProcess"],"operationId":"getCTProcessesPage","parameters":[{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCTProcess"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCTProcess"}}}}}}},"/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert":{"post":{"tags":["CTProcess"],"operationId":"postCTProcessRevert","parameters":[{"name":"ctProcessId","in":"path","required":true,"schema":{"type":"string"}},{"name":"description","in":"query","schema":{"type":"string"}},{"name":"name","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/change-tracking-rest/v1.0/ct-processes/export-batch":{"post":{"tags":["CTProcess"],"operationId":"postCTProcessesPageExportBatch","parameters":[{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/change-tracking-rest/v1.0/ct-remotes/{id}":{"get":{"tags":["CTRemote"],"operationId":"getCTRemote","parameters":[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}}}},"put":{"tags":["CTRemote"],"operationId":"putCTRemote","parameters":[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}}}},"delete":{"tags":["CTRemote"],"operationId":"deleteCTRemote","parameters":[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["CTRemote"],"operationId":"patchCTRemote","parameters":[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}}}}},"/o/change-tracking-rest/v1.0/ct-remotes/batch":{"put":{"tags":["CTRemote"],"operationId":"putCTRemoteBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"post":{"tags":["CTRemote"],"operationId":"postCTRemoteBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["CTRemote"],"operationId":"deleteCTRemoteBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/change-tracking-rest/v1.0/ct-remotes":{"get":{"tags":["CTRemote"],"operationId":"getCTRemotesPage","parameters":[{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCTRemote"}}}}}},"post":{"tags":["CTRemote"],"operationId":"postCTRemote","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/CTRemote"}},"application/xml":{"schema":{"$ref":"#/components/schemas/CTRemote"}}}}}}},"/o/change-tracking-rest/v1.0/ct-remotes/export-batch":{"post":{"tags":["CTRemote"],"operationId":"postCTRemotesPageExportBatch","parameters":[{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}}},"components":{"schemas":{"CTCollection":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"dateCreated":{"type":"string","description":"The publication's creation date.","format":"date-time","readOnly":true},"dateModified":{"type":"string","description":"The last time any of the publication's fields were changed.","format":"date-time","readOnly":true},"dateScheduled":{"type":"string","description":"The date that the publication will be published.","format":"date-time","readOnly":true},"description":{"type":"string"},"externalReferenceCode":{"type":"string"},"id":{"type":"integer","format":"int64","readOnly":true},"name":{"type":"string"},"ownerName":{"type":"string","description":"The publication's creator.","readOnly":true},"status":{"$ref":"#/components/schemas/Status"},"statusMessage":{"type":"string","description":"Info on when a publication was last published or modified.","readOnly":true},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.change.tracking.rest.dto.v1_0.CTCollection"}},"xml":{"name":"CTCollection"},"x-filterable":["dateCreated","dateModified","dateScheduled","description","name","ownerName","status"]},"Status":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"label":{"type":"string"},"label_i18n":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.change.tracking.rest.dto.v1_0.Status"}},"xml":{"name":"Status"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageCTCollection":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/CTCollection"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"CTEntry":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"changeType":{"type":"string","readOnly":true},"ctCollectionId":{"type":"integer","format":"int64","readOnly":true},"ctCollectionName":{"type":"string","readOnly":true},"ctCollectionStatus":{"$ref":"#/components/schemas/Status"},"ctCollectionStatusDate":{"type":"string","format":"date-time","readOnly":true},"ctCollectionStatusUserName":{"type":"string","readOnly":true},"dateCreated":{"type":"string","format":"date-time","readOnly":true},"dateModified":{"type":"string","format":"date-time","readOnly":true},"hideable":{"type":"boolean","readOnly":true},"id":{"type":"integer","format":"int64","readOnly":true},"modelClassNameId":{"type":"integer","format":"int64","readOnly":true},"modelClassPK":{"type":"integer","format":"int64","readOnly":true},"ownerId":{"type":"integer","format":"int64","readOnly":true},"ownerName":{"type":"string","readOnly":true},"siteId":{"type":"integer","format":"int64","readOnly":true},"siteName":{"type":"string","readOnly":true},"status":{"$ref":"#/components/schemas/Status"},"statusMessage":{"type":"string","description":"Info on when a change was made.","readOnly":true},"title":{"type":"string","readOnly":true},"typeName":{"type":"string","readOnly":true},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.change.tracking.rest.dto.v1_0.CTEntry"}},"xml":{"name":"CTEntry"},"x-filterable":["changeType","ctCollectionName","ctCollectionStatus","ctCollectionStatusDate","ctCollectionStatusUserName","dateCreated","dateModified","hideable","modelClassNameId","ownerId","ownerName","siteId","siteName","status","title","typeName"]},"PageCTEntry":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/CTEntry"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"CTProcess":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"ctCollectionId":{"type":"integer","format":"int64","readOnly":true},"datePublished":{"type":"string","description":"The publication's published date.","format":"date-time","readOnly":true},"description":{"type":"string"},"id":{"type":"integer","format":"int64","readOnly":true},"name":{"type":"string"},"ownerName":{"type":"string","description":"The publication's creator.","readOnly":true},"status":{"$ref":"#/components/schemas/Status"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.change.tracking.rest.dto.v1_0.CTProcess"}},"xml":{"name":"CTProcess"},"x-filterable":["datePublished","description","name","ownerName","status"]},"PageCTProcess":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/CTProcess"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"CTRemote":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"clientId":{"type":"string"},"clientSecret":{"type":"string"},"dateCreated":{"type":"string","description":"The remote's creation date.","format":"date-time","readOnly":true},"dateModified":{"type":"string","description":"The last time any of the remote's fields were changed.","format":"date-time","readOnly":true},"description":{"type":"string"},"id":{"type":"integer","format":"int64","readOnly":true},"name":{"type":"string"},"ownerName":{"type":"string","description":"The remote's creator.","readOnly":true},"url":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.change.tracking.rest.dto.v1_0.CTRemote"}},"xml":{"name":"CTRemote"},"x-filterable":["dateCreated","dateModified","description","name","ownerName","url"]},"PageCTRemote":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/CTRemote"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.change.tracking.rest.client', and version '5.0.3'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}": {
+            "get": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "getCTCollection",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"1033\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "putCTCollection",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"7875\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "deleteCTCollection",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"2419\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "patchCTCollection",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"4094\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/batch": {
+            "put": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "putCTCollectionBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTCollectionBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTCollectionBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "deleteCTCollectionBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollectionBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollectionBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "getCTCollectionByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9194\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "deleteCTCollectionByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9674\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "patchCTCollectionByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5644\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link": {
+            "get": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "getCTCollectionByExternalReferenceCodeShareLink",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCodeShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCodeShareLink({\n        client,\n        path: {\n           externalReferenceCode: \"9269\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link": {
+            "get": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "getCTCollectionShareLink",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionShareLink({\n        client,\n        path: {\n           ctCollectionId: \"27\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections": {
+            "get": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "getCTCollectionsPage",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionsPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollection",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTCollection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTCollection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollection({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionByExternalReferenceCodePublish",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodePublish({\n        client,\n        path: {\n           externalReferenceCode: \"1144\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionByExternalReferenceCodeSchedulePublish",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "publishDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodeSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodeSchedulePublish({\n        client,\n        path: {\n           externalReferenceCode: \"5753\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionCheckout",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionCheckout } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionCheckout({\n        client,\n        path: {\n           ctCollectionId: \"3910\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionPublish",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionPublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionPublish({\n        client,\n        path: {\n           ctCollectionId: \"6108\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionSchedulePublish",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "publishDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionSchedulePublish({\n        client,\n        path: {\n           ctCollectionId: \"4638\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/export-batch": {
+            "post": {
+                "tags": [
+                    "CTCollection"
+                ],
+                "operationId": "postCTCollectionsPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionsPageExportBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionsPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-entries/history": {
+            "get": {
+                "tags": [
+                    "CTEntry"
+                ],
+                "operationId": "getCTEntriesHistoryPage",
+                "parameters": [
+                    {
+                        "name": "classNameId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "classPK",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "siteId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTEntriesHistoryPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTEntriesHistoryPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/history', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}": {
+            "get": {
+                "tags": [
+                    "CTEntry"
+                ],
+                "operationId": "getCTEntry",
+                "parameters": [
+                    {
+                        "name": "ctEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTEntry } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTEntry({\n        client,\n        path: {\n           ctEntryId: \"767\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries": {
+            "get": {
+                "tags": [
+                    "CTEntry"
+                ],
+                "operationId": "getCtCollectionCTEntriesPage",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "showHideable",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntriesPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntriesPage({\n        client,\n        path: {\n           ctCollectionId: \"3224\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}": {
+            "get": {
+                "tags": [
+                    "CTEntry"
+                ],
+                "operationId": "getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK",
+                "parameters": [
+                    {
+                        "name": "ctCollectionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "modelClassNameId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "modelClassPK",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK({\n        client,\n        path: {\n           ctCollectionId: \"2847\",\n           modelClassNameId: \"6004\",\n           modelClassPK: \"3921\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}": {
+            "get": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "getCTProcess",
+                "parameters": [
+                    {
+                        "name": "ctProcessId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTProcess"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTProcess"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTProcess({\n        client,\n        path: {\n           ctProcessId: \"3774\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "deleteCTProcess",
+                "parameters": [
+                    {
+                        "name": "ctProcessId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTProcess({\n        client,\n        path: {\n           ctProcessId: \"3038\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-processes/batch": {
+            "delete": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "deleteCTProcessBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTProcessBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTProcessBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-processes": {
+            "get": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "getCTProcessesPage",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTProcess"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTProcess"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTProcessesPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTProcessesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert": {
+            "post": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "postCTProcessRevert",
+                "parameters": [
+                    {
+                        "name": "ctProcessId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTProcessRevert } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTProcessRevert({\n        client,\n        path: {\n           ctProcessId: \"8334\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-processes/export-batch": {
+            "post": {
+                "tags": [
+                    "CTProcess"
+                ],
+                "operationId": "postCTProcessesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTProcessesPageExportBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTProcessesPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-remotes/{id}": {
+            "get": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "getCTRemote",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTRemote({\n        client,\n        path: {\n           id: \"6330\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "putCTRemote",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTRemote({\n        client,\n        path: {\n           id: \"1551\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "deleteCTRemote",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTRemote({\n        client,\n        path: {\n           id: \"397\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "patchCTRemote",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTRemote({\n        client,\n        path: {\n           id: \"1980\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-remotes/batch": {
+            "put": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "putCTRemoteBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTRemoteBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTRemoteBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "postCTRemoteBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTRemoteBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTRemoteBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "deleteCTRemoteBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTRemoteBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTRemoteBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-remotes": {
+            "get": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "getCTRemotesPage",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTRemote"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCTRemote"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTRemotesPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTRemotesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "postCTRemote",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CTRemote"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CTRemote"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTRemote({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/change-tracking-rest/v1.0/ct-remotes/export-batch": {
+            "post": {
+                "tags": [
+                    "CTRemote"
+                ],
+                "operationId": "postCTRemotesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTRemotesPageExportBatch } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTRemotesPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CTCollection": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "description": "The publication's creation date.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "description": "The last time any of the publication's fields were changed.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateScheduled": {
+                        "type": "string",
+                        "description": "The date that the publication will be published.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "externalReferenceCode": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "ownerName": {
+                        "type": "string",
+                        "description": "The publication's creator.",
+                        "readOnly": true
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/Status"
+                    },
+                    "statusMessage": {
+                        "type": "string",
+                        "description": "Info on when a publication was last published or modified.",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.change.tracking.rest.dto.v1_0.CTCollection"
+                    }
+                },
+                "xml": {
+                    "name": "CTCollection"
+                },
+                "x-filterable": [
+                    "dateCreated",
+                    "dateModified",
+                    "dateScheduled",
+                    "description",
+                    "name",
+                    "ownerName",
+                    "status"
+                ]
+            },
+            "Status": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "label_i18n": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.change.tracking.rest.dto.v1_0.Status"
+                    }
+                },
+                "xml": {
+                    "name": "Status"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageCTCollection": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CTCollection"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "CTEntry": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "changeType": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "ctCollectionId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "ctCollectionName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "ctCollectionStatus": {
+                        "$ref": "#/components/schemas/Status"
+                    },
+                    "ctCollectionStatusDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "ctCollectionStatusUserName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "hideable": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "modelClassNameId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "modelClassPK": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "ownerId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "ownerName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "siteId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "siteName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/Status"
+                    },
+                    "statusMessage": {
+                        "type": "string",
+                        "description": "Info on when a change was made.",
+                        "readOnly": true
+                    },
+                    "title": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "typeName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.change.tracking.rest.dto.v1_0.CTEntry"
+                    }
+                },
+                "xml": {
+                    "name": "CTEntry"
+                },
+                "x-filterable": [
+                    "changeType",
+                    "ctCollectionName",
+                    "ctCollectionStatus",
+                    "ctCollectionStatusDate",
+                    "ctCollectionStatusUserName",
+                    "dateCreated",
+                    "dateModified",
+                    "hideable",
+                    "modelClassNameId",
+                    "ownerId",
+                    "ownerName",
+                    "siteId",
+                    "siteName",
+                    "status",
+                    "title",
+                    "typeName"
+                ]
+            },
+            "PageCTEntry": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CTEntry"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "CTProcess": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "ctCollectionId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "datePublished": {
+                        "type": "string",
+                        "description": "The publication's published date.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "ownerName": {
+                        "type": "string",
+                        "description": "The publication's creator.",
+                        "readOnly": true
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/Status"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.change.tracking.rest.dto.v1_0.CTProcess"
+                    }
+                },
+                "xml": {
+                    "name": "CTProcess"
+                },
+                "x-filterable": [
+                    "datePublished",
+                    "description",
+                    "name",
+                    "ownerName",
+                    "status"
+                ]
+            },
+            "PageCTProcess": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CTProcess"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "CTRemote": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "clientId": {
+                        "type": "string"
+                    },
+                    "clientSecret": {
+                        "type": "string"
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "description": "The remote's creation date.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "description": "The last time any of the remote's fields were changed.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "ownerName": {
+                        "type": "string",
+                        "description": "The remote's creator.",
+                        "readOnly": true
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.change.tracking.rest.dto.v1_0.CTRemote"
+                    }
+                },
+                "xml": {
+                    "name": "CTRemote"
+                },
+                "x-filterable": [
+                    "dateCreated",
+                    "dateModified",
+                    "description",
+                    "name",
+                    "ownerName",
+                    "url"
+                ]
+            },
+            "PageCTRemote": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CTRemote"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

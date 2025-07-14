@@ -1,1 +1,1872 @@
-{"openapi":"3.0.1","info":{"title":"Headless Admin Address","description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.address.client', and version '1.0.26'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/headless-admin-address/v1.0/countries/{countryId}":{"get":{"tags":["Country"],"operationId":"getCountry","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}},"put":{"tags":["Country"],"operationId":"putCountry","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}},"delete":{"tags":["Country"],"operationId":"deleteCountry","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["Country"],"operationId":"patchCountry","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/batch":{"put":{"tags":["Country"],"operationId":"putCountryBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"post":{"tags":["Country"],"operationId":"postCountryBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["Country"],"operationId":"deleteCountryBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/headless-admin-address/v1.0/countries":{"get":{"tags":["Country"],"operationId":"getCountriesPage","parameters":[{"name":"active","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCountry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCountry"}}}}}},"post":{"tags":["Country"],"operationId":"postCountry","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/by-a2/{a2}":{"get":{"tags":["Country"],"operationId":"getCountryByA2","parameters":[{"name":"a2","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/by-a3/{a3}":{"get":{"tags":["Country"],"operationId":"getCountryByA3","parameters":[{"name":"a3","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/by-name/{name}":{"get":{"tags":["Country"],"operationId":"getCountryByName","parameters":[{"name":"name","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/by-number/{number}":{"get":{"tags":["Country"],"operationId":"getCountryByNumber","parameters":[{"name":"number","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Country"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Country"}}}}}}},"/o/headless-admin-address/v1.0/countries/export-batch":{"post":{"tags":["Country"],"operationId":"postCountriesPageExportBatch","parameters":[{"name":"active","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/headless-admin-address/v1.0/regions/{regionId}":{"get":{"tags":["Region"],"operationId":"getRegion","parameters":[{"name":"regionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}}}},"put":{"tags":["Region"],"operationId":"putRegion","parameters":[{"name":"regionId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}}}},"delete":{"tags":["Region"],"operationId":"deleteRegion","parameters":[{"name":"regionId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["Region"],"operationId":"patchRegion","parameters":[{"name":"regionId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}}}}},"/o/headless-admin-address/v1.0/regions/batch":{"put":{"tags":["Region"],"operationId":"putRegionBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["Region"],"operationId":"deleteRegionBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/headless-admin-address/v1.0/countries/{countryId}/regions/by-region-code/{regionCode}":{"get":{"tags":["Region"],"operationId":"getCountryRegionByRegionCode","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}},{"name":"regionCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}}}}},"/o/headless-admin-address/v1.0/countries/{countryId}/regions":{"get":{"tags":["Region"],"operationId":"getCountryRegionsPage","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}},{"name":"active","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageRegion"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageRegion"}}}}}},"post":{"tags":["Region"],"operationId":"postCountryRegion","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Region"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Region"}}}}}}},"/o/headless-admin-address/v1.0/regions":{"get":{"tags":["Region"],"operationId":"getRegionsPage","parameters":[{"name":"active","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageRegion"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageRegion"}}}}}}},"/o/headless-admin-address/v1.0/countries/{countryId}/regions/batch":{"post":{"tags":["Region"],"operationId":"postCountryRegionBatch","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/headless-admin-address/v1.0/countries/{countryId}/regions/export-batch":{"post":{"tags":["Region"],"operationId":"postCountryRegionsPageExportBatch","parameters":[{"name":"countryId","in":"path","required":true,"schema":{"type":"string"}},{"name":"active","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/headless-admin-address/v1.0/regions/export-batch":{"post":{"tags":["Region"],"operationId":"postRegionsPageExportBatch","parameters":[{"name":"active","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}}},"components":{"schemas":{"Country":{"required":["a2","a3","name","number"],"type":"object","properties":{"a2":{"type":"string"},"a3":{"type":"string"},"active":{"type":"boolean"},"billingAllowed":{"type":"boolean"},"groupFilterEnabled":{"type":"boolean"},"id":{"type":"integer","format":"int64","readOnly":true},"idd":{"type":"integer","format":"int32"},"name":{"type":"string"},"number":{"type":"integer","format":"int32"},"position":{"type":"number","format":"double"},"regions":{"type":"array","readOnly":true,"items":{"$ref":"#/components/schemas/Region"}},"shippingAllowed":{"type":"boolean"},"subjectToVAT":{"type":"boolean"},"title_i18n":{"type":"object","additionalProperties":{"type":"string"}},"zipRequired":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.admin.address.dto.v1_0.Country"}},"xml":{"name":"Country"},"x-filterable":["name","position"]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageCountry":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Country"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"Region":{"required":["name","regionCode"],"type":"object","properties":{"active":{"type":"boolean"},"countryId":{"type":"integer","format":"int64","readOnly":true},"id":{"type":"integer","format":"int64","readOnly":true},"name":{"type":"string"},"position":{"type":"number","format":"double"},"regionCode":{"type":"string"},"title_i18n":{"type":"object","additionalProperties":{"type":"string"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.admin.address.dto.v1_0.Region"}},"xml":{"name":"Region"},"x-filterable":["name","position"]},"PageRegion":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Region"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Headless Admin Address",
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.address.client', and version '1.0.27'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/headless-admin-address/v1.0/countries/{countryId}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountry",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountry } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountry({\n        client,\n        path: {\n           countryId: \"4921\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "putCountry",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCountry } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCountry({\n        client,\n        path: {\n           countryId: \"2261\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "deleteCountry",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCountry } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCountry({\n        client,\n        path: {\n           countryId: \"2737\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "patchCountry",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCountry } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCountry({\n        client,\n        path: {\n           countryId: \"137\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/batch": {
+            "put": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "putCountryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCountryBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCountryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "postCountryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountryBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "deleteCountryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCountryBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCountryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountriesPage",
+                "parameters": [
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCountry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCountry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountriesPage } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "postCountry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountry } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/by-a2/{a2}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountryByA2",
+                "parameters": [
+                    {
+                        "name": "a2",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryByA2 } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryByA2({\n        client,\n        path: {\n           a2: \"2986\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/by-a2/{a2}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/by-a3/{a3}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountryByA3",
+                "parameters": [
+                    {
+                        "name": "a3",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryByA3 } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryByA3({\n        client,\n        path: {\n           a3: \"6022\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/by-a3/{a3}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/by-name/{name}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountryByName",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryByName } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryByName({\n        client,\n        path: {\n           name: \"5667\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/by-name/{name}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/by-number/{number}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "getCountryByNumber",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Country"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryByNumber } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryByNumber({\n        client,\n        path: {\n           number: \"8237\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/by-number/{number}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/export-batch": {
+            "post": {
+                "tags": [
+                    "Country"
+                ],
+                "operationId": "postCountriesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountriesPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/regions/{regionId}": {
+            "get": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "getRegion",
+                "parameters": [
+                    {
+                        "name": "regionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getRegion } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getRegion({\n        client,\n        path: {\n           regionId: \"666\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/{regionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "putRegion",
+                "parameters": [
+                    {
+                        "name": "regionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putRegion } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putRegion({\n        client,\n        path: {\n           regionId: \"591\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/{regionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "deleteRegion",
+                "parameters": [
+                    {
+                        "name": "regionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteRegion } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteRegion({\n        client,\n        path: {\n           regionId: \"7008\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/{regionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "patchRegion",
+                "parameters": [
+                    {
+                        "name": "regionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchRegion } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchRegion({\n        client,\n        path: {\n           regionId: \"5140\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/{regionId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/regions/batch": {
+            "put": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "putRegionBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putRegionBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putRegionBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "deleteRegionBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteRegionBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteRegionBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/{countryId}/regions/by-region-code/{regionCode}": {
+            "get": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "getCountryRegionByRegionCode",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "regionCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryRegionByRegionCode } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryRegionByRegionCode({\n        client,\n        path: {\n           countryId: \"4898\",\n           regionCode: \"7194\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}/regions/by-region-code/{regionCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/{countryId}/regions": {
+            "get": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "getCountryRegionsPage",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageRegion"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageRegion"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCountryRegionsPage } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCountryRegionsPage({\n        client,\n        path: {\n           countryId: \"4762\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}/regions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "postCountryRegion",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Region"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountryRegion } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountryRegion({\n        client,\n        path: {\n           countryId: \"8326\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}/regions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/regions": {
+            "get": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "getRegionsPage",
+                "parameters": [
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageRegion"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageRegion"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getRegionsPage } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getRegionsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/{countryId}/regions/batch": {
+            "post": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "postCountryRegionBatch",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountryRegionBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountryRegionBatch({\n        client,\n        path: {\n           countryId: \"1965\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}/regions/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/countries/{countryId}/regions/export-batch": {
+            "post": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "postCountryRegionsPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "countryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCountryRegionsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCountryRegionsPageExportBatch({\n        client,\n        path: {\n           countryId: \"2264\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/countries/{countryId}/regions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-address/v1.0/regions/export-batch": {
+            "post": {
+                "tags": [
+                    "Region"
+                ],
+                "operationId": "postRegionsPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postRegionsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-address-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postRegionsPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-address/v1.0/regions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Country": {
+                "required": [
+                    "a2",
+                    "a3",
+                    "name",
+                    "number"
+                ],
+                "type": "object",
+                "properties": {
+                    "a2": {
+                        "type": "string"
+                    },
+                    "a3": {
+                        "type": "string"
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "billingAllowed": {
+                        "type": "boolean"
+                    },
+                    "groupFilterEnabled": {
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "idd": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "number": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "position": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "regions": {
+                        "type": "array",
+                        "readOnly": true,
+                        "items": {
+                            "$ref": "#/components/schemas/Region"
+                        }
+                    },
+                    "shippingAllowed": {
+                        "type": "boolean"
+                    },
+                    "subjectToVAT": {
+                        "type": "boolean"
+                    },
+                    "title_i18n": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "zipRequired": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.admin.address.dto.v1_0.Country"
+                    }
+                },
+                "xml": {
+                    "name": "Country"
+                },
+                "x-filterable": [
+                    "name",
+                    "position"
+                ]
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageCountry": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Country"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "Region": {
+                "required": [
+                    "name",
+                    "regionCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "countryId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "regionCode": {
+                        "type": "string"
+                    },
+                    "title_i18n": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.admin.address.dto.v1_0.Region"
+                    }
+                },
+                "xml": {
+                    "name": "Region"
+                },
+                "x-filterable": [
+                    "name",
+                    "position"
+                ]
+            },
+            "PageRegion": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Region"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

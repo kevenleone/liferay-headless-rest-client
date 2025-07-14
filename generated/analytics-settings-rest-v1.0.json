@@ -1,1 +1,2146 @@
-{"openapi":"3.0.1","info":{"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/analytics-settings-rest/v1.0/configuration/wizard-mode":{"post":{"tags":["AnalyticsDXPEntityBatchExporter"],"operationId":"postConfigurationWizardMode","responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/channels":{"get":{"tags":["Channel"],"operationId":"getChannelsPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageChannel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageChannel"}}}}}},"post":{"tags":["Channel"],"operationId":"postChannel","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Channel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Channel"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Channel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Channel"}}}}}},"patch":{"tags":["Channel"],"operationId":"patchChannel","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Channel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Channel"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Channel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Channel"}}}}}}},"/o/analytics-settings-rest/v1.0/commerce-channels":{"get":{"tags":["CommerceChannel"],"operationId":"getCommerceChannelsPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageCommerceChannel"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageCommerceChannel"}}}}}}},"/o/analytics-settings-rest/v1.0/contacts/account-groups":{"get":{"tags":["ContactAccountGroup"],"operationId":"getContactAccountGroupsPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageContactAccountGroup"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageContactAccountGroup"}}}}}}},"/o/analytics-settings-rest/v1.0/contacts/configuration":{"get":{"tags":["ContactConfiguration"],"operationId":"getContactConfiguration","responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ContactConfiguration"}},"application/xml":{"schema":{"$ref":"#/components/schemas/ContactConfiguration"}}}}}},"put":{"tags":["ContactConfiguration"],"operationId":"putContactConfiguration","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ContactConfiguration"}},"application/xml":{"schema":{"$ref":"#/components/schemas/ContactConfiguration"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/contacts/organizations":{"get":{"tags":["ContactOrganization"],"operationId":"getContactOrganizationsPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageContactOrganization"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageContactOrganization"}}}}}}},"/o/analytics-settings-rest/v1.0/contacts/user-groups":{"get":{"tags":["ContactUserGroup"],"operationId":"getContactUserGroupsPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageContactUserGroup"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageContactUserGroup"}}}}}}},"/o/analytics-settings-rest/v1.0/data-sources":{"post":{"tags":["DataSource"],"operationId":"postDataSource","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DataSourceToken"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DataSourceToken"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/DataSourceLiferayAnalyticsURL"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DataSourceLiferayAnalyticsURL"}}}}}},"delete":{"tags":["DataSource"],"operationId":"deleteDataSource","responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/fields/accounts":{"get":{"tags":["Field"],"operationId":"getFieldsAccountsPage","parameters":[{"name":"keyword","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageField"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageField"}}}}}},"patch":{"tags":["Field"],"operationId":"patchFieldAccount","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/fields/orders":{"get":{"tags":["Field"],"operationId":"getFieldsOrdersPage","parameters":[{"name":"keyword","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageField"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageField"}}}}}},"patch":{"tags":["Field"],"operationId":"patchFieldOrder","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/fields/people":{"get":{"tags":["Field"],"operationId":"getFieldsPeoplePage","parameters":[{"name":"keyword","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageField"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageField"}}}}}},"patch":{"tags":["Field"],"operationId":"patchFieldPeople","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/fields/products":{"get":{"tags":["Field"],"operationId":"getFieldsProductsPage","parameters":[{"name":"keyword","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageField"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageField"}}}}}},"patch":{"tags":["Field"],"operationId":"patchFieldProduct","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Field"}}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/fields":{"get":{"tags":["FieldSummary"],"operationId":"getField","responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/FieldSummary"}},"application/xml":{"schema":{"$ref":"#/components/schemas/FieldSummary"}}}}}}},"/o/analytics-settings-rest/v1.0/recommendation/configuration":{"get":{"tags":["RecommendationConfiguration"],"operationId":"getRecommendationConfiguration","responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/RecommendationConfiguration"}},"application/xml":{"schema":{"$ref":"#/components/schemas/RecommendationConfiguration"}}}}}},"put":{"tags":["RecommendationConfiguration"],"operationId":"putRecommendationConfiguration","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/RecommendationConfiguration"}},"application/xml":{"schema":{"$ref":"#/components/schemas/RecommendationConfiguration"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/analytics-settings-rest/v1.0/sites":{"get":{"tags":["Site"],"operationId":"getSitesPage","parameters":[{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageSite"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageSite"}}}}}}}},"components":{"schemas":{"Channel":{"type":"object","properties":{"channelId":{"type":"string"},"commerceSyncEnabled":{"type":"boolean"},"createDate":{"type":"string","format":"date-time"},"dataSources":{"type":"array","items":{"$ref":"#/components/schemas/DataSource"}},"name":{"maxLength":2147483647,"minLength":3,"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.Channel"}},"xml":{"name":"Channel"},"x-filterable":[]},"DataSource":{"type":"object","properties":{"commerceChannelIds":{"type":"array","items":{"type":"integer","format":"int64"}},"dataSourceId":{"type":"string"},"siteIds":{"type":"array","items":{"type":"integer","format":"int64"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.DataSource"}},"xml":{"name":"DataSource"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageChannel":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Channel"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"CommerceChannel":{"type":"object","properties":{"channelName":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"siteName":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.CommerceChannel"}},"xml":{"name":"CommerceChannel"},"x-filterable":[]},"PageCommerceChannel":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/CommerceChannel"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"ContactAccountGroup":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"selected":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.ContactAccountGroup"}},"xml":{"name":"ContactAccountGroup"},"x-filterable":[]},"PageContactAccountGroup":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/ContactAccountGroup"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"ContactConfiguration":{"type":"object","properties":{"syncAllAccounts":{"type":"boolean"},"syncAllContacts":{"type":"boolean"},"syncedAccountGroupIds":{"type":"array","items":{"type":"string"}},"syncedOrganizationIds":{"type":"array","items":{"type":"string"}},"syncedUserGroupIds":{"type":"array","items":{"type":"string"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.ContactConfiguration"}},"xml":{"name":"ContactConfiguration"},"x-filterable":[]},"ContactOrganization":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"selected":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.ContactOrganization"}},"xml":{"name":"ContactOrganization"},"x-filterable":[]},"PageContactOrganization":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/ContactOrganization"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"ContactUserGroup":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"selected":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.ContactUserGroup"}},"xml":{"name":"ContactUserGroup"},"x-filterable":[]},"PageContactUserGroup":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/ContactUserGroup"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"DataSourceLiferayAnalyticsURL":{"type":"object","properties":{"liferayAnalyticsURL":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.DataSourceLiferayAnalyticsURL"}},"xml":{"name":"DataSourceLiferayAnalyticsURL"},"x-filterable":[]},"DataSourceToken":{"type":"object","properties":{"token":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.DataSourceToken"}},"xml":{"name":"DataSourceToken"},"x-filterable":[]},"Field":{"type":"object","properties":{"example":{"type":"string"},"name":{"type":"string"},"required":{"type":"boolean"},"selected":{"type":"boolean"},"source":{"type":"string"},"type":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.Field"}},"xml":{"name":"Field"},"x-filterable":[]},"PageField":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Field"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"FieldSummary":{"type":"object","properties":{"account":{"type":"integer","format":"int32"},"order":{"type":"integer","format":"int32"},"people":{"type":"integer","format":"int32"},"product":{"type":"integer","format":"int32"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.FieldSummary"}},"xml":{"name":"FieldSummary"},"x-filterable":[]},"RecommendationConfiguration":{"type":"object","properties":{"contentRecommenderMostPopularItems":{"$ref":"#/components/schemas/RecommendationItem"},"contentRecommenderUserPersonalization":{"$ref":"#/components/schemas/RecommendationItem"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.RecommendationConfiguration"}},"xml":{"name":"RecommendationConfiguration"},"x-filterable":[]},"RecommendationItem":{"type":"object","properties":{"enabled":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.RecommendationItem"},"status":{"type":"string","enum":["Configuring","Disabled","Enabled","Failed"]}},"xml":{"name":"RecommendationItem"},"x-filterable":[]},"PageSite":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Site"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"Site":{"type":"object","properties":{"channelName":{"type":"string"},"friendlyURL":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.settings.rest.dto.v1_0.Site"}},"xml":{"name":"Site"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0",
+        "description": "HOhoh111o"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/analytics-settings-rest/v1.0/configuration/wizard-mode": {
+            "post": {
+                "tags": [
+                    "AnalyticsDXPEntityBatchExporter"
+                ],
+                "operationId": "postConfigurationWizardMode",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postConfigurationWizardMode } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postConfigurationWizardMode({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/configuration/wizard-mode', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/channels": {
+            "get": {
+                "tags": [
+                    "Channel"
+                ],
+                "operationId": "getChannelsPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageChannel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageChannel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/channels', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "operationId": "postChannel",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Channel"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Channel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Channel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Channel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannel } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannel({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/channels', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Channel"
+                ],
+                "operationId": "patchChannel",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Channel"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Channel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Channel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Channel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchChannel } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchChannel({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/channels', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/commerce-channels": {
+            "get": {
+                "tags": [
+                    "CommerceChannel"
+                ],
+                "operationId": "getCommerceChannelsPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCommerceChannel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCommerceChannel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCommerceChannelsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCommerceChannelsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/commerce-channels', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/contacts/account-groups": {
+            "get": {
+                "tags": [
+                    "ContactAccountGroup"
+                ],
+                "operationId": "getContactAccountGroupsPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactAccountGroup"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactAccountGroup"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getContactAccountGroupsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getContactAccountGroupsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/contacts/account-groups', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/contacts/configuration": {
+            "get": {
+                "tags": [
+                    "ContactConfiguration"
+                ],
+                "operationId": "getContactConfiguration",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ContactConfiguration"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ContactConfiguration"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getContactConfiguration } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getContactConfiguration({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/contacts/configuration', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "ContactConfiguration"
+                ],
+                "operationId": "putContactConfiguration",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ContactConfiguration"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ContactConfiguration"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putContactConfiguration } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putContactConfiguration({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/contacts/configuration', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/contacts/organizations": {
+            "get": {
+                "tags": [
+                    "ContactOrganization"
+                ],
+                "operationId": "getContactOrganizationsPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactOrganization"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactOrganization"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getContactOrganizationsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getContactOrganizationsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/contacts/organizations', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/contacts/user-groups": {
+            "get": {
+                "tags": [
+                    "ContactUserGroup"
+                ],
+                "operationId": "getContactUserGroupsPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactUserGroup"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageContactUserGroup"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getContactUserGroupsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getContactUserGroupsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/contacts/user-groups', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/data-sources": {
+            "post": {
+                "tags": [
+                    "DataSource"
+                ],
+                "operationId": "postDataSource",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DataSourceToken"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DataSourceToken"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataSourceLiferayAnalyticsURL"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataSourceLiferayAnalyticsURL"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postDataSource } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postDataSource({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/data-sources', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "DataSource"
+                ],
+                "operationId": "deleteDataSource",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteDataSource } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteDataSource({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/data-sources', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/fields/accounts": {
+            "get": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "getFieldsAccountsPage",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFieldsAccountsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldsAccountsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/accounts', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "patchFieldAccount",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchFieldAccount } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchFieldAccount({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/accounts', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/fields/orders": {
+            "get": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "getFieldsOrdersPage",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFieldsOrdersPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldsOrdersPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "patchFieldOrder",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchFieldOrder } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchFieldOrder({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/orders', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/fields/people": {
+            "get": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "getFieldsPeoplePage",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFieldsPeoplePage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldsPeoplePage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/people', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "patchFieldPeople",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchFieldPeople } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchFieldPeople({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/people', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/fields/products": {
+            "get": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "getFieldsProductsPage",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageField"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFieldsProductsPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldsProductsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Field"
+                ],
+                "operationId": "patchFieldProduct",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Field"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchFieldProduct } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchFieldProduct({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields/products', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/fields": {
+            "get": {
+                "tags": [
+                    "FieldSummary"
+                ],
+                "operationId": "getField",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FieldSummary"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FieldSummary"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getField } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getField({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/fields', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/recommendation/configuration": {
+            "get": {
+                "tags": [
+                    "RecommendationConfiguration"
+                ],
+                "operationId": "getRecommendationConfiguration",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RecommendationConfiguration"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RecommendationConfiguration"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getRecommendationConfiguration } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getRecommendationConfiguration({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/recommendation/configuration', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "RecommendationConfiguration"
+                ],
+                "operationId": "putRecommendationConfiguration",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RecommendationConfiguration"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RecommendationConfiguration"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putRecommendationConfiguration } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putRecommendationConfiguration({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/recommendation/configuration', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-settings-rest/v1.0/sites": {
+            "get": {
+                "tags": [
+                    "Site"
+                ],
+                "operationId": "getSitesPage",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSite"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageSite"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSitesPage } from 'liferay-headless-rest-client/analytics-settings-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSitesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-settings-rest/v1.0/sites', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Channel": {
+                "type": "object",
+                "properties": {
+                    "channelId": {
+                        "type": "string"
+                    },
+                    "commerceSyncEnabled": {
+                        "type": "boolean"
+                    },
+                    "createDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dataSources": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DataSource"
+                        }
+                    },
+                    "name": {
+                        "maxLength": 2147483647,
+                        "minLength": 3,
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.Channel"
+                    }
+                },
+                "xml": {
+                    "name": "Channel"
+                },
+                "x-filterable": []
+            },
+            "DataSource": {
+                "type": "object",
+                "properties": {
+                    "commerceChannelIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "dataSourceId": {
+                        "type": "string"
+                    },
+                    "siteIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.DataSource"
+                    }
+                },
+                "xml": {
+                    "name": "DataSource"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageChannel": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Channel"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "CommerceChannel": {
+                "type": "object",
+                "properties": {
+                    "channelName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "siteName": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.CommerceChannel"
+                    }
+                },
+                "xml": {
+                    "name": "CommerceChannel"
+                },
+                "x-filterable": []
+            },
+            "PageCommerceChannel": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CommerceChannel"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "ContactAccountGroup": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "selected": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.ContactAccountGroup"
+                    }
+                },
+                "xml": {
+                    "name": "ContactAccountGroup"
+                },
+                "x-filterable": []
+            },
+            "PageContactAccountGroup": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ContactAccountGroup"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "ContactConfiguration": {
+                "type": "object",
+                "properties": {
+                    "syncAllAccounts": {
+                        "type": "boolean"
+                    },
+                    "syncAllContacts": {
+                        "type": "boolean"
+                    },
+                    "syncedAccountGroupIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "syncedOrganizationIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "syncedUserGroupIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.ContactConfiguration"
+                    }
+                },
+                "xml": {
+                    "name": "ContactConfiguration"
+                },
+                "x-filterable": []
+            },
+            "ContactOrganization": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "selected": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.ContactOrganization"
+                    }
+                },
+                "xml": {
+                    "name": "ContactOrganization"
+                },
+                "x-filterable": []
+            },
+            "PageContactOrganization": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ContactOrganization"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "ContactUserGroup": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "selected": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.ContactUserGroup"
+                    }
+                },
+                "xml": {
+                    "name": "ContactUserGroup"
+                },
+                "x-filterable": []
+            },
+            "PageContactUserGroup": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ContactUserGroup"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "DataSourceLiferayAnalyticsURL": {
+                "type": "object",
+                "properties": {
+                    "liferayAnalyticsURL": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.DataSourceLiferayAnalyticsURL"
+                    }
+                },
+                "xml": {
+                    "name": "DataSourceLiferayAnalyticsURL"
+                },
+                "x-filterable": []
+            },
+            "DataSourceToken": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.DataSourceToken"
+                    }
+                },
+                "xml": {
+                    "name": "DataSourceToken"
+                },
+                "x-filterable": []
+            },
+            "Field": {
+                "type": "object",
+                "properties": {
+                    "example": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "required": {
+                        "type": "boolean"
+                    },
+                    "selected": {
+                        "type": "boolean"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.Field"
+                    }
+                },
+                "xml": {
+                    "name": "Field"
+                },
+                "x-filterable": []
+            },
+            "PageField": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Field"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "FieldSummary": {
+                "type": "object",
+                "properties": {
+                    "account": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "people": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "product": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.FieldSummary"
+                    }
+                },
+                "xml": {
+                    "name": "FieldSummary"
+                },
+                "x-filterable": []
+            },
+            "RecommendationConfiguration": {
+                "type": "object",
+                "properties": {
+                    "contentRecommenderMostPopularItems": {
+                        "$ref": "#/components/schemas/RecommendationItem"
+                    },
+                    "contentRecommenderUserPersonalization": {
+                        "$ref": "#/components/schemas/RecommendationItem"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.RecommendationConfiguration"
+                    }
+                },
+                "xml": {
+                    "name": "RecommendationConfiguration"
+                },
+                "x-filterable": []
+            },
+            "RecommendationItem": {
+                "type": "object",
+                "properties": {
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.RecommendationItem"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "Configuring",
+                            "Disabled",
+                            "Enabled",
+                            "Failed"
+                        ]
+                    }
+                },
+                "xml": {
+                    "name": "RecommendationItem"
+                },
+                "x-filterable": []
+            },
+            "PageSite": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Site"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "Site": {
+                "type": "object",
+                "properties": {
+                    "channelName": {
+                        "type": "string"
+                    },
+                    "friendlyURL": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.Site"
+                    }
+                },
+                "xml": {
+                    "name": "Site"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

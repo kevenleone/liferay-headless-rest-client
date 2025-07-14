@@ -1,1 +1,1532 @@
-{"openapi":"3.0.1","info":{"description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.notification.rest.client', and version '1.0.37'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}":{"get":{"tags":["NotificationQueueEntry"],"operationId":"getNotificationQueueEntry","parameters":[{"name":"notificationQueueEntryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}}}}}},"delete":{"tags":["NotificationQueueEntry"],"operationId":"deleteNotificationQueueEntry","parameters":[{"name":"notificationQueueEntryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/notification/v1.0/notification-queue-entries/batch":{"post":{"tags":["NotificationQueueEntry"],"operationId":"postNotificationQueueEntryBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["NotificationQueueEntry"],"operationId":"deleteNotificationQueueEntryBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/notification/v1.0/notification-queue-entries":{"get":{"tags":["NotificationQueueEntry"],"operationId":"getNotificationQueueEntriesPage","parameters":[{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageNotificationQueueEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageNotificationQueueEntry"}}}}}},"post":{"tags":["NotificationQueueEntry"],"operationId":"postNotificationQueueEntry","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationQueueEntry"}}}}}}},"/o/notification/v1.0/notification-queue-entries/export-batch":{"post":{"tags":["NotificationQueueEntry"],"operationId":"postNotificationQueueEntriesPageExportBatch","parameters":[{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend":{"put":{"tags":["NotificationQueueEntry"],"operationId":"putNotificationQueueEntryResend","parameters":[{"name":"notificationQueueEntryId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/notification/v1.0/notification-templates/{notificationTemplateId}":{"get":{"tags":["NotificationTemplate"],"operationId":"getNotificationTemplate","parameters":[{"name":"notificationTemplateId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}},"put":{"tags":["NotificationTemplate"],"operationId":"putNotificationTemplate","parameters":[{"name":"notificationTemplateId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}},"delete":{"tags":["NotificationTemplate"],"operationId":"deleteNotificationTemplate","parameters":[{"name":"notificationTemplateId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["NotificationTemplate"],"operationId":"patchNotificationTemplate","parameters":[{"name":"notificationTemplateId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}}},"/o/notification/v1.0/notification-templates/batch":{"put":{"tags":["NotificationTemplate"],"operationId":"putNotificationTemplateBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"post":{"tags":["NotificationTemplate"],"operationId":"postNotificationTemplateBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}},"delete":{"tags":["NotificationTemplate"],"operationId":"deleteNotificationTemplateBatch","parameters":[{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}":{"get":{"tags":["NotificationTemplate"],"operationId":"getNotificationTemplateByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}},"put":{"tags":["NotificationTemplate"],"operationId":"putNotificationTemplateByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}}},"/o/notification/v1.0/notification-templates":{"get":{"tags":["NotificationTemplate"],"operationId":"getNotificationTemplatesPage","parameters":[{"name":"aggregationTerms","in":"query","schema":{"type":"string"}},{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageNotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageNotificationTemplate"}}}}}},"post":{"tags":["NotificationTemplate"],"operationId":"postNotificationTemplate","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}}},"/o/notification/v1.0/notification-templates/{notificationTemplateId}/copy":{"post":{"tags":["NotificationTemplate"],"operationId":"postNotificationTemplateCopy","parameters":[{"name":"notificationTemplateId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}},"application/xml":{"schema":{"$ref":"#/components/schemas/NotificationTemplate"}}}}}}},"/o/notification/v1.0/notification-templates/export-batch":{"post":{"tags":["NotificationTemplate"],"operationId":"postNotificationTemplatesPageExportBatch","parameters":[{"name":"filter","in":"query","schema":{"type":"string"}},{"name":"search","in":"query","schema":{"type":"string"}},{"name":"sort","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}}},"components":{"schemas":{"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"NotificationQueueEntry":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"body":{"type":"string"},"fromName":{"type":"string","readOnly":true},"id":{"type":"integer","format":"int64","readOnly":true},"recipients":{"type":"array","items":{"type":"object"}},"recipientsSummary":{"type":"string","readOnly":true},"sentDate":{"type":"string","format":"date-time","readOnly":true},"status":{"type":"integer","format":"int32","readOnly":true},"subject":{"type":"string"},"triggerBy":{"type":"string","readOnly":true},"type":{"type":"string"},"typeLabel":{"type":"string","readOnly":true},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.notification.rest.dto.v1_0.NotificationQueueEntry"}},"xml":{"name":"NotificationQueueEntry"},"x-filterable":[]},"PageNotificationQueueEntry":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/NotificationQueueEntry"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"NotificationTemplate":{"type":"object","properties":{"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}},"readOnly":true},"attachmentObjectFieldExternalReferenceCodes":{"type":"array","items":{"type":"string"}},"attachmentObjectFieldIds":{"type":"array","items":{"type":"integer","format":"int64"}},"body":{"type":"object","additionalProperties":{"type":"string"}},"dateCreated":{"type":"string","format":"date-time","readOnly":true},"dateModified":{"type":"string","format":"date-time","readOnly":true},"description":{"type":"string"},"externalReferenceCode":{"type":"string"},"id":{"type":"integer","format":"int64","readOnly":true},"name":{"type":"string"},"name_i18n":{"type":"object","additionalProperties":{"type":"string"}},"objectDefinitionExternalReferenceCode":{"type":"string"},"objectDefinitionId":{"type":"integer","format":"int64"},"recipientType":{"type":"string"},"recipients":{"type":"array","items":{"type":"object"}},"subject":{"type":"object","additionalProperties":{"type":"string"}},"system":{"type":"boolean"},"type":{"type":"string"},"typeLabel":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.notification.rest.dto.v1_0.NotificationTemplate"},"editorType":{"type":"string","enum":["freeMarker","richText"]}},"xml":{"name":"NotificationTemplate"},"x-filterable":["dateCreated","dateModified","name","userId"]},"PageNotificationTemplate":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/NotificationTemplate"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.notification.rest.client', and version '1.0.38'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}": {
+            "get": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "getNotificationQueueEntry",
+                "parameters": [
+                    {
+                        "name": "notificationQueueEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationQueueEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationQueueEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"9326\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "deleteNotificationQueueEntry",
+                "parameters": [
+                    {
+                        "name": "notificationQueueEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"1621\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-queue-entries/batch": {
+            "post": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "postNotificationQueueEntryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "deleteNotificationQueueEntryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-queue-entries": {
+            "get": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "getNotificationQueueEntriesPage",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageNotificationQueueEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageNotificationQueueEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntriesPage } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "postNotificationQueueEntry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationQueueEntry"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationQueueEntry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationQueueEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationQueueEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationQueueEntry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-queue-entries/export-batch": {
+            "post": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "postNotificationQueueEntriesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationQueueEntriesPageExportBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationQueueEntriesPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend": {
+            "put": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "putNotificationQueueEntryResend",
+                "parameters": [
+                    {
+                        "name": "notificationQueueEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationQueueEntryResend } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationQueueEntryResend({\n        client,\n        path: {\n           notificationQueueEntryId: \"5079\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/{notificationTemplateId}": {
+            "get": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "getNotificationTemplate",
+                "parameters": [
+                    {
+                        "name": "notificationTemplateId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"9535\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "putNotificationTemplate",
+                "parameters": [
+                    {
+                        "name": "notificationTemplateId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"3760\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "deleteNotificationTemplate",
+                "parameters": [
+                    {
+                        "name": "notificationTemplateId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"8071\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "patchNotificationTemplate",
+                "parameters": [
+                    {
+                        "name": "notificationTemplateId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"2331\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/batch": {
+            "put": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "putNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "postNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "deleteNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "getNotificationTemplateByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6905\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "putNotificationTemplateByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7805\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates": {
+            "get": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "getNotificationTemplatesPage",
+                "parameters": [
+                    {
+                        "name": "aggregationTerms",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageNotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageNotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplatesPage } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplatesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "postNotificationTemplate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NotificationTemplate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplate({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/{notificationTemplateId}/copy": {
+            "post": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "postNotificationTemplateCopy",
+                "parameters": [
+                    {
+                        "name": "notificationTemplateId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NotificationTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateCopy } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateCopy({\n        client,\n        path: {\n           notificationTemplateId: \"4613\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/export-batch": {
+            "post": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "postNotificationTemplatesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplatesPageExportBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplatesPageExportBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "NotificationQueueEntry": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "body": {
+                        "type": "string"
+                    },
+                    "fromName": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "recipients": {
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "recipientsSummary": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "sentDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "readOnly": true
+                    },
+                    "subject": {
+                        "type": "string"
+                    },
+                    "triggerBy": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "typeLabel": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.notification.rest.dto.v1_0.NotificationQueueEntry"
+                    }
+                },
+                "xml": {
+                    "name": "NotificationQueueEntry"
+                },
+                "x-filterable": []
+            },
+            "PageNotificationQueueEntry": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NotificationQueueEntry"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "NotificationTemplate": {
+                "type": "object",
+                "properties": {
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "attachmentObjectFieldExternalReferenceCodes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "attachmentObjectFieldIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "body": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "externalReferenceCode": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "name_i18n": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "objectDefinitionExternalReferenceCode": {
+                        "type": "string"
+                    },
+                    "objectDefinitionId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "recipientType": {
+                        "type": "string"
+                    },
+                    "recipients": {
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "subject": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "system": {
+                        "type": "boolean"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "typeLabel": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.notification.rest.dto.v1_0.NotificationTemplate"
+                    },
+                    "editorType": {
+                        "type": "string",
+                        "enum": [
+                            "freeMarker",
+                            "richText"
+                        ]
+                    }
+                },
+                "xml": {
+                    "name": "NotificationTemplate"
+                },
+                "x-filterable": [
+                    "dateCreated",
+                    "dateModified",
+                    "name",
+                    "userId"
+                ]
+            },
+            "PageNotificationTemplate": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NotificationTemplate"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

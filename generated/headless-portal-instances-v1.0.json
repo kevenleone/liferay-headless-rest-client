@@ -1,1 +1,588 @@
-{"openapi":"3.0.1","info":{"title":"Liferay Portal Instances Headless API","description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.portal.instances.client', and version '1.0.28'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}":{"get":{"tags":["PortalInstance"],"description":"Retrieves the portal instance","operationId":"getPortalInstance","parameters":[{"name":"portalInstanceId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PortalInstance"}}}}}},"delete":{"tags":["PortalInstance"],"description":"Removes the portal instance","operationId":"deletePortalInstance","parameters":[{"name":"portalInstanceId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["PortalInstance"],"description":"Updates the portal instance with information sent in the request body. Only the provided fields are updated.","operationId":"patchPortalInstance","parameters":[{"name":"portalInstanceId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/PortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PortalInstance"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PortalInstance"}}}}}}},"/o/headless-portal-instances/v1.0/portal-instances":{"get":{"tags":["PortalInstance"],"description":"Retrieves the portal instances","operationId":"getPortalInstancesPage","parameters":[{"name":"skipDefault","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PagePortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PagePortalInstance"}}}}}},"post":{"tags":["PortalInstance"],"description":"Adds a new portal instance","operationId":"postPortalInstance","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/PortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PortalInstance"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PortalInstance"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PortalInstance"}}}}}}},"/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/activate":{"put":{"tags":["PortalInstance"],"description":"Activates the portal instance","operationId":"putPortalInstanceActivate","parameters":[{"name":"portalInstanceId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/deactivate":{"put":{"tags":["PortalInstance"],"description":"Deactivates the portal instance. When a portal instance is deactivated, its virtual host will not longer respond requests.","operationId":"putPortalInstanceDeactivate","parameters":[{"name":"portalInstanceId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}}},"components":{"schemas":{"Admin":{"type":"object","properties":{"emailAddress":{"type":"string","description":"Administrator's email address."},"familyName":{"type":"string","description":"The admin's surname (last name)."},"givenName":{"type":"string","description":"The admin's first name."},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.portal.instances.dto.v1_0.Admin"}},"xml":{"name":"Admin"},"x-filterable":[]},"PortalInstance":{"type":"object","properties":{"active":{"type":"boolean","readOnly":true},"admin":{"$ref":"#/components/schemas/Admin"},"companyId":{"type":"integer","description":"internal unique key.","format":"int64"},"domain":{"type":"string","description":"domain used for email authentication."},"portalInstanceId":{"type":"string","description":"public unique key (corresponds to company's webId field)"},"siteInitializerKey":{"type":"string","writeOnly":true},"virtualHost":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.portal.instances.dto.v1_0.PortalInstance"}},"xml":{"name":"PortalInstance"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PagePortalInstance":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/PortalInstance"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Liferay Portal Instances Headless API",
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.portal.instances.client', and version '1.0.29'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}": {
+            "get": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Retrieves the portal instance",
+                "operationId": "getPortalInstance",
+                "parameters": [
+                    {
+                        "name": "portalInstanceId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"2731\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Removes the portal instance",
+                "operationId": "deletePortalInstance",
+                "parameters": [
+                    {
+                        "name": "portalInstanceId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"9356\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Updates the portal instance with information sent in the request body. Only the provided fields are updated.",
+                "operationId": "patchPortalInstance",
+                "parameters": [
+                    {
+                        "name": "portalInstanceId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PortalInstance"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PortalInstance"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"9423\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-portal-instances/v1.0/portal-instances": {
+            "get": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Retrieves the portal instances",
+                "operationId": "getPortalInstancesPage",
+                "parameters": [
+                    {
+                        "name": "skipDefault",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePortalInstance"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePortalInstance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPortalInstancesPage } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPortalInstancesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Adds a new portal instance",
+                "operationId": "postPortalInstance",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PortalInstance"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PortalInstance"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PortalInstance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPortalInstance({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/activate": {
+            "put": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Activates the portal instance",
+                "operationId": "putPortalInstanceActivate",
+                "parameters": [
+                    {
+                        "name": "portalInstanceId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceActivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceActivate({\n        client,\n        path: {\n           portalInstanceId: \"3045\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/activate', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/deactivate": {
+            "put": {
+                "tags": [
+                    "PortalInstance"
+                ],
+                "description": "Deactivates the portal instance. When a portal instance is deactivated, its virtual host will not longer respond requests.",
+                "operationId": "putPortalInstanceDeactivate",
+                "parameters": [
+                    {
+                        "name": "portalInstanceId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceDeactivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceDeactivate({\n        client,\n        path: {\n           portalInstanceId: \"8879\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-portal-instances/v1.0/portal-instances/{portalInstanceId}/deactivate', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Admin": {
+                "type": "object",
+                "properties": {
+                    "emailAddress": {
+                        "type": "string",
+                        "description": "Administrator's email address."
+                    },
+                    "familyName": {
+                        "type": "string",
+                        "description": "The admin's surname (last name)."
+                    },
+                    "givenName": {
+                        "type": "string",
+                        "description": "The admin's first name."
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.portal.instances.dto.v1_0.Admin"
+                    }
+                },
+                "xml": {
+                    "name": "Admin"
+                },
+                "x-filterable": []
+            },
+            "PortalInstance": {
+                "type": "object",
+                "properties": {
+                    "active": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "admin": {
+                        "$ref": "#/components/schemas/Admin"
+                    },
+                    "companyId": {
+                        "type": "integer",
+                        "description": "internal unique key.",
+                        "format": "int64"
+                    },
+                    "domain": {
+                        "type": "string",
+                        "description": "domain used for email authentication."
+                    },
+                    "portalInstanceId": {
+                        "type": "string",
+                        "description": "public unique key (corresponds to company's webId field)"
+                    },
+                    "siteInitializerKey": {
+                        "type": "string",
+                        "writeOnly": true
+                    },
+                    "virtualHost": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.portal.instances.dto.v1_0.PortalInstance"
+                    }
+                },
+                "xml": {
+                    "name": "PortalInstance"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PagePortalInstance": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PortalInstance"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

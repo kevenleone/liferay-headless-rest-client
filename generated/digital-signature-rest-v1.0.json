@@ -1,1 +1,784 @@
-{"openapi":"3.0.1","info":{"description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.digital.signature.rest.client', and version '1.0.32'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/{dsEnvelopeId}":{"get":{"tags":["DSEnvelope"],"operationId":"getSiteDSEnvelope","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}},{"name":"dsEnvelopeId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}}}}}}},"/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes":{"get":{"tags":["DSEnvelope"],"operationId":"getSiteDSEnvelopesPage","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}},{"name":"fromDate","in":"query","schema":{"type":"string"}},{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"order","in":"query","schema":{"type":"string"}},{"name":"page","in":"query","schema":{"type":"string"}},{"name":"pageSize","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"nestedFields","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageDSEnvelope"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageDSEnvelope"}}}}}},"post":{"tags":["DSEnvelope"],"operationId":"postSiteDSEnvelope","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DSEnvelope"}}}}}}},"/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch":{"post":{"tags":["DSEnvelope"],"operationId":"postSiteDSEnvelopeBatch","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/export-batch":{"post":{"tags":["DSEnvelope"],"operationId":"postSiteDSEnvelopesPageExportBatch","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}},{"name":"fromDate","in":"query","schema":{"type":"string"}},{"name":"keywords","in":"query","schema":{"type":"string"}},{"name":"order","in":"query","schema":{"type":"string"}},{"name":"status","in":"query","schema":{"type":"string"}},{"name":"callbackURL","in":"query","schema":{"type":"string"}},{"name":"contentType","in":"query","schema":{"type":"string"}},{"name":"fieldNames","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{}}}}}},"/o/digital-signature-rest/v1.0/sites/{siteId}/ds-recipient-view-definition/{dsEnvelopeId}":{"post":{"tags":["DSRecipientViewDefinition"],"operationId":"postSiteDSRecipientViewDefinition","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}},{"name":"dsEnvelopeId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DSRecipientViewDefinition"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DSRecipientViewDefinition"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/DSEnvelopeSignatureURL"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DSEnvelopeSignatureURL"}}}}}}}},"components":{"schemas":{"DSDocument":{"type":"object","properties":{"assignTabsToDSRecipientId":{"type":"string"},"data":{"type":"string"},"fileEntryExternalReferenceCode":{"type":"string"},"fileExtension":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"transformPDFFields":{"type":"boolean"},"uri":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.digital.signature.rest.dto.v1_0.DSDocument"}},"xml":{"name":"DSDocument"},"x-filterable":[]},"DSEnvelope":{"type":"object","properties":{"dateCreated":{"type":"string","format":"date-time","readOnly":true},"dateModified":{"type":"string","format":"date-time","readOnly":true},"dsDocument":{"type":"array","items":{"$ref":"#/components/schemas/DSDocument"}},"dsRecipient":{"type":"array","items":{"$ref":"#/components/schemas/DSRecipient"}},"emailBlurb":{"type":"string"},"emailSubject":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"senderEmailAddress":{"type":"string"},"siteId":{"type":"integer","format":"int64"},"status":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.digital.signature.rest.dto.v1_0.DSEnvelope"}},"xml":{"name":"DSEnvelope"},"x-filterable":[]},"DSRecipient":{"type":"object","properties":{"dsClientUserId":{"type":"string"},"emailAddress":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"status":{"type":"string"},"tabs":{"type":"object"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.digital.signature.rest.dto.v1_0.DSRecipient"}},"xml":{"name":"DSRecipient"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"PageDSEnvelope":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/DSEnvelope"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"DSEnvelopeSignatureURL":{"type":"object","properties":{"url":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.digital.signature.rest.dto.v1_0.DSEnvelopeSignatureURL"}},"xml":{"name":"DSEnvelopeSignatureURL"},"x-filterable":[]},"DSRecipientViewDefinition":{"type":"object","properties":{"authenticationMethod":{"type":"string"},"dsClientUserId":{"type":"string"},"emailAddress":{"type":"string"},"returnURL":{"type":"string"},"userName":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.digital.signature.rest.dto.v1_0.DSRecipientViewDefinition"}},"xml":{"name":"DSRecipientViewDefinition"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.digital.signature.rest.client', and version '1.0.33'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/{dsEnvelopeId}": {
+            "get": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "getSiteDSEnvelope",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dsEnvelopeId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelope"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelope"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"2626\",\n           dsEnvelopeId: \"7382\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/{dsEnvelopeId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes": {
+            "get": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "getSiteDSEnvelopesPage",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fromDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageDSEnvelope"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageDSEnvelope"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelopesPage } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelopesPage({\n        client,\n        path: {\n           siteId: \"8021\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "postSiteDSEnvelope",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DSEnvelope"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DSEnvelope"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelope"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelope"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"8777\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch": {
+            "post": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "postSiteDSEnvelopeBatch",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopeBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopeBatch({\n        client,\n        path: {\n           siteId: \"5142\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/export-batch": {
+            "post": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "postSiteDSEnvelopesPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fromDate",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "keywords",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopesPageExportBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopesPageExportBatch({\n        client,\n        path: {\n           siteId: \"3475\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-recipient-view-definition/{dsEnvelopeId}": {
+            "post": {
+                "tags": [
+                    "DSRecipientViewDefinition"
+                ],
+                "operationId": "postSiteDSRecipientViewDefinition",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dsEnvelopeId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DSRecipientViewDefinition"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DSRecipientViewDefinition"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelopeSignatureURL"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DSEnvelopeSignatureURL"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSRecipientViewDefinition } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSRecipientViewDefinition({\n        client,\n        path: {\n           siteId: \"4648\",\n           dsEnvelopeId: \"5512\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-recipient-view-definition/{dsEnvelopeId}', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "DSDocument": {
+                "type": "object",
+                "properties": {
+                    "assignTabsToDSRecipientId": {
+                        "type": "string"
+                    },
+                    "data": {
+                        "type": "string"
+                    },
+                    "fileEntryExternalReferenceCode": {
+                        "type": "string"
+                    },
+                    "fileExtension": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "transformPDFFields": {
+                        "type": "boolean"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.digital.signature.rest.dto.v1_0.DSDocument"
+                    }
+                },
+                "xml": {
+                    "name": "DSDocument"
+                },
+                "x-filterable": []
+            },
+            "DSEnvelope": {
+                "type": "object",
+                "properties": {
+                    "dateCreated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dateModified": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "dsDocument": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DSDocument"
+                        }
+                    },
+                    "dsRecipient": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DSRecipient"
+                        }
+                    },
+                    "emailBlurb": {
+                        "type": "string"
+                    },
+                    "emailSubject": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "senderEmailAddress": {
+                        "type": "string"
+                    },
+                    "siteId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.digital.signature.rest.dto.v1_0.DSEnvelope"
+                    }
+                },
+                "xml": {
+                    "name": "DSEnvelope"
+                },
+                "x-filterable": []
+            },
+            "DSRecipient": {
+                "type": "object",
+                "properties": {
+                    "dsClientUserId": {
+                        "type": "string"
+                    },
+                    "emailAddress": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "tabs": {
+                        "type": "object"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.digital.signature.rest.dto.v1_0.DSRecipient"
+                    }
+                },
+                "xml": {
+                    "name": "DSRecipient"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageDSEnvelope": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DSEnvelope"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "DSEnvelopeSignatureURL": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.digital.signature.rest.dto.v1_0.DSEnvelopeSignatureURL"
+                    }
+                },
+                "xml": {
+                    "name": "DSEnvelopeSignatureURL"
+                },
+                "x-filterable": []
+            },
+            "DSRecipientViewDefinition": {
+                "type": "object",
+                "properties": {
+                    "authenticationMethod": {
+                        "type": "string"
+                    },
+                    "dsClientUserId": {
+                        "type": "string"
+                    },
+                    "emailAddress": {
+                        "type": "string"
+                    },
+                    "returnURL": {
+                        "type": "string"
+                    },
+                    "userName": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.digital.signature.rest.dto.v1_0.DSRecipientViewDefinition"
+                    }
+                },
+                "xml": {
+                    "name": "DSRecipientViewDefinition"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

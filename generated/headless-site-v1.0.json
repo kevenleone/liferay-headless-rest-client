@@ -1,1 +1,495 @@
-{"openapi":"3.0.1","info":{"title":"Liferay Sites Headless API","description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.site.client', and version '1.0.22'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/headless-site/v1.0/sites/{siteId}":{"delete":{"tags":["Site"],"description":"Deletes a site and all of its associated content.","operationId":"deleteSite","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}":{"get":{"tags":["Site"],"operationId":"getSiteByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Site"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Site"}}}}}},"put":{"tags":["Site"],"description":"Adds or update a new site","operationId":"putSiteByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"multipart/form-data":{"schema":{"$ref":"#/components/schemas/PutSiteByExternalReferenceCodeRequestBody"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Site"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Site"}}}}}},"delete":{"tags":["Site"],"description":"Deletes a site and all of its associated content.","operationId":"deleteSiteByExternalReferenceCode","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer":{"get":{"tags":["Site"],"operationId":"getSiteByExternalReferenceCodeSiteInitializer","parameters":[{"name":"externalReferenceCode","in":"path","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/zip":{}}}}}},"/o/headless-site/v1.0/sites":{"post":{"tags":["Site"],"description":"Adds a new site","operationId":"postSite_1","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Site"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Site"}},"multipart/form-data":{"schema":{"$ref":"#/components/schemas/PostSiteRequestBody"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Site"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Site"}}}}}}}},"components":{"schemas":{"Site":{"required":["name"],"type":"object","properties":{"externalReferenceCode":{"type":"string","description":"The site's external reference code."},"friendlyUrlPath":{"type":"string","readOnly":true},"id":{"type":"integer","format":"int64","readOnly":true},"key":{"type":"string","readOnly":true},"membershipType":{"type":"string","writeOnly":true,"enum":["open","private","restricted"]},"name":{"type":"string"},"parentSiteKey":{"type":"string","writeOnly":true},"templateKey":{"type":"string","writeOnly":true},"templateType":{"type":"string","writeOnly":true,"enum":["site-initializer","site-template"]},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.headless.site.dto.v1_0.Site"}},"description":"Represents the site being created.","xml":{"name":"Site"},"x-filterable":[]},"PostSiteRequestBody":{"type":"object","properties":{"file":{"type":"string","description":"File","format":"binary"},"site":{"$ref":"#/components/schemas/Site"}},"x-filterable":[]},"MultipartBody":{"type":"object","properties":{"values":{"type":"object","additionalProperties":{"type":"string"}}},"x-filterable":[]},"PutSiteByExternalReferenceCodeRequestBody":{"type":"object","properties":{"file":{"type":"string","description":"File","format":"binary"}},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Liferay Sites Headless API",
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.site.client', and version '1.0.23'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/headless-site/v1.0/sites/{siteId}": {
+            "delete": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Deletes a site and all of its associated content.",
+                "operationId": "deleteSite",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSite } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSite({\n        client,\n        path: {\n           siteId: \"5627\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/{siteId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "Site"
+                ],
+                "operationId": "getSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7659\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Adds or update a new site",
+                "operationId": "putSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PutSiteByExternalReferenceCodeRequestBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"818\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Deletes a site and all of its associated content.",
+                "operationId": "deleteSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7723\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer": {
+            "get": {
+                "tags": [
+                    "Site"
+                ],
+                "operationId": "getSiteByExternalReferenceCodeSiteInitializer",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/zip": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCodeSiteInitializer } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCodeSiteInitializer({\n        client,\n        path: {\n           externalReferenceCode: \"645\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/headless-site/v1.0/sites": {
+            "post": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Adds a new site",
+                "operationId": "postSite_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Site"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Site"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostSiteRequestBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSite_1 } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSite_1({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Site": {
+                "required": [
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "externalReferenceCode": {
+                        "type": "string",
+                        "description": "The site's external reference code."
+                    },
+                    "friendlyUrlPath": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "key": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "membershipType": {
+                        "type": "string",
+                        "writeOnly": true,
+                        "enum": [
+                            "open",
+                            "private",
+                            "restricted"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "parentSiteKey": {
+                        "type": "string",
+                        "writeOnly": true
+                    },
+                    "templateKey": {
+                        "type": "string",
+                        "writeOnly": true
+                    },
+                    "templateType": {
+                        "type": "string",
+                        "writeOnly": true,
+                        "enum": [
+                            "site-initializer",
+                            "site-template"
+                        ]
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.site.dto.v1_0.Site"
+                    }
+                },
+                "description": "Represents the site being created.",
+                "xml": {
+                    "name": "Site"
+                },
+                "x-filterable": []
+            },
+            "PostSiteRequestBody": {
+                "type": "object",
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "description": "File",
+                        "format": "binary"
+                    },
+                    "site": {
+                        "$ref": "#/components/schemas/Site"
+                    }
+                },
+                "x-filterable": []
+            },
+            "MultipartBody": {
+                "type": "object",
+                "properties": {
+                    "values": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "PutSiteByExternalReferenceCodeRequestBody": {
+                "type": "object",
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "description": "File",
+                        "format": "binary"
+                    }
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

@@ -1,1 +1,696 @@
-{"openapi":"3.0.1","info":{"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram":{"get":{"tags":["AssetAppearsOnHistogramMetric"],"operationId":"getGroupAssetMetricAssetTypeAppearsOnHistogram","parameters":[{"name":"groupId","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetType","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetId","in":"query","schema":{"type":"string"}},{"name":"identityType","in":"query","schema":{"type":"string"}},{"name":"rangeKey","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AssetAppearsOnHistogramMetric"}},"application/xml":{"schema":{"$ref":"#/components/schemas/AssetAppearsOnHistogramMetric"}}}}}}},"/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices":{"get":{"tags":["AssetDeviceMetric"],"operationId":"getGroupAssetMetricAssetTypeDevice","parameters":[{"name":"groupId","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetType","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetId","in":"query","schema":{"type":"string"}},{"name":"identityType","in":"query","schema":{"type":"string"}},{"name":"rangeKey","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AssetDeviceMetric"}},"application/xml":{"schema":{"$ref":"#/components/schemas/AssetDeviceMetric"}}}}}}},"/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram":{"get":{"tags":["AssetHistogramMetric"],"operationId":"getGroupAssetMetricAssetTypeHistogram","parameters":[{"name":"groupId","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetType","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetId","in":"query","schema":{"type":"string"}},{"name":"identityType","in":"query","schema":{"type":"string"}},{"name":"rangeKey","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AssetHistogramMetric"}},"application/xml":{"schema":{"$ref":"#/components/schemas/AssetHistogramMetric"}}}}}}},"/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}":{"get":{"tags":["AssetMetric"],"operationId":"getGroupAssetMetric","parameters":[{"name":"groupId","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetType","in":"path","required":true,"schema":{"type":"string"}},{"name":"assetId","in":"query","schema":{"type":"string"}},{"name":"identityType","in":"query","schema":{"type":"string"}},{"name":"rangeKey","in":"query","schema":{"type":"string"}},{"name":"selectedMetrics","in":"query","schema":{"type":"string"}}],"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AssetMetric"}},"application/xml":{"schema":{"$ref":"#/components/schemas/AssetMetric"}}}}}}}},"components":{"schemas":{"AppearsOnHistogram":{"type":"object","properties":{"canonicalUrl":{"type":"string"},"metrics":{"type":"array","items":{"$ref":"#/components/schemas/Metric"}},"pageTitle":{"type":"string"},"total":{"type":"number","format":"double"},"totalValue":{"type":"number","format":"double"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AppearsOnHistogram"}},"xml":{"name":"AppearsOnHistogram"},"x-filterable":[]},"AssetAppearsOnHistogram":{"type":"object","properties":{"appearsOnHistograms":{"type":"array","items":{"$ref":"#/components/schemas/AppearsOnHistogram"}},"metricName":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AssetAppearsOnHistogram"}},"xml":{"name":"AssetAppearsOnHistogram"},"x-filterable":[]},"AssetAppearsOnHistogramMetric":{"type":"object","properties":{"assetAppearsOnHistograms":{"type":"array","items":{"$ref":"#/components/schemas/AssetAppearsOnHistogram"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AssetAppearsOnHistogramMetric"}},"xml":{"name":"AssetAppearsOnHistogramMetric"},"x-filterable":[]},"Metric":{"type":"object","properties":{"metricType":{"type":"string"},"previousValue":{"type":"number","format":"double"},"previousValueKey":{"type":"string"},"trend":{"$ref":"#/components/schemas/Trend"},"value":{"type":"number","format":"double"},"valueKey":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.Metric"}},"xml":{"name":"Metric"},"x-filterable":[]},"Trend":{"type":"object","properties":{"percentage":{"type":"number","format":"double"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.Trend"},"trendClassification":{"type":"string","enum":["NEGATIVE","NEUTRAL","POSITIVE"]}},"xml":{"name":"Trend"},"x-filterable":[]},"AssetDeviceMetric":{"type":"object","properties":{"deviceMetrics":{"type":"array","items":{"$ref":"#/components/schemas/DeviceMetric"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AssetDeviceMetric"}},"xml":{"name":"AssetDeviceMetric"},"x-filterable":[]},"DeviceMetric":{"type":"object","properties":{"metricName":{"type":"string"},"metrics":{"type":"array","items":{"$ref":"#/components/schemas/Metric"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.DeviceMetric"}},"xml":{"name":"DeviceMetric"},"x-filterable":[]},"AssetHistogramMetric":{"type":"object","properties":{"histograms":{"type":"array","items":{"$ref":"#/components/schemas/Histogram"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AssetHistogramMetric"}},"xml":{"name":"AssetHistogramMetric"},"x-filterable":[]},"Histogram":{"type":"object","properties":{"metricName":{"type":"string"},"metrics":{"type":"array","items":{"$ref":"#/components/schemas/Metric"}},"total":{"type":"number","format":"double"},"totalValue":{"type":"number","format":"double"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.Histogram"}},"xml":{"name":"Histogram"},"x-filterable":[]},"AssetMetric":{"type":"object","properties":{"assetId":{"type":"string"},"assetTitle":{"type":"string"},"assetType":{"type":"string"},"dataSourceId":{"type":"string"},"defaultMetric":{"$ref":"#/components/schemas/Metric"},"selectedMetrics":{"type":"array","items":{"$ref":"#/components/schemas/Metric"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.analytics.reports.rest.dto.v1_0.AssetMetric"}},"xml":{"name":"AssetMetric"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0",
+        "description": "HOhoh111o"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram": {
+            "get": {
+                "tags": [
+                    "AssetAppearsOnHistogramMetric"
+                ],
+                "operationId": "getGroupAssetMetricAssetTypeAppearsOnHistogram",
+                "parameters": [
+                    {
+                        "name": "groupId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetType",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identityType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rangeKey",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetAppearsOnHistogramMetric"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetAppearsOnHistogramMetric"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeAppearsOnHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeAppearsOnHistogram({\n        client,\n        path: {\n           groupId: \"8830\",\n           assetType: \"4622\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices": {
+            "get": {
+                "tags": [
+                    "AssetDeviceMetric"
+                ],
+                "operationId": "getGroupAssetMetricAssetTypeDevice",
+                "parameters": [
+                    {
+                        "name": "groupId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetType",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identityType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rangeKey",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetDeviceMetric"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetDeviceMetric"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeDevice } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeDevice({\n        client,\n        path: {\n           groupId: \"2439\",\n           assetType: \"5632\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram": {
+            "get": {
+                "tags": [
+                    "AssetHistogramMetric"
+                ],
+                "operationId": "getGroupAssetMetricAssetTypeHistogram",
+                "parameters": [
+                    {
+                        "name": "groupId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetType",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identityType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rangeKey",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetHistogramMetric"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetHistogramMetric"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeHistogram({\n        client,\n        path: {\n           groupId: \"4790\",\n           assetType: \"5047\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}": {
+            "get": {
+                "tags": [
+                    "AssetMetric"
+                ],
+                "operationId": "getGroupAssetMetric",
+                "parameters": [
+                    {
+                        "name": "groupId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetType",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "assetId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identityType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rangeKey",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "selectedMetrics",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetMetric"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssetMetric"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetric } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetric({\n        client,\n        path: {\n           groupId: \"9378\",\n           assetType: \"4950\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AppearsOnHistogram": {
+                "type": "object",
+                "properties": {
+                    "canonicalUrl": {
+                        "type": "string"
+                    },
+                    "metrics": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Metric"
+                        }
+                    },
+                    "pageTitle": {
+                        "type": "string"
+                    },
+                    "total": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "totalValue": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AppearsOnHistogram"
+                    }
+                },
+                "xml": {
+                    "name": "AppearsOnHistogram"
+                },
+                "x-filterable": []
+            },
+            "AssetAppearsOnHistogram": {
+                "type": "object",
+                "properties": {
+                    "appearsOnHistograms": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AppearsOnHistogram"
+                        }
+                    },
+                    "metricName": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AssetAppearsOnHistogram"
+                    }
+                },
+                "xml": {
+                    "name": "AssetAppearsOnHistogram"
+                },
+                "x-filterable": []
+            },
+            "AssetAppearsOnHistogramMetric": {
+                "type": "object",
+                "properties": {
+                    "assetAppearsOnHistograms": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AssetAppearsOnHistogram"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AssetAppearsOnHistogramMetric"
+                    }
+                },
+                "xml": {
+                    "name": "AssetAppearsOnHistogramMetric"
+                },
+                "x-filterable": []
+            },
+            "Metric": {
+                "type": "object",
+                "properties": {
+                    "metricType": {
+                        "type": "string"
+                    },
+                    "previousValue": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "previousValueKey": {
+                        "type": "string"
+                    },
+                    "trend": {
+                        "$ref": "#/components/schemas/Trend"
+                    },
+                    "value": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "valueKey": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.Metric"
+                    }
+                },
+                "xml": {
+                    "name": "Metric"
+                },
+                "x-filterable": []
+            },
+            "Trend": {
+                "type": "object",
+                "properties": {
+                    "percentage": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.Trend"
+                    },
+                    "trendClassification": {
+                        "type": "string",
+                        "enum": [
+                            "NEGATIVE",
+                            "NEUTRAL",
+                            "POSITIVE"
+                        ]
+                    }
+                },
+                "xml": {
+                    "name": "Trend"
+                },
+                "x-filterable": []
+            },
+            "AssetDeviceMetric": {
+                "type": "object",
+                "properties": {
+                    "deviceMetrics": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DeviceMetric"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AssetDeviceMetric"
+                    }
+                },
+                "xml": {
+                    "name": "AssetDeviceMetric"
+                },
+                "x-filterable": []
+            },
+            "DeviceMetric": {
+                "type": "object",
+                "properties": {
+                    "metricName": {
+                        "type": "string"
+                    },
+                    "metrics": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Metric"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.DeviceMetric"
+                    }
+                },
+                "xml": {
+                    "name": "DeviceMetric"
+                },
+                "x-filterable": []
+            },
+            "AssetHistogramMetric": {
+                "type": "object",
+                "properties": {
+                    "histograms": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Histogram"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AssetHistogramMetric"
+                    }
+                },
+                "xml": {
+                    "name": "AssetHistogramMetric"
+                },
+                "x-filterable": []
+            },
+            "Histogram": {
+                "type": "object",
+                "properties": {
+                    "metricName": {
+                        "type": "string"
+                    },
+                    "metrics": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Metric"
+                        }
+                    },
+                    "total": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "totalValue": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.Histogram"
+                    }
+                },
+                "xml": {
+                    "name": "Histogram"
+                },
+                "x-filterable": []
+            },
+            "AssetMetric": {
+                "type": "object",
+                "properties": {
+                    "assetId": {
+                        "type": "string"
+                    },
+                    "assetTitle": {
+                        "type": "string"
+                    },
+                    "assetType": {
+                        "type": "string"
+                    },
+                    "dataSourceId": {
+                        "type": "string"
+                    },
+                    "defaultMetric": {
+                        "$ref": "#/components/schemas/Metric"
+                    },
+                    "selectedMetrics": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Metric"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.reports.rest.dto.v1_0.AssetMetric"
+                    }
+                },
+                "xml": {
+                    "name": "AssetMetric"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}

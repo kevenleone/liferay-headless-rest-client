@@ -1,1 +1,815 @@
-{"openapi":"3.0.1","info":{"description":"A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.bulk.rest.client', and version '3.0.32'.","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"v1.0"},"servers":[{"url":"http://localhost:8080"}],"paths":{"/o/bulk/v1.0/keywords/batch":{"put":{"tags":["Keyword"],"operationId":"putKeywordBatch","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/KeywordBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/KeywordBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["Keyword"],"operationId":"patchKeywordBatch","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/KeywordBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/KeywordBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/bulk/v1.0/keywords/common":{"post":{"tags":["Keyword"],"operationId":"postKeywordsCommonPage","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageKeyword"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageKeyword"}}}}}}},"/o/bulk/v1.0/bulk-selection":{"post":{"tags":["Selection"],"operationId":"postBulkSelection","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Selection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Selection"}}}}}}},"/o/bulk/v1.0/status":{"get":{"tags":["Status"],"operationId":"getStatus","responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Status"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Status"}}}}}}},"/o/bulk/v1.0/taxonomy-categories/batch":{"put":{"tags":["TaxonomyCategory"],"operationId":"putTaxonomyCategoryBatch","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/TaxonomyCategoryBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/TaxonomyCategoryBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}},"patch":{"tags":["TaxonomyCategory"],"operationId":"patchTaxonomyCategoryBatch","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/TaxonomyCategoryBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/TaxonomyCategoryBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{},"application/xml":{}}}}}},"/o/bulk/v1.0/sites/{siteId}/taxonomy-vocabularies/common":{"post":{"tags":["TaxonomyVocabulary"],"operationId":"postSiteTaxonomyVocabulariesCommonPage","parameters":[{"name":"siteId","in":"path","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}},"application/xml":{"schema":{"$ref":"#/components/schemas/DocumentBulkSelection"}}}},"responses":{"default":{"description":"default response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PageTaxonomyVocabulary"}},"application/xml":{"schema":{"$ref":"#/components/schemas/PageTaxonomyVocabulary"}}}}}}}},"components":{"schemas":{"DocumentBulkSelection":{"type":"object","properties":{"documentIds":{"type":"array","items":{"type":"string"}},"selectionScope":{"$ref":"#/components/schemas/SelectionScope"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.DocumentBulkSelection"}},"xml":{"name":"DocumentBulkSelection"},"x-filterable":[]},"KeywordBulkSelection":{"type":"object","properties":{"documentBulkSelection":{"$ref":"#/components/schemas/DocumentBulkSelection"},"keywordsToAdd":{"type":"array","items":{"type":"string"}},"keywordsToRemove":{"type":"array","items":{"type":"string"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.KeywordBulkSelection"}},"xml":{"name":"KeywordBulkSelection"},"x-filterable":[]},"SelectionScope":{"type":"object","properties":{"folderId":{"type":"integer","format":"int64"},"repositoryId":{"type":"integer","format":"int64"},"selectAll":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.SelectionScope"}},"xml":{"name":"SelectionScope"},"x-filterable":[]},"Facet":{"type":"object","properties":{"facetCriteria":{"type":"string"},"facetValues":{"type":"array","items":{"$ref":"#/components/schemas/FacetValue"}}},"x-filterable":[]},"FacetValue":{"type":"object","properties":{"numberOfOccurrences":{"type":"integer","format":"int32"},"term":{"type":"string"}},"x-filterable":[]},"Keyword":{"type":"object","properties":{"name":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.Keyword"}},"xml":{"name":"Keyword"},"x-filterable":[]},"PageKeyword":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/Keyword"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"Selection":{"type":"object","properties":{"size":{"type":"integer","format":"int64"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.Selection"}},"xml":{"name":"Selection"},"x-filterable":[]},"Status":{"type":"object","properties":{"actionInProgress":{"type":"boolean"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.Status"}},"xml":{"name":"Status"},"x-filterable":[]},"TaxonomyCategoryBulkSelection":{"type":"object","properties":{"documentBulkSelection":{"$ref":"#/components/schemas/DocumentBulkSelection"},"taxonomyCategoryIdsToAdd":{"type":"array","items":{"type":"integer","format":"int64"}},"taxonomyCategoryIdsToRemove":{"type":"array","items":{"type":"integer","format":"int64"}},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.TaxonomyCategoryBulkSelection"}},"xml":{"name":"TaxonomyCategoryBulkSelection"},"x-filterable":[]},"PageTaxonomyVocabulary":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/TaxonomyVocabulary"}},"lastPage":{"type":"integer","format":"int64"},"totalCount":{"type":"integer","format":"int64"},"actions":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"string"}}},"facets":{"type":"array","items":{"$ref":"#/components/schemas/Facet"}},"page":{"type":"integer","format":"int64"},"pageSize":{"type":"integer","format":"int64"}},"x-filterable":[]},"TaxonomyCategory":{"type":"object","properties":{"taxonomyCategoryId":{"type":"integer","format":"int64"},"taxonomyCategoryName":{"type":"string"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.TaxonomyCategory"}},"xml":{"name":"TaxonomyCategory"},"x-filterable":[]},"TaxonomyVocabulary":{"type":"object","properties":{"multiValued":{"type":"boolean"},"name":{"type":"string"},"required":{"type":"boolean"},"taxonomyCategories":{"type":"array","items":{"$ref":"#/components/schemas/TaxonomyCategory"}},"taxonomyVocabularyId":{"type":"integer","format":"int64"},"x-class-name":{"type":"string","readOnly":true,"default":"com.liferay.bulk.rest.dto.v1_0.TaxonomyVocabulary"}},"xml":{"name":"TaxonomyVocabulary"},"x-filterable":[]}}}}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.bulk.rest.client', and version '3.0.33'.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "paths": {
+        "/o/bulk/v1.0/keywords/batch": {
+            "put": {
+                "tags": [
+                    "Keyword"
+                ],
+                "operationId": "putKeywordBatch",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KeywordBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KeywordBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordBatch } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/keywords/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Keyword"
+                ],
+                "operationId": "patchKeywordBatch",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KeywordBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KeywordBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchKeywordBatch } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchKeywordBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/keywords/batch', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/bulk/v1.0/keywords/common": {
+            "post": {
+                "tags": [
+                    "Keyword"
+                ],
+                "operationId": "postKeywordsCommonPage",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageKeyword"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageKeyword"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postKeywordsCommonPage } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postKeywordsCommonPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/keywords/common', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/bulk/v1.0/bulk-selection": {
+            "post": {
+                "tags": [
+                    "Selection"
+                ],
+                "operationId": "postBulkSelection",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Selection"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Selection"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postBulkSelection } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postBulkSelection({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/bulk-selection', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/bulk/v1.0/status": {
+            "get": {
+                "tags": [
+                    "Status"
+                ],
+                "operationId": "getStatus",
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Status"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Status"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStatus } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStatus({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/status', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/bulk/v1.0/taxonomy-categories/batch": {
+            "put": {
+                "tags": [
+                    "TaxonomyCategory"
+                ],
+                "operationId": "putTaxonomyCategoryBatch",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaxonomyCategoryBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaxonomyCategoryBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyCategoryBatch } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyCategoryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/taxonomy-categories/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "TaxonomyCategory"
+                ],
+                "operationId": "patchTaxonomyCategoryBatch",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaxonomyCategoryBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaxonomyCategoryBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchTaxonomyCategoryBatch } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchTaxonomyCategoryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/taxonomy-categories/batch', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        },
+        "/o/bulk/v1.0/sites/{siteId}/taxonomy-vocabularies/common": {
+            "post": {
+                "tags": [
+                    "TaxonomyVocabulary"
+                ],
+                "operationId": "postSiteTaxonomyVocabulariesCommonPage",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentBulkSelection"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageTaxonomyVocabulary"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageTaxonomyVocabulary"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabulariesCommonPage } from 'liferay-headless-rest-client/bulk-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabulariesCommonPage({\n        client,\n        path: {\n           siteId: \"3378\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "\nconst response = await Liferay.Util.fetch('/o/bulk/v1.0/sites/{siteId}/taxonomy-vocabularies/common', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "DocumentBulkSelection": {
+                "type": "object",
+                "properties": {
+                    "documentIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "selectionScope": {
+                        "$ref": "#/components/schemas/SelectionScope"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.DocumentBulkSelection"
+                    }
+                },
+                "xml": {
+                    "name": "DocumentBulkSelection"
+                },
+                "x-filterable": []
+            },
+            "KeywordBulkSelection": {
+                "type": "object",
+                "properties": {
+                    "documentBulkSelection": {
+                        "$ref": "#/components/schemas/DocumentBulkSelection"
+                    },
+                    "keywordsToAdd": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "keywordsToRemove": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.KeywordBulkSelection"
+                    }
+                },
+                "xml": {
+                    "name": "KeywordBulkSelection"
+                },
+                "x-filterable": []
+            },
+            "SelectionScope": {
+                "type": "object",
+                "properties": {
+                    "folderId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "repositoryId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "selectAll": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.SelectionScope"
+                    }
+                },
+                "xml": {
+                    "name": "SelectionScope"
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "Keyword": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.Keyword"
+                    }
+                },
+                "xml": {
+                    "name": "Keyword"
+                },
+                "x-filterable": []
+            },
+            "PageKeyword": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Keyword"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "Selection": {
+                "type": "object",
+                "properties": {
+                    "size": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.Selection"
+                    }
+                },
+                "xml": {
+                    "name": "Selection"
+                },
+                "x-filterable": []
+            },
+            "Status": {
+                "type": "object",
+                "properties": {
+                    "actionInProgress": {
+                        "type": "boolean"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.Status"
+                    }
+                },
+                "xml": {
+                    "name": "Status"
+                },
+                "x-filterable": []
+            },
+            "TaxonomyCategoryBulkSelection": {
+                "type": "object",
+                "properties": {
+                    "documentBulkSelection": {
+                        "$ref": "#/components/schemas/DocumentBulkSelection"
+                    },
+                    "taxonomyCategoryIdsToAdd": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "taxonomyCategoryIdsToRemove": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.TaxonomyCategoryBulkSelection"
+                    }
+                },
+                "xml": {
+                    "name": "TaxonomyCategoryBulkSelection"
+                },
+                "x-filterable": []
+            },
+            "PageTaxonomyVocabulary": {
+                "type": "object",
+                "properties": {
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TaxonomyVocabulary"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "TaxonomyCategory": {
+                "type": "object",
+                "properties": {
+                    "taxonomyCategoryId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "taxonomyCategoryName": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.TaxonomyCategory"
+                    }
+                },
+                "xml": {
+                    "name": "TaxonomyCategory"
+                },
+                "x-filterable": []
+            },
+            "TaxonomyVocabulary": {
+                "type": "object",
+                "properties": {
+                    "multiValued": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "required": {
+                        "type": "boolean"
+                    },
+                    "taxonomyCategories": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TaxonomyCategory"
+                        }
+                    },
+                    "taxonomyVocabularyId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.bulk.rest.dto.v1_0.TaxonomyVocabulary"
+                    }
+                },
+                "xml": {
+                    "name": "TaxonomyVocabulary"
+                },
+                "x-filterable": []
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "JWT Bearer token authentication"
+            },
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic",
+                "description": "Basic HTTP authentication"
+            },
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key",
+                "description": "API key request header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "api_key",
+                "description": "API key query parameter"
+            },
+            "apiKeyCookie": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "api_key",
+                "description": "API key browser cookie"
+            },
+            "oAuth2": {
+                "type": "oauth2",
+                "description": "OAuth 2.0 authentication",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "clientCredentials": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "implicit": {
+                        "authorizationUrl": "https://galaxy.scalar.com/oauth/authorize",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    },
+                    "password": {
+                        "tokenUrl": "https://galaxy.scalar.com/oauth/token",
+                        "scopes": {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets"
+                        }
+                    }
+                }
+            },
+            "openIdConnect": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://galaxy.scalar.com/.well-known/openid-configuration",
+                "description": "OpenID Connect Authentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        },
+        {
+            "basicAuth": []
+        },
+        {
+            "apiKeyQuery": []
+        },
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyCookie": []
+        },
+        {
+            "oAuth2": []
+        },
+        {
+            "openIdConnect": []
+        }
+    ]
+}
