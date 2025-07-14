@@ -5,7 +5,7 @@ class OpenAPIExporter {
     private readonly liferayHost = Bun.env.LIFERAY_HOST;
     private readonly liferayUser = Bun.env.LIFERAY_USER;
     private readonly liferayPassword = Bun.env.LIFERAY_PASSWORD;
-    private readonly outputDir = path.join(__dirname, "generated");
+    private readonly outputDir = path.join(__dirname, "..", "..", "generated");
 
     private async fetchOpenAPISpec(resource: string): Promise<OpenAPISpec> {
         const response = await fetch(

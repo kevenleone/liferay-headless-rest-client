@@ -3,7 +3,9 @@ import { readdirSync } from "node:fs";
 import path from "node:path";
 
 async function main() {
-    const files = await readdirSync(path.join(__dirname, "generated"));
+    const files = await readdirSync(
+        path.join(__dirname, "..", "..", "generated")
+    );
 
     for (const file of files) {
         const name = file.replace(".json", "");
