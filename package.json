@@ -65,8 +65,7 @@
         "./scim-v1.0": "./dist/clients/scim-v1.0/index.js",
         "./search-experiences-rest-v1.0": "./dist/clients/search-experiences-rest-v1.0/index.js",
         "./search-v1.0": "./dist/clients/search-v1.0/index.js",
-        "./segments-asah-v1.0": "./dist/clients/segments-asah-v1.0/index.js",
-        "./test-v1.0": "./dist/clients/test-v1.0/index.js"
+        "./segments-asah-v1.0": "./dist/clients/segments-asah-v1.0/index.js"
     },
     "files": [
         "dist",
@@ -86,10 +85,12 @@
     "scripts": {
         "build": "bun build ./src/clients/*.ts ./src/clients/**/*.ts --outdir ./dist/clients --target node --root ./src/clients --minify && tsc --emitDeclarationOnly --declaration --outDir ./dist/clients ./src/clients/index.ts ./src/clients/**/*.ts || true",
         "format": "biome format .",
-        "postbuild": "bun run src/tools/minify-dts"
+        "postbuild": "bun run src/tools/minify-dts",
+        "generate:clients": "bun run src/tools/create-clients.ts",
+        "generate:openapi": "bun run src/tools/export-openapi.ts"
     },
     "type": "module",
     "types": "./dist/clients/index.d.ts",
     "repository": "https://github.com/kevenleone/liferay-headless-rest-client",
-    "version": "1.0.3-alpha+2025q2"
+    "version": "1.0.3+2025q2"
 }
