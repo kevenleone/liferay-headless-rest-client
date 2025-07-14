@@ -82,7 +82,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplate } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplate({\n        client,\n        path: {\n           siteId: \"3698\",\n           displayPageTemplateKey: \"6289\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplate } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplate({\n        client,\n        path: {\n           siteId: \"7377\",\n           displayPageTemplateKey: \"6648\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -179,7 +179,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplatesPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplatesPage({\n        client,\n        path: {\n           siteId: \"3016\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplatesPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplatesPage({\n        client,\n        path: {\n           siteId: \"1118\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -232,7 +232,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSitePageDefinitionPreview } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSitePageDefinitionPreview({\n        client,\n        path: {\n           siteId: \"4019\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSitePageDefinitionPreview } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSitePageDefinitionPreview({\n        client,\n        path: {\n           siteId: \"2798\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -309,7 +309,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"3340\",\n           version: \"7066\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"5693\",\n           version: \"2537\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -355,7 +355,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"3074\",\n           version: \"2999\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"4102\",\n           version: \"679\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -480,7 +480,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteStructuredContentsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteStructuredContentsPage({\n        client,\n        path: {\n           siteId: \"2217\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteStructuredContentsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteStructuredContentsPage({\n        client,\n        path: {\n           siteId: \"719\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -556,7 +556,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentsVersionsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentsVersionsPage({\n        client,\n        path: {\n           structuredContentId: \"6061\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentsVersionsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentsVersionsPage({\n        client,\n        path: {\n           structuredContentId: \"8843\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -618,7 +618,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteStructuredContentDraft } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteStructuredContentDraft({\n        client,\n        path: {\n           siteId: \"6798\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteStructuredContentDraft } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteStructuredContentDraft({\n        client,\n        path: {\n           siteId: \"4935\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2210,28 +2210,5 @@
                 "description": "OpenID Connect Authentication"
             }
         }
-    },
-    "security": [
-        {
-            "bearerAuth": []
-        },
-        {
-            "basicAuth": []
-        },
-        {
-            "apiKeyQuery": []
-        },
-        {
-            "apiKeyHeader": []
-        },
-        {
-            "apiKeyCookie": []
-        },
-        {
-            "oAuth2": []
-        },
-        {
-            "openIdConnect": []
-        }
-    ]
+    }
 }

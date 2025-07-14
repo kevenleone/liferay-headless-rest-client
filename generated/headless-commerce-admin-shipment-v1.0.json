@@ -52,7 +52,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"8258\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"4234\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -89,7 +89,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"3221\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"4446\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -148,7 +148,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"3744\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentItem({\n        client,\n        path: {\n           shipmentItemId: \"792\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -241,7 +241,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeItem({\n        client,\n        path: {\n           externalReferenceCode: \"4354\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeItem({\n        client,\n        path: {\n           externalReferenceCode: \"5807\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -278,7 +278,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8456\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"160\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -337,7 +337,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6656\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4827\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -405,7 +405,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeItemsPage } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeItemsPage({\n        client,\n        path: {\n           externalReferenceCode: \"223\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeItemsPage } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeItemsPage({\n        client,\n        path: {\n           externalReferenceCode: \"1538\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -464,7 +464,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putShipmentByExternalReferenceCodeItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putShipmentByExternalReferenceCodeItem({\n        client,\n        path: {\n           externalReferenceCode: \"218\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putShipmentByExternalReferenceCodeItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putShipmentByExternalReferenceCodeItem({\n        client,\n        path: {\n           externalReferenceCode: \"8419\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -523,7 +523,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9162\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2220\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -591,7 +591,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentItemsPage } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentItemsPage({\n        client,\n        path: {\n           shipmentId: \"7042\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentItemsPage } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentItemsPage({\n        client,\n        path: {\n           shipmentId: \"1856\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -650,7 +650,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentItem({\n        client,\n        path: {\n           shipmentId: \"1098\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentItem } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentItem({\n        client,\n        path: {\n           shipmentId: \"2330\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -697,7 +697,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipment({\n        client,\n        path: {\n           shipmentId: \"4682\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipment({\n        client,\n        path: {\n           shipmentId: \"8695\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -734,7 +734,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipment({\n        client,\n        path: {\n           shipmentId: \"2245\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipment({\n        client,\n        path: {\n           shipmentId: \"5178\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -793,7 +793,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipment({\n        client,\n        path: {\n           shipmentId: \"6326\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipment } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipment({\n        client,\n        path: {\n           shipmentId: \"1627\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -931,7 +931,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2291\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3352\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -990,7 +990,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1961\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1731\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1027,7 +1027,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2248\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4079\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1086,7 +1086,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"74\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6665\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1263,7 +1263,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusDelivered } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusDelivered({\n        client,\n        path: {\n           externalReferenceCode: \"4756\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusDelivered } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusDelivered({\n        client,\n        path: {\n           externalReferenceCode: \"2611\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1310,7 +1310,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusFinishProcessing } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusFinishProcessing({\n        client,\n        path: {\n           externalReferenceCode: \"1280\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusFinishProcessing } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusFinishProcessing({\n        client,\n        path: {\n           externalReferenceCode: \"7216\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1357,7 +1357,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusShipped } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusShipped({\n        client,\n        path: {\n           externalReferenceCode: \"4424\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentByExternalReferenceCodeStatusShipped } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentByExternalReferenceCodeStatusShipped({\n        client,\n        path: {\n           externalReferenceCode: \"1308\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1404,7 +1404,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusDelivered } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusDelivered({\n        client,\n        path: {\n           shipmentId: \"4928\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusDelivered } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusDelivered({\n        client,\n        path: {\n           shipmentId: \"6446\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1451,7 +1451,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusFinishProcessing } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusFinishProcessing({\n        client,\n        path: {\n           shipmentId: \"2481\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusFinishProcessing } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusFinishProcessing({\n        client,\n        path: {\n           shipmentId: \"7695\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1498,7 +1498,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusShipped } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusShipped({\n        client,\n        path: {\n           shipmentId: \"4592\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postShipmentStatusShipped } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postShipmentStatusShipped({\n        client,\n        path: {\n           shipmentId: \"5764\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1617,7 +1617,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"4140\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentByExternalReferenceCodeShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentByExternalReferenceCodeShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"365\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1676,7 +1676,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentByExternalReferenceCodeShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentByExternalReferenceCodeShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"1533\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentByExternalReferenceCodeShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentByExternalReferenceCodeShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"5713\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1723,7 +1723,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentShippingAddress({\n        client,\n        path: {\n           shipmentId: \"1349\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getShipmentShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getShipmentShippingAddress({\n        client,\n        path: {\n           shipmentId: \"4562\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1782,7 +1782,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentShippingAddress({\n        client,\n        path: {\n           shipmentId: \"5229\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchShipmentShippingAddress } from 'liferay-headless-rest-client/headless-commerce-admin-shipment-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchShipmentShippingAddress({\n        client,\n        path: {\n           shipmentId: \"9041\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2397,28 +2397,5 @@
                 "description": "OpenID Connect Authentication"
             }
         }
-    },
-    "security": [
-        {
-            "bearerAuth": []
-        },
-        {
-            "basicAuth": []
-        },
-        {
-            "apiKeyQuery": []
-        },
-        {
-            "apiKeyHeader": []
-        },
-        {
-            "apiKeyCookie": []
-        },
-        {
-            "oAuth2": []
-        },
-        {
-            "openIdConnect": []
-        }
-    ]
+    }
 }
