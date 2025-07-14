@@ -1,11 +1,96 @@
 import path from "node:path";
+
 import type { OpenAPISpec, OpenAPIPathItem, OpenAPIOperation } from "./types";
+import {
+    getSDKSourceSample,
+    getSourceSample,
+} from "../utils/get-source-sample";
 
 class OpenAPIExporter {
     private readonly liferayHost = Bun.env.LIFERAY_HOST;
     private readonly liferayUser = Bun.env.LIFERAY_USER;
     private readonly liferayPassword = Bun.env.LIFERAY_PASSWORD;
     private readonly outputDir = path.join(__dirname, "..", "..", "generated");
+
+    private getSecuritySchemas() {
+        return {
+            bearerAuth: {
+                type: "http",
+                scheme: "bearer",
+                description: "JWT Bearer token authentication",
+            },
+            basicAuth: {
+                type: "http",
+                scheme: "basic",
+                description: "Basic HTTP authentication",
+            },
+            apiKeyHeader: {
+                type: "apiKey",
+                in: "header",
+                name: "X-API-Key",
+                description: "API key request header",
+            },
+            apiKeyQuery: {
+                type: "apiKey",
+                in: "query",
+                name: "api_key",
+                description: "API key query parameter",
+            },
+            apiKeyCookie: {
+                type: "apiKey",
+                in: "cookie",
+                name: "api_key",
+                description: "API key browser cookie",
+            },
+            oAuth2: {
+                type: "oauth2",
+                description: "OAuth 2.0 authentication",
+                flows: {
+                    authorizationCode: {
+                        authorizationUrl:
+                            "https://galaxy.scalar.com/oauth/authorize",
+                        tokenUrl: "https://galaxy.scalar.com/oauth/token",
+                        scopes: {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets",
+                        },
+                    },
+                    clientCredentials: {
+                        tokenUrl: "https://galaxy.scalar.com/oauth/token",
+                        scopes: {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets",
+                        },
+                    },
+                    implicit: {
+                        authorizationUrl:
+                            "https://galaxy.scalar.com/oauth/authorize",
+                        scopes: {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets",
+                        },
+                    },
+                    password: {
+                        tokenUrl: "https://galaxy.scalar.com/oauth/token",
+                        scopes: {
+                            "read:account": "read your account information",
+                            "write:planets": "modify planets in your account",
+                            "read:planets": "read your planets",
+                        },
+                    },
+                },
+            },
+            openIdConnect: {
+                type: "openIdConnect",
+                openIdConnectUrl:
+                    "https://galaxy.scalar.com/.well-known/openid-configuration",
+                description: "OpenID Connect Authentication",
+            },
+        };
+    }
 
     private async fetchOpenAPISpec(resource: string): Promise<OpenAPISpec> {
         const response = await fetch(
@@ -30,8 +115,10 @@ class OpenAPIExporter {
 
     private transformPaths(
         data: OpenAPISpec,
-        resourceBareName: string
+        resource: string
     ): Record<string, OpenAPIPathItem> {
+        const [resourceBareName] = resource.split("/");
+
         const updatedPaths: Record<string, OpenAPIPathItem> = {};
 
         for (const path in data.paths) {
@@ -39,11 +126,28 @@ class OpenAPIExporter {
             const newPath = `/o/${resourceBareName + path}`;
 
             for (const method in entry) {
-                if (method !== "get") continue;
-
                 const operation = entry[
                     method as keyof OpenAPIPathItem
                 ] as OpenAPIOperation;
+
+                operation["x-codeSamples"] = [
+                    {
+                        lang: "typescript",
+                        label: "sdk",
+                        source: getSDKSourceSample(
+                            operation,
+                            resource.replace("/", "-")
+                        ),
+                    },
+                    {
+                        lang: "javascript",
+                        label: "Liferay.Util.fetch",
+                        source: getSourceSample(method, newPath),
+                    },
+                ];
+
+                if (method !== "get") continue;
+
                 const operationId = operation.operationId;
 
                 if (operationId.endsWith("Page")) {
@@ -68,7 +172,7 @@ class OpenAPIExporter {
     ): Promise<void> {
         await Bun.write(
             path.join(this.outputDir, `${resourceName}.json`),
-            JSON.stringify(data)
+            JSON.stringify(data, null, 4)
         );
 
         console.log(`✅ Saved ${resourceName}.json`);
@@ -78,8 +182,6 @@ class OpenAPIExporter {
         data: OpenAPISpec,
         resource: string
     ): OpenAPISpec {
-        const [resourceBareName] = resource.split("/");
-
         data.servers = data.servers.map((server) => ({
             ...server,
             url: this.liferayHost || "http://localhost:8080",
@@ -89,11 +191,45 @@ class OpenAPIExporter {
 
         const { "/v1.0/openapi.{type}": _, ...paths } = data.paths;
 
+        if (!data.info.description) {
+            data.info.description = "HOhoh111o";
+        }
+
+        // Add Security Options to make requests more flexible.
+
+        data.security = [
+            {
+                bearerAuth: [],
+            },
+            {
+                basicAuth: [],
+            },
+            {
+                apiKeyQuery: [],
+            },
+            {
+                apiKeyHeader: [],
+            },
+            {
+                apiKeyCookie: [],
+            },
+            {
+                oAuth2: [],
+            },
+            {
+                openIdConnect: [],
+            },
+        ];
+
         data.paths = paths;
 
         return {
             ...data,
-            paths: this.transformPaths(data, resourceBareName),
+            components: {
+                ...data.components,
+                securitySchemes: this.getSecuritySchemas(),
+            },
+            paths: this.transformPaths(data, resource),
         };
     }
 
@@ -176,7 +312,6 @@ const resources = [
     "search/v1.0",
     "search-experiences-rest/v1.0",
     "segments-asah/v1.0",
-    "test/v1.0",
 ];
 
 const exporter = new OpenAPIExporter();

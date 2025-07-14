@@ -1,17 +1,21 @@
 export interface OpenAPISpec {
-    openapi: "3.0.1";
-    info: {
-        title: string;
-        version: string;
-        description?: string;
-    };
-    servers: OpenAPIServer[];
-    paths: Record<string, OpenAPIPathItem>;
     components?: {
-        schemas?: Record<string, unknown>;
         parameters?: Record<string, unknown>;
         responses?: Record<string, unknown>;
+        schemas?: Record<string, unknown>;
+        securitySchemes?: Record<string, unknown>;
     };
+    info: {
+        description?: string;
+        title: string;
+        version: string;
+    };
+    openapi: "3.0.1";
+    paths: Record<string, OpenAPIPathItem>;
+    security?: {
+        [key: string]: any[];
+    }[];
+    servers: OpenAPIServer[];
 }
 
 export interface OpenAPIServer {
@@ -44,6 +48,11 @@ export interface OpenAPIOperation {
     parameters?: OpenAPIParameter[];
     responses: Record<string, OpenAPIResponse>;
     requestBody?: OpenAPIRequestBody;
+    "x-codeSamples"?: {
+        label: string;
+        lang: string;
+        source: string;
+    }[];
 }
 
 export interface OpenAPIParameter {
