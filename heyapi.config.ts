@@ -7,7 +7,7 @@ if (!FILE || !NAME) {
 }
 
 export default defineConfig({
-    input: `src/tools/generated/${FILE}`,
+    input: `generated/${FILE}`,
     output: {
         path: `src/clients/${NAME}`,
     },

@@ -192,34 +192,8 @@ class OpenAPIExporter {
         const { "/v1.0/openapi.{type}": _, ...paths } = data.paths;
 
         if (!data.info.description) {
-            data.info.description = "HOhoh111o";
+            data.info.description = "...";
         }
-
-        // Add Security Options to make requests more flexible.
-
-        data.security = [
-            {
-                bearerAuth: [],
-            },
-            {
-                basicAuth: [],
-            },
-            {
-                apiKeyQuery: [],
-            },
-            {
-                apiKeyHeader: [],
-            },
-            {
-                apiKeyCookie: [],
-            },
-            {
-                oAuth2: [],
-            },
-            {
-                openIdConnect: [],
-            },
-        ];
 
         data.paths = paths;
 
