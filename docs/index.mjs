@@ -1,6 +1,7 @@
 import { resources } from "./resources.mjs";
 
-const resourcesDomain = "http://localhost:63957";
+const resourcesDomain =
+    "https://raw.githubusercontent.com/kevenleone/liferay-headless-rest-client/refs/heads/main/generated";
 
 Scalar.createApiReference("#app", {
     defaultHttpClient: {
