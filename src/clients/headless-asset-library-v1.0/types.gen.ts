@@ -10,6 +10,14 @@ export type AssetLibrary = {
         };
     };
     /**
+     * The asset library's key.
+     */
+    assetLibraryKey?: string;
+    /**
+     * The asset library's creator user ID.
+     */
+    readonly creatorUserId?: number;
+    /**
      * The asset library's creation date.
      */
     readonly dateCreated?: string;
@@ -32,7 +40,7 @@ export type AssetLibrary = {
      */
     externalReferenceCode?: string;
     /**
-     * The asset library's site ID.
+     * The asset library's ID.
      */
     readonly id?: number;
     /**
@@ -58,6 +66,10 @@ export type AssetLibrary = {
      */
     readonly numberOfUserGroups?: number;
     settings?: Settings;
+    /**
+     * The asset library's site ID.
+     */
+    readonly siteId?: number;
     /**
      * The asset library's connected sites.
      */
@@ -90,8 +102,8 @@ export type MimeTypeLimit = {
 };
 
 export type PageAssetLibrary = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AssetLibrary>;
     actions?: {
         [key: string]: {
@@ -223,8 +235,8 @@ export type UserGroup = {
 };
 
 export type PageSite = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Site>;
     actions?: {
         [key: string]: {
@@ -237,8 +249,8 @@ export type PageSite = {
 };
 
 export type PageUserAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UserAccount>;
     actions?: {
         [key: string]: {
@@ -251,8 +263,8 @@ export type PageUserAccount = {
 };
 
 export type PageUserGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UserGroup>;
     actions?: {
         [key: string]: {
@@ -323,6 +335,42 @@ export type PatchAssetLibraryResponses = {
 };
 
 export type PatchAssetLibraryResponse = PatchAssetLibraryResponses[keyof PatchAssetLibraryResponses];
+
+export type DeleteAssetLibraryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
+};
+
+export type DeleteAssetLibraryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PostAssetLibraryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
+};
+
+export type PostAssetLibraryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
 
 export type DeleteAssetLibraryByExternalReferenceCodeData = {
     body?: never;

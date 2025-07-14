@@ -53,8 +53,8 @@ export type FacetValue = {
 };
 
 export type PageReplenishmentItem = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ReplenishmentItem>;
     actions?: {
         [key: string]: {
@@ -67,8 +67,8 @@ export type PageReplenishmentItem = {
 };
 
 export type PageWarehouseAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WarehouseAccountGroup>;
     actions?: {
         [key: string]: {
@@ -96,8 +96,8 @@ export type WarehouseAccountGroup = {
 };
 
 export type PageWarehouseAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WarehouseAccount>;
     actions?: {
         [key: string]: {
@@ -125,8 +125,8 @@ export type WarehouseAccount = {
 };
 
 export type PageWarehouseChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WarehouseChannel>;
     actions?: {
         [key: string]: {
@@ -154,8 +154,8 @@ export type WarehouseChannel = {
 };
 
 export type PageWarehouseItem = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WarehouseItem>;
     actions?: {
         [key: string]: {
@@ -181,8 +181,8 @@ export type WarehouseItem = {
 };
 
 export type PageWarehouseOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WarehouseOrderType>;
     actions?: {
         [key: string]: {
@@ -240,8 +240,8 @@ export type Warehouse = {
 };
 
 export type PageWarehouse = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Warehouse>;
     actions?: {
         [key: string]: {

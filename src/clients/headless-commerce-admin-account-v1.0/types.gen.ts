@@ -32,8 +32,8 @@ export type FacetValue = {
 };
 
 export type PageAccountAddress = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountAddress>;
     actions?: {
         [key: string]: {
@@ -64,8 +64,8 @@ export type AccountChannelEntry = {
 };
 
 export type PageAccountChannelEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountChannelEntry>;
     actions?: {
         [key: string]: {
@@ -96,8 +96,8 @@ export type AccountChannelShippingOption = {
 };
 
 export type PageAccountChannelShippingOption = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountChannelShippingOption>;
     actions?: {
         [key: string]: {
@@ -133,8 +133,8 @@ export type AccountRole = {
 };
 
 export type PageAccountMember = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountMember>;
     actions?: {
         [key: string]: {
@@ -156,8 +156,8 @@ export type AccountOrganization = {
 };
 
 export type PageAccountOrganization = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountOrganization>;
     actions?: {
         [key: string]: {
@@ -215,8 +215,8 @@ export type Account = {
 };
 
 export type PageAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Account>;
     actions?: {
         [key: string]: {
@@ -248,8 +248,8 @@ export type AdminAccountGroup = {
 };
 
 export type PageAdminAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AdminAccountGroup>;
     actions?: {
         [key: string]: {
@@ -283,15 +283,15 @@ export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
+export type CUserAdditionalInfo = {
+    [key: string]: unknown;
+};
+
 export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
-    [key: string]: unknown;
-};
-
-export type CUserAdditionalInfo = {
     [key: string]: unknown;
 };
 

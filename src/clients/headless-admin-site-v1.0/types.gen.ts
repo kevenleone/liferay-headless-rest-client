@@ -11,8 +11,8 @@ export type FacetValue = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -115,8 +115,8 @@ export type DisplayPageTemplateFolder = {
 };
 
 export type PageDisplayPageTemplateFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DisplayPageTemplateFolder>;
     actions?: {
         [key: string]: {
@@ -1226,6 +1226,10 @@ export type PageSpecification = {
      */
     externalReferenceCode?: string;
     settings?: Settings;
+    /**
+     * The site template page specification's external reference code.
+     */
+    siteTemplatePageSpecificationExternalReferenceCode?: string;
     readonly 'x-class-name'?: string;
     /**
      * The status of the page specification.
@@ -1565,8 +1569,8 @@ export type WidgetPermission = {
 };
 
 export type PageDisplayPageTemplate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DisplayPageTemplate>;
     actions?: {
         [key: string]: {
@@ -1622,8 +1626,8 @@ export type FragmentComposition = {
 };
 
 export type PageFragmentComposition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<FragmentComposition>;
     actions?: {
         [key: string]: {
@@ -1796,9 +1800,9 @@ export type ParentTaxonomyVocabulary = {
      * The parent category's `TaxonomyVocabulary` external reference code.
      */
     externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
+    readonly id?: number;
+    readonly name?: string;
+    readonly name_i18n?: {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
@@ -1813,6 +1817,7 @@ export type TaxonomyCategory = {
             [key: string]: string;
         };
     };
+    readonly assetLibraryKey?: string;
     /**
      * A list of languages the category has a translation for.
      */
@@ -1896,8 +1901,8 @@ export type TaxonomyCategoryProperty = {
 };
 
 export type PageMasterPage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MasterPage>;
     actions?: {
         [key: string]: {
@@ -1910,8 +1915,8 @@ export type PageMasterPage = {
 };
 
 export type PagePageElement = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageElement>;
     actions?: {
         [key: string]: {
@@ -1924,8 +1929,8 @@ export type PagePageElement = {
 };
 
 export type PagePageExperience = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageExperience>;
     actions?: {
         [key: string]: {
@@ -1938,8 +1943,8 @@ export type PagePageExperience = {
 };
 
 export type PagePageRuleAction = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageRuleAction>;
     actions?: {
         [key: string]: {
@@ -1952,8 +1957,8 @@ export type PagePageRuleAction = {
 };
 
 export type PagePageRuleCondition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageRuleCondition>;
     actions?: {
         [key: string]: {
@@ -1966,8 +1971,8 @@ export type PagePageRuleCondition = {
 };
 
 export type PagePageRule = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageRule>;
     actions?: {
         [key: string]: {
@@ -1980,8 +1985,8 @@ export type PagePageRule = {
 };
 
 export type PagePageSpecification = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageSpecification>;
     actions?: {
         [key: string]: {
@@ -2172,8 +2177,8 @@ export type WidgetPageTemplateSettings = PageTemplateSettings & {
 };
 
 export type PagePageTemplate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageTemplate>;
     actions?: {
         [key: string]: {
@@ -2186,8 +2191,8 @@ export type PagePageTemplate = {
 };
 
 export type PagePageTemplateSet = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PageTemplateSet>;
     actions?: {
         [key: string]: {
@@ -2457,8 +2462,8 @@ export type WidgetPageSettings = PageSettings & {
 };
 
 export type PageSitePage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SitePage>;
     actions?: {
         [key: string]: {
@@ -2552,8 +2557,8 @@ export type UtilityPageSettings = {
 };
 
 export type PageUtilityPage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UtilityPage>;
     actions?: {
         [key: string]: {
@@ -2566,8 +2571,8 @@ export type PageUtilityPage = {
 };
 
 export type PageWidgetPageWidgetInstance = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WidgetPageWidgetInstance>;
     actions?: {
         [key: string]: {

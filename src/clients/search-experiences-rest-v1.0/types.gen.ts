@@ -18,8 +18,8 @@ export type FieldMappingInfo = {
 };
 
 export type PageFieldMappingInfo = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<FieldMappingInfo>;
     actions?: {
         [key: string]: {
@@ -37,8 +37,8 @@ export type KeywordQueryContributor = {
 };
 
 export type PageKeywordQueryContributor = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<KeywordQueryContributor>;
     actions?: {
         [key: string]: {
@@ -56,8 +56,8 @@ export type ModelPrefilterContributor = {
 };
 
 export type PageModelPrefilterContributor = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ModelPrefilterContributor>;
     actions?: {
         [key: string]: {
@@ -70,8 +70,8 @@ export type PageModelPrefilterContributor = {
 };
 
 export type PageQueryPrefilterContributor = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<QueryPrefilterContributor>;
     actions?: {
         [key: string]: {
@@ -466,8 +466,8 @@ export type UiConfiguration = {
 };
 
 export type PageSxpBlueprint = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SxpBlueprint>;
     actions?: {
         [key: string]: {
@@ -480,8 +480,8 @@ export type PageSxpBlueprint = {
 };
 
 export type PageSxpElement = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SxpElement>;
     actions?: {
         [key: string]: {
@@ -494,8 +494,8 @@ export type PageSxpElement = {
 };
 
 export type PageSxpParameterContributorDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SxpParameterContributorDefinition>;
     actions?: {
         [key: string]: {
@@ -515,8 +515,8 @@ export type SxpParameterContributorDefinition = {
 };
 
 export type PageSearchIndex = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SearchIndex>;
     actions?: {
         [key: string]: {
@@ -586,8 +586,8 @@ export type SearchResponse = {
 };
 
 export type PageSearchableAssetNameDisplay = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SearchableAssetNameDisplay>;
     actions?: {
         [key: string]: {
@@ -607,8 +607,8 @@ export type SearchableAssetNameDisplay = {
 };
 
 export type PageSearchableAssetName = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SearchableAssetName>;
     actions?: {
         [key: string]: {

@@ -23,8 +23,8 @@ export type FacetValue = {
 };
 
 export type PageAssignee = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Assignee>;
     actions?: {
         [key: string]: {
@@ -37,8 +37,8 @@ export type PageAssignee = {
 };
 
 export type PageTransition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Transition>;
     actions?: {
         [key: string]: {
@@ -59,8 +59,8 @@ export type Transition = {
 };
 
 export type PageWorkflowDefinitionLink = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WorkflowDefinitionLink>;
     actions?: {
         [key: string]: {
@@ -161,8 +161,8 @@ export type WorkflowDefinition = {
 };
 
 export type PageWorkflowDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WorkflowDefinition>;
     actions?: {
         [key: string]: {
@@ -227,8 +227,8 @@ export type WorkflowInstance = {
 };
 
 export type PageWorkflowInstance = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WorkflowInstance>;
     actions?: {
         [key: string]: {
@@ -261,8 +261,8 @@ export type WorkflowInstanceSubmit = {
 };
 
 export type PageWorkflowLog = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WorkflowLog>;
     actions?: {
         [key: string]: {
@@ -379,8 +379,8 @@ export type WorkflowTaskIds = {
 };
 
 export type PageWorkflowTask = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WorkflowTask>;
     actions?: {
         [key: string]: {

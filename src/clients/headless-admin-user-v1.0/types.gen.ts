@@ -156,8 +156,8 @@ export type Geo = {
 };
 
 export type PageAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountGroup>;
     actions?: {
         [key: string]: {
@@ -861,8 +861,8 @@ export type WebUrl = {
 };
 
 export type PageAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Account>;
     actions?: {
         [key: string]: {
@@ -875,8 +875,8 @@ export type PageAccount = {
 };
 
 export type PageAccountRole = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountRole>;
     actions?: {
         [key: string]: {
@@ -889,8 +889,8 @@ export type PageAccountRole = {
 };
 
 export type PageEmailAddress = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<EmailAddress>;
     actions?: {
         [key: string]: {
@@ -1112,8 +1112,8 @@ export type UserAccountBrief = {
 };
 
 export type PageOrganization = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Organization>;
     actions?: {
         [key: string]: {
@@ -1126,8 +1126,8 @@ export type PageOrganization = {
 };
 
 export type PageUserAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UserAccount>;
     actions?: {
         [key: string]: {
@@ -1140,8 +1140,8 @@ export type PageUserAccount = {
 };
 
 export type PagePhone = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Phone>;
     actions?: {
         [key: string]: {
@@ -1154,8 +1154,8 @@ export type PagePhone = {
 };
 
 export type PagePostalAddress = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PostalAddress>;
     actions?: {
         [key: string]: {
@@ -1232,8 +1232,8 @@ export type RolePermission = {
 };
 
 export type PageRole = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Role>;
     actions?: {
         [key: string]: {
@@ -1246,8 +1246,8 @@ export type PageRole = {
 };
 
 export type PageSegment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Segment>;
     actions?: {
         [key: string]: {
@@ -1307,8 +1307,8 @@ export type Segment = {
 };
 
 export type PageSegmentUser = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SegmentUser>;
     actions?: {
         [key: string]: {
@@ -1337,8 +1337,8 @@ export type SegmentUser = {
 };
 
 export type PageSharedAsset = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SharedAsset>;
     actions?: {
         [key: string]: {
@@ -1410,8 +1410,8 @@ export type SharedAsset = {
 };
 
 export type PageSite = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Site>;
     actions?: {
         [key: string]: {
@@ -1461,8 +1461,8 @@ export type Subscription = {
 };
 
 export type PageSubscription = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Subscription>;
     actions?: {
         [key: string]: {
@@ -1539,8 +1539,8 @@ export type UserGroup = {
 };
 
 export type PageUserGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UserGroup>;
     actions?: {
         [key: string]: {
@@ -1553,8 +1553,8 @@ export type PageUserGroup = {
 };
 
 export type PageWebUrl = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WebUrl>;
     actions?: {
         [key: string]: {
@@ -1564,75 +1564,6 @@ export type PageWebUrl = {
     pageSize?: number;
     facets?: Array<Facet>;
     page?: number;
-};
-
-export type PublisherAssets = {
-    readonly actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    /**
-     * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
-     */
-    readonly auditEvents?: Array<AuditEvent>;
-    readonly creator?: string;
-    readonly dateCreated?: string;
-    readonly dateModified?: string;
-    defaultLanguageId?: string;
-    displayDate?: string;
-    expirationDate?: string;
-    externalReferenceCode?: string;
-    /**
-     * A relative URL to the page's rendered content.
-     */
-    friendlyUrlPath?: string;
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    readonly id?: number;
-    /**
-     * A list of keywords describing the object entry.
-     */
-    keywords?: Array<string>;
-    objectEntryFolderExternalReferenceCode?: string;
-    objectEntryFolderId?: number;
-    permissions?: Array<Permission>;
-    reviewDate?: string;
-    readonly scopeKey?: string;
-    readonly status?: number;
-    /**
-     * The categories associated with this object entry.
-     */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
-    taxonomyCategoryIds?: Array<number>;
-    readonly 'x-class-name'?: string;
-    readonly 'x-schema-name'?: string;
-    name?: string;
-    publisherAssetType?: ListEntry;
-    r_accountEntryToPublisherAssets_accountEntryId?: number;
-    /**
-     * Information about the relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets?: {
-        [key: string]: unknown;
-    };
-    r_accountEntryToPublisherAssets_accountEntryERC?: string;
-    readonly accountEntryToPublisherAssetsERC?: string;
-    r_productEntryToPublisherAssets_CPDefinitionId?: number;
-    /**
-     * Information about the relationship productEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    productEntryToPublisherAssets?: {
-        [key: string]: unknown;
-    };
-    r_productEntryToPublisherAssets_CPDefinitionERC?: string;
-    readonly productEntryToPublisherAssetsERC?: string;
-    sourceCode?: FileEntry;
-    version?: string;
 };
 
 export type OAuth2DxpAuthorization = {
@@ -1671,6 +1602,7 @@ export type OAuth2DxpAuthorization = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1690,6 +1622,76 @@ export type OAuth2DxpAuthorization = {
     };
     r_accountToOAuth2DxpAuthorization_accountEntryERC?: string;
     readonly accountToOAuth2DxpAuthorizationERC?: string;
+};
+
+export type PublisherAssets = {
+    readonly actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    /**
+     * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
+     */
+    readonly auditEvents?: Array<AuditEvent>;
+    readonly creator?: string;
+    readonly dateCreated?: string;
+    readonly dateModified?: string;
+    defaultLanguageId?: string;
+    displayDate?: string;
+    expirationDate?: string;
+    externalReferenceCode?: string;
+    /**
+     * A relative URL to the page's rendered content.
+     */
+    friendlyUrlPath?: string;
+    /**
+     * The localized relative URLs to the page's rendered content.
+     */
+    friendlyUrlPath_i18n?: {
+        [key: string]: string;
+    };
+    readonly id?: number;
+    /**
+     * A list of keywords describing the object entry.
+     */
+    keywords?: Array<string>;
+    objectEntryFolderExternalReferenceCode?: string;
+    objectEntryFolderId?: number;
+    permissions?: Array<Permission>;
+    reviewDate?: string;
+    readonly scopeId?: number;
+    readonly scopeKey?: string;
+    readonly status?: number;
+    /**
+     * The categories associated with this object entry.
+     */
+    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    taxonomyCategoryIds?: Array<number>;
+    readonly 'x-class-name'?: string;
+    readonly 'x-schema-name'?: string;
+    name?: string;
+    publisherAssetType?: ListEntry;
+    r_accountEntryToPublisherAssets_accountEntryId: number;
+    /**
+     * Information about the relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
+     */
+    accountEntryToPublisherAssets: {
+        [key: string]: unknown;
+    };
+    r_accountEntryToPublisherAssets_accountEntryERC: string;
+    readonly accountEntryToPublisherAssetsERC?: string;
+    r_productEntryToPublisherAssets_CPDefinitionId?: number;
+    /**
+     * Information about the relationship productEntryToPublisherAssets can be embedded with "nestedFields".
+     */
+    productEntryToPublisherAssets?: {
+        [key: string]: unknown;
+    };
+    r_productEntryToPublisherAssets_CPDefinitionERC?: string;
+    readonly productEntryToPublisherAssetsERC?: string;
+    sourceCode?: FileEntry;
+    version?: string;
 };
 
 export type UserAdditionalInfo = {
@@ -1728,6 +1730,7 @@ export type UserAdditionalInfo = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1819,8 +1822,8 @@ export type Collaborator = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -1889,8 +1892,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -1921,8 +1924,8 @@ export type ValidationRequest = {
 };
 
 export type PageUserAdditionalInfo = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<UserAdditionalInfo>;
     actions?: {
         [key: string]: {
@@ -1945,8 +1948,8 @@ export type ListEntry = {
 };
 
 export type PageOAuth2DxpAuthorization = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OAuth2DxpAuthorization>;
     actions?: {
         [key: string]: {
@@ -1960,8 +1963,8 @@ export type PageOAuth2DxpAuthorization = {
 };
 
 export type PagePublisherAssets = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PublisherAssets>;
     actions?: {
         [key: string]: {
@@ -7298,6 +7301,62 @@ export type PostUserAccountWebUrlsPageExportBatchResponses = {
     default: unknown;
 };
 
+export type GetUserAccountUserToUserAddInfoPageData = {
+    body?: never;
+    path: {
+        userAccountId: string;
+    };
+    query?: {
+        nestedFields?: string;
+    };
+    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo';
+};
+
+export type GetUserAccountUserToUserAddInfoPageResponses = {
+    /**
+     * default response
+     */
+    default: PageUserAdditionalInfo;
+};
+
+export type GetUserAccountUserToUserAddInfoPageResponse = GetUserAccountUserToUserAddInfoPageResponses[keyof GetUserAccountUserToUserAddInfoPageResponses];
+
+export type DeleteUserAccountUserToUserAddInfoData = {
+    body?: never;
+    path: {
+        userAccountId: string;
+        userAdditionalInfoId: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo/{userAdditionalInfoId}';
+};
+
+export type DeleteUserAccountUserToUserAddInfoResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PutUserAccountUserToUserAddInfoData = {
+    body?: never;
+    path: {
+        userAccountId: string;
+        userAdditionalInfoId: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo/{userAdditionalInfoId}';
+};
+
+export type PutUserAccountUserToUserAddInfoResponses = {
+    /**
+     * default response
+     */
+    default: UserAdditionalInfo;
+};
+
+export type PutUserAccountUserToUserAddInfoResponse = PutUserAccountUserToUserAddInfoResponses[keyof PutUserAccountUserToUserAddInfoResponses];
+
 export type GetAccountAccountEntryToUserAdditionalInfoPageData = {
     body?: never;
     path: {
@@ -7465,62 +7524,6 @@ export type PutAccountAccountEntryToPublisherAssetsResponses = {
 };
 
 export type PutAccountAccountEntryToPublisherAssetsResponse = PutAccountAccountEntryToPublisherAssetsResponses[keyof PutAccountAccountEntryToPublisherAssetsResponses];
-
-export type GetUserAccountUserToUserAddInfoPageData = {
-    body?: never;
-    path: {
-        userAccountId: string;
-    };
-    query?: {
-        nestedFields?: string;
-    };
-    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo';
-};
-
-export type GetUserAccountUserToUserAddInfoPageResponses = {
-    /**
-     * default response
-     */
-    default: PageUserAdditionalInfo;
-};
-
-export type GetUserAccountUserToUserAddInfoPageResponse = GetUserAccountUserToUserAddInfoPageResponses[keyof GetUserAccountUserToUserAddInfoPageResponses];
-
-export type DeleteUserAccountUserToUserAddInfoData = {
-    body?: never;
-    path: {
-        userAccountId: string;
-        userAdditionalInfoId: string;
-    };
-    query?: never;
-    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo/{userAdditionalInfoId}';
-};
-
-export type DeleteUserAccountUserToUserAddInfoResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type PutUserAccountUserToUserAddInfoData = {
-    body?: never;
-    path: {
-        userAccountId: string;
-        userAdditionalInfoId: string;
-    };
-    query?: never;
-    url: '/o/headless-admin-user/v1.0/user-accounts/{userAccountId}/userToUserAddInfo/{userAdditionalInfoId}';
-};
-
-export type PutUserAccountUserToUserAddInfoResponses = {
-    /**
-     * default response
-     */
-    default: UserAdditionalInfo;
-};
-
-export type PutUserAccountUserToUserAddInfoResponse = PutUserAccountUserToUserAddInfoResponses[keyof PutUserAccountUserToUserAddInfoResponses];
 
 export type ClientOptions = {
     baseUrl: 'http://localhost:8080' | (string & {});

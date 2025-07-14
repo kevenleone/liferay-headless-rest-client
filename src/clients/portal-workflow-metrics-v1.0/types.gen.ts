@@ -37,8 +37,8 @@ export type FacetValue = {
 };
 
 export type PageAssigneeMetric = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AssigneeMetric>;
     actions?: {
         [key: string]: {
@@ -62,8 +62,8 @@ export type AssigneeMetricBulkSelection = {
 };
 
 export type PageAssignee = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Assignee>;
     actions?: {
         [key: string]: {
@@ -88,8 +88,8 @@ export type Calendar = {
 };
 
 export type PageCalendar = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Calendar>;
     actions?: {
         [key: string]: {
@@ -122,8 +122,8 @@ export type Index = {
 };
 
 export type PageIndex = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Index>;
     actions?: {
         [key: string]: {
@@ -194,8 +194,8 @@ export type Transition = {
 };
 
 export type PageInstance = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Instance>;
     actions?: {
         [key: string]: {
@@ -233,8 +233,8 @@ export type NodeMetric = {
 };
 
 export type PageNodeMetric = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<NodeMetric>;
     actions?: {
         [key: string]: {
@@ -247,8 +247,8 @@ export type PageNodeMetric = {
 };
 
 export type PageNode = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Node>;
     actions?: {
         [key: string]: {
@@ -285,8 +285,8 @@ export type ProcessMetric = {
 };
 
 export type PageProcessMetric = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProcessMetric>;
     actions?: {
         [key: string]: {
@@ -299,8 +299,8 @@ export type PageProcessMetric = {
 };
 
 export type PageProcessVersion = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProcessVersion>;
     actions?: {
         [key: string]: {
@@ -318,8 +318,8 @@ export type ProcessVersion = {
 };
 
 export type PageReindexStatus = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ReindexStatus>;
     actions?: {
         [key: string]: {
@@ -338,8 +338,8 @@ export type ReindexStatus = {
 };
 
 export type PageRole = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Role>;
     actions?: {
         [key: string]: {
@@ -370,8 +370,8 @@ export type NodeKey = {
 };
 
 export type PageSla = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Sla>;
     actions?: {
         [key: string]: {
@@ -445,8 +445,8 @@ export type Task = {
 };
 
 export type PageTask = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Task>;
     actions?: {
         [key: string]: {
@@ -468,8 +468,8 @@ export type TaskBulkSelection = {
 };
 
 export type PageTimeRange = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<TimeRange>;
     actions?: {
         [key: string]: {

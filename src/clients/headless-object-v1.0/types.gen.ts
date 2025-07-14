@@ -121,8 +121,8 @@ export type FacetValue = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -236,8 +236,8 @@ export type ParentObjectEntryFolderBrief = {
 };
 
 export type PageObjectEntryFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectEntryFolder>;
     actions?: {
         [key: string]: {

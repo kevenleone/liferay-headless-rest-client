@@ -224,7 +224,7 @@ export type OpenGraphSettingsMapping = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageRuleConditionOptions = {
+export type Options = {
     /**
      * The page rule condition's value.
      */
@@ -333,7 +333,7 @@ export type PageRuleCondition = {
      * The page rule condition's ID.
      */
     id?: string;
-    options?: PageRuleConditionOptions;
+    options?: Options;
     /**
      * The page rule condition's type.
      */
@@ -451,8 +451,8 @@ export type FacetValue = {
 };
 
 export type PageDisplayPageTemplate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DisplayPageTemplate>;
     actions?: {
         [key: string]: {
@@ -610,8 +610,8 @@ export type ContentFieldValue = {
 };
 
 export type PageStructuredContent = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<StructuredContent>;
     actions?: {
         [key: string]: {

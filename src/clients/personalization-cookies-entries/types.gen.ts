@@ -118,8 +118,8 @@ export type FacetValue = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -229,8 +229,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -261,8 +261,8 @@ export type ValidationRequest = {
 };
 
 export type PagePersonalizationCookieEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PersonalizationCookieEntry>;
     actions?: {
         [key: string]: {
@@ -311,6 +311,7 @@ export type PersonalizationCookieEntry = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1110,6 +1111,24 @@ export type PostPersonalizationCookieEntryByVersionExpireResponses = {
 };
 
 export type PostPersonalizationCookieEntryByVersionExpireResponse = PostPersonalizationCookieEntryByVersionExpireResponses[keyof PostPersonalizationCookieEntryByVersionExpireResponses];
+
+export type PostPersonalizationCookieEntryExpireData = {
+    body?: never;
+    path: {
+        personalizationCookieEntryId: string;
+    };
+    query?: never;
+    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/expire';
+};
+
+export type PostPersonalizationCookieEntryExpireResponses = {
+    /**
+     * default response
+     */
+    default: PersonalizationCookieEntry;
+};
+
+export type PostPersonalizationCookieEntryExpireResponse = PostPersonalizationCookieEntryExpireResponses[keyof PostPersonalizationCookieEntryExpireResponses];
 
 export type PutPersonalizationCookieEntryByVersionRestoreData = {
     body?: never;

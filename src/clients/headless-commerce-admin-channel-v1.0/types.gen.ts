@@ -40,8 +40,8 @@ export type FacetValue = {
 };
 
 export type PageAccountAddressChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountAddressChannel>;
     actions?: {
         [key: string]: {
@@ -87,8 +87,8 @@ export type CategoryDisplayPage = {
 };
 
 export type PageCategoryDisplayPage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<CategoryDisplayPage>;
     actions?: {
         [key: string]: {
@@ -116,8 +116,8 @@ export type ChannelAccount = {
 };
 
 export type PageChannelAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ChannelAccount>;
     actions?: {
         [key: string]: {
@@ -130,8 +130,8 @@ export type PageChannelAccount = {
 };
 
 export type PageChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Channel>;
     actions?: {
         [key: string]: {
@@ -172,8 +172,8 @@ export type OrderType = {
 };
 
 export type PagePaymentMethodGroupRelOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PaymentMethodGroupRelOrderType>;
     actions?: {
         [key: string]: {
@@ -201,8 +201,8 @@ export type PaymentMethodGroupRelOrderType = {
 };
 
 export type PagePaymentMethodGroupRelTerm = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PaymentMethodGroupRelTerm>;
     actions?: {
         [key: string]: {
@@ -235,8 +235,8 @@ export type Term = {
 };
 
 export type PageProductDisplayPage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductDisplayPage>;
     actions?: {
         [key: string]: {
@@ -263,8 +263,8 @@ export type ProductDisplayPage = {
 };
 
 export type PageShippingFixedOptionOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ShippingFixedOptionOrderType>;
     actions?: {
         [key: string]: {
@@ -292,8 +292,8 @@ export type ShippingFixedOptionOrderType = {
 };
 
 export type PageShippingFixedOptionTerm = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ShippingFixedOptionTerm>;
     actions?: {
         [key: string]: {
@@ -320,8 +320,8 @@ export type ShippingFixedOptionTerm = {
 };
 
 export type PageShippingMethod = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ShippingMethod>;
     actions?: {
         [key: string]: {
@@ -363,8 +363,8 @@ export type ShippingOption = {
 };
 
 export type PageTaxCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<TaxCategory>;
     actions?: {
         [key: string]: {
@@ -388,15 +388,15 @@ export type TaxCategory = {
     readonly 'x-class-name'?: string;
 };
 
+export type OAuth2DxpAuthorization = {
+    [key: string]: unknown;
+};
+
 export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
-    [key: string]: unknown;
-};
-
-export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 

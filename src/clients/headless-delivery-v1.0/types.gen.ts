@@ -48,8 +48,8 @@ export type FacetValue = {
 };
 
 export type PageBlogPostingImage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<BlogPostingImage>;
     actions?: {
         [key: string]: {
@@ -463,8 +463,8 @@ export type Rating = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -484,8 +484,8 @@ export type Permission = {
 };
 
 export type PageBlogPosting = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<BlogPosting>;
     actions?: {
         [key: string]: {
@@ -539,8 +539,8 @@ export type Comment = {
 };
 
 export type PageComment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Comment>;
     actions?: {
         [key: string]: {
@@ -581,8 +581,8 @@ export type ContentElement = {
 };
 
 export type PageContentElement = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ContentElement>;
     actions?: {
         [key: string]: {
@@ -623,8 +623,8 @@ export type ContentSetElement = {
 };
 
 export type PageContentSetElement = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ContentSetElement>;
     actions?: {
         [key: string]: {
@@ -778,8 +778,8 @@ export type Option = {
 };
 
 export type PageContentStructure = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ContentStructure>;
     actions?: {
         [key: string]: {
@@ -864,8 +864,8 @@ export type ContentTemplate = {
 };
 
 export type PageContentTemplate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ContentTemplate>;
     actions?: {
         [key: string]: {
@@ -1073,8 +1073,8 @@ export type DocumentDataDefinitionType = {
 };
 
 export type PageDocumentDataDefinitionType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DocumentDataDefinitionType>;
     actions?: {
         [key: string]: {
@@ -1156,8 +1156,8 @@ export type DocumentFolder = {
 };
 
 export type PageDocumentFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DocumentFolder>;
     actions?: {
         [key: string]: {
@@ -1238,8 +1238,8 @@ export type DocumentMetadataSet = {
 };
 
 export type PageDocumentMetadataSet = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DocumentMetadataSet>;
     actions?: {
         [key: string]: {
@@ -1716,8 +1716,8 @@ export type StructuredContentLink = {
 };
 
 export type PageDocument = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Document>;
     actions?: {
         [key: string]: {
@@ -1835,8 +1835,8 @@ export type DocumentShortcut = {
 };
 
 export type PageDocumentShortcut = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DocumentShortcut>;
     actions?: {
         [key: string]: {
@@ -1961,8 +1961,8 @@ export type ParentKnowledgeBaseFolder = {
 };
 
 export type PageKnowledgeBaseArticle = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<KnowledgeBaseArticle>;
     actions?: {
         [key: string]: {
@@ -2011,8 +2011,8 @@ export type KnowledgeBaseAttachment = {
 };
 
 export type PageKnowledgeBaseAttachment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<KnowledgeBaseAttachment>;
     actions?: {
         [key: string]: {
@@ -2092,8 +2092,8 @@ export type KnowledgeBaseFolder = {
 };
 
 export type PageKnowledgeBaseFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<KnowledgeBaseFolder>;
     actions?: {
         [key: string]: {
@@ -2138,8 +2138,8 @@ export type Language = {
 };
 
 export type PageLanguage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Language>;
     actions?: {
         [key: string]: {
@@ -2196,8 +2196,8 @@ export type MessageBoardAttachment = {
 };
 
 export type PageMessageBoardAttachment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MessageBoardAttachment>;
     actions?: {
         [key: string]: {
@@ -2348,8 +2348,8 @@ export type MessageBoardMessage = {
 };
 
 export type PageMessageBoardMessage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MessageBoardMessage>;
     actions?: {
         [key: string]: {
@@ -2424,8 +2424,8 @@ export type MessageBoardSection = {
 };
 
 export type PageMessageBoardSection = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MessageBoardSection>;
     actions?: {
         [key: string]: {
@@ -2552,8 +2552,8 @@ export type MessageBoardThread = {
 };
 
 export type PageMessageBoardThread = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MessageBoardThread>;
     actions?: {
         [key: string]: {
@@ -2619,10 +2619,6 @@ export type NavigationMenuItem = {
      * The list of languages the navigation menu item has a translation for.
      */
     readonly availableLanguages?: Array<string>;
-    /**
-     * The navigation menu item's content API REST URL.
-     */
-    contentURL?: string;
     creator?: Creator;
     /**
      * A list of the custom fields associated with the navigation menu item.
@@ -2645,16 +2641,6 @@ export type NavigationMenuItem = {
      */
     id?: number;
     /**
-     * The link to a page on the server.
-     */
-    link?: string;
-    /**
-     * The localized links to a page on the server.
-     */
-    link_i18n?: {
-        [key: string]: string;
-    };
-    /**
      * The navigation menu item's name.
      */
     name?: string;
@@ -2673,10 +2659,6 @@ export type NavigationMenuItem = {
      */
     readonly parentNavigationMenuId?: number;
     /**
-     * The navigation menu item's linked site page URL.
-     */
-    readonly sitePageURL?: string;
-    /**
      * The navigation menu item's type.
      */
     type?: string;
@@ -2686,17 +2668,13 @@ export type NavigationMenuItem = {
     typeSettings: {
         [key: string]: string;
     };
-    /**
-     * The navigation menu item's linked URL.
-     */
-    url?: string;
     useCustomName?: boolean;
     readonly 'x-class-name'?: string;
 };
 
 export type PageNavigationMenu = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<NavigationMenu>;
     actions?: {
         [key: string]: {
@@ -2825,7 +2803,7 @@ export type OpenGraphSettings = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageRuleConditionOptions = {
+export type Options = {
     /**
      * The page rule condition's value.
      */
@@ -2937,7 +2915,7 @@ export type PageRuleCondition = {
      * The page rule condition's ID.
      */
     id?: string;
-    options?: PageRuleConditionOptions;
+    options?: Options;
     /**
      * The page rule condition's type.
      */
@@ -3303,8 +3281,8 @@ export type StyleBook = {
 };
 
 export type PageSitePage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SitePage>;
     actions?: {
         [key: string]: {
@@ -3386,8 +3364,8 @@ export type StructuredContentFolder = {
 };
 
 export type PageStructuredContentFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<StructuredContentFolder>;
     actions?: {
         [key: string]: {
@@ -3400,8 +3378,8 @@ export type PageStructuredContentFolder = {
 };
 
 export type PageStructuredContent = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<StructuredContent>;
     actions?: {
         [key: string]: {
@@ -3464,8 +3442,8 @@ export type WikiNode = {
 };
 
 export type PageWikiNode = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WikiNode>;
     actions?: {
         [key: string]: {
@@ -3519,8 +3497,8 @@ export type WikiPageAttachment = {
 };
 
 export type PageWikiPageAttachment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WikiPageAttachment>;
     actions?: {
         [key: string]: {
@@ -3632,8 +3610,8 @@ export type WikiPage = {
 };
 
 export type PageWikiPage = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WikiPage>;
     actions?: {
         [key: string]: {

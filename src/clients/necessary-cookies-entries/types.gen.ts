@@ -118,8 +118,8 @@ export type FacetValue = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -229,8 +229,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -261,8 +261,8 @@ export type ValidationRequest = {
 };
 
 export type PageNecessaryCookieEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<NecessaryCookieEntry>;
     actions?: {
         [key: string]: {
@@ -311,6 +311,7 @@ export type NecessaryCookieEntry = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1110,6 +1111,24 @@ export type PostNecessaryCookieEntryByVersionExpireResponses = {
 };
 
 export type PostNecessaryCookieEntryByVersionExpireResponse = PostNecessaryCookieEntryByVersionExpireResponses[keyof PostNecessaryCookieEntryByVersionExpireResponses];
+
+export type PostNecessaryCookieEntryExpireData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/expire';
+};
+
+export type PostNecessaryCookieEntryExpireResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostNecessaryCookieEntryExpireResponse = PostNecessaryCookieEntryExpireResponses[keyof PostNecessaryCookieEntryExpireResponses];
 
 export type PutNecessaryCookieEntryByVersionRestoreData = {
     body?: never;

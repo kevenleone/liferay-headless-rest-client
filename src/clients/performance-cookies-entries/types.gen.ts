@@ -118,8 +118,8 @@ export type FacetValue = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -229,8 +229,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -261,8 +261,8 @@ export type ValidationRequest = {
 };
 
 export type PagePerformanceCookieEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PerformanceCookieEntry>;
     actions?: {
         [key: string]: {
@@ -311,6 +311,7 @@ export type PerformanceCookieEntry = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1110,6 +1111,24 @@ export type PostPerformanceCookieEntryByVersionExpireResponses = {
 };
 
 export type PostPerformanceCookieEntryByVersionExpireResponse = PostPerformanceCookieEntryByVersionExpireResponses[keyof PostPerformanceCookieEntryByVersionExpireResponses];
+
+export type PostPerformanceCookieEntryExpireData = {
+    body?: never;
+    path: {
+        performanceCookieEntryId: string;
+    };
+    query?: never;
+    url: '/o/performance-cookies-entries/{performanceCookieEntryId}/expire';
+};
+
+export type PostPerformanceCookieEntryExpireResponses = {
+    /**
+     * default response
+     */
+    default: PerformanceCookieEntry;
+};
+
+export type PostPerformanceCookieEntryExpireResponse = PostPerformanceCookieEntryExpireResponses[keyof PostPerformanceCookieEntryExpireResponses];
 
 export type PutPerformanceCookieEntryByVersionRestoreData = {
     body?: never;

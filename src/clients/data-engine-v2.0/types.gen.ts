@@ -183,8 +183,8 @@ export type FacetValue = {
 };
 
 export type PageDataDefinitionFieldLink = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataDefinitionFieldLink>;
     actions?: {
         [key: string]: {
@@ -197,8 +197,8 @@ export type PageDataDefinitionFieldLink = {
 };
 
 export type PageDataDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataDefinition>;
     actions?: {
         [key: string]: {
@@ -211,8 +211,8 @@ export type PageDataDefinition = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -232,8 +232,8 @@ export type Permission = {
 };
 
 export type PageDataLayout = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataLayout>;
     actions?: {
         [key: string]: {
@@ -261,8 +261,8 @@ export type DataLayoutRenderingContext = {
 };
 
 export type PageDataListView = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataListView>;
     actions?: {
         [key: string]: {
@@ -293,8 +293,8 @@ export type DataRecordCollection = {
 };
 
 export type PageDataRecordCollection = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataRecordCollection>;
     actions?: {
         [key: string]: {
@@ -319,8 +319,8 @@ export type DataRecord = {
 };
 
 export type PageDataRecord = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DataRecord>;
     actions?: {
         [key: string]: {

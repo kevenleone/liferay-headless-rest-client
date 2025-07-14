@@ -21,8 +21,8 @@ export type Field = {
 };
 
 export type PageField = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Field>;
     actions?: {
         [key: string]: {
@@ -73,8 +73,8 @@ export type Policy = {
 };
 
 export type PagePlan = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Plan>;
     actions?: {
         [key: string]: {
@@ -87,8 +87,8 @@ export type PagePlan = {
 };
 
 export type PageSiteScope = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SiteScope>;
     actions?: {
         [key: string]: {
@@ -107,8 +107,8 @@ export type SiteScope = {
 };
 
 export type PageStrategy = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Strategy>;
     actions?: {
         [key: string]: {

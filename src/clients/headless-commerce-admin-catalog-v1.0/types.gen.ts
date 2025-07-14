@@ -96,8 +96,8 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Attachment>;
     actions?: {
         [key: string]: {
@@ -191,8 +191,8 @@ export type Catalog = {
 };
 
 export type PageCatalog = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Catalog>;
     actions?: {
         [key: string]: {
@@ -220,8 +220,8 @@ export type Category = {
 };
 
 export type PageCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Category>;
     actions?: {
         [key: string]: {
@@ -255,8 +255,8 @@ export type Currency = {
 };
 
 export type PageCurrency = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Currency>;
     actions?: {
         [key: string]: {
@@ -299,8 +299,8 @@ export type GroupedProduct = {
 };
 
 export type PageGroupedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<GroupedProduct>;
     actions?: {
         [key: string]: {
@@ -320,8 +320,8 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
@@ -352,8 +352,8 @@ export type ListTypeDefinition = {
 };
 
 export type PageListTypeDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
@@ -374,8 +374,8 @@ export type LowStockAction = {
 };
 
 export type PageLowStockAction = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<LowStockAction>;
     actions?: {
         [key: string]: {
@@ -410,8 +410,8 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
@@ -438,8 +438,8 @@ export type OptionCategory = {
 };
 
 export type PageOptionCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OptionCategory>;
     actions?: {
         [key: string]: {
@@ -495,8 +495,8 @@ export type OptionValue = {
 };
 
 export type PageOption = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Option>;
     actions?: {
         [key: string]: {
@@ -509,8 +509,8 @@ export type PageOption = {
 };
 
 export type PageOptionValue = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OptionValue>;
     actions?: {
         [key: string]: {
@@ -523,8 +523,8 @@ export type PageOptionValue = {
 };
 
 export type PagePin = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Pin>;
     actions?: {
         [key: string]: {
@@ -554,8 +554,8 @@ export type ProductAccountGroup = {
 };
 
 export type PageProductAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductAccountGroup>;
     actions?: {
         [key: string]: {
@@ -568,8 +568,8 @@ export type PageProductAccountGroup = {
 };
 
 export type PageProductChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductChannel>;
     actions?: {
         [key: string]: {
@@ -598,8 +598,8 @@ export type AccountGroup = {
 };
 
 export type PageProductConfigurationListAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfigurationListAccountGroup>;
     actions?: {
         [key: string]: {
@@ -634,8 +634,8 @@ export type Account = {
 };
 
 export type PageProductConfigurationListAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfigurationListAccount>;
     actions?: {
         [key: string]: {
@@ -673,8 +673,8 @@ export type Channel = {
 };
 
 export type PageProductConfigurationListChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfigurationListChannel>;
     actions?: {
         [key: string]: {
@@ -711,8 +711,8 @@ export type OrderType = {
 };
 
 export type PageProductConfigurationListOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfigurationListOrderType>;
     actions?: {
         [key: string]: {
@@ -822,8 +822,8 @@ export type ProductTaxConfiguration = {
 };
 
 export type PageProductConfigurationList = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfigurationList>;
     actions?: {
         [key: string]: {
@@ -836,8 +836,8 @@ export type PageProductConfigurationList = {
 };
 
 export type PageProductConfiguration = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductConfiguration>;
     actions?: {
         [key: string]: {
@@ -850,8 +850,8 @@ export type PageProductConfiguration = {
 };
 
 export type PageProductGroupProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductGroupProduct>;
     actions?: {
         [key: string]: {
@@ -894,8 +894,8 @@ export type ProductGroup = {
 };
 
 export type PageProductGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductGroup>;
     actions?: {
         [key: string]: {
@@ -908,8 +908,8 @@ export type PageProductGroup = {
 };
 
 export type PageProductOption = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
@@ -964,8 +964,8 @@ export type ProductOptionValue = {
 };
 
 export type PageProductOptionValue = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
@@ -1384,8 +1384,8 @@ export type Status = {
 };
 
 export type PageProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Product>;
     actions?: {
         [key: string]: {
@@ -1398,8 +1398,8 @@ export type PageProduct = {
 };
 
 export type PageProductSpecification = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
@@ -1412,8 +1412,8 @@ export type PageProductSpecification = {
 };
 
 export type PageProductVirtualSettingsFileEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
@@ -1448,8 +1448,8 @@ export type PostProductVirtualSettingIdProductVirtualSettingsFileEntryRequestBod
 };
 
 export type PageRelatedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
@@ -1462,8 +1462,8 @@ export type PageRelatedProduct = {
 };
 
 export type PageSku = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Sku>;
     actions?: {
         [key: string]: {
@@ -1476,8 +1476,8 @@ export type PageSku = {
 };
 
 export type PageSkuUnitOfMeasure = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SkuUnitOfMeasure>;
     actions?: {
         [key: string]: {
@@ -1490,8 +1490,8 @@ export type PageSkuUnitOfMeasure = {
 };
 
 export type PageSkuVirtualSettingsFileEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SkuVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
@@ -1542,8 +1542,8 @@ export type Specification = {
 };
 
 export type PageSpecification = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Specification>;
     actions?: {
         [key: string]: {
@@ -1591,6 +1591,7 @@ export type PublisherAssets = {
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
     reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
@@ -1602,14 +1603,14 @@ export type PublisherAssets = {
     readonly 'x-schema-name'?: string;
     name?: string;
     publisherAssetType?: ListEntry;
-    r_accountEntryToPublisherAssets_accountEntryId?: number;
+    r_accountEntryToPublisherAssets_accountEntryId: number;
     /**
      * Information about the relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
      */
-    accountEntryToPublisherAssets?: {
+    accountEntryToPublisherAssets: {
         [key: string]: unknown;
     };
-    r_accountEntryToPublisherAssets_accountEntryERC?: string;
+    r_accountEntryToPublisherAssets_accountEntryERC: string;
     readonly accountEntryToPublisherAssetsERC?: string;
     r_productEntryToPublisherAssets_CPDefinitionId?: number;
     /**
@@ -1736,8 +1737,8 @@ export type UserGroupBrief = {
 };
 
 export type PageCollaborator = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Collaborator>;
     actions?: {
         [key: string]: {
@@ -1840,8 +1841,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -1872,8 +1873,8 @@ export type ValidationRequest = {
 };
 
 export type PagePublisherAssets = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PublisherAssets>;
     actions?: {
         [key: string]: {

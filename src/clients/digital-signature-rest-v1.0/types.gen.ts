@@ -50,8 +50,8 @@ export type FacetValue = {
 };
 
 export type PageDsEnvelope = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DsEnvelope>;
     actions?: {
         [key: string]: {

@@ -21,8 +21,8 @@ export type FacetValue = {
 };
 
 export type PageAvailabilityEstimate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AvailabilityEstimate>;
     actions?: {
         [key: string]: {
@@ -50,8 +50,8 @@ export type MeasurementUnit = {
 };
 
 export type PageMeasurementUnit = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MeasurementUnit>;
     actions?: {
         [key: string]: {
@@ -64,8 +64,8 @@ export type PageMeasurementUnit = {
 };
 
 export type PageTaxCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<TaxCategory>;
     actions?: {
         [key: string]: {
@@ -90,8 +90,8 @@ export type TaxCategory = {
 };
 
 export type PageWarehouse = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Warehouse>;
     actions?: {
         [key: string]: {

@@ -33,8 +33,8 @@ export type NotificationQueueEntry = {
 };
 
 export type PageNotificationQueueEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<NotificationQueueEntry>;
     actions?: {
         [key: string]: {
@@ -83,8 +83,8 @@ export type NotificationTemplate = {
 };
 
 export type PageNotificationTemplate = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<NotificationTemplate>;
     actions?: {
         [key: string]: {

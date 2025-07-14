@@ -182,8 +182,8 @@ export type OrderItem = {
 };
 
 export type PageOrderItem = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderItem>;
     actions?: {
         [key: string]: {
@@ -233,8 +233,8 @@ export type OrderNote = {
 };
 
 export type PageOrderNote = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderNote>;
     actions?: {
         [key: string]: {
@@ -379,8 +379,8 @@ export type Status = {
 };
 
 export type PageOrder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Order>;
     actions?: {
         [key: string]: {
@@ -408,8 +408,8 @@ export type OrderRuleAccountGroup = {
 };
 
 export type PageOrderRuleAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderRuleAccountGroup>;
     actions?: {
         [key: string]: {
@@ -437,8 +437,8 @@ export type OrderRuleAccount = {
 };
 
 export type PageOrderRuleAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderRuleAccount>;
     actions?: {
         [key: string]: {
@@ -466,8 +466,8 @@ export type OrderRuleChannel = {
 };
 
 export type PageOrderRuleChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderRuleChannel>;
     actions?: {
         [key: string]: {
@@ -539,8 +539,8 @@ export type OrderTypeChannel = {
 };
 
 export type PageOrderRuleOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderRuleOrderType>;
     actions?: {
         [key: string]: {
@@ -580,8 +580,8 @@ export type OrderRule = {
 };
 
 export type PageOrderRule = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderRule>;
     actions?: {
         [key: string]: {
@@ -594,8 +594,8 @@ export type PageOrderRule = {
 };
 
 export type PageOrderTypeChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderTypeChannel>;
     actions?: {
         [key: string]: {
@@ -608,8 +608,8 @@ export type PageOrderTypeChannel = {
 };
 
 export type PageOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<OrderType>;
     actions?: {
         [key: string]: {
@@ -622,8 +622,8 @@ export type PageOrderType = {
 };
 
 export type PageTermOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<TermOrderType>;
     actions?: {
         [key: string]: {
@@ -680,8 +680,8 @@ export type Term = {
 };
 
 export type PageTerm = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Term>;
     actions?: {
         [key: string]: {
@@ -693,7 +693,7 @@ export type PageTerm = {
     page?: number;
 };
 
-export type UserAdditionalInfo = {
+export type PublisherAssets = {
     [key: string]: unknown;
 };
 
@@ -701,7 +701,7 @@ export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
-export type PublisherAssets = {
+export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 

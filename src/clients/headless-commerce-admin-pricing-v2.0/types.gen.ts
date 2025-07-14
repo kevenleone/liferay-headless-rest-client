@@ -51,8 +51,8 @@ export type FacetValue = {
 };
 
 export type PageDiscountAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountAccountGroup>;
     actions?: {
         [key: string]: {
@@ -86,8 +86,8 @@ export type DiscountAccount = {
 };
 
 export type PageDiscountAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountAccount>;
     actions?: {
         [key: string]: {
@@ -115,8 +115,8 @@ export type DiscountCategory = {
 };
 
 export type PageDiscountCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountCategory>;
     actions?: {
         [key: string]: {
@@ -144,8 +144,8 @@ export type DiscountChannel = {
 };
 
 export type PageDiscountChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountChannel>;
     actions?: {
         [key: string]: {
@@ -182,8 +182,8 @@ export type OrderType = {
 };
 
 export type PageDiscountOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountOrderType>;
     actions?: {
         [key: string]: {
@@ -211,8 +211,8 @@ export type DiscountProductGroup = {
 };
 
 export type PageDiscountProductGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountProductGroup>;
     actions?: {
         [key: string]: {
@@ -249,8 +249,8 @@ export type DiscountProduct = {
 };
 
 export type PageDiscountProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountProduct>;
     actions?: {
         [key: string]: {
@@ -337,8 +337,8 @@ export type DiscountRule = {
 };
 
 export type PageDiscount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Discount>;
     actions?: {
         [key: string]: {
@@ -351,8 +351,8 @@ export type PageDiscount = {
 };
 
 export type PageDiscountRule = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountRule>;
     actions?: {
         [key: string]: {
@@ -385,8 +385,8 @@ export type DiscountSku = {
 };
 
 export type PageDiscountSku = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<DiscountSku>;
     actions?: {
         [key: string]: {
@@ -480,8 +480,8 @@ export type TierPrice = {
 };
 
 export type PagePriceEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceEntry>;
     actions?: {
         [key: string]: {
@@ -494,8 +494,8 @@ export type PagePriceEntry = {
 };
 
 export type PagePriceListAccountGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceListAccountGroup>;
     actions?: {
         [key: string]: {
@@ -524,8 +524,8 @@ export type PriceListAccountGroup = {
 };
 
 export type PagePriceListAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceListAccount>;
     actions?: {
         [key: string]: {
@@ -554,8 +554,8 @@ export type PriceListAccount = {
 };
 
 export type PagePriceListChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceListChannel>;
     actions?: {
         [key: string]: {
@@ -584,8 +584,8 @@ export type PriceListChannel = {
 };
 
 export type PagePriceListDiscount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceListDiscount>;
     actions?: {
         [key: string]: {
@@ -609,8 +609,8 @@ export type PriceListDiscount = {
 };
 
 export type PagePriceListOrderType = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceListOrderType>;
     actions?: {
         [key: string]: {
@@ -757,8 +757,8 @@ export type Status = {
 };
 
 export type PagePriceList = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceList>;
     actions?: {
         [key: string]: {
@@ -771,8 +771,8 @@ export type PagePriceList = {
 };
 
 export type PagePriceModifierCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceModifierCategory>;
     actions?: {
         [key: string]: {
@@ -785,8 +785,8 @@ export type PagePriceModifierCategory = {
 };
 
 export type PagePriceModifierProductGroup = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceModifierProductGroup>;
     actions?: {
         [key: string]: {
@@ -799,8 +799,8 @@ export type PagePriceModifierProductGroup = {
 };
 
 export type PagePriceModifierProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceModifierProduct>;
     actions?: {
         [key: string]: {
@@ -813,8 +813,8 @@ export type PagePriceModifierProduct = {
 };
 
 export type PagePriceModifier = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<PriceModifier>;
     actions?: {
         [key: string]: {
@@ -827,8 +827,8 @@ export type PagePriceModifier = {
 };
 
 export type PageTierPrice = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<TierPrice>;
     actions?: {
         [key: string]: {

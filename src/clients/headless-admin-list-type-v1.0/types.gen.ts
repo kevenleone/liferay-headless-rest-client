@@ -51,8 +51,8 @@ export type FacetValue = {
 };
 
 export type PageListTypeDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
@@ -65,8 +65,8 @@ export type PageListTypeDefinition = {
 };
 
 export type PageListTypeEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ListTypeEntry>;
     actions?: {
         [key: string]: {

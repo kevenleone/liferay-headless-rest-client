@@ -16,8 +16,8 @@ export type FacetValue = {
 };
 
 export type PageEmbeddingModel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<EmbeddingModel>;
     actions?: {
         [key: string]: {
@@ -47,8 +47,8 @@ export type EmbeddingProviderConfiguration = {
 };
 
 export type PageSearchResult = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SearchResult>;
     actions?: {
         [key: string]: {
@@ -145,8 +145,8 @@ export type SearchRequestBody = {
 };
 
 export type PageSuggestionsContributorResults = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SuggestionsContributorResults>;
     actions?: {
         [key: string]: {

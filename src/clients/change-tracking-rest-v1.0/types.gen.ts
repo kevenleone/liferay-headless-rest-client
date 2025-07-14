@@ -52,8 +52,8 @@ export type FacetValue = {
 };
 
 export type PageCtCollection = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<CtCollection>;
     actions?: {
         [key: string]: {
@@ -98,8 +98,8 @@ export type CtEntry = {
 };
 
 export type PageCtEntry = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<CtEntry>;
     actions?: {
         [key: string]: {
@@ -134,8 +134,8 @@ export type CtProcess = {
 };
 
 export type PageCtProcess = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<CtProcess>;
     actions?: {
         [key: string]: {
@@ -175,8 +175,8 @@ export type CtRemote = {
 };
 
 export type PageCtRemote = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<CtRemote>;
     actions?: {
         [key: string]: {

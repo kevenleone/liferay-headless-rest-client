@@ -24,8 +24,8 @@ export type FacetValue = {
 };
 
 export type PageAccountCategoryForecast = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountCategoryForecast>;
     actions?: {
         [key: string]: {
@@ -49,8 +49,8 @@ export type AccountForecast = {
 };
 
 export type PageAccountForecast = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<AccountForecast>;
     actions?: {
         [key: string]: {
@@ -63,8 +63,8 @@ export type PageAccountForecast = {
 };
 
 export type PageSkuForecast = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<SkuForecast>;
     actions?: {
         [key: string]: {

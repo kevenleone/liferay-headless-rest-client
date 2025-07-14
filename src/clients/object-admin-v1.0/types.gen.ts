@@ -50,8 +50,8 @@ export type FacetValue = {
 };
 
 export type PageObjectAction = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectAction>;
     actions?: {
         [key: string]: {
@@ -412,8 +412,8 @@ export type UserGroupBrief = {
 };
 
 export type PageObjectDefinition = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectDefinition>;
     actions?: {
         [key: string]: {
@@ -426,8 +426,8 @@ export type PageObjectDefinition = {
 };
 
 export type PageObjectField = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectField>;
     actions?: {
         [key: string]: {
@@ -467,8 +467,8 @@ export type ObjectFolderItem = {
 };
 
 export type PageObjectFolder = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectFolder>;
     actions?: {
         [key: string]: {
@@ -481,8 +481,8 @@ export type PageObjectFolder = {
 };
 
 export type PageObjectLayout = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectLayout>;
     actions?: {
         [key: string]: {
@@ -495,8 +495,8 @@ export type PageObjectLayout = {
 };
 
 export type PageObjectRelationship = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectRelationship>;
     actions?: {
         [key: string]: {
@@ -509,8 +509,8 @@ export type PageObjectRelationship = {
 };
 
 export type PageObjectValidationRule = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectValidationRule>;
     actions?: {
         [key: string]: {
@@ -523,8 +523,8 @@ export type PageObjectValidationRule = {
 };
 
 export type PageObjectView = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ObjectView>;
     actions?: {
         [key: string]: {

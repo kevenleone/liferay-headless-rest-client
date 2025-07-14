@@ -103,8 +103,8 @@ export type Geo = {
 };
 
 export type PageAccount = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Account>;
     actions?: {
         [key: string]: {
@@ -146,8 +146,8 @@ export type Attachment = {
 };
 
 export type PageAttachment = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Attachment>;
     actions?: {
         [key: string]: {
@@ -175,8 +175,8 @@ export type Category = {
 };
 
 export type PageCategory = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Category>;
     actions?: {
         [key: string]: {
@@ -199,8 +199,8 @@ export type Channel = {
 };
 
 export type PageChannel = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Channel>;
     actions?: {
         [key: string]: {
@@ -234,8 +234,8 @@ export type Currency = {
 };
 
 export type PageCurrency = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Currency>;
     actions?: {
         [key: string]: {
@@ -255,8 +255,8 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
@@ -310,8 +310,8 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
@@ -404,6 +404,7 @@ export type SkuOption = {
     price?: string;
     priceType?: string;
     quantity?: string;
+    required?: boolean;
     skuId?: number;
     skuOptionId?: number;
     skuOptionKey?: string;
@@ -416,8 +417,8 @@ export type SkuOption = {
 };
 
 export type PagePin = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Pin>;
     actions?: {
         [key: string]: {
@@ -439,8 +440,8 @@ export type Pin = {
 };
 
 export type PageProductOption = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
@@ -453,8 +454,8 @@ export type PageProductOption = {
 };
 
 export type PageProductOptionValue = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
@@ -612,8 +613,8 @@ export type TierPrice = {
 };
 
 export type PageProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Product>;
     actions?: {
         [key: string]: {
@@ -626,8 +627,8 @@ export type PageProduct = {
 };
 
 export type PageProductSpecification = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
@@ -640,8 +641,8 @@ export type PageProductSpecification = {
 };
 
 export type PageRelatedProduct = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
@@ -654,8 +655,8 @@ export type PageRelatedProduct = {
 };
 
 export type PageSku = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<Sku>;
     actions?: {
         [key: string]: {
@@ -679,8 +680,8 @@ export type WishListItem = {
 };
 
 export type PageWishListItem = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WishListItem>;
     actions?: {
         [key: string]: {
@@ -693,8 +694,8 @@ export type PageWishListItem = {
 };
 
 export type PageWishList = {
-    lastPage?: number;
     totalCount?: number;
+    lastPage?: number;
     items?: Array<WishList>;
     actions?: {
         [key: string]: {
@@ -714,15 +715,15 @@ export type WishList = {
     readonly 'x-class-name'?: string;
 };
 
+export type OAuth2DxpAuthorization = {
+    [key: string]: unknown;
+};
+
 export type UserAdditionalInfo = {
     [key: string]: unknown;
 };
 
 export type PublisherAssets = {
-    [key: string]: unknown;
-};
-
-export type OAuth2DxpAuthorization = {
     [key: string]: unknown;
 };
 
