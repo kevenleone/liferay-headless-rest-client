@@ -86,12 +86,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneeMetricsPage({\n        client,\n        path: {\n           processId: \"4575\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneeMetricsPage({\n        client,\n        path: {\n           processId: \"8182\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees/metrics', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees/metrics', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -147,12 +147,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneesPage({\n        client,\n        path: {\n           processId: \"4214\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneesPage({\n        client,\n        path: {\n           processId: \"4688\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/assignees', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -189,7 +189,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/calendars', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/calendars', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -249,7 +249,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/calendars/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/calendars/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -312,12 +312,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessHistogramMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessHistogramMetric({\n        client,\n        path: {\n           processId: \"462\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessHistogramMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessHistogramMetric({\n        client,\n        path: {\n           processId: \"1506\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/histograms/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/histograms/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -354,7 +354,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -406,7 +406,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/refresh', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/refresh', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -449,7 +449,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/reindex', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/reindex', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -500,7 +500,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/indexes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -550,12 +550,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstance({\n        client,\n        path: {\n           processId: \"6974\",\n           instanceId: \"6362\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstance({\n        client,\n        path: {\n           processId: \"5350\",\n           instanceId: \"4691\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -595,12 +595,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessInstance({\n        client,\n        path: {\n           processId: \"8210\",\n           instanceId: \"5070\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessInstance({\n        client,\n        path: {\n           processId: \"1118\",\n           instanceId: \"5431\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -654,12 +654,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstance({\n        client,\n        path: {\n           processId: \"8427\",\n           instanceId: \"7205\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstance({\n        client,\n        path: {\n           processId: \"4925\",\n           instanceId: \"3087\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -778,12 +778,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstancesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstancesPage({\n        client,\n        path: {\n           processId: \"9151\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstancesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstancesPage({\n        client,\n        path: {\n           processId: \"6448\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -837,12 +837,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstance({\n        client,\n        path: {\n           processId: \"3016\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstance({\n        client,\n        path: {\n           processId: \"2551\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -898,12 +898,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstanceComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstanceComplete({\n        client,\n        path: {\n           processId: \"5312\",\n           instanceId: \"6073\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstanceComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstanceComplete({\n        client,\n        path: {\n           processId: \"6354\",\n           instanceId: \"9886\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}/complete', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/{instanceId}/complete', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -952,12 +952,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstanceBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstanceBatch({\n        client,\n        path: {\n           processId: \"5390\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstanceBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstanceBatch({\n        client,\n        path: {\n           processId: \"6085\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1067,12 +1067,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstancesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstancesPageExportBatch({\n        client,\n        path: {\n           processId: \"9296\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstancesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstancesPageExportBatch({\n        client,\n        path: {\n           processId: \"5079\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/instances/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1177,12 +1177,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodeMetricsPage({\n        client,\n        path: {\n           processId: \"3220\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodeMetricsPage({\n        client,\n        path: {\n           processId: \"6539\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1224,12 +1224,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessNode({\n        client,\n        path: {\n           processId: \"7318\",\n           nodeId: \"9569\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessNode({\n        client,\n        path: {\n           processId: \"4266\",\n           nodeId: \"7528\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/{nodeId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/{nodeId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1278,12 +1278,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodesPage({\n        client,\n        path: {\n           processId: \"2797\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodesPage({\n        client,\n        path: {\n           processId: \"9626\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1337,12 +1337,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNode({\n        client,\n        path: {\n           processId: \"6975\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNode({\n        client,\n        path: {\n           processId: \"3309\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1391,12 +1391,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodeBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodeBatch({\n        client,\n        path: {\n           processId: \"5200\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodeBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodeBatch({\n        client,\n        path: {\n           processId: \"1782\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1450,12 +1450,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodesPageExportBatch({\n        client,\n        path: {\n           processId: \"6788\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodesPageExportBatch({\n        client,\n        path: {\n           processId: \"3731\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/nodes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1518,12 +1518,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessMetric({\n        client,\n        path: {\n           processId: \"7959\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessMetric({\n        client,\n        path: {\n           processId: \"9740\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1597,7 +1597,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/metrics', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1662,7 +1662,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/metrics/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/metrics/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1704,12 +1704,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcess({\n        client,\n        path: {\n           processId: \"9705\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcess({\n        client,\n        path: {\n           processId: \"2477\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1755,12 +1755,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putProcess({\n        client,\n        path: {\n           processId: \"6369\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putProcess({\n        client,\n        path: {\n           processId: \"5704\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1792,12 +1792,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcess({\n        client,\n        path: {\n           processId: \"4117\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcess({\n        client,\n        path: {\n           processId: \"4768\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1843,7 +1843,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1887,7 +1887,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1931,7 +1931,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1968,12 +1968,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTitle } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTitle({\n        client,\n        path: {\n           processId: \"5027\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTitle } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTitle({\n        client,\n        path: {\n           processId: \"8044\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/title', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/title', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2024,7 +2024,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2073,12 +2073,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessProcessVersionsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessProcessVersionsPage({\n        client,\n        path: {\n           processId: \"5111\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessProcessVersionsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessProcessVersionsPage({\n        client,\n        path: {\n           processId: \"3099\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2132,12 +2132,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessProcessVersionsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessProcessVersionsPageExportBatch({\n        client,\n        path: {\n           processId: \"8088\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessProcessVersionsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessProcessVersionsPageExportBatch({\n        client,\n        path: {\n           processId: \"9027\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/process-versions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2174,7 +2174,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/reindex/statuses', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/reindex/statuses', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -2234,7 +2234,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/reindex/statuses/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/reindex/statuses/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2290,12 +2290,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessRolesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessRolesPage({\n        client,\n        path: {\n           processId: \"6018\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessRolesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessRolesPage({\n        client,\n        path: {\n           processId: \"6739\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2356,12 +2356,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessRolesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessRolesPageExportBatch({\n        client,\n        path: {\n           processId: \"7176\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessRolesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessRolesPageExportBatch({\n        client,\n        path: {\n           processId: \"1239\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/roles/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/roles/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2403,12 +2403,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSLA({\n        client,\n        path: {\n           slaId: \"4350\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSLA({\n        client,\n        path: {\n           slaId: \"7620\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2462,12 +2462,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSLA({\n        client,\n        path: {\n           slaId: \"7218\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSLA({\n        client,\n        path: {\n           slaId: \"8664\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2499,12 +2499,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSLA({\n        client,\n        path: {\n           slaId: \"1046\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSLA({\n        client,\n        path: {\n           slaId: \"4347\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/{slaId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2550,7 +2550,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2594,7 +2594,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/slas/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2664,12 +2664,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessSLAsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessSLAsPage({\n        client,\n        path: {\n           processId: \"1057\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessSLAsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessSLAsPage({\n        client,\n        path: {\n           processId: \"8298\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2723,12 +2723,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLA({\n        client,\n        path: {\n           processId: \"6183\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLA({\n        client,\n        path: {\n           processId: \"1829\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2777,12 +2777,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLABatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLABatch({\n        client,\n        path: {\n           processId: \"6569\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLABatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLABatch({\n        client,\n        path: {\n           processId: \"2420\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2843,12 +2843,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLAsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLAsPageExportBatch({\n        client,\n        path: {\n           processId: \"4681\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLAsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLAsPageExportBatch({\n        client,\n        path: {\n           processId: \"5037\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/slas/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2890,12 +2890,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessLastSLAResult } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessLastSLAResult({\n        client,\n        path: {\n           processId: \"4049\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessLastSLAResult } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessLastSLAResult({\n        client,\n        path: {\n           processId: \"3589\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/last-sla-result', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/last-sla-result', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2945,12 +2945,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTask({\n        client,\n        path: {\n           processId: \"2091\",\n           taskId: \"7713\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTask({\n        client,\n        path: {\n           processId: \"2828\",\n           taskId: \"7466\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2990,12 +2990,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessTask({\n        client,\n        path: {\n           processId: \"5110\",\n           taskId: \"9977\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessTask({\n        client,\n        path: {\n           processId: \"9039\",\n           taskId: \"3291\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3049,12 +3049,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTask({\n        client,\n        path: {\n           processId: \"9352\",\n           taskId: \"907\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTask({\n        client,\n        path: {\n           processId: \"7838\",\n           taskId: \"3562\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3103,12 +3103,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTasksPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTasksPage({\n        client,\n        path: {\n           processId: \"1404\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTasksPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTasksPage({\n        client,\n        path: {\n           processId: \"8309\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3162,12 +3162,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTask({\n        client,\n        path: {\n           processId: \"8019\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTask({\n        client,\n        path: {\n           processId: \"3024\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3223,12 +3223,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTaskComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTaskComplete({\n        client,\n        path: {\n           processId: \"6101\",\n           taskId: \"9923\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTaskComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTaskComplete({\n        client,\n        path: {\n           processId: \"7822\",\n           taskId: \"5757\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}/complete', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/{taskId}/complete', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3277,12 +3277,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTaskBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTaskBatch({\n        client,\n        path: {\n           processId: \"8931\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTaskBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTaskBatch({\n        client,\n        path: {\n           processId: \"9326\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3336,12 +3336,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTasksPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTasksPageExportBatch({\n        client,\n        path: {\n           processId: \"1235\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTasksPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTasksPageExportBatch({\n        client,\n        path: {\n           processId: \"4325\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/processes/{processId}/tasks/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3408,7 +3408,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3445,7 +3445,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/time-ranges', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/time-ranges', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -3505,7 +3505,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/time-ranges/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/portal-workflow-metrics/v1.0/time-ranges/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }

@@ -76,7 +76,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/field-mapping-infos', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/field-mapping-infos', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -148,7 +148,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/field-mapping-infos/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/field-mapping-infos/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -185,7 +185,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/keyword-query-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/keyword-query-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -245,7 +245,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/keyword-query-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/keyword-query-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -282,7 +282,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/model-prefilter-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/model-prefilter-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -342,7 +342,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/model-prefilter-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/model-prefilter-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -379,7 +379,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/query-prefilter-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/query-prefilter-contributors', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -439,7 +439,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/query-prefilter-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/query-prefilter-contributors/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -481,12 +481,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"6353\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"8093\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -540,12 +540,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"5496\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"7893\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -577,12 +577,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"4322\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"1645\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -636,12 +636,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"8185\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"7409\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -687,7 +687,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -731,7 +731,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -775,7 +775,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -817,12 +817,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1066\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8788\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -876,12 +876,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4114\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3824\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -915,12 +915,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"2779\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"1057\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1001,7 +1001,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1050,7 +1050,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1092,12 +1092,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"6030\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"5606\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1148,7 +1148,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1220,7 +1220,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1262,12 +1262,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"7647\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"7271\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1321,12 +1321,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"9282\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"1033\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1358,12 +1358,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"4108\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"6284\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1417,12 +1417,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"436\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"6257\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1468,7 +1468,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1512,7 +1512,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1556,7 +1556,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1598,12 +1598,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7682\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4005\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1657,12 +1657,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9791\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9419\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1696,12 +1696,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"7435\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"4187\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1782,7 +1782,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1831,7 +1831,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1873,12 +1873,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"9229\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"4668\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1929,7 +1929,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/preview', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/preview', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1980,7 +1980,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2052,7 +2052,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2089,7 +2089,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -2149,7 +2149,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-parameter-contributor-definitions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2186,7 +2186,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search-indexes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search-indexes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -2246,7 +2246,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search-indexes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search-indexes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2321,7 +2321,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/search', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2370,12 +2370,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"9909\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"4444\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names/{languageId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names/{languageId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2412,7 +2412,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ],
                 "parameters": [
@@ -2472,7 +2472,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/searchable-asset-names/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }

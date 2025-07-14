@@ -73,12 +73,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskAssignableUsersPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskAssignableUsersPage({\n        client,\n        path: {\n           workflowTaskId: \"2900\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskAssignableUsersPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskAssignableUsersPage({\n        client,\n        path: {\n           workflowTaskId: \"8127\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assignable-users', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assignable-users', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -141,12 +141,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceNextTransitionsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceNextTransitionsPage({\n        client,\n        path: {\n           workflowInstanceId: \"2822\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceNextTransitionsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceNextTransitionsPage({\n        client,\n        path: {\n           workflowInstanceId: \"7920\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/next-transitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/next-transitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -209,12 +209,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskNextTransitionsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskNextTransitionsPage({\n        client,\n        path: {\n           workflowTaskId: \"7361\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskNextTransitionsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskNextTransitionsPage({\n        client,\n        path: {\n           workflowTaskId: \"1027\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/next-transitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/next-transitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -277,12 +277,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLinksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLinksPage({\n        client,\n        path: {\n           externalReferenceCode: \"6927\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLinksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLinksPage({\n        client,\n        path: {\n           externalReferenceCode: \"2808\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-external-reference-code/{externalReferenceCode}/workflow-definition-links', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-external-reference-code/{externalReferenceCode}/workflow-definition-links', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -336,12 +336,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLink } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLink({\n        client,\n        path: {\n           externalReferenceCode: \"729\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLink } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionByExternalReferenceCodeWorkflowDefinitionLink({\n        client,\n        path: {\n           externalReferenceCode: \"4479\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-external-reference-code/{externalReferenceCode}/workflow-definition-links', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-external-reference-code/{externalReferenceCode}/workflow-definition-links', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -404,12 +404,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionWorkflowDefinitionLinksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionWorkflowDefinitionLinksPage({\n        client,\n        path: {\n           workflowDefinitionId: \"8505\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionWorkflowDefinitionLinksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionWorkflowDefinitionLinksPage({\n        client,\n        path: {\n           workflowDefinitionId: \"6958\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -463,12 +463,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLink } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLink({\n        client,\n        path: {\n           workflowDefinitionId: \"578\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLink } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLink({\n        client,\n        path: {\n           workflowDefinitionId: \"9723\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -517,12 +517,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLinkBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLinkBatch({\n        client,\n        path: {\n           workflowDefinitionId: \"4249\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLinkBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLinkBatch({\n        client,\n        path: {\n           workflowDefinitionId: \"2757\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -576,12 +576,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLinksPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLinksPageExportBatch({\n        client,\n        path: {\n           workflowDefinitionId: \"7890\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowDefinitionWorkflowDefinitionLinksPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowDefinitionWorkflowDefinitionLinksPageExportBatch({\n        client,\n        path: {\n           workflowDefinitionId: \"2919\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}/workflow-definition-links/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -637,12 +637,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putWorkflowDefinitionLinkByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putWorkflowDefinitionLinkByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5880\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putWorkflowDefinitionLinkByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putWorkflowDefinitionLinkByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9566\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definition-links/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definition-links/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -684,12 +684,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"7135\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"2927\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -743,12 +743,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"8080\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"3193\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -780,12 +780,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"5624\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWorkflowDefinition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWorkflowDefinition({\n        client,\n        path: {\n           workflowDefinitionId: \"4884\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/{workflowDefinitionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -831,7 +831,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -875,7 +875,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -919,7 +919,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -964,7 +964,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/undeploy', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/undeploy', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1020,12 +1020,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionByName } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionByName({\n        client,\n        path: {\n           name: \"5544\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowDefinitionByName } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowDefinitionByName({\n        client,\n        path: {\n           name: \"7254\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-name/{name}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/by-name/{name}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1099,7 +1099,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1148,7 +1148,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1199,7 +1199,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/deploy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/deploy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1250,7 +1250,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/save', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/save', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1310,7 +1310,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/update-active', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/update-active', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1375,7 +1375,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-definitions/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1417,12 +1417,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstance } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstance({\n        client,\n        path: {\n           workflowInstanceId: \"761\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstance } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstance({\n        client,\n        path: {\n           workflowInstanceId: \"2994\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1454,12 +1454,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWorkflowInstance } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWorkflowInstance({\n        client,\n        path: {\n           workflowInstanceId: \"2414\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWorkflowInstance } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWorkflowInstance({\n        client,\n        path: {\n           workflowInstanceId: \"662\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1505,7 +1505,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1586,7 +1586,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1642,12 +1642,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceChangeTransition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceChangeTransition({\n        client,\n        path: {\n           workflowInstanceId: \"4345\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceChangeTransition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceChangeTransition({\n        client,\n        path: {\n           workflowInstanceId: \"4592\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/change-transition', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/change-transition', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1698,7 +1698,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/submit', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/submit', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1770,7 +1770,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1840,12 +1840,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowLogsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowLogsPage({\n        client,\n        path: {\n           workflowInstanceId: \"6241\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowLogsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowLogsPage({\n        client,\n        path: {\n           workflowInstanceId: \"5337\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-logs', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-logs', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1887,12 +1887,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowLog } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowLog({\n        client,\n        path: {\n           workflowLogId: \"5577\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowLog } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowLog({\n        client,\n        path: {\n           workflowLogId: \"9415\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-logs/{workflowLogId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-logs/{workflowLogId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1962,12 +1962,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskWorkflowLogsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskWorkflowLogsPage({\n        client,\n        path: {\n           workflowTaskId: \"9523\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskWorkflowLogsPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskWorkflowLogsPage({\n        client,\n        path: {\n           workflowTaskId: \"5267\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/workflow-logs', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/workflow-logs', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2028,12 +2028,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceWorkflowLogsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceWorkflowLogsPageExportBatch({\n        client,\n        path: {\n           workflowInstanceId: \"3165\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceWorkflowLogsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceWorkflowLogsPageExportBatch({\n        client,\n        path: {\n           workflowInstanceId: \"6888\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-logs/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-logs/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2094,12 +2094,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskWorkflowLogsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskWorkflowLogsPageExportBatch({\n        client,\n        path: {\n           workflowTaskId: \"7747\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskWorkflowLogsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskWorkflowLogsPageExportBatch({\n        client,\n        path: {\n           workflowTaskId: \"5840\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/workflow-logs/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/workflow-logs/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2150,7 +2150,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assignable-users', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assignable-users', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2220,12 +2220,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksAssignedToMePage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksAssignedToMePage({\n        client,\n        path: {\n           workflowInstanceId: \"1357\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksAssignedToMePage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksAssignedToMePage({\n        client,\n        path: {\n           workflowInstanceId: \"993\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/assigned-to-me', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/assigned-to-me', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2302,12 +2302,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksAssignedToUserPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksAssignedToUserPage({\n        client,\n        path: {\n           workflowInstanceId: \"1837\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksAssignedToUserPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksAssignedToUserPage({\n        client,\n        path: {\n           workflowInstanceId: \"5117\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/assigned-to-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/assigned-to-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2377,12 +2377,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksPage({\n        client,\n        path: {\n           workflowInstanceId: \"7516\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowInstanceWorkflowTasksPage } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowInstanceWorkflowTasksPage({\n        client,\n        path: {\n           workflowInstanceId: \"5179\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2424,12 +2424,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTask } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTask({\n        client,\n        path: {\n           workflowTaskId: \"9526\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTask } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTask({\n        client,\n        path: {\n           workflowTaskId: \"693\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2466,12 +2466,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskHasAssignableUsers } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskHasAssignableUsers({\n        client,\n        path: {\n           workflowTaskId: \"4350\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWorkflowTaskHasAssignableUsers } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWorkflowTaskHasAssignableUsers({\n        client,\n        path: {\n           workflowTaskId: \"8613\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/has-assignable-users', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/has-assignable-users', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2531,7 +2531,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-me', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-me', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2591,7 +2591,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-my-roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-my-roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2658,7 +2658,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-role', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-role', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2725,7 +2725,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2792,7 +2792,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-user-roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assigned-to-user-roles', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2859,7 +2859,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/submitting-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/submitting-user', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2908,7 +2908,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assign-to-user', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/assign-to-user', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2957,7 +2957,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/change-transition', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/change-transition', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3006,7 +3006,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/update-due-date', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/update-due-date', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3067,12 +3067,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceWorkflowTasksPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceWorkflowTasksPageExportBatch({\n        client,\n        path: {\n           workflowInstanceId: \"1501\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowInstanceWorkflowTasksPageExportBatch } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowInstanceWorkflowTasksPageExportBatch({\n        client,\n        path: {\n           workflowInstanceId: \"303\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-instances/{workflowInstanceId}/workflow-tasks/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3128,12 +3128,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToMe } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToMe({\n        client,\n        path: {\n           workflowTaskId: \"1850\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToMe } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToMe({\n        client,\n        path: {\n           workflowTaskId: \"9749\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-me', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-me', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3189,12 +3189,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToRole } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToRole({\n        client,\n        path: {\n           workflowTaskId: \"5929\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToRole } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToRole({\n        client,\n        path: {\n           workflowTaskId: \"992\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-role', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-role', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3250,12 +3250,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToUser } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToUser({\n        client,\n        path: {\n           workflowTaskId: \"2299\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskAssignToUser } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskAssignToUser({\n        client,\n        path: {\n           workflowTaskId: \"6047\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-user', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/assign-to-user', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3311,12 +3311,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskChangeTransition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskChangeTransition({\n        client,\n        path: {\n           workflowTaskId: \"2700\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskChangeTransition } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskChangeTransition({\n        client,\n        path: {\n           workflowTaskId: \"3254\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/change-transition', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/change-transition', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3372,12 +3372,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskUpdateDueDate } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskUpdateDueDate({\n        client,\n        path: {\n           workflowTaskId: \"6371\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWorkflowTaskUpdateDueDate } from 'liferay-headless-rest-client/headless-admin-workflow-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWorkflowTaskUpdateDueDate({\n        client,\n        path: {\n           workflowTaskId: \"5162\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/update-due-date', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/{workflowTaskId}/update-due-date', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3451,7 +3451,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3502,7 +3502,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/next-transitions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-workflow/v1.0/workflow-tasks/next-transitions', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }

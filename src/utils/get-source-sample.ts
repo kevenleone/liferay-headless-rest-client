@@ -29,7 +29,7 @@ const response = await Liferay.Util.fetch('%RESOURCE_URL%', {
 const data = await response.json();
 
 console.log(data);
-`;
+`.trim();
 
 function getFormattedJSON(
     parameterName: string,

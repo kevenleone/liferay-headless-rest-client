@@ -94,12 +94,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelAccountsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelAccountsPage({\n        client,\n        path: {\n           channelId: \"5571\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelAccountsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelAccountsPage({\n        client,\n        path: {\n           channelId: \"9291\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -153,12 +153,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelAccount } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelAccount({\n        client,\n        path: {\n           channelId: \"8719\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelAccount } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelAccount({\n        client,\n        path: {\n           channelId: \"8196\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/accounts', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -236,12 +236,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductAttachmentsPage({\n        client,\n        path: {\n           channelId: \"5749\",\n           productId: \"9697\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductAttachmentsPage({\n        client,\n        path: {\n           channelId: \"3932\",\n           productId: \"1491\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/attachments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/attachments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -319,12 +319,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductImagesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductImagesPage({\n        client,\n        path: {\n           channelId: \"284\",\n           productId: \"7506\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductImagesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductImagesPage({\n        client,\n        path: {\n           channelId: \"2753\",\n           productId: \"5795\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/images', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/images', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -396,12 +396,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductCategoriesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductCategoriesPage({\n        client,\n        path: {\n           channelId: \"2482\",\n           productId: \"895\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductCategoriesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductCategoriesPage({\n        client,\n        path: {\n           channelId: \"3894\",\n           productId: \"1273\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/categories', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/categories', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -482,7 +482,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -554,7 +554,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -639,12 +639,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeCurrenciesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeCurrenciesPage({\n        client,\n        path: {\n           externalReferenceCode: \"5153\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeCurrenciesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeCurrenciesPage({\n        client,\n        path: {\n           externalReferenceCode: \"889\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/currencies', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/currencies', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -729,12 +729,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelCurrenciesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelCurrenciesPage({\n        client,\n        path: {\n           channelId: \"1382\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelCurrenciesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelCurrenciesPage({\n        client,\n        path: {\n           channelId: \"5995\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/currencies', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/currencies', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -812,12 +812,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductLinkedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductLinkedProductsPage({\n        client,\n        path: {\n           channelId: \"2492\",\n           productId: \"9890\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductLinkedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductLinkedProductsPage({\n        client,\n        path: {\n           channelId: \"5327\",\n           productId: \"1610\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/linked-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/linked-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -916,12 +916,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductMappedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductMappedProductsPage({\n        client,\n        path: {\n           channelId: \"6545\",\n           productId: \"5345\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductMappedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductMappedProductsPage({\n        client,\n        path: {\n           channelId: \"8287\",\n           productId: \"8218\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/mapped-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/mapped-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1013,12 +1013,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"3290\",\n           productExternalReferenceCode: \"7382\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodePinsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"9932\",\n           productExternalReferenceCode: \"2663\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/pins', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/pins', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1110,12 +1110,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductPinsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductPinsPage({\n        client,\n        path: {\n           channelId: \"7573\",\n           productId: \"438\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductPinsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductPinsPage({\n        client,\n        path: {\n           channelId: \"1550\",\n           productId: \"4827\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/pins', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/pins', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1186,12 +1186,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"690\",\n           productExternalReferenceCode: \"2606\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"8859\",\n           productExternalReferenceCode: \"6229\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1262,12 +1262,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductOptionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductOptionsPage({\n        client,\n        path: {\n           channelId: \"3871\",\n           productId: \"5500\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductOptionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductOptionsPage({\n        client,\n        path: {\n           channelId: \"7350\",\n           productId: \"1208\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1374,12 +1374,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"7658\",\n           productExternalReferenceCode: \"5897\",\n           productOptionExternalReferenceCode: \"4073\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"78\",\n           productExternalReferenceCode: \"2742\",\n           productOptionExternalReferenceCode: \"6796\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1498,12 +1498,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"9935\",\n           productExternalReferenceCode: \"653\",\n           productOptionExternalReferenceCode: \"2361\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductOptionByExternalReferenceCodeProductOptionExternalReferenceCodeProductOptionValuesPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"4583\",\n           productExternalReferenceCode: \"148\",\n           productOptionExternalReferenceCode: \"6828\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-options/by-externalReferenceCode/{productOptionExternalReferenceCode}/product-option-values', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1610,12 +1610,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductOptionProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductOptionProductOptionValuesPage({\n        client,\n        path: {\n           channelId: \"1383\",\n           productId: \"7389\",\n           productOptionId: \"1231\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductOptionProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductOptionProductOptionValuesPage({\n        client,\n        path: {\n           channelId: \"6567\",\n           productId: \"5277\",\n           productOptionId: \"910\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1734,12 +1734,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductProductOptionProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductProductOptionProductOptionValuesPage({\n        client,\n        path: {\n           channelId: \"5914\",\n           productId: \"5598\",\n           productOptionId: \"6627\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductProductOptionProductOptionValuesPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductProductOptionProductOptionValuesPage({\n        client,\n        path: {\n           channelId: \"542\",\n           productId: \"3621\",\n           productOptionId: \"3661\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-options/{productOptionId}/product-option-values', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1797,12 +1797,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProduct } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProduct({\n        client,\n        path: {\n           channelId: \"9107\",\n           productId: \"8318\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProduct } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProduct({\n        client,\n        path: {\n           channelId: \"5104\",\n           productId: \"1755\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1861,12 +1861,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductByFriendlyUrlPath } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductByFriendlyUrlPath({\n        client,\n        path: {\n           channelId: \"5470\",\n           friendlyUrlPath: \"1953\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductByFriendlyUrlPath } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductByFriendlyUrlPath({\n        client,\n        path: {\n           channelId: \"3242\",\n           friendlyUrlPath: \"1319\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/by-friendly-url-path/{friendlyUrlPath}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/by-friendly-url-path/{friendlyUrlPath}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1958,12 +1958,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductsPage({\n        client,\n        path: {\n           channelId: \"1335\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductsPage({\n        client,\n        path: {\n           channelId: \"8616\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2034,12 +2034,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductSpecificationsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductSpecificationsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"3548\",\n           productExternalReferenceCode: \"1773\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductSpecificationsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeProductSpecificationsPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"8739\",\n           productExternalReferenceCode: \"9979\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-specifications', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/product-specifications', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2110,12 +2110,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductSpecificationsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductSpecificationsPage({\n        client,\n        path: {\n           channelId: \"8631\",\n           productId: \"3374\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductProductSpecificationsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductProductSpecificationsPage({\n        client,\n        path: {\n           channelId: \"3661\",\n           productId: \"3667\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-specifications', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/product-specifications', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2194,12 +2194,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductRelatedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductRelatedProductsPage({\n        client,\n        path: {\n           channelId: \"3905\",\n           productId: \"3885\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductRelatedProductsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductRelatedProductsPage({\n        client,\n        path: {\n           channelId: \"5150\",\n           productId: \"3907\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/related-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/related-products', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2272,12 +2272,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuByExternalReferenceCodeSkuExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuByExternalReferenceCodeSkuExternalReferenceCode({\n        client,\n        path: {\n           channelExternalReferenceCode: \"5656\",\n           productExternalReferenceCode: \"275\",\n           skuExternalReferenceCode: \"4988\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuByExternalReferenceCodeSkuExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuByExternalReferenceCodeSkuExternalReferenceCode({\n        client,\n        path: {\n           channelExternalReferenceCode: \"1133\",\n           productExternalReferenceCode: \"1054\",\n           skuExternalReferenceCode: \"8364\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-externalReferenceCode/{skuExternalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-externalReferenceCode/{skuExternalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2363,12 +2363,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkusPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkusPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"4137\",\n           productExternalReferenceCode: \"4745\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkusPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkusPage({\n        client,\n        path: {\n           channelExternalReferenceCode: \"2091\",\n           productExternalReferenceCode: \"4938\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2451,12 +2451,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSku({\n        client,\n        path: {\n           channelExternalReferenceCode: \"8936\",\n           productExternalReferenceCode: \"5096\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSku({\n        client,\n        path: {\n           channelExternalReferenceCode: \"466\",\n           productExternalReferenceCode: \"5882\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2529,12 +2529,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductSku({\n        client,\n        path: {\n           channelId: \"7107\",\n           productId: \"9499\",\n           skuId: \"1534\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductSku({\n        client,\n        path: {\n           channelId: \"9003\",\n           productId: \"2727\",\n           skuId: \"5129\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/{skuId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/{skuId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2620,12 +2620,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductSkusPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductSkusPage({\n        client,\n        path: {\n           channelId: \"4389\",\n           productId: \"4618\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelProductSkusPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelProductSkusPage({\n        client,\n        path: {\n           channelId: \"820\",\n           productId: \"5455\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2708,12 +2708,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductSku({\n        client,\n        path: {\n           channelId: \"8897\",\n           productId: \"7012\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductSku } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductSku({\n        client,\n        path: {\n           channelId: \"2812\",\n           productId: \"5031\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2812,12 +2812,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuBySkuOption } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuBySkuOption({\n        client,\n        path: {\n           channelExternalReferenceCode: \"751\",\n           productExternalReferenceCode: \"6706\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuBySkuOption } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeChannelExternalReferenceCodeProductByExternalReferenceCodeProductExternalReferenceCodeSkuBySkuOption({\n        client,\n        path: {\n           channelExternalReferenceCode: \"2115\",\n           productExternalReferenceCode: \"5685\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-sku-option', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/products/by-externalReferenceCode/{productExternalReferenceCode}/skus/by-sku-option', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2916,12 +2916,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductSkuBySkuOption } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductSkuBySkuOption({\n        client,\n        path: {\n           channelId: \"6487\",\n           productId: \"3845\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelProductSkuBySkuOption } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelProductSkuBySkuOption({\n        client,\n        path: {\n           channelId: \"3585\",\n           productId: \"8036\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/by-sku-option', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/products/{productId}/skus/by-sku-option', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2978,12 +2978,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishListItem({\n        client,\n        path: {\n           wishListItemId: \"8624\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishListItem({\n        client,\n        path: {\n           wishListItemId: \"1489\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3016,12 +3016,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWishListItem({\n        client,\n        path: {\n           wishListItemId: \"1492\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWishListItem({\n        client,\n        path: {\n           wishListItemId: \"58\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/{wishListItemId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3067,7 +3067,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlist-items/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3145,12 +3145,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishlistWishListWishListItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishlistWishListWishListItemsPage({\n        client,\n        path: {\n           wishListId: \"9469\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishlistWishListWishListItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishlistWishListWishListItemsPage({\n        client,\n        path: {\n           wishListId: \"4535\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3211,12 +3211,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWishlistWishListWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWishlistWishListWishListItem({\n        client,\n        path: {\n           wishListId: \"7295\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postWishlistWishListWishListItem } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postWishlistWishListWishListItem({\n        client,\n        path: {\n           wishListId: \"7528\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}/wishlist-items', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3259,12 +3259,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishList({\n        client,\n        path: {\n           wishListId: \"838\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getWishList({\n        client,\n        path: {\n           wishListId: \"4523\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3297,12 +3297,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWishList({\n        client,\n        path: {\n           wishListId: \"856\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteWishList({\n        client,\n        path: {\n           wishListId: \"2603\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3363,12 +3363,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchWishList({\n        client,\n        path: {\n           wishListId: \"2153\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchWishList({\n        client,\n        path: {\n           wishListId: \"5911\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/{wishListId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3414,7 +3414,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/wishlists/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3492,12 +3492,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeWishListsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeWishListsPage({\n        client,\n        path: {\n           externalReferenceCode: \"6300\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeWishListsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeWishListsPage({\n        client,\n        path: {\n           externalReferenceCode: \"6287\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3558,12 +3558,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeWishList({\n        client,\n        path: {\n           externalReferenceCode: \"4108\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelByExternalReferenceCodeWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelByExternalReferenceCodeWishList({\n        client,\n        path: {\n           externalReferenceCode: \"1611\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/wishlists', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -3641,12 +3641,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelWishListsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelWishListsPage({\n        client,\n        path: {\n           channelId: \"3223\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelWishListsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelWishListsPage({\n        client,\n        path: {\n           channelId: \"4575\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -3707,12 +3707,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelWishList({\n        client,\n        path: {\n           channelId: \"8105\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postChannelWishList } from 'liferay-headless-rest-client/headless-commerce-delivery-catalog-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postChannelWishList({\n        client,\n        path: {\n           channelId: \"8307\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-catalog/v1.0/channels/{channelId}/wishlists', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -6299,15 +6299,15 @@
                 },
                 "x-filterable": []
             },
+            "PublisherAssets": {
+                "type": "object",
+                "x-filterable": []
+            },
             "OAuth2DxpAuthorization": {
                 "type": "object",
                 "x-filterable": []
             },
             "UserAdditionalInfo": {
-                "type": "object",
-                "x-filterable": []
-            },
-            "PublisherAssets": {
                 "type": "object",
                 "x-filterable": []
             }

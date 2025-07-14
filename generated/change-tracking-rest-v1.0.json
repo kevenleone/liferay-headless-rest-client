@@ -51,12 +51,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"8621\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"7402\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -110,12 +110,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"9116\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"33\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -147,12 +147,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"2979\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"3054\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -206,12 +206,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"5167\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollection } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollection({\n        client,\n        path: {\n           ctCollectionId: \"5469\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -257,7 +257,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -301,7 +301,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -345,7 +345,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -387,12 +387,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9214\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5490\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -424,12 +424,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7195\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1660\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -483,12 +483,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1125\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTCollectionByExternalReferenceCode } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTCollectionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4239\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -525,12 +525,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCodeShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCodeShareLink({\n        client,\n        path: {\n           externalReferenceCode: \"8122\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionByExternalReferenceCodeShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionByExternalReferenceCodeShareLink({\n        client,\n        path: {\n           externalReferenceCode: \"4003\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -567,12 +567,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionShareLink({\n        client,\n        path: {\n           ctCollectionId: \"2295\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTCollectionShareLink } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTCollectionShareLink({\n        client,\n        path: {\n           ctCollectionId: \"9778\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/b{ctCollectionId}/share-link', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -653,7 +653,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -702,7 +702,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -736,12 +736,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodePublish({\n        client,\n        path: {\n           externalReferenceCode: \"2053\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodePublish({\n        client,\n        path: {\n           externalReferenceCode: \"9203\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -782,12 +782,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodeSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodeSchedulePublish({\n        client,\n        path: {\n           externalReferenceCode: \"5421\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionByExternalReferenceCodeSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionByExternalReferenceCodeSchedulePublish({\n        client,\n        path: {\n           externalReferenceCode: \"7893\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/by-external-reference-code/{externalReferenceCode}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -821,12 +821,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionCheckout } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionCheckout({\n        client,\n        path: {\n           ctCollectionId: \"977\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionCheckout } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionCheckout({\n        client,\n        path: {\n           ctCollectionId: \"2915\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/checkout', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -860,12 +860,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionPublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionPublish({\n        client,\n        path: {\n           ctCollectionId: \"1471\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionPublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionPublish({\n        client,\n        path: {\n           ctCollectionId: \"7975\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -906,12 +906,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionSchedulePublish({\n        client,\n        path: {\n           ctCollectionId: \"5843\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTCollectionSchedulePublish } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTCollectionSchedulePublish({\n        client,\n        path: {\n           ctCollectionId: \"3618\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/schedule-publish', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -983,7 +983,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1085,7 +1085,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/history', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/history', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1127,12 +1127,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTEntry } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTEntry({\n        client,\n        path: {\n           ctEntryId: \"7821\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTEntry } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTEntry({\n        client,\n        path: {\n           ctEntryId: \"5774\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-entries/{ctEntryId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1223,12 +1223,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntriesPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntriesPage({\n        client,\n        path: {\n           ctCollectionId: \"2251\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntriesPage } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntriesPage({\n        client,\n        path: {\n           ctCollectionId: \"4825\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1286,12 +1286,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK({\n        client,\n        path: {\n           ctCollectionId: \"9543\",\n           modelClassNameId: \"8161\",\n           modelClassPK: \"1015\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCtCollectionCTEntryByModelClassNameByModelClassPkModelClassPK({\n        client,\n        path: {\n           ctCollectionId: \"6764\",\n           modelClassNameId: \"9596\",\n           modelClassPK: \"6807\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-collections/{ctCollectionId}/ct-entries/by-model-class-name-id/{modelClassNameId}/by-model-class-pk/{modelClassPK}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1333,12 +1333,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTProcess({\n        client,\n        path: {\n           ctProcessId: \"537\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTProcess({\n        client,\n        path: {\n           ctProcessId: \"4585\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1370,12 +1370,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTProcess({\n        client,\n        path: {\n           ctProcessId: \"549\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTProcess } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTProcess({\n        client,\n        path: {\n           ctProcessId: \"9878\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1421,7 +1421,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1509,7 +1509,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1557,12 +1557,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTProcessRevert } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTProcessRevert({\n        client,\n        path: {\n           ctProcessId: \"1656\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postCTProcessRevert } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postCTProcessRevert({\n        client,\n        path: {\n           ctProcessId: \"5479\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/{ctProcessId}/revert', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1641,7 +1641,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-processes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1683,12 +1683,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTRemote({\n        client,\n        path: {\n           id: \"9622\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCTRemote({\n        client,\n        path: {\n           id: \"1679\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1742,12 +1742,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTRemote({\n        client,\n        path: {\n           id: \"9025\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putCTRemote({\n        client,\n        path: {\n           id: \"6596\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1779,12 +1779,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTRemote({\n        client,\n        path: {\n           id: \"1604\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteCTRemote({\n        client,\n        path: {\n           id: \"8778\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1838,12 +1838,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTRemote({\n        client,\n        path: {\n           id: \"9907\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchCTRemote } from 'liferay-headless-rest-client/change-tracking-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchCTRemote({\n        client,\n        path: {\n           id: \"2256\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/{id}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1889,7 +1889,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1933,7 +1933,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -1977,7 +1977,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2051,7 +2051,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
@@ -2100,7 +2100,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2165,7 +2165,7 @@
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/change-tracking-rest/v1.0/ct-remotes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }

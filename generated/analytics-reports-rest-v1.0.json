@@ -80,12 +80,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeAppearsOnHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeAppearsOnHistogram({\n        client,\n        path: {\n           groupId: \"6250\",\n           assetType: \"9435\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeAppearsOnHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeAppearsOnHistogram({\n        client,\n        path: {\n           groupId: \"2524\",\n           assetType: \"5413\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/appears-on/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -156,12 +156,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeDevice } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeDevice({\n        client,\n        path: {\n           groupId: \"590\",\n           assetType: \"9911\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeDevice } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeDevice({\n        client,\n        path: {\n           groupId: \"2995\",\n           assetType: \"3875\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/devices', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -232,12 +232,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeHistogram({\n        client,\n        path: {\n           groupId: \"4297\",\n           assetType: \"2098\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetricAssetTypeHistogram } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetricAssetTypeHistogram({\n        client,\n        path: {\n           groupId: \"5802\",\n           assetType: \"2448\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}/histogram', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -315,12 +315,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetric } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetric({\n        client,\n        path: {\n           groupId: \"4218\",\n           assetType: \"1809\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getGroupAssetMetric } from 'liferay-headless-rest-client/analytics-reports-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getGroupAssetMetric({\n        client,\n        path: {\n           groupId: \"6890\",\n           assetType: \"5492\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "\nconst response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);\n"
+                        "source": "const response = await Liferay.Util.fetch('/o/analytics-reports-rest/v1.0/{groupId}/asset-metrics/{assetType}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
