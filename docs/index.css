@@ -1,0 +1,106 @@
+:root {
+    --scalar-custom-header-height: 50px;
+}
+
+.custom-header {
+    background-color: var(--scalar-background-1);
+    box-shadow: inset 0 -1px 0 var(--scalar-border-color);
+    color: var(--scalar-color-1);
+    font-size: var(--scalar-font-size-2);
+    height: var(--scalar-custom-header-height);
+    justify-content: space-between;
+    padding: 0 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.custom-header,
+.custom-header nav {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+}
+
+.custom-header a:hover {
+    color: var(--scalar-color-2);
+}
+
+.custom-header b {
+    font-weight: bold;
+}
+
+/* Modal backdrop */
+#settings-modal-backdrop {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    font-family: "Inter", cursive, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999;
+}
+
+/* Modal box */
+#settings-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    padding: 1.5rem;
+    width: 400px;
+}
+
+#settings-modal h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#settings-modal input[type="text"],
+#settings-modal select {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 1rem;
+}
+
+.modal-actions {
+    text-align: right;
+}
+
+.modal-actions button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.modal-actions .cancel-btn {
+    background: #ccc;
+}
+
+.modal-actions .save-btn {
+    background: #007bff;
+    color: white;
+}

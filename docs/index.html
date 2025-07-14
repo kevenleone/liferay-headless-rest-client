@@ -2,17 +2,102 @@
 <html>
     <head>
         <title>Liferay Headless</title>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./index.css" />
     </head>
 
     <body>
-        <div id="app"></div>
-
-        <!-- Load Scalar -->
         <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 
-        <!-- Your script -->
-        <script type="module" src="./index.mjs"></script>
+        <header class="custom-header scalar-app">
+            <b>Liferay Headless</b>
+
+            <nav>
+                <a
+                    target="_blank"
+                    href="https://github.com/kevenleone/liferay-headless-rest-client"
+                >
+                    Github</a
+                >
+                <a id="settings">Settings</a>
+            </nav>
+        </header>
+
+        <scalar></scalar>
+
+        <div id="settings-modal-backdrop">
+            <div id="settings-modal">
+                <h2>App Settings</h2>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="theme">Theme</label>
+                        <select id="theme" name="theme">
+                            <option value="alternate">Alternate</option>
+                            <option value="bluePlanet">BluePlanet</option>
+                            <option value="deepSpace">DeepSpace</option>
+                            <option value="default">Default</option>
+                            <option value="fastify">Fastify</option>
+                            <option value="liferay">Liferay</option>
+                            <option value="elysiajs">ElysiaJS</option>
+                            <option value="kepler">Kepler</option>
+                            <option value="laserwave">Laserwave</option>
+                            <option value="mars">Mars</option>
+                            <option value="moon">Moon</option>
+                            <option value="purple">Purple</option>
+                            <option value="saturn">Saturn</option>
+                            <option value="solarized">Solarized</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Layout</label>
+                        <div class="radio-group">
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="layout"
+                                    value="classic"
+                                    checked
+                                />
+                                Classic</label
+                            >
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="layout"
+                                    value="modern"
+                                />
+                                Modern</label
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label
+                                ><input
+                                    type="checkbox"
+                                    name="useScalarProxy"
+                                    checked
+                                />
+                                Use Scalar Proxy</label
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Add more settings fields here as needed -->
+
+                    <div class="modal-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="module" src="./js/index.mjs"></script>
     </body>
 </html>
