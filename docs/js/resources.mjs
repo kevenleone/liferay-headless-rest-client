@@ -55,7 +55,5 @@ export const resources = [
     "test/v1.0",
 ];
 
-// export const resourcesDomain =
-//     "https://raw.githubusercontent.com/kevenleone/liferay-headless-rest-client/refs/heads/main/generated";
-
-export const resourcesDomain = "http://localhost:52463";
+export const resourcesDomain =
+    "https://raw.githubusercontent.com/kevenleone/liferay-headless-rest-client/refs/heads/main/generated";
