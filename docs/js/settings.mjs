@@ -84,13 +84,25 @@ const liferayTheme = `
 }`;
 
 const scalarConfigBase = {
+    authentication: {
+        preferredSecurityScheme: "basicAuth",
+        securitySchemes: {
+            basicAuth: {
+                username: "test@liferay.com",
+                password: "",
+            },
+        },
+    },
     defaultHttpClient: {
         targetKey: "node",
         clientKey: "fetch",
     },
-
     layout: "classic",
+    onDocumentSelect: () => {
+        const searchParams = new URLSearchParams(window.location.search);
 
+        umami.track(`document-select:${searchParams.get("api")}`);
+    },
     servers: [
         {
             url: "http://localhost:{port}",
@@ -106,7 +118,6 @@ const scalarConfigBase = {
             },
         },
     ],
-
     persistAuth: true,
     sources: resources.map((resource) => ({
         url: `${resourcesDomain}/${resource.replace("/", "-")}.json`,
