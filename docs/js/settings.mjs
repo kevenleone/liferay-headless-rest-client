@@ -83,18 +83,14 @@ const liferayTheme = `
 }
 }`;
 
-export const scalarConfigBase = {
+const scalarConfigBase = {
     defaultHttpClient: {
         targetKey: "node",
         clientKey: "fetch",
     },
-    // hideDownloadButton: true,
-    // hideModels: true,
+
     layout: "classic",
-    metaData: {
-        title: "Liferay Headless",
-        description: "Liferay Headless APIs",
-    },
+
     servers: [
         {
             url: "http://localhost:{port}",
@@ -110,29 +106,7 @@ export const scalarConfigBase = {
             },
         },
     ],
-    security: [
-        {
-            bearerAuth: [],
-        },
-        {
-            basicAuth: [],
-        },
-        {
-            apiKeyQuery: [],
-        },
-        {
-            apiKeyHeader: [],
-        },
-        {
-            apiKeyCookie: [],
-        },
-        {
-            oAuth2: [],
-        },
-        {
-            openIdConnect: [],
-        },
-    ],
+
     persistAuth: true,
     sources: resources.map((resource) => ({
         url: `${resourcesDomain}/${resource.replace("/", "-")}.json`,
@@ -141,13 +115,9 @@ export const scalarConfigBase = {
     ...getStorageScalarSettings(),
 };
 
+const scalar = Scalar.createApiReference("scalar", scalarConfigBase);
+
 export function applyScalarSettings(settings) {
-    const element = document.querySelector("scalar");
-
-    if (element) {
-        element.remove();
-    }
-
     document.body.appendChild(document.createElement("scalar"));
 
     if (settings.theme === "liferay") {
@@ -164,10 +134,7 @@ export function applyScalarSettings(settings) {
 
     localStorage.setItem(storageKey, JSON.stringify(settings));
 
-    console.log({ settings });
-
-    // Re-create Scalar with new config
-    Scalar.createApiReference("scalar", {
+    scalar.updateConfiguration({
         ...scalarConfigBase,
         ...settings,
     });

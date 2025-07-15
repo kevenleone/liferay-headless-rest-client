@@ -1,13 +1,9 @@
-import { applyScalarSettings, scalarConfigBase } from "./settings.mjs";
+import { applyScalarSettings } from "./settings.mjs";
 
-const settingsBtn = document.getElementById("settings");
-const modalBackdrop = document.getElementById("settings-modal-backdrop");
 const cancelBtn = document.querySelector(".cancel-btn");
 const form = document.getElementById("settings-form");
-
-settingsBtn.addEventListener("click", () => {
-    modalBackdrop.style.display = "flex";
-});
+const modalBackdrop = document.getElementById("settings-modal-backdrop");
+const settingsBtn = document.getElementById("settings");
 
 cancelBtn.addEventListener("click", () => {
     modalBackdrop.style.display = "none";
@@ -24,4 +20,6 @@ form.addEventListener("submit", (event) => {
     modalBackdrop.style.display = "none";
 });
 
-Scalar.createApiReference("scalar", scalarConfigBase);
+settingsBtn.addEventListener("click", () => {
+    modalBackdrop.style.display = "flex";
+});
