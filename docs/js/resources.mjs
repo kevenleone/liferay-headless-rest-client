@@ -52,7 +52,6 @@ export const resources = [
     "search/v1.0",
     "search-experiences-rest/v1.0",
     "segments-asah/v1.0",
-    "test/v1.0",
 ];
 
 export const resourcesDomain =
