@@ -1,4 +1,8 @@
-import { resources, resourcesDomain } from "./resources.mjs";
+import {
+    resources,
+    resourcesDomain,
+    summaryResourceMarkdown,
+} from "./resources.mjs";
 
 const storageKey = "@liferay-headless-scalar/properties";
 
@@ -119,10 +123,26 @@ const scalarConfigBase = {
         },
     ],
     persistAuth: true,
-    sources: resources.map((resource) => ({
-        url: `${resourcesDomain}/${resource.replace("/", "-")}.json`,
-        title: resource.replace(".json", ""),
-    })),
+    sources: [
+        {
+            hideDownloadButton: true,
+            title: "introduction",
+            slug: "introduction",
+            content: {
+                openapi: "3.0.1",
+                info: {
+                    version: "v1.0",
+                    description: summaryResourceMarkdown,
+                    title: "Liferay Headless Rest Client",
+                },
+            },
+        },
+        ...resources.map((resource) => ({
+            url: `${resourcesDomain}/${resource.replace("/", "-")}.json`,
+            slug: resource.replace("/", "-"),
+            title: resource.replace(".json", ""),
+        })),
+    ],
     ...getStorageScalarSettings(),
 };
 
