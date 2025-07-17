@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.workflow.metrics.rest.client', and version '3.0.44'.",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneeMetricsPage({\n        client,\n        path: {\n           processId: \"2770\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.workflow.metrics.rest.client', and version '3.0.44'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.portal.workflow.metrics.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.workflow.metrics.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -86,7 +86,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneeMetricsPage({\n        client,\n        path: {\n           processId: \"8182\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneeMetricsPage({\n        client,\n        path: {\n           processId: \"5732\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -147,7 +147,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneesPage({\n        client,\n        path: {\n           processId: \"4688\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessAssigneesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessAssigneesPage({\n        client,\n        path: {\n           processId: \"4564\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -312,7 +312,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessHistogramMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessHistogramMetric({\n        client,\n        path: {\n           processId: \"1506\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessHistogramMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessHistogramMetric({\n        client,\n        path: {\n           processId: \"7543\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -550,7 +550,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstance({\n        client,\n        path: {\n           processId: \"5350\",\n           instanceId: \"4691\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstance({\n        client,\n        path: {\n           processId: \"7289\",\n           instanceId: \"3220\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -595,7 +595,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessInstance({\n        client,\n        path: {\n           processId: \"1118\",\n           instanceId: \"5431\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessInstance({\n        client,\n        path: {\n           processId: \"4558\",\n           instanceId: \"6404\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -654,7 +654,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstance({\n        client,\n        path: {\n           processId: \"4925\",\n           instanceId: \"3087\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstance({\n        client,\n        path: {\n           processId: \"6292\",\n           instanceId: \"6262\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -778,7 +778,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstancesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstancesPage({\n        client,\n        path: {\n           processId: \"6448\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessInstancesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessInstancesPage({\n        client,\n        path: {\n           processId: \"6230\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -837,7 +837,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstance({\n        client,\n        path: {\n           processId: \"2551\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstance } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstance({\n        client,\n        path: {\n           processId: \"9246\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -898,7 +898,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstanceComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstanceComplete({\n        client,\n        path: {\n           processId: \"6354\",\n           instanceId: \"9886\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessInstanceComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessInstanceComplete({\n        client,\n        path: {\n           processId: \"7174\",\n           instanceId: \"8209\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -952,7 +952,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstanceBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstanceBatch({\n        client,\n        path: {\n           processId: \"6085\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstanceBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstanceBatch({\n        client,\n        path: {\n           processId: \"61\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1067,7 +1067,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstancesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstancesPageExportBatch({\n        client,\n        path: {\n           processId: \"5079\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessInstancesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessInstancesPageExportBatch({\n        client,\n        path: {\n           processId: \"246\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1177,7 +1177,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodeMetricsPage({\n        client,\n        path: {\n           processId: \"6539\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodeMetricsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodeMetricsPage({\n        client,\n        path: {\n           processId: \"8661\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1224,7 +1224,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessNode({\n        client,\n        path: {\n           processId: \"4266\",\n           nodeId: \"7528\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessNode({\n        client,\n        path: {\n           processId: \"5665\",\n           nodeId: \"8328\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1278,7 +1278,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodesPage({\n        client,\n        path: {\n           processId: \"9626\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessNodesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessNodesPage({\n        client,\n        path: {\n           processId: \"982\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1337,7 +1337,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNode({\n        client,\n        path: {\n           processId: \"3309\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNode } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNode({\n        client,\n        path: {\n           processId: \"8620\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1391,7 +1391,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodeBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodeBatch({\n        client,\n        path: {\n           processId: \"1782\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodeBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodeBatch({\n        client,\n        path: {\n           processId: \"9323\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1450,7 +1450,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodesPageExportBatch({\n        client,\n        path: {\n           processId: \"3731\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessNodesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessNodesPageExportBatch({\n        client,\n        path: {\n           processId: \"5083\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1518,7 +1518,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessMetric({\n        client,\n        path: {\n           processId: \"9740\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessMetric } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessMetric({\n        client,\n        path: {\n           processId: \"3507\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1704,7 +1704,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcess({\n        client,\n        path: {\n           processId: \"2477\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcess({\n        client,\n        path: {\n           processId: \"4065\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1755,7 +1755,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putProcess({\n        client,\n        path: {\n           processId: \"5704\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putProcess({\n        client,\n        path: {\n           processId: \"9917\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1792,7 +1792,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcess({\n        client,\n        path: {\n           processId: \"4768\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcess } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcess({\n        client,\n        path: {\n           processId: \"8416\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1968,7 +1968,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTitle } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTitle({\n        client,\n        path: {\n           processId: \"8044\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTitle } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTitle({\n        client,\n        path: {\n           processId: \"3305\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2073,7 +2073,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessProcessVersionsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessProcessVersionsPage({\n        client,\n        path: {\n           processId: \"3099\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessProcessVersionsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessProcessVersionsPage({\n        client,\n        path: {\n           processId: \"2243\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2132,7 +2132,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessProcessVersionsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessProcessVersionsPageExportBatch({\n        client,\n        path: {\n           processId: \"9027\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessProcessVersionsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessProcessVersionsPageExportBatch({\n        client,\n        path: {\n           processId: \"7248\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2290,7 +2290,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessRolesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessRolesPage({\n        client,\n        path: {\n           processId: \"6739\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessRolesPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessRolesPage({\n        client,\n        path: {\n           processId: \"2025\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2356,7 +2356,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessRolesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessRolesPageExportBatch({\n        client,\n        path: {\n           processId: \"1239\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessRolesPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessRolesPageExportBatch({\n        client,\n        path: {\n           processId: \"105\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2403,7 +2403,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSLA({\n        client,\n        path: {\n           slaId: \"7620\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSLA({\n        client,\n        path: {\n           slaId: \"6612\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2462,7 +2462,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSLA({\n        client,\n        path: {\n           slaId: \"8664\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSLA({\n        client,\n        path: {\n           slaId: \"1289\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2499,7 +2499,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSLA({\n        client,\n        path: {\n           slaId: \"4347\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSLA({\n        client,\n        path: {\n           slaId: \"8751\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2664,7 +2664,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessSLAsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessSLAsPage({\n        client,\n        path: {\n           processId: \"8298\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessSLAsPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessSLAsPage({\n        client,\n        path: {\n           processId: \"8799\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2723,7 +2723,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLA({\n        client,\n        path: {\n           processId: \"1829\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLA } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLA({\n        client,\n        path: {\n           processId: \"6655\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2777,7 +2777,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLABatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLABatch({\n        client,\n        path: {\n           processId: \"2420\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLABatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLABatch({\n        client,\n        path: {\n           processId: \"2099\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2843,7 +2843,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLAsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLAsPageExportBatch({\n        client,\n        path: {\n           processId: \"5037\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessSLAsPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessSLAsPageExportBatch({\n        client,\n        path: {\n           processId: \"5999\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2890,7 +2890,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessLastSLAResult } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessLastSLAResult({\n        client,\n        path: {\n           processId: \"3589\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessLastSLAResult } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessLastSLAResult({\n        client,\n        path: {\n           processId: \"8775\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2945,7 +2945,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTask({\n        client,\n        path: {\n           processId: \"2828\",\n           taskId: \"7466\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTask({\n        client,\n        path: {\n           processId: \"5054\",\n           taskId: \"4505\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2990,7 +2990,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessTask({\n        client,\n        path: {\n           processId: \"9039\",\n           taskId: \"3291\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteProcessTask({\n        client,\n        path: {\n           processId: \"9371\",\n           taskId: \"3576\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3049,7 +3049,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTask({\n        client,\n        path: {\n           processId: \"7838\",\n           taskId: \"3562\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTask({\n        client,\n        path: {\n           processId: \"7555\",\n           taskId: \"898\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3103,7 +3103,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTasksPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTasksPage({\n        client,\n        path: {\n           processId: \"8309\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getProcessTasksPage } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getProcessTasksPage({\n        client,\n        path: {\n           processId: \"8877\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3162,7 +3162,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTask({\n        client,\n        path: {\n           processId: \"3024\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTask } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTask({\n        client,\n        path: {\n           processId: \"9246\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3223,7 +3223,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTaskComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTaskComplete({\n        client,\n        path: {\n           processId: \"7822\",\n           taskId: \"5757\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchProcessTaskComplete } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchProcessTaskComplete({\n        client,\n        path: {\n           processId: \"4560\",\n           taskId: \"780\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3277,7 +3277,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTaskBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTaskBatch({\n        client,\n        path: {\n           processId: \"9326\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTaskBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTaskBatch({\n        client,\n        path: {\n           processId: \"9823\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3336,7 +3336,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTasksPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTasksPageExportBatch({\n        client,\n        path: {\n           processId: \"4325\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postProcessTasksPageExportBatch } from 'liferay-headless-rest-client/portal-workflow-metrics-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postProcessTasksPageExportBatch({\n        client,\n        path: {\n           processId: \"3922\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3616,19 +3616,19 @@
             "PageAssigneeMetric": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/AssigneeMetric"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -3639,10 +3639,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -3650,6 +3646,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3707,19 +3707,19 @@
             "PageAssignee": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Assignee"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -3730,10 +3730,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -3741,6 +3737,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3794,19 +3794,19 @@
             "PageCalendar": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Calendar"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -3817,10 +3817,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -3828,6 +3824,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3922,19 +3922,19 @@
             "PageIndex": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Index"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -3945,10 +3945,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -3956,6 +3952,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4174,19 +4174,19 @@
             "PageInstance": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Instance"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4197,10 +4197,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4208,6 +4204,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4313,19 +4313,19 @@
             "PageNodeMetric": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/NodeMetric"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4336,10 +4336,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4347,6 +4343,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4356,19 +4356,19 @@
             "PageNode": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Node"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4379,10 +4379,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4390,6 +4386,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4485,19 +4485,19 @@
             "PageProcessMetric": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/ProcessMetric"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4508,10 +4508,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4519,6 +4515,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4528,19 +4528,19 @@
             "PageProcessVersion": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/ProcessVersion"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4551,10 +4551,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4562,6 +4558,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4588,19 +4588,19 @@
             "PageReindexStatus": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/ReindexStatus"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4611,10 +4611,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4622,6 +4618,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4654,19 +4654,19 @@
             "PageRole": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Role"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4677,10 +4677,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4688,6 +4684,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4742,19 +4742,19 @@
             "PageSLA": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/SLA"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -4765,10 +4765,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -4776,6 +4772,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -5002,19 +5002,19 @@
             "PageTask": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Task"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -5025,10 +5025,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -5036,6 +5032,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -5089,19 +5089,19 @@
             "PageTimeRange": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/TimeRange"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -5112,10 +5112,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -5123,6 +5119,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

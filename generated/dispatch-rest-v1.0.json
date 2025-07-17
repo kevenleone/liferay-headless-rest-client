@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.dispatch.rest.client', and version '1.0.20'.",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getDispatchTriggersPage } from 'liferay-headless-rest-client/dispatch-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getDispatchTriggersPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -184,7 +184,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postDispatchTriggerRun } from 'liferay-headless-rest-client/dispatch-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postDispatchTriggerRun({\n        client,\n        path: {\n           dispatchTriggerId: \"3170\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postDispatchTriggerRun } from 'liferay-headless-rest-client/dispatch-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postDispatchTriggerRun({\n        client,\n        path: {\n           dispatchTriggerId: \"3967\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -349,19 +349,19 @@
             "PageDispatchTrigger": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/DispatchTrigger"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -372,10 +372,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -383,6 +379,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

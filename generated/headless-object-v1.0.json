@@ -6,7 +6,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
         "version": "v1.0",
-        "description": "..."
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"437\",\n           type: \"6661\",\n           collaboratorId: \"5097\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -89,7 +89,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"717\",\n           type: \"4810\",\n           collaboratorId: \"6135\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"5151\",\n           type: \"4460\",\n           collaboratorId: \"9562\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -165,7 +165,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"8711\",\n           type: \"759\",\n           collaboratorId: \"4189\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"9657\",\n           type: \"4908\",\n           collaboratorId: \"4086\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -219,7 +219,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"1812\",\n           type: \"9639\",\n           collaboratorId: \"8766\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"2250\",\n           type: \"2780\",\n           collaboratorId: \"4473\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -312,7 +312,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"6762\",\n           externalReferenceCode: \"9604\",\n           type: \"1268\",\n           collaboratorId: \"9051\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"1059\",\n           externalReferenceCode: \"9949\",\n           type: \"7996\",\n           collaboratorId: \"141\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -396,7 +396,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"4179\",\n           externalReferenceCode: \"5896\",\n           type: \"3391\",\n           collaboratorId: \"6031\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"2867\",\n           externalReferenceCode: \"3920\",\n           type: \"2778\",\n           collaboratorId: \"1494\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -458,7 +458,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"6760\",\n           externalReferenceCode: \"591\",\n           type: \"2547\",\n           collaboratorId: \"1248\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"5398\",\n           externalReferenceCode: \"6211\",\n           type: \"423\",\n           collaboratorId: \"5101\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -545,7 +545,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"9711\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"3333\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -611,7 +611,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"1623\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"2338\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -706,7 +706,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"8643\",\n           externalReferenceCode: \"305\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"8301\",\n           externalReferenceCode: \"3545\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -780,7 +780,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"9710\",\n           externalReferenceCode: \"5948\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"7224\",\n           externalReferenceCode: \"9687\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -836,7 +836,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPageExportBatch({\n        client,\n        path: {\n           objectEntryFolderId: \"7641\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPageExportBatch({\n        client,\n        path: {\n           objectEntryFolderId: \"2120\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -905,7 +905,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"3958\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"226\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -943,7 +943,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"9227\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"6242\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1003,7 +1003,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"2045\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"9828\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1125,7 +1125,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"4172\",\n           externalReferenceCode: \"1638\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"7997\",\n           externalReferenceCode: \"8973\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1192,7 +1192,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"4979\",\n           externalReferenceCode: \"3381\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"4965\",\n           externalReferenceCode: \"3923\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1237,7 +1237,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"2884\",\n           externalReferenceCode: \"7312\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"3807\",\n           externalReferenceCode: \"9941\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1304,7 +1304,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"8040\",\n           externalReferenceCode: \"3154\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"1314\",\n           externalReferenceCode: \"7635\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1428,7 +1428,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFoldersPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFoldersPage({\n        client,\n        path: {\n           scopeKey: \"8708\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFoldersPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFoldersPage({\n        client,\n        path: {\n           scopeKey: \"309\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1487,7 +1487,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolder({\n        client,\n        path: {\n           scopeKey: \"5398\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolder({\n        client,\n        path: {\n           scopeKey: \"2692\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1698,19 +1698,19 @@
             "PageCollaborator": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Collaborator"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -1721,10 +1721,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -1732,6 +1728,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -1901,19 +1901,19 @@
             "PageObjectEntryFolder": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/ObjectEntryFolder"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -1924,10 +1924,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -1935,6 +1931,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

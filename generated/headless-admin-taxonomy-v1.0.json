@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Headless Admin Taxonomy",
-        "description": "A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.taxonomy.client', and version '4.0.42'.",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3002\",\n           externalReferenceCode: \"7350\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.taxonomy.client', and version '4.0.42'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.admin.taxonomy.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.admin.taxonomy.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -75,7 +75,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3145\",\n           externalReferenceCode: \"2006\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3982\",\n           externalReferenceCode: \"7262\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -143,7 +143,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"6216\",\n           externalReferenceCode: \"2037\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"2077\",\n           externalReferenceCode: \"9940\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -189,7 +189,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"4046\",\n           externalReferenceCode: \"312\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryKeywordByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"8784\",\n           externalReferenceCode: \"5841\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -251,7 +251,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getKeyword({\n        client,\n        path: {\n           keywordId: \"8289\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getKeyword({\n        client,\n        path: {\n           keywordId: \"8045\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -311,7 +311,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeyword({\n        client,\n        path: {\n           keywordId: \"7651\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeyword({\n        client,\n        path: {\n           keywordId: \"3319\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -349,7 +349,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteKeyword({\n        client,\n        path: {\n           keywordId: \"8114\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteKeyword({\n        client,\n        path: {\n           keywordId: \"1904\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -553,7 +553,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"2433\",\n           externalReferenceCode: \"2137\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"5243\",\n           externalReferenceCode: \"9252\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -621,7 +621,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"421\",\n           externalReferenceCode: \"7356\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"523\",\n           externalReferenceCode: \"6872\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -667,7 +667,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"1560\",\n           externalReferenceCode: \"8511\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteKeywordByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteKeywordByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"3199\",\n           externalReferenceCode: \"4009\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -742,7 +742,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"743\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"876\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -807,7 +807,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryKeywordPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"2350\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryKeywordPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"2485\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -917,7 +917,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordsPage({\n        client,\n        path: {\n           assetLibraryId: \"4467\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryKeywordsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryKeywordsPage({\n        client,\n        path: {\n           assetLibraryId: \"56\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -976,7 +976,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeyword({\n        client,\n        path: {\n           assetLibraryId: \"3916\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeyword({\n        client,\n        path: {\n           assetLibraryId: \"4409\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1290,7 +1290,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordPermissionsPage({\n        client,\n        path: {\n           siteId: \"3946\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordPermissionsPage({\n        client,\n        path: {\n           siteId: \"4090\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1355,7 +1355,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteKeywordPermissionsPage({\n        client,\n        path: {\n           siteId: \"4461\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteKeywordPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteKeywordPermissionsPage({\n        client,\n        path: {\n           siteId: \"174\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1466,7 +1466,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordsPage({\n        client,\n        path: {\n           siteId: \"3702\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteKeywordsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteKeywordsPage({\n        client,\n        path: {\n           siteId: \"4624\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1526,7 +1526,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeyword({\n        client,\n        path: {\n           siteId: \"3824\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeyword } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeyword({\n        client,\n        path: {\n           siteId: \"5741\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1580,7 +1580,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeywordBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeywordBatch({\n        client,\n        path: {\n           assetLibraryId: \"520\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeywordBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeywordBatch({\n        client,\n        path: {\n           assetLibraryId: \"7095\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1660,7 +1660,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeywordsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeywordsPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"3497\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryKeywordsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryKeywordsPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"512\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1786,7 +1786,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeywordBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeywordBatch({\n        client,\n        path: {\n           siteId: \"6508\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeywordBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeywordBatch({\n        client,\n        path: {\n           siteId: \"1805\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1866,7 +1866,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeywordsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeywordsPageExportBatch({\n        client,\n        path: {\n           siteId: \"245\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteKeywordsPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteKeywordsPageExportBatch({\n        client,\n        path: {\n           siteId: \"6923\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1912,7 +1912,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordMerge } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordMerge({\n        client,\n        path: {\n           toKeywordId: \"2963\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordMerge } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordMerge({\n        client,\n        path: {\n           toKeywordId: \"1047\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1951,7 +1951,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordSubscribe } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordSubscribe({\n        client,\n        path: {\n           keywordId: \"7686\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordSubscribe } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordSubscribe({\n        client,\n        path: {\n           keywordId: \"4189\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1990,7 +1990,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordUnsubscribe } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordUnsubscribe({\n        client,\n        path: {\n           keywordId: \"5438\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putKeywordUnsubscribe } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putKeywordUnsubscribe({\n        client,\n        path: {\n           keywordId: \"8905\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2060,7 +2060,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"1914\",\n           externalReferenceCode: \"1484\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"7561\",\n           externalReferenceCode: \"3732\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2128,7 +2128,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3589\",\n           externalReferenceCode: \"3191\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"2329\",\n           externalReferenceCode: \"1700\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2174,7 +2174,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"7250\",\n           externalReferenceCode: \"6488\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"9979\",\n           externalReferenceCode: \"2962\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2244,7 +2244,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"172\",\n           externalReferenceCode: \"6169\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"4316\",\n           externalReferenceCode: \"7879\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2312,7 +2312,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"7355\",\n           externalReferenceCode: \"6853\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"5192\",\n           externalReferenceCode: \"5963\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2358,7 +2358,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"1139\",\n           externalReferenceCode: \"3067\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"3982\",\n           externalReferenceCode: \"6713\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2420,7 +2420,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"6455\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"7878\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2480,7 +2480,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"6371\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"2143\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2518,7 +2518,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"8765\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"713\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2578,7 +2578,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"4793\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchTaxonomyCategory({\n        client,\n        path: {\n           taxonomyCategoryId: \"7344\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2738,7 +2738,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"7704\",\n           externalReferenceCode: \"8598\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"4853\",\n           externalReferenceCode: \"4827\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2806,7 +2806,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"6470\",\n           externalReferenceCode: \"5920\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"9343\",\n           externalReferenceCode: \"7174\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2852,7 +2852,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"8098\",\n           externalReferenceCode: \"4975\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCode({\n        client,\n        path: {\n           taxonomyVocabularyId: \"7893\",\n           externalReferenceCode: \"5422\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2963,7 +2963,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyCategoriesPage({\n        client,\n        path: {\n           assetLibraryId: \"9263\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyCategoriesPage({\n        client,\n        path: {\n           assetLibraryId: \"7401\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3023,7 +3023,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategory({\n        client,\n        path: {\n           assetLibraryId: \"5854\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategory({\n        client,\n        path: {\n           assetLibraryId: \"700\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3134,7 +3134,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyCategoriesPage({\n        client,\n        path: {\n           siteId: \"7429\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyCategoriesPage({\n        client,\n        path: {\n           siteId: \"6659\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3194,7 +3194,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategory({\n        client,\n        path: {\n           siteId: \"3640\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategory({\n        client,\n        path: {\n           siteId: \"8554\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3350,7 +3350,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategoryPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategoryPermissionsPage({\n        client,\n        path: {\n           taxonomyCategoryId: \"6989\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategoryPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategoryPermissionsPage({\n        client,\n        path: {\n           taxonomyCategoryId: \"7582\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3415,7 +3415,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyCategoryPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyCategoryPermissionsPage({\n        client,\n        path: {\n           taxonomyCategoryId: \"9795\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyCategoryPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyCategoryPermissionsPage({\n        client,\n        path: {\n           taxonomyCategoryId: \"7887\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3526,7 +3526,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategoryTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategoryTaxonomyCategoriesPage({\n        client,\n        path: {\n           parentTaxonomyCategoryId: \"4679\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyCategoryTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyCategoryTaxonomyCategoriesPage({\n        client,\n        path: {\n           parentTaxonomyCategoryId: \"2761\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3586,7 +3586,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyCategoryTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyCategoryTaxonomyCategory({\n        client,\n        path: {\n           parentTaxonomyCategoryId: \"6471\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyCategoryTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyCategoryTaxonomyCategory({\n        client,\n        path: {\n           parentTaxonomyCategoryId: \"9992\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3704,7 +3704,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyTaxonomyCategoriesPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"2389\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyTaxonomyCategoriesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyTaxonomyCategoriesPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"7676\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3764,7 +3764,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategory({\n        client,\n        path: {\n           taxonomyVocabularyId: \"1839\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategory } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategory({\n        client,\n        path: {\n           taxonomyVocabularyId: \"2873\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3844,7 +3844,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"8662\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"5711\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3898,7 +3898,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategoryBatch({\n        client,\n        path: {\n           assetLibraryId: \"8544\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyCategoryBatch({\n        client,\n        path: {\n           assetLibraryId: \"2503\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -3978,7 +3978,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           siteId: \"9197\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           siteId: \"9877\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4032,7 +4032,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategoryBatch({\n        client,\n        path: {\n           siteId: \"765\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyCategoryBatch({\n        client,\n        path: {\n           siteId: \"5648\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4112,7 +4112,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           taxonomyVocabularyId: \"6476\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategoriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategoriesPageExportBatch({\n        client,\n        path: {\n           taxonomyVocabularyId: \"5209\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4166,7 +4166,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategoryBatch({\n        client,\n        path: {\n           taxonomyVocabularyId: \"7830\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postTaxonomyVocabularyTaxonomyCategoryBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postTaxonomyVocabularyTaxonomyCategoryBatch({\n        client,\n        path: {\n           taxonomyVocabularyId: \"5292\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4236,7 +4236,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3649\",\n           externalReferenceCode: \"4598\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"4375\",\n           externalReferenceCode: \"7163\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4304,7 +4304,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"3121\",\n           externalReferenceCode: \"9445\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"8623\",\n           externalReferenceCode: \"127\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4350,7 +4350,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"9938\",\n           externalReferenceCode: \"3588\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryId: \"2169\",\n           externalReferenceCode: \"6453\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4420,7 +4420,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"602\",\n           externalReferenceCode: \"9235\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"1763\",\n           externalReferenceCode: \"9625\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4488,7 +4488,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"7026\",\n           externalReferenceCode: \"616\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"7137\",\n           externalReferenceCode: \"8793\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4534,7 +4534,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"8328\",\n           externalReferenceCode: \"6803\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteTaxonomyVocabularyByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteTaxonomyVocabularyByExternalReferenceCode({\n        client,\n        path: {\n           siteId: \"1818\",\n           externalReferenceCode: \"3153\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4596,7 +4596,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"5883\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"6012\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4656,7 +4656,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"4526\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"1794\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4694,7 +4694,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"9540\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"8264\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4754,7 +4754,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"2026\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchTaxonomyVocabulary({\n        client,\n        path: {\n           taxonomyVocabularyId: \"3259\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -4998,7 +4998,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabulariesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabulariesPage({\n        client,\n        path: {\n           assetLibraryId: \"4\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabulariesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabulariesPage({\n        client,\n        path: {\n           assetLibraryId: \"7355\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5057,7 +5057,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabulary({\n        client,\n        path: {\n           assetLibraryId: \"4365\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabulary({\n        client,\n        path: {\n           assetLibraryId: \"5584\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5132,7 +5132,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"916\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"8615\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5197,7 +5197,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"9745\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           assetLibraryId: \"8226\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5308,7 +5308,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabulariesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabulariesPage({\n        client,\n        path: {\n           siteId: \"7819\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabulariesPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabulariesPage({\n        client,\n        path: {\n           siteId: \"1278\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5368,7 +5368,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabulary({\n        client,\n        path: {\n           siteId: \"7480\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabulary } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabulary({\n        client,\n        path: {\n           siteId: \"9009\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5443,7 +5443,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           siteId: \"5831\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           siteId: \"6800\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5508,7 +5508,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           siteId: \"2548\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           siteId: \"3401\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5736,7 +5736,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"5017\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"4846\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5801,7 +5801,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"2180\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putTaxonomyVocabularyPermissionsPage } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putTaxonomyVocabularyPermissionsPage({\n        client,\n        path: {\n           taxonomyVocabularyId: \"3518\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5881,7 +5881,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabulariesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabulariesPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"7412\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabulariesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabulariesPageExportBatch({\n        client,\n        path: {\n           assetLibraryId: \"9029\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -5935,7 +5935,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabularyBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabularyBatch({\n        client,\n        path: {\n           assetLibraryId: \"1682\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryTaxonomyVocabularyBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryTaxonomyVocabularyBatch({\n        client,\n        path: {\n           assetLibraryId: \"8944\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -6015,7 +6015,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabulariesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabulariesPageExportBatch({\n        client,\n        path: {\n           siteId: \"1965\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabulariesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabulariesPageExportBatch({\n        client,\n        path: {\n           siteId: \"924\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -6069,7 +6069,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabularyBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabularyBatch({\n        client,\n        path: {\n           siteId: \"4755\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteTaxonomyVocabularyBatch } from 'liferay-headless-rest-client/headless-admin-taxonomy-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteTaxonomyVocabularyBatch({\n        client,\n        path: {\n           siteId: \"8711\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -6377,19 +6377,19 @@
             "PagePermission": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Permission"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -6400,10 +6400,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -6411,6 +6407,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -6444,19 +6444,19 @@
             "PageKeyword": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Keyword"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -6467,10 +6467,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -6478,6 +6474,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -6487,19 +6487,19 @@
             "PageTaxonomyCategory": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/TaxonomyCategory"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -6510,10 +6510,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -6521,6 +6517,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -6804,19 +6804,19 @@
             "PageTaxonomyVocabulary": {
                 "type": "object",
                 "properties": {
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/TaxonomyVocabulary"
                         }
+                    },
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "actions": {
                         "type": "object",
@@ -6827,10 +6827,6 @@
                             }
                         }
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -6838,6 +6834,10 @@
                         }
                     },
                     "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
