@@ -1,4 +1,7 @@
-export const summaryResourceMarkdown = `A TypeScript client library for interacting with Liferay's Headless REST APIs. This library provides type-safe access to various Liferay services including Commerce, Content Management, User Management, and more. It is maintained by the community to provide a better developer experience when working with Liferay's REST APIs.
+export const summaryResourceMarkdown = `
+A TypeScript client library for interacting with Liferay's Headless REST APIs. This library provides type-safe access to various Liferay services including Commerce, Content Management, User Management, and more. It is maintained by the community to provide a better developer experience when working with Liferay's REST APIs.
+
+⚠️ **Project Disclaimer**: This library is a community-maintained project and is not officially supported or maintained by Liferay, Inc. It is provided as-is with no warranty or guarantee of support from Liferay.
 
 ## Installation
 

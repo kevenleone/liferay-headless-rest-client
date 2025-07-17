@@ -126,6 +126,9 @@ const scalarConfigBase = {
     sources: [
         {
             hideDownloadButton: true,
+            customCss: `.introduction-card.introduction-card-row {
+                display: none;
+            }`,
             title: "introduction",
             slug: "introduction",
             content: {
