@@ -73,5 +73,5 @@ export function getSDKSourceSample(
         sourceSample = sourceSample.replace("%PATH%", "");
     }
 
-    return sourceSample;
+    return sourceSample.trim();
 }

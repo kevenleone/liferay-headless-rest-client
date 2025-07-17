@@ -5,6 +5,7 @@ import {
     getSDKSourceSample,
     getSourceSample,
 } from "../utils/get-source-sample";
+import { getDescriptionMarkdown } from "../utils/get-description-markdown";
 
 class OpenAPIExporter {
     private readonly liferayHost = Bun.env.LIFERAY_HOST;
@@ -191,9 +192,7 @@ class OpenAPIExporter {
 
         const { "/v1.0/openapi.{type}": _, ...paths } = data.paths;
 
-        if (!data.info.description) {
-            data.info.description = "...";
-        }
+        data.info.description = getDescriptionMarkdown(data, resource);
 
         data.paths = paths;
 
@@ -233,17 +232,6 @@ class OpenAPIExporter {
 }
 
 const resources = [
-    "analytics-cms-rest/v1.0",
-    "analytics-reports-rest/v1.0",
-    "analytics-settings-rest/v1.0",
-    "batch-planner/v1.0",
-    "bulk/v1.0",
-    "captcha/v1.0",
-    "change-tracking-rest/v1.0",
-    "data-engine/v2.0",
-    "digital-signature-rest/v1.0",
-    "dispatch-rest/v1.0",
-    "functional-cookies-entries",
     "headless-admin-address/v1.0",
     "headless-admin-content/v1.0",
     "headless-admin-list-type/v1.0",
