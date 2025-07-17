@@ -128,4 +128,7 @@ export const resources = [
     "segments-asah/v1.0",
 ];
 
-export const resourcesDomain = "http://localhost:3000/generated";
+export const resourcesDomain =
+    window.location.hostname === "localhost"
+        ? "http://localhost:3000/generated"
+        : "https://raw.githubusercontent.com/kevenleone/liferay-headless-rest-client/refs/heads/main/generated";
