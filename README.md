@@ -112,7 +112,7 @@ This library is built with TypeScript and provides full type safety for all API 
 
 This library is built using the following key technologies:
 
-- [HeyAPI](https://heyapi.com) - Used for generating type-safe API clients from OpenAPI specifications
+- [HeyAPI](https://heyapi.dev) - Used for generating type-safe API clients from OpenAPI specifications
   - `@hey-api/client-fetch` - For making HTTP requests
   - `@hey-api/openapi-ts` - For TypeScript type generation
 - [Biome](https://biomejs.dev) - For code formatting and linting
