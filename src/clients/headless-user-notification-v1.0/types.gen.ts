@@ -11,8 +11,8 @@ export type FacetValue = {
 };
 
 export type PageUserNotification = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<UserNotification>;
     actions?: {
         [key: string]: {

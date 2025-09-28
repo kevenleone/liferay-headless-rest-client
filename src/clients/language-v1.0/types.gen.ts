@@ -31,8 +31,8 @@ export type FacetValue = {
 };
 
 export type PageMessage = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Message>;
     actions?: {
         [key: string]: {

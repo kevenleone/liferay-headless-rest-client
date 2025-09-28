@@ -32,8 +32,8 @@ export type FacetValue = {
 };
 
 export type PageAccountAddress = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountAddress>;
     actions?: {
         [key: string]: {
@@ -64,8 +64,8 @@ export type AccountChannelEntry = {
 };
 
 export type PageAccountChannelEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountChannelEntry>;
     actions?: {
         [key: string]: {
@@ -96,8 +96,8 @@ export type AccountChannelShippingOption = {
 };
 
 export type PageAccountChannelShippingOption = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountChannelShippingOption>;
     actions?: {
         [key: string]: {
@@ -133,8 +133,8 @@ export type AccountRole = {
 };
 
 export type PageAccountMember = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountMember>;
     actions?: {
         [key: string]: {
@@ -156,8 +156,8 @@ export type AccountOrganization = {
 };
 
 export type PageAccountOrganization = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountOrganization>;
     actions?: {
         [key: string]: {
@@ -199,24 +199,11 @@ export type Account = {
     taxId?: string;
     type?: number;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
-     */
-    accountToOAuth2DxpAuthorization?: Array<OAuth2DxpAuthorization>;
-    /**
-     * Information about the object relationship accountEntryToUserAdditionalInfo can be embedded with "nestedFields".
-     */
-    accountEntryToUserAdditionalInfo?: Array<CUserAdditionalInfo>;
-    company?: string;
-    /**
-     * Information about the object relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type PageAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Account>;
     actions?: {
         [key: string]: {
@@ -248,8 +235,8 @@ export type AdminAccountGroup = {
 };
 
 export type PageAdminAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AdminAccountGroup>;
     actions?: {
         [key: string]: {
@@ -272,27 +259,6 @@ export type User = {
     middleName?: string;
     roles?: Array<string>;
     readonly 'x-class-name'?: string;
-    newsSubscription?: boolean;
-    /**
-     * Information about the object relationship userToUserAddInfo can be embedded with "nestedFields".
-     */
-    userToUserAddInfo?: Array<UserAdditionalInfo>;
-};
-
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
-export type CUserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
-export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
-export type PublisherAssets = {
-    [key: string]: unknown;
 };
 
 export type DeleteAccountAddressData = {

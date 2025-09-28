@@ -20,8 +20,8 @@ export type FacetValue = {
 };
 
 export type PageDiscountAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountAccountGroup>;
     actions?: {
         [key: string]: {
@@ -43,8 +43,8 @@ export type DiscountCategory = {
 };
 
 export type PageDiscountCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountCategory>;
     actions?: {
         [key: string]: {
@@ -66,8 +66,8 @@ export type DiscountProduct = {
 };
 
 export type PageDiscountProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountProduct>;
     actions?: {
         [key: string]: {
@@ -120,8 +120,8 @@ export type DiscountRule = {
 };
 
 export type PageDiscount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Discount>;
     actions?: {
         [key: string]: {
@@ -134,8 +134,8 @@ export type PageDiscount = {
 };
 
 export type PageDiscountRule = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountRule>;
     actions?: {
         [key: string]: {
@@ -184,8 +184,8 @@ export type TierPrice = {
 };
 
 export type PagePriceEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceEntry>;
     actions?: {
         [key: string]: {
@@ -198,8 +198,8 @@ export type PagePriceEntry = {
 };
 
 export type PagePriceListAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListAccountGroup>;
     actions?: {
         [key: string]: {
@@ -243,8 +243,8 @@ export type PriceList = {
 };
 
 export type PagePriceList = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceList>;
     actions?: {
         [key: string]: {
@@ -257,8 +257,8 @@ export type PagePriceList = {
 };
 
 export type PageTierPrice = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<TierPrice>;
     actions?: {
         [key: string]: {

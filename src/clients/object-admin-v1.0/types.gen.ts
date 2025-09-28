@@ -50,8 +50,8 @@ export type FacetValue = {
 };
 
 export type PageObjectAction = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectAction>;
     actions?: {
         [key: string]: {
@@ -130,7 +130,6 @@ export type ObjectDefinition = {
     enableObjectEntryHistory?: boolean;
     enableObjectEntryVersioning?: boolean;
     externalReferenceCode?: string;
-    friendlyURLSeparator?: string;
     readonly id?: number;
     label?: {
         [key: string]: string;
@@ -412,8 +411,8 @@ export type UserGroupBrief = {
 };
 
 export type PageObjectDefinition = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectDefinition>;
     actions?: {
         [key: string]: {
@@ -426,8 +425,8 @@ export type PageObjectDefinition = {
 };
 
 export type PageObjectField = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectField>;
     actions?: {
         [key: string]: {
@@ -467,8 +466,8 @@ export type ObjectFolderItem = {
 };
 
 export type PageObjectFolder = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectFolder>;
     actions?: {
         [key: string]: {
@@ -481,8 +480,8 @@ export type PageObjectFolder = {
 };
 
 export type PageObjectLayout = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectLayout>;
     actions?: {
         [key: string]: {
@@ -495,8 +494,8 @@ export type PageObjectLayout = {
 };
 
 export type PageObjectRelationship = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectRelationship>;
     actions?: {
         [key: string]: {
@@ -509,8 +508,8 @@ export type PageObjectRelationship = {
 };
 
 export type PageObjectValidationRule = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectValidationRule>;
     actions?: {
         [key: string]: {
@@ -523,8 +522,8 @@ export type PageObjectValidationRule = {
 };
 
 export type PageObjectView = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ObjectView>;
     actions?: {
         [key: string]: {

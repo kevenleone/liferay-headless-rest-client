@@ -44,8 +44,8 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Attachment>;
     actions?: {
         [key: string]: {
@@ -81,8 +81,8 @@ export type CartComment = {
 };
 
 export type PageCartComment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<CartComment>;
     actions?: {
         [key: string]: {
@@ -137,8 +137,8 @@ export type CartItem = {
 };
 
 export type PageCartItem = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<CartItem>;
     actions?: {
         [key: string]: {
@@ -288,8 +288,8 @@ export type Summary = {
 };
 
 export type PageCart = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Cart>;
     actions?: {
         [key: string]: {
@@ -317,8 +317,8 @@ export type CartTransition = {
 };
 
 export type PageCartTransition = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<CartTransition>;
     actions?: {
         [key: string]: {
@@ -331,8 +331,8 @@ export type PageCartTransition = {
 };
 
 export type PagePaymentMethod = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PaymentMethod>;
     actions?: {
         [key: string]: {
@@ -352,8 +352,8 @@ export type PaymentMethod = {
 };
 
 export type PageShippingMethod = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ShippingMethod>;
     actions?: {
         [key: string]: {
@@ -383,8 +383,8 @@ export type ShippingOption = {
 };
 
 export type PageTerm = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Term>;
     actions?: {
         [key: string]: {

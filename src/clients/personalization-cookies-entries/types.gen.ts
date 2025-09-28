@@ -24,11 +24,7 @@ export type Collaborator = {
     /**
      * The collaborator external reference code.
      */
-    readonly externalReferenceCode?: string;
-    /**
-     * The collaborator ID.
-     */
-    id?: number;
+    externalReferenceCode: string;
     /**
      * The collaborator name.
      */
@@ -41,11 +37,11 @@ export type Collaborator = {
      * If the collaborator can share or not the asset.
      */
     share?: boolean;
+    readonly 'x-class-name'?: string;
     /**
      * The collaborator type.
      */
-    type: string;
-    readonly 'x-class-name'?: string;
+    type: 'User' | 'UserGroup';
 };
 
 export type Creator = {
@@ -92,6 +88,30 @@ export type Creator = {
     readonly 'x-class-name'?: string;
 };
 
+export type Facet = {
+    facetCriteria?: string;
+    facetValues?: Array<FacetValue>;
+};
+
+export type FacetValue = {
+    numberOfOccurrences?: number;
+    term?: string;
+};
+
+export type PageCollaborator = {
+    lastPage?: number;
+    totalCount?: number;
+    items?: Array<Collaborator>;
+    actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    pageSize?: number;
+    facets?: Array<Facet>;
+    page?: number;
+};
+
 /**
  * A list of userGroups information.
  */
@@ -105,30 +125,6 @@ export type UserGroupBrief = {
      */
     readonly name?: string;
     readonly 'x-class-name'?: string;
-};
-
-export type Facet = {
-    facetCriteria?: string;
-    facetValues?: Array<FacetValue>;
-};
-
-export type FacetValue = {
-    numberOfOccurrences?: number;
-    term?: string;
-};
-
-export type PageCollaborator = {
-    totalCount?: number;
-    lastPage?: number;
-    items?: Array<Collaborator>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
 };
 
 /**
@@ -153,33 +149,11 @@ export type AuditFieldChange = {
     readonly 'x-class-name'?: string;
 };
 
-export type ParentTaxonomyCategory = {
-    /**
-     * The parent taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type ParentTaxonomyVocabulary = {
-    /**
-     * The parent category's `TaxonomyVocabulary` external reference code.
-     */
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-};
-
 export type Permission = {
     actionIds?: Array<string>;
     roleExternalReferenceCode?: string;
     roleName?: string;
     roleType?: string;
-};
-
-export type Scope = {
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-    type?: 'AssetLibrary' | 'Site';
 };
 
 export type Status = {
@@ -199,13 +173,6 @@ export type TaxonomyCategoryBrief = {
     readonly embeddedTaxonomyCategory?: {
         [key: string]: unknown;
     };
-    parentTaxonomyCategory?: ParentTaxonomyCategory;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
-    scope?: Scope;
-    /**
-     * The category's external reference code.
-     */
-    taxonomyCategoryExternalReferenceCode?: string;
     /**
      * The category's ID. This can be used to retrieve more information in the `TaxonomyCategory` API.
      */
@@ -229,8 +196,8 @@ export type Version = {
 };
 
 export type PagePermission = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Permission>;
     actions?: {
         [key: string]: {
@@ -261,8 +228,8 @@ export type ValidationRequest = {
 };
 
 export type PagePersonalizationCookieEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PersonalizationCookieEntry>;
     actions?: {
         [key: string]: {
@@ -289,8 +256,6 @@ export type PersonalizationCookieEntry = {
     readonly dateCreated?: string;
     readonly dateModified?: string;
     defaultLanguageId?: string;
-    displayDate?: string;
-    expirationDate?: string;
     externalReferenceCode?: string;
     /**
      * A relative URL to the page's rendered content.
@@ -310,14 +275,12 @@ export type PersonalizationCookieEntry = {
     objectEntryFolderExternalReferenceCode?: string;
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
-    reviewDate?: string;
-    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
      * The categories associated with this object entry.
      */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    readonly taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
     taxonomyCategoryIds?: Array<number>;
     readonly 'x-class-name'?: string;
     readonly 'x-schema-name'?: string;
@@ -328,71 +291,6 @@ export type PersonalizationCookieEntry = {
     purpose?: string;
     type?: string;
 };
-
-export type DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
-    body?: never;
-    path: {
-        scopeKey: string;
-        externalReferenceCode: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
-    body?: never;
-    path: {
-        scopeKey: string;
-        externalReferenceCode: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: {
-        fields?: string;
-        nestedFields?: string;
-        restrictFields?: string;
-    };
-    url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: Collaborator;
-};
-
-export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
-
-export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
-    body?: Collaborator;
-    path: {
-        scopeKey: string;
-        externalReferenceCode: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: Collaborator;
-};
-
-export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
 
 export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData = {
     body?: never;
@@ -512,42 +410,6 @@ export type PutByExternalReferenceCodeResponses = {
 
 export type PutByExternalReferenceCodeResponse = PutByExternalReferenceCodeResponses[keyof PutByExternalReferenceCodeResponses];
 
-export type DeleteByExternalReferenceCodeByVersionData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
-};
-
-export type DeleteByExternalReferenceCodeByVersionResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetByExternalReferenceCodeByVersionData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
-};
-
-export type GetByExternalReferenceCodeByVersionResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type GetByExternalReferenceCodeByVersionResponse = GetByExternalReferenceCodeByVersionResponses[keyof GetByExternalReferenceCodeByVersionResponses];
-
 export type DeletePersonalizationCookieEntryBatchData = {
     body?: {
         [key: string]: unknown;
@@ -601,6 +463,25 @@ export type PutPersonalizationCookieEntryBatchResponses = {
      */
     default: unknown;
 };
+
+export type GetByExternalReferenceCodeByVersionData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
+};
+
+export type GetByExternalReferenceCodeByVersionResponses = {
+    /**
+     * default response
+     */
+    default: PersonalizationCookieEntry;
+};
+
+export type GetByExternalReferenceCodeByVersionResponse = GetByExternalReferenceCodeByVersionResponses[keyof GetByExternalReferenceCodeByVersionResponses];
 
 export type GetByExternalReferenceCodeVersionsPageData = {
     body?: never;
@@ -666,44 +547,6 @@ export type PostPersonalizationCookieEntryResponses = {
 };
 
 export type PostPersonalizationCookieEntryResponse = PostPersonalizationCookieEntryResponses[keyof PostPersonalizationCookieEntryResponses];
-
-export type PostByExternalReferenceCodeByVersionCopyData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy';
-};
-
-export type PostByExternalReferenceCodeByVersionCopyResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type PostByExternalReferenceCodeByVersionCopyResponse = PostByExternalReferenceCodeByVersionCopyResponses[keyof PostByExternalReferenceCodeByVersionCopyResponses];
-
-export type PostByExternalReferenceCodeByVersionExpireData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire';
-};
-
-export type PostByExternalReferenceCodeByVersionExpireResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type PostByExternalReferenceCodeByVersionExpireResponse = PostByExternalReferenceCodeByVersionExpireResponses[keyof PostByExternalReferenceCodeByVersionExpireResponses];
 
 export type PostPersonalizationCookieEntriesPageExportBatchData = {
     body?: never;
@@ -776,68 +619,6 @@ export type GetOpenApiResponses = {
      */
     default: unknown;
 };
-
-export type DeletePersonalizationCookieEntryCollaboratorByTypeCollaboratorData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type DeletePersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: {
-        fields?: string;
-        nestedFields?: string;
-        restrictFields?: string;
-    };
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: Collaborator;
-};
-
-export type GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponse = GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses[keyof GetPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses];
-
-export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorData = {
-    body?: Collaborator;
-    path: {
-        personalizationCookieEntryId: string;
-        type: string;
-        collaboratorId: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
-};
-
-export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses = {
-    /**
-     * default response
-     */
-    default: Collaborator;
-};
-
-export type PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponse = PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses[keyof PutPersonalizationCookieEntryCollaboratorByTypeCollaboratorResponses];
 
 export type GetPersonalizationCookieEntryCollaboratorsPageData = {
     body?: never;
@@ -975,42 +756,6 @@ export type PutPersonalizationCookieEntryResponses = {
 
 export type PutPersonalizationCookieEntryResponse = PutPersonalizationCookieEntryResponses[keyof PutPersonalizationCookieEntryResponses];
 
-export type DeletePersonalizationCookieEntryByVersionData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}';
-};
-
-export type DeletePersonalizationCookieEntryByVersionResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type GetPersonalizationCookieEntryByVersionData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}';
-};
-
-export type GetPersonalizationCookieEntryByVersionResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type GetPersonalizationCookieEntryByVersionResponse = GetPersonalizationCookieEntryByVersionResponses[keyof GetPersonalizationCookieEntryByVersionResponses];
-
 export type GetPersonalizationCookieEntriesVersionsPageData = {
     body?: never;
     path: {
@@ -1032,6 +777,25 @@ export type GetPersonalizationCookieEntriesVersionsPageResponses = {
 };
 
 export type GetPersonalizationCookieEntriesVersionsPageResponse = GetPersonalizationCookieEntriesVersionsPageResponses[keyof GetPersonalizationCookieEntriesVersionsPageResponses];
+
+export type GetPersonalizationCookieEntryByVersionData = {
+    body?: never;
+    path: {
+        personalizationCookieEntryId: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}';
+};
+
+export type GetPersonalizationCookieEntryByVersionResponses = {
+    /**
+     * default response
+     */
+    default: PersonalizationCookieEntry;
+};
+
+export type GetPersonalizationCookieEntryByVersionResponse = GetPersonalizationCookieEntryByVersionResponses[keyof GetPersonalizationCookieEntryByVersionResponses];
 
 export type GetPersonalizationCookieEntryPermissionsPageData = {
     body?: never;
@@ -1073,62 +837,6 @@ export type PutPersonalizationCookieEntryPermissionsPageResponses = {
 };
 
 export type PutPersonalizationCookieEntryPermissionsPageResponse = PutPersonalizationCookieEntryPermissionsPageResponses[keyof PutPersonalizationCookieEntryPermissionsPageResponses];
-
-export type PostPersonalizationCookieEntryByVersionCopyData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}/copy';
-};
-
-export type PostPersonalizationCookieEntryByVersionCopyResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type PostPersonalizationCookieEntryByVersionCopyResponse = PostPersonalizationCookieEntryByVersionCopyResponses[keyof PostPersonalizationCookieEntryByVersionCopyResponses];
-
-export type PostPersonalizationCookieEntryByVersionExpireData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/by-version/{version}/expire';
-};
-
-export type PostPersonalizationCookieEntryByVersionExpireResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type PostPersonalizationCookieEntryByVersionExpireResponse = PostPersonalizationCookieEntryByVersionExpireResponses[keyof PostPersonalizationCookieEntryByVersionExpireResponses];
-
-export type PostPersonalizationCookieEntryExpireData = {
-    body?: never;
-    path: {
-        personalizationCookieEntryId: string;
-    };
-    query?: never;
-    url: '/o/personalization-cookies-entries/{personalizationCookieEntryId}/expire';
-};
-
-export type PostPersonalizationCookieEntryExpireResponses = {
-    /**
-     * default response
-     */
-    default: PersonalizationCookieEntry;
-};
-
-export type PostPersonalizationCookieEntryExpireResponse = PostPersonalizationCookieEntryExpireResponses[keyof PostPersonalizationCookieEntryExpireResponses];
 
 export type PutPersonalizationCookieEntryByVersionRestoreData = {
     body?: never;

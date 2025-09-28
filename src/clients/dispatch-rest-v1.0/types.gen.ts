@@ -34,8 +34,8 @@ export type FacetValue = {
 };
 
 export type PageDispatchTrigger = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DispatchTrigger>;
     actions?: {
         [key: string]: {

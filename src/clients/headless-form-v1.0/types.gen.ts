@@ -63,8 +63,8 @@ export type FacetValue = {
 };
 
 export type PageFormRecord = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<FormRecord>;
     actions?: {
         [key: string]: {
@@ -226,8 +226,8 @@ export type Validation = {
 };
 
 export type PageForm = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Form>;
     actions?: {
         [key: string]: {
@@ -290,8 +290,8 @@ export type MultipartBody = {
 };
 
 export type PageFormStructure = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<FormStructure>;
     actions?: {
         [key: string]: {

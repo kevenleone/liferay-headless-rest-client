@@ -27,8 +27,8 @@ export type FacetValue = {
 };
 
 export type PageChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Channel>;
     actions?: {
         [key: string]: {
@@ -49,8 +49,8 @@ export type CommerceChannel = {
 };
 
 export type PageCommerceChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<CommerceChannel>;
     actions?: {
         [key: string]: {
@@ -70,8 +70,8 @@ export type ContactAccountGroup = {
 };
 
 export type PageContactAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ContactAccountGroup>;
     actions?: {
         [key: string]: {
@@ -100,8 +100,8 @@ export type ContactOrganization = {
 };
 
 export type PageContactOrganization = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ContactOrganization>;
     actions?: {
         [key: string]: {
@@ -121,8 +121,8 @@ export type ContactUserGroup = {
 };
 
 export type PageContactUserGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ContactUserGroup>;
     actions?: {
         [key: string]: {
@@ -155,8 +155,8 @@ export type Field = {
 };
 
 export type PageField = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Field>;
     actions?: {
         [key: string]: {
@@ -189,8 +189,8 @@ export type RecommendationItem = {
 };
 
 export type PageSite = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Site>;
     actions?: {
         [key: string]: {

@@ -32,8 +32,8 @@ export type FacetValue = {
 };
 
 export type PageCountry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Country>;
     actions?: {
         [key: string]: {
@@ -59,8 +59,8 @@ export type Region = {
 };
 
 export type PageRegion = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Region>;
     actions?: {
         [key: string]: {

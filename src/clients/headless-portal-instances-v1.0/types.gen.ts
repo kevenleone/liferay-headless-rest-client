@@ -47,8 +47,8 @@ export type FacetValue = {
 };
 
 export type PagePortalInstance = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PortalInstance>;
     actions?: {
         [key: string]: {

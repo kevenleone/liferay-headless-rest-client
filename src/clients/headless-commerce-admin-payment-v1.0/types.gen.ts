@@ -58,8 +58,8 @@ export type FacetValue = {
 };
 
 export type PagePayment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Payment>;
     actions?: {
         [key: string]: {

@@ -29,19 +29,6 @@ export type Account = {
     taxId?: string;
     readonly 'x-class-name'?: string;
     type?: 'business' | 'guest' | 'person' | 'supplier';
-    /**
-     * Information about the object relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
-     */
-    accountToOAuth2DxpAuthorization?: Array<OAuth2DxpAuthorization>;
-    /**
-     * Information about the object relationship accountEntryToUserAdditionalInfo can be embedded with "nestedFields".
-     */
-    accountEntryToUserAdditionalInfo?: Array<UserAdditionalInfo>;
-    company?: string;
-    /**
-     * Information about the object relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type CustomField = {
@@ -103,8 +90,8 @@ export type Geo = {
 };
 
 export type PageAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Account>;
     actions?: {
         [key: string]: {
@@ -146,8 +133,8 @@ export type Attachment = {
 };
 
 export type PageAttachment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Attachment>;
     actions?: {
         [key: string]: {
@@ -175,8 +162,8 @@ export type Category = {
 };
 
 export type PageCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Category>;
     actions?: {
         [key: string]: {
@@ -199,8 +186,8 @@ export type Channel = {
 };
 
 export type PageChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Channel>;
     actions?: {
         [key: string]: {
@@ -234,8 +221,8 @@ export type Currency = {
 };
 
 export type PageCurrency = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Currency>;
     actions?: {
         [key: string]: {
@@ -255,8 +242,8 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
@@ -310,8 +297,8 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
@@ -404,7 +391,6 @@ export type SkuOption = {
     price?: string;
     priceType?: string;
     quantity?: string;
-    required?: boolean;
     skuId?: number;
     skuOptionId?: number;
     skuOptionKey?: string;
@@ -417,8 +403,8 @@ export type SkuOption = {
 };
 
 export type PagePin = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Pin>;
     actions?: {
         [key: string]: {
@@ -440,8 +426,8 @@ export type Pin = {
 };
 
 export type PageProductOption = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
@@ -454,8 +440,8 @@ export type PageProductOption = {
 };
 
 export type PageProductOptionValue = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
@@ -613,8 +599,8 @@ export type TierPrice = {
 };
 
 export type PageProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Product>;
     actions?: {
         [key: string]: {
@@ -627,8 +613,8 @@ export type PageProduct = {
 };
 
 export type PageProductSpecification = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
@@ -641,8 +627,8 @@ export type PageProductSpecification = {
 };
 
 export type PageRelatedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
@@ -655,8 +641,8 @@ export type PageRelatedProduct = {
 };
 
 export type PageSku = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Sku>;
     actions?: {
         [key: string]: {
@@ -680,8 +666,8 @@ export type WishListItem = {
 };
 
 export type PageWishListItem = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<WishListItem>;
     actions?: {
         [key: string]: {
@@ -694,8 +680,8 @@ export type PageWishListItem = {
 };
 
 export type PageWishList = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<WishList>;
     actions?: {
         [key: string]: {
@@ -713,18 +699,6 @@ export type WishList = {
     name?: string;
     wishListItems?: Array<WishListItem>;
     readonly 'x-class-name'?: string;
-};
-
-export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
-export type PublisherAssets = {
-    [key: string]: unknown;
 };
 
 export type GetChannelAccountsPageData = {
