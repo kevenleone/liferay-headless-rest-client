@@ -3,7 +3,7 @@
     "info": {
         "title": "Object",
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntriesPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"9793\",\n           externalReferenceCode: \"7345\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -11,36 +11,32 @@
         }
     ],
     "paths": {
-        "/o/performance-cookies-entries/": {
+        "/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators": {
             "get": {
                 "tags": [
-                    "PerformanceCookieEntry"
+                    "Collaborator"
                 ],
-                "operationId": "getPerformanceCookieEntriesPage",
+                "description": "Retrieves the collaborators of an object entry.",
+                "operationId": "getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage",
                 "parameters": [
                     {
-                        "name": "aggregationTerms",
-                        "in": "query",
+                        "name": "scopeKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
                         "schema": {
                             "type": "string"
                         }
                     },
                     {
                         "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "flatten",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -75,20 +71,6 @@
                         }
                     },
                     {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
                         "name": "nestedFields",
                         "in": "query",
                         "schema": {
@@ -102,12 +84,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                    "$ref": "#/components/schemas/PageCollaborator"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                    "$ref": "#/components/schemas/PageCollaborator"
                                 }
                             }
                         }
@@ -117,21 +99,172 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntriesPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"2471\",\n           externalReferenceCode: \"8334\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
             "post": {
                 "tags": [
+                    "Collaborator"
+                ],
+                "description": "Add or update all the collaborators received in the request. Delete existing collaborators that are not included in the request. Send a notification for the new collaborators and those whose permissions are different.",
+                "operationId": "postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage",
+                "parameters": [
+                    {
+                        "name": "scopeKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Collaborator"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Collaborator"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"3739\",\n           externalReferenceCode: \"3167\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
                     "PerformanceCookieEntry"
                 ],
-                "operationId": "postPerformanceCookieEntry",
-                "parameters": [],
+                "operationId": "getByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4917\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "putByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -167,12 +300,108 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPerformanceCookieEntry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4475\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "deleteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5542\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "patchByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PerformanceCookieEntry"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PerformanceCookieEntry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1931\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -311,12 +540,12 @@
                 ]
             }
         },
-        "/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}": {
+        "/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}": {
             "get": {
                 "tags": [
                     "PerformanceCookieEntry"
                 ],
-                "operationId": "getByExternalReferenceCode",
+                "operationId": "getByExternalReferenceCodeByVersion",
                 "parameters": [
                     {
                         "name": "externalReferenceCode",
@@ -327,7 +556,143 @@
                         }
                     },
                     {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCodeByVersion } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCodeByVersion({\n        client,\n        path: {\n           externalReferenceCode: \"2856\",\n           version: \"2712\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions": {
+            "get": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "getByExternalReferenceCodeVersionsPage",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCodeVersionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCodeVersionsPage({\n        client,\n        path: {\n           externalReferenceCode: \"79\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/": {
+            "get": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "getPerformanceCookieEntriesPage",
+                "parameters": [
+                    {
+                        "name": "aggregationTerms",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "flatten",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -341,7 +706,42 @@
                         }
                     },
                     {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -354,12 +754,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
                                 }
                             }
                         }
@@ -369,30 +769,20 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4435\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntriesPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
-            "put": {
+            "post": {
                 "tags": [
                     "PerformanceCookieEntry"
                 ],
-                "operationId": "putByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
+                "operationId": "postPerformanceCookieEntry",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -428,108 +818,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2206\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPerformanceCookieEntry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "PerformanceCookieEntry"
-                ],
-                "operationId": "deleteByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3834\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "PerformanceCookieEntry"
-                ],
-                "operationId": "patchByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PerformanceCookieEntry"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PerformanceCookieEntry"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchByExternalReferenceCode } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7830\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -606,6 +900,112 @@
                 ]
             }
         },
+        "/o/performance-cookies-entries/validate": {
+            "post": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "postValidate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValidationRequest"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValidationRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidationResponse"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidationResponse"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postValidate } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postValidate({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore": {
+            "put": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "putByExternalReferenceCodeByVersionRestore",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCodeByVersionRestore } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCodeByVersionRestore({\n        client,\n        path: {\n           externalReferenceCode: \"7302\",\n           version: \"2103\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/performance-cookies-entries/openapi.{type}": {
             "get": {
                 "operationId": "getOpenAPI",
@@ -615,6 +1015,7 @@
                         "in": "path",
                         "required": true,
                         "schema": {
+                            "pattern": "json|yaml",
                             "type": "string"
                         }
                     }
@@ -632,12 +1033,227 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"120\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"6341\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/openapi.{type}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators": {
+            "get": {
+                "tags": [
+                    "Collaborator"
+                ],
+                "description": "Retrieves the collaborators of an object entry.",
+                "operationId": "getPerformanceCookieEntryCollaboratorsPage",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntryCollaboratorsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntryCollaboratorsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"1226\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Collaborator"
+                ],
+                "description": "Add or update all the collaborators received in the request. Delete existing collaborators that are not included in the request.",
+                "operationId": "postPerformanceCookieEntryCollaboratorsPage",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Collaborator"
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Collaborator"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageCollaborator"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPerformanceCookieEntryCollaboratorsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPerformanceCookieEntryCollaboratorsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"4935\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/export-batch": {
+            "post": {
+                "tags": [
+                    "Collaborator"
+                ],
+                "operationId": "postPerformanceCookieEntryCollaboratorsPageExportBatch",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fieldNames",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPerformanceCookieEntryCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPerformanceCookieEntryCollaboratorsPageExportBatch({\n        client,\n        path: {\n           performanceCookieEntryId: \"8687\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/collaborators/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -700,7 +1316,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"4294\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"39\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -759,7 +1375,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"5410\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"7783\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -796,7 +1412,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"7665\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"4661\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -855,12 +1471,135 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"7635\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPerformanceCookieEntry } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPerformanceCookieEntry({\n        client,\n        path: {\n           performanceCookieEntryId: \"4045\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/{performanceCookieEntryId}/versions": {
+            "get": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "getPerformanceCookieEntriesVersionsPage",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntriesVersionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntriesVersionsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"1722\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}": {
+            "get": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "getPerformanceCookieEntryByVersion",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntryByVersion } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntryByVersion({\n        client,\n        path: {\n           performanceCookieEntryId: \"9882\",\n           version: \"7039\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -937,7 +1676,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntryPermissionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntryPermissionsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"2129\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPerformanceCookieEntryPermissionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPerformanceCookieEntryPermissionsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"7419\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1002,7 +1741,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPerformanceCookieEntryPermissionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPerformanceCookieEntryPermissionsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"5601\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPerformanceCookieEntryPermissionsPage } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPerformanceCookieEntryPermissionsPage({\n        client,\n        path: {\n           performanceCookieEntryId: \"7554\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1011,87 +1750,136 @@
                     }
                 ]
             }
+        },
+        "/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}/restore": {
+            "put": {
+                "tags": [
+                    "PerformanceCookieEntry"
+                ],
+                "operationId": "putPerformanceCookieEntryByVersionRestore",
+                "parameters": [
+                    {
+                        "name": "performanceCookieEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PerformanceCookieEntry"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPerformanceCookieEntryByVersionRestore } from 'liferay-headless-rest-client/performance-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPerformanceCookieEntryByVersionRestore({\n        client,\n        path: {\n           performanceCookieEntryId: \"1928\",\n           version: \"4791\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/performance-cookies-entries/{performanceCookieEntryId}/by-version/{version}/restore', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
         }
     },
     "components": {
         "schemas": {
-            "Facet": {
+            "Collaborator": {
+                "required": [
+                    "actionIds",
+                    "externalReferenceCode",
+                    "type"
+                ],
                 "type": "object",
                 "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
+                    "actionIds": {
                         "type": "array",
+                        "description": "The collaborator actions for the shared asset.",
                         "items": {
-                            "$ref": "#/components/schemas/FacetValue"
+                            "type": "string",
+                            "description": "The collaborator actions for the shared asset."
                         }
-                    }
-                }
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
                     },
-                    "term": {
-                        "type": "string"
-                    }
-                }
-            },
-            "AuditEvent": {
-                "type": "object",
-                "properties": {
-                    "auditFieldChanges": {
-                        "type": "array",
-                        "readOnly": true,
-                        "items": {
-                            "$ref": "#/components/schemas/AuditFieldChange"
-                        }
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "description": "Block of actions allowed by the user making the request."
+                        },
+                        "description": "Block of actions allowed by the user making the request.",
+                        "readOnly": true
                     },
                     "creator": {
                         "$ref": "#/components/schemas/Creator"
                     },
-                    "dateCreated": {
+                    "dateExpired": {
                         "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
+                        "description": "The expiration date to be a collaborator of the asset.",
+                        "format": "date-time"
                     },
-                    "eventType": {
+                    "externalReferenceCode": {
                         "type": "string",
-                        "readOnly": true
+                        "description": "The collaborator external reference code."
                     },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.AuditEvent"
-                    }
-                },
-                "description": "Optional field with the audit events associated with this object entry, can be embedded with nestedFields",
-                "xml": {
-                    "name": "AuditEvent"
-                }
-            },
-            "AuditFieldChange": {
-                "type": "object",
-                "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "The collaborator name.",
+                        "readOnly": true
                     },
-                    "oldValue": {
-                        "type": "object"
+                    "portrait": {
+                        "type": "string",
+                        "description": "The collaborator portrait.",
+                        "readOnly": true
+                    },
+                    "share": {
+                        "type": "boolean",
+                        "description": "If the collaborator can share or not the asset."
                     },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.AuditFieldChange"
+                        "default": "com.liferay.headless.object.dto.v1_0.Collaborator"
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "The collaborator type.",
+                        "example": "User",
+                        "enum": [
+                            "User",
+                            "UserGroup"
+                        ]
                     }
                 },
+                "description": "Represents a collaborator for an entry.",
                 "xml": {
-                    "name": "AuditFieldChange"
-                }
+                    "name": "Collaborator"
+                },
+                "x-filterable": []
             },
             "Creator": {
                 "type": "object",
@@ -1157,7 +1945,162 @@
                 },
                 "xml": {
                     "name": "Creator"
-                }
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
+            "PageCollaborator": {
+                "type": "object",
+                "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Collaborator"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "x-filterable": []
+            },
+            "UserGroupBrief": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "The ID of the user group.",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the user group.",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
+                    }
+                },
+                "description": "A list of userGroups information.",
+                "xml": {
+                    "name": "UserGroupBrief"
+                },
+                "x-filterable": []
+            },
+            "AuditEvent": {
+                "type": "object",
+                "properties": {
+                    "auditFieldChanges": {
+                        "type": "array",
+                        "readOnly": true,
+                        "items": {
+                            "$ref": "#/components/schemas/AuditFieldChange"
+                        }
+                    },
+                    "creator": {
+                        "$ref": "#/components/schemas/Creator"
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "eventType": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.AuditEvent"
+                    }
+                },
+                "description": "Optional field with the audit events associated with this object entry, can be embedded with nestedFields",
+                "xml": {
+                    "name": "AuditEvent"
+                },
+                "x-filterable": []
+            },
+            "AuditFieldChange": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "newValue": {
+                        "type": "object"
+                    },
+                    "oldValue": {
+                        "type": "object"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.AuditFieldChange"
+                    }
+                },
+                "xml": {
+                    "name": "AuditFieldChange"
+                },
+                "x-filterable": []
             },
             "Permission": {
                 "type": "object",
@@ -1168,13 +2111,20 @@
                             "type": "string"
                         }
                     },
+                    "roleExternalReferenceCode": {
+                        "type": "string"
+                    },
                     "roleName": {
+                        "type": "string"
+                    },
+                    "roleType": {
                         "type": "string"
                     }
                 },
                 "xml": {
                     "name": "Permission"
-                }
+                },
+                "x-filterable": []
             },
             "Status": {
                 "required": [
@@ -1200,7 +2150,8 @@
                 },
                 "xml": {
                     "name": "Status"
-                }
+                },
+                "x-filterable": []
             },
             "TaxonomyCategoryBrief": {
                 "type": "object",
@@ -1239,32 +2190,27 @@
                 "description": "The categories associated with this object entry.",
                 "xml": {
                     "name": "TaxonomyCategoryBrief"
-                }
+                },
+                "x-filterable": []
             },
-            "UserGroupBrief": {
+            "Version": {
                 "type": "object",
                 "properties": {
-                    "id": {
+                    "number": {
                         "type": "integer",
-                        "description": "The ID of the user group.",
-                        "format": "int64",
-                        "readOnly": true
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the user group.",
+                        "format": "int32",
                         "readOnly": true
                     },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
-                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
+                        "default": "com.liferay.object.rest.dto.v1_0.Version"
                     }
                 },
-                "description": "A list of userGroups information.",
                 "xml": {
-                    "name": "UserGroupBrief"
-                }
+                    "name": "Version"
+                },
+                "x-filterable": []
             },
             "PagePermission": {
                 "type": "object",
@@ -1296,17 +2242,84 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
+            },
+            "ValidationError": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "type": "string"
+                    },
+                    "objectFieldName": {
+                        "type": "string"
+                    },
+                    "objectValidationRuleExternalReferenceCode": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.ValidationError"
+                    }
+                },
+                "xml": {
+                    "name": "ValidationError"
+                },
+                "x-filterable": []
+            },
+            "ValidationResponse": {
+                "type": "object",
+                "properties": {
+                    "validationErrors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        }
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.ValidationResponse"
+                    }
+                },
+                "xml": {
+                    "name": "ValidationResponse"
+                },
+                "x-filterable": []
+            },
+            "ValidationRequest": {
+                "type": "object",
+                "properties": {
+                    "objectValidationRuleExternalReferenceCodes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "values": {
+                        "$ref": "#/components/schemas/PerformanceCookieEntry"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.ValidationRequest"
+                    }
+                },
+                "xml": {
+                    "name": "ValidationRequest"
+                },
+                "x-filterable": []
             },
             "PagePerformanceCookieEntry": {
                 "type": "object",
@@ -1338,22 +2351,23 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "x-schema-name": {
                         "type": "string",
                         "readOnly": true,
                         "default": "PagePerformanceCookieEntry"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PerformanceCookieEntry": {
                 "required": [
@@ -1397,10 +2411,25 @@
                         "format": "date-time",
                         "readOnly": true
                     },
+                    "defaultLanguageId": {
+                        "type": "string"
+                    },
                     "externalReferenceCode": {
                         "type": "string",
                         "readOnly": false,
                         "x-parent-map": "properties"
+                    },
+                    "friendlyUrlPath": {
+                        "type": "string",
+                        "description": "A relative URL to the page's rendered content."
+                    },
+                    "friendlyUrlPath_i18n": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "The localized relative URLs to the page's rendered content."
+                        },
+                        "description": "The localized relative URLs to the page's rendered content."
                     },
                     "id": {
                         "type": "integer",
@@ -1416,6 +2445,13 @@
                             "description": "A list of keywords describing the object entry."
                         },
                         "x-batch-unsupported-formats": "CSV"
+                    },
+                    "objectEntryFolderExternalReferenceCode": {
+                        "type": "string"
+                    },
+                    "objectEntryFolderId": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "permissions": {
                         "type": "array",
@@ -1495,7 +2531,27 @@
                 },
                 "xml": {
                     "name": "ObjectEntry"
-                }
+                },
+                "x-filterable": [
+                    "collectedData",
+                    "createDate",
+                    "creator",
+                    "creatorId",
+                    "dateCreated",
+                    "dateModified",
+                    "expiration",
+                    "externalReferenceCode",
+                    "host",
+                    "id",
+                    "keywords",
+                    "modifiedDate",
+                    "name",
+                    "purpose",
+                    "status",
+                    "taxonomyCategoryIds",
+                    "type",
+                    "userId"
+                ]
             }
         },
         "securitySchemes": {

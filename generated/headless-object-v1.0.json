@@ -6,7 +6,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"437\",\n           type: \"6661\",\n           collaboratorId: \"5097\",\n        },\n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"4368\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -14,462 +14,11 @@
         }
     ],
     "paths": {
-        "/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}": {
-            "get": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Retrieves the collaborator of an object entry.",
-                "operationId": "getObjectEntryFolderCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "objectEntryFolderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"5151\",\n           type: \"4460\",\n           collaboratorId: \"9562\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update a collaborator received in the request.",
-                "operationId": "putObjectEntryFolderCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "objectEntryFolderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"9657\",\n           type: \"4908\",\n           collaboratorId: \"4086\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Deletes the collaborator for an object entry folder and returns a 204 if the operation succeeds.",
-                "operationId": "deleteObjectEntryFolderCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "objectEntryFolderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolderCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolderCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           objectEntryFolderId: \"2250\",\n           type: \"2780\",\n           collaboratorId: \"4473\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}": {
-            "get": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Retrieves the collaborator for an object entry folder.",
-                "operationId": "getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"1059\",\n           externalReferenceCode: \"9949\",\n           type: \"7996\",\n           collaboratorId: \"141\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update a collaborator received in the request.",
-                "operationId": "putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"2867\",\n           externalReferenceCode: \"3920\",\n           type: \"2778\",\n           collaboratorId: \"1494\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Deletes the collaborator for an object entry folder and returns a 204 if the operation succeeds.",
-                "operationId": "deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"5398\",\n           externalReferenceCode: \"6211\",\n           type: \"423\",\n           collaboratorId: \"5101\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators": {
             "get": {
+                "tags": [
+                    "Collaborator"
+                ],
                 "description": "Retrieves the collaborators of an object entry folder.",
                 "operationId": "getObjectEntryFolderCollaboratorsPage",
                 "parameters": [
@@ -545,7 +94,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"3333\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"6247\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -611,7 +160,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"2338\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPage({\n        client,\n        path: {\n           objectEntryFolderId: \"8028\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -623,6 +172,9 @@
         },
         "/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators": {
             "get": {
+                "tags": [
+                    "Collaborator"
+                ],
                 "description": "Retrieves the collaborators of an object entry.",
                 "operationId": "getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage",
                 "parameters": [
@@ -706,7 +258,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"8301\",\n           externalReferenceCode: \"3545\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"4307\",\n           externalReferenceCode: \"8273\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -780,7 +332,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"7224\",\n           externalReferenceCode: \"9687\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"2259\",\n           externalReferenceCode: \"9826\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -792,6 +344,9 @@
         },
         "/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/export-batch": {
             "post": {
+                "tags": [
+                    "Collaborator"
+                ],
                 "operationId": "postObjectEntryFolderCollaboratorsPageExportBatch",
                 "parameters": [
                     {
@@ -836,7 +391,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPageExportBatch({\n        client,\n        path: {\n           objectEntryFolderId: \"2120\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postObjectEntryFolderCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postObjectEntryFolderCollaboratorsPageExportBatch({\n        client,\n        path: {\n           objectEntryFolderId: \"4197\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -905,7 +460,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"226\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"7593\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -943,7 +498,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"6242\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"8480\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1003,7 +558,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"9828\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchObjectEntryFolder({\n        client,\n        path: {\n           objectEntryFolderId: \"2927\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1125,7 +680,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"7997\",\n           externalReferenceCode: \"8973\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"1178\",\n           externalReferenceCode: \"7127\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1192,7 +747,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"4965\",\n           externalReferenceCode: \"3923\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"1881\",\n           externalReferenceCode: \"5784\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1237,7 +792,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"3807\",\n           externalReferenceCode: \"9941\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"5652\",\n           externalReferenceCode: \"1443\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1304,7 +859,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"1314\",\n           externalReferenceCode: \"7635\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchScopeScopeKeyObjectEntryFolderByExternalReferenceCode({\n        client,\n        path: {\n           scopeKey: \"2648\",\n           externalReferenceCode: \"3688\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1428,7 +983,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFoldersPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFoldersPage({\n        client,\n        path: {\n           scopeKey: \"309\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyObjectEntryFoldersPage } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyObjectEntryFoldersPage({\n        client,\n        path: {\n           scopeKey: \"226\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1487,7 +1042,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolder({\n        client,\n        path: {\n           scopeKey: \"2692\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyObjectEntryFolder } from 'liferay-headless-rest-client/headless-object-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyObjectEntryFolder({\n        client,\n        path: {\n           scopeKey: \"9362\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1503,6 +1058,7 @@
             "Collaborator": {
                 "required": [
                     "actionIds",
+                    "externalReferenceCode",
                     "type"
                 ],
                 "type": "object",
@@ -1534,13 +1090,7 @@
                     },
                     "externalReferenceCode": {
                         "type": "string",
-                        "description": "The collaborator external reference code.",
-                        "readOnly": true
-                    },
-                    "id": {
-                        "type": "integer",
-                        "description": "The collaborator ID.",
-                        "format": "int64"
+                        "description": "The collaborator external reference code."
                     },
                     "name": {
                         "type": "string",
@@ -1556,15 +1106,19 @@
                         "type": "boolean",
                         "description": "If the collaborator can share or not the asset."
                     },
-                    "type": {
-                        "type": "string",
-                        "description": "The collaborator type.",
-                        "example": "User"
-                    },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
                         "default": "com.liferay.headless.object.dto.v1_0.Collaborator"
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "The collaborator type.",
+                        "example": "User",
+                        "enum": [
+                            "User",
+                            "UserGroup"
+                        ]
                     }
                 },
                 "description": "Represents a collaborator for an entry.",
@@ -1641,32 +1195,6 @@
                 },
                 "x-filterable": []
             },
-            "UserGroupBrief": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "description": "The ID of the user group.",
-                        "format": "int64",
-                        "readOnly": true
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the user group.",
-                        "readOnly": true
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
-                    }
-                },
-                "description": "A list of userGroups information.",
-                "xml": {
-                    "name": "UserGroupBrief"
-                },
-                "x-filterable": []
-            },
             "Facet": {
                 "type": "object",
                 "properties": {
@@ -1698,12 +1226,6 @@
             "PageCollaborator": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Collaborator"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -1711,6 +1233,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Collaborator"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -1721,6 +1249,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -1730,11 +1262,33 @@
                     "page": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
                     }
+                },
+                "x-filterable": []
+            },
+            "UserGroupBrief": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "The ID of the user group.",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the user group.",
+                        "readOnly": true
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
+                    }
+                },
+                "description": "A list of userGroups information.",
+                "xml": {
+                    "name": "UserGroupBrief"
                 },
                 "x-filterable": []
             },
@@ -1771,10 +1325,6 @@
                         "description": "The last time a field of the folder changed.",
                         "format": "date-time",
                         "readOnly": true
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "The object entry folder's description."
                     },
                     "externalReferenceCode": {
                         "type": "string",
@@ -1901,12 +1451,6 @@
             "PageObjectEntryFolder": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ObjectEntryFolder"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -1914,6 +1458,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ObjectEntryFolder"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -1924,6 +1474,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -1931,10 +1485,6 @@
                         }
                     },
                     "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

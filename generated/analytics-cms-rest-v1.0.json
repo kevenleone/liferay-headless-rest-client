@@ -6,7 +6,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getInventoryAnalysis } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getInventoryAnalysis({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"4310\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -14,135 +14,12 @@
         }
     ],
     "paths": {
-        "/o/analytics-cms-rest/v1.0/inventory-analysis": {
+        "/o/analytics-cms-rest/v1.0/overview/content": {
             "get": {
                 "tags": [
-                    "InventoryAnalysis"
+                    "OverviewContent"
                 ],
-                "operationId": "getInventoryAnalysis",
-                "parameters": [
-                    {
-                        "name": "categoryId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "groupBy",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "languageId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeEnd",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeKey",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeStart",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "spaceId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "structureId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "tagId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "vocabularyId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/InventoryAnalysis"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/InventoryAnalysis"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getInventoryAnalysis } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getInventoryAnalysis({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/analytics-cms-rest/v1.0/inventory-analysis', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/analytics-cms-rest/v1.0/content-overview": {
-            "get": {
-                "tags": [
-                    "Overview"
-                ],
-                "operationId": "getContentOverview",
+                "operationId": "getOverviewContent",
                 "parameters": [
                     {
                         "name": "languageId",
@@ -152,21 +29,7 @@
                         }
                     },
                     {
-                        "name": "rangeEnd",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
                         "name": "rangeKey",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeStart",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -186,12 +49,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Overview"
+                                    "$ref": "#/components/schemas/OverviewContent"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Overview"
+                                    "$ref": "#/components/schemas/OverviewContent"
                                 }
                             }
                         }
@@ -201,86 +64,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getContentOverview } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getContentOverview({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getOverviewContent } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOverviewContent({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/analytics-cms-rest/v1.0/content-overview', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/analytics-cms-rest/v1.0/file-overview": {
-            "get": {
-                "tags": [
-                    "Overview"
-                ],
-                "operationId": "getFileOverview",
-                "parameters": [
-                    {
-                        "name": "languageId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeEnd",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeKey",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "rangeStart",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "spaceId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Overview"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Overview"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFileOverview } from 'liferay-headless-rest-client/analytics-cms-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFileOverview({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/analytics-cms-rest/v1.0/file-overview', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/analytics-cms-rest/v1.0/overview/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -288,55 +77,7 @@
     },
     "components": {
         "schemas": {
-            "InventoryAnalysis": {
-                "type": "object",
-                "properties": {
-                    "inventoryAnalysisItems": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/InventoryAnalysisItem"
-                        }
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.analytics.cms.rest.dto.v1_0.InventoryAnalysis"
-                    }
-                },
-                "xml": {
-                    "name": "InventoryAnalysis"
-                },
-                "x-filterable": []
-            },
-            "InventoryAnalysisItem": {
-                "type": "object",
-                "properties": {
-                    "count": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "key": {
-                        "type": "string"
-                    },
-                    "title": {
-                        "type": "string"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.analytics.cms.rest.dto.v1_0.InventoryAnalysisItem"
-                    }
-                },
-                "xml": {
-                    "name": "InventoryAnalysisItem"
-                },
-                "x-filterable": []
-            },
-            "Overview": {
+            "OverviewContent": {
                 "type": "object",
                 "properties": {
                     "categoriesCount": {
@@ -361,11 +102,11 @@
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
-                        "default": "com.liferay.analytics.cms.rest.dto.v1_0.Overview"
+                        "default": "com.liferay.analytics.cms.rest.dto.v1_0.OverviewContent"
                     }
                 },
                 "xml": {
-                    "name": "Overview"
+                    "name": "OverviewContent"
                 },
                 "x-filterable": []
             },

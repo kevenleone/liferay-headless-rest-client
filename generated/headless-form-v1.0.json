@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Headless Form",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormDocument({\n        client,\n        path: {\n           formDocumentId: \"8222\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.form.client', and version '4.0.30'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.form.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.form.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormDocument({\n        client,\n        path: {\n           formDocumentId: \"936\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.form.client', and version '4.0.32'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.form.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.form.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -53,7 +53,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormDocument({\n        client,\n        path: {\n           formDocumentId: \"9423\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormDocument({\n        client,\n        path: {\n           formDocumentId: \"9805\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -91,7 +91,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteFormDocument({\n        client,\n        path: {\n           formDocumentId: \"6934\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteFormDocument({\n        client,\n        path: {\n           formDocumentId: \"5697\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -144,6 +144,54 @@
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/form-documents/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-form/v1.0/forms/{formId}/form-records/by-latest-draft": {
+            "get": {
+                "tags": [
+                    "FormRecord"
+                ],
+                "operationId": "getFormFormRecordByLatestDraft",
+                "parameters": [
+                    {
+                        "name": "formId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FormRecord"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FormRecord"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": true,
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormFormRecordByLatestDraft } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormFormRecordByLatestDraft({\n        client,\n        path: {\n           formId: \"7300\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-records/by-latest-draft', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -207,7 +255,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormFormRecordsPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormFormRecordsPage({\n        client,\n        path: {\n           formId: \"3181\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormFormRecordsPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormFormRecordsPage({\n        client,\n        path: {\n           formId: \"7869\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -267,7 +315,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecord({\n        client,\n        path: {\n           formId: \"9821\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecord({\n        client,\n        path: {\n           formId: \"193\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -315,7 +363,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormRecord({\n        client,\n        path: {\n           formRecordId: \"6044\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormRecord({\n        client,\n        path: {\n           formRecordId: \"844\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -375,7 +423,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putFormRecord({\n        client,\n        path: {\n           formRecordId: \"7710\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putFormRecord } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putFormRecord({\n        client,\n        path: {\n           formRecordId: \"5275\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -385,12 +433,12 @@
                 ]
             }
         },
-        "/o/headless-form/v1.0/forms/{formId}/form-records/by-latest-draft": {
-            "get": {
+        "/o/headless-form/v1.0/forms/{formId}/form-records/batch": {
+            "post": {
                 "tags": [
                     "FormRecord"
                 ],
-                "operationId": "getFormFormRecordByLatestDraft",
+                "operationId": "postFormFormRecordBatch",
                 "parameters": [
                     {
                         "name": "formId",
@@ -399,47 +447,7 @@
                         "schema": {
                             "type": "string"
                         }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/FormRecord"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/FormRecord"
-                                }
-                            }
-                        }
-                    }
-                },
-                "deprecated": true,
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormFormRecordByLatestDraft } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormFormRecordByLatestDraft({\n        client,\n        path: {\n           formId: \"5689\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-records/by-latest-draft', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-form/v1.0/form-records/batch": {
-            "put": {
-                "tags": [
-                    "FormRecord"
-                ],
-                "operationId": "putFormRecordBatch",
-                "parameters": [
                     {
                         "name": "callbackURL",
                         "in": "query",
@@ -470,12 +478,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putFormRecordBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putFormRecordBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecordBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecordBatch({\n        client,\n        path: {\n           formId: \"8717\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/form-records/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-records/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -530,7 +538,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecordsPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecordsPageExportBatch({\n        client,\n        path: {\n           formId: \"5955\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecordsPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecordsPageExportBatch({\n        client,\n        path: {\n           formId: \"5045\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -540,21 +548,13 @@
                 ]
             }
         },
-        "/o/headless-form/v1.0/forms/{formId}/form-records/batch": {
-            "post": {
+        "/o/headless-form/v1.0/form-records/batch": {
+            "put": {
                 "tags": [
                     "FormRecord"
                 ],
-                "operationId": "postFormFormRecordBatch",
+                "operationId": "putFormRecordBatch",
                 "parameters": [
-                    {
-                        "name": "formId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
                     {
                         "name": "callbackURL",
                         "in": "query",
@@ -585,12 +585,60 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormRecordBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormRecordBatch({\n        client,\n        path: {\n           formId: \"7025\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putFormRecordBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putFormRecordBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-records/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/form-records/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-form/v1.0/forms/{formId}": {
+            "get": {
+                "tags": [
+                    "Form"
+                ],
+                "operationId": "getForm",
+                "parameters": [
+                    {
+                        "name": "formId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Form"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Form"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": true,
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getForm } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getForm({\n        client,\n        path: {\n           formId: \"8546\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -654,69 +702,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteFormsPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteFormsPage({\n        client,\n        path: {\n           siteId: \"7006\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteFormsPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteFormsPage({\n        client,\n        path: {\n           siteId: \"8226\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/sites/{siteId}/forms', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-form/v1.0/forms/{formId}/form-document": {
-            "post": {
-                "tags": [
-                    "Form"
-                ],
-                "operationId": "postFormFormDocument",
-                "parameters": [
-                    {
-                        "name": "formId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/MultipartBody"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/FormDocument"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/FormDocument"
-                                }
-                            }
-                        }
-                    }
-                },
-                "deprecated": true,
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormDocument({\n        client,\n        path: {\n           formId: \"3492\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-document', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -773,7 +764,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormEvaluateContext } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormEvaluateContext({\n        client,\n        path: {\n           formId: \"9989\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormEvaluateContext } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormEvaluateContext({\n        client,\n        path: {\n           formId: \"7049\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -783,12 +774,12 @@
                 ]
             }
         },
-        "/o/headless-form/v1.0/forms/{formId}": {
-            "get": {
+        "/o/headless-form/v1.0/forms/{formId}/form-document": {
+            "post": {
                 "tags": [
                     "Form"
                 ],
-                "operationId": "getForm",
+                "operationId": "postFormFormDocument",
                 "parameters": [
                     {
                         "name": "formId",
@@ -799,18 +790,27 @@
                         }
                     }
                 ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MultipartBody"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "default": {
                         "description": "default response",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Form"
+                                    "$ref": "#/components/schemas/FormDocument"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Form"
+                                    "$ref": "#/components/schemas/FormDocument"
                                 }
                             }
                         }
@@ -821,12 +821,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getForm } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getForm({\n        client,\n        path: {\n           formId: \"2184\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postFormFormDocument } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postFormFormDocument({\n        client,\n        path: {\n           formId: \"2314\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-form/v1.0/forms/{formId}/form-document', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -881,7 +881,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteFormsPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteFormsPageExportBatch({\n        client,\n        path: {\n           siteId: \"6698\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteFormsPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteFormsPageExportBatch({\n        client,\n        path: {\n           siteId: \"3455\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -929,7 +929,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormStructure } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormStructure({\n        client,\n        path: {\n           formStructureId: \"4442\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getFormStructure } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFormStructure({\n        client,\n        path: {\n           formStructureId: \"7925\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -998,7 +998,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteFormStructuresPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteFormStructuresPage({\n        client,\n        path: {\n           siteId: \"5385\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteFormStructuresPage } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteFormStructuresPage({\n        client,\n        path: {\n           siteId: \"4602\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1058,7 +1058,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteFormStructuresPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteFormStructuresPageExportBatch({\n        client,\n        path: {\n           siteId: \"887\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteFormStructuresPageExportBatch } from 'liferay-headless-rest-client/headless-form-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteFormStructuresPageExportBatch({\n        client,\n        path: {\n           siteId: \"7698\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1118,7 +1118,8 @@
                 },
                 "xml": {
                     "name": "FormDocument"
-                }
+                },
+                "x-filterable": []
             },
             "Creator": {
                 "type": "object",
@@ -1158,33 +1159,8 @@
                 },
                 "xml": {
                     "name": "Creator"
-                }
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                }
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                }
+                },
+                "x-filterable": []
             },
             "FormFieldValue": {
                 "type": "object",
@@ -1214,9 +1190,11 @@
                         "default": "com.liferay.headless.form.dto.v1_0.FormFieldValue"
                     }
                 },
+                "description": "https://www.schema.org/FormFieldValue",
                 "xml": {
                     "name": "FormFieldValue"
-                }
+                },
+                "x-filterable": []
             },
             "FormRecord": {
                 "type": "object",
@@ -1266,7 +1244,36 @@
                 },
                 "xml": {
                     "name": "FormRecord"
-                }
+                },
+                "x-filterable": []
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
             },
             "PageFormRecord": {
                 "type": "object",
@@ -1298,17 +1305,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "Form": {
                 "type": "object",
@@ -1394,7 +1402,8 @@
                 },
                 "xml": {
                     "name": "Form"
-                }
+                },
+                "x-filterable": []
             },
             "FormField": {
                 "type": "object",
@@ -1507,7 +1516,8 @@
                 },
                 "xml": {
                     "name": "FormField"
-                }
+                },
+                "x-filterable": []
             },
             "FormFieldOption": {
                 "type": "object",
@@ -1536,7 +1546,8 @@
                 },
                 "xml": {
                     "name": "FormFieldOption"
-                }
+                },
+                "x-filterable": []
             },
             "FormPage": {
                 "type": "object",
@@ -1578,7 +1589,8 @@
                 "description": "https://www.schema.org/FormPage",
                 "xml": {
                     "name": "FormPage"
-                }
+                },
+                "x-filterable": []
             },
             "FormStructure": {
                 "type": "object",
@@ -1644,7 +1656,8 @@
                 },
                 "xml": {
                     "name": "FormStructure"
-                }
+                },
+                "x-filterable": []
             },
             "FormSuccessPage": {
                 "type": "object",
@@ -1680,7 +1693,8 @@
                 "description": "https://www.schema.org/FormSuccessPage",
                 "xml": {
                     "name": "FormSuccessPage"
-                }
+                },
+                "x-filterable": []
             },
             "Grid": {
                 "type": "object",
@@ -1709,7 +1723,39 @@
                 },
                 "xml": {
                     "name": "Grid"
-                }
+                },
+                "x-filterable": []
+            },
+            "Validation": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "type": "string"
+                    },
+                    "errorMessage_i18n": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "expression": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.form.dto.v1_0.Validation"
+                    }
+                },
+                "description": "https://www.schema.org/FormFieldValidation",
+                "xml": {
+                    "name": "Validation"
+                },
+                "x-filterable": []
             },
             "PageForm": {
                 "type": "object",
@@ -1741,58 +1787,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
-                    }
-                }
-            },
-            "Validation": {
-                "type": "object",
-                "properties": {
-                    "errorMessage": {
-                        "type": "string"
                     },
-                    "errorMessage_i18n": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string"
-                        }
-                    },
-                    "expression": {
-                        "type": "string"
-                    },
-                    "id": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.form.dto.v1_0.Validation"
                     }
                 },
-                "description": "https://www.schema.org/FormFieldValidation",
-                "xml": {
-                    "name": "Validation"
-                }
-            },
-            "MultipartBody": {
-                "type": "object",
-                "properties": {
-                    "values": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string"
-                        }
-                    }
-                }
+                "x-filterable": []
             },
             "FormContext": {
                 "type": "object",
@@ -1828,7 +1834,8 @@
                 },
                 "xml": {
                     "name": "FormContext"
-                }
+                },
+                "x-filterable": []
             },
             "FormFieldContext": {
                 "type": "object",
@@ -1872,7 +1879,8 @@
                 "description": "https://www.schema.org/FormFieldContext",
                 "xml": {
                     "name": "FormFieldContext"
-                }
+                },
+                "x-filterable": []
             },
             "FormPageContext": {
                 "type": "object",
@@ -1899,7 +1907,20 @@
                 "description": "https://www.schema.org/FormPageContext",
                 "xml": {
                     "name": "FormPageContext"
-                }
+                },
+                "x-filterable": []
+            },
+            "MultipartBody": {
+                "type": "object",
+                "properties": {
+                    "values": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "x-filterable": []
             },
             "PageFormStructure": {
                 "type": "object",
@@ -1931,17 +1952,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {
