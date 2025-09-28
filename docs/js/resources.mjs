@@ -110,7 +110,6 @@ export const resources = [
     "headless-commerce-delivery-catalog/v1.0",
     "headless-commerce-delivery-order/v1.0",
     "headless-commerce-machine-learning/v1.0",
-    "headless-commerce-punchout/v1.0",
     "headless-delivery/v1.0",
     "headless-form/v1.0",
     "headless-object/v1.0",
@@ -126,8 +125,8 @@ export const resources = [
     "portal-workflow-metrics/v1.0",
     "saml-admin/v1.0",
     "scim/v1.0",
-    "search/v1.0",
     "search-experiences-rest/v1.0",
+    "search/v1.0",
     "segments-asah/v1.0",
 ];
 

@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getEmbeddingEmbeddingModelsPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getEmbeddingEmbeddingModelsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.search.rest.client', and version '1.0.24'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.portal.search.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.search.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getEmbeddingEmbeddingModelsPage } from 'liferay-headless-rest-client/search-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getEmbeddingEmbeddingModelsPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.search.rest.client', and version '1.0.26'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.portal.search.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.search.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -179,7 +179,28 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "cmsKind",
+                                "cmsRoot",
+                                "cmsSection",
+                                "creatorId",
+                                "dateCreated",
+                                "dateDisplay",
+                                "dateExpiration",
+                                "dateModified",
+                                "datePublish",
+                                "dateReview",
+                                "folderId",
+                                "groupIds",
+                                "keywords",
+                                "objectDefinitionId",
+                                "objectFolderExternalReferenceCode",
+                                "scopeGroupId",
+                                "status",
+                                "taxonomyCategoryIds",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -294,7 +315,28 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "cmsKind",
+                                "cmsRoot",
+                                "cmsSection",
+                                "creatorId",
+                                "dateCreated",
+                                "dateDisplay",
+                                "dateExpiration",
+                                "dateModified",
+                                "datePublish",
+                                "dateReview",
+                                "folderId",
+                                "groupIds",
+                                "keywords",
+                                "objectDefinitionId",
+                                "objectFolderExternalReferenceCode",
+                                "scopeGroupId",
+                                "status",
+                                "taxonomyCategoryIds",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -552,6 +594,12 @@
             "PageEmbeddingModel": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddingModel"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -559,12 +607,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/EmbeddingModel"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -575,7 +617,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -585,7 +627,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -652,6 +694,12 @@
             "PageSearchResult": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchResult"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -659,12 +707,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchResult"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -675,7 +717,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -685,7 +727,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -749,6 +791,8 @@
                     "name": "SearchResult"
                 },
                 "x-filterable": [
+                    "cmsKind",
+                    "cmsRoot",
                     "cmsSection",
                     "creatorId",
                     "dateCreated",
@@ -762,6 +806,7 @@
                     "keywords",
                     "objectDefinitionId",
                     "objectFolderExternalReferenceCode",
+                    "scopeGroupId",
                     "status",
                     "taxonomyCategoryIds",
                     "title"
@@ -844,6 +889,12 @@
             "PageSuggestionsContributorResults": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SuggestionsContributorResults"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -851,12 +902,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SuggestionsContributorResults"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -867,7 +912,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -877,7 +922,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
