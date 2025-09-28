@@ -27,17 +27,17 @@ export type FacetValue = {
 };
 
 export type PageChannel = {
+    items?: Array<Channel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Channel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CommerceChannel = {
@@ -49,17 +49,17 @@ export type CommerceChannel = {
 };
 
 export type PageCommerceChannel = {
+    items?: Array<CommerceChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CommerceChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContactAccountGroup = {
@@ -70,17 +70,17 @@ export type ContactAccountGroup = {
 };
 
 export type PageContactAccountGroup = {
+    items?: Array<ContactAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContactAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContactConfiguration = {
@@ -100,17 +100,17 @@ export type ContactOrganization = {
 };
 
 export type PageContactOrganization = {
+    items?: Array<ContactOrganization>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContactOrganization>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContactUserGroup = {
@@ -121,17 +121,17 @@ export type ContactUserGroup = {
 };
 
 export type PageContactUserGroup = {
+    items?: Array<ContactUserGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContactUserGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DataSourceLiferayAnalyticsUrl = {
@@ -155,17 +155,17 @@ export type Field = {
 };
 
 export type PageField = {
+    items?: Array<Field>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Field>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type FieldSummary = {
@@ -189,17 +189,17 @@ export type RecommendationItem = {
 };
 
 export type PageSite = {
+    items?: Array<Site>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Site>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Site = {

@@ -34,17 +34,17 @@ export type FacetValue = {
 };
 
 export type PageDispatchTrigger = {
+    items?: Array<DispatchTrigger>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DispatchTrigger>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type GetDispatchTriggersPageData = {

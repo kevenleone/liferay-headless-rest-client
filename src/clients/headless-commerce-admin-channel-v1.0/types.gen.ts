@@ -40,17 +40,17 @@ export type FacetValue = {
 };
 
 export type PageAccountAddressChannel = {
+    items?: Array<AccountAddressChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountAddressChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Account = {
@@ -74,17 +74,17 @@ export type CategoryDisplayPage = {
 };
 
 export type PageCategoryDisplayPage = {
+    items?: Array<CategoryDisplayPage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CategoryDisplayPage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ChannelAccount = {
@@ -103,31 +103,31 @@ export type ChannelAccount = {
 };
 
 export type PageChannelAccount = {
+    items?: Array<ChannelAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ChannelAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageChannel = {
+    items?: Array<Channel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Channel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DefaultCategoryDisplayPage = {
@@ -159,17 +159,17 @@ export type OrderType = {
 };
 
 export type PagePaymentMethodGroupRelOrderType = {
+    items?: Array<PaymentMethodGroupRelOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PaymentMethodGroupRelOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PaymentMethodGroupRelOrderType = {
@@ -188,17 +188,17 @@ export type PaymentMethodGroupRelOrderType = {
 };
 
 export type PagePaymentMethodGroupRelTerm = {
+    items?: Array<PaymentMethodGroupRelTerm>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PaymentMethodGroupRelTerm>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PaymentMethodGroupRelTerm = {
@@ -222,17 +222,17 @@ export type Term = {
 };
 
 export type PageProductDisplayPage = {
+    items?: Array<ProductDisplayPage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductDisplayPage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductDisplayPage = {
@@ -250,17 +250,17 @@ export type ProductDisplayPage = {
 };
 
 export type PageShippingFixedOptionOrderType = {
+    items?: Array<ShippingFixedOptionOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ShippingFixedOptionOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ShippingFixedOptionOrderType = {
@@ -279,17 +279,17 @@ export type ShippingFixedOptionOrderType = {
 };
 
 export type PageShippingFixedOptionTerm = {
+    items?: Array<ShippingFixedOptionTerm>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ShippingFixedOptionTerm>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ShippingFixedOptionTerm = {
@@ -307,17 +307,17 @@ export type ShippingFixedOptionTerm = {
 };
 
 export type PageShippingMethod = {
+    items?: Array<ShippingMethod>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ShippingMethod>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ShippingMethod = {
@@ -350,17 +350,17 @@ export type ShippingOption = {
 };
 
 export type PageTaxCategory = {
+    items?: Array<TaxCategory>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TaxCategory = {

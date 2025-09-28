@@ -18,17 +18,17 @@ export type FieldMappingInfo = {
 };
 
 export type PageFieldMappingInfo = {
+    items?: Array<FieldMappingInfo>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FieldMappingInfo>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type KeywordQueryContributor = {
@@ -37,17 +37,17 @@ export type KeywordQueryContributor = {
 };
 
 export type PageKeywordQueryContributor = {
+    items?: Array<KeywordQueryContributor>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KeywordQueryContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ModelPrefilterContributor = {
@@ -56,31 +56,31 @@ export type ModelPrefilterContributor = {
 };
 
 export type PageModelPrefilterContributor = {
+    items?: Array<ModelPrefilterContributor>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ModelPrefilterContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageQueryPrefilterContributor = {
+    items?: Array<QueryPrefilterContributor>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<QueryPrefilterContributor>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type QueryPrefilterContributor = {
@@ -229,10 +229,13 @@ export type FieldSet = {
 export type GeneralConfiguration = {
     clauseContributorsExcludes?: Array<string>;
     clauseContributorsIncludes?: Array<string>;
+    collectionProvider?: boolean;
+    collectionProviderType?: string;
     emptySearchEnabled?: boolean;
     explain?: boolean;
     includeResponseString?: boolean;
     languageId?: string;
+    legacyAssetCollectionProvider?: boolean;
     queryString?: string;
     searchableAssetTypes?: Array<string>;
     timeZoneId?: string;
@@ -372,6 +375,8 @@ export type SxpBlueprint = {
             [key: string]: string;
         };
     };
+    collectionProviderSubtypeName?: string;
+    collectionProviderTypeName?: string;
     configuration?: Configuration;
     createDate?: string;
     description?: string;
@@ -462,45 +467,45 @@ export type UiConfiguration = {
 };
 
 export type PageSxpBlueprint = {
+    items?: Array<SxpBlueprint>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpBlueprint>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSxpElement = {
+    items?: Array<SxpElement>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpElement>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSxpParameterContributorDefinition = {
+    items?: Array<SxpParameterContributorDefinition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SxpParameterContributorDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SxpParameterContributorDefinition = {
@@ -511,17 +516,17 @@ export type SxpParameterContributorDefinition = {
 };
 
 export type PageSearchIndex = {
+    items?: Array<SearchIndex>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchIndex>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SearchIndex = {
@@ -582,17 +587,17 @@ export type SearchResponse = {
 };
 
 export type PageSearchableAssetNameDisplay = {
+    items?: Array<SearchableAssetNameDisplay>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchableAssetNameDisplay>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SearchableAssetNameDisplay = {
@@ -603,17 +608,17 @@ export type SearchableAssetNameDisplay = {
 };
 
 export type PageSearchableAssetName = {
+    items?: Array<SearchableAssetName>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchableAssetName>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SearchableAssetName = {

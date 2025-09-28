@@ -20,17 +20,17 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
+    items?: Array<Attachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Attachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AttachmentBase64 = {
@@ -54,17 +54,17 @@ export type OrderTransition = {
 };
 
 export type PageOrderTransition = {
+    items?: Array<OrderTransition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderTransition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PlacedOrderAddress = {
@@ -92,17 +92,17 @@ export type PlacedOrderAddress = {
 };
 
 export type PagePlacedOrderComment = {
+    items?: Array<PlacedOrderComment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlacedOrderComment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PlacedOrderComment = {
@@ -116,17 +116,17 @@ export type PlacedOrderComment = {
 };
 
 export type PagePlacedOrderItem = {
+    items?: Array<PlacedOrderItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlacedOrderItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PlacedOrderItem = {
@@ -235,31 +235,31 @@ export type VirtualItem = {
 };
 
 export type PagePlacedOrderItemShipment = {
+    items?: Array<PlacedOrderItemShipment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlacedOrderItemShipment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePlacedOrder = {
+    items?: Array<PlacedOrder>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PlacedOrder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PlacedOrder = {
@@ -267,6 +267,7 @@ export type PlacedOrder = {
     readonly accountId?: number;
     attachments?: Array<Attachment>;
     readonly author?: string;
+    readonly authorId?: number;
     readonly channelId?: number;
     readonly couponCode?: string;
     readonly createDate?: string;
@@ -365,6 +366,7 @@ export type Step = {
 
 export type Summary = {
     readonly currency?: string;
+    readonly itemsCount?: number;
     readonly itemsQuantity?: number;
     readonly shippingDiscountPercentages?: Array<string>;
     readonly shippingDiscountValue?: number;
@@ -389,17 +391,17 @@ export type Summary = {
 };
 
 export type PageShipment = {
+    items?: Array<Shipment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Shipment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Term = {

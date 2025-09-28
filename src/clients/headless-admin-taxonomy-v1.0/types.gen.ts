@@ -129,17 +129,17 @@ export type FacetValue = {
 };
 
 export type PagePermission = {
+    items?: Array<Permission>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Permission>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Permission = {
@@ -150,31 +150,31 @@ export type Permission = {
 };
 
 export type PageKeyword = {
+    items?: Array<Keyword>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Keyword>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageTaxonomyCategory = {
+    items?: Array<TaxonomyCategory>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxonomyCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -201,9 +201,9 @@ export type ParentTaxonomyVocabulary = {
      * The parent category's `TaxonomyVocabulary` external reference code.
      */
     externalReferenceCode?: string;
-    id?: number;
-    name?: string;
-    name_i18n?: {
+    readonly id?: number;
+    readonly name?: string;
+    readonly name_i18n?: {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
@@ -218,6 +218,7 @@ export type TaxonomyCategory = {
             [key: string]: string;
         };
     };
+    readonly assetLibraryKey?: string;
     /**
      * A list of languages the category has a translation for.
      */
@@ -324,17 +325,17 @@ export type AssetType = {
 };
 
 export type PageTaxonomyVocabulary = {
+    items?: Array<TaxonomyVocabulary>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxonomyVocabulary>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -987,6 +988,24 @@ export type PostSiteKeywordsPageExportBatchResponses = {
     default: unknown;
 };
 
+export type PutKeywordMergeData = {
+    body?: never;
+    path: {
+        toKeywordId: string;
+    };
+    query?: {
+        fromKeywordIds?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/keywords/{toKeywordId}/merge';
+};
+
+export type PutKeywordMergeResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
 export type PutKeywordSubscribeData = {
     body?: never;
     path: {
@@ -1018,6 +1037,122 @@ export type PutKeywordUnsubscribeResponses = {
      */
     default: unknown;
 };
+
+export type DeleteAssetLibraryTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type DeleteAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetAssetLibraryTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+        externalReferenceCode: string;
+    };
+    query?: {
+        fields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type GetAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type GetAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponse = GetAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses[keyof GetAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses];
+
+export type PutAssetLibraryTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: TaxonomyCategory;
+    path: {
+        assetLibraryId: string;
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type PutAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type PutAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponse = PutAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses[keyof PutAssetLibraryTaxonomyCategoryByExternalReferenceCodeResponses];
+
+export type DeleteSiteTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: never;
+    path: {
+        siteId: string;
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type DeleteSiteTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetSiteTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: never;
+    path: {
+        siteId: string;
+        externalReferenceCode: string;
+    };
+    query?: {
+        fields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type GetSiteTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type GetSiteTaxonomyCategoryByExternalReferenceCodeResponse = GetSiteTaxonomyCategoryByExternalReferenceCodeResponses[keyof GetSiteTaxonomyCategoryByExternalReferenceCodeResponses];
+
+export type PutSiteTaxonomyCategoryByExternalReferenceCodeData = {
+    body?: TaxonomyCategory;
+    path: {
+        siteId: string;
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories/by-external-reference-code/{externalReferenceCode}';
+};
+
+export type PutSiteTaxonomyCategoryByExternalReferenceCodeResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type PutSiteTaxonomyCategoryByExternalReferenceCodeResponse = PutSiteTaxonomyCategoryByExternalReferenceCodeResponses[keyof PutSiteTaxonomyCategoryByExternalReferenceCodeResponses];
 
 export type DeleteTaxonomyCategoryData = {
     body?: never;
@@ -1186,6 +1321,98 @@ export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse
 
 export type PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponse = PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses[keyof PutTaxonomyVocabularyTaxonomyCategoryByExternalReferenceCodeResponses];
 
+export type GetAssetLibraryTaxonomyCategoriesPageData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+    };
+    query?: {
+        aggregationTerms?: string;
+        fields?: string;
+        filter?: string;
+        page?: string;
+        pageSize?: string;
+        restrictFields?: string;
+        search?: string;
+        sort?: string;
+        nestedFields?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories';
+};
+
+export type GetAssetLibraryTaxonomyCategoriesPageResponses = {
+    /**
+     * default response
+     */
+    default: PageTaxonomyCategory;
+};
+
+export type GetAssetLibraryTaxonomyCategoriesPageResponse = GetAssetLibraryTaxonomyCategoriesPageResponses[keyof GetAssetLibraryTaxonomyCategoriesPageResponses];
+
+export type PostAssetLibraryTaxonomyCategoryData = {
+    body?: TaxonomyCategory;
+    path: {
+        assetLibraryId: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories';
+};
+
+export type PostAssetLibraryTaxonomyCategoryResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type PostAssetLibraryTaxonomyCategoryResponse = PostAssetLibraryTaxonomyCategoryResponses[keyof PostAssetLibraryTaxonomyCategoryResponses];
+
+export type GetSiteTaxonomyCategoriesPageData = {
+    body?: never;
+    path: {
+        siteId: string;
+    };
+    query?: {
+        aggregationTerms?: string;
+        fields?: string;
+        filter?: string;
+        page?: string;
+        pageSize?: string;
+        restrictFields?: string;
+        search?: string;
+        sort?: string;
+        nestedFields?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories';
+};
+
+export type GetSiteTaxonomyCategoriesPageResponses = {
+    /**
+     * default response
+     */
+    default: PageTaxonomyCategory;
+};
+
+export type GetSiteTaxonomyCategoriesPageResponse = GetSiteTaxonomyCategoriesPageResponses[keyof GetSiteTaxonomyCategoriesPageResponses];
+
+export type PostSiteTaxonomyCategoryData = {
+    body?: TaxonomyCategory;
+    path: {
+        siteId: string;
+    };
+    query?: never;
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories';
+};
+
+export type PostSiteTaxonomyCategoryResponses = {
+    /**
+     * default response
+     */
+    default: TaxonomyCategory;
+};
+
+export type PostSiteTaxonomyCategoryResponse = PostSiteTaxonomyCategoryResponses[keyof PostSiteTaxonomyCategoryResponses];
+
 export type GetTaxonomyCategoriesRankedPageData = {
     body?: never;
     path?: never;
@@ -1342,6 +1569,92 @@ export type PostTaxonomyVocabularyTaxonomyCategoryResponses = {
 };
 
 export type PostTaxonomyVocabularyTaxonomyCategoryResponse = PostTaxonomyVocabularyTaxonomyCategoryResponses[keyof PostTaxonomyVocabularyTaxonomyCategoryResponses];
+
+export type PostAssetLibraryTaxonomyCategoriesPageExportBatchData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+    };
+    query?: {
+        filter?: string;
+        search?: string;
+        sort?: string;
+        callbackURL?: string;
+        contentType?: string;
+        fieldNames?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories/export-batch';
+};
+
+export type PostAssetLibraryTaxonomyCategoriesPageExportBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PostAssetLibraryTaxonomyCategoryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path: {
+        assetLibraryId: string;
+    };
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/asset-libraries/{assetLibraryId}/taxonomy-categories/batch';
+};
+
+export type PostAssetLibraryTaxonomyCategoryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PostSiteTaxonomyCategoriesPageExportBatchData = {
+    body?: never;
+    path: {
+        siteId: string;
+    };
+    query?: {
+        filter?: string;
+        search?: string;
+        sort?: string;
+        callbackURL?: string;
+        contentType?: string;
+        fieldNames?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories/export-batch';
+};
+
+export type PostSiteTaxonomyCategoriesPageExportBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PostSiteTaxonomyCategoryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path: {
+        siteId: string;
+    };
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-admin-taxonomy/v1.0/sites/{siteId}/taxonomy-categories/batch';
+};
+
+export type PostSiteTaxonomyCategoryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
 
 export type PostTaxonomyVocabularyTaxonomyCategoriesPageExportBatchData = {
     body?: never;

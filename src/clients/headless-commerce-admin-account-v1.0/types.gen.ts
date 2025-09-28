@@ -32,17 +32,17 @@ export type FacetValue = {
 };
 
 export type PageAccountAddress = {
+    items?: Array<AccountAddress>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountAddress>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AccountChannelEntry = {
@@ -64,17 +64,17 @@ export type AccountChannelEntry = {
 };
 
 export type PageAccountChannelEntry = {
+    items?: Array<AccountChannelEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountChannelEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AccountChannelShippingOption = {
@@ -96,17 +96,17 @@ export type AccountChannelShippingOption = {
 };
 
 export type PageAccountChannelShippingOption = {
+    items?: Array<AccountChannelShippingOption>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountChannelShippingOption>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AccountMember = {
@@ -133,17 +133,17 @@ export type AccountRole = {
 };
 
 export type PageAccountMember = {
+    items?: Array<AccountMember>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountMember>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AccountOrganization = {
@@ -156,17 +156,17 @@ export type AccountOrganization = {
 };
 
 export type PageAccountOrganization = {
+    items?: Array<AccountOrganization>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountOrganization>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Account = {
@@ -202,17 +202,17 @@ export type Account = {
 };
 
 export type PageAccount = {
+    items?: Array<Account>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Account>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type MultipartBody = {
@@ -235,17 +235,17 @@ export type AdminAccountGroup = {
 };
 
 export type PageAdminAccountGroup = {
+    items?: Array<AdminAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AdminAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type User = {

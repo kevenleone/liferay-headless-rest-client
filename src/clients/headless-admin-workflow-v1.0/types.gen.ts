@@ -23,31 +23,31 @@ export type FacetValue = {
 };
 
 export type PageAssignee = {
+    items?: Array<Assignee>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Assignee>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageTransition = {
+    items?: Array<Transition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Transition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Transition = {
@@ -59,17 +59,17 @@ export type Transition = {
 };
 
 export type PageWorkflowDefinitionLink = {
+    items?: Array<WorkflowDefinitionLink>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WorkflowDefinitionLink>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WorkflowDefinitionLink = {
@@ -161,17 +161,17 @@ export type WorkflowDefinition = {
 };
 
 export type PageWorkflowDefinition = {
+    items?: Array<WorkflowDefinition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WorkflowDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -227,17 +227,17 @@ export type WorkflowInstance = {
 };
 
 export type PageWorkflowInstance = {
+    items?: Array<WorkflowInstance>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WorkflowInstance>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ChangeTransition = {
@@ -261,17 +261,17 @@ export type WorkflowInstanceSubmit = {
 };
 
 export type PageWorkflowLog = {
+    items?: Array<WorkflowLog>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WorkflowLog>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Role = {
@@ -379,17 +379,17 @@ export type WorkflowTaskIds = {
 };
 
 export type PageWorkflowTask = {
+    items?: Array<WorkflowTask>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WorkflowTask>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WorkflowTask = {

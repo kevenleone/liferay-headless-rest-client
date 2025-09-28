@@ -21,17 +21,17 @@ export type Field = {
 };
 
 export type PageField = {
+    items?: Array<Field>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Field>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Mapping = {
@@ -73,31 +73,31 @@ export type Policy = {
 };
 
 export type PagePlan = {
+    items?: Array<Plan>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Plan>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSiteScope = {
+    items?: Array<SiteScope>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SiteScope>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SiteScope = {
@@ -107,17 +107,17 @@ export type SiteScope = {
 };
 
 export type PageStrategy = {
+    items?: Array<Strategy>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Strategy>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Strategy = {

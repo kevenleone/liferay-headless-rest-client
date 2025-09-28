@@ -63,17 +63,17 @@ export type FacetValue = {
 };
 
 export type PageFormRecord = {
+    items?: Array<FormRecord>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FormRecord>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Form = {
@@ -226,17 +226,17 @@ export type Validation = {
 };
 
 export type PageForm = {
+    items?: Array<Form>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Form>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type FormContext = {
@@ -290,17 +290,17 @@ export type MultipartBody = {
 };
 
 export type PageFormStructure = {
+    items?: Array<FormStructure>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<FormStructure>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteFormDocumentData = {

@@ -47,17 +47,17 @@ export type FacetValue = {
 };
 
 export type PagePortalInstance = {
+    items?: Array<PortalInstance>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PortalInstance>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeletePortalInstanceData = {

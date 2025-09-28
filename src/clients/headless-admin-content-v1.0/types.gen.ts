@@ -451,17 +451,17 @@ export type FacetValue = {
 };
 
 export type PageDisplayPageTemplate = {
+    items?: Array<DisplayPageTemplate>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DisplayPageTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -610,17 +610,17 @@ export type ContentFieldValue = {
 };
 
 export type PageStructuredContent = {
+    items?: Array<StructuredContent>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<StructuredContent>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Permission = {

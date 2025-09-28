@@ -50,17 +50,17 @@ export type FacetValue = {
 };
 
 export type PageDsEnvelope = {
+    items?: Array<DsEnvelope>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DsEnvelope>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DsEnvelopeSignatureUrl = {

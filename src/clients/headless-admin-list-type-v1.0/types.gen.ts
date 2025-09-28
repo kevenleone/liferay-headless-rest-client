@@ -35,6 +35,7 @@ export type ListTypeEntry = {
     name_i18n?: {
         [key: string]: string;
     };
+    system?: boolean;
     type?: string;
     readonly 'x-class-name'?: string;
 };
@@ -50,31 +51,31 @@ export type FacetValue = {
 };
 
 export type PageListTypeDefinition = {
+    items?: Array<ListTypeDefinition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageListTypeEntry = {
+    items?: Array<ListTypeEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ListTypeEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteListTypeDefinitionData = {

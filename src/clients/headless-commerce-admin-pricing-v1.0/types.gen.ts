@@ -20,17 +20,17 @@ export type FacetValue = {
 };
 
 export type PageDiscountAccountGroup = {
+    items?: Array<DiscountAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DiscountAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DiscountCategory = {
@@ -43,17 +43,17 @@ export type DiscountCategory = {
 };
 
 export type PageDiscountCategory = {
+    items?: Array<DiscountCategory>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DiscountCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DiscountProduct = {
@@ -66,17 +66,17 @@ export type DiscountProduct = {
 };
 
 export type PageDiscountProduct = {
+    items?: Array<DiscountProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DiscountProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Discount = {
@@ -120,31 +120,31 @@ export type DiscountRule = {
 };
 
 export type PageDiscount = {
+    items?: Array<Discount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Discount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageDiscountRule = {
+    items?: Array<DiscountRule>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DiscountRule>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PriceEntry = {
@@ -184,31 +184,31 @@ export type TierPrice = {
 };
 
 export type PagePriceEntry = {
+    items?: Array<PriceEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PriceEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePriceListAccountGroup = {
+    items?: Array<PriceListAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PriceListAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PriceListAccountGroup = {
@@ -243,31 +243,31 @@ export type PriceList = {
 };
 
 export type PagePriceList = {
+    items?: Array<PriceList>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PriceList>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageTierPrice = {
+    items?: Array<TierPrice>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TierPrice>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteDiscountAccountGroupData = {

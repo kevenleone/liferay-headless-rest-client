@@ -48,17 +48,17 @@ export type FacetValue = {
 };
 
 export type PageBlogPostingImage = {
+    items?: Array<BlogPostingImage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<BlogPostingImage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PostSiteBlogPostingImageRequestBody = {
@@ -463,17 +463,17 @@ export type Rating = {
 };
 
 export type PagePermission = {
+    items?: Array<Permission>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Permission>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Permission = {
@@ -484,17 +484,17 @@ export type Permission = {
 };
 
 export type PageBlogPosting = {
+    items?: Array<BlogPosting>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<BlogPosting>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Comment = {
@@ -539,17 +539,17 @@ export type Comment = {
 };
 
 export type PageComment = {
+    items?: Array<Comment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Comment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContentElement = {
@@ -581,17 +581,17 @@ export type ContentElement = {
 };
 
 export type PageContentElement = {
+    items?: Array<ContentElement>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContentElement>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContentSetElement = {
@@ -623,17 +623,17 @@ export type ContentSetElement = {
 };
 
 export type PageContentSetElement = {
+    items?: Array<ContentSetElement>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContentSetElement>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ContentStructure = {
@@ -778,17 +778,17 @@ export type Option = {
 };
 
 export type PageContentStructure = {
+    items?: Array<ContentStructure>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContentStructure>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -864,17 +864,17 @@ export type ContentTemplate = {
 };
 
 export type PageContentTemplate = {
+    items?: Array<ContentTemplate>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ContentTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1073,17 +1073,17 @@ export type DocumentDataDefinitionType = {
 };
 
 export type PageDocumentDataDefinitionType = {
+    items?: Array<DocumentDataDefinitionType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DocumentDataDefinitionType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1156,17 +1156,17 @@ export type DocumentFolder = {
 };
 
 export type PageDocumentFolder = {
+    items?: Array<DocumentFolder>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DocumentFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1238,17 +1238,17 @@ export type DocumentMetadataSet = {
 };
 
 export type PageDocumentMetadataSet = {
+    items?: Array<DocumentMetadataSet>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DocumentMetadataSet>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1716,17 +1716,17 @@ export type StructuredContentLink = {
 };
 
 export type PageDocument = {
+    items?: Array<Document>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Document>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PatchDocumentRequestBody = {
@@ -1835,17 +1835,17 @@ export type DocumentShortcut = {
 };
 
 export type PageDocumentShortcut = {
+    items?: Array<DocumentShortcut>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<DocumentShortcut>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1961,17 +1961,17 @@ export type ParentKnowledgeBaseFolder = {
 };
 
 export type PageKnowledgeBaseArticle = {
+    items?: Array<KnowledgeBaseArticle>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KnowledgeBaseArticle>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type KnowledgeBaseAttachment = {
@@ -2011,17 +2011,17 @@ export type KnowledgeBaseAttachment = {
 };
 
 export type PageKnowledgeBaseAttachment = {
+    items?: Array<KnowledgeBaseAttachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KnowledgeBaseAttachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PostKnowledgeBaseArticleKnowledgeBaseAttachmentRequestBody = {
@@ -2092,17 +2092,17 @@ export type KnowledgeBaseFolder = {
 };
 
 export type PageKnowledgeBaseFolder = {
+    items?: Array<KnowledgeBaseFolder>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<KnowledgeBaseFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Language = {
@@ -2138,17 +2138,17 @@ export type Language = {
 };
 
 export type PageLanguage = {
+    items?: Array<Language>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Language>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type MessageBoardAttachment = {
@@ -2196,17 +2196,17 @@ export type MessageBoardAttachment = {
 };
 
 export type PageMessageBoardAttachment = {
+    items?: Array<MessageBoardAttachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MessageBoardAttachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PostMessageBoardMessageMessageBoardAttachmentRequestBody = {
@@ -2348,17 +2348,17 @@ export type MessageBoardMessage = {
 };
 
 export type PageMessageBoardMessage = {
+    items?: Array<MessageBoardMessage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MessageBoardMessage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -2424,17 +2424,17 @@ export type MessageBoardSection = {
 };
 
 export type PageMessageBoardSection = {
+    items?: Array<MessageBoardSection>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MessageBoardSection>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -2552,17 +2552,17 @@ export type MessageBoardThread = {
 };
 
 export type PageMessageBoardThread = {
+    items?: Array<MessageBoardThread>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MessageBoardThread>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type NavigationMenu = {
@@ -2612,17 +2612,13 @@ export type NavigationMenu = {
 };
 
 /**
- * The list of navigation menu items this navigation menu has.
+ * Represents a navigation menu item.
  */
 export type NavigationMenuItem = {
     /**
      * The list of languages the navigation menu item has a translation for.
      */
     readonly availableLanguages?: Array<string>;
-    /**
-     * The navigation menu item's content API REST URL.
-     */
-    contentURL?: string;
     creator?: Creator;
     /**
      * A list of the custom fields associated with the navigation menu item.
@@ -2645,16 +2641,6 @@ export type NavigationMenuItem = {
      */
     id?: number;
     /**
-     * The link to a page on the server.
-     */
-    link?: string;
-    /**
-     * The localized links to a page on the server.
-     */
-    link_i18n?: {
-        [key: string]: string;
-    };
-    /**
      * The navigation menu item's name.
      */
     name?: string;
@@ -2673,33 +2659,31 @@ export type NavigationMenuItem = {
      */
     readonly parentNavigationMenuId?: number;
     /**
-     * The navigation menu item's linked site page URL.
-     */
-    readonly sitePageURL?: string;
-    /**
      * The navigation menu item's type.
      */
-    readonly type?: string;
+    type?: string;
     /**
-     * The navigation menu item's linked URL.
+     * The navigation menu item's type settings.
      */
-    url?: string;
+    typeSettings: {
+        [key: string]: string;
+    };
     useCustomName?: boolean;
     readonly 'x-class-name'?: string;
 };
 
 export type PageNavigationMenu = {
+    items?: Array<NavigationMenu>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NavigationMenu>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -3297,17 +3281,17 @@ export type StyleBook = {
 };
 
 export type PageSitePage = {
+    items?: Array<SitePage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SitePage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -3380,31 +3364,31 @@ export type StructuredContentFolder = {
 };
 
 export type PageStructuredContentFolder = {
+    items?: Array<StructuredContentFolder>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<StructuredContentFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageStructuredContent = {
+    items?: Array<StructuredContent>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<StructuredContent>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WikiNode = {
@@ -3458,17 +3442,17 @@ export type WikiNode = {
 };
 
 export type PageWikiNode = {
+    items?: Array<WikiNode>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WikiNode>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WikiPageAttachment = {
@@ -3513,17 +3497,17 @@ export type WikiPageAttachment = {
 };
 
 export type PageWikiPageAttachment = {
+    items?: Array<WikiPageAttachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WikiPageAttachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PostWikiPageWikiPageAttachmentRequestBody = {
@@ -3626,17 +3610,17 @@ export type WikiPage = {
 };
 
 export type PageWikiPage = {
+    items?: Array<WikiPage>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WikiPage>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteBlogPostingImageData = {
@@ -11152,10 +11136,13 @@ export type GetSiteNavigationMenusPageData = {
     };
     query?: {
         fields?: string;
+        filter?: string;
         nestedFields?: string;
         page?: string;
         pageSize?: string;
         restrictFields?: string;
+        search?: string;
+        sort?: string;
     };
     url: '/o/headless-delivery/v1.0/sites/{siteId}/navigation-menus';
 };
@@ -11213,6 +11200,9 @@ export type PostSiteNavigationMenusPageExportBatchData = {
         siteId: string;
     };
     query?: {
+        filter?: string;
+        search?: string;
+        sort?: string;
         callbackURL?: string;
         contentType?: string;
         fieldNames?: string;
