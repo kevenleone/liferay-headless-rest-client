@@ -15,19 +15,6 @@ export type Account = {
     taxId?: string;
     type?: number;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
-     */
-    accountToOAuth2DxpAuthorization?: Array<OAuth2DxpAuthorization>;
-    /**
-     * Information about the object relationship accountEntryToUserAdditionalInfo can be embedded with "nestedFields".
-     */
-    accountEntryToUserAdditionalInfo?: Array<UserAdditionalInfo>;
-    company?: string;
-    /**
-     * Information about the object relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type BillingAddress = {
@@ -182,8 +169,8 @@ export type OrderItem = {
 };
 
 export type PageOrderItem = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderItem>;
     actions?: {
         [key: string]: {
@@ -233,8 +220,8 @@ export type OrderNote = {
 };
 
 export type PageOrderNote = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderNote>;
     actions?: {
         [key: string]: {
@@ -367,8 +354,6 @@ export type Order = {
     transactionId?: string;
     workflowStatusInfo?: Status;
     readonly 'x-class-name'?: string;
-    projectName?: string;
-    siteInitializer?: string;
 };
 
 export type Status = {
@@ -379,8 +364,8 @@ export type Status = {
 };
 
 export type PageOrder = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Order>;
     actions?: {
         [key: string]: {
@@ -408,8 +393,8 @@ export type OrderRuleAccountGroup = {
 };
 
 export type PageOrderRuleAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderRuleAccountGroup>;
     actions?: {
         [key: string]: {
@@ -437,8 +422,8 @@ export type OrderRuleAccount = {
 };
 
 export type PageOrderRuleAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderRuleAccount>;
     actions?: {
         [key: string]: {
@@ -466,8 +451,8 @@ export type OrderRuleChannel = {
 };
 
 export type PageOrderRuleChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderRuleChannel>;
     actions?: {
         [key: string]: {
@@ -539,8 +524,8 @@ export type OrderTypeChannel = {
 };
 
 export type PageOrderRuleOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderRuleOrderType>;
     actions?: {
         [key: string]: {
@@ -580,8 +565,8 @@ export type OrderRule = {
 };
 
 export type PageOrderRule = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderRule>;
     actions?: {
         [key: string]: {
@@ -594,8 +579,8 @@ export type PageOrderRule = {
 };
 
 export type PageOrderTypeChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderTypeChannel>;
     actions?: {
         [key: string]: {
@@ -608,8 +593,8 @@ export type PageOrderTypeChannel = {
 };
 
 export type PageOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OrderType>;
     actions?: {
         [key: string]: {
@@ -622,8 +607,8 @@ export type PageOrderType = {
 };
 
 export type PageTermOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<TermOrderType>;
     actions?: {
         [key: string]: {
@@ -680,8 +665,8 @@ export type Term = {
 };
 
 export type PageTerm = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Term>;
     actions?: {
         [key: string]: {
@@ -691,18 +676,6 @@ export type PageTerm = {
     pageSize?: number;
     facets?: Array<Facet>;
     page?: number;
-};
-
-export type PublisherAssets = {
-    [key: string]: unknown;
-};
-
-export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
 };
 
 export type GetOrderByExternalReferenceCodeAccountData = {
@@ -964,10 +937,8 @@ export type PatchOrderItemResponses = {
     /**
      * default response
      */
-    default: OrderItem;
+    default: unknown;
 };
-
-export type PatchOrderItemResponse = PatchOrderItemResponses[keyof PatchOrderItemResponses];
 
 export type PutOrderItemData = {
     body?: OrderItem;
@@ -1070,10 +1041,8 @@ export type PatchOrderItemByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: OrderItem;
+    default: unknown;
 };
-
-export type PatchOrderItemByExternalReferenceCodeResponse = PatchOrderItemByExternalReferenceCodeResponses[keyof PatchOrderItemByExternalReferenceCodeResponses];
 
 export type PutOrderItemByExternalReferenceCodeData = {
     body?: OrderItem;

@@ -40,8 +40,8 @@ export type FacetValue = {
 };
 
 export type PageAccountAddressChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AccountAddressChannel>;
     actions?: {
         [key: string]: {
@@ -57,19 +57,6 @@ export type Account = {
     id?: number;
     name?: string;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship accountToOAuth2DxpAuthorization can be embedded with "nestedFields".
-     */
-    accountToOAuth2DxpAuthorization?: Array<OAuth2DxpAuthorization>;
-    /**
-     * Information about the object relationship accountEntryToUserAdditionalInfo can be embedded with "nestedFields".
-     */
-    accountEntryToUserAdditionalInfo?: Array<UserAdditionalInfo>;
-    company?: string;
-    /**
-     * Information about the object relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type CategoryDisplayPage = {
@@ -87,8 +74,8 @@ export type CategoryDisplayPage = {
 };
 
 export type PageCategoryDisplayPage = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<CategoryDisplayPage>;
     actions?: {
         [key: string]: {
@@ -116,8 +103,8 @@ export type ChannelAccount = {
 };
 
 export type PageChannelAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ChannelAccount>;
     actions?: {
         [key: string]: {
@@ -130,8 +117,8 @@ export type PageChannelAccount = {
 };
 
 export type PageChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Channel>;
     actions?: {
         [key: string]: {
@@ -172,8 +159,8 @@ export type OrderType = {
 };
 
 export type PagePaymentMethodGroupRelOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PaymentMethodGroupRelOrderType>;
     actions?: {
         [key: string]: {
@@ -201,8 +188,8 @@ export type PaymentMethodGroupRelOrderType = {
 };
 
 export type PagePaymentMethodGroupRelTerm = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PaymentMethodGroupRelTerm>;
     actions?: {
         [key: string]: {
@@ -235,8 +222,8 @@ export type Term = {
 };
 
 export type PageProductDisplayPage = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductDisplayPage>;
     actions?: {
         [key: string]: {
@@ -263,8 +250,8 @@ export type ProductDisplayPage = {
 };
 
 export type PageShippingFixedOptionOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ShippingFixedOptionOrderType>;
     actions?: {
         [key: string]: {
@@ -292,8 +279,8 @@ export type ShippingFixedOptionOrderType = {
 };
 
 export type PageShippingFixedOptionTerm = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ShippingFixedOptionTerm>;
     actions?: {
         [key: string]: {
@@ -320,8 +307,8 @@ export type ShippingFixedOptionTerm = {
 };
 
 export type PageShippingMethod = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ShippingMethod>;
     actions?: {
         [key: string]: {
@@ -363,8 +350,8 @@ export type ShippingOption = {
 };
 
 export type PageTaxCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<TaxCategory>;
     actions?: {
         [key: string]: {
@@ -386,18 +373,6 @@ export type TaxCategory = {
         [key: string]: string;
     };
     readonly 'x-class-name'?: string;
-};
-
-export type OAuth2DxpAuthorization = {
-    [key: string]: unknown;
-};
-
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
-};
-
-export type PublisherAssets = {
-    [key: string]: unknown;
 };
 
 export type DeleteAccountAddressChannelData = {

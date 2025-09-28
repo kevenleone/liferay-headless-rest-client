@@ -36,8 +36,8 @@ export type Keyword = {
 };
 
 export type PageKeyword = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Keyword>;
     actions?: {
         [key: string]: {
@@ -67,8 +67,8 @@ export type TaxonomyCategoryBulkSelection = {
 };
 
 export type PageTaxonomyVocabulary = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<TaxonomyVocabulary>;
     actions?: {
         [key: string]: {

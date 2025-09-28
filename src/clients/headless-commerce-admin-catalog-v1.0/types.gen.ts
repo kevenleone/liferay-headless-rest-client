@@ -96,8 +96,8 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Attachment>;
     actions?: {
         [key: string]: {
@@ -191,8 +191,8 @@ export type Catalog = {
 };
 
 export type PageCatalog = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Catalog>;
     actions?: {
         [key: string]: {
@@ -220,8 +220,8 @@ export type Category = {
 };
 
 export type PageCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Category>;
     actions?: {
         [key: string]: {
@@ -255,8 +255,8 @@ export type Currency = {
 };
 
 export type PageCurrency = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Currency>;
     actions?: {
         [key: string]: {
@@ -299,8 +299,8 @@ export type GroupedProduct = {
 };
 
 export type PageGroupedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<GroupedProduct>;
     actions?: {
         [key: string]: {
@@ -320,8 +320,8 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
@@ -352,8 +352,8 @@ export type ListTypeDefinition = {
 };
 
 export type PageListTypeDefinition = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
@@ -374,8 +374,8 @@ export type LowStockAction = {
 };
 
 export type PageLowStockAction = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<LowStockAction>;
     actions?: {
         [key: string]: {
@@ -410,8 +410,8 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
@@ -438,8 +438,8 @@ export type OptionCategory = {
 };
 
 export type PageOptionCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OptionCategory>;
     actions?: {
         [key: string]: {
@@ -474,7 +474,7 @@ export type Option = {
     required?: boolean;
     skuContributor?: boolean;
     readonly 'x-class-name'?: string;
-    fieldType: 'checkbox' | 'checkbox_multiple' | 'date' | 'document_library' | 'numeric' | 'radio' | 'select' | 'select_date' | 'text';
+    fieldType: 'checkbox' | 'checkbox_multiple' | 'date' | 'numeric' | 'radio' | 'select' | 'select_date' | 'text';
 };
 
 export type OptionValue = {
@@ -495,8 +495,8 @@ export type OptionValue = {
 };
 
 export type PageOption = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Option>;
     actions?: {
         [key: string]: {
@@ -509,8 +509,8 @@ export type PageOption = {
 };
 
 export type PageOptionValue = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<OptionValue>;
     actions?: {
         [key: string]: {
@@ -523,8 +523,8 @@ export type PageOptionValue = {
 };
 
 export type PagePin = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Pin>;
     actions?: {
         [key: string]: {
@@ -554,8 +554,8 @@ export type ProductAccountGroup = {
 };
 
 export type PageProductAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductAccountGroup>;
     actions?: {
         [key: string]: {
@@ -568,8 +568,8 @@ export type PageProductAccountGroup = {
 };
 
 export type PageProductChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductChannel>;
     actions?: {
         [key: string]: {
@@ -598,8 +598,8 @@ export type AccountGroup = {
 };
 
 export type PageProductConfigurationListAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfigurationListAccountGroup>;
     actions?: {
         [key: string]: {
@@ -634,8 +634,8 @@ export type Account = {
 };
 
 export type PageProductConfigurationListAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfigurationListAccount>;
     actions?: {
         [key: string]: {
@@ -673,8 +673,8 @@ export type Channel = {
 };
 
 export type PageProductConfigurationListChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfigurationListChannel>;
     actions?: {
         [key: string]: {
@@ -711,8 +711,8 @@ export type OrderType = {
 };
 
 export type PageProductConfigurationListOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfigurationListOrderType>;
     actions?: {
         [key: string]: {
@@ -822,8 +822,8 @@ export type ProductTaxConfiguration = {
 };
 
 export type PageProductConfigurationList = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfigurationList>;
     actions?: {
         [key: string]: {
@@ -836,8 +836,8 @@ export type PageProductConfigurationList = {
 };
 
 export type PageProductConfiguration = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductConfiguration>;
     actions?: {
         [key: string]: {
@@ -850,8 +850,8 @@ export type PageProductConfiguration = {
 };
 
 export type PageProductGroupProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductGroupProduct>;
     actions?: {
         [key: string]: {
@@ -894,8 +894,8 @@ export type ProductGroup = {
 };
 
 export type PageProductGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductGroup>;
     actions?: {
         [key: string]: {
@@ -908,8 +908,8 @@ export type PageProductGroup = {
 };
 
 export type PageProductOption = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
@@ -964,8 +964,8 @@ export type ProductOptionValue = {
 };
 
 export type PageProductOptionValue = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
@@ -1052,10 +1052,6 @@ export type Product = {
     readonly version?: number;
     workflowStatusInfo?: Status;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship productEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    productEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type ProductSpecification = {
@@ -1154,10 +1150,6 @@ export type ProductVirtualSettings = {
      */
     useSample?: boolean;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship productEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    productEntryToPublisherAssets?: Array<CPublisherAssets>;
 };
 
 export type ProductVirtualSettingsFileEntry = {
@@ -1384,8 +1376,8 @@ export type Status = {
 };
 
 export type PageProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Product>;
     actions?: {
         [key: string]: {
@@ -1398,8 +1390,8 @@ export type PageProduct = {
 };
 
 export type PageProductSpecification = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
@@ -1412,8 +1404,8 @@ export type PageProductSpecification = {
 };
 
 export type PageProductVirtualSettingsFileEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ProductVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
@@ -1448,8 +1440,8 @@ export type PostProductVirtualSettingIdProductVirtualSettingsFileEntryRequestBod
 };
 
 export type PageRelatedProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
@@ -1462,8 +1454,8 @@ export type PageRelatedProduct = {
 };
 
 export type PageSku = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Sku>;
     actions?: {
         [key: string]: {
@@ -1476,8 +1468,8 @@ export type PageSku = {
 };
 
 export type PageSkuUnitOfMeasure = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<SkuUnitOfMeasure>;
     actions?: {
         [key: string]: {
@@ -1490,8 +1482,8 @@ export type PageSkuUnitOfMeasure = {
 };
 
 export type PageSkuVirtualSettingsFileEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<SkuVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
@@ -1542,8 +1534,8 @@ export type Specification = {
 };
 
 export type PageSpecification = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Specification>;
     actions?: {
         [key: string]: {
@@ -1553,385 +1545,6 @@ export type PageSpecification = {
     pageSize?: number;
     facets?: Array<Facet>;
     page?: number;
-};
-
-export type PublisherAssets = {
-    readonly actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    /**
-     * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
-     */
-    readonly auditEvents?: Array<AuditEvent>;
-    readonly creator?: string;
-    readonly dateCreated?: string;
-    readonly dateModified?: string;
-    defaultLanguageId?: string;
-    displayDate?: string;
-    expirationDate?: string;
-    externalReferenceCode?: string;
-    /**
-     * A relative URL to the page's rendered content.
-     */
-    friendlyUrlPath?: string;
-    /**
-     * The localized relative URLs to the page's rendered content.
-     */
-    friendlyUrlPath_i18n?: {
-        [key: string]: string;
-    };
-    readonly id?: number;
-    /**
-     * A list of keywords describing the object entry.
-     */
-    keywords?: Array<string>;
-    objectEntryFolderExternalReferenceCode?: string;
-    objectEntryFolderId?: number;
-    permissions?: Array<Permission>;
-    reviewDate?: string;
-    readonly scopeId?: number;
-    readonly scopeKey?: string;
-    readonly status?: number;
-    /**
-     * The categories associated with this object entry.
-     */
-    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
-    taxonomyCategoryIds?: Array<number>;
-    readonly 'x-class-name'?: string;
-    readonly 'x-schema-name'?: string;
-    name?: string;
-    publisherAssetType?: ListEntry;
-    r_accountEntryToPublisherAssets_accountEntryId: number;
-    /**
-     * Information about the relationship accountEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    accountEntryToPublisherAssets: {
-        [key: string]: unknown;
-    };
-    r_accountEntryToPublisherAssets_accountEntryERC: string;
-    readonly accountEntryToPublisherAssetsERC?: string;
-    r_productEntryToPublisherAssets_CPDefinitionId?: number;
-    /**
-     * Information about the relationship productEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    productEntryToPublisherAssets?: {
-        [key: string]: unknown;
-    };
-    r_productEntryToPublisherAssets_CPDefinitionERC?: string;
-    readonly productEntryToPublisherAssetsERC?: string;
-    sourceCode?: FileEntry;
-    version?: string;
-};
-
-export type CPublisherAssets = {
-    [key: string]: unknown;
-};
-
-/**
- * Represents a collaborator for an entry.
- */
-export type Collaborator = {
-    /**
-     * The collaborator actions for the shared asset.
-     */
-    actionIds: Array<string>;
-    /**
-     * Block of actions allowed by the user making the request.
-     */
-    readonly actions?: {
-        [key: string]: {
-            [key: string]: unknown;
-        };
-    };
-    creator?: Creator;
-    /**
-     * The expiration date to be a collaborator of the asset.
-     */
-    dateExpired?: string;
-    /**
-     * The collaborator external reference code.
-     */
-    readonly externalReferenceCode?: string;
-    /**
-     * The collaborator ID.
-     */
-    id?: number;
-    /**
-     * The collaborator name.
-     */
-    readonly name?: string;
-    /**
-     * The collaborator portrait.
-     */
-    readonly portrait?: string;
-    /**
-     * If the collaborator can share or not the asset.
-     */
-    share?: boolean;
-    /**
-     * The collaborator type.
-     */
-    type: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type Creator = {
-    /**
-     * The author's additional name (e.g., middle name).
-     */
-    readonly additionalName?: string;
-    /**
-     * The type of the content.
-     */
-    readonly contentType?: string;
-    /**
-     * The external reference code of the author.
-     */
-    readonly externalReferenceCode?: string;
-    /**
-     * The author's surname.
-     */
-    readonly familyName?: string;
-    /**
-     * The author's first name.
-     */
-    readonly givenName?: string;
-    /**
-     * The author's ID.
-     */
-    readonly id?: number;
-    /**
-     * A relative URL to the author's profile image.
-     */
-    readonly image?: string;
-    /**
-     * The author's full name.
-     */
-    readonly name?: string;
-    /**
-     * A relative URL to the author's user profile. Optional field, can be embedded with nestedFields.
-     */
-    readonly profileURL?: string;
-    /**
-     * A list of userGroups information.
-     */
-    userGroupBriefs?: Array<UserGroupBrief>;
-    readonly 'x-class-name'?: string;
-};
-
-/**
- * A list of userGroups information.
- */
-export type UserGroupBrief = {
-    /**
-     * The ID of the user group.
-     */
-    readonly id?: number;
-    /**
-     * The name of the user group.
-     */
-    readonly name?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type PageCollaborator = {
-    totalCount?: number;
-    lastPage?: number;
-    items?: Array<Collaborator>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-/**
- * Optional field with the audit events associated with this object entry, can be embedded with nestedFields
- */
-export type AuditEvent = {
-    readonly auditFieldChanges?: Array<AuditFieldChange>;
-    creator?: Creator;
-    readonly dateCreated?: string;
-    readonly eventType?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type AuditFieldChange = {
-    name?: string;
-    newValue?: {
-        [key: string]: unknown;
-    };
-    oldValue?: {
-        [key: string]: unknown;
-    };
-    readonly 'x-class-name'?: string;
-};
-
-export type ParentTaxonomyCategory = {
-    /**
-     * The parent taxonomy category's external reference code.
-     */
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type ParentTaxonomyVocabulary = {
-    /**
-     * The parent category's `TaxonomyVocabulary` external reference code.
-     */
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type Permission = {
-    actionIds?: Array<string>;
-    roleExternalReferenceCode?: string;
-    roleName?: string;
-    roleType?: string;
-};
-
-export type Scope = {
-    externalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-    type?: 'AssetLibrary' | 'Site';
-};
-
-/**
- * The categories associated with this object entry.
- */
-export type TaxonomyCategoryBrief = {
-    /**
-     * Optional field with the embedded taxonomy category, can be embedded with nestedFields
-     */
-    readonly embeddedTaxonomyCategory?: {
-        [key: string]: unknown;
-    };
-    parentTaxonomyCategory?: ParentTaxonomyCategory;
-    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
-    scope?: Scope;
-    /**
-     * The category's external reference code.
-     */
-    taxonomyCategoryExternalReferenceCode?: string;
-    /**
-     * The category's ID. This can be used to retrieve more information in the `TaxonomyCategory` API.
-     */
-    readonly taxonomyCategoryId?: number;
-    /**
-     * The category's name.
-     */
-    readonly taxonomyCategoryName?: string;
-    /**
-     * The localized category's names.
-     */
-    readonly taxonomyCategoryName_i18n?: {
-        [key: string]: string;
-    };
-    readonly 'x-class-name'?: string;
-};
-
-export type Version = {
-    readonly number?: number;
-    readonly 'x-class-name'?: string;
-};
-
-export type PagePermission = {
-    totalCount?: number;
-    lastPage?: number;
-    items?: Array<Permission>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
-export type ValidationError = {
-    errorMessage?: string;
-    objectFieldName?: string;
-    objectValidationRuleExternalReferenceCode?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type ValidationResponse = {
-    validationErrors?: Array<ValidationError>;
-    readonly 'x-class-name'?: string;
-};
-
-export type ValidationRequest = {
-    objectValidationRuleExternalReferenceCodes?: Array<string>;
-    values?: PublisherAssets;
-    readonly 'x-class-name'?: string;
-};
-
-export type PagePublisherAssets = {
-    totalCount?: number;
-    lastPage?: number;
-    items?: Array<PublisherAssets>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-    readonly 'x-schema-name'?: string;
-};
-
-export type ListEntry = {
-    key?: string;
-    name?: string;
-    readonly name_i18n?: {
-        [key: string]: string;
-    };
-    readonly 'x-class-name'?: string;
-};
-
-export type FileEntry = {
-    externalReferenceCode?: string;
-    /**
-     * optional field with the content of the document in Base64, can be embedded with nestedFields (the format of the nested field must be `<attachment field name>.fileBase64`)
-     */
-    fileBase64?: string;
-    /**
-     * optional field that specifies the source of the file to be downloaded, can be embedded with nestedFields (the format of the nested field must be `<attachment field name>.fileURL`)
-     */
-    fileURL?: string;
-    folder?: Folder;
-    id?: number;
-    link?: Link;
-    name?: string;
-    /**
-     * optional field that specifies the preview URL of the file to be used, can be embedded with nestedFields (the format of the nested field must be `<attachment field name>.previewURL`)
-     */
-    readonly previewURL?: string;
-    scope?: Scope;
-    /**
-     * optional field that specifies the thumbnail of the file to be used, can be embedded with nestedFields (the format of the nested field must be `<attachment field name>.thumbnailURL`)
-     */
-    readonly thumbnailURL?: string;
-    readonly 'x-class-name'?: string;
-};
-
-export type Folder = {
-    externalReferenceCode?: string;
-    siteId?: number;
-    readonly 'x-class-name'?: string;
-};
-
-export type Link = {
-    href?: string;
-    label?: string;
-    readonly 'x-class-name'?: string;
 };
 
 export type DeleteAttachmentData = {
@@ -8070,62 +7683,6 @@ export type PostSpecificationsPageExportBatchResponses = {
      */
     default: unknown;
 };
-
-export type GetProductProductEntryToPublisherAssetsPageData = {
-    body?: never;
-    path: {
-        productId: string;
-    };
-    query?: {
-        nestedFields?: string;
-    };
-    url: '/o/headless-commerce-admin-catalog/v1.0/products/{productId}/productEntryToPublisherAssets';
-};
-
-export type GetProductProductEntryToPublisherAssetsPageResponses = {
-    /**
-     * default response
-     */
-    default: PagePublisherAssets;
-};
-
-export type GetProductProductEntryToPublisherAssetsPageResponse = GetProductProductEntryToPublisherAssetsPageResponses[keyof GetProductProductEntryToPublisherAssetsPageResponses];
-
-export type DeleteProductProductEntryToPublisherAssetsData = {
-    body?: never;
-    path: {
-        productId: string;
-        publisherAssetsId: string;
-    };
-    query?: never;
-    url: '/o/headless-commerce-admin-catalog/v1.0/products/{productId}/productEntryToPublisherAssets/{publisherAssetsId}';
-};
-
-export type DeleteProductProductEntryToPublisherAssetsResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type PutProductProductEntryToPublisherAssetsData = {
-    body?: never;
-    path: {
-        productId: string;
-        publisherAssetsId: string;
-    };
-    query?: never;
-    url: '/o/headless-commerce-admin-catalog/v1.0/products/{productId}/productEntryToPublisherAssets/{publisherAssetsId}';
-};
-
-export type PutProductProductEntryToPublisherAssetsResponses = {
-    /**
-     * default response
-     */
-    default: PublisherAssets;
-};
-
-export type PutProductProductEntryToPublisherAssetsResponse = PutProductProductEntryToPublisherAssetsResponses[keyof PutProductProductEntryToPublisherAssetsResponses];
 
 export type ClientOptions = {
     baseUrl: 'http://localhost:8080' | (string & {});

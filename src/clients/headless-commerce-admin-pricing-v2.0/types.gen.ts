@@ -51,8 +51,8 @@ export type FacetValue = {
 };
 
 export type PageDiscountAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountAccountGroup>;
     actions?: {
         [key: string]: {
@@ -86,8 +86,8 @@ export type DiscountAccount = {
 };
 
 export type PageDiscountAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountAccount>;
     actions?: {
         [key: string]: {
@@ -115,8 +115,8 @@ export type DiscountCategory = {
 };
 
 export type PageDiscountCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountCategory>;
     actions?: {
         [key: string]: {
@@ -144,8 +144,8 @@ export type DiscountChannel = {
 };
 
 export type PageDiscountChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountChannel>;
     actions?: {
         [key: string]: {
@@ -182,8 +182,8 @@ export type OrderType = {
 };
 
 export type PageDiscountOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountOrderType>;
     actions?: {
         [key: string]: {
@@ -211,8 +211,8 @@ export type DiscountProductGroup = {
 };
 
 export type PageDiscountProductGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountProductGroup>;
     actions?: {
         [key: string]: {
@@ -249,8 +249,8 @@ export type DiscountProduct = {
 };
 
 export type PageDiscountProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountProduct>;
     actions?: {
         [key: string]: {
@@ -270,10 +270,6 @@ export type Product = {
     readonly sku?: string;
     readonly thumbnail?: string;
     readonly 'x-class-name'?: string;
-    /**
-     * Information about the object relationship productEntryToPublisherAssets can be embedded with "nestedFields".
-     */
-    productEntryToPublisherAssets?: Array<PublisherAssets>;
 };
 
 export type Discount = {
@@ -337,8 +333,8 @@ export type DiscountRule = {
 };
 
 export type PageDiscount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Discount>;
     actions?: {
         [key: string]: {
@@ -351,8 +347,8 @@ export type PageDiscount = {
 };
 
 export type PageDiscountRule = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountRule>;
     actions?: {
         [key: string]: {
@@ -385,8 +381,8 @@ export type DiscountSku = {
 };
 
 export type PageDiscountSku = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<DiscountSku>;
     actions?: {
         [key: string]: {
@@ -480,8 +476,8 @@ export type TierPrice = {
 };
 
 export type PagePriceEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceEntry>;
     actions?: {
         [key: string]: {
@@ -494,8 +490,8 @@ export type PagePriceEntry = {
 };
 
 export type PagePriceListAccountGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListAccountGroup>;
     actions?: {
         [key: string]: {
@@ -524,8 +520,8 @@ export type PriceListAccountGroup = {
 };
 
 export type PagePriceListAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListAccount>;
     actions?: {
         [key: string]: {
@@ -554,8 +550,8 @@ export type PriceListAccount = {
 };
 
 export type PagePriceListChannel = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListChannel>;
     actions?: {
         [key: string]: {
@@ -584,8 +580,8 @@ export type PriceListChannel = {
 };
 
 export type PagePriceListDiscount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListDiscount>;
     actions?: {
         [key: string]: {
@@ -609,8 +605,8 @@ export type PriceListDiscount = {
 };
 
 export type PagePriceListOrderType = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceListOrderType>;
     actions?: {
         [key: string]: {
@@ -757,8 +753,8 @@ export type Status = {
 };
 
 export type PagePriceList = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceList>;
     actions?: {
         [key: string]: {
@@ -771,8 +767,8 @@ export type PagePriceList = {
 };
 
 export type PagePriceModifierCategory = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceModifierCategory>;
     actions?: {
         [key: string]: {
@@ -785,8 +781,8 @@ export type PagePriceModifierCategory = {
 };
 
 export type PagePriceModifierProductGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceModifierProductGroup>;
     actions?: {
         [key: string]: {
@@ -799,8 +795,8 @@ export type PagePriceModifierProductGroup = {
 };
 
 export type PagePriceModifierProduct = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceModifierProduct>;
     actions?: {
         [key: string]: {
@@ -813,8 +809,8 @@ export type PagePriceModifierProduct = {
 };
 
 export type PagePriceModifier = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<PriceModifier>;
     actions?: {
         [key: string]: {
@@ -827,8 +823,8 @@ export type PagePriceModifier = {
 };
 
 export type PageTierPrice = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<TierPrice>;
     actions?: {
         [key: string]: {
@@ -838,10 +834,6 @@ export type PageTierPrice = {
     pageSize?: number;
     facets?: Array<Facet>;
     page?: number;
-};
-
-export type PublisherAssets = {
-    [key: string]: unknown;
 };
 
 export type GetDiscountAccountAccountData = {

@@ -34,8 +34,8 @@ export type FacetValue = {
 };
 
 export type PageShipmentItem = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ShipmentItem>;
     actions?: {
         [key: string]: {
@@ -150,8 +150,8 @@ export type Status = {
 };
 
 export type PageShipment = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Shipment>;
     actions?: {
         [key: string]: {

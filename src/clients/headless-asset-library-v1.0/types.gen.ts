@@ -10,14 +10,6 @@ export type AssetLibrary = {
         };
     };
     /**
-     * The asset library's key.
-     */
-    assetLibraryKey?: string;
-    /**
-     * The asset library's creator user ID.
-     */
-    readonly creatorUserId?: number;
-    /**
      * The asset library's creation date.
      */
     readonly dateCreated?: string;
@@ -40,7 +32,7 @@ export type AssetLibrary = {
      */
     externalReferenceCode?: string;
     /**
-     * The asset library's ID.
+     * The asset library's site ID.
      */
     readonly id?: number;
     /**
@@ -66,10 +58,6 @@ export type AssetLibrary = {
      */
     readonly numberOfUserGroups?: number;
     settings?: Settings;
-    /**
-     * The asset library's site ID.
-     */
-    readonly siteId?: number;
     /**
      * The asset library's connected sites.
      */
@@ -102,8 +90,8 @@ export type MimeTypeLimit = {
 };
 
 export type PageAssetLibrary = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<AssetLibrary>;
     actions?: {
         [key: string]: {
@@ -204,11 +192,6 @@ export type UserAccount = {
      */
     readonly roles?: Array<Role>;
     readonly 'x-class-name'?: string;
-    newsSubscription?: boolean;
-    /**
-     * Information about the object relationship userToUserAddInfo can be embedded with "nestedFields".
-     */
-    userToUserAddInfo?: Array<UserAdditionalInfo>;
 };
 
 export type UserGroup = {
@@ -235,8 +218,8 @@ export type UserGroup = {
 };
 
 export type PageSite = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<Site>;
     actions?: {
         [key: string]: {
@@ -249,8 +232,8 @@ export type PageSite = {
 };
 
 export type PageUserAccount = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<UserAccount>;
     actions?: {
         [key: string]: {
@@ -263,8 +246,8 @@ export type PageUserAccount = {
 };
 
 export type PageUserGroup = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<UserGroup>;
     actions?: {
         [key: string]: {
@@ -274,10 +257,6 @@ export type PageUserGroup = {
     pageSize?: number;
     facets?: Array<Facet>;
     page?: number;
-};
-
-export type UserAdditionalInfo = {
-    [key: string]: unknown;
 };
 
 export type DeleteAssetLibraryData = {
@@ -335,42 +314,6 @@ export type PatchAssetLibraryResponses = {
 };
 
 export type PatchAssetLibraryResponse = PatchAssetLibraryResponses[keyof PatchAssetLibraryResponses];
-
-export type DeleteAssetLibraryBatchData = {
-    body?: {
-        [key: string]: unknown;
-    };
-    path?: never;
-    query?: {
-        callbackURL?: string;
-    };
-    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
-};
-
-export type DeleteAssetLibraryBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type PostAssetLibraryBatchData = {
-    body?: {
-        [key: string]: unknown;
-    };
-    path?: never;
-    query?: {
-        callbackURL?: string;
-    };
-    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
-};
-
-export type PostAssetLibraryBatchResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
 
 export type DeleteAssetLibraryByExternalReferenceCodeData = {
     body?: never;
@@ -446,74 +389,6 @@ export type PutAssetLibraryByExternalReferenceCodeResponses = {
 
 export type PutAssetLibraryByExternalReferenceCodeResponse = PutAssetLibraryByExternalReferenceCodeResponses[keyof PutAssetLibraryByExternalReferenceCodeResponses];
 
-export type DeleteAssetLibraryByExternalReferenceCodePinData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-    };
-    query?: never;
-    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
-};
-
-export type DeleteAssetLibraryByExternalReferenceCodePinResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type PutAssetLibraryByExternalReferenceCodePinData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-    };
-    query?: never;
-    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
-};
-
-export type PutAssetLibraryByExternalReferenceCodePinResponses = {
-    /**
-     * default response
-     */
-    default: AssetLibrary;
-};
-
-export type PutAssetLibraryByExternalReferenceCodePinResponse = PutAssetLibraryByExternalReferenceCodePinResponses[keyof PutAssetLibraryByExternalReferenceCodePinResponses];
-
-export type DeleteAssetLibraryPinData = {
-    body?: never;
-    path: {
-        assetLibraryId: string;
-    };
-    query?: never;
-    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
-};
-
-export type DeleteAssetLibraryPinResponses = {
-    /**
-     * default response
-     */
-    default: unknown;
-};
-
-export type PutAssetLibraryPinData = {
-    body?: never;
-    path: {
-        assetLibraryId: string;
-    };
-    query?: never;
-    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
-};
-
-export type PutAssetLibraryPinResponses = {
-    /**
-     * default response
-     */
-    default: AssetLibrary;
-};
-
-export type PutAssetLibraryPinResponse = PutAssetLibraryPinResponses[keyof PutAssetLibraryPinResponses];
-
 export type GetAssetLibrariesPageData = {
     body?: never;
     path?: never;
@@ -553,26 +428,6 @@ export type PostAssetLibraryResponses = {
 };
 
 export type PostAssetLibraryResponse = PostAssetLibraryResponses[keyof PostAssetLibraryResponses];
-
-export type GetAssetLibrariesPinnedByMePageData = {
-    body?: never;
-    path?: never;
-    query?: {
-        page?: string;
-        pageSize?: string;
-        nestedFields?: string;
-    };
-    url: '/o/headless-asset-library/v1.0/asset-libraries/pinned-by-me';
-};
-
-export type GetAssetLibrariesPinnedByMePageResponses = {
-    /**
-     * default response
-     */
-    default: PageAssetLibrary;
-};
-
-export type GetAssetLibrariesPinnedByMePageResponse = GetAssetLibrariesPinnedByMePageResponses[keyof GetAssetLibrariesPinnedByMePageResponses];
 
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeData = {
     body?: never;

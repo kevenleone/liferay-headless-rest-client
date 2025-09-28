@@ -35,7 +35,6 @@ export type ListTypeEntry = {
     name_i18n?: {
         [key: string]: string;
     };
-    system?: boolean;
     type?: string;
     readonly 'x-class-name'?: string;
 };
@@ -51,8 +50,8 @@ export type FacetValue = {
 };
 
 export type PageListTypeDefinition = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
@@ -65,8 +64,8 @@ export type PageListTypeDefinition = {
 };
 
 export type PageListTypeEntry = {
-    totalCount?: number;
     lastPage?: number;
+    totalCount?: number;
     items?: Array<ListTypeEntry>;
     actions?: {
         [key: string]: {
