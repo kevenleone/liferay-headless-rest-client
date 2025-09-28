@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFieldMappingInfosPage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldMappingInfosPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.search.experiences.rest.client', and version '3.0.37'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.search.experiences.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.search.experiences.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFieldMappingInfosPage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldMappingInfosPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.search.experiences.rest.client', and version '3.0.33'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.search.experiences.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.search.experiences.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -444,487 +444,6 @@
                 ]
             }
         },
-        "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}": {
-            "get": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "getSXPBlueprint",
-                "parameters": [
-                    {
-                        "name": "sxpBlueprintId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"812\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "putSXPBlueprint",
-                "parameters": [
-                    {
-                        "name": "sxpBlueprintId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"5561\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "deleteSXPBlueprint",
-                "parameters": [
-                    {
-                        "name": "sxpBlueprintId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"904\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "patchSXPBlueprint",
-                "parameters": [
-                    {
-                        "name": "sxpBlueprintId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"4631\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/search-experiences-rest/v1.0/sxp-blueprints/batch": {
-            "put": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "putSXPBlueprintBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "post": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "postSXPBlueprintBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "deleteSXPBlueprintBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprintBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "getSXPBlueprintByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3726\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "putSXPBlueprintByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPBlueprint"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPBlueprint"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9818\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export": {
-            "get": {
-                "tags": [
-                    "SXPBlueprint"
-                ],
-                "operationId": "getSXPBlueprintExport",
-                "parameters": [
-                    {
-                        "name": "sxpBlueprintId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"2225\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/search-experiences-rest/v1.0/sxp-blueprints": {
             "get": {
                 "tags": [
@@ -1055,6 +574,247 @@
                 ]
             }
         },
+        "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}": {
+            "get": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "getSXPBlueprint",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"1545\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "putSXPBlueprint",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"4733\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "deleteSXPBlueprint",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"499\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "patchSXPBlueprint",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"4513\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export": {
+            "get": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "getSXPBlueprintExport",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"3131\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/export', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/copy": {
             "post": {
                 "tags": [
@@ -1092,12 +852,118 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"5407\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"8220\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "getSXPBlueprintByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9664\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "putSXPBlueprintByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPBlueprint"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7746\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1149,6 +1015,158 @@
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-blueprints/batch": {
+            "post": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "postSXPBlueprintBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/batch": {
+            "put": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "putSXPBlueprintBatch",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPBlueprint"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintBatch({\n        client,\n        path: {\n           sxpBlueprintId: \"4279\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SXPBlueprint"
+                ],
+                "operationId": "deleteSXPBlueprintBatch",
+                "parameters": [
+                    {
+                        "name": "sxpBlueprintId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprintBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprintBatch({\n        client,\n        path: {\n           sxpBlueprintId: \"6416\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-blueprints/{sxpBlueprintId}/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1225,448 +1243,6 @@
                 ]
             }
         },
-        "/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}": {
-            "get": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "getSXPElement",
-                "parameters": [
-                    {
-                        "name": "sxpElementId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"3030\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "putSXPElement",
-                "parameters": [
-                    {
-                        "name": "sxpElementId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"3269\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "deleteSXPElement",
-                "parameters": [
-                    {
-                        "name": "sxpElementId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"1598\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "patchSXPElement",
-                "parameters": [
-                    {
-                        "name": "sxpElementId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"735\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/search-experiences-rest/v1.0/sxp-elements/batch": {
-            "put": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "putSXPElementBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "post": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "postSXPElementBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "deleteSXPElementBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElementBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "getSXPElementByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"254\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "SXPElement"
-                ],
-                "operationId": "putSXPElementByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SXPElement"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SXPElement"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9649\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/export": {
             "get": {
                 "tags": [
@@ -1696,7 +1272,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"5298\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"3408\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1873,7 +1449,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"8962\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"2721\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1981,6 +1557,466 @@
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "getSXPElementByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4903\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "putSXPElementByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6199\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}": {
+            "get": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "getSXPElement",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"9743\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "putSXPElement",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"3644\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "deleteSXPElement",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"9537\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "patchSXPElement",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SXPElement"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"1745\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-elements/batch": {
+            "post": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "postSXPElementBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/batch": {
+            "put": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "putSXPElementBatch",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SXPElement"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementBatch({\n        client,\n        path: {\n           sxpElementId: \"8213\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SXPElement"
+                ],
+                "operationId": "deleteSXPElementBatch",
+                "parameters": [
+                    {
+                        "name": "sxpElementId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElementBatch } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElementBatch({\n        client,\n        path: {\n           sxpElementId: \"8631\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/search-experiences-rest/v1.0/sxp-elements/{sxpElementId}/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2370,7 +2406,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"5832\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"6153\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2492,8 +2528,7 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "FacetValue": {
                 "type": "object",
@@ -2505,8 +2540,7 @@
                     "term": {
                         "type": "string"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "FieldMappingInfo": {
                 "type": "object",
@@ -2529,18 +2563,11 @@
                 },
                 "xml": {
                     "name": "FieldMappingInfo"
-                },
-                "x-filterable": []
+                }
             },
             "PageFieldMappingInfo": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FieldMappingInfo"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2548,6 +2575,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FieldMappingInfo"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2558,22 +2591,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "KeywordQueryContributor": {
                 "type": "object",
@@ -2589,18 +2621,11 @@
                 },
                 "xml": {
                     "name": "KeywordQueryContributor"
-                },
-                "x-filterable": []
+                }
             },
             "PageKeywordQueryContributor": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/KeywordQueryContributor"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2608,6 +2633,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/KeywordQueryContributor"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2618,22 +2649,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "ModelPrefilterContributor": {
                 "type": "object",
@@ -2649,26 +2679,25 @@
                 },
                 "xml": {
                     "name": "ModelPrefilterContributor"
-                },
-                "x-filterable": []
+                }
             },
             "PageModelPrefilterContributor": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/ModelPrefilterContributor"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -2678,40 +2707,39 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PageQueryPrefilterContributor": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/QueryPrefilterContributor"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -2721,22 +2749,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "QueryPrefilterContributor": {
                 "type": "object",
@@ -2752,8 +2779,7 @@
                 },
                 "xml": {
                     "name": "QueryPrefilterContributor"
-                },
-                "x-filterable": []
+                }
             },
             "AdvancedConfiguration": {
                 "type": "object",
@@ -2784,8 +2810,7 @@
                 },
                 "xml": {
                     "name": "AdvancedConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "AggregationConfiguration": {
                 "type": "object",
@@ -2801,8 +2826,7 @@
                 },
                 "xml": {
                     "name": "AggregationConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "Clause": {
                 "type": "object",
@@ -2849,8 +2873,7 @@
                 },
                 "xml": {
                     "name": "Clause"
-                },
-                "x-filterable": []
+                }
             },
             "Collapse": {
                 "type": "object",
@@ -2876,8 +2899,7 @@
                 },
                 "xml": {
                     "name": "Collapse"
-                },
-                "x-filterable": []
+                }
             },
             "Condition": {
                 "type": "object",
@@ -2920,8 +2942,7 @@
                 },
                 "xml": {
                     "name": "Condition"
-                },
-                "x-filterable": []
+                }
             },
             "Configuration": {
                 "type": "object",
@@ -2964,8 +2985,7 @@
                 },
                 "xml": {
                     "name": "Configuration"
-                },
-                "x-filterable": []
+                }
             },
             "Contains": {
                 "type": "object",
@@ -2984,8 +3004,7 @@
                 },
                 "xml": {
                     "name": "Contains"
-                },
-                "x-filterable": []
+                }
             },
             "ElementDefinition": {
                 "type": "object",
@@ -3010,8 +3029,7 @@
                 },
                 "xml": {
                     "name": "ElementDefinition"
-                },
-                "x-filterable": []
+                }
             },
             "ElementInstance": {
                 "type": "object",
@@ -3044,8 +3062,7 @@
                 },
                 "xml": {
                     "name": "ElementInstance"
-                },
-                "x-filterable": []
+                }
             },
             "Equals": {
                 "type": "object",
@@ -3067,8 +3084,7 @@
                 },
                 "xml": {
                     "name": "Equals"
-                },
-                "x-filterable": []
+                }
             },
             "Exists": {
                 "type": "object",
@@ -3084,13 +3100,12 @@
                 },
                 "xml": {
                     "name": "Exists"
-                },
-                "x-filterable": []
+                }
             },
             "Field": {
                 "type": "object",
                 "properties": {
-                    "defaultValue": {
+                    "step": {
                         "type": "object"
                     },
                     "fieldMappings": {
@@ -3128,8 +3143,7 @@
                 },
                 "xml": {
                     "name": "Field"
-                },
-                "x-filterable": []
+                }
             },
             "FieldMapping": {
                 "type": "object",
@@ -3152,8 +3166,7 @@
                 },
                 "xml": {
                     "name": "FieldMapping"
-                },
-                "x-filterable": []
+                }
             },
             "FieldSet": {
                 "type": "object",
@@ -3172,8 +3185,7 @@
                 },
                 "xml": {
                     "name": "FieldSet"
-                },
-                "x-filterable": []
+                }
             },
             "GeneralConfiguration": {
                 "type": "object",
@@ -3189,12 +3201,6 @@
                         "items": {
                             "type": "string"
                         }
-                    },
-                    "collectionProvider": {
-                        "type": "boolean"
-                    },
-                    "collectionProviderType": {
-                        "type": "string"
                     },
                     "emptySearchEnabled": {
                         "type": "boolean"
@@ -3228,8 +3234,7 @@
                 },
                 "xml": {
                     "name": "GeneralConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "HighlightConfiguration": {
                 "type": "object",
@@ -3274,8 +3279,7 @@
                 },
                 "xml": {
                     "name": "HighlightConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "HighlightField": {
                 "type": "object",
@@ -3300,8 +3304,7 @@
                 },
                 "xml": {
                     "name": "HighlightField"
-                },
-                "x-filterable": []
+                }
             },
             "In": {
                 "type": "object",
@@ -3320,8 +3323,7 @@
                 },
                 "xml": {
                     "name": "In"
-                },
-                "x-filterable": []
+                }
             },
             "IndexConfiguration": {
                 "type": "object",
@@ -3340,8 +3342,7 @@
                 },
                 "xml": {
                     "name": "IndexConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "InnerCollapse": {
                 "type": "object",
@@ -3357,8 +3358,7 @@
                 },
                 "xml": {
                     "name": "InnerCollapse"
-                },
-                "x-filterable": []
+                }
             },
             "InnerHit": {
                 "type": "object",
@@ -3387,8 +3387,7 @@
                 },
                 "xml": {
                     "name": "InnerHit"
-                },
-                "x-filterable": []
+                }
             },
             "Option": {
                 "type": "object",
@@ -3407,23 +3406,16 @@
                 },
                 "xml": {
                     "name": "Option"
-                },
-                "x-filterable": []
+                }
             },
             "Parameter": {
                 "type": "object",
                 "properties": {
-                    "defaultValue": {
+                    "min": {
                         "type": "object"
                     },
                     "format": {
                         "type": "string"
-                    },
-                    "max": {
-                        "type": "object"
-                    },
-                    "min": {
-                        "type": "object"
                     },
                     "x-class-name": {
                         "type": "string",
@@ -3449,8 +3441,7 @@
                 },
                 "xml": {
                     "name": "Parameter"
-                },
-                "x-filterable": []
+                }
             },
             "ParameterConfiguration": {
                 "type": "object",
@@ -3469,8 +3460,7 @@
                 },
                 "xml": {
                     "name": "ParameterConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "QueryConfiguration": {
                 "type": "object",
@@ -3492,8 +3482,7 @@
                 },
                 "xml": {
                     "name": "QueryConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "QueryEntry": {
                 "type": "object",
@@ -3530,23 +3519,13 @@
                 },
                 "xml": {
                     "name": "QueryEntry"
-                },
-                "x-filterable": []
+                }
             },
             "Range": {
                 "type": "object",
                 "properties": {
                     "format": {
                         "type": "string"
-                    },
-                    "gt": {
-                        "type": "object"
-                    },
-                    "gte": {
-                        "type": "object"
-                    },
-                    "lt": {
-                        "type": "object"
                     },
                     "lte": {
                         "type": "object"
@@ -3562,26 +3541,16 @@
                 },
                 "xml": {
                     "name": "Range"
-                },
-                "x-filterable": []
+                }
             },
             "Rescore": {
                 "type": "object",
                 "properties": {
-                    "query": {
-                        "type": "object"
-                    },
-                    "queryWeight": {
-                        "type": "object"
-                    },
-                    "rescoreQueryWeight": {
+                    "windowSize": {
                         "type": "object"
                     },
                     "scoreMode": {
                         "type": "string"
-                    },
-                    "windowSize": {
-                        "type": "object"
                     },
                     "x-class-name": {
                         "type": "string",
@@ -3591,8 +3560,7 @@
                 },
                 "xml": {
                     "name": "Rescore"
-                },
-                "x-filterable": []
+                }
             },
             "SXPBlueprint": {
                 "type": "object",
@@ -3606,12 +3574,6 @@
                             }
                         },
                         "readOnly": true
-                    },
-                    "collectionProviderSubtypeName": {
-                        "type": "string"
-                    },
-                    "collectionProviderTypeName": {
-                        "type": "string"
                     },
                     "configuration": {
                         "$ref": "#/components/schemas/Configuration"
@@ -3673,14 +3635,7 @@
                 },
                 "xml": {
                     "name": "SXPBlueprint"
-                },
-                "x-filterable": [
-                    "createDate",
-                    "description",
-                    "modifiedDate",
-                    "status",
-                    "title"
-                ]
+                }
             },
             "SXPElement": {
                 "type": "object",
@@ -3765,15 +3720,7 @@
                 },
                 "xml": {
                     "name": "SXPElement"
-                },
-                "x-filterable": [
-                    "createDate",
-                    "description",
-                    "hidden",
-                    "modifiedDate",
-                    "readOnly",
-                    "title"
-                ]
+                }
             },
             "SortConfiguration": {
                 "type": "object",
@@ -3789,8 +3736,7 @@
                 },
                 "xml": {
                     "name": "SortConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "Source": {
                 "type": "object",
@@ -3818,8 +3764,7 @@
                 },
                 "xml": {
                     "name": "Source"
-                },
-                "x-filterable": []
+                }
             },
             "TypeOptions": {
                 "type": "object",
@@ -3830,10 +3775,7 @@
                     "format": {
                         "type": "string"
                     },
-                    "max": {
-                        "type": "object"
-                    },
-                    "min": {
+                    "step": {
                         "type": "object"
                     },
                     "nullable": {
@@ -3847,9 +3789,6 @@
                     },
                     "required": {
                         "type": "boolean"
-                    },
-                    "step": {
-                        "type": "object"
                     },
                     "unit": {
                         "type": "string"
@@ -3865,8 +3804,7 @@
                 },
                 "xml": {
                     "name": "TypeOptions"
-                },
-                "x-filterable": []
+                }
             },
             "UiConfiguration": {
                 "type": "object",
@@ -3885,26 +3823,25 @@
                 },
                 "xml": {
                     "name": "UiConfiguration"
-                },
-                "x-filterable": []
+                }
             },
             "PageSXPBlueprint": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/SXPBlueprint"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -3914,40 +3851,39 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PageSXPElement": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/SXPElement"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -3957,40 +3893,39 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PageSXPParameterContributorDefinition": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/SXPParameterContributorDefinition"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -4000,22 +3935,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "SXPParameterContributorDefinition": {
                 "type": "object",
@@ -4037,18 +3971,11 @@
                 },
                 "xml": {
                     "name": "SXPParameterContributorDefinition"
-                },
-                "x-filterable": []
+                }
             },
             "PageSearchIndex": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchIndex"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4056,6 +3983,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchIndex"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4066,22 +3999,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "SearchIndex": {
                 "type": "object",
@@ -4100,8 +4032,7 @@
                 },
                 "xml": {
                     "name": "SearchIndex"
-                },
-                "x-filterable": []
+                }
             },
             "DocumentField": {
                 "type": "object",
@@ -4120,8 +4051,7 @@
                 },
                 "xml": {
                     "name": "DocumentField"
-                },
-                "x-filterable": []
+                }
             },
             "Hit": {
                 "type": "object",
@@ -4154,8 +4084,7 @@
                 },
                 "xml": {
                     "name": "Hit"
-                },
-                "x-filterable": []
+                }
             },
             "SearchHits": {
                 "type": "object",
@@ -4182,8 +4111,7 @@
                 },
                 "xml": {
                     "name": "SearchHits"
-                },
-                "x-filterable": []
+                }
             },
             "SearchRequest": {
                 "type": "object",
@@ -4199,8 +4127,7 @@
                 },
                 "xml": {
                     "name": "SearchRequest"
-                },
-                "x-filterable": []
+                }
             },
             "SearchResponse": {
                 "type": "object",
@@ -4222,14 +4149,11 @@
                         "type": "integer",
                         "format": "int32"
                     },
-                    "request": {
+                    "response": {
                         "type": "object"
                     },
                     "requestString": {
                         "type": "string"
-                    },
-                    "response": {
-                        "type": "object"
                     },
                     "responseString": {
                         "type": "string"
@@ -4248,18 +4172,11 @@
                 },
                 "xml": {
                     "name": "SearchResponse"
-                },
-                "x-filterable": []
+                }
             },
             "PageSearchableAssetNameDisplay": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchableAssetNameDisplay"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4267,6 +4184,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchableAssetNameDisplay"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4277,22 +4200,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "SearchableAssetNameDisplay": {
                 "type": "object",
@@ -4303,9 +4225,6 @@
                     "displayName": {
                         "type": "string"
                     },
-                    "hasSubtype": {
-                        "type": "boolean"
-                    },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
@@ -4314,18 +4233,11 @@
                 },
                 "xml": {
                     "name": "SearchableAssetNameDisplay"
-                },
-                "x-filterable": []
+                }
             },
             "PageSearchableAssetName": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchableAssetName"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4333,6 +4245,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchableAssetName"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4343,22 +4261,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "SearchableAssetName": {
                 "type": "object",
@@ -4374,8 +4291,7 @@
                 },
                 "xml": {
                     "name": "SearchableAssetName"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

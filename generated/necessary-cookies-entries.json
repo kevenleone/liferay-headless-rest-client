@@ -3,7 +3,7 @@
     "info": {
         "title": "Object",
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"522\",\n           externalReferenceCode: \"8573\",\n           type: \"8468\",\n           collaboratorId: \"8248\",\n        },\n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntriesPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -11,42 +11,16 @@
         }
     ],
     "paths": {
-        "/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}": {
+        "/o/necessary-cookies-entries/": {
             "get": {
                 "tags": [
-                    "Collaborator"
+                    "NecessaryCookieEntry"
                 ],
-                "description": "Retrieves the collaborator for an object entry.",
-                "operationId": "getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator",
+                "operationId": "getNecessaryCookieEntriesPage",
                 "parameters": [
                     {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
+                        "name": "aggregationTerms",
+                        "in": "query",
                         "schema": {
                             "type": "string"
                         }
@@ -59,223 +33,14 @@
                         }
                     },
                     {
-                        "name": "nestedFields",
+                        "name": "filter",
                         "in": "query",
                         "schema": {
                             "type": "string"
                         }
                     },
                     {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"6763\",\n           externalReferenceCode: \"2796\",\n           type: \"9427\",\n           collaboratorId: \"5630\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update a collaborator received in the request.",
-                "operationId": "putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"9778\",\n           externalReferenceCode: \"4939\",\n           type: \"6325\",\n           collaboratorId: \"4928\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Deletes the collaborator for an object entry and returns a 204 if the operation succeeds.",
-                "operationId": "deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           scopeKey: \"6223\",\n           externalReferenceCode: \"6668\",\n           type: \"9872\",\n           collaboratorId: \"6716\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators": {
-            "get": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Retrieves the collaborators of an object entry.",
-                "operationId": "getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
+                        "name": "flatten",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -310,6 +75,20 @@
                         }
                     },
                     {
+                        "name": "search",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "nestedFields",
                         "in": "query",
                         "schema": {
@@ -323,12 +102,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
+                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
+                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
                                 }
                             }
                         }
@@ -338,172 +117,21 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getScopeScopeKeyByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"245\",\n           externalReferenceCode: \"237\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntriesPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
             "post": {
                 "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update all the collaborators received in the request. Delete existing collaborators that are not included in the request. Send a notification for the new collaborators and those whose permissions are different.",
-                "operationId": "postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage",
-                "parameters": [
-                    {
-                        "name": "scopeKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postScopeScopeKeyByExternalReferenceCodeCollaboratorsPage({\n        client,\n        path: {\n           scopeKey: \"9098\",\n           externalReferenceCode: \"6852\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}": {
-            "get": {
-                "tags": [
                     "NecessaryCookieEntry"
                 ],
-                "operationId": "getByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3937\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "putByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
+                "operationId": "postNecessaryCookieEntry",
+                "parameters": [],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -539,208 +167,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9112\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "deleteByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8200\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "patchByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/NecessaryCookieEntry"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/NecessaryCookieEntry"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4600\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}": {
-            "get": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "getByExternalReferenceCodeByVersion",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCodeByVersion } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCodeByVersion({\n        client,\n        path: {\n           externalReferenceCode: \"8283\",\n           version: \"2109\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "deleteByExternalReferenceCodeByVersion",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteByExternalReferenceCodeByVersion } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteByExternalReferenceCodeByVersion({\n        client,\n        path: {\n           externalReferenceCode: \"4369\",\n           version: \"1518\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -879,84 +311,17 @@
                 ]
             }
         },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions": {
+        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}": {
             "get": {
                 "tags": [
                     "NecessaryCookieEntry"
                 ],
-                "operationId": "getByExternalReferenceCodeVersionsPage",
+                "operationId": "getByExternalReferenceCode",
                 "parameters": [
                     {
                         "name": "externalReferenceCode",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCodeVersionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCodeVersionsPage({\n        client,\n        path: {\n           externalReferenceCode: \"3192\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/": {
-            "get": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "getNecessaryCookieEntriesPage",
-                "parameters": [
-                    {
-                        "name": "aggregationTerms",
-                        "in": "query",
                         "schema": {
                             "type": "string"
                         }
@@ -969,35 +334,7 @@
                         }
                     },
                     {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "flatten",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
                         "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -1005,27 +342,6 @@
                     },
                     {
                         "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -1038,12 +354,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
+                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
+                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
                                 }
                             }
                         }
@@ -1053,20 +369,30 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntriesPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntriesPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3225\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             },
-            "post": {
+            "put": {
                 "tags": [
                     "NecessaryCookieEntry"
                 ],
-                "operationId": "postNecessaryCookieEntry",
+                "operationId": "putByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1102,22 +428,20 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntry({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6697\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
-            }
-        },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy": {
-            "post": {
+            },
+            "delete": {
                 "tags": [
                     "NecessaryCookieEntry"
                 ],
-                "operationId": "postByExternalReferenceCodeByVersionCopy",
+                "operationId": "deleteByExternalReferenceCode",
                 "parameters": [
                     {
                         "name": "externalReferenceCode",
@@ -1126,9 +450,38 @@
                         "schema": {
                             "type": "string"
                         }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1289\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
-                        "name": "version",
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "NecessaryCookieEntry"
+                ],
+                "operationId": "patchByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
                         "in": "path",
                         "required": true,
                         "schema": {
@@ -1136,6 +489,20 @@
                         }
                     }
                 ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NecessaryCookieEntry"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NecessaryCookieEntry"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "default": {
                         "description": "default response",
@@ -1157,67 +524,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postByExternalReferenceCodeByVersionCopy } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postByExternalReferenceCodeByVersionCopy({\n        client,\n        path: {\n           externalReferenceCode: \"3114\",\n           version: \"9581\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchByExternalReferenceCode } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8451\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire": {
-            "post": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "postByExternalReferenceCodeByVersionExpire",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postByExternalReferenceCodeByVersionExpire } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postByExternalReferenceCodeByVersionExpire({\n        client,\n        path: {\n           externalReferenceCode: \"7265\",\n           version: \"2104\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1294,112 +606,6 @@
                 ]
             }
         },
-        "/o/necessary-cookies-entries/validate": {
-            "post": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "postValidate",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ValidationRequest"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ValidationRequest"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ValidationResponse"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ValidationResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postValidate } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postValidate({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/validate', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore": {
-            "put": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "putByExternalReferenceCodeByVersionRestore",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putByExternalReferenceCodeByVersionRestore } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putByExternalReferenceCodeByVersionRestore({\n        client,\n        path: {\n           externalReferenceCode: \"7314\",\n           version: \"511\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/restore', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/necessary-cookies-entries/openapi.{type}": {
             "get": {
                 "operationId": "getOpenAPI",
@@ -1409,7 +615,6 @@
                         "in": "path",
                         "required": true,
                         "schema": {
-                            "pattern": "json|yaml",
                             "type": "string"
                         }
                     }
@@ -1427,442 +632,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"9827\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"1478\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/openapi.{type}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}": {
-            "get": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Retrieves the collaborator for an object entry.",
-                "operationId": "getNecessaryCookieEntryCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntryCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntryCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           necessaryCookieEntryId: \"9708\",\n           type: \"8902\",\n           collaboratorId: \"4736\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update a collaborator received in the request.",
-                "operationId": "putNecessaryCookieEntryCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Collaborator"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntryCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntryCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           necessaryCookieEntryId: \"6418\",\n           type: \"3668\",\n           collaboratorId: \"8600\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Deletes the collaborator for an object entry and returns a 204 if the operation succeeds.",
-                "operationId": "deleteNecessaryCookieEntryCollaboratorByTypeCollaborator",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "type",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "collaboratorId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNecessaryCookieEntryCollaboratorByTypeCollaborator } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNecessaryCookieEntryCollaboratorByTypeCollaborator({\n        client,\n        path: {\n           necessaryCookieEntryId: \"4594\",\n           type: \"4207\",\n           collaboratorId: \"1144\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators": {
-            "get": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Retrieves the collaborators of an object entry.",
-                "operationId": "getNecessaryCookieEntryCollaboratorsPage",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntryCollaboratorsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntryCollaboratorsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"7279\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "post": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "description": "Add or update all the collaborators received in the request. Delete existing collaborators that are not included in the request.",
-                "operationId": "postNecessaryCookieEntryCollaboratorsPage",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Collaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageCollaborator"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntryCollaboratorsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntryCollaboratorsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"8170\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/export-batch": {
-            "post": {
-                "tags": [
-                    "Collaborator"
-                ],
-                "operationId": "postNecessaryCookieEntryCollaboratorsPageExportBatch",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "contentType",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fieldNames",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntryCollaboratorsPageExportBatch } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntryCollaboratorsPageExportBatch({\n        client,\n        path: {\n           necessaryCookieEntryId: \"7351\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1925,7 +700,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"576\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5168\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1984,7 +759,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"1830\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5766\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2021,7 +796,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"310\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"205\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2080,180 +855,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"2433\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchNecessaryCookieEntry } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchNecessaryCookieEntry({\n        client,\n        path: {\n           necessaryCookieEntryId: \"3681\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}": {
-            "get": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "getNecessaryCookieEntryByVersion",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntryByVersion } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntryByVersion({\n        client,\n        path: {\n           necessaryCookieEntryId: \"7340\",\n           version: \"2984\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "deleteNecessaryCookieEntryByVersion",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNecessaryCookieEntryByVersion } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNecessaryCookieEntryByVersion({\n        client,\n        path: {\n           necessaryCookieEntryId: \"7143\",\n           version: \"2887\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/versions": {
-            "get": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "getNecessaryCookieEntriesVersionsPage",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageNecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntriesVersionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntriesVersionsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5027\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2330,7 +937,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntryPermissionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntryPermissionsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5371\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNecessaryCookieEntryPermissionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNecessaryCookieEntryPermissionsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"4476\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2395,7 +1002,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntryPermissionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntryPermissionsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"6302\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntryPermissionsPage } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntryPermissionsPage({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5221\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2404,294 +1011,87 @@
                     }
                 ]
             }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/copy": {
-            "post": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "postNecessaryCookieEntryByVersionCopy",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntryByVersionCopy } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntryByVersionCopy({\n        client,\n        path: {\n           necessaryCookieEntryId: \"8831\",\n           version: \"2325\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/expire": {
-            "post": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "postNecessaryCookieEntryByVersionExpire",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntryByVersionExpire } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntryByVersionExpire({\n        client,\n        path: {\n           necessaryCookieEntryId: \"5967\",\n           version: \"4012\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/expire', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/expire": {
-            "post": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "postNecessaryCookieEntryExpire",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNecessaryCookieEntryExpire } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNecessaryCookieEntryExpire({\n        client,\n        path: {\n           necessaryCookieEntryId: \"6351\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/expire', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/restore": {
-            "put": {
-                "tags": [
-                    "NecessaryCookieEntry"
-                ],
-                "operationId": "putNecessaryCookieEntryByVersionRestore",
-                "parameters": [
-                    {
-                        "name": "necessaryCookieEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "version",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NecessaryCookieEntry"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNecessaryCookieEntryByVersionRestore } from 'liferay-headless-rest-client/necessary-cookies-entries';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNecessaryCookieEntryByVersionRestore({\n        client,\n        path: {\n           necessaryCookieEntryId: \"1182\",\n           version: \"2508\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/restore', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
         }
     },
     "components": {
         "schemas": {
-            "Collaborator": {
-                "required": [
-                    "actionIds",
-                    "type"
-                ],
+            "Facet": {
                 "type": "object",
                 "properties": {
-                    "actionIds": {
-                        "type": "array",
-                        "description": "The collaborator actions for the shared asset.",
-                        "items": {
-                            "type": "string",
-                            "description": "The collaborator actions for the shared asset."
-                        }
+                    "facetCriteria": {
+                        "type": "string"
                     },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "description": "Block of actions allowed by the user making the request."
-                        },
-                        "description": "Block of actions allowed by the user making the request.",
-                        "readOnly": true
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                }
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AuditEvent": {
+                "type": "object",
+                "properties": {
+                    "auditFieldChanges": {
+                        "type": "array",
+                        "readOnly": true,
+                        "items": {
+                            "$ref": "#/components/schemas/AuditFieldChange"
+                        }
                     },
                     "creator": {
                         "$ref": "#/components/schemas/Creator"
                     },
-                    "dateExpired": {
+                    "dateCreated": {
                         "type": "string",
-                        "description": "The expiration date to be a collaborator of the asset.",
-                        "format": "date-time"
-                    },
-                    "externalReferenceCode": {
-                        "type": "string",
-                        "description": "The collaborator external reference code.",
+                        "format": "date-time",
                         "readOnly": true
                     },
-                    "id": {
-                        "type": "integer",
-                        "description": "The collaborator ID.",
-                        "format": "int64"
-                    },
-                    "name": {
+                    "eventType": {
                         "type": "string",
-                        "description": "The collaborator name.",
                         "readOnly": true
-                    },
-                    "portrait": {
-                        "type": "string",
-                        "description": "The collaborator portrait.",
-                        "readOnly": true
-                    },
-                    "share": {
-                        "type": "boolean",
-                        "description": "If the collaborator can share or not the asset."
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The collaborator type.",
-                        "example": "User"
                     },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
-                        "default": "com.liferay.headless.object.dto.v1_0.Collaborator"
+                        "default": "com.liferay.object.rest.dto.v1_0.AuditEvent"
                     }
                 },
-                "description": "Represents a collaborator for an entry.",
+                "description": "Optional field with the audit events associated with this object entry, can be embedded with nestedFields",
                 "xml": {
-                    "name": "Collaborator"
+                    "name": "AuditEvent"
+                }
+            },
+            "AuditFieldChange": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "oldValue": {
+                        "type": "object"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.object.rest.dto.v1_0.AuditFieldChange"
+                    }
                 },
-                "x-filterable": []
+                "xml": {
+                    "name": "AuditFieldChange"
+                }
             },
             "Creator": {
                 "type": "object",
@@ -2757,198 +1157,7 @@
                 },
                 "xml": {
                     "name": "Creator"
-                },
-                "x-filterable": []
-            },
-            "UserGroupBrief": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "description": "The ID of the user group.",
-                        "format": "int64",
-                        "readOnly": true
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the user group.",
-                        "readOnly": true
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
-                    }
-                },
-                "description": "A list of userGroups information.",
-                "xml": {
-                    "name": "UserGroupBrief"
-                },
-                "x-filterable": []
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                },
-                "x-filterable": []
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                },
-                "x-filterable": []
-            },
-            "PageCollaborator": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Collaborator"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
-            },
-            "AuditEvent": {
-                "type": "object",
-                "properties": {
-                    "auditFieldChanges": {
-                        "type": "array",
-                        "readOnly": true,
-                        "items": {
-                            "$ref": "#/components/schemas/AuditFieldChange"
-                        }
-                    },
-                    "creator": {
-                        "$ref": "#/components/schemas/Creator"
-                    },
-                    "dateCreated": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "eventType": {
-                        "type": "string",
-                        "readOnly": true
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.AuditEvent"
-                    }
-                },
-                "description": "Optional field with the audit events associated with this object entry, can be embedded with nestedFields",
-                "xml": {
-                    "name": "AuditEvent"
-                },
-                "x-filterable": []
-            },
-            "AuditFieldChange": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "newValue": {
-                        "type": "object"
-                    },
-                    "oldValue": {
-                        "type": "object"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.AuditFieldChange"
-                    }
-                },
-                "xml": {
-                    "name": "AuditFieldChange"
-                },
-                "x-filterable": []
-            },
-            "ParentTaxonomyCategory": {
-                "type": "object",
-                "properties": {
-                    "externalReferenceCode": {
-                        "type": "string",
-                        "description": "The parent taxonomy category's external reference code."
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.ParentTaxonomyCategory"
-                    }
-                },
-                "xml": {
-                    "name": "ParentTaxonomyCategory"
-                },
-                "x-filterable": []
-            },
-            "ParentTaxonomyVocabulary": {
-                "type": "object",
-                "properties": {
-                    "externalReferenceCode": {
-                        "type": "string",
-                        "description": "The parent category's `TaxonomyVocabulary` external reference code."
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.ParentTaxonomyVocabulary"
-                    }
-                },
-                "xml": {
-                    "name": "ParentTaxonomyVocabulary"
-                },
-                "x-filterable": []
+                }
             },
             "Permission": {
                 "type": "object",
@@ -2959,44 +1168,13 @@
                             "type": "string"
                         }
                     },
-                    "roleExternalReferenceCode": {
-                        "type": "string"
-                    },
                     "roleName": {
-                        "type": "string"
-                    },
-                    "roleType": {
                         "type": "string"
                     }
                 },
                 "xml": {
                     "name": "Permission"
-                },
-                "x-filterable": []
-            },
-            "Scope": {
-                "type": "object",
-                "properties": {
-                    "externalReferenceCode": {
-                        "type": "string"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.Scope"
-                    },
-                    "type": {
-                        "type": "string",
-                        "enum": [
-                            "AssetLibrary",
-                            "Site"
-                        ]
-                    }
-                },
-                "xml": {
-                    "name": "Scope"
-                },
-                "x-filterable": []
+                }
             },
             "Status": {
                 "required": [
@@ -3022,8 +1200,7 @@
                 },
                 "xml": {
                     "name": "Status"
-                },
-                "x-filterable": []
+                }
             },
             "TaxonomyCategoryBrief": {
                 "type": "object",
@@ -3032,19 +1209,6 @@
                         "type": "object",
                         "description": "Optional field with the embedded taxonomy category, can be embedded with nestedFields",
                         "readOnly": true
-                    },
-                    "parentTaxonomyCategory": {
-                        "$ref": "#/components/schemas/ParentTaxonomyCategory"
-                    },
-                    "parentTaxonomyVocabulary": {
-                        "$ref": "#/components/schemas/ParentTaxonomyVocabulary"
-                    },
-                    "scope": {
-                        "$ref": "#/components/schemas/Scope"
-                    },
-                    "taxonomyCategoryExternalReferenceCode": {
-                        "type": "string",
-                        "description": "The category's external reference code."
                     },
                     "taxonomyCategoryId": {
                         "type": "integer",
@@ -3075,45 +1239,50 @@
                 "description": "The categories associated with this object entry.",
                 "xml": {
                     "name": "TaxonomyCategoryBrief"
-                },
-                "x-filterable": []
+                }
             },
-            "Version": {
+            "UserGroupBrief": {
                 "type": "object",
                 "properties": {
-                    "number": {
+                    "id": {
                         "type": "integer",
-                        "format": "int32",
+                        "description": "The ID of the user group.",
+                        "format": "int64",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the user group.",
                         "readOnly": true
                     },
                     "x-class-name": {
                         "type": "string",
                         "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.Version"
+                        "default": "com.liferay.headless.delivery.dto.v1_0.UserGroupBrief"
                     }
                 },
+                "description": "A list of userGroups information.",
                 "xml": {
-                    "name": "Version"
-                },
-                "x-filterable": []
+                    "name": "UserGroupBrief"
+                }
             },
             "PagePermission": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Permission"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -3123,106 +1292,39 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
-            },
-            "ValidationError": {
-                "type": "object",
-                "properties": {
-                    "errorMessage": {
-                        "type": "string"
-                    },
-                    "objectFieldName": {
-                        "type": "string"
-                    },
-                    "objectValidationRuleExternalReferenceCode": {
-                        "type": "string"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.ValidationError"
-                    }
-                },
-                "xml": {
-                    "name": "ValidationError"
-                },
-                "x-filterable": []
-            },
-            "ValidationResponse": {
-                "type": "object",
-                "properties": {
-                    "validationErrors": {
+                    "facets": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/ValidationError"
+                            "$ref": "#/components/schemas/Facet"
                         }
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.ValidationResponse"
                     }
-                },
-                "xml": {
-                    "name": "ValidationResponse"
-                },
-                "x-filterable": []
-            },
-            "ValidationRequest": {
-                "type": "object",
-                "properties": {
-                    "objectValidationRuleExternalReferenceCodes": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "values": {
-                        "$ref": "#/components/schemas/NecessaryCookieEntry"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.object.rest.dto.v1_0.ValidationRequest"
-                    }
-                },
-                "xml": {
-                    "name": "ValidationRequest"
-                },
-                "x-filterable": []
+                }
             },
             "PageNecessaryCookieEntry": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/NecessaryCookieEntry"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -3232,27 +1334,26 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "x-schema-name": {
                         "type": "string",
                         "readOnly": true,
                         "default": "PageNecessaryCookieEntry"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "NecessaryCookieEntry": {
                 "required": [
@@ -3296,39 +1397,10 @@
                         "format": "date-time",
                         "readOnly": true
                     },
-                    "defaultLanguageId": {
-                        "type": "string"
-                    },
-                    "displayDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": false,
-                        "x-timeStorage": "convertToUTC",
-                        "x-parent-map": "properties"
-                    },
-                    "expirationDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": false,
-                        "x-timeStorage": "convertToUTC",
-                        "x-parent-map": "properties"
-                    },
                     "externalReferenceCode": {
                         "type": "string",
                         "readOnly": false,
                         "x-parent-map": "properties"
-                    },
-                    "friendlyUrlPath": {
-                        "type": "string",
-                        "description": "A relative URL to the page's rendered content."
-                    },
-                    "friendlyUrlPath_i18n": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string",
-                            "description": "The localized relative URLs to the page's rendered content."
-                        },
-                        "description": "The localized relative URLs to the page's rendered content."
                     },
                     "id": {
                         "type": "integer",
@@ -3345,30 +1417,11 @@
                         },
                         "x-batch-unsupported-formats": "CSV"
                     },
-                    "objectEntryFolderExternalReferenceCode": {
-                        "type": "string"
-                    },
-                    "objectEntryFolderId": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "permissions": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Permission"
                         }
-                    },
-                    "reviewDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": false,
-                        "x-timeStorage": "convertToUTC",
-                        "x-parent-map": "properties"
-                    },
-                    "scopeId": {
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true
                     },
                     "scopeKey": {
                         "type": "string",
@@ -3384,6 +1437,7 @@
                     "taxonomyCategoryBriefs": {
                         "type": "array",
                         "description": "The categories associated with this object entry.",
+                        "readOnly": true,
                         "items": {
                             "$ref": "#/components/schemas/TaxonomyCategoryBrief"
                         },
@@ -3441,30 +1495,7 @@
                 },
                 "xml": {
                     "name": "ObjectEntry"
-                },
-                "x-filterable": [
-                    "collectedData",
-                    "createDate",
-                    "creator",
-                    "creatorId",
-                    "dateCreated",
-                    "dateModified",
-                    "displayDate",
-                    "expiration",
-                    "expirationDate",
-                    "externalReferenceCode",
-                    "host",
-                    "id",
-                    "keywords",
-                    "modifiedDate",
-                    "name",
-                    "purpose",
-                    "reviewDate",
-                    "status",
-                    "taxonomyCategoryIds",
-                    "type",
-                    "userId"
-                ]
+                }
             }
         },
         "securitySchemes": {

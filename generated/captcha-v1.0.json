@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getCaptchaChallenge } from 'liferay-headless-rest-client/captcha-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCaptchaChallenge({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getCaptchaChallenge } from 'liferay-headless-rest-client/captcha-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getCaptchaChallenge({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.captcha.rest.client', and version '1.0.12'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.captcha.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.captcha.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -120,8 +120,7 @@
                 },
                 "xml": {
                     "name": "Captcha"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

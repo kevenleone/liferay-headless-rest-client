@@ -232,6 +232,16 @@ class OpenAPIExporter {
 }
 
 const resources = [
+    "analytics-reports-rest/v1.0",
+    "analytics-settings-rest/v1.0",
+    "batch-planner/v1.0",
+    "bulk/v1.0",
+    "captcha/v1.0",
+    "change-tracking-rest/v1.0",
+    "data-engine/v2.0",
+    "digital-signature-rest/v1.0",
+    "dispatch-rest/v1.0",
+    "functional-cookies-entries",
     "headless-admin-address/v1.0",
     "headless-admin-content/v1.0",
     "headless-admin-list-type/v1.0",
@@ -239,7 +249,6 @@ const resources = [
     "headless-admin-taxonomy/v1.0",
     "headless-admin-user/v1.0",
     "headless-admin-workflow/v1.0",
-    "headless-asset-library/v1.0",
     "headless-batch-engine/v1.0",
     "headless-commerce-admin-account/v1.0",
     "headless-commerce-admin-catalog/v1.0",
@@ -255,10 +264,8 @@ const resources = [
     "headless-commerce-delivery-catalog/v1.0",
     "headless-commerce-delivery-order/v1.0",
     "headless-commerce-machine-learning/v1.0",
-    "headless-commerce-punchout/v1.0",
     "headless-delivery/v1.0",
     "headless-form/v1.0",
-    "headless-object/v1.0",
     "headless-portal-instances/v1.0",
     "headless-site/v1.0",
     "headless-user-notification/v1.0",
@@ -271,8 +278,8 @@ const resources = [
     "portal-workflow-metrics/v1.0",
     "saml-admin/v1.0",
     "scim/v1.0",
-    "search/v1.0",
     "search-experiences-rest/v1.0",
+    "search/v1.0",
     "segments-asah/v1.0",
 ];
 

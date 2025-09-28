@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Headless Batch Engine",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getExportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTask({\n        client,\n        path: {\n           exportTaskId: \"6710\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.batch.engine.client', and version '1.0.33'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.batch.engine.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.batch.engine.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskContent({\n        client,\n        path: {\n           exportTaskId: \"4979\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.batch.engine.client', and version '1.0.28'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.batch.engine.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.batch.engine.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -15,6 +15,45 @@
         }
     ],
     "paths": {
+        "/o/headless-batch-engine/v1.0/export-task/{exportTaskId}/content": {
+            "get": {
+                "tags": [
+                    "ExportTask"
+                ],
+                "description": "Retrieves the exported content.",
+                "operationId": "getExportTaskContent",
+                "parameters": [
+                    {
+                        "name": "exportTaskId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskContent({\n        client,\n        path: {\n           exportTaskId: \"332\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/{exportTaskId}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/headless-batch-engine/v1.0/export-task/{exportTaskId}": {
             "get": {
                 "tags": [
@@ -53,138 +92,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTask({\n        client,\n        path: {\n           exportTaskId: \"3727\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTask({\n        client,\n        path: {\n           exportTaskId: \"8473\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/{exportTaskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "ExportTask"
-                ],
-                "description": "Retrieves the export task by external reference code.",
-                "operationId": "getExportTaskByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ExportTask"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ExportTask"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskByExternalReferenceCode } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4317\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content": {
-            "get": {
-                "tags": [
-                    "ExportTask"
-                ],
-                "description": "Retrieves the exported content by external reference code.",
-                "operationId": "getExportTaskByExternalReferenceCodeContent",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskByExternalReferenceCodeContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskByExternalReferenceCodeContent({\n        client,\n        path: {\n           externalReferenceCode: \"1462\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/export-task/{exportTaskId}/content": {
-            "get": {
-                "tags": [
-                    "ExportTask"
-                ],
-                "description": "Retrieves the exported content.",
-                "operationId": "getExportTaskContent",
-                "parameters": [
-                    {
-                        "name": "exportTaskId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskContent({\n        client,\n        path: {\n           exportTaskId: \"1478\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/{exportTaskId}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -270,12 +183,176 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postExportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postExportTask({\n        client,\n        path: {\n           className: \"2081\",\n           contentType: \"2325\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postExportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postExportTask({\n        client,\n        path: {\n           className: \"251\",\n           contentType: \"9812\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/{className}/{contentType}', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "ExportTask"
+                ],
+                "description": "Retrieves the export task by external reference code.",
+                "operationId": "getExportTaskByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ExportTask"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ExportTask"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskByExternalReferenceCode } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4009\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content": {
+            "get": {
+                "tags": [
+                    "ExportTask"
+                ],
+                "description": "Retrieves the exported content by external reference code.",
+                "operationId": "getExportTaskByExternalReferenceCodeContent",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getExportTaskByExternalReferenceCodeContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getExportTaskByExternalReferenceCodeContent({\n        client,\n        path: {\n           externalReferenceCode: \"3637\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/export-task/by-external-reference-code/{externalReferenceCode}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report": {
+            "get": {
+                "tags": [
+                    "ImportTask"
+                ],
+                "operationId": "getImportTaskByExternalReferenceCodeFailedItemReport",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCodeFailedItemReport } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCodeFailedItemReport({\n        client,\n        path: {\n           externalReferenceCode: \"9473\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-batch-engine/v1.0/import-task/{importTaskId}/content": {
+            "get": {
+                "tags": [
+                    "ImportTask"
+                ],
+                "description": "Retrieves the exported content.",
+                "operationId": "getImportTaskContent",
+                "parameters": [
+                    {
+                        "name": "importTaskId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskContent({\n        client,\n        path: {\n           importTaskId: \"1351\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/{importTaskId}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -382,7 +459,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putImportTask_1({\n        client,\n        path: {\n           className: \"3413\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putImportTask_1({\n        client,\n        path: {\n           className: \"8500\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -402,13 +479,6 @@
                         "name": "className",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "batchExternalReferenceCode",
-                        "in": "query",
                         "schema": {
                             "type": "string"
                         }
@@ -513,7 +583,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postImportTask_1({\n        client,\n        path: {\n           className: \"2140\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postImportTask_1({\n        client,\n        path: {\n           className: \"4750\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -616,7 +686,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteImportTask_1({\n        client,\n        path: {\n           className: \"6113\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteImportTask_1 } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteImportTask_1({\n        client,\n        path: {\n           className: \"5883\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -664,12 +734,50 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTask({\n        client,\n        path: {\n           importTaskId: \"9782\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTask } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTask({\n        client,\n        path: {\n           importTaskId: \"5413\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/{importTaskId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-batch-engine/v1.0/import-task/{importTaskId}/failed-items/report": {
+            "get": {
+                "tags": [
+                    "ImportTask"
+                ],
+                "operationId": "getImportTaskFailedItemReport",
+                "parameters": [
+                    {
+                        "name": "importTaskId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskFailedItemReport } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskFailedItemReport({\n        client,\n        path: {\n           importTaskId: \"3186\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/{importTaskId}/failed-items/report', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -712,7 +820,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCode } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2425\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCode } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3013\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -751,127 +859,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCodeContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCodeContent({\n        client,\n        path: {\n           externalReferenceCode: \"7682\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCodeContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCodeContent({\n        client,\n        path: {\n           externalReferenceCode: \"6964\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report": {
-            "get": {
-                "tags": [
-                    "ImportTask"
-                ],
-                "operationId": "getImportTaskByExternalReferenceCodeFailedItemReport",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskByExternalReferenceCodeFailedItemReport } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskByExternalReferenceCodeFailedItemReport({\n        client,\n        path: {\n           externalReferenceCode: \"3974\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/by-external-reference-code/{externalReferenceCode}/failed-items/report', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/import-task/{importTaskId}/content": {
-            "get": {
-                "tags": [
-                    "ImportTask"
-                ],
-                "description": "Retrieves the exported content.",
-                "operationId": "getImportTaskContent",
-                "parameters": [
-                    {
-                        "name": "importTaskId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskContent } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskContent({\n        client,\n        path: {\n           importTaskId: \"1546\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/{importTaskId}/content', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-batch-engine/v1.0/import-task/{importTaskId}/failed-items/report": {
-            "get": {
-                "tags": [
-                    "ImportTask"
-                ],
-                "operationId": "getImportTaskFailedItemReport",
-                "parameters": [
-                    {
-                        "name": "importTaskId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getImportTaskFailedItemReport } from 'liferay-headless-rest-client/headless-batch-engine-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getImportTaskFailedItemReport({\n        client,\n        path: {\n           importTaskId: \"6342\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-batch-engine/v1.0/import-task/{importTaskId}/failed-items/report', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -907,16 +900,12 @@
                         "description": "The optional external key of this account."
                     },
                     "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "The task's ID.",
                         "format": "int64",
                         "example": 30130
                     },
                     "processedItemsCount": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "Number of items processed by export task opeartion.",
                         "format": "int32",
@@ -928,8 +917,6 @@
                         "format": "date-time"
                     },
                     "totalItemsCount": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "Total number of items that will be processed by export task operation.",
                         "format": "int32",
@@ -954,8 +941,7 @@
                 },
                 "xml": {
                     "name": "ExportTask"
-                },
-                "x-filterable": []
+                }
             },
             "FailedItem": {
                 "type": "object",
@@ -981,8 +967,7 @@
                 },
                 "xml": {
                     "name": "FailedItem"
-                },
-                "x-filterable": []
+                }
             },
             "ImportTask": {
                 "type": "object",
@@ -1018,16 +1003,12 @@
                         }
                     },
                     "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "The task's ID.",
                         "format": "int64",
                         "example": 30130
                     },
                     "processedItemsCount": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "Number of items processed by import task opeartion.",
                         "format": "int32",
@@ -1039,8 +1020,6 @@
                         "format": "date-time"
                     },
                     "totalItemsCount": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "description": "Total number of items that will be processed by import task operation.",
                         "format": "int32",
@@ -1083,8 +1062,7 @@
                 },
                 "xml": {
                     "name": "ImportTask"
-                },
-                "x-filterable": []
+                }
             },
             "DeleteImportTaskRequestBody": {
                 "type": "object",
@@ -1094,8 +1072,7 @@
                         "description": "File",
                         "format": "binary"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "MultipartBody": {
                 "type": "object",
@@ -1106,8 +1083,7 @@
                             "type": "string"
                         }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PostImportTaskRequestBody": {
                 "type": "object",
@@ -1117,8 +1093,7 @@
                         "description": "File",
                         "format": "binary"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PutImportTaskRequestBody": {
                 "type": "object",
@@ -1128,8 +1103,7 @@
                         "description": "File",
                         "format": "binary"
                     }
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

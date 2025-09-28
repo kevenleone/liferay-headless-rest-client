@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"3693\",\n           dsEnvelopeId: \"8022\",\n        },\n    });\n\n    console.log(data);\n}\n```",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"3852\",\n           dsEnvelopeId: \"1475\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.digital.signature.rest.client', and version '1.0.29'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.digital.signature.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.digital.signature.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -59,7 +59,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"4644\",\n           dsEnvelopeId: \"2860\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"8568\",\n           dsEnvelopeId: \"36\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -155,7 +155,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelopesPage } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelopesPage({\n        client,\n        path: {\n           siteId: \"3789\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDSEnvelopesPage } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDSEnvelopesPage({\n        client,\n        path: {\n           siteId: \"732\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -214,66 +214,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"7801\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelope } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelope({\n        client,\n        path: {\n           siteId: \"3254\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch": {
-            "post": {
-                "tags": [
-                    "DSEnvelope"
-                ],
-                "operationId": "postSiteDSEnvelopeBatch",
-                "parameters": [
-                    {
-                        "name": "siteId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopeBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopeBatch({\n        client,\n        path: {\n           siteId: \"4092\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -355,12 +301,66 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopesPageExportBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopesPageExportBatch({\n        client,\n        path: {\n           siteId: \"6288\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopesPageExportBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopesPageExportBatch({\n        client,\n        path: {\n           siteId: \"7599\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch": {
+            "post": {
+                "tags": [
+                    "DSEnvelope"
+                ],
+                "operationId": "postSiteDSEnvelopeBatch",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DSEnvelope"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSEnvelopeBatch } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSEnvelopeBatch({\n        client,\n        path: {\n           siteId: \"1171\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/digital-signature-rest/v1.0/sites/{siteId}/ds-envelopes/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -424,7 +424,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSRecipientViewDefinition } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSRecipientViewDefinition({\n        client,\n        path: {\n           siteId: \"5282\",\n           dsEnvelopeId: \"4595\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteDSRecipientViewDefinition } from 'liferay-headless-rest-client/digital-signature-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteDSRecipientViewDefinition({\n        client,\n        path: {\n           siteId: \"4234\",\n           dsEnvelopeId: \"531\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -472,8 +472,7 @@
                 },
                 "xml": {
                     "name": "DSDocument"
-                },
-                "x-filterable": []
+                }
             },
             "DSEnvelope": {
                 "type": "object",
@@ -530,8 +529,7 @@
                 },
                 "xml": {
                     "name": "DSEnvelope"
-                },
-                "x-filterable": []
+                }
             },
             "DSRecipient": {
                 "type": "object",
@@ -562,8 +560,7 @@
                 },
                 "xml": {
                     "name": "DSRecipient"
-                },
-                "x-filterable": []
+                }
             },
             "Facet": {
                 "type": "object",
@@ -577,8 +574,7 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "FacetValue": {
                 "type": "object",
@@ -590,18 +586,11 @@
                     "term": {
                         "type": "string"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PageDSEnvelope": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/DSEnvelope"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -609,6 +598,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DSEnvelope"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -619,22 +614,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "DSEnvelopeSignatureURL": {
                 "type": "object",
@@ -650,8 +644,7 @@
                 },
                 "xml": {
                     "name": "DSEnvelopeSignatureURL"
-                },
-                "x-filterable": []
+                }
             },
             "DSRecipientViewDefinition": {
                 "type": "object",
@@ -679,8 +672,7 @@
                 },
                 "xml": {
                     "name": "DSRecipientViewDefinition"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {
