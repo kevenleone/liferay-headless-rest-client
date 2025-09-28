@@ -613,8 +613,16 @@
                     "default": {
                         "description": "default response",
                         "content": {
-                            "application/json": {},
-                            "application/xml": {}
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataSourceLiferayAnalyticsURL"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataSourceLiferayAnalyticsURL"
+                                }
+                            }
                         }
                     }
                 },
@@ -1367,7 +1375,8 @@
                 },
                 "xml": {
                     "name": "Channel"
-                }
+                },
+                "x-filterable": []
             },
             "DataSource": {
                 "type": "object",
@@ -1397,7 +1406,8 @@
                 },
                 "xml": {
                     "name": "DataSource"
-                }
+                },
+                "x-filterable": []
             },
             "Facet": {
                 "type": "object",
@@ -1411,7 +1421,8 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                }
+                },
+                "x-filterable": []
             },
             "FacetValue": {
                 "type": "object",
@@ -1423,7 +1434,8 @@
                     "term": {
                         "type": "string"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PageChannel": {
                 "type": "object",
@@ -1455,17 +1467,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "CommerceChannel": {
                 "type": "object",
@@ -1491,7 +1504,8 @@
                 },
                 "xml": {
                     "name": "CommerceChannel"
-                }
+                },
+                "x-filterable": []
             },
             "PageCommerceChannel": {
                 "type": "object",
@@ -1523,17 +1537,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "ContactAccountGroup": {
                 "type": "object",
@@ -1556,7 +1571,8 @@
                 },
                 "xml": {
                     "name": "ContactAccountGroup"
-                }
+                },
+                "x-filterable": []
             },
             "PageContactAccountGroup": {
                 "type": "object",
@@ -1588,17 +1604,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "ContactConfiguration": {
                 "type": "object",
@@ -1635,7 +1652,8 @@
                 },
                 "xml": {
                     "name": "ContactConfiguration"
-                }
+                },
+                "x-filterable": []
             },
             "ContactOrganization": {
                 "type": "object",
@@ -1658,7 +1676,8 @@
                 },
                 "xml": {
                     "name": "ContactOrganization"
-                }
+                },
+                "x-filterable": []
             },
             "PageContactOrganization": {
                 "type": "object",
@@ -1690,17 +1709,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "ContactUserGroup": {
                 "type": "object",
@@ -1723,7 +1743,8 @@
                 },
                 "xml": {
                     "name": "ContactUserGroup"
-                }
+                },
+                "x-filterable": []
             },
             "PageContactUserGroup": {
                 "type": "object",
@@ -1755,17 +1776,35 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
+            },
+            "DataSourceLiferayAnalyticsURL": {
+                "type": "object",
+                "properties": {
+                    "liferayAnalyticsURL": {
+                        "type": "string"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.analytics.settings.rest.dto.v1_0.DataSourceLiferayAnalyticsURL"
+                    }
+                },
+                "xml": {
+                    "name": "DataSourceLiferayAnalyticsURL"
+                },
+                "x-filterable": []
             },
             "DataSourceToken": {
                 "type": "object",
@@ -1781,7 +1820,8 @@
                 },
                 "xml": {
                     "name": "DataSourceToken"
-                }
+                },
+                "x-filterable": []
             },
             "Field": {
                 "type": "object",
@@ -1812,7 +1852,8 @@
                 },
                 "xml": {
                     "name": "Field"
-                }
+                },
+                "x-filterable": []
             },
             "PageField": {
                 "type": "object",
@@ -1844,17 +1885,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "FieldSummary": {
                 "type": "object",
@@ -1883,7 +1925,8 @@
                 },
                 "xml": {
                     "name": "FieldSummary"
-                }
+                },
+                "x-filterable": []
             },
             "RecommendationConfiguration": {
                 "type": "object",
@@ -1902,7 +1945,8 @@
                 },
                 "xml": {
                     "name": "RecommendationConfiguration"
-                }
+                },
+                "x-filterable": []
             },
             "RecommendationItem": {
                 "type": "object",
@@ -1927,7 +1971,8 @@
                 },
                 "xml": {
                     "name": "RecommendationItem"
-                }
+                },
+                "x-filterable": []
             },
             "PageSite": {
                 "type": "object",
@@ -1959,17 +2004,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "Site": {
                 "type": "object",
@@ -1995,7 +2041,8 @@
                 },
                 "xml": {
                     "name": "Site"
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {

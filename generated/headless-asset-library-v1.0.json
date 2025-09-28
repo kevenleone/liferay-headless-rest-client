@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Liferay Asset Library Headless API",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"4032\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.asset.library.client', and version '1.0.5'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.asset.library.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.asset.library.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"30\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.asset.library.client', and version '1.0.3'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.asset.library.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.asset.library.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -74,7 +74,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"9836\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"3478\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -112,7 +112,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"4970\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"8588\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -172,102 +172,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"8213\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchAssetLibrary } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchAssetLibrary({\n        client,\n        path: {\n           assetLibraryId: \"6996\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-asset-library/v1.0/asset-libraries/batch": {
-            "post": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "operationId": "postAssetLibraryBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postAssetLibraryBatch } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postAssetLibraryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "operationId": "deleteAssetLibraryBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryBatch } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -331,7 +241,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6293\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8997\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -391,7 +301,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5774\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8050\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -429,7 +339,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7089\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9068\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -489,184 +399,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"338\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchAssetLibraryByExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchAssetLibraryByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4360\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins": {
-            "put": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "description": "Pins the asset library.",
-                "operationId": "putAssetLibraryByExternalReferenceCodePin",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AssetLibrary"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AssetLibrary"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodePin } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodePin({\n        client,\n        path: {\n           externalReferenceCode: \"6048\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "description": "Unpins the asset library.",
-                "operationId": "deleteAssetLibraryByExternalReferenceCodePin",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodePin } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodePin({\n        client,\n        path: {\n           externalReferenceCode: \"2020\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins": {
-            "put": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "description": "Pins the asset library.",
-                "operationId": "putAssetLibraryPin",
-                "parameters": [
-                    {
-                        "name": "assetLibraryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AssetLibrary"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AssetLibrary"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryPin } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryPin({\n        client,\n        path: {\n           assetLibraryId: \"3331\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "description": "Unpins the asset library.",
-                "operationId": "deleteAssetLibraryPin",
-                "parameters": [
-                    {
-                        "name": "assetLibraryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryPin } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryPin({\n        client,\n        path: {\n           assetLibraryId: \"5823\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -817,67 +555,6 @@
                 ]
             }
         },
-        "/o/headless-asset-library/v1.0/asset-libraries/pinned-by-me": {
-            "get": {
-                "tags": [
-                    "AssetLibrary"
-                ],
-                "description": "Retrieves the pinned asset libraries.",
-                "operationId": "getAssetLibrariesPinnedByMePage",
-                "parameters": [
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageAssetLibrary"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageAssetLibrary"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrariesPinnedByMePage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrariesPinnedByMePage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-asset-library/v1.0/asset-libraries/pinned-by-me', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{assetLibraryExternalReferenceCode}/sites/by-external-reference-code/{siteExternalReferenceCode}": {
             "get": {
                 "tags": [
@@ -924,7 +601,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"7110\",\n           siteExternalReferenceCode: \"8708\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"7157\",\n           siteExternalReferenceCode: \"3741\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -978,7 +655,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"6830\",\n           siteExternalReferenceCode: \"6080\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"5194\",\n           siteExternalReferenceCode: \"7058\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1024,7 +701,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"8989\",\n           siteExternalReferenceCode: \"6481\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"7281\",\n           siteExternalReferenceCode: \"4588\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1080,7 +757,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"799\",\n           siteId: \"4955\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"3752\",\n           siteId: \"4803\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1134,7 +811,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"7369\",\n           siteId: \"594\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"9484\",\n           siteId: \"7255\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1180,7 +857,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"6802\",\n           siteId: \"5714\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibrarySite } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibrarySite({\n        client,\n        path: {\n           assetLibraryId: \"4106\",\n           siteId: \"7475\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1256,7 +933,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeSitesPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeSitesPage({\n        client,\n        path: {\n           externalReferenceCode: \"2820\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeSitesPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeSitesPage({\n        client,\n        path: {\n           externalReferenceCode: \"2973\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1332,7 +1009,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrarySitesPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrarySitesPage({\n        client,\n        path: {\n           assetLibraryId: \"1924\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibrarySitesPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibrarySitesPage({\n        client,\n        path: {\n           assetLibraryId: \"2380\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1388,7 +1065,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"9776\",\n           userExternalReferenceCode: \"2121\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"251\",\n           userExternalReferenceCode: \"9825\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1442,7 +1119,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"6437\",\n           userExternalReferenceCode: \"2771\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"6139\",\n           userExternalReferenceCode: \"8459\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1488,7 +1165,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"4134\",\n           userExternalReferenceCode: \"4527\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserAccountByExternalReferenceCodeUserExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"7096\",\n           userExternalReferenceCode: \"6690\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1544,7 +1221,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"4\",\n           userId: \"4413\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"1495\",\n           userId: \"2326\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1598,7 +1275,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"1448\",\n           userId: \"1328\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"9990\",\n           userId: \"4031\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1644,7 +1321,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"8370\",\n           userId: \"1342\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryUserAccount } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryUserAccount({\n        client,\n        path: {\n           assetLibraryId: \"216\",\n           userId: \"5818\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1741,7 +1418,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeUserAccountsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeUserAccountsPage({\n        client,\n        path: {\n           externalReferenceCode: \"8530\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeUserAccountsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeUserAccountsPage({\n        client,\n        path: {\n           externalReferenceCode: \"7096\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1838,7 +1515,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserAccountsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserAccountsPage({\n        client,\n        path: {\n           assetLibraryId: \"5123\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserAccountsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserAccountsPage({\n        client,\n        path: {\n           assetLibraryId: \"6448\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1894,7 +1571,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"1224\",\n           userGroupExternalReferenceCode: \"9667\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"2720\",\n           userGroupExternalReferenceCode: \"5162\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1948,7 +1625,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"6243\",\n           userGroupExternalReferenceCode: \"9763\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"4072\",\n           userGroupExternalReferenceCode: \"4688\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1994,7 +1671,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"659\",\n           userGroupExternalReferenceCode: \"6150\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeUserGroupByExternalReferenceCodeUserGroupExternalReferenceCode({\n        client,\n        path: {\n           assetLibraryExternalReferenceCode: \"1450\",\n           userGroupExternalReferenceCode: \"9811\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2050,7 +1727,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"6159\",\n           userGroupId: \"3940\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"1324\",\n           userGroupId: \"1040\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2104,7 +1781,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"6104\",\n           userGroupId: \"3306\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"3509\",\n           userGroupId: \"6245\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2150,7 +1827,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"8544\",\n           userGroupId: \"2833\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteAssetLibraryUserGroup } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteAssetLibraryUserGroup({\n        client,\n        path: {\n           assetLibraryId: \"3140\",\n           userGroupId: \"5929\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2247,7 +1924,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeUserGroupsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeUserGroupsPage({\n        client,\n        path: {\n           externalReferenceCode: \"4250\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryByExternalReferenceCodeUserGroupsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryByExternalReferenceCodeUserGroupsPage({\n        client,\n        path: {\n           externalReferenceCode: \"577\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2344,7 +2021,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserGroupsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserGroupsPage({\n        client,\n        path: {\n           assetLibraryId: \"7903\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getAssetLibraryUserGroupsPage } from 'liferay-headless-rest-client/headless-asset-library-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAssetLibraryUserGroupsPage({\n        client,\n        path: {\n           assetLibraryId: \"3933\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2371,16 +2048,6 @@
                             "description": "Block of actions allowed by the user making the request."
                         },
                         "description": "Block of actions allowed by the user making the request.",
-                        "readOnly": true
-                    },
-                    "assetLibraryKey": {
-                        "type": "string",
-                        "description": "The asset library's key."
-                    },
-                    "creatorUserId": {
-                        "type": "integer",
-                        "description": "The asset library's creator user ID.",
-                        "format": "int64",
                         "readOnly": true
                     },
                     "dateCreated": {
@@ -2413,7 +2080,7 @@
                     },
                     "id": {
                         "type": "integer",
-                        "description": "The asset library's ID.",
+                        "description": "The asset library's site ID.",
                         "format": "int64",
                         "readOnly": true
                     },
@@ -2449,12 +2116,6 @@
                     },
                     "settings": {
                         "$ref": "#/components/schemas/Settings"
-                    },
-                    "siteId": {
-                        "type": "integer",
-                        "description": "The asset library's site ID.",
-                        "format": "int64",
-                        "readOnly": true
                     },
                     "sites": {
                         "type": "array",
@@ -2544,12 +2205,6 @@
             "PageAssetLibrary": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/AssetLibrary"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2557,6 +2212,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AssetLibrary"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2567,6 +2228,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -2574,10 +2239,6 @@
                         }
                     },
                     "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2754,16 +2415,6 @@
                         "type": "string",
                         "readOnly": true,
                         "default": "com.liferay.headless.asset.library.dto.v1_0.UserAccount"
-                    },
-                    "newsSubscription": {
-                        "type": "boolean"
-                    },
-                    "userToUserAddInfo": {
-                        "type": "array",
-                        "description": "Information about the object relationship userToUserAddInfo can be embedded with \"nestedFields\".",
-                        "items": {
-                            "$ref": "#/components/schemas/UserAdditionalInfo"
-                        }
                     }
                 },
                 "xml": {
@@ -2819,12 +2470,6 @@
             "PageSite": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Site"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2832,6 +2477,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Site"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2842,6 +2493,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -2849,10 +2504,6 @@
                         }
                     },
                     "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2862,12 +2513,6 @@
             "PageUserAccount": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/UserAccount"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2875,6 +2520,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/UserAccount"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2885,6 +2536,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -2892,10 +2547,6 @@
                         }
                     },
                     "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2905,12 +2556,6 @@
             "PageUserGroup": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/UserGroup"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2918,6 +2563,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/UserGroup"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2928,6 +2579,10 @@
                             }
                         }
                     },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "facets": {
                         "type": "array",
                         "items": {
@@ -2937,16 +2592,8 @@
                     "page": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
                     }
                 },
-                "x-filterable": []
-            },
-            "UserAdditionalInfo": {
-                "type": "object",
                 "x-filterable": []
             }
         },

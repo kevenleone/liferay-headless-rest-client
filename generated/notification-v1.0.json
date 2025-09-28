@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"8541\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.notification.rest.client', and version '1.0.34'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.notification.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.notification.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"7700\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.notification.rest.client', and version '1.0.36'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.notification.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.notification.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -51,7 +51,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"2663\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"8010\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -88,12 +88,102 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"1761\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntry } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntry({\n        client,\n        path: {\n           notificationQueueEntryId: \"4859\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-queue-entries/batch": {
+            "post": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "postNotificationQueueEntryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "deleteNotificationQueueEntryBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -228,135 +318,6 @@
                 ]
             }
         },
-        "/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend": {
-            "put": {
-                "tags": [
-                    "NotificationQueueEntry"
-                ],
-                "operationId": "putNotificationQueueEntryResend",
-                "parameters": [
-                    {
-                        "name": "notificationQueueEntryId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationQueueEntryResend } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationQueueEntryResend({\n        client,\n        path: {\n           notificationQueueEntryId: \"8271\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/notification/v1.0/notification-queue-entries/batch": {
-            "post": {
-                "tags": [
-                    "NotificationQueueEntry"
-                ],
-                "operationId": "postNotificationQueueEntryBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "NotificationQueueEntry"
-                ],
-                "operationId": "deleteNotificationQueueEntryBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationQueueEntryBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationQueueEntryBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/notification/v1.0/notification-queue-entries/export-batch": {
             "post": {
                 "tags": [
@@ -429,6 +390,45 @@
                 ]
             }
         },
+        "/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend": {
+            "put": {
+                "tags": [
+                    "NotificationQueueEntry"
+                ],
+                "operationId": "putNotificationQueueEntryResend",
+                "parameters": [
+                    {
+                        "name": "notificationQueueEntryId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationQueueEntryResend } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationQueueEntryResend({\n        client,\n        path: {\n           notificationQueueEntryId: \"5760\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-queue-entries/{notificationQueueEntryId}/resend', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/notification/v1.0/notification-templates/{notificationTemplateId}": {
             "get": {
                 "tags": [
@@ -466,7 +466,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"6704\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"9977\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -525,7 +525,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"8061\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"3678\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -562,7 +562,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"1245\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"4218\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -621,12 +621,146 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"8005\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchNotificationTemplate } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchNotificationTemplate({\n        client,\n        path: {\n           notificationTemplateId: \"5696\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/notification/v1.0/notification-templates/batch": {
+            "put": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "putNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "postNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "NotificationTemplate"
+                ],
+                "operationId": "deleteNotificationTemplateBatch",
+                "parameters": [
+                    {
+                        "name": "callbackURL",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -668,7 +802,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9093\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"332\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -727,7 +861,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"9436\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateByExternalReferenceCode } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3308\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -911,146 +1045,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateCopy } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateCopy({\n        client,\n        path: {\n           notificationTemplateId: \"6497\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateCopy } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateCopy({\n        client,\n        path: {\n           notificationTemplateId: \"8466\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/{notificationTemplateId}/copy', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/notification/v1.0/notification-templates/batch": {
-            "put": {
-                "tags": [
-                    "NotificationTemplate"
-                ],
-                "operationId": "putNotificationTemplateBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "post": {
-                "tags": [
-                    "NotificationTemplate"
-                ],
-                "operationId": "postNotificationTemplateBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "NotificationTemplate"
-                ],
-                "operationId": "deleteNotificationTemplateBatch",
-                "parameters": [
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteNotificationTemplateBatch } from 'liferay-headless-rest-client/notification-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteNotificationTemplateBatch({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/notification/v1.0/notification-templates/batch', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1130,6 +1130,34 @@
     },
     "components": {
         "schemas": {
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                },
+                "x-filterable": []
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "x-filterable": []
+            },
             "NotificationQueueEntry": {
                 "type": "object",
                 "properties": {
@@ -1197,33 +1225,8 @@
                 },
                 "xml": {
                     "name": "NotificationQueueEntry"
-                }
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                }
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                }
+                },
+                "x-filterable": []
             },
             "PageNotificationQueueEntry": {
                 "type": "object",
@@ -1255,17 +1258,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "NotificationTemplate": {
                 "type": "object",
@@ -1375,7 +1379,13 @@
                 },
                 "xml": {
                     "name": "NotificationTemplate"
-                }
+                },
+                "x-filterable": [
+                    "dateCreated",
+                    "dateModified",
+                    "name",
+                    "userId"
+                ]
             },
             "PageNotificationTemplate": {
                 "type": "object",
@@ -1407,17 +1417,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {

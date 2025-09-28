@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Liferay Commerce ML API",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getAccountCategoryForecastsByMonthlyRevenuePage } from 'liferay-headless-rest-client/headless-commerce-machine-learning-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAccountCategoryForecastsByMonthlyRevenuePage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nLiferay Commerce ML API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.machine.learning.client', and version '1.0.27'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.commerce.machine.learning.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.commerce.machine.learning.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getAccountCategoryForecastsByMonthlyRevenuePage } from 'liferay-headless-rest-client/headless-commerce-machine-learning-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getAccountCategoryForecastsByMonthlyRevenuePage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nLiferay Commerce ML API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.machine.learning.client', and version '1.0.29'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.commerce.machine.learning.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.commerce.machine.learning.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -337,7 +337,8 @@
                 },
                 "xml": {
                     "name": "AccountCategoryForecast"
-                }
+                },
+                "x-filterable": []
             },
             "Facet": {
                 "type": "object",
@@ -351,7 +352,8 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                }
+                },
+                "x-filterable": []
             },
             "FacetValue": {
                 "type": "object",
@@ -363,7 +365,8 @@
                     "term": {
                         "type": "string"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PageAccountCategoryForecast": {
                 "type": "object",
@@ -395,17 +398,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "AccountForecast": {
                 "type": "object",
@@ -445,7 +449,8 @@
                 },
                 "xml": {
                     "name": "AccountForecast"
-                }
+                },
+                "x-filterable": []
             },
             "PageAccountForecast": {
                 "type": "object",
@@ -477,17 +482,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PageSkuForecast": {
                 "type": "object",
@@ -519,17 +525,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "SkuForecast": {
                 "type": "object",
@@ -568,7 +575,8 @@
                 },
                 "xml": {
                     "name": "SkuForecast"
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {

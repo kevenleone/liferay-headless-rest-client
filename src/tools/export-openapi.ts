@@ -232,6 +232,7 @@ class OpenAPIExporter {
 }
 
 const resources = [
+    "analytics-cms-rest/v1.0",
     "analytics-reports-rest/v1.0",
     "analytics-settings-rest/v1.0",
     "batch-planner/v1.0",
@@ -249,6 +250,7 @@ const resources = [
     "headless-admin-taxonomy/v1.0",
     "headless-admin-user/v1.0",
     "headless-admin-workflow/v1.0",
+    "headless-asset-library/v1.0",
     "headless-batch-engine/v1.0",
     "headless-commerce-admin-account/v1.0",
     "headless-commerce-admin-catalog/v1.0",
@@ -266,6 +268,7 @@ const resources = [
     "headless-commerce-machine-learning/v1.0",
     "headless-delivery/v1.0",
     "headless-form/v1.0",
+    "headless-object/v1.0",
     "headless-portal-instances/v1.0",
     "headless-site/v1.0",
     "headless-user-notification/v1.0",

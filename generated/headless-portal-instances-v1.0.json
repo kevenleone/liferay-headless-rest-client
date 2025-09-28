@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Liferay Portal Instances Headless API",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"3882\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.portal.instances.client', and version '1.0.25'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.portal.instances.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.portal.instances.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"5461\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.portal.instances.client', and version '1.0.27'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.portal.instances.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.portal.instances.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -53,7 +53,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"1873\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"9516\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -91,7 +91,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"9550\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"5161\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -151,7 +151,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"1841\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPortalInstance } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPortalInstance({\n        client,\n        path: {\n           portalInstanceId: \"9228\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -295,7 +295,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceActivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceActivate({\n        client,\n        path: {\n           portalInstanceId: \"5287\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceActivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceActivate({\n        client,\n        path: {\n           portalInstanceId: \"4509\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -335,7 +335,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceDeactivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceDeactivate({\n        client,\n        path: {\n           portalInstanceId: \"7976\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putPortalInstanceDeactivate } from 'liferay-headless-rest-client/headless-portal-instances-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putPortalInstanceDeactivate({\n        client,\n        path: {\n           portalInstanceId: \"6913\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -371,7 +371,8 @@
                 },
                 "xml": {
                     "name": "Admin"
-                }
+                },
+                "x-filterable": []
             },
             "PortalInstance": {
                 "type": "object",
@@ -411,7 +412,8 @@
                 },
                 "xml": {
                     "name": "PortalInstance"
-                }
+                },
+                "x-filterable": []
             },
             "Facet": {
                 "type": "object",
@@ -425,7 +427,8 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                }
+                },
+                "x-filterable": []
             },
             "FacetValue": {
                 "type": "object",
@@ -437,7 +440,8 @@
                     "term": {
                         "type": "string"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PagePortalInstance": {
                 "type": "object",
@@ -469,17 +473,18 @@
                         "type": "integer",
                         "format": "int64"
                     },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
                     }
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {

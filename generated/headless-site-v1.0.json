@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Liferay Sites Headless API",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"6935\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.site.client', and version '1.0.19'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.site.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.site.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getOpenAPI } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getOpenAPI({\n        client,\n        path: {\n           type: \"4947\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.site.client', and version '1.0.21'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.site.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.site.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -45,12 +45,190 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSite } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSite({\n        client,\n        path: {\n           siteId: \"5853\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSite } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSite({\n        client,\n        path: {\n           siteId: \"3550\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/{siteId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "Site"
+                ],
+                "operationId": "getSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6988\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Adds or update a new site",
+                "operationId": "putSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PutSiteByExternalReferenceCodeRequestBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Site"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4974\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Site"
+                ],
+                "description": "Deletes a site and all of its associated content.",
+                "operationId": "deleteSiteByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5812\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer": {
+            "get": {
+                "tags": [
+                    "Site"
+                ],
+                "operationId": "getSiteByExternalReferenceCodeSiteInitializer",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/zip": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCodeSiteInitializer } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCodeSiteInitializer({\n        client,\n        path: {\n           externalReferenceCode: \"344\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -108,184 +286,6 @@
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "Site"
-                ],
-                "operationId": "getSiteByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Site"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Site"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"3161\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Site"
-                ],
-                "description": "Adds or update a new site",
-                "operationId": "putSiteByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PutSiteByExternalReferenceCodeRequestBody"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Site"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Site"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2827\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'PUT',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Site"
-                ],
-                "description": "Deletes a site and all of its associated content.",
-                "operationId": "deleteSiteByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSiteByExternalReferenceCode } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSiteByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8678\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer": {
-            "get": {
-                "tags": [
-                    "Site"
-                ],
-                "operationId": "getSiteByExternalReferenceCodeSiteInitializer",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/zip": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteByExternalReferenceCodeSiteInitializer } from 'liferay-headless-rest-client/headless-site-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteByExternalReferenceCodeSiteInitializer({\n        client,\n        path: {\n           externalReferenceCode: \"9642\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-site/v1.0/sites/by-external-reference-code/{externalReferenceCode}/site-initializer', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -353,7 +353,8 @@
                 "description": "Represents the site being created.",
                 "xml": {
                     "name": "Site"
-                }
+                },
+                "x-filterable": []
             },
             "PostSiteRequestBody": {
                 "type": "object",
@@ -366,7 +367,8 @@
                     "site": {
                         "$ref": "#/components/schemas/Site"
                     }
-                }
+                },
+                "x-filterable": []
             },
             "MultipartBody": {
                 "type": "object",
@@ -377,7 +379,8 @@
                             "type": "string"
                         }
                     }
-                }
+                },
+                "x-filterable": []
             },
             "PutSiteByExternalReferenceCodeRequestBody": {
                 "type": "object",
@@ -387,7 +390,8 @@
                         "description": "File",
                         "format": "binary"
                     }
-                }
+                },
+                "x-filterable": []
             }
         },
         "securitySchemes": {
