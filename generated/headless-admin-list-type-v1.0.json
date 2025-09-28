@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "List Type",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"9257\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'om.liferay.headless.admin.list.type.client', and version '1.0.0'.. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.list.type.client', and version '1.0.35'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"om.liferay.headless.admin.list.type.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/om.liferay.headless.admin.list.type.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'om.liferay.headless.admin.list.type.client', and version '1.0.0'.. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.list.type.client', and version '1.0.37'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"om.liferay.headless.admin.list.type.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/om.liferay.headless.admin.list.type.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -52,7 +52,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"7223\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -111,7 +111,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"4758\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -148,7 +148,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"2201\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -207,7 +207,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"6740\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchListTypeDefinition } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchListTypeDefinition({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -388,7 +388,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5311\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -447,7 +447,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeDefinitionByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeDefinitionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6400\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeDefinitionByExternalReferenceCode } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeDefinitionByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -475,7 +475,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "dateCreated",
+                                "dateModified",
+                                "externalReferenceCode",
+                                "name",
+                                "userId"
+                            ]
                         }
                     },
                     {
@@ -605,7 +612,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "dateCreated",
+                                "dateModified",
+                                "externalReferenceCode",
+                                "name",
+                                "userId"
+                            ]
                         }
                     },
                     {
@@ -703,7 +717,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"8321\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -762,7 +776,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"5445\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -799,7 +813,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"9995\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteListTypeEntry({\n        client,\n        path: {\n           listTypeEntryId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -925,7 +939,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "dateCreated",
+                                "dateModified",
+                                "key",
+                                "name",
+                                "userId"
+                            ]
                         }
                     },
                     {
@@ -985,7 +1006,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionByExternalReferenceCodeListTypeEntriesPage } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionByExternalReferenceCodeListTypeEntriesPage({\n        client,\n        path: {\n           externalReferenceCode: \"6318\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionByExternalReferenceCodeListTypeEntriesPage } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionByExternalReferenceCodeListTypeEntriesPage({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1044,7 +1065,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionByExternalReferenceCodeListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionByExternalReferenceCodeListTypeEntry({\n        client,\n        path: {\n           externalReferenceCode: \"5086\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionByExternalReferenceCodeListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionByExternalReferenceCodeListTypeEntry({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1080,7 +1101,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "dateCreated",
+                                "dateModified",
+                                "key",
+                                "name",
+                                "userId"
+                            ]
                         }
                     },
                     {
@@ -1140,7 +1168,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionListTypeEntriesPage } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionListTypeEntriesPage({\n        client,\n        path: {\n           listTypeDefinitionId: \"7788\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getListTypeDefinitionListTypeEntriesPage } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getListTypeDefinitionListTypeEntriesPage({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1199,7 +1227,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntry({\n        client,\n        path: {\n           listTypeDefinitionId: \"4371\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntry } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntry({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1228,7 +1256,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "dateCreated",
+                                "dateModified",
+                                "key",
+                                "name",
+                                "userId"
+                            ]
                         }
                     },
                     {
@@ -1279,7 +1314,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntriesPageExportBatch({\n        client,\n        path: {\n           listTypeDefinitionId: \"2124\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntriesPageExportBatch } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntriesPageExportBatch({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1333,7 +1368,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntryBatch } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntryBatch({\n        client,\n        path: {\n           listTypeDefinitionId: \"1536\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postListTypeDefinitionListTypeEntryBatch } from 'liferay-headless-rest-client/headless-admin-list-type-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postListTypeDefinitionListTypeEntryBatch({\n        client,\n        path: {\n           listTypeDefinitionId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1458,6 +1493,9 @@
                             "type": "string"
                         }
                     },
+                    "system": {
+                        "type": "boolean"
+                    },
                     "type": {
                         "type": "string"
                     },
@@ -1509,6 +1547,12 @@
             "PageListTypeDefinition": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ListTypeDefinition"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -1516,12 +1560,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ListTypeDefinition"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -1532,7 +1570,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -1542,7 +1580,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -1552,6 +1590,12 @@
             "PageListTypeEntry": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ListTypeEntry"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -1559,12 +1603,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ListTypeEntry"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -1575,7 +1613,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -1585,7 +1623,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

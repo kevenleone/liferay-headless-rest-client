@@ -7,7 +7,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"6748\",\n        },\n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"20125\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -66,7 +66,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"1223\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -113,7 +113,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlan({\n        client,\n        path: {\n           planId: \"9599\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlan({\n        client,\n        path: {\n           planId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -150,7 +150,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlan({\n        client,\n        path: {\n           planId: \"4552\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlan({\n        client,\n        path: {\n           planId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -209,7 +209,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlan({\n        client,\n        path: {\n           planId: \"8951\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlan({\n        client,\n        path: {\n           planId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -247,7 +247,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanTemplate } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanTemplate({\n        client,\n        path: {\n           internalClassNameKey: \"1594\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanTemplate } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanTemplate({\n        client,\n        path: {\n           internalClassNameKey: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -417,7 +417,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeySiteScopesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeySiteScopesPage({\n        client,\n        path: {\n           internalClassNameKey: \"623\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeySiteScopesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeySiteScopesPage({\n        client,\n        path: {\n           internalClassNameKey: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -471,7 +471,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyStrategiesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyStrategiesPage({\n        client,\n        path: {\n           internalClassNameKey: \"129\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyStrategiesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyStrategiesPage({\n        client,\n        path: {\n           internalClassNameKey: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -550,6 +550,12 @@
             "PageField": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Field"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -557,12 +563,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Field"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -573,7 +573,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -583,7 +583,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -728,6 +728,12 @@
             "PagePlan": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Plan"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -735,12 +741,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Plan"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -751,7 +751,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -761,7 +761,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -771,6 +771,12 @@
             "PageSiteScope": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SiteScope"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -778,12 +784,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SiteScope"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -794,7 +794,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -804,7 +804,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -835,6 +835,12 @@
             "PageStrategy": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Strategy"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -842,12 +848,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Strategy"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -858,7 +858,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -868,7 +868,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

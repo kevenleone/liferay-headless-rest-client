@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFieldMappingInfosPage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldMappingInfosPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.search.experiences.rest.client', and version '3.0.35'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.search.experiences.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.search.experiences.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getFieldMappingInfosPage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getFieldMappingInfosPage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.search.experiences.rest.client', and version '3.0.38'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.search.experiences.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.search.experiences.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -481,7 +481,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"9553\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -540,7 +540,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"8128\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -577,7 +577,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"3691\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -636,7 +636,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"6585\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPBlueprint } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPBlueprint({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -817,7 +817,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"4883\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -876,7 +876,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1494\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPBlueprintByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPBlueprintByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -915,7 +915,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"6036\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPBlueprintExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPBlueprintExport({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -936,7 +936,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "createDate",
+                                "description",
+                                "modifiedDate",
+                                "status",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -1092,7 +1099,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"6517\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPBlueprintCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPBlueprintCopy({\n        client,\n        path: {\n           sxpBlueprintId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1164,7 +1171,14 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "createDate",
+                                "description",
+                                "modifiedDate",
+                                "status",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -1262,7 +1276,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"8403\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElement({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1321,7 +1335,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"8671\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElement({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1358,7 +1372,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"7193\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteSXPElement({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1417,7 +1431,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"4833\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchSXPElement } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchSXPElement({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1598,7 +1612,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8743\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1657,7 +1671,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5661\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putSXPElementByExternalReferenceCode } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putSXPElementByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1696,7 +1710,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"9607\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSXPElementExport } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSXPElementExport({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1717,7 +1731,15 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "createDate",
+                                "description",
+                                "hidden",
+                                "modifiedDate",
+                                "readOnly",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -1873,7 +1895,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"4398\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSXPElementCopy } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSXPElementCopy({\n        client,\n        path: {\n           sxpElementId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1996,7 +2018,15 @@
                         "name": "filter",
                         "in": "query",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "x-filterable": [
+                                "createDate",
+                                "description",
+                                "hidden",
+                                "modifiedDate",
+                                "readOnly",
+                                "title"
+                            ]
                         }
                     },
                     {
@@ -2370,7 +2400,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"5198\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSearchableAssetNameLanguagePage } from 'liferay-headless-rest-client/search-experiences-rest-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSearchableAssetNameLanguagePage({\n        client,\n        path: {\n           languageId: \"20125\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2535,6 +2565,12 @@
             "PageFieldMappingInfo": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FieldMappingInfo"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2542,12 +2578,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FieldMappingInfo"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2558,7 +2588,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -2568,7 +2598,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2595,6 +2625,12 @@
             "PageKeywordQueryContributor": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/KeywordQueryContributor"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2602,12 +2638,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/KeywordQueryContributor"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2618,7 +2648,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -2628,7 +2658,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2655,6 +2685,12 @@
             "PageModelPrefilterContributor": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ModelPrefilterContributor"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2662,12 +2698,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ModelPrefilterContributor"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2678,7 +2708,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -2688,7 +2718,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -2698,6 +2728,12 @@
             "PageQueryPrefilterContributor": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/QueryPrefilterContributor"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2705,12 +2741,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/QueryPrefilterContributor"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2721,7 +2751,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -2731,7 +2761,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3190,6 +3220,12 @@
                             "type": "string"
                         }
                     },
+                    "collectionProvider": {
+                        "type": "boolean"
+                    },
+                    "collectionProviderType": {
+                        "type": "string"
+                    },
                     "emptySearchEnabled": {
                         "type": "boolean"
                     },
@@ -3201,6 +3237,9 @@
                     },
                     "languageId": {
                         "type": "string"
+                    },
+                    "legacyAssetCollectionProvider": {
+                        "type": "boolean"
                     },
                     "queryString": {
                         "type": "string"
@@ -3601,6 +3640,12 @@
                         },
                         "readOnly": true
                     },
+                    "collectionProviderSubtypeName": {
+                        "type": "string"
+                    },
+                    "collectionProviderTypeName": {
+                        "type": "string"
+                    },
                     "configuration": {
                         "$ref": "#/components/schemas/Configuration"
                     },
@@ -3879,6 +3924,12 @@
             "PageSXPBlueprint": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SXPBlueprint"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -3886,12 +3937,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SXPBlueprint"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -3902,7 +3947,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -3912,7 +3957,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3922,6 +3967,12 @@
             "PageSXPElement": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SXPElement"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -3929,12 +3980,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SXPElement"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -3945,7 +3990,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -3955,7 +4000,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -3965,6 +4010,12 @@
             "PageSXPParameterContributorDefinition": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SXPParameterContributorDefinition"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -3972,12 +4023,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SXPParameterContributorDefinition"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -3988,7 +4033,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -3998,7 +4043,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4031,6 +4076,12 @@
             "PageSearchIndex": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchIndex"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4038,12 +4089,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchIndex"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4054,7 +4099,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -4064,7 +4109,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4242,6 +4287,12 @@
             "PageSearchableAssetNameDisplay": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchableAssetNameDisplay"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4249,12 +4300,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchableAssetNameDisplay"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4265,7 +4310,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -4275,7 +4320,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }
@@ -4308,6 +4353,12 @@
             "PageSearchableAssetName": {
                 "type": "object",
                 "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SearchableAssetName"
+                        }
+                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4315,12 +4366,6 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/SearchableAssetName"
-                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4331,7 +4376,7 @@
                             }
                         }
                     },
-                    "pageSize": {
+                    "page": {
                         "type": "integer",
                         "format": "int64"
                     },
@@ -4341,7 +4386,7 @@
                             "$ref": "#/components/schemas/Facet"
                         }
                     },
-                    "page": {
+                    "pageSize": {
                         "type": "integer",
                         "format": "int64"
                     }

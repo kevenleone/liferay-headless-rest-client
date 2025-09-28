@@ -65,7 +65,7 @@ export function getSDKSourceSample(
                     .filter(({ required }) => required)
                     .map(({ name }) => ({
                         name,
-                        value: `${Math.ceil(Math.random() * 9999)}`,
+                        value: "20125",
                     }))
             )
         );
