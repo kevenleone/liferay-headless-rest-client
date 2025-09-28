@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Headless Delivery Commerce Order API",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { deletePlacedOrderAttachment } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlacedOrderAttachment({\n        client,\n        path: {\n           attachmentId: \"7209\",\n           placedOrderId: \"7329\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nHeadless Delivery Commerce Order API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.delivery.order.client', and version '1.0.32'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.commerce.delivery.order.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.commerce.delivery.order.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderByExternalReferenceCodeAttachmentByBase64 } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderByExternalReferenceCodeAttachmentByBase64({\n        client,\n        path: {\n           externalReferenceCode: \"2865\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nHeadless Delivery Commerce Order API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.commerce.delivery.order.client', and version '1.0.28'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.commerce.delivery.order.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.commerce.delivery.order.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -15,6 +15,128 @@
         }
     ],
     "paths": {
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64": {
+            "post": {
+                "tags": [
+                    "Attachment"
+                ],
+                "operationId": "postPlacedOrderByExternalReferenceCodeAttachmentByBase64",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AttachmentBase64"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AttachmentBase64"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Attachment"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Attachment"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderByExternalReferenceCodeAttachmentByBase64 } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderByExternalReferenceCodeAttachmentByBase64({\n        client,\n        path: {\n           externalReferenceCode: \"1606\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/by-base64": {
+            "post": {
+                "tags": [
+                    "Attachment"
+                ],
+                "operationId": "postPlacedOrderAttachmentByBase64",
+                "parameters": [
+                    {
+                        "name": "placedOrderId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AttachmentBase64"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AttachmentBase64"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Attachment"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Attachment"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderAttachmentByBase64 } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderAttachmentByBase64({\n        client,\n        path: {\n           placedOrderId: \"3018\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/by-base64', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/{attachmentId}": {
             "delete": {
                 "tags": [
@@ -52,59 +174,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlacedOrderAttachment } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlacedOrderAttachment({\n        client,\n        path: {\n           attachmentId: \"4743\",\n           placedOrderId: \"4239\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlacedOrderAttachment } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlacedOrderAttachment({\n        client,\n        path: {\n           attachmentId: \"5026\",\n           placedOrderId: \"7907\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/{attachmentId}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}": {
-            "delete": {
-                "tags": [
-                    "Attachment"
-                ],
-                "operationId": "deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "attachmentExternalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode({\n        client,\n        path: {\n           attachmentExternalReferenceCode: \"9478\",\n           externalReferenceCode: \"2101\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -167,7 +242,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderAttachmentsPage({\n        client,\n        path: {\n           placedOrderId: \"6505\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderAttachmentsPage({\n        client,\n        path: {\n           placedOrderId: \"1882\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -235,7 +310,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodeAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodeAttachmentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"2463\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodeAttachmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodeAttachmentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"7747\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -245,15 +320,23 @@
                 ]
             }
         },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/by-base64": {
-            "post": {
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}": {
+            "delete": {
                 "tags": [
                     "Attachment"
                 ],
-                "operationId": "postPlacedOrderAttachmentByBase64",
+                "operationId": "deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode",
                 "parameters": [
                     {
-                        "name": "placedOrderId",
+                        "name": "attachmentExternalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "externalReferenceCode",
                         "in": "path",
                         "required": true,
                         "schema": {
@@ -261,34 +344,12 @@
                         }
                     }
                 ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/AttachmentBase64"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/AttachmentBase64"
-                            }
-                        }
-                    }
-                },
                 "responses": {
                     "default": {
                         "description": "default response",
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Attachment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Attachment"
-                                }
-                            }
+                            "application/json": {},
+                            "application/xml": {}
                         }
                     }
                 },
@@ -296,12 +357,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderAttachmentByBase64 } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderAttachmentByBase64({\n        client,\n        path: {\n           placedOrderId: \"8074\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlacedOrderByExternalReferenceCodeAttachmentByExternalReferenceCodeAttachmentExternalReferenceCode({\n        client,\n        path: {\n           attachmentExternalReferenceCode: \"7960\",\n           externalReferenceCode: \"9444\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/by-base64', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-externalReferenceCode/{attachmentExternalReferenceCode}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -355,73 +416,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderAttachmentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderAttachmentsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"7518\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderAttachmentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderAttachmentsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"9917\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/attachments/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64": {
-            "post": {
-                "tags": [
-                    "Attachment"
-                ],
-                "operationId": "postPlacedOrderByExternalReferenceCodeAttachmentByBase64",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/AttachmentBase64"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/AttachmentBase64"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Attachment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Attachment"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderByExternalReferenceCodeAttachmentByBase64 } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderByExternalReferenceCodeAttachmentByBase64({\n        client,\n        path: {\n           externalReferenceCode: \"1289\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/attachments/by-base64', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -471,7 +471,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderOrderTransitionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderOrderTransitionsPage({\n        client,\n        path: {\n           placedOrderId: \"5505\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderOrderTransitionsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderOrderTransitionsPage({\n        client,\n        path: {\n           placedOrderId: \"5934\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -530,7 +530,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransition } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransition({\n        client,\n        path: {\n           placedOrderId: \"7309\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransition } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransition({\n        client,\n        path: {\n           placedOrderId: \"590\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -584,7 +584,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransitionBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransitionBatch({\n        client,\n        path: {\n           placedOrderId: \"8256\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransitionBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransitionBatch({\n        client,\n        path: {\n           placedOrderId: \"8232\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -643,7 +643,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransitionsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransitionsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"3833\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderOrderTransitionsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderOrderTransitionsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"8619\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -691,60 +691,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderBillingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderBillingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"5225\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderBillingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderBillingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"4319\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-billing-address', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-shipping-address": {
-            "get": {
-                "tags": [
-                    "PlacedOrderAddress"
-                ],
-                "description": "Retrieve placed order shipping address.",
-                "operationId": "getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderAddress"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderAddress"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"7018\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-shipping-address', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -787,7 +739,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderBillingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderBillingAddress({\n        client,\n        path: {\n           placedOrderId: \"1116\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderBillingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderBillingAddress({\n        client,\n        path: {\n           placedOrderId: \"8267\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -835,12 +787,107 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderShippingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderShippingAddress({\n        client,\n        path: {\n           placedOrderId: \"8230\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderShippingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderShippingAddress({\n        client,\n        path: {\n           placedOrderId: \"8538\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/placed-order-shipping-address', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-shipping-address": {
+            "get": {
+                "tags": [
+                    "PlacedOrderAddress"
+                ],
+                "description": "Retrieve placed order shipping address.",
+                "operationId": "getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderAddress"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderAddress"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderShippingAddress({\n        client,\n        path: {\n           externalReferenceCode: \"4294\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-shipping-address', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-order-comments/{placedOrderCommentId}": {
+            "get": {
+                "tags": [
+                    "PlacedOrderComment"
+                ],
+                "operationId": "getPlacedOrderComment",
+                "parameters": [
+                    {
+                        "name": "placedOrderCommentId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderComment"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderComment"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderComment } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderComment({\n        client,\n        path: {\n           placedOrderCommentId: \"4067\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-comments/{placedOrderCommentId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -903,106 +950,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderCommentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderCommentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"1271\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderCommentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderCommentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"8134\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-comments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-order-comments/{placedOrderCommentId}": {
-            "get": {
-                "tags": [
-                    "PlacedOrderComment"
-                ],
-                "operationId": "getPlacedOrderComment",
-                "parameters": [
-                    {
-                        "name": "placedOrderCommentId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderComment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderComment"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderComment } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderComment({\n        client,\n        path: {\n           placedOrderCommentId: \"4606\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-comments/{placedOrderCommentId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-order-comments/by-externalReferenceCode/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "PlacedOrderComment"
-                ],
-                "operationId": "getPlacedOrderCommentByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderComment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderComment"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderCommentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderCommentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"2580\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-comments/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1065,12 +1018,59 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderCommentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderCommentsPage({\n        client,\n        path: {\n           placedOrderId: \"4836\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderCommentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderCommentsPage({\n        client,\n        path: {\n           placedOrderId: \"5672\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/placed-order-comments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-order-comments/by-externalReferenceCode/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "PlacedOrderComment"
+                ],
+                "operationId": "getPlacedOrderCommentByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderComment"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderComment"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderCommentByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderCommentByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8515\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-comments/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1124,12 +1124,60 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderPlacedOrderCommentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderPlacedOrderCommentsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"827\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderPlacedOrderCommentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderPlacedOrderCommentsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"6661\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/placed-order-comments/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}": {
+            "get": {
+                "tags": [
+                    "PlacedOrderItem"
+                ],
+                "description": "Retrieve information of the given Placed Order.",
+                "operationId": "getPlacedOrderItem",
+                "parameters": [
+                    {
+                        "name": "placedOrderItemId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderItem"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderItem"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItem } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItem({\n        client,\n        path: {\n           placedOrderItemId: \"5333\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1214,108 +1262,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderItemsPage({\n        client,\n        path: {\n           externalReferenceCode: \"3353\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePlacedOrderItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePlacedOrderItemsPage({\n        client,\n        path: {\n           externalReferenceCode: \"3284\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/placed-order-items', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}": {
-            "get": {
-                "tags": [
-                    "PlacedOrderItem"
-                ],
-                "description": "Retrieve information of the given Placed Order.",
-                "operationId": "getPlacedOrderItem",
-                "parameters": [
-                    {
-                        "name": "placedOrderItemId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderItem"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderItem"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItem } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItem({\n        client,\n        path: {\n           placedOrderItemId: \"5925\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "PlacedOrderItem"
-                ],
-                "description": "Retrieve information of the given placed order item.",
-                "operationId": "getPlacedOrderItemByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderItem"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrderItem"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"5881\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1400,12 +1352,60 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderItemsPage({\n        client,\n        path: {\n           placedOrderId: \"878\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPlacedOrderItemsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPlacedOrderItemsPage({\n        client,\n        path: {\n           placedOrderId: \"8626\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/placed-order-items', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}": {
+            "get": {
+                "tags": [
+                    "PlacedOrderItem"
+                ],
+                "description": "Retrieve information of the given placed order item.",
+                "operationId": "getPlacedOrderItemByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderItem"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrderItem"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"1706\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1480,67 +1480,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderPlacedOrderItemsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderPlacedOrderItemsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"3151\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderPlacedOrderItemsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderPlacedOrderItemsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"1776\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/placed-order-items/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}/placed-order-item-shipments": {
-            "get": {
-                "tags": [
-                    "PlacedOrderItemShipment"
-                ],
-                "description": "Retrieve shipments of the given placed order item.",
-                "operationId": "getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrderItemShipment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrderItemShipment"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"266\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}/placed-order-item-shipments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1590,12 +1535,67 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemPlacedOrderItemShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemPlacedOrderItemShipmentsPage({\n        client,\n        path: {\n           placedOrderItemId: \"7759\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemPlacedOrderItemShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemPlacedOrderItemShipmentsPage({\n        client,\n        path: {\n           placedOrderItemId: \"1774\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}/placed-order-item-shipments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}/placed-order-item-shipments": {
+            "get": {
+                "tags": [
+                    "PlacedOrderItemShipment"
+                ],
+                "description": "Retrieve shipments of the given placed order item.",
+                "operationId": "getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePlacedOrderItemShipment"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PagePlacedOrderItemShipment"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderItemByExternalReferenceCodePlacedOrderItemShipmentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"5118\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/by-externalReferenceCode/{externalReferenceCode}/placed-order-item-shipments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1649,12 +1649,119 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderItemPlacedOrderItemShipmentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderItemPlacedOrderItemShipmentsPageExportBatch({\n        client,\n        path: {\n           placedOrderItemId: \"8284\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderItemPlacedOrderItemShipmentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderItemPlacedOrderItemShipmentsPageExportBatch({\n        client,\n        path: {\n           placedOrderItemId: \"2200\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-order-items/{placedOrderItemId}/placed-order-item-shipments/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}": {
+            "get": {
+                "tags": [
+                    "PlacedOrder"
+                ],
+                "description": "Retrieve information of the given Placed Order.",
+                "operationId": "getPlacedOrder",
+                "parameters": [
+                    {
+                        "name": "placedOrderId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrder } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrder({\n        client,\n        path: {\n           placedOrderId: \"7372\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "PlacedOrder"
+                ],
+                "operationId": "patchPlacedOrder",
+                "parameters": [
+                    {
+                        "name": "placedOrderId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlacedOrder"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlacedOrder"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlacedOrder } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlacedOrder({\n        client,\n        path: {\n           placedOrderId: \"2172\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -1684,13 +1791,6 @@
                         }
                     },
                     {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
                         "name": "page",
                         "in": "query",
                         "schema": {
@@ -1699,20 +1799,6 @@
                     },
                     {
                         "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -1747,7 +1833,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelAccountPlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelAccountPlacedOrdersPage({\n        client,\n        path: {\n           accountId: \"8442\",\n           channelId: \"1880\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelAccountPlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelAccountPlacedOrdersPage({\n        client,\n        path: {\n           accountId: \"6934\",\n           channelId: \"5625\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -1757,111 +1843,13 @@
                 ]
             }
         },
-        "/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/accounts/by-externalReferenceCode/{accountExternalReferenceCode}/placed-orders": {
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}": {
             "get": {
                 "tags": [
                     "PlacedOrder"
                 ],
-                "description": "Retrieves placed orders for specific account in the given channel.",
-                "operationId": "getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage",
-                "parameters": [
-                    {
-                        "name": "accountExternalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "channelExternalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrder"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrder"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage({\n        client,\n        path: {\n           accountExternalReferenceCode: \"816\",\n           channelExternalReferenceCode: \"1325\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/accounts/by-externalReferenceCode/{accountExternalReferenceCode}/placed-orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/placed-orders": {
-            "get": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "description": "Retrieves placed orders in the given channel.",
-                "operationId": "getChannelByExternalReferenceCodePlacedOrdersPage",
+                "description": "Retrieve information of the given Placed Order.",
+                "operationId": "getPlacedOrderByExternalReferenceCode",
                 "parameters": [
                     {
                         "name": "externalReferenceCode",
@@ -1870,48 +1858,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
                     }
                 ],
                 "responses": {
@@ -1920,12 +1866,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrder"
+                                    "$ref": "#/components/schemas/PlacedOrder"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PagePlacedOrder"
+                                    "$ref": "#/components/schemas/PlacedOrder"
                                 }
                             }
                         }
@@ -1935,12 +1881,71 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodePlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodePlacedOrdersPage({\n        client,\n        path: {\n           externalReferenceCode: \"9018\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"7155\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/placed-orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "PlacedOrder"
+                ],
+                "operationId": "patchPlacedOrderByExternalReferenceCode",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlacedOrder"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlacedOrder"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PlacedOrder"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlacedOrderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlacedOrderByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"8265\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2025,275 +2030,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelPlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelPlacedOrdersPage({\n        client,\n        path: {\n           channelId: \"9721\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelPlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelPlacedOrdersPage({\n        client,\n        path: {\n           channelId: \"488\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/channels/{channelId}/placed-orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}": {
-            "get": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "description": "Retrieve information of the given Placed Order.",
-                "operationId": "getPlacedOrder",
-                "parameters": [
-                    {
-                        "name": "placedOrderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrder } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrder({\n        client,\n        path: {\n           placedOrderId: \"2637\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "operationId": "patchPlacedOrder",
-                "parameters": [
-                    {
-                        "name": "placedOrderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PlacedOrder"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PlacedOrder"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlacedOrder } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlacedOrder({\n        client,\n        path: {\n           placedOrderId: \"5299\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}": {
-            "get": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "description": "Retrieve information of the given Placed Order.",
-                "operationId": "getPlacedOrderByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"791\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "operationId": "patchPlacedOrderByExternalReferenceCode",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PlacedOrder"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PlacedOrder"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PlacedOrder"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlacedOrderByExternalReferenceCode } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlacedOrderByExternalReferenceCode({\n        client,\n        path: {\n           externalReferenceCode: \"6039\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-url": {
-            "get": {
-                "tags": [
-                    "PlacedOrder"
-                ],
-                "operationId": "getPlacedOrderByExternalReferenceCodePaymentURL",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "callbackURL",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "text/plain": {
-                                "schema": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePaymentURL } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePaymentURL({\n        client,\n        path: {\n           externalReferenceCode: \"7302\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-url', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2337,7 +2079,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPaymentURL } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPaymentURL({\n        client,\n        path: {\n           placedOrderId: \"2018\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPaymentURL } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPaymentURL({\n        client,\n        path: {\n           placedOrderId: \"3228\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2347,12 +2089,13 @@
                 ]
             }
         },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/shipments": {
+        "/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/placed-orders": {
             "get": {
                 "tags": [
-                    "Shipment"
+                    "PlacedOrder"
                 ],
-                "operationId": "getPlacedOrderByExternalReferenceCodeShipmentsPage",
+                "description": "Retrieves placed orders in the given channel.",
+                "operationId": "getChannelByExternalReferenceCodePlacedOrdersPage",
                 "parameters": [
                     {
                         "name": "externalReferenceCode",
@@ -2411,12 +2154,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageShipment"
+                                    "$ref": "#/components/schemas/PagePlacedOrder"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PageShipment"
+                                    "$ref": "#/components/schemas/PagePlacedOrder"
                                 }
                             }
                         }
@@ -2426,138 +2169,27 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodeShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodeShipmentsPage({\n        client,\n        path: {\n           externalReferenceCode: \"6392\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodePlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodePlacedOrdersPage({\n        client,\n        path: {\n           externalReferenceCode: \"8755\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/shipments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{externalReferenceCode}/placed-orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
         },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/shipments": {
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-url": {
             "get": {
                 "tags": [
-                    "Shipment"
+                    "PlacedOrder"
                 ],
-                "description": "Retrieve placed order shipments.",
-                "operationId": "getPlacedOrderShipmentsPage",
+                "operationId": "getPlacedOrderByExternalReferenceCodePaymentURL",
                 "parameters": [
                     {
-                        "name": "placedOrderId",
+                        "name": "externalReferenceCode",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "pageSize",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageShipment"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageShipment"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderShipmentsPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderShipmentsPage({\n        client,\n        path: {\n           placedOrderId: \"3939\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/shipments', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/shipments/export-batch": {
-            "post": {
-                "tags": [
-                    "Shipment"
-                ],
-                "operationId": "postPlacedOrderShipmentsPageExportBatch",
-                "parameters": [
-                    {
-                        "name": "placedOrderId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "search",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
                         "schema": {
                             "type": "string"
                         }
@@ -2568,27 +2200,17 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "name": "contentType",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fieldNames",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
                     }
                 ],
                 "responses": {
                     "default": {
                         "description": "default response",
                         "content": {
-                            "application/json": {}
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
                         }
                     }
                 },
@@ -2596,28 +2218,57 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postPlacedOrderShipmentsPageExportBatch } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postPlacedOrderShipmentsPageExportBatch({\n        client,\n        path: {\n           placedOrderId: \"7723\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePaymentURL } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePaymentURL({\n        client,\n        path: {\n           externalReferenceCode: \"8515\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/shipments/export-batch', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-url', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
         },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/delivery-term": {
+        "/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/accounts/by-externalReferenceCode/{accountExternalReferenceCode}/placed-orders": {
             "get": {
                 "tags": [
-                    "Term"
+                    "PlacedOrder"
                 ],
-                "description": "Retrieve delivery term of the given Placed Order.",
-                "operationId": "getPlacedOrderByExternalReferenceCodeDeliveryTerm",
+                "description": "Retrieves placed orders for specific account in the given channel.",
+                "operationId": "getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage",
                 "parameters": [
                     {
-                        "name": "externalReferenceCode",
+                        "name": "accountExternalReferenceCode",
                         "in": "path",
                         "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "channelExternalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
                         "schema": {
                             "type": "string"
                         }
@@ -2629,12 +2280,12 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Term"
+                                    "$ref": "#/components/schemas/PagePlacedOrder"
                                 }
                             },
                             "application/xml": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Term"
+                                    "$ref": "#/components/schemas/PagePlacedOrder"
                                 }
                             }
                         }
@@ -2644,60 +2295,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodeDeliveryTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodeDeliveryTerm({\n        client,\n        path: {\n           externalReferenceCode: \"4326\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getChannelByExternalReferenceCodeChannelExternalReferenceCodeAccountByExternalReferenceCodeAccountExternalReferenceCodePlacedOrdersPage({\n        client,\n        path: {\n           accountExternalReferenceCode: \"9386\",\n           channelExternalReferenceCode: \"7488\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/delivery-term', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-term": {
-            "get": {
-                "tags": [
-                    "Term"
-                ],
-                "description": "Retrieve payment term of the given Placed Order.",
-                "operationId": "getPlacedOrderByExternalReferenceCodePaymentTerm",
-                "parameters": [
-                    {
-                        "name": "externalReferenceCode",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Term"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Term"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePaymentTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePaymentTerm({\n        client,\n        path: {\n           externalReferenceCode: \"907\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-term', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/channels/by-externalReferenceCode/{channelExternalReferenceCode}/accounts/by-externalReferenceCode/{accountExternalReferenceCode}/placed-orders', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2740,7 +2343,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderDeliveryTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderDeliveryTerm({\n        client,\n        path: {\n           placedOrderId: \"9636\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderDeliveryTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderDeliveryTerm({\n        client,\n        path: {\n           placedOrderId: \"7847\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -2788,12 +2391,108 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPaymentTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPaymentTerm({\n        client,\n        path: {\n           placedOrderId: \"4742\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderPaymentTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderPaymentTerm({\n        client,\n        path: {\n           placedOrderId: \"8729\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/{placedOrderId}/payment-term', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/delivery-term": {
+            "get": {
+                "tags": [
+                    "Term"
+                ],
+                "description": "Retrieve delivery term of the given Placed Order.",
+                "operationId": "getPlacedOrderByExternalReferenceCodeDeliveryTerm",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Term"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Term"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodeDeliveryTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodeDeliveryTerm({\n        client,\n        path: {\n           externalReferenceCode: \"5542\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/delivery-term', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-term": {
+            "get": {
+                "tags": [
+                    "Term"
+                ],
+                "description": "Retrieve payment term of the given Placed Order.",
+                "operationId": "getPlacedOrderByExternalReferenceCodePaymentTerm",
+                "parameters": [
+                    {
+                        "name": "externalReferenceCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Term"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Term"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlacedOrderByExternalReferenceCodePaymentTerm } from 'liferay-headless-rest-client/headless-commerce-delivery-order-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlacedOrderByExternalReferenceCodePaymentTerm({\n        client,\n        path: {\n           externalReferenceCode: \"6368\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-commerce-delivery-order/v1.0/placed-orders/by-externalReferenceCode/{externalReferenceCode}/payment-term', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -2835,79 +2534,7 @@
                 },
                 "xml": {
                     "name": "Attachment"
-                },
-                "x-filterable": []
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                },
-                "x-filterable": []
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                },
-                "x-filterable": []
-            },
-            "PageAttachment": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Attachment"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
+                }
             },
             "AttachmentBase64": {
                 "type": "object",
@@ -2931,8 +2558,75 @@
                 },
                 "xml": {
                     "name": "AttachmentBase64"
-                },
-                "x-filterable": []
+                }
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                }
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PageAttachment": {
+                "type": "object",
+                "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Attachment"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    }
+                }
             },
             "OrderTransition": {
                 "type": "object",
@@ -2969,18 +2663,11 @@
                 },
                 "xml": {
                     "name": "OrderTransition"
-                },
-                "x-filterable": []
+                }
             },
             "PageOrderTransition": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/OrderTransition"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -2988,6 +2675,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrderTransition"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -2998,22 +2691,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PlacedOrderAddress": {
                 "type": "object",
@@ -3082,10 +2774,6 @@
                         "type": "string",
                         "readOnly": true
                     },
-                    "subtype": {
-                        "type": "string",
-                        "readOnly": true
-                    },
                     "type": {
                         "type": "string",
                         "readOnly": true
@@ -3111,51 +2799,7 @@
                 },
                 "xml": {
                     "name": "PlacedOrderAddress"
-                },
-                "x-filterable": []
-            },
-            "PagePlacedOrderComment": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PlacedOrderComment"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
+                }
             },
             "PlacedOrderComment": {
                 "type": "object",
@@ -3195,18 +2839,11 @@
                 },
                 "xml": {
                     "name": "PlacedOrderComment"
-                },
-                "x-filterable": []
+                }
             },
-            "PagePlacedOrderItem": {
+            "PagePlacedOrderComment": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PlacedOrderItem"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -3214,6 +2851,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PlacedOrderComment"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -3224,22 +2867,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PlacedOrderItem": {
                 "type": "object",
@@ -3398,20 +3040,12 @@
                 },
                 "xml": {
                     "name": "PlacedOrderItem"
-                },
-                "x-filterable": [
-                    "name",
-                    "quantity",
-                    "sku",
-                    "unitOfMeasure"
-                ]
+                }
             },
             "PlacedOrderItemShipment": {
                 "type": "object",
                 "properties": {
                     "accountId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "readOnly": true,
@@ -3448,8 +3082,6 @@
                         "example": "AB-34098-789-N"
                     },
                     "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "readOnly": true,
@@ -3461,8 +3093,6 @@
                         "readOnly": true
                     },
                     "orderId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "readOnly": true,
@@ -3474,16 +3104,12 @@
                         "example": 10.1
                     },
                     "shippingAddressId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "readOnly": true,
                         "example": 31130
                     },
                     "shippingMethodId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "readOnly": true,
@@ -3523,8 +3149,7 @@
                 },
                 "xml": {
                     "name": "PlacedOrderItemShipment"
-                },
-                "x-filterable": []
+                }
             },
             "Price": {
                 "type": "object",
@@ -3601,8 +3226,7 @@
                 },
                 "xml": {
                     "name": "Price"
-                },
-                "x-filterable": []
+                }
             },
             "Settings": {
                 "type": "object",
@@ -3637,8 +3261,7 @@
                 },
                 "xml": {
                     "name": "Settings"
-                },
-                "x-filterable": []
+                }
             },
             "Status": {
                 "type": "object",
@@ -3666,8 +3289,7 @@
                 },
                 "xml": {
                     "name": "Status"
-                },
-                "x-filterable": []
+                }
             },
             "VirtualItem": {
                 "type": "object",
@@ -3695,26 +3317,67 @@
                 },
                 "xml": {
                     "name": "VirtualItem"
-                },
-                "x-filterable": []
+                }
+            },
+            "PagePlacedOrderItem": {
+                "type": "object",
+                "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PlacedOrderItem"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    }
+                }
             },
             "PagePlacedOrderItemShipment": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/PlacedOrderItemShipment"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -3724,65 +3387,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
-            },
-            "PagePlacedOrder": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PlacedOrder"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
                     },
                     "facets": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Facet"
                         }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PlacedOrder": {
                 "type": "object",
@@ -3942,14 +3561,6 @@
                     "purchaseOrderNumber": {
                         "type": "string"
                     },
-                    "requestedDeliveryDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "shipments": {
-                        "$ref": "#/components/schemas/Shipment"
-                    },
                     "shippingMethod": {
                         "type": "string",
                         "readOnly": true
@@ -3990,243 +3601,7 @@
                 },
                 "xml": {
                     "name": "PlacedOrder"
-                },
-                "x-filterable": [
-                    "account",
-                    "accountId",
-                    "author",
-                    "createDate",
-                    "externalReferenceCode",
-                    "id",
-                    "modifiedDate",
-                    "name",
-                    "orderDate",
-                    "orderStatus",
-                    "orderStatusInfo/code",
-                    "orderType",
-                    "orderTypeExternalReferenceCode",
-                    "purchaseOrderNumber",
-                    "requestedDeliveryDate"
-                ]
-            },
-            "Shipment": {
-                "type": "object",
-                "properties": {
-                    "accountId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 30130
-                    },
-                    "carrier": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "FedEx"
-                    },
-                    "createDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "expectedDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "externalReferenceCode": {
-                        "type": "string",
-                        "readOnly": true
-                    },
-                    "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 30130
-                    },
-                    "itemsCount": {
-                        "type": "integer",
-                        "format": "int32",
-                        "readOnly": true
-                    },
-                    "modifiedDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "oneLineAddress": {
-                        "type": "string",
-                        "readOnly": true
-                    },
-                    "orderExternalReferenceCode": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "AB-34098-789-N"
-                    },
-                    "orderId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 30130
-                    },
-                    "shippingAddress": {
-                        "$ref": "#/components/schemas/ShippingAddress"
-                    },
-                    "shippingAddressId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 31130
-                    },
-                    "shippingDate": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                    },
-                    "shippingMethodId": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 30130
-                    },
-                    "shippingOptionName": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "Standard Delivery"
-                    },
-                    "status": {
-                        "$ref": "#/components/schemas/Status"
-                    },
-                    "trackingNumber": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "123AD-asd"
-                    },
-                    "trackingURL": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "Standard Delivery"
-                    },
-                    "userName": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "John"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.commerce.delivery.order.dto.v1_0.Shipment"
-                    }
-                },
-                "xml": {
-                    "name": "Shipment"
-                },
-                "x-filterable": [
-                    "carrier",
-                    "createDate",
-                    "expectedDate",
-                    "id",
-                    "status",
-                    "tracking"
-                ]
-            },
-            "ShippingAddress": {
-                "type": "object",
-                "properties": {
-                    "city": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "Diamond Bar"
-                    },
-                    "countryISOCode": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "US"
-                    },
-                    "description": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "right stairs, first room on the left"
-                    },
-                    "externalReferenceCode": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "AB-34098-789-N"
-                    },
-                    "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
-                        "type": "integer",
-                        "format": "int64",
-                        "readOnly": true,
-                        "example": 31130
-                    },
-                    "latitude": {
-                        "type": "number",
-                        "format": "double",
-                        "readOnly": true,
-                        "example": 33.9976884
-                    },
-                    "longitude": {
-                        "type": "number",
-                        "format": "double",
-                        "readOnly": true,
-                        "example": -117.8144595
-                    },
-                    "name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "Alessio Antonio Rendina"
-                    },
-                    "phoneNumber": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "(123) 456 7890"
-                    },
-                    "regionISOCode": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "CA"
-                    },
-                    "street1": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "1400 Montefino Ave"
-                    },
-                    "street2": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "1st floor"
-                    },
-                    "street3": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "suite 200"
-                    },
-                    "zip": {
-                        "type": "string",
-                        "readOnly": true,
-                        "example": "91765"
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.commerce.delivery.order.dto.v1_0.ShippingAddress"
-                    }
-                },
-                "xml": {
-                    "name": "ShippingAddress"
-                },
-                "x-filterable": []
+                }
             },
             "Step": {
                 "type": "object",
@@ -4251,8 +3626,7 @@
                 },
                 "xml": {
                     "name": "Step"
-                },
-                "x-filterable": []
+                }
             },
             "Summary": {
                 "type": "object",
@@ -4367,18 +3741,11 @@
                 },
                 "xml": {
                     "name": "Summary"
-                },
-                "x-filterable": []
+                }
             },
-            "PageShipment": {
+            "PagePlacedOrder": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Shipment"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -4386,6 +3753,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PlacedOrder"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -4396,22 +3769,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "Term": {
                 "type": "object",
@@ -4426,8 +3798,6 @@
                         "example": "AAB-34098-789-N"
                     },
                     "id": {
-                        "minimum": 0,
-                        "exclusiveMinimum": false,
                         "type": "integer",
                         "format": "int64",
                         "example": 30130
@@ -4445,8 +3815,7 @@
                 },
                 "xml": {
                     "name": "Term"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

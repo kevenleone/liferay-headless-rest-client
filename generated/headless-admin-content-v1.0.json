@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Headless Admin Content",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplate } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplate({\n        client,\n        path: {\n           siteId: \"5133\",\n           displayPageTemplateKey: \"4346\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.content.client', and version '2.0.43'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.admin.content.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.admin.content.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplatesPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplatesPage({\n        client,\n        path: {\n           siteId: \"6303\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.headless.admin.content.client', and version '2.0.39'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.headless.admin.content.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.headless.admin.content.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -15,83 +15,6 @@
         }
     ],
     "paths": {
-        "/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates/{displayPageTemplateKey}": {
-            "get": {
-                "tags": [
-                    "DisplayPageTemplate"
-                ],
-                "description": "Retrieves a display page template of a site",
-                "operationId": "getSiteDisplayPageTemplate",
-                "parameters": [
-                    {
-                        "name": "siteId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "displayPageTemplateKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/DisplayPageTemplate"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/DisplayPageTemplate"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplate } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplate({\n        client,\n        path: {\n           siteId: \"8300\",\n           displayPageTemplateKey: \"4323\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates/{displayPageTemplateKey}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates": {
             "get": {
                 "tags": [
@@ -179,12 +102,89 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplatesPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplatesPage({\n        client,\n        path: {\n           siteId: \"4938\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplatesPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplatesPage({\n        client,\n        path: {\n           siteId: \"8677\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates/{displayPageTemplateKey}": {
+            "get": {
+                "tags": [
+                    "DisplayPageTemplate"
+                ],
+                "description": "Retrieves a display page template of a site",
+                "operationId": "getSiteDisplayPageTemplate",
+                "parameters": [
+                    {
+                        "name": "siteId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "displayPageTemplateKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DisplayPageTemplate"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DisplayPageTemplate"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteDisplayPageTemplate } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteDisplayPageTemplate({\n        client,\n        path: {\n           siteId: \"8425\",\n           displayPageTemplateKey: \"8908\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/sites/{siteId}/display-page-templates/{displayPageTemplateKey}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -232,7 +232,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSitePageDefinitionPreview } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSitePageDefinitionPreview({\n        client,\n        path: {\n           siteId: \"7001\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSitePageDefinitionPreview } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSitePageDefinitionPreview({\n        client,\n        path: {\n           siteId: \"636\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -309,7 +309,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"6925\",\n           version: \"1128\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"1211\",\n           version: \"341\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -355,12 +355,88 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"6652\",\n           version: \"978\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteStructuredContentByVersion } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteStructuredContentByVersion({\n        client,\n        path: {\n           structuredContentId: \"9877\",\n           version: \"3094\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/structured-contents/{structuredContentId}/by-version/{version}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/headless-admin-content/v1.0/structured-contents/{structuredContentId}/versions": {
+            "get": {
+                "tags": [
+                    "StructuredContent"
+                ],
+                "description": "Retrieves all versions of a structured content via its ID.",
+                "operationId": "getStructuredContentsVersionsPage",
+                "parameters": [
+                    {
+                        "name": "structuredContentId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "restrictFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nestedFields",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageStructuredContent"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageStructuredContent"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentsVersionsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentsVersionsPage({\n        client,\n        path: {\n           structuredContentId: \"8253\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/structured-contents/{structuredContentId}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -480,88 +556,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteStructuredContentsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteStructuredContentsPage({\n        client,\n        path: {\n           siteId: \"9409\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getSiteStructuredContentsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getSiteStructuredContentsPage({\n        client,\n        path: {\n           siteId: \"2634\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/sites/{siteId}/structured-contents', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/headless-admin-content/v1.0/structured-contents/{structuredContentId}/versions": {
-            "get": {
-                "tags": [
-                    "StructuredContent"
-                ],
-                "description": "Retrieves all versions of a structured content via its ID.",
-                "operationId": "getStructuredContentsVersionsPage",
-                "parameters": [
-                    {
-                        "name": "structuredContentId",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "fields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "restrictFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "nestedFields",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageStructuredContent"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageStructuredContent"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getStructuredContentsVersionsPage } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getStructuredContentsVersionsPage({\n        client,\n        path: {\n           structuredContentId: \"6043\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/headless-admin-content/v1.0/structured-contents/{structuredContentId}/versions', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -618,7 +618,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteStructuredContentDraft } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteStructuredContentDraft({\n        client,\n        path: {\n           siteId: \"3904\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postSiteStructuredContentDraft } from 'liferay-headless-rest-client/headless-admin-content-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postSiteStructuredContentDraft({\n        client,\n        path: {\n           siteId: \"1919\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -658,8 +658,7 @@
                 "description": "The Client Extension for the theme spritemap of a page",
                 "xml": {
                     "name": "ClientExtension"
-                },
-                "x-filterable": []
+                }
             },
             "ContentAssociation": {
                 "type": "object",
@@ -680,8 +679,7 @@
                 },
                 "xml": {
                     "name": "ContentAssociation"
-                },
-                "x-filterable": []
+                }
             },
             "Creator": {
                 "type": "object",
@@ -748,17 +746,11 @@
                 "description": "The structured content's creator.",
                 "xml": {
                     "name": "Creator"
-                },
-                "x-filterable": []
+                }
             },
             "CustomField": {
                 "type": "object",
                 "properties": {
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.portal.vulcan.custom.field.CustomField"
-                    },
                     "customValue": {
                         "$ref": "#/components/schemas/CustomValue"
                     },
@@ -770,22 +762,21 @@
                     "name": {
                         "type": "string",
                         "description": "The field's internal name. This is valid for comparisons and unique in the structured content."
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.delivery.dto.v1_0.CustomField"
                     }
                 },
                 "description": "A list of the custom fields associated with the structured content.",
                 "xml": {
                     "name": "CustomField"
-                },
-                "x-filterable": []
+                }
             },
             "CustomValue": {
                 "type": "object",
                 "properties": {
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.portal.vulcan.custom.field.CustomValue"
-                    },
                     "data": {
                         "type": "object",
                         "description": "The field's content value for simple types."
@@ -800,13 +791,17 @@
                     },
                     "geo": {
                         "$ref": "#/components/schemas/Geo"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.delivery.dto.v1_0.CustomValue"
                     }
                 },
                 "description": "The field's value.",
                 "xml": {
                     "name": "CustomValue"
-                },
-                "x-filterable": []
+                }
             },
             "DisplayPageTemplate": {
                 "required": [
@@ -893,8 +888,7 @@
                 "description": "Represents a Display Page Template that has fields and is tied to a content type",
                 "xml": {
                     "name": "DisplayPageTemplate"
-                },
-                "x-filterable": []
+                }
             },
             "DisplayPageTemplateSettings": {
                 "type": "object",
@@ -917,17 +911,37 @@
                 "description": "The Display Page Template's external key.",
                 "xml": {
                     "name": "DisplayPageTemplateSettings"
-                },
-                "x-filterable": []
+                }
+            },
+            "Facet": {
+                "type": "object",
+                "properties": {
+                    "facetCriteria": {
+                        "type": "string"
+                    },
+                    "facetValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FacetValue"
+                        }
+                    }
+                }
+            },
+            "FacetValue": {
+                "type": "object",
+                "properties": {
+                    "numberOfOccurrences": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                }
             },
             "Geo": {
                 "type": "object",
                 "properties": {
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.portal.vulcan.custom.field.Geo"
-                    },
                     "latitude": {
                         "type": "number",
                         "description": "The latitude of a point in space.",
@@ -937,13 +951,17 @@
                         "type": "number",
                         "description": "The longitude of a point in space.",
                         "format": "double"
+                    },
+                    "x-class-name": {
+                        "type": "string",
+                        "readOnly": true,
+                        "default": "com.liferay.headless.delivery.dto.v1_0.Geo"
                     }
                 },
                 "description": "A point determined by latitude and longitude.",
                 "xml": {
                     "name": "Geo"
-                },
-                "x-filterable": []
+                }
             },
             "MasterPage": {
                 "type": "object",
@@ -965,8 +983,7 @@
                 "description": "The page's master page.",
                 "xml": {
                     "name": "MasterPage"
-                },
-                "x-filterable": []
+                }
             },
             "OpenGraphSettingsMapping": {
                 "type": "object",
@@ -995,34 +1012,7 @@
                 },
                 "xml": {
                     "name": "OpenGraphSettingsMapping"
-                },
-                "x-filterable": []
-            },
-            "Options": {
-                "type": "object",
-                "properties": {
-                    "value": {
-                        "type": "string",
-                        "description": "The page rule condition's value."
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.headless.delivery.dto.v1_0.Options"
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The page rule condition option's type.",
-                        "enum": [
-                            "Equal",
-                            "NotEqual"
-                        ]
-                    }
-                },
-                "xml": {
-                    "name": "Options"
-                },
-                "x-filterable": []
+                }
             },
             "PageDefinition": {
                 "type": "object",
@@ -1053,8 +1043,49 @@
                 },
                 "xml": {
                     "name": "PageDefinition"
-                },
-                "x-filterable": []
+                }
+            },
+            "PageDisplayPageTemplate": {
+                "type": "object",
+                "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DisplayPageTemplate"
+                        }
+                    },
+                    "actions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "page": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
+                    }
+                }
             },
             "PageElement": {
                 "type": "object",
@@ -1102,8 +1133,7 @@
                 "description": "The page's page element.",
                 "xml": {
                     "name": "PageElement"
-                },
-                "x-filterable": []
+                }
             },
             "PageRule": {
                 "type": "object",
@@ -1147,12 +1177,15 @@
                 "description": "A list of the page rules this page has.",
                 "xml": {
                     "name": "PageRule"
-                },
-                "x-filterable": []
+                }
             },
             "PageRuleAction": {
                 "type": "object",
                 "properties": {
+                    "action": {
+                        "type": "string",
+                        "description": "The page rule action's action."
+                    },
                     "id": {
                         "type": "string",
                         "description": "The page rule action's ID."
@@ -1174,26 +1207,26 @@
                 "description": "A list of actions of a Page rule.",
                 "xml": {
                     "name": "PageRuleAction"
-                },
-                "x-filterable": []
+                }
             },
             "PageRuleCondition": {
                 "type": "object",
                 "properties": {
-                    "field": {
+                    "condition": {
                         "type": "string",
-                        "description": "The page rule condition's field."
+                        "description": "The page rule condition's description."
                     },
                     "id": {
                         "type": "string",
                         "description": "The page rule condition's ID."
                     },
-                    "options": {
-                        "$ref": "#/components/schemas/Options"
-                    },
                     "type": {
                         "type": "string",
                         "description": "The page rule condition's type."
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "The page rule condition's value."
                     },
                     "x-class-name": {
                         "type": "string",
@@ -1204,8 +1237,7 @@
                 "description": "A list of conditions of a Page rule.",
                 "xml": {
                     "name": "PageRuleCondition"
-                },
-                "x-filterable": []
+                }
             },
             "SEOSettingsMapping": {
                 "type": "object",
@@ -1238,8 +1270,7 @@
                 },
                 "xml": {
                     "name": "SEOSettingsMapping"
-                },
-                "x-filterable": []
+                }
             },
             "Settings": {
                 "type": "object",
@@ -1303,8 +1334,7 @@
                 "description": "The page's settings.",
                 "xml": {
                     "name": "Settings"
-                },
-                "x-filterable": []
+                }
             },
             "StyleBook": {
                 "type": "object",
@@ -1326,8 +1356,7 @@
                 "description": "The StyleBook that is applied to the page.",
                 "xml": {
                     "name": "StyleBook"
-                },
-                "x-filterable": []
+                }
             },
             "UserGroupBrief": {
                 "type": "object",
@@ -1352,79 +1381,7 @@
                 "description": "A list of userGroups information.",
                 "xml": {
                     "name": "UserGroupBrief"
-                },
-                "x-filterable": []
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                },
-                "x-filterable": []
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                },
-                "x-filterable": []
-            },
-            "PageDisplayPageTemplate": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/DisplayPageTemplate"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
+                }
             },
             "AggregateRating": {
                 "type": "object",
@@ -1468,8 +1425,7 @@
                 "description": "The structured content's average rating.",
                 "xml": {
                     "name": "AggregateRating"
-                },
-                "x-filterable": []
+                }
             },
             "ContentDocument": {
                 "type": "object",
@@ -1540,8 +1496,7 @@
                 "description": "A content document element that stores an image file.",
                 "xml": {
                     "name": "ContentDocument"
-                },
-                "x-filterable": []
+                }
             },
             "ContentField": {
                 "type": "object",
@@ -1605,8 +1560,7 @@
                 "description": "The list of fields that store the structured content's information.",
                 "xml": {
                     "name": "ContentField"
-                },
-                "x-filterable": []
+                }
             },
             "ContentFieldValue": {
                 "type": "object",
@@ -1644,18 +1598,11 @@
                 "description": "The localized field's values.",
                 "xml": {
                     "name": "ContentFieldValue"
-                },
-                "x-filterable": []
+                }
             },
             "PageStructuredContent": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/StructuredContent"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -1663,6 +1610,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/StructuredContent"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -1673,22 +1626,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "Permission": {
                 "type": "object",
@@ -1699,20 +1651,13 @@
                             "type": "string"
                         }
                     },
-                    "roleExternalReferenceCode": {
-                        "type": "string"
-                    },
                     "roleName": {
-                        "type": "string"
-                    },
-                    "roleType": {
                         "type": "string"
                     }
                 },
                 "xml": {
                     "name": "Permission"
-                },
-                "x-filterable": []
+                }
             },
             "RelatedContent": {
                 "type": "object",
@@ -1740,8 +1685,7 @@
                 "description": "A list of related contents to this structured content.",
                 "xml": {
                     "name": "RelatedContent"
-                },
-                "x-filterable": []
+                }
             },
             "RenderedContent": {
                 "type": "object",
@@ -1784,8 +1728,7 @@
                 "description": "A list of rendered content, which results from using a template to process the content and return HTML.",
                 "xml": {
                     "name": "RenderedContent"
-                },
-                "x-filterable": []
+                }
             },
             "StructuredContent": {
                 "required": [
@@ -2019,20 +1962,7 @@
                 "description": "Represents content that has fields and is rendered by a template backed by a `ContentStructure`. This is modeled internally as a `JournalArticle`.",
                 "xml": {
                     "name": "StructuredContent"
-                },
-                "x-filterable": [
-                    "contentStructureId",
-                    "creatorId",
-                    "dateCreated",
-                    "dateModified",
-                    "datePublished",
-                    "friendlyUrlPath",
-                    "id",
-                    "keywords",
-                    "priority",
-                    "taxonomyCategoryIds",
-                    "title"
-                ]
+                }
             },
             "StructuredContentLink": {
                 "type": "object",
@@ -2063,8 +1993,7 @@
                 "description": "A link to structured content on the server.",
                 "xml": {
                     "name": "StructuredContentLink"
-                },
-                "x-filterable": []
+                }
             },
             "TaxonomyCategoryBrief": {
                 "type": "object",
@@ -2106,8 +2035,7 @@
                 "description": "The categories associated with this structured content.",
                 "xml": {
                     "name": "TaxonomyCategoryBrief"
-                },
-                "x-filterable": []
+                }
             },
             "TaxonomyCategoryReference": {
                 "required": [
@@ -2133,7 +2061,9 @@
                 "xml": {
                     "name": "TaxonomyCategoryReference"
                 },
-                "x-filterable": []
+                "enum": [
+                    "externalReferenceCode"
+                ]
             }
         },
         "securitySchemes": {

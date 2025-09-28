@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "System for Cross-domain Identity Management",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getV2GroupById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2GroupById({\n        client,\n        path: {\n           id: \"6945\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nLiferay SCIM endpoints. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.scim.rest.client', and version '1.0.15'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.scim.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.scim.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getV2GroupById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2GroupById({\n        client,\n        path: {\n           id: \"3468\",\n        },\n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nLiferay SCIM endpoints. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.scim.rest.client', and version '1.0.11'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.scim.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.scim.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -30,13 +30,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "name": "excludedAttributes",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
                     }
                 ],
                 "responses": {
@@ -55,7 +48,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2GroupById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2GroupById({\n        client,\n        path: {\n           id: \"2979\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2GroupById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2GroupById({\n        client,\n        path: {\n           id: \"2075\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -101,7 +94,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putV2Group } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putV2Group({\n        client,\n        path: {\n           id: \"1320\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putV2Group } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putV2Group({\n        client,\n        path: {\n           id: \"1073\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -138,58 +131,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteV2Group } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteV2Group({\n        client,\n        path: {\n           id: \"416\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteV2Group } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteV2Group({\n        client,\n        path: {\n           id: \"8091\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Groups/{id}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "Group"
-                ],
-                "description": "Updates a group.",
-                "operationId": "patchV2Group",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/scim+json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PatchOp"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "*/*": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchV2Group } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchV2Group({\n        client,\n        path: {\n           id: \"7455\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Groups/{id}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -204,20 +151,6 @@
                 "parameters": [
                     {
                         "name": "count",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "excludedAttributes",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -331,189 +264,6 @@
                 ]
             }
         },
-        "/o/scim/v1.0/v2/ResourceTypes/{id}": {
-            "get": {
-                "tags": [
-                    "ResourceTypes"
-                ],
-                "operationId": "getV2ResourceTypeById",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2ResourceTypeById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2ResourceTypeById({\n        client,\n        path: {\n           id: \"3268\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/ResourceTypes/{id}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/scim/v1.0/v2/ResourceTypes": {
-            "get": {
-                "tags": [
-                    "ResourceTypes"
-                ],
-                "description": "To discover the types of resources available on a SCIM service provider.",
-                "operationId": "getV2ResourceTypes",
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2ResourceTypes } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2ResourceTypes({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/ResourceTypes', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/scim/v1.0/v2/Schemas/{id}": {
-            "get": {
-                "tags": [
-                    "Schema"
-                ],
-                "operationId": "getV2SchemaById",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2SchemaById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2SchemaById({\n        client,\n        path: {\n           id: \"7331\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Schemas/{id}', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/scim/v1.0/v2/Schemas": {
-            "get": {
-                "tags": [
-                    "Schema"
-                ],
-                "description": "Lists schemas.",
-                "operationId": "getV2Schemas",
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2Schemas } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2Schemas({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Schemas', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/scim/v1.0/v2/ServiceProviderConfig": {
-            "get": {
-                "tags": [
-                    "ServiceProviderConfig"
-                ],
-                "description": "Gives serviceProviderConfig info.",
-                "operationId": "getV2ServiceProviderConfig",
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2ServiceProviderConfig } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2ServiceProviderConfig({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/ServiceProviderConfig', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
         "/o/scim/v1.0/v2/Users/{id}": {
             "get": {
                 "tags": [
@@ -547,7 +297,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2UserById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2UserById({\n        client,\n        path: {\n           id: \"9073\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getV2UserById } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getV2UserById({\n        client,\n        path: {\n           id: \"6620\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -593,7 +343,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putV2User } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putV2User({\n        client,\n        path: {\n           id: \"3470\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { putV2User } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await putV2User({\n        client,\n        path: {\n           id: \"3929\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -630,58 +380,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteV2User } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteV2User({\n        client,\n        path: {\n           id: \"1046\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deleteV2User } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deleteV2User({\n        client,\n        path: {\n           id: \"2316\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Users/{id}', {\n  method: 'DELETE',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            },
-            "patch": {
-                "tags": [
-                    "User"
-                ],
-                "description": "Updates a user.",
-                "operationId": "patchV2User",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/scim+json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PatchOp"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/scim+json": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchV2User } from 'liferay-headless-rest-client/scim-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchV2User({\n        client,\n        path: {\n           id: \"4752\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/scim/v1.0/v2/Users/{id}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -696,13 +400,6 @@
                 "parameters": [
                     {
                         "name": "count",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "filter",
                         "in": "query",
                         "schema": {
                             "type": "string"
@@ -819,60 +516,6 @@
     },
     "components": {
         "schemas": {
-            "Operation": {
-                "type": "object",
-                "properties": {
-                    "op": {
-                        "type": "string",
-                        "description": "The method that should be used in the operation. Possible values are add, remove and replace."
-                    },
-                    "path": {
-                        "type": "string",
-                        "description": "The path to the specify attribute/sub-attribute that should be updated."
-                    },
-                    "value": {
-                        "type": "object",
-                        "description": "The value that should be updated."
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.scim.rest.dto.v1_0.Operation"
-                    }
-                },
-                "xml": {
-                    "name": "Operation"
-                },
-                "x-filterable": []
-            },
-            "PatchOp": {
-                "type": "object",
-                "properties": {
-                    "Operations": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Operation"
-                        }
-                    },
-                    "schemas": {
-                        "type": "array",
-                        "description": "The schema associated to this operation.",
-                        "items": {
-                            "type": "string",
-                            "description": "The schema associated to this operation."
-                        }
-                    },
-                    "x-class-name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "default": "com.liferay.scim.rest.dto.v1_0.PatchOp"
-                    }
-                },
-                "xml": {
-                    "name": "PatchOp"
-                },
-                "x-filterable": []
-            },
             "Group": {
                 "type": "object",
                 "properties": {
@@ -915,8 +558,7 @@
                 },
                 "xml": {
                     "name": "Group"
-                },
-                "x-filterable": []
+                }
             },
             "Meta": {
                 "type": "object",
@@ -951,8 +593,7 @@
                 },
                 "xml": {
                     "name": "Meta"
-                },
-                "x-filterable": []
+                }
             },
             "MultiValuedAttribute": {
                 "type": "object",
@@ -986,8 +627,7 @@
                 "description": "A list of certificates associated with the resource (e.g., a User).",
                 "xml": {
                     "name": "MultiValuedAttribute"
-                },
-                "x-filterable": []
+                }
             },
             "QueryAttributes": {
                 "type": "object",
@@ -1038,8 +678,7 @@
                 },
                 "xml": {
                     "name": "QueryAttributes"
-                },
-                "x-filterable": []
+                }
             },
             "Name": {
                 "type": "object",
@@ -1071,8 +710,7 @@
                 "description": "The components of the user's name.",
                 "xml": {
                     "name": "Name"
-                },
-                "x-filterable": []
+                }
             },
             "User": {
                 "type": "object",
@@ -1219,8 +857,7 @@
                 },
                 "xml": {
                     "name": "User"
-                },
-                "x-filterable": []
+                }
             },
             "UserSchemaExtension": {
                 "type": "object",
@@ -1241,8 +878,7 @@
                 "description": "The components of the Liferay's User Schema Extension.",
                 "xml": {
                     "name": "UserSchemaExtension"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Language",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getMessage } from 'liferay-headless-rest-client/language-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getMessage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.language.rest.client', and version '1.0.9'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.portal.language.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.language.rest.client/latest",
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getMessage } from 'liferay-headless-rest-client/language-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getMessage({\n        client,\n        \n    });\n\n    console.log(data);\n}\n```\n#### Java installation:\n\nA Java client JAR is available for use with the group ID 'com.liferay', artifact ID 'com.liferay.portal.language.rest.client', and version '1.0.4'.\n\n```gradle\nimplementation group: \"com.liferay\", name: \"com.liferay.portal.language.rest.client\", version: \"latest\"\n```\n\nReference: https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.language.rest.client/latest",
         "license": {
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -209,6 +209,53 @@
                 ]
             }
         },
+        "/o/language/v1.0/messages/import": {
+            "post": {
+                "tags": [
+                    "Message"
+                ],
+                "operationId": "postMessageImport",
+                "parameters": [
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostMessageImportRequestBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postMessageImport } from 'liferay-headless-rest-client/language-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postMessageImport({\n        client,\n        \n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/language/v1.0/messages/import', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
         "/o/language/v1.0/messages/batch": {
             "put": {
                 "tags": [
@@ -356,119 +403,6 @@
                     }
                 ]
             }
-        },
-        "/o/language/v1.0/messages/import": {
-            "post": {
-                "tags": [
-                    "Message"
-                ],
-                "operationId": "postMessageImport",
-                "parameters": [
-                    {
-                        "name": "languageId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PostMessageImportRequestBody"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postMessageImport } from 'liferay-headless-rest-client/language-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postMessageImport({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/language/v1.0/messages/import', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/language/v1.0/messages/export": {
-            "post": {
-                "tags": [
-                    "Message"
-                ],
-                "operationId": "postMessagesExportPage",
-                "parameters": [
-                    {
-                        "name": "languageId",
-                        "in": "query",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageMessage"
-                                }
-                            },
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/PageMessage"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { postMessagesExportPage } from 'liferay-headless-rest-client/language-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await postMessagesExportPage({\n        client,\n        \n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/language/v1.0/messages/export', {\n  method: 'POST',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
         }
     },
     "components": {
@@ -493,8 +427,7 @@
                 },
                 "xml": {
                     "name": "Message"
-                },
-                "x-filterable": []
+                }
             },
             "PostMessageImportRequestBody": {
                 "type": "object",
@@ -504,8 +437,7 @@
                         "description": "File",
                         "format": "binary"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "MultipartBody": {
                 "type": "object",
@@ -516,79 +448,7 @@
                             "type": "string"
                         }
                     }
-                },
-                "x-filterable": []
-            },
-            "Facet": {
-                "type": "object",
-                "properties": {
-                    "facetCriteria": {
-                        "type": "string"
-                    },
-                    "facetValues": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/FacetValue"
-                        }
-                    }
-                },
-                "x-filterable": []
-            },
-            "FacetValue": {
-                "type": "object",
-                "properties": {
-                    "numberOfOccurrences": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "term": {
-                        "type": "string"
-                    }
-                },
-                "x-filterable": []
-            },
-            "PageMessage": {
-                "type": "object",
-                "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Message"
-                        }
-                    },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "actions": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
-                    },
-                    "page": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
-                    }
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {

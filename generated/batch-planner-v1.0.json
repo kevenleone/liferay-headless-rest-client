@@ -7,7 +7,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
         "version": "v1.0",
-        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"9652\",\n        },\n    });\n\n    console.log(data);\n}\n```"
+        "description": "#### TypeScript SDK Code Sample\n\n```typescript\nimport { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"4439\",\n        },\n    });\n\n    console.log(data);\n}\n```"
     },
     "servers": [
         {
@@ -66,12 +66,50 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"1042\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyFieldsPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyFieldsPage({\n        client,\n        path: {\n           internalClassNameKey: \"1556\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/batch-planner/v1.0/plans/{internalClassNameKey}/fields', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
+                    }
+                ]
+            }
+        },
+        "/o/batch-planner/v1.0/plans/{internalClassNameKey}/template": {
+            "get": {
+                "tags": [
+                    "Plan"
+                ],
+                "operationId": "getPlanTemplate",
+                "parameters": [
+                    {
+                        "name": "internalClassNameKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "default response",
+                        "content": {
+                            "application/octet-stream": {}
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "typescript",
+                        "label": "sdk",
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanTemplate } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanTemplate({\n        client,\n        path: {\n           internalClassNameKey: \"6579\",\n        },\n    });\n\n    console.log(data);\n}"
+                    },
+                    {
+                        "lang": "javascript",
+                        "label": "Liferay.Util.fetch",
+                        "source": "const response = await Liferay.Util.fetch('/o/batch-planner/v1.0/plans/{internalClassNameKey}/template', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -113,7 +151,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlan({\n        client,\n        path: {\n           planId: \"6764\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlan({\n        client,\n        path: {\n           planId: \"6929\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -150,7 +188,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlan({\n        client,\n        path: {\n           planId: \"8555\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { deletePlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await deletePlan({\n        client,\n        path: {\n           planId: \"55\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -209,50 +247,12 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlan({\n        client,\n        path: {\n           planId: \"7720\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { patchPlan } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await patchPlan({\n        client,\n        path: {\n           planId: \"3669\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
                         "label": "Liferay.Util.fetch",
                         "source": "const response = await Liferay.Util.fetch('/o/batch-planner/v1.0/plans/{planId}', {\n  method: 'PATCH',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
-                    }
-                ]
-            }
-        },
-        "/o/batch-planner/v1.0/plans/{internalClassNameKey}/template": {
-            "get": {
-                "tags": [
-                    "Plan"
-                ],
-                "operationId": "getPlanTemplate",
-                "parameters": [
-                    {
-                        "name": "internalClassNameKey",
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/octet-stream": {}
-                        }
-                    }
-                },
-                "x-codeSamples": [
-                    {
-                        "lang": "typescript",
-                        "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanTemplate } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanTemplate({\n        client,\n        path: {\n           internalClassNameKey: \"8436\",\n        },\n    });\n\n    console.log(data);\n}"
-                    },
-                    {
-                        "lang": "javascript",
-                        "label": "Liferay.Util.fetch",
-                        "source": "const response = await Liferay.Util.fetch('/o/batch-planner/v1.0/plans/{internalClassNameKey}/template', {\n  method: 'GET',\n})\n\nconst data = await response.json();\n\nconsole.log(data);"
                     }
                 ]
             }
@@ -417,7 +417,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeySiteScopesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeySiteScopesPage({\n        client,\n        path: {\n           internalClassNameKey: \"364\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeySiteScopesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeySiteScopesPage({\n        client,\n        path: {\n           internalClassNameKey: \"2499\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -471,7 +471,7 @@
                     {
                         "lang": "typescript",
                         "label": "sdk",
-                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyStrategiesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyStrategiesPage({\n        client,\n        path: {\n           internalClassNameKey: \"1924\",\n        },\n    });\n\n    console.log(data);\n}"
+                        "source": "import { createClient } from 'liferay-headless-rest-client';\nimport { getPlanInternalClassNameKeyStrategiesPage } from 'liferay-headless-rest-client/batch-planner-v1.0';\n\nconst client = createClient({\n    baseUrl: 'http://localhost:8080',\n    headers: {\n        Authorization: `Basic ${btoa(\"test@liferay.com:test\")}`,\n    },\n});\n\nasync function main() {\n    const { data } = await getPlanInternalClassNameKeyStrategiesPage({\n        client,\n        path: {\n           internalClassNameKey: \"9696\",\n        },\n    });\n\n    console.log(data);\n}"
                     },
                     {
                         "lang": "javascript",
@@ -496,8 +496,7 @@
                             "$ref": "#/components/schemas/FacetValue"
                         }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "FacetValue": {
                 "type": "object",
@@ -509,8 +508,7 @@
                     "term": {
                         "type": "string"
                     }
-                },
-                "x-filterable": []
+                }
             },
             "Field": {
                 "type": "object",
@@ -544,18 +542,11 @@
                 },
                 "xml": {
                     "name": "Field"
-                },
-                "x-filterable": []
+                }
             },
             "PageField": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Field"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -563,6 +554,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Field"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -573,22 +570,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "Mapping": {
                 "type": "object",
@@ -624,8 +620,7 @@
                 },
                 "xml": {
                     "name": "Mapping"
-                },
-                "x-filterable": []
+                }
             },
             "Plan": {
                 "type": "object",
@@ -694,8 +689,7 @@
                 },
                 "xml": {
                     "name": "Plan"
-                },
-                "x-filterable": []
+                }
             },
             "Policy": {
                 "type": "object",
@@ -722,26 +716,25 @@
                 },
                 "xml": {
                     "name": "Policy"
-                },
-                "x-filterable": []
+                }
             },
             "PagePlan": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Plan"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -751,40 +744,39 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "PageSiteScope": {
                 "type": "object",
                 "properties": {
+                    "lastPage": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
                     "items": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/SiteScope"
                         }
                     },
-                    "lastPage": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
-                    "totalCount": {
-                        "type": "integer",
-                        "format": "int64"
-                    },
                     "actions": {
                         "type": "object",
                         "additionalProperties": {
@@ -794,22 +786,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "SiteScope": {
                 "type": "object",
@@ -829,18 +820,11 @@
                 },
                 "xml": {
                     "name": "SiteScope"
-                },
-                "x-filterable": []
+                }
             },
             "PageStrategy": {
                 "type": "object",
                 "properties": {
-                    "items": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Strategy"
-                        }
-                    },
                     "lastPage": {
                         "type": "integer",
                         "format": "int64"
@@ -848,6 +832,12 @@
                     "totalCount": {
                         "type": "integer",
                         "format": "int64"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Strategy"
+                        }
                     },
                     "actions": {
                         "type": "object",
@@ -858,22 +848,21 @@
                             }
                         }
                     },
-                    "facets": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Facet"
-                        }
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int64"
                     },
                     "page": {
                         "type": "integer",
                         "format": "int64"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int64"
+                    "facets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Facet"
+                        }
                     }
-                },
-                "x-filterable": []
+                }
             },
             "Strategy": {
                 "type": "object",
@@ -892,8 +881,7 @@
                 },
                 "xml": {
                     "name": "Strategy"
-                },
-                "x-filterable": []
+                }
             }
         },
         "securitySchemes": {
