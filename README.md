@@ -6,7 +6,7 @@ A TypeScript client library for interacting with Liferay's Headless REST APIs. T
 
 ## Liferay Version Compatibility
 
-This library is designed to work with `Liferay Portal 2025 Q1` and above. The API endpoints and types are generated from Liferay's OpenAPI specifications for these versions.
+This library is designed to work with `Liferay Portal 2025 Q2` and above. The API endpoints and types are generated from Liferay's OpenAPI specifications for these versions.
 
 ## Installation
 
