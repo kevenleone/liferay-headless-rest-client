@@ -24,7 +24,11 @@ export type Collaborator = {
     /**
      * The collaborator external reference code.
      */
-    externalReferenceCode: string;
+    readonly externalReferenceCode?: string;
+    /**
+     * The collaborator ID.
+     */
+    id?: number;
     /**
      * The collaborator name.
      */
@@ -37,11 +41,11 @@ export type Collaborator = {
      * If the collaborator can share or not the asset.
      */
     share?: boolean;
-    readonly 'x-class-name'?: string;
     /**
      * The collaborator type.
      */
-    type: 'User' | 'UserGroup';
+    type: string;
+    readonly 'x-class-name'?: string;
 };
 
 export type Creator = {
@@ -88,30 +92,6 @@ export type Creator = {
     readonly 'x-class-name'?: string;
 };
 
-export type Facet = {
-    facetCriteria?: string;
-    facetValues?: Array<FacetValue>;
-};
-
-export type FacetValue = {
-    numberOfOccurrences?: number;
-    term?: string;
-};
-
-export type PageCollaborator = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<Collaborator>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
 /**
  * A list of userGroups information.
  */
@@ -125,6 +105,30 @@ export type UserGroupBrief = {
      */
     readonly name?: string;
     readonly 'x-class-name'?: string;
+};
+
+export type Facet = {
+    facetCriteria?: string;
+    facetValues?: Array<FacetValue>;
+};
+
+export type FacetValue = {
+    numberOfOccurrences?: number;
+    term?: string;
+};
+
+export type PageCollaborator = {
+    items?: Array<Collaborator>;
+    lastPage?: number;
+    totalCount?: number;
+    actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -149,11 +153,33 @@ export type AuditFieldChange = {
     readonly 'x-class-name'?: string;
 };
 
+export type ParentTaxonomyCategory = {
+    /**
+     * The parent taxonomy category's external reference code.
+     */
+    externalReferenceCode?: string;
+    readonly 'x-class-name'?: string;
+};
+
+export type ParentTaxonomyVocabulary = {
+    /**
+     * The parent category's `TaxonomyVocabulary` external reference code.
+     */
+    externalReferenceCode?: string;
+    readonly 'x-class-name'?: string;
+};
+
 export type Permission = {
     actionIds?: Array<string>;
     roleExternalReferenceCode?: string;
     roleName?: string;
     roleType?: string;
+};
+
+export type Scope = {
+    externalReferenceCode?: string;
+    readonly 'x-class-name'?: string;
+    type?: 'AssetLibrary' | 'Site';
 };
 
 export type Status = {
@@ -173,6 +199,13 @@ export type TaxonomyCategoryBrief = {
     readonly embeddedTaxonomyCategory?: {
         [key: string]: unknown;
     };
+    parentTaxonomyCategory?: ParentTaxonomyCategory;
+    parentTaxonomyVocabulary?: ParentTaxonomyVocabulary;
+    scope?: Scope;
+    /**
+     * The category's external reference code.
+     */
+    taxonomyCategoryExternalReferenceCode?: string;
     /**
      * The category's ID. This can be used to retrieve more information in the `TaxonomyCategory` API.
      */
@@ -196,17 +229,17 @@ export type Version = {
 };
 
 export type PagePermission = {
+    items?: Array<Permission>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Permission>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ValidationError = {
@@ -228,17 +261,17 @@ export type ValidationRequest = {
 };
 
 export type PageNecessaryCookieEntry = {
+    items?: Array<NecessaryCookieEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NecessaryCookieEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
     readonly 'x-schema-name'?: string;
 };
 
@@ -256,6 +289,8 @@ export type NecessaryCookieEntry = {
     readonly dateCreated?: string;
     readonly dateModified?: string;
     defaultLanguageId?: string;
+    displayDate?: string;
+    expirationDate?: string;
     externalReferenceCode?: string;
     /**
      * A relative URL to the page's rendered content.
@@ -275,12 +310,14 @@ export type NecessaryCookieEntry = {
     objectEntryFolderExternalReferenceCode?: string;
     objectEntryFolderId?: number;
     permissions?: Array<Permission>;
+    reviewDate?: string;
+    readonly scopeId?: number;
     readonly scopeKey?: string;
     readonly status?: number;
     /**
      * The categories associated with this object entry.
      */
-    readonly taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
+    taxonomyCategoryBriefs?: Array<TaxonomyCategoryBrief>;
     taxonomyCategoryIds?: Array<number>;
     readonly 'x-class-name'?: string;
     readonly 'x-schema-name'?: string;
@@ -291,6 +328,71 @@ export type NecessaryCookieEntry = {
     purpose?: string;
     type?: string;
 };
+
+export type DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type DeleteScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: {
+        fields?: string;
+        nestedFields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof GetScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
+
+export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: Collaborator;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof PutScopeScopeKeyByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
 
 export type GetScopeScopeKeyByExternalReferenceCodeCollaboratorsPageData = {
     body?: never;
@@ -410,6 +512,42 @@ export type PutByExternalReferenceCodeResponses = {
 
 export type PutByExternalReferenceCodeResponse = PutByExternalReferenceCodeResponses[keyof PutByExternalReferenceCodeResponses];
 
+export type DeleteByExternalReferenceCodeByVersionData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
+};
+
+export type DeleteByExternalReferenceCodeByVersionResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetByExternalReferenceCodeByVersionData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
+};
+
+export type GetByExternalReferenceCodeByVersionResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type GetByExternalReferenceCodeByVersionResponse = GetByExternalReferenceCodeByVersionResponses[keyof GetByExternalReferenceCodeByVersionResponses];
+
 export type DeleteNecessaryCookieEntryBatchData = {
     body?: {
         [key: string]: unknown;
@@ -463,25 +601,6 @@ export type PutNecessaryCookieEntryBatchResponses = {
      */
     default: unknown;
 };
-
-export type GetByExternalReferenceCodeByVersionData = {
-    body?: never;
-    path: {
-        externalReferenceCode: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}';
-};
-
-export type GetByExternalReferenceCodeByVersionResponses = {
-    /**
-     * default response
-     */
-    default: NecessaryCookieEntry;
-};
-
-export type GetByExternalReferenceCodeByVersionResponse = GetByExternalReferenceCodeByVersionResponses[keyof GetByExternalReferenceCodeByVersionResponses];
 
 export type GetByExternalReferenceCodeVersionsPageData = {
     body?: never;
@@ -547,6 +666,44 @@ export type PostNecessaryCookieEntryResponses = {
 };
 
 export type PostNecessaryCookieEntryResponse = PostNecessaryCookieEntryResponses[keyof PostNecessaryCookieEntryResponses];
+
+export type PostByExternalReferenceCodeByVersionCopyData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/copy';
+};
+
+export type PostByExternalReferenceCodeByVersionCopyResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostByExternalReferenceCodeByVersionCopyResponse = PostByExternalReferenceCodeByVersionCopyResponses[keyof PostByExternalReferenceCodeByVersionCopyResponses];
+
+export type PostByExternalReferenceCodeByVersionExpireData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/by-external-reference-code/{externalReferenceCode}/by-version/{version}/expire';
+};
+
+export type PostByExternalReferenceCodeByVersionExpireResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostByExternalReferenceCodeByVersionExpireResponse = PostByExternalReferenceCodeByVersionExpireResponses[keyof PostByExternalReferenceCodeByVersionExpireResponses];
 
 export type PostNecessaryCookieEntriesPageExportBatchData = {
     body?: never;
@@ -619,6 +776,68 @@ export type GetOpenApiResponses = {
      */
     default: unknown;
 };
+
+export type DeleteNecessaryCookieEntryCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type DeleteNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetNecessaryCookieEntryCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: {
+        fields?: string;
+        nestedFields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type GetNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type GetNecessaryCookieEntryCollaboratorByTypeCollaboratorResponse = GetNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses[keyof GetNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses];
+
+export type PutNecessaryCookieEntryCollaboratorByTypeCollaboratorData = {
+    body?: Collaborator;
+    path: {
+        necessaryCookieEntryId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type PutNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type PutNecessaryCookieEntryCollaboratorByTypeCollaboratorResponse = PutNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses[keyof PutNecessaryCookieEntryCollaboratorByTypeCollaboratorResponses];
 
 export type GetNecessaryCookieEntryCollaboratorsPageData = {
     body?: never;
@@ -756,6 +975,42 @@ export type PutNecessaryCookieEntryResponses = {
 
 export type PutNecessaryCookieEntryResponse = PutNecessaryCookieEntryResponses[keyof PutNecessaryCookieEntryResponses];
 
+export type DeleteNecessaryCookieEntryByVersionData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}';
+};
+
+export type DeleteNecessaryCookieEntryByVersionResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetNecessaryCookieEntryByVersionData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}';
+};
+
+export type GetNecessaryCookieEntryByVersionResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type GetNecessaryCookieEntryByVersionResponse = GetNecessaryCookieEntryByVersionResponses[keyof GetNecessaryCookieEntryByVersionResponses];
+
 export type GetNecessaryCookieEntriesVersionsPageData = {
     body?: never;
     path: {
@@ -777,25 +1032,6 @@ export type GetNecessaryCookieEntriesVersionsPageResponses = {
 };
 
 export type GetNecessaryCookieEntriesVersionsPageResponse = GetNecessaryCookieEntriesVersionsPageResponses[keyof GetNecessaryCookieEntriesVersionsPageResponses];
-
-export type GetNecessaryCookieEntryByVersionData = {
-    body?: never;
-    path: {
-        necessaryCookieEntryId: string;
-        version: string;
-    };
-    query?: never;
-    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}';
-};
-
-export type GetNecessaryCookieEntryByVersionResponses = {
-    /**
-     * default response
-     */
-    default: NecessaryCookieEntry;
-};
-
-export type GetNecessaryCookieEntryByVersionResponse = GetNecessaryCookieEntryByVersionResponses[keyof GetNecessaryCookieEntryByVersionResponses];
 
 export type GetNecessaryCookieEntryPermissionsPageData = {
     body?: never;
@@ -837,6 +1073,62 @@ export type PutNecessaryCookieEntryPermissionsPageResponses = {
 };
 
 export type PutNecessaryCookieEntryPermissionsPageResponse = PutNecessaryCookieEntryPermissionsPageResponses[keyof PutNecessaryCookieEntryPermissionsPageResponses];
+
+export type PostNecessaryCookieEntryByVersionCopyData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/copy';
+};
+
+export type PostNecessaryCookieEntryByVersionCopyResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostNecessaryCookieEntryByVersionCopyResponse = PostNecessaryCookieEntryByVersionCopyResponses[keyof PostNecessaryCookieEntryByVersionCopyResponses];
+
+export type PostNecessaryCookieEntryByVersionExpireData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+        version: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/by-version/{version}/expire';
+};
+
+export type PostNecessaryCookieEntryByVersionExpireResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostNecessaryCookieEntryByVersionExpireResponse = PostNecessaryCookieEntryByVersionExpireResponses[keyof PostNecessaryCookieEntryByVersionExpireResponses];
+
+export type PostNecessaryCookieEntryExpireData = {
+    body?: never;
+    path: {
+        necessaryCookieEntryId: string;
+    };
+    query?: never;
+    url: '/o/necessary-cookies-entries/{necessaryCookieEntryId}/expire';
+};
+
+export type PostNecessaryCookieEntryExpireResponses = {
+    /**
+     * default response
+     */
+    default: NecessaryCookieEntry;
+};
+
+export type PostNecessaryCookieEntryExpireResponse = PostNecessaryCookieEntryExpireResponses[keyof PostNecessaryCookieEntryExpireResponses];
 
 export type PutNecessaryCookieEntryByVersionRestoreData = {
     body?: never;

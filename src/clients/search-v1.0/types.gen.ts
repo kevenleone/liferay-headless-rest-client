@@ -16,17 +16,17 @@ export type FacetValue = {
 };
 
 export type PageEmbeddingModel = {
+    items?: Array<EmbeddingModel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<EmbeddingModel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type EmbeddingProviderValidationResult = {
@@ -47,17 +47,17 @@ export type EmbeddingProviderConfiguration = {
 };
 
 export type PageSearchResult = {
+    items?: Array<SearchResult>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SearchResult>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SearchResult = {
@@ -145,17 +145,17 @@ export type SearchRequestBody = {
 };
 
 export type PageSuggestionsContributorResults = {
+    items?: Array<SuggestionsContributorResults>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SuggestionsContributorResults>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Suggestion = {

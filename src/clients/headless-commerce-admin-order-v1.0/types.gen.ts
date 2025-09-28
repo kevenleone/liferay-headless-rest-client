@@ -169,17 +169,17 @@ export type OrderItem = {
 };
 
 export type PageOrderItem = {
+    items?: Array<OrderItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ShippingAddress = {
@@ -220,17 +220,17 @@ export type OrderNote = {
 };
 
 export type PageOrderNote = {
+    items?: Array<OrderNote>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderNote>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Order = {
@@ -364,17 +364,17 @@ export type Status = {
 };
 
 export type PageOrder = {
+    items?: Array<Order>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Order>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OrderRuleAccountGroup = {
@@ -393,17 +393,17 @@ export type OrderRuleAccountGroup = {
 };
 
 export type PageOrderRuleAccountGroup = {
+    items?: Array<OrderRuleAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderRuleAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OrderRuleAccount = {
@@ -422,17 +422,17 @@ export type OrderRuleAccount = {
 };
 
 export type PageOrderRuleAccount = {
+    items?: Array<OrderRuleAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderRuleAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OrderRuleChannel = {
@@ -451,17 +451,17 @@ export type OrderRuleChannel = {
 };
 
 export type PageOrderRuleChannel = {
+    items?: Array<OrderRuleChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderRuleChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OrderRuleOrderType = {
@@ -524,17 +524,17 @@ export type OrderTypeChannel = {
 };
 
 export type PageOrderRuleOrderType = {
+    items?: Array<OrderRuleOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderRuleOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OrderRule = {
@@ -565,59 +565,59 @@ export type OrderRule = {
 };
 
 export type PageOrderRule = {
+    items?: Array<OrderRule>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderRule>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageOrderTypeChannel = {
+    items?: Array<OrderTypeChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderTypeChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageOrderType = {
+    items?: Array<OrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageTermOrderType = {
+    items?: Array<TermOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TermOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TermOrderType = {
@@ -665,17 +665,17 @@ export type Term = {
 };
 
 export type PageTerm = {
+    items?: Array<Term>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Term>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type GetOrderByExternalReferenceCodeAccountData = {
@@ -937,8 +937,10 @@ export type PatchOrderItemResponses = {
     /**
      * default response
      */
-    default: unknown;
+    default: OrderItem;
 };
+
+export type PatchOrderItemResponse = PatchOrderItemResponses[keyof PatchOrderItemResponses];
 
 export type PutOrderItemData = {
     body?: OrderItem;
@@ -1041,8 +1043,10 @@ export type PatchOrderItemByExternalReferenceCodeResponses = {
     /**
      * default response
      */
-    default: unknown;
+    default: OrderItem;
 };
+
+export type PatchOrderItemByExternalReferenceCodeResponse = PatchOrderItemByExternalReferenceCodeResponses[keyof PatchOrderItemByExternalReferenceCodeResponses];
 
 export type PutOrderItemByExternalReferenceCodeData = {
     body?: OrderItem;

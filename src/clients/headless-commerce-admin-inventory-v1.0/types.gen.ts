@@ -53,31 +53,31 @@ export type FacetValue = {
 };
 
 export type PageReplenishmentItem = {
+    items?: Array<ReplenishmentItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ReplenishmentItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageWarehouseAccountGroup = {
+    items?: Array<WarehouseAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WarehouseAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WarehouseAccountGroup = {
@@ -96,17 +96,17 @@ export type WarehouseAccountGroup = {
 };
 
 export type PageWarehouseAccount = {
+    items?: Array<WarehouseAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WarehouseAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WarehouseAccount = {
@@ -125,17 +125,17 @@ export type WarehouseAccount = {
 };
 
 export type PageWarehouseChannel = {
+    items?: Array<WarehouseChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WarehouseChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WarehouseChannel = {
@@ -154,17 +154,17 @@ export type WarehouseChannel = {
 };
 
 export type PageWarehouseItem = {
+    items?: Array<WarehouseItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WarehouseItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WarehouseItem = {
@@ -181,17 +181,17 @@ export type WarehouseItem = {
 };
 
 export type PageWarehouseOrderType = {
+    items?: Array<WarehouseOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WarehouseOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WarehouseOrderType = {
@@ -240,17 +240,17 @@ export type Warehouse = {
 };
 
 export type PageWarehouse = {
+    items?: Array<Warehouse>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Warehouse>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type GetWarehouseAccountGroupAccountGroupData = {

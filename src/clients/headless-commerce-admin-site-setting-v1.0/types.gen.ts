@@ -21,17 +21,17 @@ export type FacetValue = {
 };
 
 export type PageAvailabilityEstimate = {
+    items?: Array<AvailabilityEstimate>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AvailabilityEstimate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type MeasurementUnit = {
@@ -50,31 +50,31 @@ export type MeasurementUnit = {
 };
 
 export type PageMeasurementUnit = {
+    items?: Array<MeasurementUnit>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MeasurementUnit>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageTaxCategory = {
+    items?: Array<TaxCategory>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TaxCategory = {
@@ -90,17 +90,17 @@ export type TaxCategory = {
 };
 
 export type PageWarehouse = {
+    items?: Array<Warehouse>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Warehouse>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Warehouse = {

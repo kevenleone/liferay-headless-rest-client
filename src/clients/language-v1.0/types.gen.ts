@@ -31,17 +31,17 @@ export type FacetValue = {
 };
 
 export type PageMessage = {
+    items?: Array<Message>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Message>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteMessageData = {

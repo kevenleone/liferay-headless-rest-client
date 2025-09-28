@@ -90,17 +90,17 @@ export type Geo = {
 };
 
 export type PageAccount = {
+    items?: Array<Account>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Account>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Attachment = {
@@ -133,17 +133,17 @@ export type Attachment = {
 };
 
 export type PageAttachment = {
+    items?: Array<Attachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Attachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Category = {
@@ -162,17 +162,17 @@ export type Category = {
 };
 
 export type PageCategory = {
+    items?: Array<Category>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Category>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Channel = {
@@ -186,17 +186,17 @@ export type Channel = {
 };
 
 export type PageChannel = {
+    items?: Array<Channel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Channel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Currency = {
@@ -221,17 +221,17 @@ export type Currency = {
 };
 
 export type PageCurrency = {
+    items?: Array<Currency>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Currency>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type LinkedProduct = {
@@ -242,17 +242,17 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
+    items?: Array<LinkedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Availability = {
@@ -297,17 +297,17 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
+    items?: Array<MappedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Price = {
@@ -391,6 +391,7 @@ export type SkuOption = {
     price?: string;
     priceType?: string;
     quantity?: string;
+    required?: boolean;
     skuId?: number;
     skuOptionId?: number;
     skuOptionKey?: string;
@@ -403,17 +404,17 @@ export type SkuOption = {
 };
 
 export type PagePin = {
+    items?: Array<Pin>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Pin>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Pin = {
@@ -426,31 +427,31 @@ export type Pin = {
 };
 
 export type PageProductOption = {
+    items?: Array<ProductOption>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductOptionValue = {
+    items?: Array<ProductOptionValue>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DdmOption = {
@@ -599,59 +600,59 @@ export type TierPrice = {
 };
 
 export type PageProduct = {
+    items?: Array<Product>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Product>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductSpecification = {
+    items?: Array<ProductSpecification>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageRelatedProduct = {
+    items?: Array<RelatedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSku = {
+    items?: Array<Sku>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Sku>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WishListItem = {
@@ -666,31 +667,31 @@ export type WishListItem = {
 };
 
 export type PageWishListItem = {
+    items?: Array<WishListItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WishListItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageWishList = {
+    items?: Array<WishList>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WishList>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type WishList = {

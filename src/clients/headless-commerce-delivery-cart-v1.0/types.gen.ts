@@ -44,17 +44,17 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
+    items?: Array<Attachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Attachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AttachmentBase64 = {
@@ -81,17 +81,17 @@ export type CartComment = {
 };
 
 export type PageCartComment = {
+    items?: Array<CartComment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CartComment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CartItem = {
@@ -137,17 +137,17 @@ export type CartItem = {
 };
 
 export type PageCartItem = {
+    items?: Array<CartItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CartItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Price = {
@@ -264,6 +264,7 @@ export type Step = {
 
 export type Summary = {
     currency?: string;
+    readonly itemsCount?: number;
     itemsQuantity?: number;
     shippingDiscountPercentages?: Array<string>;
     shippingDiscountValue?: number;
@@ -288,17 +289,17 @@ export type Summary = {
 };
 
 export type PageCart = {
+    items?: Array<Cart>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Cart>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CouponCode = {
@@ -317,31 +318,31 @@ export type CartTransition = {
 };
 
 export type PageCartTransition = {
+    items?: Array<CartTransition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CartTransition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePaymentMethod = {
+    items?: Array<PaymentMethod>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PaymentMethod>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PaymentMethod = {
@@ -352,17 +353,17 @@ export type PaymentMethod = {
 };
 
 export type PageShippingMethod = {
+    items?: Array<ShippingMethod>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ShippingMethod>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ShippingMethod = {
@@ -383,17 +384,17 @@ export type ShippingOption = {
 };
 
 export type PageTerm = {
+    items?: Array<Term>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Term>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Term = {

@@ -34,17 +34,17 @@ export type FacetValue = {
 };
 
 export type PageShipmentItem = {
+    items?: Array<ShipmentItem>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ShipmentItem>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CustomField = {
@@ -150,17 +150,17 @@ export type Status = {
 };
 
 export type PageShipment = {
+    items?: Array<Shipment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Shipment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteShipmentItemData = {

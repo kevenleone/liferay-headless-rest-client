@@ -11,17 +11,17 @@ export type FacetValue = {
 };
 
 export type PageUserNotification = {
+    items?: Array<UserNotification>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserNotification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type UserNotification = {

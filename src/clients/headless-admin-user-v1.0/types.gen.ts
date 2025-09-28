@@ -156,17 +156,17 @@ export type Geo = {
 };
 
 export type PageAccountGroup = {
+    items?: Array<AccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Permission = {
@@ -195,7 +195,7 @@ export type RoleBrief = {
     /**
      * The role's name.
      */
-    readonly name?: string;
+    name?: string;
     readonly name_i18n?: {
         [key: string]: string;
     };
@@ -256,6 +256,7 @@ export type Account = {
      * A list of keywords describing the account.
      */
     keywords?: Array<string>;
+    logoBase64?: string;
     logoExternalReferenceCode?: string;
     logoId?: number;
     logoURL?: string;
@@ -842,45 +843,45 @@ export type WebUrl = {
 };
 
 export type PageAccount = {
+    items?: Array<Account>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Account>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageAccountRole = {
+    items?: Array<AccountRole>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AccountRole>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageEmailAddress = {
+    items?: Array<EmailAddress>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<EmailAddress>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -969,6 +970,7 @@ export type Organization = {
      * A relative URL to the organization's image.
      */
     readonly image?: string;
+    imageBase64?: string;
     /**
      * The organization's image external reference code.
      */
@@ -980,7 +982,7 @@ export type Organization = {
     /**
      * A list of keywords describing the organization.
      */
-    readonly keywords?: Array<string>;
+    keywords?: Array<string>;
     location?: Location;
     /**
      * The organization's name.
@@ -1092,59 +1094,59 @@ export type UserAccountBrief = {
 };
 
 export type PageOrganization = {
+    items?: Array<Organization>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Organization>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageUserAccount = {
+    items?: Array<UserAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePhone = {
+    items?: Array<Phone>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Phone>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePostalAddress = {
+    items?: Array<PostalAddress>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<PostalAddress>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Role = {
@@ -1212,31 +1214,31 @@ export type RolePermission = {
 };
 
 export type PageRole = {
+    items?: Array<Role>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Role>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSegment = {
+    items?: Array<Segment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Segment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -1287,17 +1289,17 @@ export type Segment = {
 };
 
 export type PageSegmentUser = {
+    items?: Array<SegmentUser>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SegmentUser>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SegmentUser = {
@@ -1317,17 +1319,17 @@ export type SegmentUser = {
 };
 
 export type PageSharedAsset = {
+    items?: Array<SharedAsset>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SharedAsset>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type SharedAsset = {
@@ -1390,17 +1392,17 @@ export type SharedAsset = {
 };
 
 export type PageSite = {
+    items?: Array<Site>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Site>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Site = {
@@ -1441,17 +1443,17 @@ export type Subscription = {
 };
 
 export type PageSubscription = {
+    items?: Array<Subscription>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Subscription>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Ticket = {
@@ -1519,31 +1521,31 @@ export type UserGroup = {
 };
 
 export type PageUserGroup = {
+    items?: Array<UserGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageWebUrl = {
+    items?: Array<WebUrl>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<WebUrl>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteAccountGroupData = {

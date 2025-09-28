@@ -10,6 +10,14 @@ export type AssetLibrary = {
         };
     };
     /**
+     * The asset library's key.
+     */
+    assetLibraryKey?: string;
+    /**
+     * The asset library's creator user ID.
+     */
+    readonly creatorUserId?: number;
+    /**
      * The asset library's creation date.
      */
     readonly dateCreated?: string;
@@ -32,7 +40,7 @@ export type AssetLibrary = {
      */
     externalReferenceCode?: string;
     /**
-     * The asset library's site ID.
+     * The asset library's ID.
      */
     readonly id?: number;
     /**
@@ -59,6 +67,10 @@ export type AssetLibrary = {
     readonly numberOfUserGroups?: number;
     settings?: Settings;
     /**
+     * The asset library's site ID.
+     */
+    readonly siteId?: number;
+    /**
      * The asset library's connected sites.
      */
     readonly sites?: Array<Site>;
@@ -84,23 +96,23 @@ export type FacetValue = {
 };
 
 export type MimeTypeLimit = {
-    readonly maximumSize?: number;
+    maximumSize?: number;
     mimeType?: string;
     readonly 'x-class-name'?: string;
 };
 
 export type PageAssetLibrary = {
+    items?: Array<AssetLibrary>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AssetLibrary>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -166,7 +178,7 @@ export type Site = {
     readonly name_i18n?: {
         [key: string]: string;
     };
-    readonly searchable?: boolean;
+    searchable?: boolean;
     readonly 'x-class-name'?: string;
 };
 
@@ -211,6 +223,10 @@ export type UserGroup = {
         [key: string]: string;
     };
     /**
+     * The number of this user group's associated users.
+     */
+    readonly numberOfUserAccounts?: number;
+    /**
      * The list of roles associated with this user group.
      */
     readonly roles?: Array<Role>;
@@ -218,45 +234,45 @@ export type UserGroup = {
 };
 
 export type PageSite = {
+    items?: Array<Site>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Site>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageUserAccount = {
+    items?: Array<UserAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageUserGroup = {
+    items?: Array<UserGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<UserGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteAssetLibraryData = {
@@ -314,6 +330,42 @@ export type PatchAssetLibraryResponses = {
 };
 
 export type PatchAssetLibraryResponse = PatchAssetLibraryResponses[keyof PatchAssetLibraryResponses];
+
+export type DeleteAssetLibraryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
+};
+
+export type DeleteAssetLibraryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PostAssetLibraryBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-asset-library/v1.0/asset-libraries/batch';
+};
+
+export type PostAssetLibraryBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
 
 export type DeleteAssetLibraryByExternalReferenceCodeData = {
     body?: never;
@@ -389,6 +441,74 @@ export type PutAssetLibraryByExternalReferenceCodeResponses = {
 
 export type PutAssetLibraryByExternalReferenceCodeResponse = PutAssetLibraryByExternalReferenceCodeResponses[keyof PutAssetLibraryByExternalReferenceCodeResponses];
 
+export type DeleteAssetLibraryByExternalReferenceCodePinData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
+};
+
+export type DeleteAssetLibraryByExternalReferenceCodePinResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PutAssetLibraryByExternalReferenceCodePinData = {
+    body?: never;
+    path: {
+        externalReferenceCode: string;
+    };
+    query?: never;
+    url: '/o/headless-asset-library/v1.0/asset-libraries/by-external-reference-code/{externalReferenceCode}/pins';
+};
+
+export type PutAssetLibraryByExternalReferenceCodePinResponses = {
+    /**
+     * default response
+     */
+    default: AssetLibrary;
+};
+
+export type PutAssetLibraryByExternalReferenceCodePinResponse = PutAssetLibraryByExternalReferenceCodePinResponses[keyof PutAssetLibraryByExternalReferenceCodePinResponses];
+
+export type DeleteAssetLibraryPinData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+    };
+    query?: never;
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
+};
+
+export type DeleteAssetLibraryPinResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PutAssetLibraryPinData = {
+    body?: never;
+    path: {
+        assetLibraryId: string;
+    };
+    query?: never;
+    url: '/o/headless-asset-library/v1.0/asset-libraries/{assetLibraryId}/pins';
+};
+
+export type PutAssetLibraryPinResponses = {
+    /**
+     * default response
+     */
+    default: AssetLibrary;
+};
+
+export type PutAssetLibraryPinResponse = PutAssetLibraryPinResponses[keyof PutAssetLibraryPinResponses];
+
 export type GetAssetLibrariesPageData = {
     body?: never;
     path?: never;
@@ -429,6 +549,26 @@ export type PostAssetLibraryResponses = {
 
 export type PostAssetLibraryResponse = PostAssetLibraryResponses[keyof PostAssetLibraryResponses];
 
+export type GetAssetLibrariesPinnedByMePageData = {
+    body?: never;
+    path?: never;
+    query?: {
+        page?: string;
+        pageSize?: string;
+        nestedFields?: string;
+    };
+    url: '/o/headless-asset-library/v1.0/asset-libraries/pinned-by-me';
+};
+
+export type GetAssetLibrariesPinnedByMePageResponses = {
+    /**
+     * default response
+     */
+    default: PageAssetLibrary;
+};
+
+export type GetAssetLibrariesPinnedByMePageResponse = GetAssetLibrariesPinnedByMePageResponses[keyof GetAssetLibrariesPinnedByMePageResponses];
+
 export type DeleteAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeData = {
     body?: never;
     path: {
@@ -466,7 +606,7 @@ export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceC
 export type GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponse = GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponses[keyof GetAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeResponses];
 
 export type PutAssetLibraryByExternalReferenceCodeAssetLibraryExternalReferenceCodeSiteByExternalReferenceCodeSiteExternalReferenceCodeData = {
-    body?: never;
+    body?: Site;
     path: {
         assetLibraryExternalReferenceCode: string;
         siteExternalReferenceCode: string;
@@ -521,7 +661,7 @@ export type GetAssetLibrarySiteResponses = {
 export type GetAssetLibrarySiteResponse = GetAssetLibrarySiteResponses[keyof GetAssetLibrarySiteResponses];
 
 export type PutAssetLibrarySiteData = {
-    body?: never;
+    body?: Site;
     path: {
         assetLibraryId: string;
         siteId: string;

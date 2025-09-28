@@ -50,17 +50,17 @@ export type FacetValue = {
 };
 
 export type PageObjectAction = {
+    items?: Array<ObjectAction>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectAction>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Creator = {
@@ -128,8 +128,11 @@ export type ObjectDefinition = {
     enableLocalization?: boolean;
     enableObjectEntryDraft?: boolean;
     enableObjectEntryHistory?: boolean;
+    enableObjectEntrySchedule?: boolean;
+    enableObjectEntrySubscription?: boolean;
     enableObjectEntryVersioning?: boolean;
     externalReferenceCode?: string;
+    friendlyURLSeparator?: string;
     readonly id?: number;
     label?: {
         [key: string]: string;
@@ -411,31 +414,31 @@ export type UserGroupBrief = {
 };
 
 export type PageObjectDefinition = {
+    items?: Array<ObjectDefinition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageObjectField = {
+    items?: Array<ObjectField>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectField>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ObjectFolder = {
@@ -466,73 +469,73 @@ export type ObjectFolderItem = {
 };
 
 export type PageObjectFolder = {
+    items?: Array<ObjectFolder>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageObjectLayout = {
+    items?: Array<ObjectLayout>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectLayout>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageObjectRelationship = {
+    items?: Array<ObjectRelationship>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectRelationship>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageObjectValidationRule = {
+    items?: Array<ObjectValidationRule>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectValidationRule>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageObjectView = {
+    items?: Array<ObjectView>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectView>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteObjectActionData = {

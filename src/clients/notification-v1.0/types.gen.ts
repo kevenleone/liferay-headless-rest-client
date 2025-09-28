@@ -33,17 +33,17 @@ export type NotificationQueueEntry = {
 };
 
 export type PageNotificationQueueEntry = {
+    items?: Array<NotificationQueueEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NotificationQueueEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type NotificationTemplate = {
@@ -83,17 +83,17 @@ export type NotificationTemplate = {
 };
 
 export type PageNotificationTemplate = {
+    items?: Array<NotificationTemplate>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NotificationTemplate>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteNotificationQueueEntryData = {

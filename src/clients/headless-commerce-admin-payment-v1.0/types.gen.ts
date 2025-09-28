@@ -58,17 +58,17 @@ export type FacetValue = {
 };
 
 export type PagePayment = {
+    items?: Array<Payment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Payment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeletePaymentData = {

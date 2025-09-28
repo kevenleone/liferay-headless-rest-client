@@ -24,7 +24,11 @@ export type Collaborator = {
     /**
      * The collaborator external reference code.
      */
-    externalReferenceCode: string;
+    readonly externalReferenceCode?: string;
+    /**
+     * The collaborator ID.
+     */
+    id?: number;
     /**
      * The collaborator name.
      */
@@ -37,11 +41,11 @@ export type Collaborator = {
      * If the collaborator can share or not the asset.
      */
     share?: boolean;
-    readonly 'x-class-name'?: string;
     /**
      * The collaborator type.
      */
-    type: 'User' | 'UserGroup';
+    type: string;
+    readonly 'x-class-name'?: string;
 };
 
 /**
@@ -91,30 +95,6 @@ export type Creator = {
     readonly 'x-class-name'?: string;
 };
 
-export type Facet = {
-    facetCriteria?: string;
-    facetValues?: Array<FacetValue>;
-};
-
-export type FacetValue = {
-    numberOfOccurrences?: number;
-    term?: string;
-};
-
-export type PageCollaborator = {
-    lastPage?: number;
-    totalCount?: number;
-    items?: Array<Collaborator>;
-    actions?: {
-        [key: string]: {
-            [key: string]: string;
-        };
-    };
-    pageSize?: number;
-    facets?: Array<Facet>;
-    page?: number;
-};
-
 /**
  * A list of userGroups information.
  */
@@ -128,6 +108,30 @@ export type UserGroupBrief = {
      */
     readonly name?: string;
     readonly 'x-class-name'?: string;
+};
+
+export type Facet = {
+    facetCriteria?: string;
+    facetValues?: Array<FacetValue>;
+};
+
+export type FacetValue = {
+    numberOfOccurrences?: number;
+    term?: string;
+};
+
+export type PageCollaborator = {
+    items?: Array<Collaborator>;
+    lastPage?: number;
+    totalCount?: number;
+    actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 /**
@@ -151,6 +155,10 @@ export type ObjectEntryFolder = {
      * The last time a field of the folder changed.
      */
     readonly dateModified?: string;
+    /**
+     * The object entry folder's description.
+     */
+    description?: string;
     /**
      * The object entry folder's external reference code.
      */
@@ -186,6 +194,7 @@ export type ObjectEntryFolder = {
      * The ID of the object entry folder's parent, if it exists.
      */
     parentObjectEntryFolderId?: number;
+    permissions?: Array<Permission>;
     /**
      * The scope key of the object entry folder.
      */
@@ -227,19 +236,167 @@ export type ParentObjectEntryFolderBrief = {
     readonly 'x-class-name'?: string;
 };
 
-export type PageObjectEntryFolder = {
+export type Permission = {
+    actionIds?: Array<string>;
+    roleExternalReferenceCode?: string;
+    roleName?: string;
+    roleType?: string;
+};
+
+export type PagePermission = {
+    items?: Array<Permission>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ObjectEntryFolder>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
+
+export type PageObjectEntryFolder = {
+    items?: Array<ObjectEntryFolder>;
+    lastPage?: number;
+    totalCount?: number;
+    actions?: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+    page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
+};
+
+export type DeleteObjectEntryFolderCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        objectEntryFolderId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type DeleteObjectEntryFolderCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetObjectEntryFolderCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        objectEntryFolderId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: {
+        fields?: string;
+        nestedFields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type GetObjectEntryFolderCollaboratorByTypeCollaboratorResponse = GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses[keyof GetObjectEntryFolderCollaboratorByTypeCollaboratorResponses];
+
+export type PutObjectEntryFolderCollaboratorByTypeCollaboratorData = {
+    body?: Collaborator;
+    path: {
+        objectEntryFolderId: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type PutObjectEntryFolderCollaboratorByTypeCollaboratorResponse = PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses[keyof PutObjectEntryFolderCollaboratorByTypeCollaboratorResponses];
+
+export type DeleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type DeleteScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: never;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: {
+        fields?: string;
+        nestedFields?: string;
+        restrictFields?: string;
+    };
+    url: '/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof GetScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
+
+export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorData = {
+    body?: Collaborator;
+    path: {
+        scopeKey: string;
+        externalReferenceCode: string;
+        type: string;
+        collaboratorId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/scopes/{scopeKey}/object-entry-folders/by-external-reference-code/{externalReferenceCode}/collaborators/by-type/{type}/{collaboratorId}';
+};
+
+export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses = {
+    /**
+     * default response
+     */
+    default: Collaborator;
+};
+
+export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponse = PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses[keyof PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeCollaboratorByTypeCollaboratorResponses];
 
 export type GetObjectEntryFolderCollaboratorsPageData = {
     body?: never;
@@ -403,6 +560,24 @@ export type PatchObjectEntryFolderResponses = {
 
 export type PatchObjectEntryFolderResponse = PatchObjectEntryFolderResponses[keyof PatchObjectEntryFolderResponses];
 
+export type PutObjectEntryFolderData = {
+    body?: ObjectEntryFolder;
+    path: {
+        objectEntryFolderId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}';
+};
+
+export type PutObjectEntryFolderResponses = {
+    /**
+     * default response
+     */
+    default: ObjectEntryFolder;
+};
+
+export type PutObjectEntryFolderResponse = PutObjectEntryFolderResponses[keyof PutObjectEntryFolderResponses];
+
 export type DeleteObjectEntryFolderBatchData = {
     body?: {
         [key: string]: unknown;
@@ -415,6 +590,24 @@ export type DeleteObjectEntryFolderBatchData = {
 };
 
 export type DeleteObjectEntryFolderBatchResponses = {
+    /**
+     * default response
+     */
+    default: unknown;
+};
+
+export type PutObjectEntryFolderBatchData = {
+    body?: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: {
+        callbackURL?: string;
+    };
+    url: '/o/headless-object/v1.0/object-entry-folders/batch';
+};
+
+export type PutObjectEntryFolderBatchResponses = {
     /**
      * default response
      */
@@ -498,6 +691,47 @@ export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses = 
 };
 
 export type PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponse = PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses[keyof PutScopeScopeKeyObjectEntryFolderByExternalReferenceCodeResponses];
+
+export type GetObjectEntryFolderPermissionsPageData = {
+    body?: never;
+    path: {
+        objectEntryFolderId: string;
+    };
+    query?: {
+        fields?: string;
+        nestedFields?: string;
+        restrictFields?: string;
+        roleNames?: string;
+    };
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/permissions';
+};
+
+export type GetObjectEntryFolderPermissionsPageResponses = {
+    /**
+     * default response
+     */
+    default: PagePermission;
+};
+
+export type GetObjectEntryFolderPermissionsPageResponse = GetObjectEntryFolderPermissionsPageResponses[keyof GetObjectEntryFolderPermissionsPageResponses];
+
+export type PutObjectEntryFolderPermissionsPageData = {
+    body?: Array<Permission>;
+    path: {
+        objectEntryFolderId: string;
+    };
+    query?: never;
+    url: '/o/headless-object/v1.0/object-entry-folders/{objectEntryFolderId}/permissions';
+};
+
+export type PutObjectEntryFolderPermissionsPageResponses = {
+    /**
+     * default response
+     */
+    default: PagePermission;
+};
+
+export type PutObjectEntryFolderPermissionsPageResponse = PutObjectEntryFolderPermissionsPageResponses[keyof PutObjectEntryFolderPermissionsPageResponses];
 
 export type GetScopeScopeKeyObjectEntryFoldersPageData = {
     body?: never;

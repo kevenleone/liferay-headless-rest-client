@@ -52,17 +52,17 @@ export type FacetValue = {
 };
 
 export type PageCtCollection = {
+    items?: Array<CtCollection>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CtCollection>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CtEntry = {
@@ -98,17 +98,17 @@ export type CtEntry = {
 };
 
 export type PageCtEntry = {
+    items?: Array<CtEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CtEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CtProcess = {
@@ -134,17 +134,17 @@ export type CtProcess = {
 };
 
 export type PageCtProcess = {
+    items?: Array<CtProcess>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CtProcess>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type CtRemote = {
@@ -175,17 +175,17 @@ export type CtRemote = {
 };
 
 export type PageCtRemote = {
+    items?: Array<CtRemote>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<CtRemote>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteCtCollectionData = {

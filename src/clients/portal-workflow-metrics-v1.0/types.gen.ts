@@ -37,17 +37,17 @@ export type FacetValue = {
 };
 
 export type PageAssigneeMetric = {
+    items?: Array<AssigneeMetric>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<AssigneeMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AssigneeMetricBulkSelection = {
@@ -62,17 +62,17 @@ export type AssigneeMetricBulkSelection = {
 };
 
 export type PageAssignee = {
+    items?: Array<Assignee>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Assignee>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AssigneeBulkSelection = {
@@ -88,17 +88,17 @@ export type Calendar = {
 };
 
 export type PageCalendar = {
+    items?: Array<Calendar>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Calendar>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Histogram = {
@@ -122,17 +122,17 @@ export type Index = {
 };
 
 export type PageIndex = {
+    items?: Array<Index>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Index>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Creator = {
@@ -194,17 +194,17 @@ export type Transition = {
 };
 
 export type PageInstance = {
+    items?: Array<Instance>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Instance>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Node = {
@@ -233,31 +233,31 @@ export type NodeMetric = {
 };
 
 export type PageNodeMetric = {
+    items?: Array<NodeMetric>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<NodeMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageNode = {
+    items?: Array<Node>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Node>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Process = {
@@ -285,31 +285,31 @@ export type ProcessMetric = {
 };
 
 export type PageProcessMetric = {
+    items?: Array<ProcessMetric>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProcessMetric>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProcessVersion = {
+    items?: Array<ProcessVersion>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProcessVersion>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProcessVersion = {
@@ -318,17 +318,17 @@ export type ProcessVersion = {
 };
 
 export type PageReindexStatus = {
+    items?: Array<ReindexStatus>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ReindexStatus>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ReindexStatus = {
@@ -338,17 +338,17 @@ export type ReindexStatus = {
 };
 
 export type PageRole = {
+    items?: Array<Role>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Role>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Role = {
@@ -370,17 +370,17 @@ export type NodeKey = {
 };
 
 export type PageSla = {
+    items?: Array<Sla>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Sla>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PauseNodeKeys = {
@@ -445,17 +445,17 @@ export type Task = {
 };
 
 export type PageTask = {
+    items?: Array<Task>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Task>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TaskBulkSelection = {
@@ -468,17 +468,17 @@ export type TaskBulkSelection = {
 };
 
 export type PageTimeRange = {
+    items?: Array<TimeRange>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TimeRange>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TimeRange = {

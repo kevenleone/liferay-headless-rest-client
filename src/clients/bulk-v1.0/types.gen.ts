@@ -36,17 +36,17 @@ export type Keyword = {
 };
 
 export type PageKeyword = {
+    items?: Array<Keyword>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Keyword>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Selection = {
@@ -67,17 +67,17 @@ export type TaxonomyCategoryBulkSelection = {
 };
 
 export type PageTaxonomyVocabulary = {
+    items?: Array<TaxonomyVocabulary>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<TaxonomyVocabulary>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type TaxonomyCategory = {

@@ -96,17 +96,17 @@ export type FacetValue = {
 };
 
 export type PageAttachment = {
+    items?: Array<Attachment>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Attachment>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type AttachmentBase64 = {
@@ -191,17 +191,17 @@ export type Catalog = {
 };
 
 export type PageCatalog = {
+    items?: Array<Catalog>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Catalog>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Category = {
@@ -220,17 +220,17 @@ export type Category = {
 };
 
 export type PageCategory = {
+    items?: Array<Category>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Category>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Currency = {
@@ -255,17 +255,17 @@ export type Currency = {
 };
 
 export type PageCurrency = {
+    items?: Array<Currency>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Currency>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Diagram = {
@@ -299,17 +299,17 @@ export type GroupedProduct = {
 };
 
 export type PageGroupedProduct = {
+    items?: Array<GroupedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<GroupedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type LinkedProduct = {
@@ -320,17 +320,17 @@ export type LinkedProduct = {
 };
 
 export type PageLinkedProduct = {
+    items?: Array<LinkedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<LinkedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ListTypeDefinition = {
@@ -352,17 +352,17 @@ export type ListTypeDefinition = {
 };
 
 export type PageListTypeDefinition = {
+    items?: Array<ListTypeDefinition>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ListTypeDefinition>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type LowStockAction = {
@@ -374,17 +374,17 @@ export type LowStockAction = {
 };
 
 export type PageLowStockAction = {
+    items?: Array<LowStockAction>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<LowStockAction>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type MappedProduct = {
@@ -410,17 +410,17 @@ export type MappedProduct = {
 };
 
 export type PageMappedProduct = {
+    items?: Array<MappedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<MappedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type OptionCategory = {
@@ -438,17 +438,17 @@ export type OptionCategory = {
 };
 
 export type PageOptionCategory = {
+    items?: Array<OptionCategory>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OptionCategory>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Option = {
@@ -474,7 +474,7 @@ export type Option = {
     required?: boolean;
     skuContributor?: boolean;
     readonly 'x-class-name'?: string;
-    fieldType: 'checkbox' | 'checkbox_multiple' | 'date' | 'numeric' | 'radio' | 'select' | 'select_date' | 'text';
+    fieldType: 'checkbox' | 'checkbox_multiple' | 'date' | 'document_library' | 'numeric' | 'radio' | 'select' | 'select_date' | 'text';
 };
 
 export type OptionValue = {
@@ -495,45 +495,45 @@ export type OptionValue = {
 };
 
 export type PageOption = {
+    items?: Array<Option>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Option>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageOptionValue = {
+    items?: Array<OptionValue>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<OptionValue>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PagePin = {
+    items?: Array<Pin>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Pin>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Pin = {
@@ -554,31 +554,31 @@ export type ProductAccountGroup = {
 };
 
 export type PageProductAccountGroup = {
+    items?: Array<ProductAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductChannel = {
+    items?: Array<ProductChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductChannel = {
@@ -598,17 +598,17 @@ export type AccountGroup = {
 };
 
 export type PageProductConfigurationListAccountGroup = {
+    items?: Array<ProductConfigurationListAccountGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfigurationListAccountGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductConfigurationListAccountGroup = {
@@ -634,17 +634,17 @@ export type Account = {
 };
 
 export type PageProductConfigurationListAccount = {
+    items?: Array<ProductConfigurationListAccount>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfigurationListAccount>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductConfigurationListAccount = {
@@ -673,17 +673,17 @@ export type Channel = {
 };
 
 export type PageProductConfigurationListChannel = {
+    items?: Array<ProductConfigurationListChannel>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfigurationListChannel>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductConfigurationListChannel = {
@@ -711,17 +711,17 @@ export type OrderType = {
 };
 
 export type PageProductConfigurationListOrderType = {
+    items?: Array<ProductConfigurationListOrderType>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfigurationListOrderType>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductConfigurationListOrderType = {
@@ -822,45 +822,45 @@ export type ProductTaxConfiguration = {
 };
 
 export type PageProductConfigurationList = {
+    items?: Array<ProductConfigurationList>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfigurationList>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductConfiguration = {
+    items?: Array<ProductConfiguration>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductConfiguration>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductGroupProduct = {
+    items?: Array<ProductGroupProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductGroupProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductGroupProduct = {
@@ -894,31 +894,31 @@ export type ProductGroup = {
 };
 
 export type PageProductGroup = {
+    items?: Array<ProductGroup>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductGroup>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductOption = {
+    items?: Array<ProductOption>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductOption>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type ProductOption = {
@@ -964,17 +964,17 @@ export type ProductOptionValue = {
 };
 
 export type PageProductOptionValue = {
+    items?: Array<ProductOptionValue>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductOptionValue>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Product = {
@@ -1376,45 +1376,45 @@ export type Status = {
 };
 
 export type PageProduct = {
+    items?: Array<Product>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Product>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductSpecification = {
+    items?: Array<ProductSpecification>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductSpecification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageProductVirtualSettingsFileEntry = {
+    items?: Array<ProductVirtualSettingsFileEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<ProductVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PatchProductVirtualSettingsFileEntryRequestBody = {
@@ -1440,59 +1440,59 @@ export type PostProductVirtualSettingIdProductVirtualSettingsFileEntryRequestBod
 };
 
 export type PageRelatedProduct = {
+    items?: Array<RelatedProduct>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<RelatedProduct>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSku = {
+    items?: Array<Sku>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Sku>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSkuUnitOfMeasure = {
+    items?: Array<SkuUnitOfMeasure>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SkuUnitOfMeasure>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PageSkuVirtualSettingsFileEntry = {
+    items?: Array<SkuVirtualSettingsFileEntry>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<SkuVirtualSettingsFileEntry>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type PatchSkuVirtualSettingsFileEntryRequestBody = {
@@ -1534,17 +1534,17 @@ export type Specification = {
 };
 
 export type PageSpecification = {
+    items?: Array<Specification>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Specification>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteAttachmentData = {

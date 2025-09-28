@@ -32,17 +32,17 @@ export type FacetValue = {
 };
 
 export type PageCountry = {
+    items?: Array<Country>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Country>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type Region = {
@@ -59,17 +59,17 @@ export type Region = {
 };
 
 export type PageRegion = {
+    items?: Array<Region>;
     lastPage?: number;
     totalCount?: number;
-    items?: Array<Region>;
     actions?: {
         [key: string]: {
             [key: string]: string;
         };
     };
-    pageSize?: number;
-    facets?: Array<Facet>;
     page?: number;
+    facets?: Array<Facet>;
+    pageSize?: number;
 };
 
 export type DeleteCountryData = {
